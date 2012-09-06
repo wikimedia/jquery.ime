@@ -6,21 +6,30 @@
 (function($) {
 	var inputmethods = {
 		'capitalize' : {
-			 name: "Capitalize",
+			name  : "Capitalize",
 			rules : 'rules/en/capitalize.js'
 		},
 		'ml-transliteration' : {
-			'name' : "Transliteration",
+			name  : "Transliteration",
 			rules : 'rules/ml/ml-transliteration.js'
 		},
 		'ml-inscript' : {
-			name : "Inscript",
+			name  : "Inscript",
 			rules : 'rules/ml/ml-inscript.js'
+		},
+		'ta-transliteration' : {
+			name  : "Transliteration",
+			rules : 'rules/ta/ta-transliteration.js'
+		},
+		'ta-99' : {
+			name  : "Tamil99",
+			rules : 'rules/ta/ta-99.js'
 		}
 	}
 	var languages = {
-		'English' : ['capitalize'],
+		'English' 	: ['capitalize'],
 		'Malayalam' : ['ml-transliteration', 'ml-inscript'],
+		'Tamil' 	: ['ta-transliteration', 'ta-99']
 	}
 	$.extend($.fn.ime.Constructor.prototype.inputmethods, inputmethods);
 	$.extend($.fn.ime.Constructor.prototype.languages, languages);

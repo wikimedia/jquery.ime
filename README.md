@@ -6,7 +6,7 @@ Quick start
 ----------
 
 ```bash
-git clone https://github.com/santhoshtr/jquery.ime.git
+git clone https://github.com/wikimedia/jquery.ime.git
 ```
 
 Documentation
