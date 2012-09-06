@@ -27,9 +27,9 @@
 		}
 	}
 	var languages = {
-		'English' : ['capitalize'],
+		'English' 	: ['capitalize'],
 		'Malayalam' : ['ml-transliteration', 'ml-inscript'],
-		'Tamil' : ['ta-transliteration', 'ta-99']
+		'Tamil' 	: ['ta-transliteration', 'ta-99']
 	}
 	$.extend($.fn.ime.Constructor.prototype.inputmethods, inputmethods);
 	$.extend($.fn.ime.Constructor.prototype.languages, languages);
