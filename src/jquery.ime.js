@@ -16,13 +16,13 @@
 		var el = $element.get( 0 );
 		var start = 0, end = 0, normalizedValue, range, textInputRange, len, endRange;
 
-		if ( typeof el.selectionStart == "number" && typeof el.selectionEnd == "number" ) {
+		if ( typeof el.selectionStart === "number" && typeof el.selectionEnd === "number" ) {
 			start = el.selectionStart;
 			end = el.selectionEnd;
 		} else {
 			// IE
 			range = document.selection.createRange();
-			if ( range && range.parentElement() == el ) {
+			if ( range && range.parentElement() === el ) {
 				len = el.value.length;
 				normalizedValue = el.value.replace( /\r\n/g, "\n" );
 
@@ -125,7 +125,6 @@
 		this.init();
 		this.listen();
 	}
-	;
 
 	IME.prototype = {
 		constructor: IME,
@@ -254,7 +253,8 @@
 			// Get the current caret position. The user may have selected text to overwrite,
 			// so get both the start and end position of the selection. If there is no selection,
 			// startPos and endPos will be equal.
-			pos = getCaretPosition( this.$element ), startPos = pos[0];
+			pos = getCaretPosition( this.$element );
+			startPos = pos[0];
 			endPos = pos[1];
 
 			// Get the last few characters before the one the user just typed,
@@ -308,18 +308,18 @@
 
 			$.ajax( {
 				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: "script",
+				dataType: "script"
 			} ).done( function () {
-				console.log( name + " loaded" );
+				debug( name + " loaded" );
 				if ( callback ) {
 					callback.call( ime );
 				}
 			} ).fail(
 					function ( jqxhr, settings, exception ) {
-						console.log( "Error in loading inputmethod from " + url + " Exception: "
+						debug( "Error in loading inputmethod " + name + " Exception: "
 								+ exception );
 					} );
-		},
+		}
 	};
 
 	$.fn.ime = function ( option ) {

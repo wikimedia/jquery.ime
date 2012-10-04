@@ -1,0 +1,51 @@
+{
+  "name": "jquery.ime",
+  "version": "0.1.0",
+  "description": "jQuery based internationalization library",
+  "homepage": "https://github.com/wikimedia/jquery.ime",
+  "keywords": [
+    "internationalization",
+    "localization",
+    "ime",
+    "jquery",
+    "l10n"
+  ],
+  "author": {
+	 "name": "Santhosh Thottingal",
+	 "email": "santhosh.thottingal@gmail.com"
+  },
+  "contributors": [
+    "Amir Aharoni <amir.aharoni@mail.huji.ac.il>",
+    "Neil Kandalgaonkar <neilk@brevity.org>"
+  ],
+  "dependencies": {
+   "jQuery": "~1.7.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.9",
+    "grunt-compare-size": ">=0.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wikimedia/jquery.ime.git"
+  },
+  "bugs": {
+	    "url" : "http://github.com/wikimedia/jquery.ime/issues"
+	  },
+  "engine": {
+    "node": ">=0.6.x"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/wikimedia/jquery.ime/blob/master/GPL-LICENSE"
+    },
+    {
+      "type": "MIT",
+      "url": "https://github.com/wikimedia/jquery.ime/blob/master/MIT-LICENSE"
+    }
+  ],
+  "scripts": {
+  "test": "grunt test --verbose"
+  }
+}

@@ -15,7 +15,7 @@
 		maxKeyLength: 2,
 		patterns: [ [ '[a-z]', function ( $1 ) {
 			return $1.toUpperCase();
-		} ] ],
+		} ] ]
 	};
 
 	$.ime.register( capitalize );
