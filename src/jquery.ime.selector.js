@@ -27,7 +27,19 @@
 			this.$imeSetting.append( this.$menu );
 			this.$element.after( this.$imeSetting );
 			this.position();
+			this.$imeSetting.hide();
 		},
+
+		focus: function () {
+			// Hide all other IME settings
+			$( 'div.imeselector' ).hide();
+			this.$imeSetting.show();//.css( 'opacity', 0.5 );
+		},
+
+		reveal: function () {
+			this.$imeSetting.show().css( 'opacity', 1 );
+		},
+
 
 		toggle: function () {
 			var isActive = this.$menu.hasClass( 'open' );
@@ -41,13 +53,16 @@
 		},
 
 		listen: function () {
-			this.$menu.on( 'click', 'li.ime-im', $.proxy( this.selectIM, this ) );
-			this.$menu.on( 'click', 'li.ime-lang', $.proxy( this.selectLanguage, this ) );
-			this.$element.on( 'focus', $.proxy( this.focus, this ) ).on( 'keypress',
-					$.proxy( this.keypress, this ) ).on( 'keyup', $.proxy( this.keyup, this ) );
+			var imeselector = this;
+			imeselector.$menu.on( 'click', 'li.ime-im', $.proxy( this.selectIM, this ) );
+			imeselector.$menu.on( 'click', 'li.ime-lang', $.proxy( this.selectLanguage, this ) );
+			imeselector.$element.on( 'focus', $.proxy( this.focus, this ) );
 			// Possible resize of textarea
-			this.$element.on( 'mouseup', $.proxy( this.position, this ) );
-			this.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
+			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
+			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
+			$('html').on('click', function () {
+				imeselector.$menu.removeClass( 'open' );
+			});
 		},
 
 		position: function () {
@@ -64,6 +79,7 @@
 
 			imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.prepareInputMethods( language );
+			imeselector.toggle();
 			e.stopPropagation();
 		},
 
@@ -145,7 +161,6 @@
 
 	$.fn.imeselector.Constructor = IMESelector;
 
-
 	// Private functions
 	var helpLink = function () {
 		return $( "<li>" ).append( $( '<a>' ).attr( 'href', '#' ).text( "Help" ) );
@@ -162,8 +177,7 @@
 						'<span>CTRL+M</span>' ) );
 	};
 	var selectorTemplate = '<div class="imeselector">'
-			+ '<a class="ime-name imeselector-toggle" data-target=".imeselector-menu"  href="#">Select</a>'
+			+ '<a class="ime-name imeselector-toggle" data-target=".imeselector-menu"  href="#"></a>'
 			+ '<b class="caret"></b>' + '</div>';
-
 
 }( jQuery ) );

@@ -8,20 +8,9 @@ div.imeselector {
 	height: 15px;
 	margin: 1px 0 0;
 	font-size: 8px;
-	padding-right: 20px;
 	padding-left: 20px;
-	background-color: #EEEEEE;
 	margin-top: 0px;
 	text-align: left;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-bottom: none;
-	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
 }
 
 div.imeselector a {
@@ -63,7 +52,6 @@ div.imeselector a {
 	top: 0;
 	visibility: hidden;
 	margin-top: -1px;
-	background-color: #EEEEEE;
 }
 
 .imeselector-menu li:hover .sub-menu {
@@ -80,14 +68,6 @@ dropup,.imeselector {
 	position: relative;
 }
 
-.imeselector-toggle {
-	*margin-bottom: -3px;
-}
-
-.imeselector-toggle:active,.open .imeselector-toggle {
-	outline: 0;
-}
-
 .imeselector-menu {
 	position: absolute;
 	top: 14px;
@@ -97,16 +77,13 @@ dropup,.imeselector {
 	float: left;
 	min-width: 160px;
 	padding: 4px 0;
-	margin: 1px 0 0;
 	list-style: none;
-	background-color: #EEEEEE;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	*border-right-width: 2px;
-	*border-bottom-width: 2px;
-	/*-webkit-border-radius: 5px;
+	background-color: #FFFFFF;
+	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;*/
+	border-radius: 5px; */
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -114,12 +91,21 @@ dropup,.imeselector {
 	-moz-background-clip: padding;
 	background-clip: padding-box;
 	text-align: left;
-	*border-right-width: 2px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
-.imeselector-menu.pull-right {
-	right: 0;
-	left: auto;
+/* The triangle shaped callout */
+.imeselector-menu:after {
+	border-bottom: 6px solid #FFFFFF;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	content: "";
+	display: inline-block;
+	left: 10px;
+	position: absolute;
+	top: -6px;
 }
 
 .imeselector-menu  .divider {
@@ -140,8 +126,7 @@ dropup,.imeselector {
 	white-space: nowrap;
 }
 
-.imeselector-menu li>a:hover,.imeselector-menu .active>a,.imeselector-menu .active>a:hover,.sub-menu li>a:hover,.sub-menu.active>a,.sub-menu.active>a:hover
-	{
+.imeselector-menu li>a:hover {
 	color: #ffffff;
 	text-decoration: none;
 	background-color: #0088cc;
@@ -153,24 +138,6 @@ dropup,.imeselector {
 .open {
 	*z-index: 1000;
 	display: block;
-}
-
-.pull-right>.imeselector-menu {
-	right: 0;
-	left: auto;
-}
-
-.dropup .caret,.navbar-fixed-bottom .imeselector .caret {
-	border-top: 0;
-	border-bottom: 4px solid #000000;
-	content: "\2191";
-}
-
-.dropup .imeselector-menu,.navbar-fixed-bottom .imeselector .imeselector-menu
-	{
-	top: auto;
-	bottom: 100%;
-	margin-bottom: 1px;
 }
 
 .imeselector-menu li {
