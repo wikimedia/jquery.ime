@@ -6,6 +6,23 @@
 			name: "Capitalize", // XXX This can be the name written in its own script?
 			source: 'rules/en/capitalize.js'
 		},
+		'am-transliteration': {
+			name: "Transliteration",
+			source: 'rules/am/am-transliteration.js'
+		},
+
+		'hi-transliteration': {
+			name: "Transliteration",
+			source: 'rules/hi/hi-transliteration.js'
+		},
+		'hi-inscript': {
+			name: "Inscript",
+			source: 'rules/hi/hi-inscript.js'
+		},
+		'hi-bolnagari': {
+			name: "Bolnagari",
+			source: 'rules/hi/hi-bolnagari.js'
+		},
 		'ml-transliteration': {
 			name: "Transliteration",
 			source: 'rules/ml/ml-transliteration.js'
@@ -33,25 +50,49 @@
 		'de': {
 			name: "Deutsch",
 			source: 'rules/de/de.js'
-		}
+		},
+		'he-standard-2011': {
+			name: "Hebrew Standard 2011",
+			source: 'rules/he/he-standard-2011.js'
+		},
 	} );
 
 	$.extend( $.ime.languages, {
+		'am': {
+			autonym: "አማርኛ",
+			inputmethods: [ 'am-transliteration' ]
+		},
 		'en': {
 			autonym: "English",
 			inputmethods: [ 'en-capitalize' ]
+		},
+		'de': {
+			autonym: "Deutsch",
+			inputmethods: [ 'de' ]
+		},
+		'he': {
+			autonym: "עִבְרִית",
+			inputmethods: [ 'he-standard-2011' ]
+		},
+		'hi': {
+			autonym: "हिन्दी",
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
 		},
 		'ml': {
 			autonym: "മലയാളം",
 			inputmethods: [ 'ml-transliteration', 'ml-inscript' ]
 		},
+		'mr': {
+			autonym: "मराठी",
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
+		},
+		'sa': {
+			autonym: "संस्कृत",
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
+		},
 		'ta': {
 			autonym: "தமிழ்",
 			inputmethods: [ 'ta-transliteration', 'ta-inscript', 'ta-99', 'ta-bamini' ]
-		},
-		'de': {
-			autonym: "Deutsch",
-			inputmethods: [ 'de' ]
 		}
 	} );
 
