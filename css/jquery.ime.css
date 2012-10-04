@@ -64,8 +64,9 @@ div.imeselector a {
 	background-size: 12px 12px;
 }
 
-dropup,.imeselector {
-	position: relative;
+div.ime-language-list {
+	overflow: auto;
+	max-height: 200px;
 }
 
 .imeselector-menu {

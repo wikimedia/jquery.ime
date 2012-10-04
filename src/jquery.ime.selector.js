@@ -33,13 +33,12 @@
 		focus: function () {
 			// Hide all other IME settings
 			$( 'div.imeselector' ).hide();
-			this.$imeSetting.show();//.css( 'opacity', 0.5 );
+			this.$imeSetting.show();// .css( 'opacity', 0.5 );
 		},
 
 		reveal: function () {
 			this.$imeSetting.show().css( 'opacity', 1 );
 		},
-
 
 		toggle: function () {
 			var isActive = this.$menu.hasClass( 'open' );
@@ -60,9 +59,9 @@
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
 			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
-			$('html').on('click', function () {
+			$( 'html' ).on( 'click', function () {
 				imeselector.$menu.removeClass( 'open' );
-			});
+			} );
 		},
 
 		position: function () {
@@ -115,13 +114,16 @@
 
 		prepareLanguageList: function () {
 			var imeselector = this;
-
+			// Language list can be very long. So we use a container with
+			// overflow auto.
+			var $languageList = $( '<div class="ime-language-list">' );
 			$.each( $.ime.languages, function ( languageCode, language ) {
 				var $languageItem = $( '<a>' ).attr( 'href', '#' ).attr( 'lang', languageCode )
 						.text( language.autonym );
 				var $language = $( '<li class="ime-lang">' ).append( $languageItem );
-				imeselector.$menu.append( $language );
+				$languageList.append( $language );
 			} );
+			imeselector.$menu.append( $languageList );
 		},
 
 		prepareInputMethods: function ( languageCode ) {
