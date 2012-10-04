@@ -1,14 +1,6 @@
 ( function ( $ ) {
 	'use strict';
 
-	var helpLink = function () {
-		return $( "<li>" ).append( $( '<a>' ).attr( 'href', '#' ).text( "Help" ) );
-	};
-
-	var toggleMenuItem = function () {
-		return $( "<li>" ).append( $( '<a>' ).attr( 'href', '#' ).text( "Enable IME" ) );
-	};
-
 	/**
 	 *
 	 */
@@ -115,85 +107,19 @@
 		this.$element = $( element );
 		this.options = $.extend( {}, IME.defaults, options );
 		this.active = false;
-		this.$imeSetting = $( '<div>' ).addClass( 'ime-setting dropdown' ).append(
-				$( '<a>' ).addClass( 'ime-name' ).attr( 'href', '#' ).addClass( 'dropdown-toggle' )
-						.text( "Select" ) );
-		this.$menu = $( '<ul>' ).addClass( "ime-menu dropdown-menu" );
 		this.inputmethod = null;
 		this.context = '';
-		this.shown = false;
-		this.init();
+		this.selector = this.$element.imeselector();
 		this.listen();
 	}
 
 	IME.prototype = {
 		constructor: IME,
-		_positionSettings: function () {
-			var position = this.$element.position();
-			this.$imeSetting.css( 'top', position.top + this.$element.outerHeight() );
-			this.$imeSetting.css( 'left', position.left + this.$element.outerWidth()
-					- this.$imeSetting.outerWidth() );
-		},
-
-		select: function ( e ) {
-			var ime = this;
-			var inputmethodId = $( e.target ).data( 'ime-inputmethod' );
-			if ( !inputmethodId ) {
-				ime.$menu.hide();
-				e.stopPropagation();
-				return;
-			}
-			this.load( inputmethodId, function () {
-				ime.inputmethod = $.ime.inputmethods[inputmethodId];
-				ime.$element.focus();
-				$( '.ime-menu' ).hide();
-				var name = ime.inputmethod.name;
-				ime.$imeSetting.find( 'a.ime-name' ).text( name );
-				ime.$menu.hide();
-			} );
-			e.stopPropagation();
-		},
-
-		prepareInputMethods: function () {
-			var ime = this;
-			$.each( $.ime.languages, function ( languageCode, language ) {
-				var $language = $( '<li>' ).addClass( 'dropdown' ).append(
-						$( '<a>' ).attr( 'href', '#' ).addClass( 'dropdown-toggle' ).text(
-								language.autonym ) );
-				var $inputMethods = $( '<ul>' ).addClass( 'dropdown-menu sub-menu' );
-				$.each( language.inputmethods, function ( index, inputmethod ) {
-					var name = $.ime.sources[inputmethod].name;
-					var $inputMethod = $( '<li>' ).append(
-							$( '<a>' ).attr( 'href', '#' ).data( 'ime-inputmethod', inputmethod )
-									.text( name ) );
-					$inputMethods.append( $inputMethod );
-				} );
-				$language.append( $inputMethods );
-				ime.$menu.append( $language );
-			} );
-		},
-
-		init: function () {
-			this.$menu.append( toggleMenuItem() );
-			this.prepareInputMethods();
-			this.$menu.append( helpLink() );
-			this.$imeSetting.append( this.$menu );
-			this.$element.after( this.$imeSetting );
-			this._positionSettings();
-		},
 
 		listen: function () {
-			this.$menu.on( 'click', 'li', $.proxy( this.select, this ) );
-			this.$element.on( 'focus', $.proxy( this.focus, this ) ).on( 'keypress',
+			this.$element.on( 'fsdocus', $.proxy( this.selector.show, this ) ).on( 'keypress',
 					$.proxy( this.keypress, this ) ).on( 'keyup', $.proxy( this.keyup, this ) );
-			this.$imeSetting.on( 'click', $.proxy( this.settings, this ) );
 		},
-
-		focus: function ( e ) {
-			$( '.ime-setting' ).hide();
-			this.$imeSetting.show();
-		},
-
 		/**
 		 *
 		 * @param input
@@ -238,7 +164,12 @@
 			var startPos, c, pos, endPos, divergingPos, input, replacement;
 
 			if ( !this.inputmethod ) {
-				return true;
+				var im = this.$element.data( 'ime-inputmethod' );
+				if ( im ) {
+					this.inputmethod = $.ime.inputmethods[im];
+				} else {
+					return true;
+				}
 			}
 
 			// handle backspace
@@ -293,10 +224,6 @@
 			return this.active;
 		},
 
-		settings: function ( e ) {
-			this.$menu.show();
-		},
-
 		load: function ( name, callback ) {
 			var ime = this;
 			if ( $.ime.inputmethods[name] ) {
@@ -314,11 +241,9 @@
 				if ( callback ) {
 					callback.call( ime );
 				}
-			} ).fail(
-					function ( jqxhr, settings, exception ) {
-						debug( "Error in loading inputmethod " + name + " Exception: "
-								+ exception );
-					} );
+			} ).fail( function ( jqxhr, settings, exception ) {
+				debug( "Error in loading inputmethod " + name + " Exception: " + exception );
+			} );
 		}
 	};
 
