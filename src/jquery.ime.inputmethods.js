@@ -54,7 +54,7 @@
 		'he-standard-2011': {
 			name: "Hebrew Standard 2011",
 			source: 'rules/he/he-standard-2011.js'
-		},
+		}
 	} );
 
 	$.extend( $.ime.languages, {

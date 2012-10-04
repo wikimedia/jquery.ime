@@ -6,7 +6,7 @@
 		this.options = $.extend( {}, IMESelector.defaults, options );
 		this.active = false;
 		this.$imeSetting = $( selectorTemplate );
-		this.$menu = $( '<ul class="imeselector-menu"  role="menu">' );
+		this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
 		this.inputmethod = null;
 		this.shown = false;
 		this.init();
@@ -179,7 +179,7 @@
 						'<span>CTRL+M</span>' ) );
 	};
 	var selectorTemplate = '<div class="imeselector">'
-			+ '<a class="ime-name imeselector-toggle" data-target=".imeselector-menu"  href="#"></a>'
+			+ '<a class="ime-name imeselector-toggle" data-target=".imeselector-menu" href="#"></a>'
 			+ '<b class="caret"></b>' + '</div>';
 
 }( jQuery ) );
