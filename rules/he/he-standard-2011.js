@@ -10,7 +10,6 @@
 		author: "Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])",
 		license: "GPLv3",
 		version: "1.0",
-		layers: 2,
 		contextLength: 0,
 		maxKeyLength: 0,
 		patterns: [

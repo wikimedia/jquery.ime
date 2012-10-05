@@ -10,7 +10,6 @@
 		author: "Junaid P V",
 		license: "GPLv3",
 		version: "1.0",
-		layers: 2,
 		contextLength: 1,
 		maxKeyLength: 4,
 		patterns: [

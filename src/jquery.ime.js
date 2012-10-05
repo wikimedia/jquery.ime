@@ -19,14 +19,22 @@
 		},
 
 		/**
+		 * Transliterate a given string input based on context and input method definition.
+		 * If there are no matching rules defined, returns the original string.
 		 *
 		 * @param input
 		 * @param context
-		 * @returns
+		 * @param altGr bool whether altGr key is pressed or not
+		 * @returns String transliterated string
 		 */
-		transliterate: function ( input, context ) {
+		transliterate: function ( input, context, altGr ) {
 			var patterns, regex, rule, replacement;
-			patterns = this.inputmethod.patterns;
+
+			if ( altGr ) {
+				patterns = this.inputmethod.patterns_x || [];
+			} else {
+				patterns = this.inputmethod.patterns;
+			}
 
 			if ( $.isFunction( patterns ) ) {
 				return patterns.call( this, input, context );
@@ -59,7 +67,9 @@
 		},
 
 		keypress: function ( e ) {
-			var startPos, c, pos, endPos, divergingPos, input, replacement;
+			var startPos, c, pos, endPos, divergingPos, input, replacement, altGr;
+
+			altGr = false;
 
 			if ( !this.active ) {
 				return true;
@@ -79,9 +89,13 @@
 			// Don't process ASCII control characters (except linefeed),
 			// as well as anything involving
 			// Alt (except for extended keymaps), Ctrl and Meta
-			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.layers <= 2 )
+			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.patterns_x )
 					|| e.ctrlKey || e.metaKey ) {
 				return true;
+			}
+
+			if ( e.altKey || e.altGraphKey ){
+				altGr = true;
 			}
 
 			c = String.fromCharCode( e.which );
@@ -100,7 +114,7 @@
 					this.inputmethod.lookbackLength )
 					+ c;
 
-			replacement = this.transliterate( input, this.context );
+			replacement = this.transliterate( input, this.context, altGr );
 
 			// Update the context
 			this.context += c;

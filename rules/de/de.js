@@ -10,7 +10,6 @@
 		author: "Erik Moeller",
 		license: "Public domain",
 		version: "1.0",
-		layers: 2,
 		contextLength: 1,
 		maxKeyLength: 1,
 		patterns: [

@@ -10,7 +10,6 @@
 		author: "G Karunakar",
 		license: "GPLv3",
 		version: "1.0",
-		layers: 3,
 		contextLength: 0,
 		maxKeyLength: 1,
 		patterns: [

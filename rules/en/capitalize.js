@@ -10,7 +10,6 @@
 		author: "Santhosh Thottingal",
 		license: "CC-BY-SA",
 		version: "1.0",
-		layers: 2,
 		contextLength: 0,
 		maxKeyLength: 2,
 		patterns: [ [ '[a-z]', function ( $1 ) {
