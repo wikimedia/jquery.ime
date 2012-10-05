@@ -17,7 +17,7 @@
 		constructor: IMESelector,
 
 		init: function () {
-			this.prepareInputMethods( "en" ); // TODO This should be from context.
+			this.prepareInputMethods( this.options.defaultLanguage );
 			this.$menu.append( toggleMenuItem() );
 			this.$menu.append( divider() );
 			this.$menu.append( languageListTitle() );
@@ -36,10 +36,6 @@
 			this.$imeSetting.show();// .css( 'opacity', 0.5 );
 		},
 
-		reveal: function () {
-			this.$imeSetting.show().css( 'opacity', 1 );
-		},
-
 		toggle: function () {
 			var isActive = this.$menu.hasClass( 'open' );
 			this.$menu.removeClass( 'open' );
@@ -51,98 +47,178 @@
 			return false;
 		},
 
+		/**
+		 * Bind the events and listen
+		 */
 		listen: function () {
 			var imeselector = this;
-			imeselector.$menu.on( 'click', 'li.ime-im', $.proxy( this.selectIM, this ) );
-			imeselector.$menu.on( 'click', 'li.ime-lang', $.proxy( this.selectLanguage, this ) );
-			imeselector.$element.on( 'focus', $.proxy( this.focus, this ) );
-			// Possible resize of textarea
-			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
-			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
+
 			$( 'html' ).on( 'click', function () {
 				imeselector.$menu.removeClass( 'open' );
 			} );
+
+			imeselector.$menu.on( 'click', 'li.ime-im', function ( e ) {
+				var inputmethodId = $( this ).data( 'ime-inputmethod' );
+				imeselector.selectIM( inputmethodId );
+				e.stopPropagation();
+			} );
+			imeselector.$menu.on( 'click', 'li.ime-lang', function ( e ) {
+				var language = $( this ).attr( 'lang' );
+				imeselector.selectLanguage( language );
+				$( this ).addClass( 'checked' );
+				e.stopPropagation();
+			} );
+			imeselector.$menu.on( 'click', 'li.ime-disable-link', function ( e ) {
+				imeselector.disableIM();
+				e.stopPropagation();
+			} );
+
+			imeselector.$element.on( 'focus', $.proxy( this.focus, this ) );
+			// Possible resize of textarea
+			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
+			imeselector.$element.on( 'keydown', $.proxy( this.keydown, this ) );
+
+			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
+
 		},
 
+		/**
+		 * Keydown event handler. Handles shortcut key presses
+		 *
+		 * @context {HTMLElement}
+		 * @param {jQuery.Event} e
+		 */
+		keydown: function ( e ) {
+			var imeselector = this;
+			var ime = $( e.target ).data( 'ime' );
+			if ( isShortcutKey( e ) ) {
+				ime.toggle();
+				if ( !ime.isActive() ) {
+					imeselector.disableIM();
+				} else {
+					imeselector.selectIM( imeselector.inputmethod.id );
+				}
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			}
+			return true;
+		},
+
+		/**
+		 * Position the im selector relative to the edit area
+		 */
 		position: function () {
 			var position = this.$element.position();
 
 			this.$imeSetting.css( 'top', position.top + this.$element.outerHeight() );
 			this.$imeSetting.css( 'left', position.left + this.$element.outerWidth()
-					- this.$imeSetting.outerWidth() );
+				- this.$imeSetting.outerWidth() );
 		},
 
-		selectLanguage: function ( e ) {
-			var imeselector = this;
-			var language = $( e.target ).attr( 'lang' );
-
+		/**
+		 * Select a language
+		 *
+		 * @param languageCode
+		 */
+		selectLanguage: function ( languageCode ) {
+			var imeselector = this, language;
+			this.$menu.find( 'li.ime-lang.checked' ).removeClass( 'checked' );
 			imeselector.$menu.find( 'li.ime-im' ).remove();
-			this.prepareInputMethods( language );
+			this.prepareInputMethods( languageCode );
 			imeselector.toggle();
-			e.stopPropagation();
+			// And select the default inputmethod
+			language = $.ime.languages[languageCode];
+			imeselector.selectIM( language.inputmethods[0] );
 		},
 
-		selectIM: function ( e ) {
-			var imeselector = this;
-			var inputmethodId = $( e.target ).data( 'ime-inputmethod' );
-			this.$menu.find( 'li.checked' ).removeClass( 'checked' );
+		/**
+		 * Select an input method
+		 *
+		 * @param inputmethodId
+		 */
+		selectIM: function ( inputmethodId ) {
+			var imeselector = this, ime;
 
-			$( e.target ).closest( 'li' ).addClass( 'checked' );
-
-			var ime = this.$element.data( 'ime' );
-
-			if ( !inputmethodId ) {
-				imeselector.$menu.hide();
-				e.stopPropagation();
-				return;
-			}
+			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'li.ime-disable-link' ).removeClass( 'checked' );
+			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
+				.addClass( 'checked' );
+			ime = this.$element.data( 'ime' );
 
 			ime.load( inputmethodId, function () {
+				var name;
+
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
 				imeselector.$element.focus();
-				imeselector.toggle();
-
-				var name = imeselector.inputmethod.name;
-				imeselector.$element.data( 'ime-inputmethod', inputmethodId );
+				imeselector.$menu.removeClass( 'open' );
+				ime.enable();
+				name = imeselector.inputmethod.name;
+				ime.setIM( inputmethodId );
 				imeselector.$imeSetting.find( 'a.ime-name' ).text( name );
 
 				imeselector.position();
 			} );
 
-			e.stopPropagation();
 		},
 
+		/**
+		 * Disable the inputmethods( Use system input method )
+		 */
+		disableIM: function () {
+			var imeselector = this;
+			var ime = imeselector.$element.data( 'ime' );
+			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'li.ime-disable-link' ).addClass( 'checked' );
+			ime.disable();
+			imeselector.$imeSetting.find( 'a.ime-name' ).text( '' );
+			this.$menu.removeClass( 'open' );
+			imeselector.position();
+		},
+
+		/**
+		 * Prepare language list
+		 */
 		prepareLanguageList: function () {
 			var imeselector = this;
 			// Language list can be very long. So we use a container with
 			// overflow auto.
 			var $languageList = $( '<div class="ime-language-list">' );
+
 			$.each( $.ime.languages, function ( languageCode, language ) {
-				var $languageItem = $( '<a>' ).attr( 'href', '#' ).attr( 'lang', languageCode )
-						.text( language.autonym );
-				var $language = $( '<li class="ime-lang">' ).append( $languageItem );
+				var $languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
+				var $language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
+				$language.append( $languageItem );
 				$languageList.append( $language );
 			} );
+
 			imeselector.$menu.append( $languageList );
 		},
 
+		/**
+		 * Prepare input methods in menu for the given language code
+		 *
+		 * @param languageCode
+		 */
 		prepareInputMethods: function ( languageCode ) {
 			var imeselector = this;
 			var language = $.ime.languages[languageCode];
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
 				var name = $.ime.sources[inputmethod].name;
-				var $imeItem = $( '<a>' ).attr( 'href', '#' ).data( 'ime-inputmethod', inputmethod )
-						.text( name );
-				var $inputMethod = $( '<li class="ime-im">' )
-						.append( '<span class="ime-im-check">' ).append( $imeItem );
-
+				var $imeItem = $( '<a>' ).attr( 'href', '#' ).text( name );
+				var $inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
+				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
+				$inputMethod.addClass( 'ime-im' );
 				imeselector.$menu.prepend( $inputMethod );
 			} );
 		}
 	};
 
-	IMESelector.defaults = {};
+	IMESelector.defaults = {
+		defaultLanguage: 'en'
+	};
+
 	/*
 	 * imeselector PLUGIN DEFINITION
 	 */
@@ -175,11 +251,21 @@
 	};
 	var toggleMenuItem = function () {
 		return $( '<li class="ime-disable-link">' ).append(
-				$( '<a>' ).attr( 'href', '#' ).text( "Disable Input Method" ).append(
-						'<span>CTRL+M</span>' ) );
+			$( '<a>' ).attr( 'href', '#' ).text( "System input method" ).append(
+				'<span>CTRL+M</span>' ) );
 	};
 	var selectorTemplate = '<div class="imeselector">'
-			+ '<a class="ime-name imeselector-toggle" data-target=".imeselector-menu" href="#"></a>'
-			+ '<b class="caret"></b>' + '</div>';
+		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
+		+ '<b class="caret"></b></div>';
+
+	/**
+	 * Check whether a keypress event corresponds to the shortcut key
+	 *
+	 * @param event Event object
+	 * @return bool
+	 */
+	function isShortcutKey ( event ) {
+		return event.ctrlKey && ( event.which === 77 || event.which === 13 );
+	}
 
 }( jQuery ) );

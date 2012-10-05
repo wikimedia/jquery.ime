@@ -1,6 +1,212 @@
 ( function ( $ ) {
 	'use strict';
 
+	function IME ( element, options ) {
+		this.$element = $( element );
+		this.options = $.extend( {}, IME.defaults, options );
+		this.active = false;
+		this.inputmethod = null;
+		this.context = '';
+		this.selector = this.$element.imeselector( this );
+		this.listen();
+	}
+
+	IME.prototype = {
+		constructor: IME,
+
+		listen: function () {
+			this.$element.on( 'keypress', $.proxy( this.keypress, this ) );
+		},
+
+		/**
+		 *
+		 * @param input
+		 * @param context
+		 * @returns
+		 */
+		transliterate: function ( input, context ) {
+			var patterns, regex, rule, replacement;
+			patterns = this.inputmethod.patterns;
+
+			if ( $.isFunction( patterns ) ) {
+				return patterns.call( this, input, context );
+			}
+
+			for ( var i = 0; i < patterns.length; i++) {
+				rule = patterns[i];
+				regex = new RegExp( rule[0] + '$' );
+
+				// Last item in the rules. It can be a function too
+				// since replace method can have second argument a function
+				replacement = rule.slice( -1 )[0];
+
+				// Input string match test
+				if ( regex.test( input ) ) {
+					// Context test required?
+					if ( rule.length === 3 ) {
+						if ( new RegExp( rule[1] + '$' ).test( context ) ) {
+							return input.replace( regex, replacement );
+						}
+					} else {
+						// No context test required. Just replace.
+						return input.replace( regex, replacement );
+					}
+				}
+			}
+
+			// No matches, return the input
+			return input;
+		},
+
+		keypress: function ( e ) {
+			var startPos, c, pos, endPos, divergingPos, input, replacement;
+
+			if ( !this.active ) {
+				return true;
+			}
+
+			if ( !this.inputmethod ) {
+					return true;
+			}
+
+			// handle backspace
+			if ( e.which === 8 ) {
+				// Blank the context
+				this.context = '';
+				return true;
+			}
+
+			// Don't process ASCII control characters (except linefeed),
+			// as well as anything involving
+			// Alt (except for extended keymaps), Ctrl and Meta
+			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.layers <= 2 )
+					|| e.ctrlKey || e.metaKey ) {
+				return true;
+			}
+
+			c = String.fromCharCode( e.which );
+
+			// Get the current caret position. The user may have selected text to overwrite,
+			// so get both the start and end position of the selection. If there is no selection,
+			// startPos and endPos will be equal.
+			pos = getCaretPosition( this.$element );
+			startPos = pos[0];
+			endPos = pos[1];
+
+			// Get the last few characters before the one the user just typed,
+			// to provide context for the transliteration regexes.
+			// We need to append c because it hasn't been added to $this.val() yet
+			input = lastNChars( this.$element.val() || this.$element.text(), startPos,
+					this.inputmethod.lookbackLength )
+					+ c;
+
+			replacement = this.transliterate( input, this.context );
+
+			// Update the context
+			this.context += c;
+			if ( this.context.length > this.inputmethod.keyBufferLength ) {
+				// The buffer is longer than needed, truncate it at the front
+				this.context = this.context.substring( this.context.length
+						- this.inputmethod.keyBufferLength );
+			}
+
+			// textSelection() magic is expensive, so we avoid it as much as we can
+			if ( replacement === input ) {
+				return true;
+			}
+
+			// Drop a common prefix, if any
+			divergingPos = firstDivergence( input, replacement );
+			input = input.substring( divergingPos );
+			replacement = replacement.substring( divergingPos );
+			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
+
+			e.stopPropagation();
+			return false;
+		},
+
+		isActive: function () {
+			return this.active;
+		},
+
+		disable: function () {
+			this.active = false;
+		},
+
+		enable: function () {
+			this.active = true;
+		},
+
+		toggle: function () {
+			this.active = !this.active;
+		},
+
+		setIM: function ( inputmethodId ) {
+			this.inputmethod = $.ime.inputmethods[inputmethodId];
+		},
+
+		load: function ( name, callback ) {
+			var ime = this;
+			if ( $.ime.inputmethods[name] ) {
+				if ( callback ) {
+					callback.call( ime );
+				}
+				return true;
+			}
+
+			$.ajax( {
+				url: ime.options.imePath + $.ime.sources[name].source,
+				dataType: "script"
+			} ).done( function () {
+				debug( name + " loaded" );
+				if ( callback ) {
+					callback.call( ime );
+				}
+			} ).fail( function ( jqxhr, settings, exception ) {
+				debug( "Error in loading inputmethod " + name + " Exception: " + exception );
+			} );
+		}
+	};
+
+	$.fn.ime = function ( option ) {
+		return this.each( function () {
+			var $this = $( this );
+			var data = $this.data( 'ime' );
+			var options = typeof option === 'object' && option;
+
+			if ( !data ) {
+				$this.data( 'ime', ( data = new IME( this, options ) ) );
+			}
+
+			if ( typeof option === 'string' ) {
+				data[option]();
+			}
+
+		} );
+
+	};
+
+	$.ime = {};
+	$.ime.inputmethods = {};
+	$.ime.sources = {};
+	$.ime.languages = {};
+
+	$.ime.register = function ( inputMethod ) {
+		$.ime.inputmethods[inputMethod.id] = inputMethod;
+	};
+
+	// default options
+	IME.defaults = {
+		imePath: "../" // Relative/Absolute path for the rules folder of jquery.ime
+	};
+
+	// private function for debugging
+	function debug ( $obj ) {
+		if ( window.console && window.console.log ) {
+			window.console.log( $obj );
+		}
+	}
+
 	/**
 	 *
 	 */
@@ -102,188 +308,5 @@
 			return str.substr( pos - n, n );
 		}
 	};
-
-	function IME ( element, options ) {
-		this.$element = $( element );
-		this.options = $.extend( {}, IME.defaults, options );
-		this.active = false;
-		this.inputmethod = null;
-		this.context = '';
-		this.selector = this.$element.imeselector();
-		this.listen();
-	}
-
-	IME.prototype = {
-		constructor: IME,
-
-		listen: function () {
-			this.$element.on( 'fsdocus', $.proxy( this.selector.show, this ) ).on( 'keypress',
-					$.proxy( this.keypress, this ) ).on( 'keyup', $.proxy( this.keyup, this ) );
-		},
-		/**
-		 *
-		 * @param input
-		 * @param context
-		 * @returns
-		 */
-		transliterate: function ( input, context ) {
-			var patterns, regex, rule, replacement;
-			patterns = this.inputmethod.patterns;
-
-			if ( $.isFunction( patterns ) ) {
-				return patterns.call( this, input, context );
-			}
-
-			for ( var i = 0; i < patterns.length; i++) {
-				rule = patterns[i];
-				regex = new RegExp( rule[0] + '$' );
-
-				// Last item in the rules. It can be a function too
-				// since replace method can have second argument a function
-				replacement = rule.slice( -1 )[0];
-
-				// Input string match test
-				if ( regex.test( input ) ) {
-					// Context test required?
-					if ( rule.length === 3 ) {
-						if ( new RegExp( rule[1] + '$' ).test( context ) ) {
-							return input.replace( regex, replacement );
-						}
-					} else {
-						// No context test required. Just replace.
-						return input.replace( regex, replacement );
-					}
-				}
-			}
-
-			// No matches, return the input
-			return input;
-		},
-
-		keypress: function ( e ) {
-			var startPos, c, pos, endPos, divergingPos, input, replacement;
-
-			if ( !this.inputmethod ) {
-				var im = this.$element.data( 'ime-inputmethod' );
-				if ( im ) {
-					this.inputmethod = $.ime.inputmethods[im];
-				} else {
-					return true;
-				}
-			}
-
-			// handle backspace
-			if ( e.which === 8 ) {
-				// Blank the context
-				this.context = '';
-				return true;
-			}
-
-			c = String.fromCharCode( e.which );
-
-			// Get the current caret position. The user may have selected text to overwrite,
-			// so get both the start and end position of the selection. If there is no selection,
-			// startPos and endPos will be equal.
-			pos = getCaretPosition( this.$element );
-			startPos = pos[0];
-			endPos = pos[1];
-
-			// Get the last few characters before the one the user just typed,
-			// to provide context for the transliteration regexes.
-			// We need to append c because it hasn't been added to $this.val() yet
-			input = lastNChars( this.$element.val() || this.$element.text(), startPos,
-					this.inputmethod.lookbackLength )
-					+ c;
-
-			replacement = this.transliterate( input, this.context );
-
-			// Update the context
-			this.context += c;
-			if ( this.context.length > this.inputmethod.keyBufferLength ) {
-				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring( this.context.length
-						- this.inputmethod.keyBufferLength );
-			}
-
-			// textSelection() magic is expensive, so we avoid it as much as we can
-			if ( replacement === input ) {
-				return true;
-			}
-
-			// Drop a common prefix, if any
-			divergingPos = firstDivergence( input, replacement );
-			input = input.substring( divergingPos );
-			replacement = replacement.substring( divergingPos );
-			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
-
-			e.stopPropagation();
-			return false;
-		},
-
-		isActive: function () {
-			return this.active;
-		},
-
-		load: function ( name, callback ) {
-			var ime = this;
-			if ( $.ime.inputmethods[name] ) {
-				if ( callback ) {
-					callback.call( ime );
-				}
-				return true;
-			}
-
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: "script"
-			} ).done( function () {
-				debug( name + " loaded" );
-				if ( callback ) {
-					callback.call( ime );
-				}
-			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( "Error in loading inputmethod " + name + " Exception: " + exception );
-			} );
-		}
-	};
-
-	$.fn.ime = function ( option ) {
-		return this.each( function () {
-			var $this = $( this );
-			var data = $this.data( 'ime' );
-			var options = typeof option === 'object' && option;
-
-			if ( !data ) {
-				$this.data( 'ime', ( data = new IME( this, options ) ) );
-			}
-
-			if ( typeof option === 'string' ) {
-				data[option]();
-			}
-
-		} );
-
-	};
-
-	$.ime = {};
-	$.ime.inputmethods = {};
-	$.ime.sources = {};
-	$.ime.languages = {};
-
-	$.ime.register = function ( inputMethod ) {
-		$.ime.inputmethods[inputMethod.id] = inputMethod;
-	};
-
-	// default options
-	IME.defaults = {
-		imePath: "../" // Relative/Absolute path for the rules folder of jquery.ime
-	};
-
-	// private function for debugging
-	function debug ( $obj ) {
-		if ( window.console && window.console.log ) {
-			window.console.log( $obj );
-		}
-	}
 
 }( jQuery ) );
