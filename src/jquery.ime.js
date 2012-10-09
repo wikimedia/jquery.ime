@@ -91,6 +91,8 @@
 			// Alt (except for extended keymaps), Ctrl and Meta
 			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.patterns_x )
 					|| e.ctrlKey || e.metaKey ) {
+				// Blank the context
+				this.context = '';
 				return true;
 			}
 
@@ -111,20 +113,20 @@
 			// to provide context for the transliteration regexes.
 			// We need to append c because it hasn't been added to $this.val() yet
 			input = lastNChars( this.$element.val() || this.$element.text(), startPos,
-					this.inputmethod.lookbackLength )
+					this.inputmethod.maxKeyLength )
 					+ c;
 
 			replacement = this.transliterate( input, this.context, altGr );
 
 			// Update the context
 			this.context += c;
-			if ( this.context.length > this.inputmethod.keyBufferLength ) {
+			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
 				this.context = this.context.substring( this.context.length
-						- this.inputmethod.keyBufferLength );
+						- this.inputmethod.contextLength );
 			}
 
-			// textSelection() magic is expensive, so we avoid it as much as we can
+			// it is a noop
 			if ( replacement === input ) {
 				return true;
 			}
@@ -202,11 +204,16 @@
 
 	$.ime = {};
 	$.ime.inputmethods = {};
-	$.ime.sources = {};
+		$.ime.sources = {};
 	$.ime.languages = {};
 
+	var defaultInputMethod = {
+		contextLength: 0,
+		maxKeyLength: 1
+	};
+
 	$.ime.register = function ( inputMethod ) {
-		$.ime.inputmethods[inputMethod.id] = inputMethod;
+		$.ime.inputmethods[inputMethod.id] = $.extend( {}, defaultInputMethod, inputMethod );
 	};
 
 	// default options

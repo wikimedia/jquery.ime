@@ -10,8 +10,6 @@
 		author: "Santhosh Thottingal",
 		license: "CC-BY-SA",
 		version: "1.0",
-		contextLength: 0,
-		maxKeyLength: 2,
 		patterns: [ [ '[a-z]', function ( $1 ) {
 			return $1.toUpperCase();
 		} ] ]
