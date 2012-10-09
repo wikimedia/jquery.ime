@@ -268,17 +268,51 @@
 	};
 
 	/**
+	 * Helper function to get an IE TextRange object for an element
+	 */
+	function rangeForElementIE( e ) {
+		if ( e.nodeName.toLowerCase() === 'input' ) {
+			return e.createTextRange();
+		} else {
+			var sel = document.body.createTextRange();
+
+			sel.moveToElementText( e );
+			return sel;
+		}
+	}
+
+	/**
 	 *
 	 */
 	function replaceText ( $element, replacement, start, end ) {
 		var element = $element.get( 0 );
-		if ( document.selection ) {
-			var range = document.selection.createRange();
-			range.text = replacement;
-			range.collapse( false );
-			range.select();
+
+		if ( document.body.createTextRange ) {
+			// IE
+			var selection = rangeForElementIE(element);
+
+			length = element.value.length;
+			// IE doesn't count \n when computing the offset, so we won't either
+			newLines = element.value.match( /\n/g );
+
+			if ( newLines ) {
+				length = length - newLines.length;
+			}
+
+			selection.moveStart( 'character', start );
+			selection.moveEnd( 'character', end - length );
+
+			selection.text = replacement;
+			selection.collapse( false );
+			selection.select();
 		} else {
+			// All other browsers
 			var scrollTop = element.scrollTop;
+
+			// This could be made better if range selection worked on browsers.
+			// But for complex scripts, browsers place cursor in unexpected places
+			// and not possible to fix cursor programmatically.
+			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
 			element.value = element.value.substring( 0, start ) + replacement
 					+ element.value.substring( end, element.value.length );
 			// restore scroll
@@ -289,7 +323,8 @@
 	}
 
 	/**
-	 * Find the point at which a and b diverge, i.e. the first position at which they don't have matching characters.
+	 * Find the point at which a and b diverge, i.e. the first position
+	 * at which they don't have matching characters.
 	 *
 	 * @param a String
 	 * @param b String
@@ -306,7 +341,8 @@
 	};
 
 	/**
-	 * Get the n characters in str that immediately precede pos Example: lastNChars( "foobarbaz", 5, 2 ) === "ba"
+	 * Get the n characters in str that immediately precede pos
+	 * Example: lastNChars( "foobarbaz", 5, 2 ) === "ba"
 	 *
 	 * @param str String to search in
 	 * @param pos Position in str
