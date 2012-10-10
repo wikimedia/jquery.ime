@@ -1,14 +1,14 @@
 ( function ( $ ) {
 	'use strict';
 	var inscript = {
-		id: "ml-inscript",
-		name: "Malayalam Inscript",
-		description: "Malayalam Inscript",
-		date: "2012-10-03",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'ml-inscript',
+		name: 'Malayalam Inscript',
+		description: 'Malayalam Inscript',
+		date: '2012-10-03',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 0,
 		maxKeyLength: 2,
 		patterns: [
@@ -68,7 +68,7 @@
 			[ ';', 'ച' ],
 			[ ':', 'ഛ' ],
 			[ '\'', 'ട' ],
-			[ '"', 'ഠ' ],
+			[ '\'', 'ഠ' ],
 			[ 'z', 'െ' ],
 			[ 'Z', 'എ' ],
 			[ 'x', 'ം' ],

@@ -89,8 +89,10 @@
 		 * @param {jQuery.Event} e
 		 */
 		keydown: function ( e ) {
-			var imeselector = this;
-			var ime = $( e.target ).data( 'ime' );
+			var imeselector, ime;
+
+			imeselector = this;
+			ime = $( e.target ).data( 'ime' );
 			if ( isShortcutKey( e ) ) {
 				ime.toggle();
 				if ( !ime.isActive() ) {
@@ -123,6 +125,7 @@
 		 */
 		selectLanguage: function ( languageCode ) {
 			var imeselector = this, language;
+
 			this.$menu.find( 'li.ime-lang.checked' ).removeClass( 'checked' );
 			imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.prepareInputMethods( languageCode );
@@ -166,8 +169,9 @@
 		 * Disable the inputmethods( Use system input method )
 		 */
 		disableIM: function () {
-			var imeselector = this;
-			var ime = imeselector.$element.data( 'ime' );
+			var imeselector = this, ime;
+
+			ime = imeselector.$element.data( 'ime' );
 			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li.ime-disable-link' ).addClass( 'checked' );
 			ime.disable();
@@ -180,14 +184,16 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var imeselector = this;
+			var imeselector = this, $languageList;
 			// Language list can be very long. So we use a container with
 			// overflow auto.
-			var $languageList = $( '<div class="ime-language-list">' );
+			$languageList = $( '<div class="ime-language-list">' );
 
 			$.each( $.ime.languages, function ( languageCode, language ) {
-				var $languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
-				var $language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
+				var $languageItem, $language;
+
+				$languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
+				$language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
 			} );
@@ -201,13 +207,14 @@
 		 * @param languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var imeselector = this;
-			var language = $.ime.languages[languageCode];
+			var imeselector = this,language = $.ime.languages[languageCode];
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
-				var name = $.ime.sources[inputmethod].name;
-				var $imeItem = $( '<a>' ).attr( 'href', '#' ).text( name );
-				var $inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
+				var name, $imeItem, $inputMethod;
+
+				name = $.ime.sources[inputmethod].name;
+				$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name );
+				$inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
 				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
 				$inputMethod.addClass( 'ime-im' );
 				imeselector.$menu.prepend( $inputMethod );
@@ -240,20 +247,24 @@
 	$.fn.imeselector.Constructor = IMESelector;
 
 	// Private functions
-	var helpLink = function () {
-		return $( "<li>" ).append( $( '<a>' ).attr( 'href', '#' ).text( "Help" ) );
-	};
-	var languageListTitle = function () {
-		return $( '<li class="ime-lang-title">' ).text( "Change input language" );
-	};
-	var divider = function () {
+	function helpLink () {
+		return $( '<li>' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
+	}
+
+	function languageListTitle  () {
+		return $( '<li class="ime-lang-title">' ).text( 'Change input language' );
+	}
+
+	function divider () {
 		return $( '<li class="divider">' );
-	};
-	var toggleMenuItem = function () {
+	}
+
+	function toggleMenuItem () {
 		return $( '<li class="ime-disable-link">' ).append(
-			$( '<a>' ).attr( 'href', '#' ).text( "System input method" ).append(
+			$( '<a>' ).attr( 'href', '#' ).text( 'System input method' ).append(
 				'<span>CTRL+M</span>' ) );
-	};
+	}
+
 	var selectorTemplate = '<div class="imeselector">'
 		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
 		+ '<b class="caret"></b></div>';

@@ -2,13 +2,13 @@
 	'use strict';
 
 	var hiInscript = {
-		id: "hi-inscript",
-		name: "Devanagari Inscript",
-		description: "Inscript keyboard for Devanagari script",
-		date: "2011-02-26",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'hi-inscript',
+		name: 'Devanagari Inscript',
+		description: 'Inscript keyboard for Devanagari script',
+		date: '2011-02-26',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 0,
 		maxKeyLength: 1,
 		patterns: [
@@ -38,8 +38,8 @@
 			[ 'p', '\u091C' ],
 			[ 'P', '\u091D' ],
 			[ '\\}', '\u091E' ],
-			[ "'", '\u091F' ],
-			[ '"', '\u0920' ],
+			[ '\'', '\u091F' ],
+			[ '\'', '\u0920' ],
 			[ '\\[', '\u0921' ],
 			[ '\\{', '\u0922' ],
 			[ 'C', '\u0923' ],

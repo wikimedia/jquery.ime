@@ -2,14 +2,14 @@
 	'use strict';
 
 	var taTransliteration = {
-		id: "ta-transliteration",
-		name: "Tamil Transliteration",
-		description: "Tamil Transliteration based input method",
-		date: "2012-10-03",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'ta-transliteration',
+		name: 'Tamil Transliteration',
+		description: 'Tamil Transliteration based input method',
+		date: '2012-10-03',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 1,
 		maxKeyLength: 4,
 		patterns: [
@@ -19,7 +19,7 @@
 			// '(ஸ்ரிi|ஸ்ர்I)',
 			[ 'ஸ்ர்i', 'ஸ்ரீ' ],
 
-			[ 'க்(ச்|ஸ்)h', 'க்‌ஷ்' ], // with ZWNJ
+			[ 'க்(ச்|ஸ்)h', 'க்\u200Cஷ்' ], // with ZWNJ
 			[ 'க்(ச்|ஸ்)H', 'க்ஷ்' ],
 
 			[ '([க-ஹ])்a', '$1' ],

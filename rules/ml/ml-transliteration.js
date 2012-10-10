@@ -1,14 +1,14 @@
 ( function ( $ ) {
 	'use strict';
 	var mltransliteration = {
-		id: "ml-transliteration",
-		name: "Malayalam Transliteration",
-		description: "Malayalam Transliteration based input method",
-		date: "2012-10-03",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'ml-transliteration',
+		name: 'Malayalam Transliteration',
+		description: 'Malayalam Transliteration based input method',
+		date: '2012-10-03',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 2,
 		maxKeyLength: 2,
 		patterns: [

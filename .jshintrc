@@ -5,7 +5,6 @@
 		"_"
 	],
 
-	"camelcase": true,
 	"curly": true,
 	"eqeqeq": true,
 	"immed": true,
@@ -20,9 +19,8 @@
 	"unused": true,
 	"strict": true,
 	"trailing": true,
-
+	"laxbreak": true,
 	"browser": true,
-
 	"nomen": true,
 	"onevar": true,
 	"white": false

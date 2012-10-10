@@ -28,7 +28,7 @@
 		 * @returns String transliterated string
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement;
+			var patterns, regex, rule, replacement,i ;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
@@ -40,7 +40,7 @@
 				return patterns.call( this, input, context );
 			}
 
-			for ( var i = 0; i < patterns.length; i++) {
+			for ( i = 0; i < patterns.length; i++) {
 				rule = patterns[i];
 				regex = new RegExp( rule[0] + '$' );
 
@@ -172,23 +172,25 @@
 
 			$.ajax( {
 				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: "script"
+				dataType: 'script'
 			} ).done( function () {
-				debug( name + " loaded" );
+				debug( name + ' loaded' );
 				if ( callback ) {
 					callback.call( ime );
 				}
 			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( "Error in loading inputmethod " + name + " Exception: " + exception );
+				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
 			} );
 		}
 	};
 
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
-			var $this = $( this );
-			var data = $this.data( 'ime' );
-			var options = typeof option === 'object' && option;
+			var $this, data, options;
+
+			$this = $( this );
+			data = $this.data( 'ime' );
+			options = typeof option === 'object' && option;
 
 			if ( !data ) {
 				$this.data( 'ime', ( data = new IME( this, options ) ) );
@@ -218,7 +220,7 @@
 
 	// default options
 	IME.defaults = {
-		imePath: "../" // Relative/Absolute path for the rules folder of jquery.ime
+		imePath: '../' // Relative/Absolute path for the rules folder of jquery.ime
 	};
 
 	// private function for debugging
@@ -231,11 +233,12 @@
 	/**
 	 *
 	 */
-	var getCaretPosition = function ( $element ) {
-		var el = $element.get( 0 );
-		var start = 0, end = 0, normalizedValue, range, textInputRange, len, endRange;
+	function getCaretPosition( $element ) {
+		var el, start = 0, end = 0, normalizedValue, range, textInputRange, len, endRange;
 
-		if ( typeof el.selectionStart === "number" && typeof el.selectionEnd === "number" ) {
+		el = $element.get( 0 );
+
+		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
 			end = el.selectionEnd;
 		} else {
@@ -243,7 +246,7 @@
 			range = document.selection.createRange();
 			if ( range && range.parentElement() === el ) {
 				len = el.value.length;
-				normalizedValue = el.value.replace( /\r\n/g, "\n" );
+				normalizedValue = el.value.replace( /\r\n/g, '\n' );
 
 				// Create a working TextRange that lives only in the input
 				textInputRange = el.createTextRange();
@@ -255,24 +258,24 @@
 				endRange = el.createTextRange();
 				endRange.collapse( false );
 
-				if ( textInputRange.compareEndPoints( "StartToEnd", endRange ) > -1 ) {
+				if ( textInputRange.compareEndPoints( 'StartToEnd', endRange ) > -1 ) {
 					start = end = len;
 				} else {
-					start = -textInputRange.moveStart( "character", -len );
-					start += normalizedValue.slice( 0, start ).split( "\n" ).length - 1;
+					start = -textInputRange.moveStart( 'character', -len );
+					start += normalizedValue.slice( 0, start ).split( '\n' ).length - 1;
 
-					if ( textInputRange.compareEndPoints( "EndToEnd", endRange ) > -1 ) {
+					if ( textInputRange.compareEndPoints( 'EndToEnd', endRange ) > -1 ) {
 						end = len;
 					} else {
-						end = -textInputRange.moveEnd( "character", -len );
-						end += normalizedValue.slice( 0, end ).split( "\n" ).length - 1;
+						end = -textInputRange.moveEnd( 'character', -len );
+						end += normalizedValue.slice( 0, end ).split( '\n' ).length - 1;
 					}
 				}
 			}
 		}
 		return [ start, end ];
 
-	};
+	}
 
 	/**
 	 * Helper function to get an IE TextRange object for an element
@@ -292,12 +295,11 @@
 	 *
 	 */
 	function replaceText ( $element, replacement, start, end ) {
-		var element = $element.get( 0 );
+		var element = $element.get( 0 ), selection, length, newLines, scrollTop ;
 
 		if ( document.body.createTextRange ) {
 			// IE
-			var selection = rangeForElementIE(element);
-
+			selection = rangeForElementIE(element);
 			length = element.value.length;
 			// IE doesn't count \n when computing the offset, so we won't either
 			newLines = element.value.match( /\n/g );
@@ -314,7 +316,7 @@
 			selection.select();
 		} else {
 			// All other browsers
-			var scrollTop = element.scrollTop;
+			scrollTop = element.scrollTop;
 
 			// This could be made better if range selection worked on browsers.
 			// But for complex scripts, browsers place cursor in unexpected places
@@ -337,26 +339,28 @@
 	 * @param b String
 	 * @return Position at which a and b diverge, or -1 if a === b
 	 */
-	var firstDivergence = function ( a, b ) {
-		var minLength = a.length < b.length ? a.length : b.length;
-		for ( var i = 0; i < minLength; i++) {
+	function firstDivergence ( a, b ) {
+		var minLength, i;
+
+		minLength = a.length < b.length ? a.length : b.length;
+		for ( i = 0; i < minLength; i++) {
 			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
 				return i;
 			}
 		}
 		return -1;
-	};
+	}
 
 	/**
 	 * Get the n characters in str that immediately precede pos
-	 * Example: lastNChars( "foobarbaz", 5, 2 ) === "ba"
+	 * Example: lastNChars( 'foobarbaz', 5, 2 ) === 'ba'
 	 *
 	 * @param str String to search in
 	 * @param pos Position in str
 	 * @param n Number of characters to go back from pos
 	 * @return Substring of str, at most n characters long, immediately preceding pos
 	 */
-	var lastNChars = function ( str, pos, n ) {
+	function lastNChars ( str, pos, n ) {
 		if ( n === 0 ) {
 			return '';
 		} else if ( pos <= n ) {
@@ -364,6 +368,6 @@
 		} else {
 			return str.substr( pos - n, n );
 		}
-	};
+	}
 
 }( jQuery ) );

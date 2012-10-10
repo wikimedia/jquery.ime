@@ -2,14 +2,14 @@
 	'use strict';
 
 	var hiBolnagari = {
-		id: "hi-bolnagari",
-		name: "Bolnagari",
-		description: "Bolnagari phonetic keymap for Devanagari script",
-		date: "2012-03-28",
-		URL: "http://www.indlinux.org/wiki/index.php/BolNagri",
-		author: "G Karunakar",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'hi-bolnagari',
+		name: 'Bolnagari',
+		description: 'Bolnagari phonetic keymap for Devanagari script',
+		date: '2012-03-28',
+		URL: 'http://www.indlinux.org/wiki/index.php/BolNagri',
+		author: 'G Karunakar',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 0,
 		maxKeyLength: 1,
 		patterns: [

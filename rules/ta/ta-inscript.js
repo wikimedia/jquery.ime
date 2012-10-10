@@ -2,14 +2,14 @@
 	'use strict';
 
 	var taInscript = {
-		id: "ta-inscript",
-		name: "Tamil Inscript",
-		description: "Tamil Inscript Keyboard",
-		date: "2012-11-20",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'ta-inscript',
+		name: 'Tamil Inscript',
+		description: 'Tamil Inscript Keyboard',
+		date: '2012-11-20',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 1,
 		maxKeyLength: 4,
 		patterns: [

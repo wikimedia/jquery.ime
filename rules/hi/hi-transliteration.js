@@ -2,13 +2,13 @@
 	'use strict';
 
 	var hiTransliteration = {
-		id: "hi-transliteration",
-		name: "Devanagari Transliteration",
-		description: "Transliteration keyboard for Devanagari script",
-		date: "2011-11-20",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'hi-transliteration',
+		name: 'Devanagari Transliteration',
+		description: 'Transliteration keyboard for Devanagari script',
+		date: '2011-11-20',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 1,
 		maxKeyLength: 3,
 		patterns: [

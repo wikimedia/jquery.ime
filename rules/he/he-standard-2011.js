@@ -2,14 +2,14 @@
 	'use strict';
 
 	var heStandard = {
-		id: "he-standard-2011",
-		name: "Hebrew standard keyboard",
-		description: "Hebrew keyboard according to Israeli Standard 1452",
-		date: "2011-12-06",
-		URL: "http://www.lingnu.com/he/howto/78-si1452.html",
-		author: "Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'he-standard-2011',
+		name: 'Hebrew standard keyboard',
+		description: 'Hebrew keyboard according to Israeli Standard 1452',
+		date: '2011-12-06',
+		URL: 'http://www.lingnu.com/he/howto/78-si1452.html',
+		author: 'Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 0,
 		maxKeyLength: 0,
 		patterns: [

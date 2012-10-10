@@ -2,14 +2,14 @@
 	'use strict';
 
 	var taBamini = {
-		id: "ta-bamini",
-		name: "Tamil Bamini",
-		description: "Tamil Bamini input method",
-		date: "2012-10-03",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Junaid P V",
-		license: "GPLv3",
-		version: "1.0",
+		id: 'ta-bamini',
+		name: 'Tamil Bamini',
+		description: 'Tamil Bamini input method',
+		date: '2012-10-03',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Junaid P V',
+		license: 'GPLv3',
+		version: '1.0',
 		contextLength: 0,
 		maxKeyLength: 2,
 		patterns: [
@@ -65,7 +65,7 @@
 			[ 'I', 'ஐ' ],
 			[ 'O', 'ழு' ],
 			[ 'P', 'ீ' ],
-			[ '\\|', "'" ],
+			[ '\\|', '\'' ],
 			[ 'A', 'யு' ],
 			[ 'S', 'ளு' ],
 			[ 'D', 'னு' ],

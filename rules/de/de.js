@@ -2,14 +2,14 @@
 	'use strict';
 
 	var de = {
-		id: "de",
-		name: "Deutsch",
-		description: "German input method",
-		date: "2012-11-20",
-		URL: "http://github.com/wikimedia/jquery.ime",
-		author: "Erik Moeller",
-		license: "Public domain",
-		version: "1.0",
+		id: 'de',
+		name: 'Deutsch',
+		description: 'German input method',
+		date: '2012-11-20',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Erik Moeller',
+		license: 'Public domain',
+		version: '1.0',
 		contextLength: 1,
 		maxKeyLength: 1,
 		patterns: [

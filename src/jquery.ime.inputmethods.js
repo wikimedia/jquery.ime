@@ -3,95 +3,95 @@
 
 	$.extend( $.ime.sources, {
 		'en-capitalize': {
-			name: "Capitalize", // XXX This can be the name written in its own script?
+			name: 'Capitalize', // XXX This can be the name written in its own script?
 			source: 'rules/en/capitalize.js'
 		},
 		'am-transliteration': {
-			name: "Transliteration",
+			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
 
 		'hi-transliteration': {
-			name: "Transliteration",
+			name: 'Transliteration',
 			source: 'rules/hi/hi-transliteration.js'
 		},
 		'hi-inscript': {
-			name: "Inscript",
+			name: 'Inscript',
 			source: 'rules/hi/hi-inscript.js'
 		},
 		'hi-bolnagari': {
-			name: "Bolnagari",
+			name: 'Bolnagari',
 			source: 'rules/hi/hi-bolnagari.js'
 		},
 		'ml-transliteration': {
-			name: "Transliteration",
+			name: 'Transliteration',
 			source: 'rules/ml/ml-transliteration.js'
 		},
 		'ml-inscript': {
-			name: "Inscript",
+			name: 'Inscript',
 			source: 'rules/ml/ml-inscript.js'
 		},
 		'ta-inscript': {
-			name: "Inscript",
+			name: 'Inscript',
 			source: 'rules/ta/ta-inscript.js'
 		},
 		'ta-transliteration': {
-			name: "Transliteration",
+			name: 'Transliteration',
 			source: 'rules/ta/ta-transliteration.js'
 		},
 		'ta-99': {
-			name: "Tamil 99",
+			name: 'Tamil 99',
 			source: 'rules/ta/ta-99.js'
 		},
 		'ta-bamini': {
-			name: "Bamini",
+			name: 'Bamini',
 			source: 'rules/ta/ta-bamini.js'
 		},
 		'de': {
-			name: "Deutsch",
+			name: 'Deutsch',
 			source: 'rules/de/de.js'
 		},
 		'he-standard-2011': {
-			name: "Hebrew Standard 2011",
+			name: 'Hebrew Standard 2011',
 			source: 'rules/he/he-standard-2011.js'
 		}
 	} );
 
 	$.extend( $.ime.languages, {
 		'am': {
-			autonym: "አማርኛ",
+			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
 		},
 		'en': {
-			autonym: "English",
+			autonym: 'English',
 			inputmethods: [ 'en-capitalize' ]
 		},
 		'de': {
-			autonym: "Deutsch",
+			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
 		},
 		'he': {
-			autonym: "עִבְרִית",
+			autonym: 'עִבְרִית',
 			inputmethods: [ 'he-standard-2011' ]
 		},
 		'hi': {
-			autonym: "हिन्दी",
+			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
 		},
 		'ml': {
-			autonym: "മലയാളം",
+			autonym: 'മലയാളം',
 			inputmethods: [ 'ml-transliteration', 'ml-inscript' ]
 		},
 		'mr': {
-			autonym: "मराठी",
+			autonym: 'मराठी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
 		},
 		'sa': {
-			autonym: "संस्कृत",
+			autonym: 'संस्कृत',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
 		},
 		'ta': {
-			autonym: "தமிழ்",
+			autonym: 'தமிழ்',
 			inputmethods: [ 'ta-transliteration', 'ta-inscript', 'ta-99', 'ta-bamini' ]
 		}
 	} );
