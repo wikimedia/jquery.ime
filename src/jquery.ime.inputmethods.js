@@ -10,7 +10,22 @@
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
-
+		'as-avro' : {
+			name: 'Avro',
+			source: 'rules/as/as-avro.js'
+		},
+		'as-bornona' : {
+			name: 'Bornona',
+			source: 'rules/as/as-bornona.js'
+		},
+		'as-inscript' : {
+			name: 'Inscript',
+			source: 'rules/as/as-inscript.js'
+		},
+		'as-transliteration' : {
+			name: 'Avro',
+			source: 'rules/as/as-transliteration.js'
+		},
 		'hi-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/hi/hi-transliteration.js'
@@ -61,6 +76,10 @@
 		'am': {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
+		},
+		'as': {
+			autonym: 'অসমীয়া',
+			inputmethods: [ 'as-avro', 'as-bornona', 'as-inscript' ,'as-transliteration' ]
 		},
 		'en': {
 			autonym: 'English',
