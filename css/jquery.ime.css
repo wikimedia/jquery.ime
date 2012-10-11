@@ -12,7 +12,6 @@ div.imeselector {
 	margin-top: 0px;
 	text-align: left;
 	font-family: 'sans';
-	font-color: #000;
 }
 
 div.imeselector a {
@@ -31,7 +30,7 @@ div.imeselector a {
 	font-size: smaller;
 }
 
-.ime-disable-link span:hover {
+.ime-disable-link:hover span {
 	color: #eee;
 }
 
