@@ -27,13 +27,18 @@ div.imeselector a {
 .ime-disable-link span {
 	text-align: right;
 	margin-left: 10px;
-	color: #555;
+	color: #888;
+	font-size: smaller;
+}
+
+.ime-disable-link span:hover {
+	color: #eee;
 }
 
 .ime-lang-title {
 	color: #333;
 	text-align: left;
-	font-size: 12pt;
+	font-size: larger;
 	padding-bottom: 5px;
     padding-left: 20px;
     cursor: default;
