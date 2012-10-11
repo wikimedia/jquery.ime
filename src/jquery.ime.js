@@ -147,6 +147,7 @@
 
 		disable: function () {
 			this.active = false;
+			$.ime.preferences.setIM( 'system' );
 		},
 
 		enable: function () {
@@ -159,6 +160,11 @@
 
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
+			$.ime.preferences.setIM( inputmethodId );
+		},
+
+		setLanguage: function( languageCode ) {
+			$.ime.preferences.setLanguage ( languageCode );
 		},
 
 		load: function ( name, callback ) {
@@ -206,7 +212,8 @@
 
 	$.ime = {};
 	$.ime.inputmethods = {};
-		$.ime.sources = {};
+	$.ime.sources = {};
+	$.ime.preferences = {};
 	$.ime.languages = {};
 
 	var defaultInputMethod = {

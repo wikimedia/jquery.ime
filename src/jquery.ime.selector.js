@@ -17,7 +17,6 @@
 		constructor: IMESelector,
 
 		init: function () {
-			this.prepareInputMethods( this.options.defaultLanguage );
 			this.$menu.append( toggleMenuItem() );
 			this.$menu.append( divider() );
 			this.$menu.append( languageListTitle() );
@@ -30,10 +29,10 @@
 			this.$imeSetting.hide();
 		},
 
-		focus: function () {
+		focus: function ( ) {
 			// Hide all other IME settings
 			$( 'div.imeselector' ).hide();
-			this.$imeSetting.show();// .css( 'opacity', 0.5 );
+			this.$imeSetting.show();
 		},
 
 		toggle: function () {
@@ -65,7 +64,6 @@
 			imeselector.$menu.on( 'click', 'li.ime-lang', function ( e ) {
 				var language = $( this ).attr( 'lang' );
 				imeselector.selectLanguage( language );
-				$( this ).addClass( 'checked' );
 				e.stopPropagation();
 			} );
 			imeselector.$menu.on( 'click', 'li.ime-disable-link', function ( e ) {
@@ -73,7 +71,10 @@
 				e.stopPropagation();
 			} );
 
-			imeselector.$element.on( 'focus', $.proxy( this.focus, this ) );
+			imeselector.$element.on( 'focus', function() {
+				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
+				imeselector.focus( );
+			} );
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown', $.proxy( this.keydown, this ) );
@@ -124,15 +125,19 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var imeselector = this, language;
+			var imeselector = this, ime;
 
+			ime = this.$element.data( 'ime' );
 			this.$menu.find( 'li.ime-lang.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'li[lang=' + languageCode + ']' )
+				.addClass( 'checked' );
 			imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.prepareInputMethods( languageCode );
-			imeselector.toggle();
+			imeselector.$menu.removeClass( 'open' );
+
 			// And select the default inputmethod
-			language = $.ime.languages[languageCode];
-			imeselector.selectIM( language.inputmethods[0] );
+			imeselector.selectIM( $.ime.preferences.getIM( languageCode ) );
+			ime.setLanguage( languageCode );
 		},
 
 		/**
@@ -149,11 +154,15 @@
 				.addClass( 'checked' );
 			ime = this.$element.data( 'ime' );
 
+			if ( !inputmethodId || inputmethodId === 'system' ) {
+				return;
+			}
+
 			ime.load( inputmethodId, function () {
 				var name;
 
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
-				imeselector.$element.focus();
+				//imeselector.$element.focus();
 				imeselector.$menu.removeClass( 'open' );
 				ime.enable();
 				name = imeselector.inputmethod.name;
