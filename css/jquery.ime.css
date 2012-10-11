@@ -12,13 +12,12 @@ div.imeselector {
 	margin-top: 0px;
 	text-align: left;
 	font-family: 'sans';
-	font-color: #000;
 }
 
 div.imeselector a {
 	text-decoration: none;
 	outline: none;
-	color: #000000;
+	color: #222222;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -27,14 +26,25 @@ div.imeselector a {
 .ime-disable-link span {
 	text-align: right;
 	margin-left: 10px;
-	color: #555;
+	color: #888;
+	font-size: smaller;
+}
+
+.ime-disable-link:hover span {
+	color: #eee;
 }
 
 .ime-list-title,
 .ime-lang-title {
-	color: #333;
+	color: #39d;
+	border-bottom: solid 1px #39d;
 	text-align: left;
+	font-size: larger;
 	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-top: 9px;
+	margin-bottom: 1px;
+	cursor: default;
 }
 
 .imeselector .caret {
@@ -66,8 +76,8 @@ div.imeselector a {
 	display: block;
 }
 
-.imeselector-menu li.checked {
-	background: url(../images/tick.svg) left no-repeat;
+.imeselector-menu li.checked a {
+	background: url(../images/tick.svg) 4px no-repeat;
 	background-size: 12px 12px;
 }
 
@@ -84,7 +94,7 @@ div.ime-language-list {
 	display: none;
 	float: left;
 	min-width: 160px;
-	padding: 4px 0;
+	padding: 0;
 	list-style: none;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.2);
@@ -124,6 +134,20 @@ div.ime-language-list {
 	overflow: hidden;
 }
 
+.imeselector-menu .ime-help-link {
+	background-color: #f0f0f0;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	padding: 2px 0 2px 0;
+	color: #444;
+}
+
+.imeselector-menu .ime-help-link>a:hover {
+	background-color: #f0f0f0;
+	color: #000;
+}
+
 .imeselector-menu a {
 	display: block;
 	padding: 3px 20px;
@@ -135,12 +159,10 @@ div.ime-language-list {
 }
 
 .imeselector-menu li>a:hover {
-	color: #ffffff;
 	text-decoration: none;
-	background-color: #0088cc;
-	color: #ffffff;
 	text-decoration: none;
-	background-color: #0088cc;
+	color: #ffffff;
+	background-color: #5089e8;
 }
 
 .open {

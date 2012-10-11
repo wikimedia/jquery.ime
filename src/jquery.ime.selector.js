@@ -27,10 +27,8 @@
 		prepareSelectorMenu: function() {
 			this.$menu.append( imeList() );
 			this.$menu.append( toggleMenuItem() );
-			this.$menu.append( divider() );
 			this.$menu.append( languageListTitle() );
 			this.prepareLanguageList();
-			this.$menu.append( divider() );
 			this.$menu.append( helpLink() );
 		},
 
@@ -269,11 +267,11 @@
 
 	// Private functions
 	function helpLink () {
-		return $( '<li>' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
+		return $( '<li class="ime-help-link">' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
 	}
 
 	function languageListTitle  () {
-		return $( '<li class="ime-lang-title">' ).text( 'Change input language' );
+		return $( '<li class="ime-lang-title">' ).text( 'Other languages' );
 	}
 
 	function imeList () {
