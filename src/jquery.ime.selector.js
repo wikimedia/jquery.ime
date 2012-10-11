@@ -207,7 +207,7 @@
 		 * @param languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var imeselector = this,language = $.ime.languages[languageCode];
+			var imeselector = this, language = $.ime.languages[languageCode];
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
 				var name, $imeItem, $inputMethod;

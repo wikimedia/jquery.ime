@@ -28,7 +28,7 @@
 		 * @returns String transliterated string
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement,i ;
+			var patterns, regex, rule, replacement, i ;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];

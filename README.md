@@ -1,12 +1,14 @@
 JQuery IME
 ==========================
-jQuery Input method editor library ---------------------------------------------------------
+
+jQuery Input method editor library 
+
 
 Quick start
 ----------
 
 ```bash
-git clone https://github.com/santhoshtr/jquery.ime.git
+git clone https://github.com/wikimedia/jquery.ime.git
 ```
 
 Documentation
