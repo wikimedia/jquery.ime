@@ -18,7 +18,7 @@ div.imeselector {
 div.imeselector a {
 	text-decoration: none;
 	outline: none;
-	color: #000000;
+	color: #222222;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -33,7 +33,11 @@ div.imeselector a {
 .ime-lang-title {
 	color: #333;
 	text-align: left;
+	font-size: 12pt;
 	padding-bottom: 5px;
+    padding-left: 20px;
+    cursor: default;
+
 }
 
 .imeselector .caret {
