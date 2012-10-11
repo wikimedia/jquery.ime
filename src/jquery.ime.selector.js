@@ -252,7 +252,7 @@
 	}
 
 	function languageListTitle  () {
-		return $( '<li class="ime-lang-title">' ).text( 'Change input language' );
+		return $( '<li class="ime-lang-title">' ).text( 'Other languages' );
 	}
 
 	function divider () {

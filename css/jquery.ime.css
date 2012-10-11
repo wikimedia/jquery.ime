@@ -41,6 +41,7 @@ div.imeselector a {
 	font-size: larger;
 	padding-bottom: 5px;
     padding-left: 20px;
+    padding-top: 9px;
     cursor: default;
 
 }
@@ -128,7 +129,7 @@ div.ime-language-list {
 	background-color: #E5E5E5;
 	border-bottom: 1px solid #FFFFFF;
 	height: 1px;
-	margin: 9px 1px;
+	margin: 9px 1px 0px 1px;
 	overflow: hidden;
 }
 
