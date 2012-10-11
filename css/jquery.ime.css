@@ -69,8 +69,8 @@ div.imeselector a {
 	display: block;
 }
 
-.imeselector-menu li.checked {
-	background: url(../images/tick.svg) left no-repeat;
+.imeselector-menu li.checked a{
+	background: url(../images/tick.svg) 4px no-repeat;
 	background-size: 12px 12px;
 }
 
@@ -138,12 +138,10 @@ div.ime-language-list {
 }
 
 .imeselector-menu li>a:hover {
-	color: #ffffff;
 	text-decoration: none;
-	background-color: #0088cc;
-	color: #ffffff;
 	text-decoration: none;
-	background-color: #0088cc;
+	color: #ffffff;
+	background-color: #5089e8;
 }
 
 .open {
