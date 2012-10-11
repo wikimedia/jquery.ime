@@ -19,10 +19,8 @@
 		init: function () {
 			this.prepareInputMethods( this.options.defaultLanguage );
 			this.$menu.append( toggleMenuItem() );
-			this.$menu.append( divider() );
 			this.$menu.append( languageListTitle() );
 			this.prepareLanguageList();
-			this.$menu.append( divider() );
 			this.$menu.append( helpLink() );
 			this.$imeSetting.append( this.$menu );
 			this.$element.after( this.$imeSetting );
@@ -248,15 +246,11 @@
 
 	// Private functions
 	function helpLink () {
-		return $( '<li>' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
+		return $( '<li class="ime-help-link">' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
 	}
 
 	function languageListTitle  () {
 		return $( '<li class="ime-lang-title">' ).text( 'Other languages' );
-	}
-
-	function divider () {
-		return $( '<li class="divider">' );
 	}
 
 	function toggleMenuItem () {

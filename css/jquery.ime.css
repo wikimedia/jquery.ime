@@ -35,12 +35,14 @@ div.imeselector a {
 }
 
 .ime-lang-title {
-	color: #333;
+	color: #39d;
+	border-bottom: solid 1px #39d;
 	text-align: left;
 	font-size: larger;
 	padding-bottom: 5px;
     padding-left: 20px;
     padding-top: 9px;
+    margin-bottom: 1px;
     cursor: default;
 
 }
@@ -92,7 +94,7 @@ div.ime-language-list {
 	display: none;
 	float: left;
 	min-width: 160px;
-	padding: 4px 0;
+	padding: 0;
 	list-style: none;
 	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.2);
@@ -124,12 +126,18 @@ div.ime-language-list {
 	top: -6px;
 }
 
-.imeselector-menu  .divider {
-	background-color: #E5E5E5;
-	border-bottom: 1px solid #FFFFFF;
-	height: 1px;
-	margin: 9px 1px 0px 1px;
-	overflow: hidden;
+.imeselector-menu .ime-help-link{
+	background-color: #f0f0f0;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	padding: 2px 0 2px 0;
+	color:#444;
+}
+
+.imeselector-menu .ime-help-link>a:hover{
+	background-color: #f0f0f0;
+	color:#000;
 }
 
 .imeselector-menu a {
