@@ -7,16 +7,21 @@ div.imeselector {
 	width: auto;
 	height: 15px;
 	margin: 1px 0 0;
-	font-size: 8px;
+	font-size: small;
 	padding-left: 20px;
 	margin-top: 0px;
 	text-align: left;
+	font-family: 'sans';
+	font-color: #000;
 }
 
 div.imeselector a {
 	text-decoration: none;
 	outline: none;
 	color: #000000;
+	line-height: 1em;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 .ime-disable-link span {
@@ -28,6 +33,7 @@ div.imeselector a {
 .ime-lang-title {
 	color: #333;
 	text-align: left;
+	padding-bottom: 5px;
 }
 
 .imeselector .caret {
