@@ -96,8 +96,7 @@ div.ime-language-list {
 	min-width: 160px;
 	padding: 0;
 	list-style: none;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid #888;
 	background-color: #FFFFFF;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -115,6 +114,17 @@ div.ime-language-list {
 }
 
 /* The triangle shaped callout */
+.imeselector-menu:before {
+	border-bottom: 7px solid #888;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	display: inline-block;
+	left: 9px;
+	position: absolute;
+	top: -7px;
+}
+
 .imeselector-menu:after {
 	border-bottom: 6px solid #FFFFFF;
 	border-left: 6px solid transparent;
