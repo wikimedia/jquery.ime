@@ -30,6 +30,7 @@ div.imeselector a {
 	color: #555;
 }
 
+.ime-list-title,
 .ime-lang-title {
 	color: #333;
 	text-align: left;
@@ -90,7 +91,7 @@ div.ime-language-list {
 	background-color: #FFFFFF;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px; */
+	border-radius: 5px;
 	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -115,7 +116,7 @@ div.ime-language-list {
 	top: -6px;
 }
 
-.imeselector-menu  .divider {
+.imeselector-menu  .ime-divider {
 	background-color: #E5E5E5;
 	border-bottom: 1px solid #FFFFFF;
 	height: 1px;

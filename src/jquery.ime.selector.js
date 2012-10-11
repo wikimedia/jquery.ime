@@ -17,16 +17,21 @@
 		constructor: IMESelector,
 
 		init: function () {
+			this.prepareSelectorMenu();
+			this.$imeSetting.append( this.$menu );
+			this.$element.after( this.$imeSetting );
+			this.position();
+			this.$imeSetting.hide();
+		},
+
+		prepareSelectorMenu: function() {
+			this.$menu.append( imeList() );
 			this.$menu.append( toggleMenuItem() );
 			this.$menu.append( divider() );
 			this.$menu.append( languageListTitle() );
 			this.prepareLanguageList();
 			this.$menu.append( divider() );
 			this.$menu.append( helpLink() );
-			this.$imeSetting.append( this.$menu );
-			this.$element.after( this.$imeSetting );
-			this.position();
-			this.$imeSetting.hide();
 		},
 
 		focus: function ( ) {
@@ -125,16 +130,20 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var imeselector = this, ime;
+			var imeselector = this, ime, languageName;
+
 
 			ime = this.$element.data( 'ime' );
+
+			languageName = $.ime.languages[languageCode].autonym;
+
 			this.$menu.find( 'li.ime-lang.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li[lang=' + languageCode + ']' )
 				.addClass( 'checked' );
-			imeselector.$menu.find( 'li.ime-im' ).remove();
+			//imeselector.$menu.find( 'li.ime-im' ).remove();
+			this.$menu.find( 'li.ime-list-title' ).text( languageName );
 			this.prepareInputMethods( languageCode );
 			imeselector.$menu.removeClass( 'open' );
-
 			// And select the default inputmethod
 			imeselector.selectIM( $.ime.preferences.getIM( languageCode ) );
 			ime.setLanguage( languageCode );
@@ -216,7 +225,10 @@
 		 * @param languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var imeselector = this, language = $.ime.languages[languageCode];
+			var imeselector = this, language = $.ime.languages[languageCode], $imeList;
+
+			$imeList = imeselector.$menu.find( 'div.ime-list' );
+			$imeList.empty();
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
 				var name, $imeItem, $inputMethod;
@@ -226,7 +238,7 @@
 				$inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
 				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
 				$inputMethod.addClass( 'ime-im' );
-				imeselector.$menu.prepend( $inputMethod );
+				$imeList.append( $inputMethod );
 			} );
 		}
 	};
@@ -264,8 +276,12 @@
 		return $( '<li class="ime-lang-title">' ).text( 'Change input language' );
 	}
 
+	function imeList () {
+		return $( '<li class="ime-list-title"></li><li><div class="ime-list"/></li>' );
+	}
+
 	function divider () {
-		return $( '<li class="divider">' );
+		return $( '<li class="ime-divider">' );
 	}
 
 	function toggleMenuItem () {
