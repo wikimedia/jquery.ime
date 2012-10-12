@@ -23,7 +23,7 @@
 			source: 'rules/as/as-inscript.js'
 		},
 		'as-transliteration' : {
-			name: 'Avro',
+			name: 'Transliteration',
 			source: 'rules/as/as-transliteration.js'
 		},
 		'ber-tfng' : {
@@ -45,6 +45,10 @@
 		'bn-probhat' : {
 			name: 'Probhat',
 			source: 'rules/bn/bn-probhat.js'
+		},
+		'brx-inscript': {
+			name: 'Inscript',
+			source: 'rules/brx/brx-inscript.js'
 		},
 		'hi-transliteration': {
 			name: 'Transliteration',
