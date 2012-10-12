@@ -1,7 +1,10 @@
 JQuery IME
 ==========================
 
-jQuery Input method editor library 
+jQuery Input method editor library supporting 50+ input methods across several languages. 
+This is jquery version of the input method tool used in Wikimedia projects. 
+These input methods are well tested and contributed by large wikimedia community.
+This project is a Wikimedia foundation initiative to provide language technology tools to wider audience outside Wikimedia universe.
 
 
 Quick start
@@ -23,3 +26,12 @@ jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method su
 See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page where jquery.ime in action
 
 
+For Developers
+--------------
+Read [rules/README](tree/master/rules) to learn how to write an input method for language.
+
+Read the technical specification of project from [wiki](wiki/Technical-Specification)
+
+License
+-------
+This project is dual licensed with GPLv2+ and MIT license. See the license files in the source code for more details.
