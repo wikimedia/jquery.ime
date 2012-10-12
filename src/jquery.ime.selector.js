@@ -200,11 +200,11 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var imeselector = this, $languageList;
+			var imeselector = this, $languageList, $languageListDiv;
 			// Language list can be very long. So we use a container with
 			// overflow auto.
-			$languageList = $( '<div class="ime-language-list">' );
-
+			$languageListDiv = $( '<div class="ime-language-list">' );
+			$languageList = $( '<ul class="ime-language-list">' );
 			$.each( $.ime.languages, function ( languageCode, language ) {
 				var $languageItem, $language;
 
@@ -213,8 +213,8 @@
 				$language.append( $languageItem );
 				$languageList.append( $language );
 			} );
-
-			imeselector.$menu.append( $languageList );
+			$languageListDiv.append( $languageList );
+			imeselector.$menu.append( $languageListDiv );
 		},
 
 		/**

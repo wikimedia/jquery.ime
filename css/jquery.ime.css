@@ -4,7 +4,6 @@ div.imeselector {
 		transparent;
 	background-size: 15px;
 	cursor: pointer;
-	width: auto;
 	height: 15px;
 	margin: 1px 0 0;
 	font-size: small;
@@ -81,9 +80,18 @@ div.imeselector a {
 	background-size: 12px 12px;
 }
 
-div.ime-language-list {
+ul.ime-language-list {
 	overflow: auto;
-	max-height: 200px;
+	max-height: 150px;
+	width: 300px;
+	list-style: none;
+	padding: 0 0;
+}
+
+div.ime-language-list {
+	overflow: hidden;
+	width: 250px;
+	padding: 0 0;
 }
 
 .imeselector-menu {
