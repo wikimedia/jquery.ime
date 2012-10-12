@@ -79,7 +79,7 @@
 		},
 		'as': {
 			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-avro', 'as-bornona', 'as-inscript' ,'as-transliteration' ]
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript' ]
 		},
 		'en': {
 			autonym: 'English',
