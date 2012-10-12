@@ -10,7 +10,42 @@
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
-
+		'as-avro' : {
+			name: 'Avro',
+			source: 'rules/as/as-avro.js'
+		},
+		'as-bornona' : {
+			name: 'Bornona',
+			source: 'rules/as/as-bornona.js'
+		},
+		'as-inscript' : {
+			name: 'Inscript',
+			source: 'rules/as/as-inscript.js'
+		},
+		'as-transliteration' : {
+			name: 'Avro',
+			source: 'rules/as/as-transliteration.js'
+		},
+		'ber-tfng' : {
+			name: 'Tifinagh',
+			source: 'rules/ber/ber-tfng.js'
+		},
+		'bn-avro' : {
+			name: 'Avro',
+			source: 'rules/bn/bn-avro.js'
+		},
+		'bn-inscript' : {
+			name: 'Inscript',
+			source: 'rules/bn/bn-inscript.js'
+		},
+		'bn-nkb' : {
+			name: 'National Keyboard',
+			source: 'rules/bn/bn-nkb.js'
+		},
+		'bn-probhat' : {
+			name: 'Probhat',
+			source: 'rules/bn/bn-probhat.js'
+		},
 		'hi-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/hi/hi-transliteration.js'
@@ -61,6 +96,18 @@
 		'am': {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
+		},
+		'as': {
+			autonym: 'অসমীয়া',
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript' ]
+		},
+		'ber': {
+			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
+			inputmethods: [ 'ber-tfng' ]
+		},
+		'bn': {
+			autonym: 'বাংলা',
+			inputmethods: ['bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat']
 		},
 		'en': {
 			autonym: 'English',
