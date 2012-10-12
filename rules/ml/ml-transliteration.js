@@ -10,7 +10,7 @@
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 2,
-		maxKeyLength: 2,
+		maxKeyLength: 4,
 		patterns: [
 			[ '(\u200c)+a', 'അ' ],
 			[ '(\u200c)+A', 'ആ' ],
