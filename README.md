@@ -11,34 +11,15 @@ Quick start
 git clone https://github.com/wikimedia/jquery.ime.git
 ```
 
-Documentation
-----------
-To be documented.
+To add input method support to the editable fields of a web page:
 
-Test
-----------
-
-Before you can run the tests, make sure the submodules are updated:
-```
-git submodule update --init
+```javascript
+$( 'textarea' ).ime();
 ```
 
-Then open up `./test/index.html` in your browser.
+jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method support for any editable elements in a page.
 
-Versioning
-----------
 
-For transparency and insight into the release cycle, and to upgrading easier,
-we use the Semantic Versioning guidelines as much as possible.
+See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page where jquery.ime in action
 
-Releases will be numbered with the following format:
 
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-For more information on SemVer, please visit http://semver.org/.
