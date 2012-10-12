@@ -136,14 +136,6 @@ div.ime-language-list {
 	top: -6px;
 }
 
-.imeselector-menu  .ime-divider {
-	background-color: #E5E5E5;
-	border-bottom: 1px solid #FFFFFF;
-	height: 1px;
-	margin: 9px 1px;
-	overflow: hidden;
-}
-
 .imeselector-menu .ime-help-link {
 	background-color: #f0f0f0;
 	border-radius: 0 0 5px 5px;

@@ -135,9 +135,9 @@
 
 			languageName = $.ime.languages[languageCode].autonym;
 
-			this.$menu.find( 'li.ime-lang.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' )
-				.addClass( 'checked' );
+				.hide();
 			//imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.$menu.find( 'li.ime-list-title' ).text( languageName );
 			this.prepareInputMethods( languageCode );
@@ -276,10 +276,6 @@
 
 	function imeList () {
 		return $( '<li class="ime-list-title"></li><li><div class="ime-list"/></li>' );
-	}
-
-	function divider () {
-		return $( '<li class="ime-divider">' );
 	}
 
 	function toggleMenuItem () {
