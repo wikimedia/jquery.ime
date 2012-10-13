@@ -19,7 +19,7 @@
 			[ '&', 'க்ஷ' ],
 			[ '\\*', 'ஷ்ர' ],
 
-			// ['\\(',  '\u200D'], // ZWJ is not used in Tamil.
+			// ['\\(', '\u200D'], // ZWJ is not used in Tamil.
 			[ '\\)', '\u200C' ], // ZWNJ
 
 			[ '_', 'ஃ' ],
@@ -59,7 +59,7 @@
 
 			[ 'z', 'ெ' ],
 			[ 'Z', 'எ' ],
-			// ['x',  'ஂ'], -- Anusvara is not used in Tamil.
+			// ['x', 'ஂ'], -- Anusvara is not used in Tamil.
 			[ 'c', 'ம' ],
 			[ 'C', 'ண' ],
 			[ 'v', 'ந' ],

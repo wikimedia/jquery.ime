@@ -233,7 +233,7 @@
 
 				name = $.ime.sources[inputmethod].name;
 				$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name );
-				$inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
+				$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
 				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
 				$inputMethod.addClass( 'ime-im' );
 				$imeList.append( $inputMethod );
@@ -270,7 +270,7 @@
 		return $( '<li class="ime-help-link">' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
 	}
 
-	function languageListTitle  () {
+	function languageListTitle () {
 		return $( '<li class="ime-lang-title">' ).text( 'Other languages' );
 	}
 
