@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var taInscript = {
+	var taInScript = {
 		id: 'ta-inscript',
-		name: 'Tamil Inscript',
-		description: 'Tamil Inscript Keyboard',
+		name: 'Tamil InScript',
+		description: 'Tamil InScript Keyboard',
 		date: '2012-11-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',
@@ -99,6 +99,6 @@
 			[ 'V', '௺' ],
 			[ '4', '₹' ] ]
 	};
-	$.ime.register( taInscript );
+	$.ime.register( taInScript );
 
 }( jQuery ) );

@@ -76,7 +76,7 @@
 			}
 
 			if ( !this.inputmethod ) {
-					return true;
+				return true;
 			}
 
 			// handle backspace

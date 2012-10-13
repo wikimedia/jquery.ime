@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var asInscript = {
+	var asInScript = {
 		id: 'as-inscript',
-		name: 'Assamese Inscript',
-		description: 'Inscript input method for Assamese according to CDACs Enhanced InScript Keyboard Layout 5.2',
+		name: 'Assamese InScript',
+		description: 'InScript input method for Assamese according to CDAC\'s Enhanced InScript Keyboard Layout 5.2',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',
@@ -119,6 +119,6 @@
 			['4', '₹']]
 
 	};
-	$.ime.register( asInscript );
+	$.ime.register( asInScript );
 
 }( jQuery ) );
