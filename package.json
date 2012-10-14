@@ -11,12 +11,14 @@
     "l10n"
   ],
   "author": {
-	 "name": "Santhosh Thottingal",
-	 "email": "santhosh.thottingal@gmail.com"
+    "name": "Santhosh Thottingal",
+    "email": "santhosh.thottingal@gmail.com"
   },
   "contributors": [
     "Amir Aharoni <amir.aharoni@mail.huji.ac.il>",
-    "Neil Kandalgaonkar <neilk@brevity.org>"
+    "Neil Kandalgaonkar <neilk@brevity.org>",
+    "Pau Giner <pginer@wikimedia.org>",
+    "Srikanth Lakshmanan <srik.lak@gmail.com>"
   ],
   "dependencies": {
    "jQuery": "~1.7.3"
@@ -30,8 +32,8 @@
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
   "bugs": {
-	    "url" : "http://github.com/wikimedia/jquery.ime/issues"
-	  },
+    "url" : "http://github.com/wikimedia/jquery.ime/issues"
+    },
   "engine": {
     "node": ">=0.6.x"
   },
