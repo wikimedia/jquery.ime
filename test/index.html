@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.ime Test Suite</title>
+
+	<!-- External libs -->
+	<script src="../libs/jquery.js"></script>
+
+	<!-- Source of our libs -->
+	<script src="../src/jquery.ime.js"></script>
+	<script src="../src/jquery.ime.selector.js"></script>
+	<script src="../src/jquery.ime.preferences.js"></script>
+	<script src="../src/jquery.ime.inputmethods.js"></script>
+
+	<!-- Test framework -->
+	<link rel="stylesheet" href="../libs/qunit/qunit/qunit.css">
+	<script src="../libs/qunit/qunit/qunit.js"></script>
+
+	<!-- Test config -->
+	<script>
+		QUnit.config.requireExpects = true;
+	</script>
+
+	<!-- Test Suite -->
+	<script src="jquery.ime.test.js"></script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+</body>
+</html>
+
