@@ -1,5 +1,6 @@
 ( function ( $ ) {
 	'use strict';
+
 	$.extend( $.ime.preferences, {
 		registry: {
 			'language': 'en',
@@ -34,5 +35,4 @@
 			// load registry from cookies or localstorage
 		}
 	} );
-
 }( jQuery ) );
