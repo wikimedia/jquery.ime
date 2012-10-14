@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var hiBolnagari = {
-		id: 'hi-bolnagari',
-		name: 'Bolnagari',
-		description: 'Bolnagari phonetic keymap for Devanagari script',
+	var hiBolNagri = {
+		id: 'hi-bolnagri',
+		name: 'BolNagri',
+		description: 'BolNagri phonetic keymap for Devanagari script',
 		date: '2012-03-28',
 		URL: 'http://www.indlinux.org/wiki/index.php/BolNagri',
 		author: 'G Karunakar',
@@ -104,6 +104,6 @@
 
 	};
 
-	$.ime.register( hiBolnagari );
+	$.ime.register( hiBolNagri );
 
 }( jQuery ) );

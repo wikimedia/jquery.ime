@@ -54,9 +54,9 @@
 			name: 'Inscript',
 			source: 'rules/hi/hi-inscript.js'
 		},
-		'hi-bolnagari': {
-			name: 'Bolnagari',
-			source: 'rules/hi/hi-bolnagari.js'
+		'hi-bolnagri': {
+			name: 'BolNagri',
+			source: 'rules/hi/hi-bolnagri.js'
 		},
 		'ml-transliteration': {
 			name: 'Transliteration',
@@ -123,7 +123,7 @@
 		},
 		'hi': {
 			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
 		},
 		'ml': {
 			autonym: 'മലയാളം',
@@ -131,11 +131,11 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
 		},
 		'sa': {
 			autonym: 'संस्कृत',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagari' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
 		},
 		'ta': {
 			autonym: 'தமிழ்',
