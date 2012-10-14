@@ -28,7 +28,7 @@
 		 * @returns String transliterated string
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement, i ;
+			var patterns, regex, rule, replacement, i;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
@@ -40,12 +40,13 @@
 				return patterns.call( this, input, context );
 			}
 
-			for ( i = 0; i < patterns.length; i++) {
+			for ( i = 0; i < patterns.length; i++ ) {
 				rule = patterns[i];
 				regex = new RegExp( rule[0] + '$' );
 
-				// Last item in the rules. It can be a function too
-				// since replace method can have second argument a function
+				// Last item in the rules.
+				// It can also be a function, because the replace
+				// method can have a function as the second argument.
 				replacement = rule.slice( -1 )[0];
 
 				// Input string match test
@@ -93,6 +94,7 @@
 					|| e.ctrlKey || e.metaKey ) {
 				// Blank the context
 				this.context = '';
+
 				return true;
 			}
 
@@ -120,6 +122,7 @@
 
 			// Update the context
 			this.context += c;
+
 			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
 				this.context = this.context.substring( this.context.length
@@ -164,15 +167,17 @@
 		},
 
 		setLanguage: function( languageCode ) {
-			$.ime.preferences.setLanguage ( languageCode );
+			$.ime.preferences.setLanguage( languageCode );
 		},
 
 		load: function ( name, callback ) {
 			var ime = this;
+
 			if ( $.ime.inputmethods[name] ) {
 				if ( callback ) {
 					callback.call( ime );
 				}
+
 				return true;
 			}
 
@@ -181,6 +186,7 @@
 				dataType: 'script'
 			} ).done( function () {
 				debug( name + ' loaded' );
+
 				if ( callback ) {
 					callback.call( ime );
 				}
@@ -192,11 +198,9 @@
 
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
-			var $this, data, options;
-
-			$this = $( this );
-			data = $this.data( 'ime' );
-			options = typeof option === 'object' && option;
+			var $this = $( this ),
+				data = $this.data( 'ime' ),
+				options = typeof option === 'object' && option;
 
 			if ( !data ) {
 				$this.data( 'ime', ( data = new IME( this, options ) ) );
@@ -205,9 +209,7 @@
 			if ( typeof option === 'string' ) {
 				data[option]();
 			}
-
 		} );
-
 	};
 
 	$.ime = {};
@@ -241,9 +243,14 @@
 	 *
 	 */
 	function getCaretPosition( $element ) {
-		var el, start = 0, end = 0, normalizedValue, range, textInputRange, len, endRange;
-
-		el = $element.get( 0 );
+		var el = $element.get( 0 ),
+			start = 0,
+			end = 0,
+			normalizedValue,
+			range,
+			textInputRange,
+			len,
+			endRange;
 
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
@@ -251,6 +258,7 @@
 		} else {
 			// IE
 			range = document.selection.createRange();
+
 			if ( range && range.parentElement() === el ) {
 				len = el.value.length;
 				normalizedValue = el.value.replace( /\r\n/g, '\n' );
@@ -280,8 +288,8 @@
 				}
 			}
 		}
-		return [ start, end ];
 
+		return [ start, end ];
 	}
 
 	/**
@@ -301,8 +309,12 @@
 	/**
 	 *
 	 */
-	function replaceText ( $element, replacement, start, end ) {
-		var element = $element.get( 0 ), selection, length, newLines, scrollTop ;
+	function replaceText( $element, replacement, start, end ) {
+		var element = $element.get( 0 ),
+			selection,
+			length,
+			newLines,
+			scrollTop;
 
 		if ( document.body.createTextRange ) {
 			// IE
@@ -327,7 +339,7 @@
 
 			// This could be made better if range selection worked on browsers.
 			// But for complex scripts, browsers place cursor in unexpected places
-			// and not possible to fix cursor programmatically.
+			// and it's not possible to fix cursor programmatically.
 			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
 			element.value = element.value.substring( 0, start ) + replacement
 					+ element.value.substring( end, element.value.length );
@@ -347,14 +359,14 @@
 	 * @return Position at which a and b diverge, or -1 if a === b
 	 */
 	function firstDivergence ( a, b ) {
-		var minLength, i;
+		var minLength = a.length < b.length ? a.length : b.length;
 
-		minLength = a.length < b.length ? a.length : b.length;
-		for ( i = 0; i < minLength; i++) {
+		for ( var i = 0; i < minLength; i++ ) {
 			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
 				return i;
 			}
 		}
+
 		return -1;
 	}
 
