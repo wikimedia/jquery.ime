@@ -107,7 +107,7 @@
 		},
 		'bn': {
 			autonym: 'বাংলা',
-			inputmethods: ['bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat']
+			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat' ]
 		},
 		'en': {
 			autonym: 'English',
