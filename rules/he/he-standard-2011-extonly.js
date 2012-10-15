@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var heStandard = {
+	var heStandardExt = {
 		id: 'he-standard-2011-extonly',
 		name: 'Hebrew standard keyboard',
 		description: 'Hebrew keyboard according to Israeli Standard 1452',
@@ -51,14 +51,14 @@
 
 			// Simply writing ';' and ',' breaks some source code editors
 			// because of auto-directionality.
-			['\u003B', '׳'],      // Geresh, ;
-			['\u002C', '״'],      // Gershayim, ,
+			[';', '׳'],      // Geresh, ;
+			[',', '״'],      // Gershayim, ,
 			['\u05E3', '„'],      // Opening double quote, ף
 			['\u05DA', '”'],      // Closing double quote, ך
 			['\u05E5', '‚'],      // Opening single quote, ץ
 			['\u05EA', '’']]       // Closing single quote, ת
 	};
 
-	$.ime.register( heStandard );
+	$.ime.register( heStandardExt );
 
 }( jQuery ) );

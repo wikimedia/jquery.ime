@@ -359,9 +359,11 @@
 	 * @return Position at which a and b diverge, or -1 if a === b
 	 */
 	function firstDivergence ( a, b ) {
-		var minLength = a.length < b.length ? a.length : b.length;
+		var minLength, i;
 
-		for ( var i = 0; i < minLength; i++ ) {
+		minLength = a.length < b.length ? a.length : b.length;
+
+		for ( i = 0; i < minLength; i++ ) {
 			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
 				return i;
 			}
