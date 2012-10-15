@@ -171,7 +171,7 @@
 		},
 
 		load: function ( name, callback ) {
-			var ime = this;
+			var ime = this, dependency;
 
 			if ( $.ime.inputmethods[name] ) {
 				if ( callback ) {
@@ -179,6 +179,11 @@
 				}
 
 				return true;
+			}
+
+			dependency =  $.ime.sources[name].depends;
+			if ( dependency ) {
+				this.load( dependency ) ;
 			}
 
 			$.ajax( {
