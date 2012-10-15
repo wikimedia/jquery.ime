@@ -161,7 +161,12 @@
 				.addClass( 'checked' );
 			ime = this.$element.data( 'ime' );
 
-			if ( !inputmethodId || inputmethodId === 'system' ) {
+			if ( inputmethodId === 'system' ) {
+				this.disableIM();
+				return;
+			}
+
+			if ( !inputmethodId ) {
 				return;
 			}
 
