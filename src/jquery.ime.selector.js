@@ -39,11 +39,9 @@
 		},
 
 		toggle: function () {
-			var isActive = this.$menu.hasClass( 'open' );
-
 			this.$menu.removeClass( 'open' );
 
-			if ( !isActive ) {
+			if ( !this.$menu.hasClass( 'open' ) ) {
 				this.$menu.toggleClass( 'open' );
 			}
 
@@ -67,8 +65,7 @@
 			} );
 
 			imeselector.$menu.on( 'click', 'li.ime-lang', function ( e ) {
-				var language = $( this ).attr( 'lang' );
-				imeselector.selectLanguage( language );
+				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
 				e.stopPropagation();
 			} );
 
@@ -135,21 +132,18 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var imeselector = this,
-				ime = this.$element.data( 'ime' ),
-				languageName = $.ime.languages[languageCode].autonym;
+			var languageName = $.ime.languages[languageCode].autonym;
 
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			//imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.$menu.find( 'li.ime-list-title' ).text( languageName );
 			this.prepareInputMethods( languageCode );
-			imeselector.$menu.removeClass( 'open' );
+			this.$menu.removeClass( 'open' );
 
 			// And select the default inputmethod
-			imeselector.selectIM( $.ime.preferences.getIM( languageCode ) );
-			ime.setLanguage( languageCode );
+			this.selectIM( $.ime.preferences.getIM( languageCode ) );
+			this.$element.data( 'ime' ).setLanguage( languageCode );
 		},
 
 		/**
@@ -180,7 +174,6 @@
 				var name;
 
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
-				//imeselector.$element.focus();
 				imeselector.$menu.removeClass( 'open' );
 				ime.enable();
 				name = imeselector.inputmethod.name;
@@ -196,25 +189,21 @@
 		 * Disable the inputmethods (Use the system input method)
 		 */
 		disableIM: function () {
-			var imeselector = this,
-				ime = imeselector.$element.data( 'ime' );
-
 			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li.ime-disable-link' ).addClass( 'checked' );
-			ime.disable();
-			imeselector.$imeSetting.find( 'a.ime-name' ).text( '' );
+			this.$element.data( 'ime' ).disable();
+			this.$imeSetting.find( 'a.ime-name' ).text( '' );
 			this.$menu.removeClass( 'open' );
-			imeselector.position();
+			this.position();
 		},
 
 		/**
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var imeselector = this,
-				// Language list can be very long. So we use a container with
-				// overflow auto.
-				$languageListDiv = $( '<div class="ime-language-list">' ),
+			// Language list can be very long. So we use a container with
+			// overflow auto.
+			var $languageListDiv = $( '<div class="ime-language-list">' ),
 				$languageList = $( '<ul class="ime-language-list">' );
 
 			$.each( $.ime.languages, function ( languageCode, language ) {
@@ -227,7 +216,7 @@
 			} );
 
 			$languageListDiv.append( $languageList );
-			imeselector.$menu.append( $languageListDiv );
+			this.$menu.append( $languageListDiv );
 		},
 
 		/**
@@ -236,11 +225,9 @@
 		 * @param languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var imeselector = this,
-				language = $.ime.languages[languageCode],
-				$imeList;
+			var language = $.ime.languages[languageCode],
+				$imeList = this.$menu.find( 'div.ime-list' );
 
-			$imeList = imeselector.$menu.find( 'div.ime-list' );
 			$imeList.empty();
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
@@ -269,7 +256,8 @@
 				data = $this.data( 'imeselector' );
 
 			if ( !data ) {
-				$this.data( 'imeselector', ( data = new IMESelector( this ) ) );
+				data = new IMESelector( this );
+				$this.data( 'imeselector', data );
 			}
 
 			if ( typeof option === 'string' ) {
