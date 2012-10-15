@@ -1,9 +1,10 @@
 ( function ( $ ) {
 	'use strict';
+
 	var inscript = {
 		id: 'ml-inscript',
-		name: 'Malayalam Inscript',
-		description: 'Malayalam Inscript',
+		name: 'Malayalam InScript',
+		description: 'Malayalam InScript',
 		date: '2012-10-03',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',

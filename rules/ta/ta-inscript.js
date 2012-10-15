@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var taInscript = {
+	var taInScript = {
 		id: 'ta-inscript',
-		name: 'Tamil Inscript',
-		description: 'Tamil Inscript Keyboard',
+		name: 'Tamil InScript',
+		description: 'Tamil InScript Keyboard',
 		date: '2012-11-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',
@@ -19,7 +19,7 @@
 			[ '&', 'க்ஷ' ],
 			[ '\\*', 'ஷ்ர' ],
 
-			// ['\\(',  '\u200D'], // ZWJ is not used in Tamil.
+			// ['\\(', '\u200D'], // ZWJ is not used in Tamil.
 			[ '\\)', '\u200C' ], // ZWNJ
 
 			[ '_', 'ஃ' ],
@@ -59,7 +59,7 @@
 
 			[ 'z', 'ெ' ],
 			[ 'Z', 'எ' ],
-			// ['x',  'ஂ'], -- Anusvara is not used in Tamil.
+			// ['x', 'ஂ'], -- Anusvara is not used in Tamil.
 			[ 'c', 'ம' ],
 			[ 'C', 'ண' ],
 			[ 'v', 'ந' ],
@@ -99,6 +99,6 @@
 			[ 'V', '௺' ],
 			[ '4', '₹' ] ]
 	};
-	$.ime.register( taInscript );
+	$.ime.register( taInScript );
 
 }( jQuery ) );

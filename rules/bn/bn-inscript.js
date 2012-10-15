@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var bnInscript = {
+	var bnInScript = {
 		id: 'bn-inscript',
-		name: 'Bengali Inscript',
-		description: 'Bengali Inscript input method',
+		name: 'Bengali InScript',
+		description: 'Bengali InScript input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',
@@ -15,7 +15,7 @@
 		patterns: [
 			['X', 'ঁ'],
 			['x', 'ং'],
-			['_',  'ঃ'],
+			['_', 'ঃ'],
 			['D', 'অ'],
 			['E', 'আ'],
 			['F', 'ই'],
@@ -108,7 +108,7 @@
 			['\\.', '৥'],
 			['x', '৺'],
 			['\\<', '৲'],
-			[',',  '৳'],
+			[',', '৳'],
 			['\\!', '৴'],
 			['\\@', '৵'],
 			['\\#', '৶'],
@@ -118,6 +118,6 @@
 			['\\?', '৻'],
 			['4', '₹']]
 	};
-	$.ime.register( bnInscript );
+	$.ime.register( bnInScript );
 
 }( jQuery ) );
