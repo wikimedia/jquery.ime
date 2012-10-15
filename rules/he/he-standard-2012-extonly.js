@@ -1,11 +1,11 @@
 ( function ( $ ) {
 	'use strict';
 
-	var heStandardExt = {
-		id: 'he-standard-2011-extonly',
-		name: 'Hebrew standard keyboard',
+	var heStandardExtOnly = {
+		id: 'he-standard-2012-extonly',
+		name: 'Hebrew 2012',
 		description: 'Hebrew keyboard according to Israeli Standard 1452',
-		date: '2011-12-06',
+		date: '2012-10-15',
 		URL: 'http://www.lingnu.com/he/howto/78-si1452.html',
 		author: 'Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])',
 		license: 'GPLv3',
@@ -49,16 +49,17 @@
 			['\u05D9', 'ײ'],      // Double yod, י
 			['\u05E2', 'ױ'],      // Vav-yod, ע
 
-			// Simply writing ';' and ',' breaks some source code editors
-			// because of auto-directionality.
+			// Some source code editors may show the next two lines
+			// in a weird way because of auto-directionality.
 			[';', '׳'],      // Geresh, ;
 			[',', '״'],      // Gershayim, ,
 			['\u05E3', '„'],      // Opening double quote, ף
 			['\u05DA', '”'],      // Closing double quote, ך
 			['\u05E5', '‚'],      // Opening single quote, ץ
-			['\u05EA', '’']]       // Closing single quote, ת
+			['\u05EA', '’']       // Closing single quote, ת
+		]
 	};
 
-	$.ime.register( heStandardExt );
+	$.ime.register( heStandardExtOnly );
 
 }( jQuery ) );
