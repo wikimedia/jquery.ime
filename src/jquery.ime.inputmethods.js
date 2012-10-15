@@ -58,6 +58,11 @@
 			name: 'InScript',
 			source: 'rules/hi/hi-inscript.js'
 		},
+		'mai-inscript': {
+			name: 'InScript',
+			source: 'rules/mai/mai-inscript.js',
+			depends: 'hi-inscript'
+		},
 		'hi-bolnagri': {
 			name: 'BolNagri',
 			source: 'rules/hi/hi-bolnagri.js'
@@ -177,6 +182,10 @@
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript' ]
+		},
+		'mai': {
+			autonym: ' मैथिली',
+			inputmethods: [ 'mai-inscript' ]
 		},
 		'ml': {
 			autonym: 'മലയാളം',
