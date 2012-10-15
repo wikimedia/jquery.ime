@@ -93,7 +93,32 @@
 		'he-standard-2011': {
 			name: 'Hebrew Standard 2011',
 			source: 'rules/he/he-standard-2011.js'
+		},
+		'he-standard-2011-extonly': {
+			name: 'Hebrew Standard 2011',
+			source: 'rules/he/he-standard-2011-extonly.js'
+		},
+		'gu-inscript': {
+			name: 'Inscript',
+			source: 'rules/gu/gu-inscript.js'
+		},
+		'gu-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/gu/gu-transliteration.js'
+		},
+		'ka-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/ka/ka-transliteration.js'
+		},
+		'kn-inscript': {
+			name: 'Inscript',
+			source: 'rules/kn/kn-inscript.js'
+		},
+		'kn-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/kn/kn-transliteration.js'
 		}
+
 	} );
 
 	$.extend( $.ime.languages, {
@@ -113,21 +138,45 @@
 			autonym: 'বাংলা',
 			inputmethods: ['bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat']
 		},
-		'en': {
-			autonym: 'English',
-			inputmethods: [ 'en-capitalize' ]
+		'brx': {
+			autonym: 'बड़ो',
+			inputmethods: ['brx-inscript']
 		},
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
 		},
+		'en': {
+			autonym: 'English',
+			inputmethods: [ 'en-capitalize' ]
+		},
+		'gom': {
+			autonym: 'कोंकणी',
+			inputmethods: ['hi-transliteration', 'hi-inscript']
+		},
+		'gu': {
+			autonym: 'ગુજરાતી',
+			inputmethods: ['gu-transliteration', 'gu-inscript']
+		},
 		'he': {
 			autonym: 'עִבְרִית',
-			inputmethods: [ 'he-standard-2011' ]
+			inputmethods: [ 'he-standard-2011', 'he-standard-2011-extonly' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
+		},
+		'hne': {
+			autonym: 'छत्तीसगढ़ी',
+			inputmethods: ['hi-transliteration']
+		},
+		'ka': {
+			autonym: 'ქართული ენა',
+			inputmethods: [ 'ka-transliteration' ]
+		},
+		'kn': {
+			autonym: 'ಕನ್ನಡ',
+			inputmethods: [ 'kn-transliteration', 'kn-inscript' ]
 		},
 		'ml': {
 			autonym: 'മലയാളം',
