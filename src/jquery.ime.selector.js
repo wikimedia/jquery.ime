@@ -59,8 +59,7 @@
 			} );
 
 			imeselector.$menu.on( 'click', 'li.ime-im', function ( e ) {
-				var inputmethodId = $( this ).data( 'ime-inputmethod' );
-				imeselector.selectIM( inputmethodId );
+				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
 				e.stopPropagation();
 			} );
 
@@ -132,12 +131,10 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var languageName = $.ime.languages[languageCode].autonym;
-
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( 'li.ime-list-title' ).text( languageName );
+			this.$menu.find( 'li.ime-list-title' ).text( $.ime.languages[languageCode].autonym );
 			this.prepareInputMethods( languageCode );
 			this.$menu.removeClass( 'open' );
 
