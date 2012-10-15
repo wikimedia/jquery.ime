@@ -96,16 +96,17 @@
 		 * @param {jQuery.Event} e
 		 */
 		keydown: function ( e ) {
-			var imeselector = this,
-				ime = $( e.target ).data( 'ime' );
+			var ime = $( e.target ).data( 'ime' );
 
 			if ( isShortcutKey( e ) ) {
 				ime.toggle();
 
-				if ( !ime.isActive() ) {
-					imeselector.disableIM();
+				if ( ime.isActive() ) {
+					if ( this.inputmethod !== null ) {
+						this.selectIM( this.inputmethod.id );
+					}
 				} else {
-					imeselector.selectIM( imeselector.inputmethod.id );
+					this.disableIM();
 				}
 
 				e.preventDefault();
