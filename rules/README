@@ -11,7 +11,7 @@ Metadata fields
 
 id: A mandatory unique identifier that represents the input method. Eg: "hindi-inscript"
 
-name: A mandatory short name for the input method. Eg: Hindi Inscript
+name: A mandatory short name for the input method. Eg: Hindi InScript
 
 description: An optional short description about the input method. Eg: "keyboard layout as per
 inscript standard"

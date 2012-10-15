@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var hiInscript = {
+	var hiInScript = {
 		id: 'hi-inscript',
-		name: 'Devanagari Inscript',
-		description: 'Inscript keyboard for Devanagari script',
+		name: 'Devanagari InScript',
+		description: 'InScript keyboard for Devanagari script',
 		date: '2011-02-26',
 		author: 'Junaid P V',
 		license: 'GPLv3',
@@ -117,6 +117,6 @@
 			[ '\\$', '\u20B9' ] ]
 
 	};
-	$.ime.register( hiInscript );
+	$.ime.register( hiInScript );
 
 }( jQuery ) );

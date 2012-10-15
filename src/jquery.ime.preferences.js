@@ -1,5 +1,6 @@
 ( function ( $ ) {
 	'use strict';
+
 	$.extend( $.ime.preferences, {
 		registry: {
 			'language': 'en',
@@ -13,17 +14,18 @@
 			this.registry.language = language;
 		},
 
-		setIM: function ( inputMethod ) {
-			var language = this.getLanguage();
-			this.registry.languages[language] = inputMethod;
-		},
-
-		getIM: function ( language ) {
-			return this.registry.languages[language] || $.ime.languages[language].inputmethods[0];
-		},
-
 		getLanguage: function () {
 			return this.registry.language;
+		},
+
+		// Set the given IM as the last used for the language
+		setIM: function ( inputMethod ) {
+			this.registry.languages[this.getLanguage()] = inputMethod;
+		},
+
+		// Return the last used or the default IM for language
+		getIM: function ( language ) {
+			return this.registry.languages[language] || $.ime.languages[language].inputmethods[0];
 		},
 
 		save: function () {
@@ -34,5 +36,4 @@
 			// load registry from cookies or localstorage
 		}
 	} );
-
 }( jQuery ) );

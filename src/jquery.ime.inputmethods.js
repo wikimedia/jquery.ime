@@ -19,7 +19,7 @@
 			source: 'rules/as/as-bornona.js'
 		},
 		'as-inscript' : {
-			name: 'Inscript',
+			name: 'InScript',
 			source: 'rules/as/as-inscript.js'
 		},
 		'as-transliteration' : {
@@ -35,7 +35,7 @@
 			source: 'rules/bn/bn-avro.js'
 		},
 		'bn-inscript' : {
-			name: 'Inscript',
+			name: 'InScript',
 			source: 'rules/bn/bn-inscript.js'
 		},
 		'bn-nkb' : {
@@ -55,7 +55,7 @@
 			source: 'rules/hi/hi-transliteration.js'
 		},
 		'hi-inscript': {
-			name: 'Inscript',
+			name: 'InScript',
 			source: 'rules/hi/hi-inscript.js'
 		},
 		'hi-bolnagri': {
@@ -67,11 +67,11 @@
 			source: 'rules/ml/ml-transliteration.js'
 		},
 		'ml-inscript': {
-			name: 'Inscript',
+			name: 'InScript',
 			source: 'rules/ml/ml-inscript.js'
 		},
 		'ta-inscript': {
-			name: 'Inscript',
+			name: 'InScript',
 			source: 'rules/ta/ta-inscript.js'
 		},
 		'ta-transliteration': {
@@ -136,7 +136,7 @@
 		},
 		'bn': {
 			autonym: 'বাংলা',
-			inputmethods: ['bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat']
+			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat' ]
 		},
 		'brx': {
 			autonym: 'बड़ो',

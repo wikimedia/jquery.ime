@@ -40,6 +40,7 @@
 
 		toggle: function () {
 			var isActive = this.$menu.hasClass( 'open' );
+
 			this.$menu.removeClass( 'open' );
 
 			if ( !isActive ) {
@@ -64,11 +65,13 @@
 				imeselector.selectIM( inputmethodId );
 				e.stopPropagation();
 			} );
+
 			imeselector.$menu.on( 'click', 'li.ime-lang', function ( e ) {
 				var language = $( this ).attr( 'lang' );
 				imeselector.selectLanguage( language );
 				e.stopPropagation();
 			} );
+
 			imeselector.$menu.on( 'click', 'li.ime-disable-link', function ( e ) {
 				imeselector.disableIM();
 				e.stopPropagation();
@@ -78,12 +81,12 @@
 				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
 				imeselector.focus( );
 			} );
+
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown', $.proxy( this.keydown, this ) );
 
 			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
-
 		},
 
 		/**
@@ -93,21 +96,24 @@
 		 * @param {jQuery.Event} e
 		 */
 		keydown: function ( e ) {
-			var imeselector, ime;
+			var imeselector = this,
+				ime = $( e.target ).data( 'ime' );
 
-			imeselector = this;
-			ime = $( e.target ).data( 'ime' );
 			if ( isShortcutKey( e ) ) {
 				ime.toggle();
+
 				if ( !ime.isActive() ) {
 					imeselector.disableIM();
 				} else {
 					imeselector.selectIM( imeselector.inputmethod.id );
 				}
+
 				e.preventDefault();
 				e.stopPropagation();
+
 				return false;
 			}
+
 			return true;
 		},
 
@@ -128,20 +134,18 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var imeselector = this, ime, languageName;
-
-
-			ime = this.$element.data( 'ime' );
-
-			languageName = $.ime.languages[languageCode].autonym;
+			var imeselector = this,
+				ime = this.$element.data( 'ime' ),
+				languageName = $.ime.languages[languageCode].autonym;
 
 			this.$menu.find( 'li.ime-lang' ).show();
-			this.$menu.find( 'li[lang=' + languageCode + ']' )
-				.hide();
+			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
+
 			//imeselector.$menu.find( 'li.ime-im' ).remove();
 			this.$menu.find( 'li.ime-list-title' ).text( languageName );
 			this.prepareInputMethods( languageCode );
 			imeselector.$menu.removeClass( 'open' );
+
 			// And select the default inputmethod
 			imeselector.selectIM( $.ime.preferences.getIM( languageCode ) );
 			ime.setLanguage( languageCode );
@@ -153,7 +157,8 @@
 		 * @param inputmethodId
 		 */
 		selectIM: function ( inputmethodId ) {
-			var imeselector = this, ime;
+			var imeselector = this,
+				ime;
 
 			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li.ime-disable-link' ).removeClass( 'checked' );
@@ -161,7 +166,12 @@
 				.addClass( 'checked' );
 			ime = this.$element.data( 'ime' );
 
-			if ( !inputmethodId || inputmethodId === 'system' ) {
+			if ( inputmethodId === 'system' ) {
+				this.disableIM();
+				return;
+			}
+
+			if ( !inputmethodId ) {
 				return;
 			}
 
@@ -182,12 +192,12 @@
 		},
 
 		/**
-		 * Disable the inputmethods( Use system input method )
+		 * Disable the inputmethods (Use the system input method)
 		 */
 		disableIM: function () {
-			var imeselector = this, ime;
+			var imeselector = this,
+				ime = imeselector.$element.data( 'ime' );
 
-			ime = imeselector.$element.data( 'ime' );
 			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li.ime-disable-link' ).addClass( 'checked' );
 			ime.disable();
@@ -200,11 +210,12 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var imeselector = this, $languageList, $languageListDiv;
-			// Language list can be very long. So we use a container with
-			// overflow auto.
-			$languageListDiv = $( '<div class="ime-language-list">' );
-			$languageList = $( '<ul class="ime-language-list">' );
+			var imeselector = this,
+				// Language list can be very long. So we use a container with
+				// overflow auto.
+				$languageListDiv = $( '<div class="ime-language-list">' ),
+				$languageList = $( '<ul class="ime-language-list">' );
+
 			$.each( $.ime.languages, function ( languageCode, language ) {
 				var $languageItem, $language;
 
@@ -213,6 +224,7 @@
 				$language.append( $languageItem );
 				$languageList.append( $language );
 			} );
+
 			$languageListDiv.append( $languageList );
 			imeselector.$menu.append( $languageListDiv );
 		},
@@ -223,17 +235,18 @@
 		 * @param languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var imeselector = this, language = $.ime.languages[languageCode], $imeList;
+			var imeselector = this,
+				language = $.ime.languages[languageCode],
+				$imeList;
 
 			$imeList = imeselector.$menu.find( 'div.ime-list' );
 			$imeList.empty();
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
-				var name, $imeItem, $inputMethod;
+				var name = $.ime.sources[inputmethod].name,
+					$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name ),
+					$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
 
-				name = $.ime.sources[inputmethod].name;
-				$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name );
-				$inputMethod = $( '<li  data-ime-inputmethod=' + inputmethod + '>' );
 				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
 				$inputMethod.addClass( 'ime-im' );
 				$imeList.append( $inputMethod );
@@ -251,7 +264,8 @@
 
 	$.fn.imeselector = function ( option ) {
 		return this.each( function () {
-			var $this = $( this ), data = $this.data( 'imeselector' );
+			var $this = $( this ),
+				data = $this.data( 'imeselector' );
 
 			if ( !data ) {
 				$this.data( 'imeselector', ( data = new IMESelector( this ) ) );
@@ -267,11 +281,15 @@
 
 	// Private functions
 	function helpLink () {
-		return $( '<li class="ime-help-link">' ).append( $( '<a>' ).attr( 'href', '#' ).text( 'Help' ) );
+		return $( '<li class="ime-help-link">' )
+			.append( $( '<a>' )
+			.attr( 'href', '#' )
+			.text( 'Help' ) ); // TODO i18n
 	}
 
-	function languageListTitle  () {
-		return $( '<li class="ime-lang-title">' ).text( 'Other languages' );
+	function languageListTitle () {
+		return $( '<li class="ime-lang-title">' )
+			.text( 'Other languages' ); // TODO i18n
 	}
 
 	function imeList () {
@@ -279,9 +297,12 @@
 	}
 
 	function toggleMenuItem () {
-		return $( '<li class="ime-disable-link">' ).append(
-			$( '<a>' ).attr( 'href', '#' ).text( 'System input method' ).append(
-				'<span>CTRL+M</span>' ) );
+		return $( '<li class="ime-disable-link">' )
+			.append( $( '<a>' )
+				.attr( 'href', '#' )
+				.text( 'System input method' )
+				.append( '<span>CTRL+M</span>' )
+			);
 	}
 
 	var selectorTemplate = '<div class="imeselector">'
@@ -295,6 +316,8 @@
 	 * @return bool
 	 */
 	function isShortcutKey ( event ) {
+		// 77 - The letter M, for Ctrl-M
+		// 13 - The Enter key
 		return event.ctrlKey && ( event.which === 77 || event.which === 13 );
 	}
 
