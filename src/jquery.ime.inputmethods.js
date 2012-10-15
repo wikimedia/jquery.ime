@@ -90,13 +90,13 @@
 			name: 'Deutsch',
 			source: 'rules/de/de.js'
 		},
-		'he-standard-2011': {
-			name: 'Hebrew Standard 2011',
-			source: 'rules/he/he-standard-2011.js'
+		'he-standard-2012': {
+			name: 'Hebrew Standard 2012',
+			source: 'rules/he/he-standard-2012.js'
 		},
-		'he-standard-2011-extonly': {
-			name: 'Hebrew Standard 2011',
-			source: 'rules/he/he-standard-2011-extonly.js'
+		'he-standard-2012-extonly': {
+			name: 'Hebrew Standard 2012',
+			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'gu-inscript': {
 			name: 'Inscript',
@@ -159,8 +159,8 @@
 			inputmethods: ['gu-transliteration', 'gu-inscript']
 		},
 		'he': {
-			autonym: 'עִבְרִית',
-			inputmethods: [ 'he-standard-2011', 'he-standard-2011-extonly' ]
+			autonym: 'עברית',
+			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',

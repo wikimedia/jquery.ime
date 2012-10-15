@@ -2,10 +2,10 @@
 	'use strict';
 
 	var heStandardExt = {
-		id: 'he-standard-2011-extonly',
-		name: 'Hebrew standard keyboard',
+		id: 'he-standard-2012-extonly',
+		name: 'Hebrew 2012',
 		description: 'Hebrew keyboard according to Israeli Standard 1452',
-		date: '2011-12-06',
+		date: '2012-10-15',
 		URL: 'http://www.lingnu.com/he/howto/78-si1452.html',
 		author: 'Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])',
 		license: 'GPLv3',
