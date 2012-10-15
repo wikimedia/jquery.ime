@@ -68,9 +68,8 @@
 		},
 
 		keypress: function ( e ) {
-			var startPos, c, pos, endPos, divergingPos, input, replacement, altGr;
-
-			altGr = false;
+			var altGr = false,
+				c, startPos, pos, endPos, divergingPos, input, replacement;
 
 			if ( !this.active ) {
 				return true;
@@ -98,7 +97,7 @@
 				return true;
 			}
 
-			if ( e.altKey || e.altGraphKey ){
+			if ( e.altKey || e.altGraphKey ) {
 				altGr = true;
 			}
 
