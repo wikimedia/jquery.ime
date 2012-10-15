@@ -91,11 +91,11 @@
 			source: 'rules/de/de.js'
 		},
 		'he-standard-2012': {
-			name: 'Hebrew Standard 2012',
+			name: 'Hebrew 2012 (from English)',
 			source: 'rules/he/he-standard-2012.js'
 		},
 		'he-standard-2012-extonly': {
-			name: 'Hebrew Standard 2012',
+			name: 'Hebrew 2012',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'gu-inscript': {
