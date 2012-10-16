@@ -50,6 +50,14 @@
 			name: 'Inscript',
 			source: 'rules/brx/brx-inscript.js'
 		},
+		'cyrl-palochka' : {
+			name: 'Palochka',
+			source: 'rules/cyrl/cyrl-palochka.js'
+		},
+		'eo-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/eo/eo-transliteration.js'
+		},
 		'hi-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/hi/hi-transliteration.js'
@@ -122,6 +130,22 @@
 		'kn-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/kn/kn-transliteration.js'
+		},
+		'mr-inscript': {
+			name: 'Inscript',
+			source: 'rules/mr/mr-inscript.js'
+		},
+		'mr-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/mr/mr-transliteration.js'
+		},
+		'ne-inscript': {
+			name: 'Inscript',
+			source: 'rules/ne/ne-inscript.js'
+		},
+		'ne-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/ne/ne-transliteration.js'
 		}
 
 	} );
@@ -147,6 +171,10 @@
 			autonym: 'बड़ो',
 			inputmethods: ['brx-inscript']
 		},
+		'cyrl': {
+			autonym: 'Cyrillic',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
@@ -154,6 +182,10 @@
 		'en': {
 			autonym: 'English',
 			inputmethods: [ 'en-capitalize' ]
+		},
+		'eo': {
+			autonym: 'Esperanto',
+			inputmethods: [ 'eo-transliteration' ]
 		},
 		'gom': {
 			autonym: 'कोंकणी',
@@ -193,7 +225,19 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+		},
+		'ne': {
+			autonym: 'नेपाली',
+			inputmethods: [ 'ne-transliteration', 'ne-inscript' ]
+		},
+		'new': {
+			autonym: 'नेपाल भाषा',
+			inputmethods: [ 'sa-transliteration', 'sa-inscript' ]
+		},
+		'or': {
+			autonym: 'ଓଡ଼ିଆ',
+			inputmethods: [ 'or-transliteration', 'or-lekhani' ]
 		},
 		'sa': {
 			autonym: 'संस्कृत',
