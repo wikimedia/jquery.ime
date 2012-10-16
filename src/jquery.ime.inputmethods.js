@@ -10,39 +10,39 @@
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
-		'as-avro' : {
+		'as-avro': {
 			name: 'Avro',
 			source: 'rules/as/as-avro.js'
 		},
-		'as-bornona' : {
+		'as-bornona': {
 			name: 'Bornona',
 			source: 'rules/as/as-bornona.js'
 		},
-		'as-inscript' : {
+		'as-inscript': {
 			name: 'InScript',
 			source: 'rules/as/as-inscript.js'
 		},
-		'as-transliteration' : {
+		'as-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/as/as-transliteration.js'
 		},
-		'ber-tfng' : {
+		'ber-tfng': {
 			name: 'Tifinagh',
 			source: 'rules/ber/ber-tfng.js'
 		},
-		'bn-avro' : {
+		'bn-avro': {
 			name: 'Avro',
 			source: 'rules/bn/bn-avro.js'
 		},
-		'bn-inscript' : {
+		'bn-inscript': {
 			name: 'InScript',
 			source: 'rules/bn/bn-inscript.js'
 		},
-		'bn-nkb' : {
+		'bn-nkb': {
 			name: 'National Keyboard',
 			source: 'rules/bn/bn-nkb.js'
 		},
-		'bn-probhat' : {
+		'bn-probhat': {
 			name: 'Probhat',
 			source: 'rules/bn/bn-probhat.js'
 		},
@@ -50,7 +50,7 @@
 			name: 'Inscript',
 			source: 'rules/brx/brx-inscript.js'
 		},
-		'cyrl-palochka' : {
+		'cyrl-palochka': {
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
 		},
@@ -146,8 +146,19 @@
 		'ne-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/ne/ne-transliteration.js'
+		},
+		'or-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/or/or-transliteration.js'
+		},
+		'or-inscript': {
+			name: 'Inscript',
+			source: 'rules/or/or-inscript.js'
+		},
+		'or-lekhani': {
+			name: 'Lekhani',
+			source: 'rules/or/or-lekhani.js'
 		}
-
 	} );
 
 	$.extend( $.ime.languages, {
@@ -169,7 +180,7 @@
 		},
 		'brx': {
 			autonym: 'बड़ो',
-			inputmethods: ['brx-inscript']
+			inputmethods: [ 'brx-inscript' ]
 		},
 		'cyrl': {
 			autonym: 'Cyrillic',
@@ -189,11 +200,11 @@
 		},
 		'gom': {
 			autonym: 'कोंकणी',
-			inputmethods: ['hi-transliteration', 'hi-inscript']
+			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
 		},
 		'gu': {
 			autonym: 'ગુજરાતી',
-			inputmethods: ['gu-transliteration', 'gu-inscript']
+			inputmethods: [ 'gu-transliteration', 'gu-inscript' ]
 		},
 		'he': {
 			autonym: 'עברית',
@@ -205,7 +216,7 @@
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
-			inputmethods: ['hi-transliteration']
+			inputmethods: [ 'hi-transliteration' ]
 		},
 		'ka': {
 			autonym: 'ქართული ენა',
@@ -233,11 +244,11 @@
 		},
 		'new': {
 			autonym: 'नेपाल भाषा',
-			inputmethods: [ 'sa-transliteration', 'sa-inscript' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani' ]
+			inputmethods: [ 'or-transliteration', 'or-inscript', 'or-lekhani' ]
 		},
 		'sa': {
 			autonym: 'संस्कृत',

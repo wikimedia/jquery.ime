@@ -1,13 +1,13 @@
 ( function ( $ ) {
 	'use strict';
 
-	var orTransliteration = {
-		id: 'or-transliteration',
-		name: 'Transliteration',
-		description: 'Odiya transliteration',
+	var orLekhani = {
+		id: 'or-lekhani',
+		name: 'Lekhani',
+		description: 'Odiya Lekhani phonetic input method',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
-		author: 'Junaid P V / Subhashish Panigrahi',
+		author: 'Junaid P V and Subhashish Panigrahi',
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 4,
@@ -151,6 +151,6 @@
 			['8', '୮'],
 			['9', '୯']]
 	};
-	$.ime.register( orTransliteration );
+	$.ime.register( orLekhani );
 
 }( jQuery ) );
