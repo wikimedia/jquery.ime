@@ -12,7 +12,7 @@
 		}
 	} );
 
-	QUnit.test( 'Initialization tests', 7, function ( assert ) {
+	QUnit.test( 'Initialization tests', 8, function ( assert ) {
 		assert.strictEqual( typeof $textarea.ime, 'function', 'ime function exists' );
 		assert.strictEqual( typeof $textarea.data('ime'), 'undefined', 'ime not initialized before calling ime()' );
 
@@ -22,7 +22,7 @@
 		assert.strictEqual( inputIME.context, '', 'context is initially empty' );
 		assert.strictEqual( inputIME.inputmethod, null, 'inputmethod is initially null' );
 		assert.strictEqual( inputIME.options.imePath, '../', 'imePath is "../" by default' );
-		// TODO test selector
+		assert.strictEqual( typeof inputIME.selector, 'object', 'selector is defined' );
 
 		$textarea.ime();
 		textareaIME = $textarea.data( 'ime' );
