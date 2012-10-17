@@ -158,10 +158,70 @@
 		'or-lekhani': {
 			name: 'Lekhani',
 			source: 'rules/or/or-lekhani.js'
+		},
+		'te-inscript': {
+			name: 'Inscript',
+			source: 'rules/te/te-inscript.js'
+		},
+		'te-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/te/te-transliteration.js'
+		},
+		'pa-inscript': {
+			name: 'Inscript',
+			source: 'rules/pa/pa-inscript.js'
+		},
+		'pa-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/pa/pa-transliteration.js'
+		},
+		'pa-phonetic': {
+			name: 'Phonetic',
+			source: 'rules/pa/pa-phonetic.js'
+		},
+		'ru-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/ru/ru-transliteration.js'
+		},
+		'sa-inscript': {
+			name: 'Inscript',
+			source: 'rules/sa/sa-inscript.js'
+		},
+		'sa-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/sa/sa-transliteration.js'
+		},
+		'sah-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/sah/sah-transliteration.js'
+		},
+		'si-singlish': {
+			name: 'Singlish',
+			source: 'rules/si/si-singlish.js'
+		},
+		'si-wijesekara': {
+			name: 'Wijesekara',
+			source: 'rules/si/si-wijesekara.js'
+		},
+		'ur-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/ur/ur-transliteration.js'
 		}
 	} );
 
 	$.extend( $.ime.languages, {
+		'ady': {
+			autonym: 'нохчийн',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'ady-cyrl': {
+			autonym: 'нохчийн',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'ahr': {
+			autonym: 'अहिराणी',
+			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+		},
 		'am': {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
@@ -169,6 +229,10 @@
 		'as': {
 			autonym: 'অসমীয়া',
 			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript' ]
+		},
+		'av': {
+			autonym: 'авар',
+			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'ber': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
@@ -182,8 +246,12 @@
 			autonym: 'बड़ो',
 			inputmethods: [ 'brx-inscript' ]
 		},
+		'ce': {
+			autonym: 'нохчийн',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		'cyrl': {
-			autonym: 'Cyrillic',
+			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'de': {
@@ -222,12 +290,28 @@
 			autonym: 'ქართული ენა',
 			inputmethods: [ 'ka-transliteration' ]
 		},
+		'kbd': {
+			autonym: 'Адыгэбзэ',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'kbd-cyrl': {
+			autonym: 'Адыгэбзэ',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript' ]
 		},
+		'lbe': {
+			autonym: 'лакку',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'lez': {
+			autonym: 'лезги',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		'mai': {
-			autonym: ' मैथिली',
+			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript' ]
 		},
 		'ml': {
@@ -248,15 +332,55 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-inscript', 'or-lekhani' ]
+			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript' ]
+		},
+		'pa': {
+			autonym: 'ਪੰਜਾਬੀ',
+			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic' ]
+		},
+		'rif': {
+			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
+			inputmethods: [ 'ber-tfng' ]
+		},
+		'ru': {
+			autonym: 'русский',
+			inputmethods: [ 'ru-transliteration' ]
+		},
+		'sah': {
+			autonym: 'саха тыла',
+			inputmethods: [ 'sah-transliteration' ]
 		},
 		'sa': {
 			autonym: 'संस्कृत',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
+			inputmethods: [ 'sa-transliteration', 'sa-inscript' ]
+		},
+		'shi': {
+			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
+			inputmethods: [ 'ber-tfng' ]
+		},
+		'si': {
+			autonym: 'සිංහල',
+			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
 		},
 		'ta': {
 			autonym: 'தமிழ்',
-			inputmethods: [ 'ta-transliteration', 'ta-inscript', 'ta-99', 'ta-bamini' ]
+			inputmethods: [ 'ta-transliteration', 'ta-99', 'ta-inscript', 'ta-bamini' ]
+		},
+		'tcy': {
+			autonym: 'ತುಳು',
+			inputmethods: [ 'kn-transliteration' ]
+		},
+		'te': {
+			autonym: 'తెలుగు',
+			inputmethods: [ 'te-transliteration', 'te-inscript' ]
+		},
+		'tkr': {
+			autonym: 'авар',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'ur': {
+			autonym: 'اردو',
+			inputmethods: [ 'ur-transliteration' ]
 		}
 	} );
 

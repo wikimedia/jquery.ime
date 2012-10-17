@@ -3,7 +3,7 @@
 
 	var orLekhani = {
 		id: 'or-lekhani',
-		name: 'Lekhani',
+		name: 'Odiya Lekhani',
 		description: 'Odiya Lekhani phonetic input method',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',

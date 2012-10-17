@@ -29,7 +29,7 @@
 
 	var eoTransliteration = {
 		id: 'eo-transliteration',
-		name: 'Transliteration',
+		name: 'Esperanto Transliteration',
 		description: 'Esperanto x-code transliteration',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

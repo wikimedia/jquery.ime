@@ -26,7 +26,7 @@
 
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
-		name: 'Palochka',
+		name: 'Cyrillic Palochka',
 		description: 'Palochka input method for Cyrillic',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

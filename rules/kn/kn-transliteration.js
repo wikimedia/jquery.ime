@@ -3,7 +3,7 @@
 
 	var knTransliteration = {
 		id: 'kn-transliteration',
-		name: 'Transliteration',
+		name: 'Kannada Transliteration',
 		description: 'Kannada transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
