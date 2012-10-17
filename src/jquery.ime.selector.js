@@ -8,7 +8,6 @@
 		this.$imeSetting = $( selectorTemplate );
 		this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
 		this.inputmethod = null;
-		this.shown = false;
 		this.init();
 		this.listen();
 	}
