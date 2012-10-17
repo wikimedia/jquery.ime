@@ -11,6 +11,7 @@ div.imeselector {
 	margin-top: 0px;
 	text-align: left;
 	font-family: 'sans';
+	white-space: nowrap;
 }
 
 div.imeselector a {
