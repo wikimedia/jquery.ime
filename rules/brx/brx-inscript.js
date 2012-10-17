@@ -3,7 +3,7 @@
 
 	var brxInscript = {
 		id: 'brx-inscript',
-		name: 'Inscript',
+		name: 'Bodo Inscript',
 		description: 'Bodo Inscript input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
