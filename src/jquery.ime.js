@@ -3,7 +3,7 @@
 
 	function IME ( element, options ) {
 		this.$element = $( element );
-		this.options = $.extend( {}, IME.defaults, options );
+		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;
 		this.context = '';
@@ -232,7 +232,7 @@
 	};
 
 	// default options
-	IME.defaults = {
+	$.ime.defaults = {
 		imePath: '../' // Relative/Absolute path for the rules folder of jquery.ime
 	};
 
