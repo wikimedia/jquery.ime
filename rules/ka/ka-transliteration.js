@@ -3,7 +3,7 @@
 
 	var kaTransliteration = {
 		id: 'ka-transliteration',
-		name: 'Transliteration',
+		name: 'Georgian Transliteration',
 		description: 'Georgian transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',

@@ -3,7 +3,7 @@
 
 	var hiBolNagri = {
 		id: 'hi-bolnagri',
-		name: 'BolNagri',
+		name: 'Hindi BolNagri',
 		description: 'BolNagri phonetic keymap for Devanagari script',
 		date: '2012-03-28',
 		URL: 'http://www.indlinux.org/wiki/index.php/BolNagri',

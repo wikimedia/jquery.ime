@@ -3,7 +3,7 @@
 
 	var guTransliteration = {
 		id: 'gu-transliteration',
-		name: 'Transliteration',
+		name: 'Gujarati Transliteration',
 		description: 'Gujarati transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
