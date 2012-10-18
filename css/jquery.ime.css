@@ -98,7 +98,7 @@ div.ime-language-list {
 .imeselector-menu {
 	position: absolute;
 	top: 14px;
-	left: 0;
+	right: 0;
 	z-index: 1000;
 	display: none;
 	float: left;
@@ -126,7 +126,7 @@ div.ime-language-list {
 	border-right: 7px solid transparent;
 	content: "";
 	display: inline-block;
-	left: 9px;
+	right: 9px;
 	position: absolute;
 	top: -7px;
 }
@@ -137,7 +137,7 @@ div.ime-language-list {
 	border-right: 6px solid transparent;
 	content: "";
 	display: inline-block;
-	left: 10px;
+	right: 10px;
 	position: absolute;
 	top: -6px;
 }
