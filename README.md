@@ -28,9 +28,9 @@ See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page whe
 
 For Developers
 --------------
-Read [rules/README](tree/master/rules) to learn how to write an input method for language.
+Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules) to learn how to write an input method for language.
 
-Read the technical specification of project from [wiki](wiki/Technical-Specification)
+Read the technical specification of project from [wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification)
 
 License
 -------
