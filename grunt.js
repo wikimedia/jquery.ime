@@ -28,7 +28,8 @@ module.exports = function ( grunt ) {
 			dist: {
 				files: {
 					'dist/jquery.ime/rules/': 'rules/**',
-					'dist/jquery.ime/images/': 'images/**'
+					'dist/jquery.ime/images/': 'images/**',
+					'dist/jquery.ime/css/': 'css/**'
 				}
 			}
 		},

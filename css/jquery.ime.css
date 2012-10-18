@@ -8,7 +8,7 @@ div.imeselector {
 	margin: 1px 0 0;
 	font-size: small;
 	padding-left: 20px;
-	margin-top: 0px;
+	margin-top: 0;
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
@@ -76,7 +76,7 @@ div.imeselector a {
 	display: block;
 }
 
-.imeselector-menu li.checked a {
+.imeselector-menu .checked a {
 	background: url(../images/tick.svg) 4px no-repeat;
 	background-size: 12px 12px;
 }
@@ -117,9 +117,6 @@ div.ime-language-list {
 	-moz-background-clip: padding;
 	background-clip: padding-box;
 	text-align: left;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 
 /* The triangle shaped callout */
@@ -170,7 +167,6 @@ div.ime-language-list {
 }
 
 .imeselector-menu li>a:hover {
-	text-decoration: none;
 	text-decoration: none;
 	color: #ffffff;
 	background-color: #5089e8;
