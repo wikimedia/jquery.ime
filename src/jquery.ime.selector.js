@@ -234,7 +234,7 @@
 				$language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
-			};
+			}
 
 			$languageListDiv.append( $languageList );
 			imeselector.$menu.append( $languageListDiv );
@@ -281,8 +281,8 @@
 				$this.data( 'imeselector', ( data = new IMESelector( this, options ) ) );
 			}
 
-			if ( typeof option === 'string' ) {
-				data[option].call( $this );
+			if ( typeof options === 'string' ) {
+				data[options].call( $this );
 			}
 		} );
 	};
