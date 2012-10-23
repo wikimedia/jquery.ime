@@ -188,6 +188,10 @@
 				imeselector.$imeSetting.find( 'a.ime-name' ).text( name );
 
 				imeselector.position();
+
+				// save this preference
+				$.ime.preferences.save( function () {
+				} );
 			} );
 
 		},
@@ -238,6 +242,10 @@
 
 			$languageListDiv.append( $languageList );
 			imeselector.$menu.append( $languageListDiv );
+
+			if ( this.options.languageSelector ) {
+				imeselector.$menu.append( this.options.languageSelector() );
+			}
 		},
 
 		/**
