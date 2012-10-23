@@ -211,20 +211,26 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var imeselector = this,
-				// Language list can be very long. So we use a container with
-				// overflow auto.
-				$languageListDiv = $( '<div class="ime-language-list">' ),
-				$languageList = $( '<ul class="ime-language-list">' );
+			var imeselector = this, languageCodeIndex = 0, $languageListDiv, $languageList, languageList;
 
-			$.each( $.ime.languages, function ( languageCode, language ) {
-				var $languageItem, $language;
+			// Language list can be very long. So we use a container with
+			// overflow auto.
+			$languageListDiv = $( '<div class="ime-language-list">' );
+			$languageList = $( '<ul class="ime-language-list">' );
+
+			languageList = this.options.languages;
+			console.log( languageList );
+			for( languageCodeIndex in languageList ) {
+				var $languageItem, $language, languageCode, language;
+
+				languageCode = languageList[languageCodeIndex];
+				language = $.ime.languages[languageCode];
 
 				$languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
 				$language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
-			} );
+			};
 
 			$languageListDiv.append( $languageList );
 			imeselector.$menu.append( $languageListDiv );
@@ -263,13 +269,13 @@
 	 * imeselector PLUGIN DEFINITION
 	 */
 
-	$.fn.imeselector = function ( option ) {
+	$.fn.imeselector = function ( options ) {
 		return this.each( function () {
 			var $this = $( this ),
 				data = $this.data( 'imeselector' );
-
+			console.log( options );
 			if ( !data ) {
-				$this.data( 'imeselector', ( data = new IMESelector( this ) ) );
+				$this.data( 'imeselector', ( data = new IMESelector( this, options ) ) );
 			}
 
 			if ( typeof option === 'string' ) {

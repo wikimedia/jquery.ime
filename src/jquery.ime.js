@@ -3,11 +3,13 @@
 
 	function IME ( element, options ) {
 		this.$element = $( element );
+		// This needs to be delayed here since extending language list happens at DOM ready
+		$.ime.defaults.languages = Object.keys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;
 		this.context = '';
-		this.selector = this.$element.imeselector( this );
+		this.selector = this.$element.imeselector( this.options );
 		this.listen();
 	}
 
@@ -233,7 +235,8 @@
 
 	// default options
 	$.ime.defaults = {
-		imePath: '../' // Relative/Absolute path for the rules folder of jquery.ime
+		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
+		languages: [] // Languages to be used- by default all languages
 	};
 
 	// private function for debugging
@@ -393,6 +396,14 @@
 		} else {
 			return str.substr( pos - n, n );
 		}
+	}
+
+	function arrayKeys ( obj ) {
+		var rv = [];
+		$.each( obj, function ( key ) {
+			rv.push( key );
+		} );
+		return rv;
 	}
 
 }( jQuery ) );
