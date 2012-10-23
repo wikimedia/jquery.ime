@@ -3,29 +3,43 @@
 
 	$.extend( $.ime.preferences, {
 		registry: {
-			'language': 'en',
-			'previous': [], // array of previous languages
-			'languages': {
+			language : 'en',
+			previousLanguages: [], // array of previous languages
+			imes: {
 				'en': 'system'
 			}
 		},
 
 		setLanguage: function ( language ) {
 			this.registry.language = language;
+			if ( !this.registry.previousLanguages ) {
+				this.registry.previousLanguages = [];
+			}
+			this.registry.previousLanguages.push( language );
 		},
 
 		getLanguage: function () {
 			return this.registry.language;
 		},
 
+		getPreviousLanguages: function () {
+			return this.registry.previousLanguages;
+		},
+
 		// Set the given IM as the last used for the language
 		setIM: function ( inputMethod ) {
-			this.registry.languages[this.getLanguage()] = inputMethod;
+			if( !this.registry.imes ){
+				this.registry.imes= {};
+			}
+			this.registry.imes[this.getLanguage()] = inputMethod;
 		},
 
 		// Return the last used or the default IM for language
 		getIM: function ( language ) {
-			return this.registry.languages[language] || $.ime.languages[language].inputmethods[0];
+			if( !this.registry.imes ){
+				this.registry.imes= {};
+			}
+			return this.registry.imes[language] || $.ime.languages[language].inputmethods[0];
 		},
 
 		save: function () {
