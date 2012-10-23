@@ -218,8 +218,12 @@
 			$languageListDiv = $( '<div class="ime-language-list">' );
 			$languageList = $( '<ul class="ime-language-list">' );
 
-			languageList = this.options.languages;
-			console.log( languageList );
+			if ( $.isFunction( this.options.languages ) ) {
+				languageList = this.options.languages();
+			} else {
+				languageList = this.options.languages;
+			}
+
 			for( languageCodeIndex in languageList ) {
 				var $languageItem, $language, languageCode, language;
 
@@ -273,7 +277,6 @@
 		return this.each( function () {
 			var $this = $( this ),
 				data = $this.data( 'imeselector' );
-			console.log( options );
 			if ( !data ) {
 				$this.data( 'imeselector', ( data = new IMESelector( this, options ) ) );
 			}
