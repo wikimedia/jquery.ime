@@ -88,19 +88,18 @@
 				return true;
 			}
 
+			if ( e.altKey || e.altGraphKey ) {
+				altGr = true;
+			}
+
 			// Don't process ASCII control characters (except linefeed),
 			// as well as anything involving
 			// Alt (except for extended keymaps), Ctrl and Meta
-			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.patterns_x )
-					|| e.ctrlKey || e.metaKey ) {
+			if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
 				// Blank the context
 				this.context = '';
 
 				return true;
-			}
-
-			if ( e.altKey || e.altGraphKey ) {
-				altGr = true;
 			}
 
 			c = String.fromCharCode( e.which );

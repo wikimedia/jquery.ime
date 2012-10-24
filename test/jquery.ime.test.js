@@ -458,6 +458,15 @@
 	} );
 
 	imeTest( {
+		description: 'Hindi InScript layout test',
+		tests: [
+			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
+		],
+		inputmethod: 'hi-inscript',
+		$input: $( '<input>' ).attr( { id: 'hi-inscript', type: 'text' } )
+	} );
+
+	imeTest( {
 		description: 'Hindi transliteration tests',
 		tests: [
 			// The regex returns \n for \r.
