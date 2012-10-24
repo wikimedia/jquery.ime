@@ -211,11 +211,7 @@
 
 	$.extend( $.ime.languages, {
 		'ady': {
-			autonym: 'нохчийн',
-			inputmethods: [ 'cyrl-palochka' ]
-		},
-		'ady-cyrl': {
-			autonym: 'нохчийн',
+			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'ahr': {
@@ -248,10 +244,6 @@
 		},
 		'ce': {
 			autonym: 'нохчийн',
-			inputmethods: [ 'cyrl-palochka' ]
-		},
-		'cyrl': {
-			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'de': {
@@ -291,11 +283,7 @@
 			inputmethods: [ 'ka-transliteration' ]
 		},
 		'kbd': {
-			autonym: 'Адыгэбзэ',
-			inputmethods: [ 'cyrl-palochka' ]
-		},
-		'kbd-cyrl': {
-			autonym: 'Адыгэбзэ',
+			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'kn': {
@@ -375,7 +363,7 @@
 			inputmethods: [ 'te-transliteration', 'te-inscript' ]
 		},
 		'tkr': {
-			autonym: 'авар',
+			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'ur': {
