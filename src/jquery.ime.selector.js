@@ -201,7 +201,7 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var this, languageCodeIndex = 0, $languageListDiv, $languageList, languageList;
+			var languageCodeIndex = 0, $languageListDiv, $languageList, languageList;
 
 			// Language list can be very long. So we use a container with
 			// overflow auto.
