@@ -10,7 +10,7 @@
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLensgth: 4,
+		contextLength: 4,
 		maxKeyLength: 5,
 		patterns: [
 			['([ক-হড়ঢ়য়])্?ররi','[^o`]', '$1ৃ'],
