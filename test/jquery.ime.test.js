@@ -41,6 +41,15 @@
 		assert.strictEqual( selector.inputmethod, null, 'inputmethod is not enabled initially' );
 	} );
 
+	QUnit.test( 'Preferences tests', 2, function ( assert ) {
+		$.ime.preferences.registry.previousLanguages = [];
+		$.ime.preferences.setLanguage( 'hi' );
+		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 1, 'Hindi added to previous languages' );
+		// set it again
+		$.ime.preferences.setLanguage( 'hi' );
+		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 1, 'Hindi not duplicated in previous languages' );
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 			$textarea = $( '<textarea>' );
