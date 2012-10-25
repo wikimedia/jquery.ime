@@ -234,6 +234,10 @@
 				languageCode = languageList[languageCodeIndex];
 				language = $.ime.languages[languageCode];
 
+				if ( !language ) {
+					continue;
+				}
+
 				$languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
 				$language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
