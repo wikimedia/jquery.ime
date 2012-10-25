@@ -31,7 +31,7 @@
 							'imePath is defined correctly using options in the constructor' );
 	} );
 
-	QUnit.test( 'Selector tests', 3, function ( assert ) {
+	QUnit.test( 'Selector tests', 5, function ( assert ) {
 		$textarea.ime();
 		textareaIME = $textarea.data( 'ime' );
 		var selector = textareaIME.selector.data( 'imeselector' );
@@ -39,6 +39,9 @@
 
 		assert.strictEqual( selector.active, false, 'selector is not active initially' );
 		assert.strictEqual( selector.inputmethod, null, 'inputmethod is not enabled initially' );
+		selector.selectLanguage( 'ta ');
+		assert.strictEqual( textareaIME.selector.active, true, 'selector is active' );
+		assert.strictEqual( textareaIME.selector.inputmethod, 'ta-transliteration', 'inputmethod is Tamil Transliteration' );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
