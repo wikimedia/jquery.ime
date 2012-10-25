@@ -95,6 +95,10 @@ div.ime-language-list {
 	padding: 0 0;
 }
 
+.ime-language-list {
+	margin: 0;
+}
+
 .imeselector-menu {
 	position: absolute;
 	top: 14px;
