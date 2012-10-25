@@ -10,8 +10,8 @@
 		author: 'Jaldeep R Vasavada ([[User:JaldeepVasavada]]) / Amir E. Aharoni ([[User:Amire80]])',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 4,
-		maxKeyLength: 2,
+		contextLength: 2,
+		maxKeyLength: 4,
 		patterns: [
 			['ક્h', 'c', 'ચ'],
 			['\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1'],

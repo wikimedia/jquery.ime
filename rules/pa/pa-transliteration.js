@@ -10,8 +10,8 @@
 		author: 'Amir E. Aharoni, inputs from Saurabh Choudhary and Surinder Wadhawan',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 4,
-		maxKeyLength: 2,
+		contextLength: 2,
+		maxKeyLength: 4,
 		/* Semi-automatically created from the Hindi transliteration mapping using
 		 * the following Perl substitution:
 		 * s{(?<deva_letter>[ऀ-ॿ])}{chr(ord($+{deva_letter}) + 0x100)}xmsge;

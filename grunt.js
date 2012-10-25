@@ -34,7 +34,7 @@ module.exports = function ( grunt ) {
 			}
 		},
 		qunit: {
-			files: [ 'test/**/*.html' ]
+			files: [ 'test/index.html' ]
 		},
 		lint: {
 			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
@@ -65,11 +65,7 @@ module.exports = function ( grunt ) {
 			},
 			globals: {
 				jQuery: true,
-				QUnit: true,
-				pluralRuleParser: true,
-				_: true,
-				module: true,
-				test: true
+				QUnit: true
 			}
 		},
 		uglify: {

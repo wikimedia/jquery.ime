@@ -336,7 +336,7 @@
 			{ input: [ [ '-', false ] ], output: '-', description: 'Hebrew regular -' },
 			{ input: [ [ '-', true ] ], output: '־', description: 'Hebrew extended -' }
 		],
-		inputmethod: 'he-standard-2011-extonly',
+		inputmethod: 'he-standard-2012-extonly',
 		$input: $( '<input>' ).attr( { id: 'he-standard-2011-extonly', type: 'text' } )
 	} );
 

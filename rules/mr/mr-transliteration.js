@@ -9,8 +9,8 @@
 		author: 'Pathak A B',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 4,
-		maxKeyLength: 2,
+		contextLength: 2,
+		maxKeyLength: 4,
 		patterns: [
 			['च्h', 'c', 'च्'], // ch
 			['च्h', 'ch', 'छ्'], // chh

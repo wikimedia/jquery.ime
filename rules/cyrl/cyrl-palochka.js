@@ -16,13 +16,8 @@
 	'use strict';
 	// All the characters are very similar in appearance,
 	// so it's better to give them names to avoid confusion.
-	var cyrlPalochka, palochka, latinSmallL, latinCapitalI, ukrainianCapitalI, digitOne;
+	var cyrlPalochka;
 
-	palochka = 'c';
-	latinSmallL = 'l';
-	latinCapitalI = 'I';
-	ukrainianCapitalI = 'І';
-	digitOne = '1';
 
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
@@ -33,17 +28,15 @@
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 0,
-		maxKeyLength: 2,
 		patterns: [
-			[ latinSmallL, palochka ],
-			[ latinCapitalI, palochka ],
-			[ ukrainianCapitalI, palochka ] ],
+			[ 'l', 'Ӏ' ],
+			[ 'I', 'Ӏ' ],
+			[ 'І', 'Ӏ' ] ],
 		patterns_x: [
-			[ digitOne, palochka ],
-			[ 'д', palochka ],
-			[ 'ш', palochka ],
-			[ 'Ш', palochka ] ]
+			[ '1', 'Ӏ' ],
+			[ 'д', 'Ӏ' ],
+			[ 'ш', 'Ӏ' ],
+			[ 'Ш', 'Ӏ' ] ]
 	};
 
 	$.ime.register( cyrlPalochka );
