@@ -31,7 +31,7 @@
 							'imePath is defined correctly using options in the constructor' );
 	} );
 
-	QUnit.test( 'Selector tests', 7, function ( assert ) {
+	QUnit.test( 'Selector tests', 12, function ( assert ) {
 		$textarea.ime();
 		textareaIME = $textarea.data( 'ime' );
 		var selector = textareaIME.selector.data( 'imeselector' );
@@ -43,21 +43,46 @@
 		textareaIME.enable();
 		assert.strictEqual( textareaIME.isActive(), true, 'selector is active' );
 		stop();
-		textareaIME.load( 'or-transliteration', function() {
-			selector.selectLanguage( 'or' );
-			selector.selectIM( 'or-transliteration' );
-			assert.strictEqual( textareaIME.getIM().id, 'or-transliteration', 'inputmethod is Oriya Transliteration' );
+		textareaIME.load( 'hi-transliteration', function() {
+			selector.selectLanguage( 'hi' );
+			//selector.selectIM( 'hi-transliteration' );
+			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration', 'Hindi inputmethod is Hindi Transliteration' );
 			start();
 		} );
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
 		stop();
-		textareaIME.load ('hi-inscript', function() {
-			selector.selectLanguage( 'hi' );
-			selector.selectIM( 'hi-inscript' );
-			assert.strictEqual( textareaIME.getIM().id, 'hi-inscript', 'inputmethod is Hindi InScript' );
+		textareaIME.load ('ta-transliteration', function() {
+			selector.selectLanguage( 'ta' );
+			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration', 'Tamil inputmethod is defaulted to Tamil Transliteration' );			
 			start();
 		} );
+		stop();
+		textareaIME.load ('ta-bamini', function() {
+			selector.selectLanguage( 'ta' );
+			selector.selectIM( 'ta-bamini' );
+			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini', 'Tamil inputmethod is changed to Tamil Bamini' );
+			start();
+		} );
+		selector.disableIM();
+		assert.strictEqual( textareaIME.isActive(), false, 'Selector is not active' );
+		stop();
+		textareaIME.load ('kn-transliteration', function() {
+			selector.selectLanguage( 'kn' );
+			//selector.selectIM( 'kn-transliteration' ); Implicit
+			assert.strictEqual( textareaIME.getIM().id, 'kn-transliteration', 'Default inputmethod for Kannada is Kannada Transliteration' );
+			start();
+		} );
+		stop();
+		textareaIME.load( 'hi-transliteration', function() {
+		selector.selectLanguage( 'hi' );
+		textareaIME.enable();
+		assert.strictEqual	( textareaIME.getIM().id, 'hi-transliteration', 'inputmethod is Hindi Transliteration' );
+		selector.selectLanguage( 'ta' );
+		assert.strictEqual( textareaIME.getIM().id, 'ta-bamini', 'inputmethod for Tamil is Tamil Bamini' );
+			start();
+		} );
+		
 	} );
 
 	QUnit.test( 'Preferences tests', 2, function ( assert ) {
