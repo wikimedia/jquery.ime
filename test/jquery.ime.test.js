@@ -19,9 +19,9 @@
 
 		$input.ime();
 		inputIME = $input.data( 'ime' );
-		assert.strictEqual( inputIME.active, false, 'ime is initially inactive' );
+		assert.strictEqual( inputIME.isActive(), false, 'ime is initially inactive' );
 		assert.strictEqual( inputIME.context, '', 'context is initially empty' );
-		assert.strictEqual( inputIME.inputmethod, null, 'inputmethod is initially null' );
+		assert.strictEqual( inputIME.getIM(), null, 'inputmethod is initially null' );
 		assert.strictEqual( inputIME.options.imePath, '../', 'imePath is "../" by default' );
 
 		var $specialPath = $( '<textarea>' ),
@@ -31,14 +31,33 @@
 							'imePath is defined correctly using options in the constructor' );
 	} );
 
-	QUnit.test( 'Selector tests', 3, function ( assert ) {
+	QUnit.test( 'Selector tests', 7, function ( assert ) {
 		$textarea.ime();
 		textareaIME = $textarea.data( 'ime' );
 		var selector = textareaIME.selector.data( 'imeselector' );
 		assert.strictEqual( typeof selector, 'object', 'selector on textarea is defined' );
 
-		assert.strictEqual( selector.active, false, 'selector is not active initially' );
-		assert.strictEqual( selector.inputmethod, null, 'inputmethod is not enabled initially' );
+		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active initially' );
+		assert.strictEqual( textareaIME.getIM(), null, 'inputmethod is not enabled initially' );
+
+		textareaIME.enable();
+		assert.strictEqual( textareaIME.isActive(), true, 'selector is active' );
+		stop();
+		textareaIME.load( 'or-transliteration', function() {
+			selector.selectLanguage( 'or' );
+			selector.selectIM( 'or-transliteration' );
+			assert.strictEqual( textareaIME.getIM().id, 'or-transliteration', 'inputmethod is Oriya Transliteration' );
+			start();
+		} );
+		selector.disableIM();
+		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
+		stop();
+		textareaIME.load ('hi-inscript', function() {
+			selector.selectLanguage( 'hi' );
+			selector.selectIM( 'hi-inscript' );
+			assert.strictEqual( textareaIME.getIM().id, 'hi-inscript', 'inputmethod is Hindi InScript' );
+			start();
+		} );
 	} );
 
 	QUnit.test( 'Preferences tests', 2, function ( assert ) {

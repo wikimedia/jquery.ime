@@ -161,6 +161,10 @@
 			this.active = !this.active;
 		},
 
+		getIM: function () {
+			return this.inputmethod;
+		},
+
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
 			$.ime.preferences.setIM( inputmethodId );
