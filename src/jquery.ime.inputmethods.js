@@ -206,6 +206,10 @@
 		'ur-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/ur/ur-transliteration.js'
+		},
+		'mn-cyrl': {
+			name: 'Cyrillc',
+			source: 'rules/mn/mn-cyrl.js'
 		}
 	} );
 
@@ -305,6 +309,10 @@
 		'ml': {
 			autonym: 'മലയാളം',
 			inputmethods: [ 'ml-transliteration', 'ml-inscript' ]
+		},
+		'mn': {
+			autonym: 'Монгол',
+			inputmethods: [ 'mn-cyrl' ]
 		},
 		'mr': {
 			autonym: 'मराठी',
