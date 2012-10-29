@@ -179,8 +179,7 @@
 				imeselector.position();
 
 				// save this preference
-				$.ime.preferences.save( function () {
-				} );
+				$.ime.preferences.save();
 			} );
 
 		},
@@ -195,6 +194,8 @@
 			this.$imeSetting.find( 'a.ime-name' ).text( '' );
 			this.$menu.removeClass( 'open' );
 			this.position();
+			// save this preference
+			$.ime.preferences.save();
 		},
 
 		/**
