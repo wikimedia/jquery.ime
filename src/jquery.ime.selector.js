@@ -28,7 +28,7 @@
 			this.$menu.append( toggleMenuItem() );
 			this.$menu.append( languageListTitle() );
 			this.prepareLanguageList();
-			this.$menu.append( helpLink() );
+			this.$menu.append( this.helpLink() );
 		},
 
 		focus: function ( ) {
@@ -259,6 +259,16 @@
 				$inputMethod.addClass( 'ime-im' );
 				$imeList.append( $inputMethod );
 			} );
+		},
+
+		helpLink: function () {
+			return $( '<li class="ime-help-link">' )
+				.append( $( '<a>' ).text( 'Help' )
+					.attr( {
+						'href': 'http://github.com/wikimedia/jquery.ime',
+						'target': '_blank'
+					} )
+				);
 		}
 	};
 
@@ -285,14 +295,6 @@
 	};
 
 	$.fn.imeselector.Constructor = IMESelector;
-
-	// Private functions
-	function helpLink () {
-		return $( '<li class="ime-help-link">' )
-			.append( $( '<a>' )
-			.attr( 'href', '#' )
-			.text( 'Help' ) ); // TODO i18n
-	}
 
 	function languageListTitle () {
 		return $( '<li class="ime-lang-title">' )
