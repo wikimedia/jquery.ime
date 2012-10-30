@@ -269,7 +269,8 @@
 				.append( $( '<a>' ).text( 'Help' )
 					.attr( {
 						'href': 'http://github.com/wikimedia/jquery.ime',
-						'target': '_blank'
+						'target': '_blank',
+						'data-i18n': 'jquery-ime-help'
 					} )
 				);
 		}
