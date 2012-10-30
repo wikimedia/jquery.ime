@@ -3,7 +3,7 @@
 
 	var teInScript = {
 		id: 'te-inscript',
-		name: 'Telugu InScript',
+		name: 'ఇన్‍స్క్రిప్ట్',
 		description: 'Inscript keyboard for Telugu script',
 		date: '2012-10-16',
 		author: 'Veeven',

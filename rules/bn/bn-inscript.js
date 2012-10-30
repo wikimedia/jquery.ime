@@ -3,7 +3,7 @@
 
 	var bnInScript = {
 		id: 'bn-inscript',
-		name: 'Bengali InScript',
+		name: 'ইন্সক্রিপ্ট',
 		description: 'Bengali InScript input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

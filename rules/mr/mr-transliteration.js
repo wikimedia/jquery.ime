@@ -3,7 +3,7 @@
 
 	var mrTransliteration = {
 		id: 'mr-transliteration',
-		name: 'Marathi Transliteration',
+		name: 'अक्षरांतरण',
 		description: 'Transliteration keyboard for Marathi script',
 		date: '2012-10-14',
 		author: 'Pathak A B',

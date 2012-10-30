@@ -3,7 +3,7 @@
 
 	var ta99 = {
 		id: 'ta-99',
-		name: 'Tamil 99',
+		name: 'தமிழ்99',
 		description: 'Tamil 99 Keyboard',
 		date: '2012-11-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',

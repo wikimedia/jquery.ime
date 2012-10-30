@@ -3,7 +3,7 @@
 
 	var neTransliteration = {
 		id: 'ne-transliteration',
-		name: 'Nepali Transliteration',
+		name: 'लिप्यंतरण',
 		description: 'Nepali transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',

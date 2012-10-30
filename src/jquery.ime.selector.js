@@ -29,6 +29,9 @@
 			this.$menu.append( languageListTitle() );
 			this.prepareLanguageList();
 			this.$menu.append( this.helpLink() );
+			if ( $.i18n ) {
+				this.$menu.i18n();
+			}
 		},
 
 		focus: function ( ) {
@@ -298,7 +301,8 @@
 
 	function languageListTitle () {
 		return $( '<li class="ime-lang-title">' )
-			.text( 'Other languages' ); // TODO i18n
+			.attr( 'data-i18n', 'jquery-ime-other-languages' )
+			.text( 'Other languages' );
 	}
 
 	function imeList () {
@@ -308,7 +312,10 @@
 	function toggleMenuItem () {
 		return $( '<li class="ime-disable-link">' )
 			.append( $( '<a>' )
-				.attr( 'href', '#' )
+				.attr( {
+					'href': '#',
+					'data-i18n': 'jquery-ime-disable-text'
+				} )
 				.text( 'System input method' )
 				.append( '<span>CTRL+M</span>' )
 			);

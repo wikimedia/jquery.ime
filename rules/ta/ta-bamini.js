@@ -3,7 +3,7 @@
 
 	var taBamini = {
 		id: 'ta-bamini',
-		name: 'Tamil Bamini',
+		name: 'பாமினி',
 		description: 'Tamil Bamini input method',
 		date: '2012-10-03',
 		URL: 'http://github.com/wikimedia/jquery.ime',

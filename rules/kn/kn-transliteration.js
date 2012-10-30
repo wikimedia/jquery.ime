@@ -3,7 +3,7 @@
 
 	var knTransliteration = {
 		id: 'kn-transliteration',
-		name: 'Kannada Transliteration',
+		name: 'ಲಿಪ್ಯಂತರಣ',
 		description: 'Kannada transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -43,7 +43,7 @@
 			['ಅu', 'ಔ'],
 			['ಋR', 'ೠ'],
 			['ಓ~M', 'ॐ'],
-			 
+
 			['~l', 'ೞ್'],
 			['~h', 'ಹ್'],
 			['~r', 'ಱ್'],
@@ -90,9 +90,9 @@
 			['([ಕ-ಹೞ]಼?)ೃo', '$1್ರೊ'],
 			['([ಕ-ಹೞ]಼?)ೃO', '$1್ರೋ'],
 			['([ಕ-ಹೞ]಼?)ೃ\\~', '$1್ರ್'],
-			 
+
 			['।\\.', '॥'],
-			 
+
 			['a', 'ಅ'],
 			['b', 'ಬ್'],
 			['c', 'ಚ್'],

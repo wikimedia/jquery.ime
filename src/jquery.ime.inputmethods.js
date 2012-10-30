@@ -3,7 +3,7 @@
 
 	$.extend( $.ime.sources, {
 		'en-capitalize': {
-			name: 'Capitalize', // XXX This can be the name written in its own script?
+			name: 'Capitalize',
 			source: 'rules/en/capitalize.js'
 		},
 		'am-transliteration': {
@@ -11,19 +11,19 @@
 			source: 'rules/am/am-transliteration.js'
 		},
 		'as-avro': {
-			name: 'Avro',
+			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
 		},
 		'as-bornona': {
-			name: 'Bornona',
+			name: 'বৰ্ণনা',
 			source: 'rules/as/as-bornona.js'
 		},
 		'as-inscript': {
-			name: 'InScript',
+			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/as/as-inscript.js'
 		},
 		'as-transliteration': {
-			name: 'Transliteration',
+			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
 		'ber-tfng': {
@@ -35,7 +35,7 @@
 			source: 'rules/bn/bn-avro.js'
 		},
 		'bn-inscript': {
-			name: 'InScript',
+			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/bn/bn-inscript.js'
 		},
 		'bn-nkb': {
@@ -59,44 +59,44 @@
 			source: 'rules/eo/eo-transliteration.js'
 		},
 		'hi-transliteration': {
-			name: 'Transliteration',
+			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
 		},
 		'hi-inscript': {
-			name: 'InScript',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/hi/hi-inscript.js'
 		},
 		'mai-inscript': {
-			name: 'InScript',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/mai/mai-inscript.js',
 			depends: 'hi-inscript'
 		},
 		'hi-bolnagri': {
-			name: 'BolNagri',
+			name: 'बोलनागरी',
 			source: 'rules/hi/hi-bolnagri.js'
 		},
 		'ml-transliteration': {
-			name: 'Transliteration',
+			name: 'ലിപ്യന്തരണം',
 			source: 'rules/ml/ml-transliteration.js'
 		},
 		'ml-inscript': {
-			name: 'InScript',
+			name: 'ഇൻസ്ക്രിപ്റ്റ്',
 			source: 'rules/ml/ml-inscript.js'
 		},
 		'ta-inscript': {
-			name: 'InScript',
+			name: 'இன்ஸ்கிரிப்ட்',
 			source: 'rules/ta/ta-inscript.js'
 		},
 		'ta-transliteration': {
-			name: 'Transliteration',
+			name: 'எழுத்துப்பெயர்ப்பு',
 			source: 'rules/ta/ta-transliteration.js'
 		},
 		'ta-99': {
-			name: 'Tamil 99',
+			name: 'தமிழ்99',
 			source: 'rules/ta/ta-99.js'
 		},
 		'ta-bamini': {
-			name: 'Bamini',
+			name: 'பாமினி',
 			source: 'rules/ta/ta-bamini.js'
 		},
 		'de': {
@@ -112,15 +112,15 @@
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'gu-inscript': {
-			name: 'Inscript',
+			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
 		},
 		'gu-transliteration': {
-			name: 'Transliteration',
+			name: 'લિપ્યાંતરણ',
 			source: 'rules/gu/gu-transliteration.js'
 		},
 		'ka-transliteration': {
-			name: 'Transliteration',
+			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
 		'kn-inscript': {
@@ -132,15 +132,15 @@
 			source: 'rules/kn/kn-transliteration.js'
 		},
 		'mr-inscript': {
-			name: 'Inscript',
+			name: 'मराठी लिपी',
 			source: 'rules/mr/mr-inscript.js'
 		},
 		'mr-transliteration': {
-			name: 'Transliteration',
+			name: 'अक्षरांतरण',
 			source: 'rules/mr/mr-transliteration.js'
 		},
 		'ne-inscript': {
-			name: 'Inscript',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
 		},
 		'ne-transliteration': {
@@ -156,15 +156,15 @@
 			source: 'rules/or/or-inscript.js'
 		},
 		'or-lekhani': {
-			name: 'Lekhani',
+			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
 		},
 		'te-inscript': {
-			name: 'Inscript',
+			name: 'ఇన్‍స్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
 		},
 		'te-transliteration': {
-			name: 'Transliteration',
+			name: 'లిప్యంతరీకరణ',
 			source: 'rules/te/te-transliteration.js'
 		},
 		'pa-inscript': {

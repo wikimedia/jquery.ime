@@ -3,7 +3,7 @@
 
 	var mrInScript = {
 		id: 'mr-inscript',
-		name: 'Marathi InScript',
+		name: 'मराठी लिपी',
 		description: 'InScript keyboard for Marathi script',
 		date: '2012-10-14',
 		author: 'Junaid P V',

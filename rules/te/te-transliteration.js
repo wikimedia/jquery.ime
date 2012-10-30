@@ -3,7 +3,7 @@
 
 	var teTransliteration = {
 		id: 'te-transliteration',
-		name: 'Telugu Transliteration',
+		name: 'లిప్యంతరీకరణ',
 		description: 'Telugu Transliteration based on RTS',
 		date: '2012-10-16',
 		URL: 'http://github.com/wikimedia/jquery.ime',

@@ -3,7 +3,7 @@
 
 	var guInscript = {
 		id: 'gu-inscript',
-		name: 'Gujarati Inscript',
+		name: 'ઇનસ્ક્રિપ્ટ',
 		description: 'Inscript keyboard for Gujarati script',
 		date: '2012-10-14',
 		author: 'Junaid P V',

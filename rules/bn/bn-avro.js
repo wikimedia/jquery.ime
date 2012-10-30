@@ -3,7 +3,7 @@
 
 	var bnAvro = {
 		id: 'bn-avro',
-		name: 'Bengali Avro',
+		name: 'অভ্র',
 		description: 'Bengali Avro input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

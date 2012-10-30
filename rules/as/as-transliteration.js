@@ -3,7 +3,7 @@
 
 	var asTransliteration = {
 		id: 'as-transliteration',
-		name: 'Assamese Transliteration',
+		name: 'প্ৰতিৰূপান্তৰণ',
 		description: 'Assamese Transliteration input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

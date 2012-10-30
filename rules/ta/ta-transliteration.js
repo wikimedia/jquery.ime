@@ -3,7 +3,7 @@
 
 	var taTransliteration = {
 		id: 'ta-transliteration',
-		name: 'Tamil Transliteration',
+		name: 'எழுத்துப்பெயர்ப்பு',
 		description: 'Tamil Transliteration based input method',
 		date: '2012-10-03',
 		URL: 'http://github.com/wikimedia/jquery.ime',

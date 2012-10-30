@@ -3,7 +3,7 @@
 
 	var taInScript = {
 		id: 'ta-inscript',
-		name: 'Tamil InScript',
+		name: 'இன்ஸ்கிரிப்ட்',
 		description: 'Tamil InScript Keyboard',
 		date: '2012-11-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',

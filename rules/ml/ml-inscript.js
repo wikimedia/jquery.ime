@@ -3,7 +3,7 @@
 
 	var inscript = {
 		id: 'ml-inscript',
-		name: 'Malayalam InScript',
+		name: 'ഇൻസ്ക്രിപ്റ്റ്',
 		description: 'Malayalam InScript',
 		date: '2012-10-03',
 		URL: 'http://github.com/wikimedia/jquery.ime',

@@ -3,7 +3,7 @@
 
 	var asInScript = {
 		id: 'as-inscript',
-		name: 'Assamese InScript',
+		name: 'ইন্‌স্ক্ৰিপ্ত',
 		description: 'InScript input method for Assamese according to CDAC\'s Enhanced InScript Keyboard Layout 5.2',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

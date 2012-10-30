@@ -3,7 +3,7 @@
 
 	var neInScript = {
 		id: 'ne-inscript',
-		name: 'Nepali InScript',
+		name: 'इनस्क्रिप्ट',
 		description: 'InScript keyboard for Nepali script',
 		date: '2012-10-14',
 		author: 'Bhawani Gautam',

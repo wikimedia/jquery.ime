@@ -3,7 +3,7 @@
 
 	var hiInScript = {
 		id: 'hi-inscript',
-		name: 'Devanagari InScript',
+		name: 'इनस्क्रिप्ट',
 		description: 'InScript keyboard for Devanagari script',
 		date: '2011-02-26',
 		author: 'Junaid P V',

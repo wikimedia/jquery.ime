@@ -2,7 +2,7 @@
 	'use strict';
 	var mltransliteration = {
 		id: 'ml-transliteration',
-		name: 'Malayalam Transliteration',
+		name: 'ലിപ്യന്തരണം',
 		description: 'Malayalam Transliteration based input method',
 		date: '2012-10-03',
 		URL: 'http://github.com/wikimedia/jquery.ime',
