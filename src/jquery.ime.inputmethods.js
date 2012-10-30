@@ -210,7 +210,7 @@
 		'mn-cyrl': {
 			name: 'Cyrillc',
 			source: 'rules/mn/mn-cyrl.js'
-		}
+		},
 	} );
 
 	$.extend( $.ime.languages, {
