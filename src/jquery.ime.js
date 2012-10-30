@@ -4,7 +4,7 @@
 	function IME ( element, options ) {
 		this.$element = $( element );
 		// This needs to be delayed here since extending language list happens at DOM ready
-		$.ime.defaults.languages = Object.keys( $.ime.languages );
+		$.ime.defaults.languages = arrayKeys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;
