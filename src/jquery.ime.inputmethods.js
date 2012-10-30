@@ -2,10 +2,6 @@
 	'use strict';
 
 	$.extend( $.ime.sources, {
-		'en-capitalize': {
-			name: 'Capitalize',
-			source: 'rules/en/capitalize.js'
-		},
 		'am-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
@@ -249,10 +245,6 @@
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
-		},
-		'en': {
-			autonym: 'English',
-			inputmethods: [ 'en-capitalize' ]
 		},
 		'eo': {
 			autonym: 'Esperanto',
