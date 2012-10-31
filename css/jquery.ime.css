@@ -1,17 +1,44 @@
 div.imeselector {
 	position: absolute;
-	background: url('../images/ime-active.svg') no-repeat scroll left center
-		transparent;
-	background-size: 15px;
+	background: url('../images/ime-inactive.svg') no-repeat scroll 3px center
+		rgba(255,255,255,0.75);
+	background-size: 17px;
 	cursor: pointer;
 	height: 15px;
-	margin: 1px 0 0;
+	margin: 0;
 	font-size: small;
 	padding-left: 20px;
-	margin-top: 0;
+	padding-right: 2px;
+	padding-top:2px;
+	padding-bottom:2px;
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
+	box-shadow: 0px 1px 3px 0px #777;
+	margin-top:3px;
+	-webkit-transition: opacity 0.24s ease, margin-top 0.24s ease;
+}
+
+div.imeselector:hover {
+	box-shadow: 0px 1px 3px 0px #565656;
+	border-top: none;
+	background-color: rgba(255,255,255,0.85);
+	background-image: url('../images/ime-active.svg');
+}
+
+input:focus + div.imeselector,
+textarea:focus + div.imeselector
+{
+	border-top: none;
+	background-color:rgba(255,255,255,0.85);
+	margin-top:3px;
+	background-image: url('../images/ime-active.svg');
+}
+
+div.imeselector:hover .caret,
+input:focus + div.imeselector .caret,
+textarea:focus + div.imeselector .caret{
+	opacity:1;
 }
 
 div.imeselector a {
@@ -48,19 +75,21 @@ div.imeselector a {
 }
 
 .imeselector .caret {
-	margin-left: 2px;
-	margin-top: 8px;
+	opacity:0.5;
 }
 
 .caret {
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-top: 4px solid #000000;
+	border-top: 4px solid #565656;
+	border-top-color: rgba(86,86,86,0.54)
 	content: "";
 	display: inline-block;
-	height: 0;
-	vertical-align: top;
-	width: 0;
+	height: 17px;
+	vertical-align: middle;
+	margin-left: 2px;
+	position:relative;
+	top:50%;
 }
 
 .imeselector-menu .sub-menu {
@@ -114,8 +143,6 @@ div.ime-language-list {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
