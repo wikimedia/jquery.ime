@@ -5,8 +5,8 @@
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
 		this.active = false;
-		this.$imeSetting = $( selectorTemplate );
-		this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
+		this.$imeSetting = null;
+		this.$menu = null;
 		this.inputmethod = null;
 		this.init();
 		this.listen();
@@ -17,13 +17,16 @@
 
 		init: function () {
 			this.prepareSelectorMenu();
-			this.$imeSetting.append( this.$menu );
-			this.$element.after( this.$imeSetting );
 			this.position();
 			this.$imeSetting.hide();
 		},
 
 		prepareSelectorMenu: function() {
+
+			// TODO: In this approach there is a menu for each editable area.
+			// With correct event mapping we can probably reduce it to one menu.
+			this.$imeSetting = $( selectorTemplate );
+			this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
 			this.$menu.append( imeList() );
 			this.$menu.append( toggleMenuItem() );
 			this.$menu.append( languageListTitle() );
@@ -32,6 +35,8 @@
 			if ( $.i18n ) {
 				this.$menu.i18n();
 			}
+			this.$imeSetting.append( this.$menu );
+			$( 'body' ).append( this.$imeSetting );
 		},
 
 		focus: function ( ) {
@@ -68,23 +73,29 @@
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function ( e ) {
 				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
 				e.stopPropagation();
+				e.preventDefault();
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-disable-link', function ( e ) {
 				imeselector.disableIM();
 				e.stopPropagation();
+				e.preventDefault();
 			} );
 
-			imeselector.$element.on( 'focus.ime', function() {
+			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.toggle, this ) );
+
+			imeselector.$element.on( 'focus.ime', function ( e ) {
 				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
-				imeselector.focus( );
+				imeselector.focus();
+				e.stopPropagation();
 			} );
+
 
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
 
-			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.toggle, this ) );
+
 		},
 
 		/**
@@ -120,7 +131,7 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			var position = this.$element.position();
+			var position = this.$element.offset();
 
 			this.$imeSetting.css( 'top', position.top + this.$element.outerHeight() );
 			this.$imeSetting.css( 'left', position.left + this.$element.outerWidth()
