@@ -17,7 +17,7 @@
 		constructor: IME,
 
 		listen: function () {
-			this.$element.on( 'keypress', $.proxy( this.keypress, this ) );
+			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
 		},
 
 		/**

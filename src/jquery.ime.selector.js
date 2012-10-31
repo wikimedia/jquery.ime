@@ -56,35 +56,35 @@
 		listen: function () {
 			var imeselector = this;
 
-			$( 'html' ).on( 'click', function () {
+			$( 'html' ).on( 'click.ime', function () {
 				imeselector.$menu.removeClass( 'open' );
 			} );
 
-			imeselector.$menu.on( 'click', 'li.ime-im', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
 				e.stopPropagation();
 			} );
 
-			imeselector.$menu.on( 'click', 'li.ime-lang', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function ( e ) {
 				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
 				e.stopPropagation();
 			} );
 
-			imeselector.$menu.on( 'click', 'li.ime-disable-link', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'li.ime-disable-link', function ( e ) {
 				imeselector.disableIM();
 				e.stopPropagation();
 			} );
 
-			imeselector.$element.on( 'focus', function() {
+			imeselector.$element.on( 'focus.ime', function() {
 				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
 				imeselector.focus( );
 			} );
 
 			// Possible resize of textarea
-			imeselector.$element.on( 'mouseup', $.proxy( this.position, this ) );
-			imeselector.$element.on( 'keydown', $.proxy( this.keydown, this ) );
+			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
+			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
 
-			imeselector.$imeSetting.on( 'click', $.proxy( this.toggle, this ) );
+			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.toggle, this ) );
 		},
 
 		/**
