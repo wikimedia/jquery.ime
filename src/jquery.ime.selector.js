@@ -133,10 +133,17 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
+			var language;
+
+			language = $.ime.languages[languageCode];
+
+			if ( !language ) {
+				return false;
+			}
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( 'li.ime-list-title' ).text( $.ime.languages[languageCode].autonym );
+			this.$menu.find( 'li.ime-list-title' ).text( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.$menu.removeClass( 'open' );
 			// And select the default inputmethod
