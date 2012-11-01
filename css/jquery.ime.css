@@ -12,6 +12,7 @@ div.imeselector {
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
+	z-index: 9999;
 }
 
 div.imeselector a {
