@@ -63,6 +63,9 @@
 
 			$( 'html' ).on( 'click.ime', function () {
 				imeselector.$menu.removeClass( 'open' );
+				if ( imeselector.$element.is( ':hidden' ) ) {
+					imeselector.$imeSetting.hide();
+				}
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
@@ -90,12 +93,15 @@
 				e.stopPropagation();
 			} );
 
+			imeselector.$element.on( 'blur.ime', function () {
+				if ( imeselector.$element.is( ':hidden' ) ) {
+					imeselector.$imeSetting.hide();
+				}
+			} );
 
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
-
-
 		},
 
 		/**
