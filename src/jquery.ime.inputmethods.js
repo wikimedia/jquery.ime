@@ -236,7 +236,7 @@
 		},
 		'be': {
 			autonym: 'беларуская',
-			inputmethods: [ 'be-latin', 'be-transliteration' ]
+			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
 		'ber': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
