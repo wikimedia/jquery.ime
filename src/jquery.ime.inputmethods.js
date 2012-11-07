@@ -127,9 +127,17 @@
 			name: 'Transliteration',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'kok-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/kok/kok-inscript2.js'
+		},
 		'mr-inscript': {
-			name: 'मराठी लिपी',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
+		},
+		'mr-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/mr/mr-inscript2.js'
 		},
 		'mr-transliteration': {
 			name: 'अक्षरांतरण',
@@ -138,6 +146,10 @@
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
+		},
+		'ne-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/ne/ne-inscript2.js'
 		},
 		'ne-transliteration': {
 			name: 'Transliteration',
@@ -182,6 +194,10 @@
 		'sa-inscript': {
 			name: 'Inscript',
 			source: 'rules/sa/sa-inscript.js'
+		},
+		'sa-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/sa/sa-inscript2.js'
 		},
 		'sa-transliteration': {
 			name: 'Transliteration',
@@ -235,7 +251,7 @@
 			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat' ]
 		},
 		'brx': {
-			autonym: 'बड़ो',
+			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript' ]
 		},
 		'ce': {
@@ -282,6 +298,10 @@
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript' ]
 		},
+		'kok': {
+			autonym: 'कोंकणी',
+			inputmethods: [ 'kok-inscript2' ]
+		},
 		'lbe': {
 			autonym: 'лакку',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -300,11 +320,11 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
-			inputmethods: [ 'ne-transliteration', 'ne-inscript' ]
+			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript' ]
 		},
 		'new': {
 			autonym: 'नेपाल भाषा',
@@ -332,7 +352,7 @@
 		},
 		'sa': {
 			autonym: 'संस्कृत',
-			inputmethods: [ 'sa-transliteration', 'sa-inscript' ]
+			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ]
 		},
 		'shi': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
