@@ -414,9 +414,9 @@
 			{ input: '9', output: '९' , description: '9 for ९  translitration' }
 			{ input: '0', output: '०' , description: '0 for ०  translitration ' },						
 			{ input: 'aMkita', output: 'अंकित' , description: 'aMkita for अंकित  translitration ' },
-			{ input: 'Rshi', output: 'ऋषि' , description: 'Rshi for ऋषि  translitration' },
-			{ input: 'vikipIdiya', output: 'विकिपीडिया' , description: 'vikipIdiya for विकिपीडिया  translitration' },
-			{ input: 'manaHpUrvaka', output: 'मनःपूर्वहक' , description: 'manaHpUrvaka for मनःपूर्वहक  translitration' },
+			{ input: 'RShi', output: 'ऋषि' , description: 'RShi for ऋषि  translitration' },
+			{ input: 'vikipIDrviya', output: 'विकिपीडिया' , description: 'vikipIDiya for विकिपीडिया  translitration' },
+			{ input: 'manaHpUrvahaka', output: 'मनःपूर्वहक' , description: 'manaHpUrvahaka for मनःपूर्वहक  translitration' },
 			{ input: 'dhanyavaada', output: 'धन्यवाद' , description: 'dhanyavaada for धन्यवाद  translitration' },
 			{ input: 'laThTha', output: 'लठ्ठ' , description: 'laThTha for लठ्ठ  translitration' },
 			{ input: 'iMgrajI', output: 'इंग्रजी' , description: 'iMgrajI for इंग्रजी  translitration' },
@@ -425,13 +425,13 @@
 			{ input: 'saMskRta', output: 'संस्कृत' , description: 'saMskRta for संस्कृत  translitration' },
 			{ input: 'dRShTIkona', output: 'दृष्टीकोन ' , description: 'dRShTIkona for दृष्टीकोन  translitration' },
 			{ input: 'tryaM', output: 'त्र्यं' , description: 'tryaM for त्र्यं  translitration' },
-			{ input: 'matRbhasha', output: 'मातृभाषा' , description: 'matRbhasha for मातृभाषा  translitration' },
+			{ input: 'matRbhaSha', output: 'मातृभाषा' , description: 'matRbhaSha for मातृभाषा  translitration' },
 			{ input: 'vakratuNDa', output: 'वक्रतुण्ड ' , description: 'vakratuNDa for वक्रतुण्ड  translitration' },
 			{ input: 'ariShTaneniH', output: 'अरिष्टनेमिः' , description: 'ariShTaneniH for अरिष्टनेमिः  translitration' },
 			{ input: 'shiShya', output: 'शिष्य' , description: 'shiShya for शिष्य  translitration' },
 			{ input: 'bramha', output: 'ब्रम्ह' , description: 'bramha for ब्रम्ह  translitration' },
 			{ input: 'dvitIya', output: 'द्वितीय' , description: 'dvitIya for द्वितीय  translitration' },
-			{ input: 'dnyana', output: 'ज्ञान' , description: 'dnyana for ज्ञान  translitration' } 
+			{ input: 'dnyaana', output: 'ज्ञान' , description: 'dnyaana for ज्ञान  translitration' } 
 		],
 		inputmethod: 'mr-transliteration',
 		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
