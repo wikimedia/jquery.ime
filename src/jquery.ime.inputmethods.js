@@ -22,6 +22,14 @@
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
+		'be-latin': {
+			name: 'Łacinka',
+			source: 'rules/be/be-latin.js'
+		},
+		'be-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/be/be-transliteration.js'
+		},
 		'ber-tfng': {
 			name: 'Tifinagh',
 			source: 'rules/ber/ber-tfng.js'
@@ -241,6 +249,10 @@
 		'av': {
 			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'be': {
+			autonym: 'беларуская',
+			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
 		'ber': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
