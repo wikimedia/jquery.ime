@@ -643,6 +643,28 @@
 		inputmethod: 'bn-probhat',
 		$input: $( '<input>' ).attr( { id: 'bn-probhat', type: 'text' } )
 	} );
+	
+	imeTest( {
+		description: 'Belarusian transliteration test',
+		tests: [
+			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
+			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
+		],
+		inputmethod: 'be-transliteration',
+		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
+	} );
+	
+	imeTest( {
+		description: 'Belarusian Łacinka test',
+		tests: [
+			{ input: '=c', output: 'č', description: 'Belarusian Łacinka - =c -> č' },
+			{ input: '-n', output: 'ń', description: 'Belarusian Łacinka - -n -> ń' },
+			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
+			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
+		],
+		inputmethod: 'be-latin',
+		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
+	} );
 
 	// Basic sendkey-implementation
 	// $input - the input element
