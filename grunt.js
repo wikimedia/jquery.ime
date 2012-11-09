@@ -1,5 +1,7 @@
 /* jshint node: true */
 module.exports = function ( grunt ) {
+	grunt.loadNpmTasks('grunt-css');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	// Project configuration.
 	grunt.initConfig( {
 		pkg: '<json:package.json>',
@@ -12,21 +14,33 @@ module.exports = function ( grunt ) {
 		},
 		concat: {
 			dist: {
-				src: [ 'src/**/*.js', 'rules/**/*.js' ],
-				dest: 'dist/<%= pkg.name %>.js'
+				src: [ 'src/**/*.js' ],
+				dest: 'dist/jquery.ime/<%= pkg.name %>.js'
 			}
 		},
 		min: {
 			dist: {
 				src: [ '<banner:meta.banner>', '<config:concat.dist.dest>' ],
-				dest: 'dist/<%= pkg.name %>.min.js'
+				dest: 'dist/jquery.ime/<%= pkg.name %>.min.js'
+			}
+		},
+		copy: {
+			dist: {
+				files: {
+					'dist/jquery.ime/rules/': 'rules/**',
+					'dist/jquery.ime/images/': 'images/**',
+					'dist/jquery.ime/css/': 'css/**'
+				}
 			}
 		},
 		qunit: {
-			files: [ 'test/**/*.html' ]
+			files: [ 'test/index.html' ]
 		},
 		lint: {
 			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
+		},
+		csslint : {
+			file: [ 'css/**/*.css' ]
 		},
 		watch: {
 			files: '<config:lint.files>',
@@ -51,11 +65,7 @@ module.exports = function ( grunt ) {
 			},
 			globals: {
 				jQuery: true,
-				QUnit: true,
-				pluralRuleParser: true,
-				_: true,
-				module: true,
-				test: true
+				QUnit: true
 			}
 		},
 		uglify: {
@@ -65,7 +75,7 @@ module.exports = function ( grunt ) {
 	} );
 
 	// Default task.
-	grunt.registerTask( 'default', 'lint qunit concat min' );
+	grunt.registerTask( 'default', 'lint qunit concat min copy csslint' );
 	grunt.registerTask( 'test', 'lint qunit' );
 
 };

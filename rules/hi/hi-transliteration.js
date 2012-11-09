@@ -3,7 +3,7 @@
 
 	var hiTransliteration = {
 		id: 'hi-transliteration',
-		name: 'Devanagari Transliteration',
+		name: 'लिप्यंतरण',
 		description: 'Transliteration keyboard for Devanagari script',
 		date: '2011-11-20',
 		author: 'Junaid P V',

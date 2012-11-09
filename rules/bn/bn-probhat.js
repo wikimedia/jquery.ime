@@ -3,7 +3,7 @@
 
 	var bnProbhat = {
 		id: 'bn-probhat',
-		name: 'Probhat',
+		name: 'Bengali Probhat',
 		description: 'Bengali Probhat input method for Assamese',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

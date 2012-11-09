@@ -3,15 +3,15 @@
 
 	var guTransliteration = {
 		id: 'gu-transliteration',
-		name: 'Transliteration',
+		name: 'લિપ્યાંતરણ',
 		description: 'Gujarati transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Jaldeep R Vasavada ([[User:JaldeepVasavada]]) / Amir E. Aharoni ([[User:Amire80]])',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 4,
-		maxKeyLength: 2,
+		contextLength: 2,
+		maxKeyLength: 4,
 		patterns: [
 			['ક્h', 'c', 'ચ'],
 			['\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1'],

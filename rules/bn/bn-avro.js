@@ -3,14 +3,14 @@
 
 	var bnAvro = {
 		id: 'bn-avro',
-		name: 'Bengali Avro',
+		name: 'অভ্র',
 		description: 'Bengali Avro input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLensgth: 4,
+		contextLength: 4,
 		maxKeyLength: 5,
 		patterns: [
 			['([ক-হড়ঢ়য়])্?ররi','[^o`]', '$1ৃ'],

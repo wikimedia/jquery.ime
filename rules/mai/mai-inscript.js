@@ -7,7 +7,7 @@
 
 	maithiliInScript = {
 		id: 'mai-inscript',
-		name: 'Maithili InScript',
+		name: 'इनस्क्रिप्ट',
 		description: 'InScript keyboard for Maithili',
 		date: '2011-02-26',
 		license: 'GPLv3',

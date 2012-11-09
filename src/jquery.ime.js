@@ -3,11 +3,13 @@
 
 	function IME ( element, options ) {
 		this.$element = $( element );
-		this.options = $.extend( {}, IME.defaults, options );
+		// This needs to be delayed here since extending language list happens at DOM ready
+		$.ime.defaults.languages = arrayKeys( $.ime.languages );
+		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;
 		this.context = '';
-		this.selector = this.$element.imeselector( this );
+		this.selector = this.$element.imeselector( this.options );
 		this.listen();
 	}
 
@@ -15,7 +17,7 @@
 		constructor: IME,
 
 		listen: function () {
-			this.$element.on( 'keypress', $.proxy( this.keypress, this ) );
+			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
 		},
 
 		/**
@@ -68,9 +70,8 @@
 		},
 
 		keypress: function ( e ) {
-			var startPos, c, pos, endPos, divergingPos, input, replacement, altGr;
-
-			altGr = false;
+			var altGr = false,
+				c, startPos, pos, endPos, divergingPos, input, replacement;
 
 			if ( !this.active ) {
 				return true;
@@ -87,19 +88,18 @@
 				return true;
 			}
 
+			if ( e.altKey || e.altGraphKey ) {
+				altGr = true;
+			}
+
 			// Don't process ASCII control characters (except linefeed),
 			// as well as anything involving
 			// Alt (except for extended keymaps), Ctrl and Meta
-			if ( ( e.which < 32 && e.which !== 13 ) || ( e.altKey && this.inputmethod.patterns_x )
-					|| e.ctrlKey || e.metaKey ) {
+			if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
 				// Blank the context
 				this.context = '';
 
 				return true;
-			}
-
-			if ( e.altKey || e.altGraphKey ){
-				altGr = true;
 			}
 
 			c = String.fromCharCode( e.which );
@@ -161,6 +161,10 @@
 			this.active = !this.active;
 		},
 
+		getIM: function () {
+			return this.inputmethod;
+		},
+
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
 			$.ime.preferences.setIM( inputmethodId );
@@ -171,7 +175,8 @@
 		},
 
 		load: function ( name, callback ) {
-			var ime = this, dependency;
+			var ime = this,
+				dependency;
 
 			if ( $.ime.inputmethods[name] ) {
 				if ( callback ) {
@@ -181,7 +186,7 @@
 				return true;
 			}
 
-			dependency =  $.ime.sources[name].depends;
+			dependency = $.ime.sources[name].depends;
 			if ( dependency ) {
 				this.load( dependency ) ;
 			}
@@ -208,7 +213,8 @@
 				options = typeof option === 'object' && option;
 
 			if ( !data ) {
-				$this.data( 'ime', ( data = new IME( this, options ) ) );
+				data = new IME( this, options );
+				$this.data( 'ime', data );
 			}
 
 			if ( typeof option === 'string' ) {
@@ -233,8 +239,9 @@
 	};
 
 	// default options
-	IME.defaults = {
-		imePath: '../' // Relative/Absolute path for the rules folder of jquery.ime
+	$.ime.defaults = {
+		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
+		languages: [] // Languages to be used- by default all languages
 	};
 
 	// private function for debugging
@@ -394,6 +401,14 @@
 		} else {
 			return str.substr( pos - n, n );
 		}
+	}
+
+	function arrayKeys ( obj ) {
+		var rv = [];
+		$.each( obj, function ( key ) {
+			rv.push( key );
+		} );
+		return rv;
 	}
 
 }( jQuery ) );

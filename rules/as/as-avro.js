@@ -3,7 +3,7 @@
 
 	var asAvro = {
 		id: 'as-avro',
-		name: 'Assamese Avro',
+		name: 'অভ্ৰ',
 		description: 'Assamese Avro layout based on Bengali Avro input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

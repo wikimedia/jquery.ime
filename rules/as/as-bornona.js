@@ -3,7 +3,7 @@
 
 	var asBornona = {
 		id: 'as-bornona',
-		name: 'Assamese Bornona',
+		name: 'বৰ্ণনা',
 		description: 'Bornona input method for Assamese',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',

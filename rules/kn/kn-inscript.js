@@ -3,7 +3,7 @@
 
 	var knInscript = {
 		id: 'kn-inscript',
-		name: 'Kannada Inscript',
+		name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್',
 		description: 'Inscript keyboard for Kannada script',
 		date: '2012-10-14',
 		author: 'Junaid P V',
