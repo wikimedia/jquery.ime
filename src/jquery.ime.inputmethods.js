@@ -127,6 +127,10 @@
 			name: 'Transliteration',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'kn-kgp': {
+			name: 'KGP/Nudi/KP Rao',
+			source: 'rules/kn/kn-kgp.js'
+		},
 		'kok-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
@@ -296,7 +300,7 @@
 		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
-			inputmethods: [ 'kn-transliteration', 'kn-inscript' ]
+			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp' ]
 		},
 		'kok': {
 			autonym: 'कोंकणी',
