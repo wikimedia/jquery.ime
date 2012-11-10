@@ -91,8 +91,7 @@ ul.ime-language-list {
 }
 
 div.ime-language-list {
-	overflow: hidden;
-	width: 250px;
+	overflow: auto;
 	padding: 0 0;
 }
 
