@@ -1,8 +1,6 @@
 div.imeselector {
 	position: absolute;
-	background: url('../images/ime-active.svg') no-repeat scroll left center
-		transparent;
-	background-size: 15px;
+	background: url('../images/ime-active.png') no-repeat left center;
 	cursor: pointer;
 	height: 15px;
 	margin: 1px 0 0;
@@ -78,8 +76,7 @@ div.imeselector a {
 }
 
 .imeselector-menu .checked a {
-	background: url(../images/tick.svg) 4px no-repeat;
-	background-size: 12px 12px;
+	background: url(../images/tick.png) 4px center no-repeat;
 }
 
 ul.ime-language-list {
