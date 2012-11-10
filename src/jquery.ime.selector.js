@@ -68,6 +68,10 @@
 				}
 			} );
 
+			imeselector.$menu.on( 'click.ime', 'li', function() {
+				imeselector.$element.focus();
+			});
+
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
 				e.stopPropagation();
