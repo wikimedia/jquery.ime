@@ -62,6 +62,10 @@
 			name: 'Transliteration',
 			source: 'rules/eo/eo-transliteration.js'
 		},
+		'fi-transliteration': {
+			name: 'translitterointi',
+			source: 'rules/fi/fi-transliteration.js'
+		},
 		'hi-transliteration': {
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
@@ -281,6 +285,10 @@
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration' ]
+		},
+		'fi': {
+			autonym: 'Suomi',
+			inputmethods: [ 'fi-transliteration' ]
 		},
 		'gom': {
 			autonym: 'कोंकणी',
