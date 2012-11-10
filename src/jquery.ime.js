@@ -212,6 +212,10 @@
 				data = $this.data( 'ime' ),
 				options = typeof option === 'object' && option;
 
+			if( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
+				return;
+			}
+
 			if ( !data ) {
 				data = new IME( this, options );
 				$this.data( 'ime', data );
