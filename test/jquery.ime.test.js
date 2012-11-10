@@ -458,7 +458,7 @@
 			{ input: 'kRu', output: 'ಕೃ', description: 'kRu for ಕೃ in Kannada transliteration' },
 			{ input: 'kai', output: 'ಕೈ', description: 'kai for ಕೈ in Kannada transliteration' },
 			{ input: 'nya', output: 'ನ್ಯ', description: 'nya for ಧನ್ಯವಾದ in Kannada transliteration' },
-			 { input: 'raaShtrIya', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
+			{ input: 'raaShtrIya', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
 			{ input: 'dnya', output: 'ಜ್ಞ', description: 'dnya for ಜ್ಞ in Kannada transliteration ' },
 			{ input: 'mu', output: 'ಮು', description: 'mu for ಮು in Kannada transliteration ' },
 			{ input: 'mU', output: 'ಮೂ', description: 'mU for ಮೂ in Kannada transliteration ' },
@@ -1069,7 +1069,7 @@
 			{ input: 'h', output: 'ಹ್', description: 'h for ಹ್ in Kannada transliteration' },
 			{ input: 'L', output: 'ಳ್', description: 'L for ಳ್ in Kannada transliteration' },
 			{ input: 'Q', output: 'ೞ್', description: 'Q for ೞ್ in Kannada transliteration' },
-			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' },
+			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
 		],
 		inputmethod: 'kn-transliteration',
 		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
