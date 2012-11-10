@@ -215,7 +215,7 @@
 			if( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
 				return;
 			}
-			if ($this.attr('class') == 'noime') {
+			if ( $this.hasClass( 'noime' ) ) {
 				return;
 			}
 			if ( !data ) {
