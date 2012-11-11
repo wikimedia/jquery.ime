@@ -227,11 +227,58 @@
 		$input: $( '<input>' ).attr( { id: 'sa', type: 'text' } )
 	} );
 
-	// TODO: enhance.
 	imeTest( {
 		description: 'Oriya transliteration test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' }
+			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
+                        { input: 'a', output: 'ଅ'},
+                        { input: 'aa', output: 'ଆ'},
+                        { input: 'A', output: 'ଆ'},
+                        { input: 'i', output: 'ଇ'},
+                        { input: 'I', output: 'ଈ'},
+                        { input: 'u', output: 'ଉ'},
+                        { input: 'U', output: 'ଊ'},
+                        { input: 'r', output: 'ର୍'},
+                        { input: 'R', output: 'ଋ'},
+                        { input: 'e', output: 'ଏ'},
+                        { input: 'ai', output: 'ଐ'},
+                        { input: 'o', output: 'ଓ'},
+                        { input: 'O', output: 'ଔ'},
+                        { input: 'k', output: 'କ୍'},
+                        { input: 'kh', output: 'ଖ୍'},
+                        { input: 'g', output: 'ଗ୍'},
+                        { input: 'gh', output: 'ଘ୍'},
+                        { input: 'NGa', output: 'ଙ'},
+                        { input: 'ca', output: 'ଚ'},
+                        { input: 'cha', output: 'ଛ'},
+                        { input: 'ja', output: 'ଜ'},
+                        { input: 'jha', output: 'ଝ'},
+                        { input: 'Nga', output: 'ଞ'},
+                        { input: 'Ta', output: 'ଟ'},
+                        { input: 'Tha', output: 'ଠ'},
+                        { input: 'Da', output: 'ଡ'},
+                        { input: 'Dha', output: 'ଢ'},
+                        { input: 'Na', output: 'ଣ'},
+                        { input: 'ta', output: 'ତ'},
+                        { input: 'tha', output: 'ଥ'},
+                        { input: 'da', output: 'ଦ'},
+                        { input: 'dha', output: 'ଧ'},
+                        { input: 'na', output: 'ନ'},
+                        { input: 'pa', output: 'ପ'},
+                        { input: 'pha', output: 'ଫ'},
+                        { input: 'ba', output: 'ବ'},
+                        { input: 'bha', output: 'ଭ'},
+                        { input: 'ma', output: 'ମ'},
+                        { input: 'ya', output: 'ୟ'},
+                        { input: 'ra', output: 'ର'},
+                        { input: 'la', output: 'ଲ'},
+                        { input: 'La', output: 'ଳ'},
+                        { input: 'Sa', output: 'ଶ'},
+                        { input: 'sa', output: 'ସ'},
+                        { input: 'sha', output: 'ଷ'},
+                        { input: 'ha', output: 'ହ'},
+                        { input: 'ra', output: 'ର'},
+                        
 		],
 		inputmethod: 'or-transliteration',
 		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
@@ -239,7 +286,9 @@
 
 	imeTest( {
 		description: 'Oriya InScript test',
-		tests: [{ input: 'ka', output: 'କୋ' }],
+		tests: [
+                       { input: 'ka', output: 'କୋ' , },
+                       ],
 		inputmethod: 'or-inscript',
 		$input: $( '<input>' ).attr( { id: 'or-inscript', type: 'text' } )
 	} );
