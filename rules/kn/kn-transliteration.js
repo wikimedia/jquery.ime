@@ -10,8 +10,8 @@
 		author: 'M G Harish, HP Nadig ',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 4,
-		maxKeyLength: 2,
+		contextLength: 5,
+		maxKeyLength: 3,
 		patterns: [
 			['ಕ್h','c','ಚ್'],
 			['\\\\([A-Za-z\\>_~\\.0-9])','\\\\','$1'],
