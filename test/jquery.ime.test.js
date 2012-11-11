@@ -263,21 +263,21 @@
 			{ input: 'Sri', output: 'ஸ்ரீ', description: 'Sri in Tamil transliteration for ஸ்ரீ Sri' },
 			{ input: 'Sruthi', output: 'ஸ்ருதி', description: 'Sruthi in Tamil transliteration for ஸ்ருதி' },
 			{ input: 'Sreeyaa', output: 'ஸ்ரேயா', description: 'Sreeyaa in Tamil transliteration for ஸ்ரேயா' },
-			{ input: 'shaajakaan', output: 'ஷாஜகான்', description: 'shaajakaan in Tamil transliteration for ஷாஜகான் non conjunct form' }, 
-			{ input: 'anbu', output: 'அன்பு', description: 'anbu in Tamil transliteration for அன்பு non conjunct form' }, 
-			{ input: 'aarvam', output: 'ஆர்வம்', description: 'aarvam in Tamil transliteration for ஆர்வம் non conjunct form' }, 
-			{ input: 'inRu', output: 'இன்று', description: 'inRu in Tamil transliteration for இன்று non conjunct form' }, 
+			{ input: 'shaajakaan', output: 'ஷாஜகான்', description: 'shaajakaan in Tamil transliteration for ஷாஜகான் non conjunct form' },
+			{ input: 'anbu', output: 'அன்பு', description: 'anbu in Tamil transliteration for அன்பு non conjunct form' },
+			{ input: 'aarvam', output: 'ஆர்வம்', description: 'aarvam in Tamil transliteration for ஆர்வம் non conjunct form' },
+			{ input: 'inRu', output: 'இன்று', description: 'inRu in Tamil transliteration for இன்று non conjunct form' },
 			{ input: 'iizam', output: 'ஈழம்', description: 'iizam in Tamil transliteration for ஈழம் non conjunct form' },
 			{ input: 'iilam', output: 'ஈலம்', description: 'iilam in Tamil transliteration for ஈலம் non conjunct form' },
 			{ input: 'iiLam', output: 'ஈளம்', description: 'iiLam in Tamil transliteration for ஈளம் non conjunct form' },
-			{ input: 'eNNam', output: 'எண்ணம்', description: 'eNNam in Tamil transliteration for எண்ணம் non conjunct form' }, 
-			{ input: 'eeu', output: 'ஏஉ', description: 'eeu in Tamil transliteration for ஏஉ non conjunct form' }, 
-			{ input: 'uuo', output: 'ஊஒ', description: 'uuo in Tamil transliteration for ஊஒ non conjunct form' }, 
-			{ input: 'ooNam', output: 'ஓணம்', description: 'ooNam in Tamil transliteration for ஓணம் non conjunct form' }, 
+			{ input: 'eNNam', output: 'எண்ணம்', description: 'eNNam in Tamil transliteration for எண்ணம் non conjunct form' },
+			{ input: 'eeu', output: 'ஏஉ', description: 'eeu in Tamil transliteration for ஏஉ non conjunct form' },
+			{ input: 'uuo', output: 'ஊஒ', description: 'uuo in Tamil transliteration for ஊஒ non conjunct form' },
+			{ input: 'ooNam', output: 'ஓணம்', description: 'ooNam in Tamil transliteration for ஓணம் non conjunct form' },
 			{ input: 'autatham', output: 'ஔடதம்', description: 'autatham in Tamil transliteration for ஔடதம் non conjunct form' },
-			{ input: 'kangkaa', output: 'கங்கா', description: 'kangkaa in Tamil transliteration for கங்கா non conjunct form' }, 
-			{ input: 'ngaasata', output: 'ஙாசட', description: 'ngaasata in Tamil transliteration for ஙாசட non conjunct form' }, 
-			{ input: 'naNawa', output: 'னணந', description: 'naNawa in Tamil transliteration for னணந non conjunct form' }, 
+			{ input: 'kangkaa', output: 'கங்கா', description: 'kangkaa in Tamil transliteration for கங்கா non conjunct form' },
+			{ input: 'ngaasata', output: 'ஙாசட', description: 'ngaasata in Tamil transliteration for ஙாசட non conjunct form' },
+			{ input: 'naNawa', output: 'னணந', description: 'naNawa in Tamil transliteration for னணந non conjunct form' },
 			{ input: 'njaanam', output: 'ஞானம்', description: 'shajakaan in Tamil transliteration for ஞானம் non conjunct form' },
 			{ input: 'thapamayaa', output: 'தபமயா', description: 'thapamayaa in Tamil transliteration for தபமயா non conjunct form' },
 			{ input: 'jijigjaa', output: 'ஜிஜிக்ஜா', description: 'jijigjaa in Tamil transliteration for ஜிஜிக்ஜா non conjunct form' },
@@ -515,38 +515,38 @@
 		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
 	} );
 
-	  imeTest ( {
-                    description : 'Kannada KGP test',
-                    tests: [
-                        { input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
-                        { input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
-                        { input: 'cCjJz', output: 'ಚಛಜಝಞ', description: 'Consonants ಚಛಜಝಞ' },
-                        { input: 'qQwWN', output: 'ಟಠಡಢಣ', description: 'Consonants ಟಠಡಢಣ' },
-                        { input: 'tTdDn', output: 'ತಥದಧನ', description: 'Consonants ತಥದಧನ' },
-                        { input: 'pPbBm', output: 'ಪಫಬಭಮ', description: 'Consonants ಪಫಬಭಮ' },
-                        { input: 'yrrXlvSxshLLX', output: 'ಯರಱಲವಶಷಸಹಳೞ', description: 'Consonants ಯರಲವಶಷಸಹಳ' },
-                        { input: 'kf', output: 'ಕ್', description: 'kf => ಕ್' },
-                        { input: 'kA', output: 'ಕಾ', description: 'kA => ಕಾ' },
-                        { input: 'ki', output: 'ಕಿ', description: 'ki => ಕಿ' },
-                        { input: 'kI', output: 'ಕೀ', description: 'kI => ಕೀ' },
-                        { input: 'ku', output: 'ಕು', description: 'ku => ಕು' },
-                        { input: 'kU', output: 'ಕೂ', description: 'kU => ಕೂ' },
-                        { input: 'kR', output: 'ಕೃ', description: 'kR => ಕೃ' },
-                        { input: 'kRX', output: 'ಕೄ', description: 'kRX => ಕೄ' },
-                        { input: 'ke', output: 'ಕೆ', description: 'ke => ಕೆ' },
-                        { input: 'kE', output: 'ಕೇ', description: 'kE => ಕೇ' },
-                        { input: 'kY', output: 'ಕೈ', description: 'kY => ಕೈ' },
-                        { input: 'ko', output: 'ಕೊ', description: 'ko => ಕೊ' },
-                        { input: 'kO', output: 'ಕೋ', description: 'kO => ಕೋ' },
-                        { input: 'kV', output: 'ಕೌ', description: 'kV => ಕೌ' },
-                        { input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
-                        { input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
-                        { input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
-                        { input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' }
-                    ],
-                    inputmethod: 'kn-kgp',
-                    $input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
-                } );
+	imeTest ( {
+		description : 'Kannada KGP test',
+		tests: [
+			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
+			{ input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
+			{ input: 'cCjJz', output: 'ಚಛಜಝಞ', description: 'Consonants ಚಛಜಝಞ' },
+			{ input: 'qQwWN', output: 'ಟಠಡಢಣ', description: 'Consonants ಟಠಡಢಣ' },
+			{ input: 'tTdDn', output: 'ತಥದಧನ', description: 'Consonants ತಥದಧನ' },
+			{ input: 'pPbBm', output: 'ಪಫಬಭಮ', description: 'Consonants ಪಫಬಭಮ' },
+			{ input: 'yrrXlvSxshLLX', output: 'ಯರಱಲವಶಷಸಹಳೞ', description: 'Consonants ಯರಲವಶಷಸಹಳ' },
+			{ input: 'kf', output: 'ಕ್', description: 'kf => ಕ್' },
+			{ input: 'kA', output: 'ಕಾ', description: 'kA => ಕಾ' },
+			{ input: 'ki', output: 'ಕಿ', description: 'ki => ಕಿ' },
+			{ input: 'kI', output: 'ಕೀ', description: 'kI => ಕೀ' },
+			{ input: 'ku', output: 'ಕು', description: 'ku => ಕು' },
+			{ input: 'kU', output: 'ಕೂ', description: 'kU => ಕೂ' },
+			{ input: 'kR', output: 'ಕೃ', description: 'kR => ಕೃ' },
+			{ input: 'kRX', output: 'ಕೄ', description: 'kRX => ಕೄ' },
+			{ input: 'ke', output: 'ಕೆ', description: 'ke => ಕೆ' },
+			{ input: 'kE', output: 'ಕೇ', description: 'kE => ಕೇ' },
+			{ input: 'kY', output: 'ಕೈ', description: 'kY => ಕೈ' },
+			{ input: 'ko', output: 'ಕೊ', description: 'ko => ಕೊ' },
+			{ input: 'kO', output: 'ಕೋ', description: 'kO => ಕೋ' },
+			{ input: 'kV', output: 'ಕೌ', description: 'kV => ಕೌ' },
+			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
+			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
+			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
+			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' }
+		],
+		inputmethod: 'kn-kgp',
+		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
+	} );
 
 	imeTest( {
 		description: 'German Transliteration and keybuffer test',
@@ -878,7 +878,7 @@
 		inputmethod: 'bn-probhat',
 		$input: $( '<input>' ).attr( { id: 'bn-probhat', type: 'text' } )
 	} );
-	
+
 	imeTest( {
 		description: 'Belarusian transliteration test',
 		tests: [
@@ -888,7 +888,7 @@
 		inputmethod: 'be-transliteration',
 		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
 	} );
-	
+
 	imeTest( {
 		description: 'Belarusian Łacinka test',
 		tests: [
