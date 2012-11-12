@@ -1,5 +1,6 @@
-div.imeselector {
+.imeselector {
 	position: absolute;
+	/* @embed */
 	background: url('../images/ime-active.png') no-repeat left center;
 	cursor: pointer;
 	height: 15px;
@@ -13,37 +14,13 @@ div.imeselector {
 	z-index: 9999;
 }
 
-div.imeselector a {
+.imeselector a {
 	text-decoration: none;
 	outline: none;
 	color: #222222;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
-}
-
-.ime-disable-link span {
-	text-align: right;
-	margin-left: 10px;
-	color: #888;
-	font-size: smaller;
-}
-
-.ime-disable-link:hover span {
-	color: #eee;
-}
-
-.ime-list-title,
-.ime-lang-title {
-	color: #39d;
-	border-bottom: solid 1px #39d;
-	text-align: left;
-	font-size: larger;
-	padding-bottom: 5px;
-	padding-left: 20px;
-	padding-top: 9px;
-	margin-bottom: 1px;
-	cursor: default;
 }
 
 .imeselector .caret {
@@ -62,38 +39,46 @@ div.imeselector a {
 	width: 0;
 }
 
-.imeselector-menu .sub-menu {
-	left: 100%;
-	position: absolute;
-	top: 0;
-	visibility: hidden;
-	margin-top: -1px;
+span.ime-disable-link {
+	color: #222222;
+	line-height: 1em;
+	padding-top: 4px;
+	padding-left: 20px;
+	padding-bottom: 4px;
+	white-space: nowrap;
 }
 
-.imeselector-menu li:hover .sub-menu {
-	visibility: visible;
+span.ime-disable-shortcut {
+	text-align: right;
+	margin-left: 10px;
+	color: #888;
+	font-size: smaller;
+	padding-right: 4px;
+}
+
+.ime-disable-link:hover span {
+	color: #eee;
+}
+
+.ime-list-title,
+.ime-lang-title {
+	color: #39d;
+	border-bottom: solid 1px #39d;
+	text-align: left;
+	font-size: larger;
+	font-weight: normal;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-top: 9px;
+	margin: 0 0 1px;
+}
+
+.ime-language-list-wrapper {
+	position: relative;
+	padding: 0;
 	display: block;
-}
-
-.imeselector-menu .checked a {
-	background: url(../images/tick.png) 4px center no-repeat;
-}
-
-ul.ime-language-list {
-	overflow: auto;
+	overflow-y: auto;
 	max-height: 150px;
-	width: 300px;
-	list-style: none;
-	padding: 0 0;
-}
-
-div.ime-language-list {
-	overflow: auto;
-	padding: 0 0;
-}
-
-.ime-language-list {
-	margin: 0;
 }
 
 .imeselector-menu {
@@ -103,9 +88,9 @@ div.ime-language-list {
 	z-index: 1000;
 	display: none;
 	float: left;
+	margin-top: 13px;
 	min-width: 160px;
 	padding: 0;
-	list-style: none;
 	border: 1px solid #888;
 	background-color: #FFFFFF;
 	-webkit-border-radius: 5px;
@@ -118,6 +103,13 @@ div.ime-language-list {
 	-moz-background-clip: padding;
 	background-clip: padding-box;
 	text-align: left;
+}
+
+.imeselector-menu ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 /* The triangle shaped callout */
@@ -143,23 +135,29 @@ div.ime-language-list {
 	top: -6px;
 }
 
+.imeselector-menu .checked {
+	/* @embed */
+	background: url(../images/tick.png) 4px center no-repeat;
+}
+
 .imeselector-menu .ime-help-link {
 	background-color: #f0f0f0;
 	border-radius: 0 0 5px 5px;
 	border-top: 1px solid #ddd;
 	margin-top: 6px;
-	padding: 2px 0 2px 0;
+	padding: 2px 0;
 	color: #444;
 }
 
-.imeselector-menu .ime-help-link>a:hover {
+.imeselector-menu .ime-help-link > a:hover {
 	background-color: #f0f0f0;
 	color: #000;
 }
 
 .imeselector-menu a {
 	display: block;
-	padding: 3px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 	clear: both;
 	font-weight: normal;
 	color: #333333;
@@ -167,7 +165,7 @@ div.ime-language-list {
 	white-space: nowrap;
 }
 
-.imeselector-menu li>a:hover {
+.imeselector-menu li > a:hover {
 	text-decoration: none;
 	color: #ffffff;
 	background-color: #5089e8;

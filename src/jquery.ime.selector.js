@@ -26,10 +26,10 @@
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
-			this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
-			this.$menu.append( imeList() );
-			this.$menu.append( toggleMenuItem() );
-			this.$menu.append( languageListTitle() );
+			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
+			this.$menu.append( imeList() )
+				.append( toggleMenuItem() )
+				.append( languageListTitle() );
 			this.prepareLanguageList();
 			this.$menu.append( this.helpLink() );
 			if ( $.i18n ) {
@@ -83,7 +83,7 @@
 				e.preventDefault();
 			} );
 
-			imeselector.$menu.on( 'click.ime', 'li.ime-disable-link', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'div.ime-disable', function ( e ) {
 				imeselector.disableIM();
 				e.stopPropagation();
 				e.preventDefault();
@@ -164,7 +164,7 @@
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( 'li.ime-list-title' ).text( language.autonym );
+			this.$menu.find( '.ime-list-title' ).text( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.$menu.removeClass( 'open' );
 			// And select the default inputmethod
@@ -182,8 +182,8 @@
 			var imeselector = this,
 				ime;
 
-			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
-			this.$menu.find( 'li.ime-disable-link' ).removeClass( 'checked' );
+			this.$menu.find( '.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'li.ime-disable' ).removeClass( 'checked' );
 			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
 				.addClass( 'checked' );
 			ime = this.$element.data( 'ime' );
@@ -219,12 +219,13 @@
 		 * Disable the inputmethods (Use the system input method)
 		 */
 		disableIM: function () {
-			this.$menu.find( 'li.ime-im.checked' ).removeClass( 'checked' );
-			this.$menu.find( 'li.ime-disable-link' ).addClass( 'checked' );
+			this.$menu.find( '.checked' ).removeClass( 'checked' );
+			this.$menu.find( 'div.ime-disable' ).addClass( 'checked' );
 			this.$element.data( 'ime' ).disable();
 			this.$imeSetting.find( 'a.ime-name' ).text( '' );
 			this.$menu.removeClass( 'open' );
 			this.position();
+
 			// save this preference
 			$.ime.preferences.save();
 		},
@@ -233,11 +234,18 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var languageCodeIndex = 0, $languageListDiv, $languageList, languageList;
+			var languageCodeIndex = 0,
+				$languageListWrapper,
+				$languageList,
+				languageList,
+				$languageItem,
+				$language,
+				languageCode,
+				language;
 
 			// Language list can be very long. So we use a container with
 			// overflow auto.
-			$languageListDiv = $( '<div class="ime-language-list">' );
+			$languageListWrapper = $( '<div class="ime-language-list-wrapper">' );
 			$languageList = $( '<ul class="ime-language-list">' );
 
 			if ( $.isFunction( this.options.languages ) ) {
@@ -246,9 +254,7 @@
 				languageList = this.options.languages;
 			}
 
-			for( languageCodeIndex in languageList ) {
-				var $languageItem, $language, languageCode, language;
-
+			for ( languageCodeIndex in languageList ) {
 				languageCode = languageList[languageCodeIndex];
 				language = $.ime.languages[languageCode];
 
@@ -262,8 +268,8 @@
 				$languageList.append( $language );
 			}
 
-			$languageListDiv.append( $languageList );
-			this.$menu.append( $languageListDiv );
+			$languageListWrapper.append( $languageList );
+			this.$menu.append( $languageListWrapper );
 
 			if ( this.options.languageSelector ) {
 				this.$menu.append( this.options.languageSelector() );
@@ -277,7 +283,7 @@
 		 */
 		prepareInputMethods: function ( languageCode ) {
 			var language = $.ime.languages[languageCode],
-				$imeList = this.$menu.find( 'div.ime-list' );
+				$imeList = this.$menu.find( '.ime-list' );
 
 			$imeList.empty();
 
@@ -293,7 +299,7 @@
 		},
 
 		helpLink: function () {
-			return $( '<li class="ime-help-link">' )
+			return $( '<div class="ime-help-link">' )
 				.append( $( '<a>' ).text( 'Help' )
 					.attr( {
 						'href': 'http://github.com/wikimedia/jquery.ime',
@@ -329,24 +335,26 @@
 	$.fn.imeselector.Constructor = IMESelector;
 
 	function languageListTitle () {
-		return $( '<li class="ime-lang-title">' )
+		return $( '<h3 class="ime-lang-title"/>' )
 			.attr( 'data-i18n', 'jquery-ime-other-languages' )
 			.text( 'Other languages' );
 	}
 
 	function imeList () {
-		return $( '<li class="ime-list-title"></li><li><div class="ime-list"/></li>' );
+		return $( '<h3 class="ime-list-title"></h3><ul class="ime-list"/>' );
 	}
 
 	function toggleMenuItem () {
-		return $( '<li class="ime-disable-link">' )
-			.append( $( '<a>' )
+		return $( '<div class="ime-disable">' )
+			.append( $( '<span>' )
 				.attr( {
-					'href': '#',
+					'class': 'ime-disable-link',
 					'data-i18n': 'jquery-ime-disable-text'
 				} )
 				.text( 'System input method' )
-				.append( '<span>CTRL+M</span>' )
+			).append( $( '<span>' )
+				.addClass( 'ime-disable-shortcut' )
+				.text( 'CTRL+M' )
 			);
 	}
 
@@ -370,19 +378,22 @@
 		|| window.MozMutationObserver;
 
 	function isDOMAttrModifiedSupported () {
-		var p = document.createElement( 'p' );
-		var flag = false;
+		var p = document.createElement( 'p' ),
+			flag = false;
 
-		if ( p.addEventListener )
+		if ( p.addEventListener ) {
 			p.addEventListener( 'DOMAttrModified', function () {
 				flag = true;
 			}, false );
-		else if ( p.attachEvent )
+		}
+		else if ( p.attachEvent ) {
 			p.attachEvent( 'onDOMAttrModified', function () {
 				flag = true;
 			} );
-		else
+		}
+		else {
 			return false;
+		}
 
 		p.setAttribute( 'id', 'target' );
 
@@ -391,12 +402,13 @@
 
 	$.fn.attrchange = function ( callback ) {
 		if ( MutationObserver ) {
-			var options = {
+			var observer,
+				options = {
 				subtree: false,
 				attributes: true
 			};
 
-			var observer = new MutationObserver( function ( mutations ) {
+			observer = new MutationObserver( function ( mutations ) {
 				mutations.forEach( function ( e ) {
 					callback.call( e.target, e.attributeName );
 				} );
@@ -411,7 +423,7 @@
 				callback.call( this, e.attrName );
 			} );
 		} else if ( 'onpropertychange' in document.body ) {
-			return this.on( 'propertychange', function ( e ) {
+			return this.on( 'propertychange', function () {
 				callback.call( this, window.event.propertyName );
 			} );
 		}
