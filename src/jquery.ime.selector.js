@@ -26,10 +26,10 @@
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
-			this.$menu = $( '<ul class="imeselector-menu" role="menu">' );
-			this.$menu.append( imeList() );
-			this.$menu.append( toggleMenuItem() );
-			this.$menu.append( languageListTitle() );
+			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
+			this.$menu.append( imeList() )
+				.append( toggleMenuItem() )
+				.append( languageListTitle() );
 			this.prepareLanguageList();
 			this.$menu.append( this.helpLink() );
 			if ( $.i18n ) {
@@ -164,7 +164,7 @@
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( 'li.ime-list-title' ).text( language.autonym );
+			this.$menu.find( '.ime-list-title' ).text( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.$menu.removeClass( 'open' );
 			// And select the default inputmethod
@@ -233,11 +233,11 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var languageCodeIndex = 0, $languageListDiv, $languageList, languageList;
+			var languageCodeIndex = 0, $languageListWrapper, $languageList, languageList;
 
 			// Language list can be very long. So we use a container with
 			// overflow auto.
-			$languageListDiv = $( '<div class="ime-language-list">' );
+			$languageListWrapper = $( '<div class="ime-language-list-wrapper">' );
 			$languageList = $( '<ul class="ime-language-list">' );
 
 			if ( $.isFunction( this.options.languages ) ) {
@@ -262,8 +262,8 @@
 				$languageList.append( $language );
 			}
 
-			$languageListDiv.append( $languageList );
-			this.$menu.append( $languageListDiv );
+			$languageListWrapper.append( $languageList );
+			this.$menu.append( $languageListWrapper );
 
 			if ( this.options.languageSelector ) {
 				this.$menu.append( this.options.languageSelector() );
@@ -277,7 +277,7 @@
 		 */
 		prepareInputMethods: function ( languageCode ) {
 			var language = $.ime.languages[languageCode],
-				$imeList = this.$menu.find( 'div.ime-list' );
+				$imeList = this.$menu.find( '.ime-list' );
 
 			$imeList.empty();
 
@@ -293,7 +293,7 @@
 		},
 
 		helpLink: function () {
-			return $( '<li class="ime-help-link">' )
+			return $( '<div class="ime-help-link">' )
 				.append( $( '<a>' ).text( 'Help' )
 					.attr( {
 						'href': 'http://github.com/wikimedia/jquery.ime',
@@ -329,17 +329,17 @@
 	$.fn.imeselector.Constructor = IMESelector;
 
 	function languageListTitle () {
-		return $( '<li class="ime-lang-title">' )
+		return $( '<h3 class="ime-lang-title"/>' )
 			.attr( 'data-i18n', 'jquery-ime-other-languages' )
 			.text( 'Other languages' );
 	}
 
 	function imeList () {
-		return $( '<li class="ime-list-title"></li><li><div class="ime-list"/></li>' );
+		return $( '<h3 class="ime-list-title"></h3><ul class="ime-list"/>' );
 	}
 
 	function toggleMenuItem () {
-		return $( '<li class="ime-disable-link">' )
+		return $( '<div class="ime-disable-link">' )
 			.append( $( '<a>' )
 				.attr( {
 					'href': '#',
