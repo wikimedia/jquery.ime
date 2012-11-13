@@ -95,6 +95,10 @@
 			name: 'ഇൻസ്ക്രിപ്റ്റ്',
 			source: 'rules/ml/ml-inscript.js'
 		},
+		'sv-normforms': {
+			name: 'Normal forms',
+			source: 'rules/sv/sv-normforms.js'
+		},
 		'ta-inscript': {
 			name: 'இன்ஸ்கிரிப்ட்',
 			source: 'rules/ta/ta-inscript.js'
@@ -401,6 +405,10 @@
 		'si': {
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
+		},
+		'sv': {
+			autonym: 'Svenska',
+			inputmethods: [ 'sv-normforms' ]
 		},
 		'ta': {
 			autonym: 'தமிழ்',
