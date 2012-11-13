@@ -212,7 +212,7 @@
 				data = $this.data( 'ime' ),
 				options = typeof option === 'object' && option;
 
-			if( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
+			if ( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
 				return;
 			}
 			if ( $this.hasClass( 'noime' ) ) {

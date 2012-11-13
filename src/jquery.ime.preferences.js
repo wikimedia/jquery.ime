@@ -31,15 +31,15 @@
 
 		// Set the given IM as the last used for the language
 		setIM: function ( inputMethod ) {
-			if( !this.registry.imes ){
-				this.registry.imes= {};
+			if ( !this.registry.imes ) {
+				this.registry.imes = {};
 			}
 			this.registry.imes[this.getLanguage()] = inputMethod;
 		},
 
 		// Return the last used or the default IM for language
 		getIM: function ( language ) {
-			if( !this.registry.imes ){
+			if ( !this.registry.imes ) {
 				this.registry.imes= {};
 			}
 			return this.registry.imes[language] || $.ime.languages[language].inputmethods[0];

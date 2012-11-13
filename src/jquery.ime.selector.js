@@ -21,7 +21,7 @@
 			this.$imeSetting.hide();
 		},
 
-		prepareSelectorMenu: function() {
+		prepareSelectorMenu: function () {
 
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
@@ -39,19 +39,19 @@
 			$( 'body' ).append( this.$imeSetting );
 		},
 
-		focus: function ( ) {
+		focus: function () {
 			// Hide all other IME settings
 			$( 'div.imeselector' ).hide();
 			this.$imeSetting.show();
 		},
 
-		toggle: function () {
+		show: function () {
+			this.$menu.addClass( 'open' );
+			return false;
+		},
+
+		hide: function () {
 			this.$menu.removeClass( 'open' );
-
-			if ( !this.$menu.hasClass( 'open' ) ) {
-				this.$menu.toggleClass( 'open' );
-			}
-
 			return false;
 		},
 
@@ -62,7 +62,7 @@
 			var imeselector = this;
 
 			$( 'html' ).on( 'click.ime', function () {
-				imeselector.$menu.removeClass( 'open' );
+				imeselector.hide();
 				if ( imeselector.$element.is( ':hidden' ) ) {
 					imeselector.$imeSetting.hide();
 				}
@@ -89,7 +89,7 @@
 				e.preventDefault();
 			} );
 
-			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.toggle, this ) );
+			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.show, this ) );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
 				imeselector.selectLanguage( $.ime.preferences.getLanguage() );
@@ -166,7 +166,7 @@
 
 			this.$menu.find( '.ime-list-title' ).text( language.autonym );
 			this.prepareInputMethods( languageCode );
-			this.$menu.removeClass( 'open' );
+			this.hide();
 			// And select the default inputmethod
 			this.$element.data( 'ime' ).setLanguage( languageCode );
 			this.inputmethod = null;
@@ -201,7 +201,7 @@
 				var name;
 
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
-				imeselector.$menu.removeClass( 'open' );
+				imeselector.hide();
 				ime.enable();
 				name = imeselector.inputmethod.name;
 				ime.setIM( inputmethodId );
@@ -223,7 +223,7 @@
 			this.$menu.find( 'div.ime-disable' ).addClass( 'checked' );
 			this.$element.data( 'ime' ).disable();
 			this.$imeSetting.find( 'a.ime-name' ).text( '' );
-			this.$menu.removeClass( 'open' );
+			this.hide();
 			this.position();
 
 			// save this preference
@@ -335,13 +335,15 @@
 	$.fn.imeselector.Constructor = IMESelector;
 
 	function languageListTitle () {
-		return $( '<h3 class="ime-lang-title"/>' )
+		return $( '<h3>' )
+			.addClass( 'ime-lang-title' )
 			.attr( 'data-i18n', 'jquery-ime-other-languages' )
 			.text( 'Other languages' );
 	}
 
 	function imeList () {
-		return $( '<h3 class="ime-list-title"></h3><ul class="ime-list"/>' );
+		return $( '<h3>' ).addClass( 'ime-list-title' )
+			.append( $( '<ul>').addClass( 'ime-list' ) );
 	}
 
 	function toggleMenuItem () {
@@ -360,7 +362,7 @@
 
 	var selectorTemplate = '<div class="imeselector">'
 		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="caret"></b></div>';
+		+ '<b class="ime-setting-caret"></b></div>';
 
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
@@ -385,13 +387,11 @@
 			p.addEventListener( 'DOMAttrModified', function () {
 				flag = true;
 			}, false );
-		}
-		else if ( p.attachEvent ) {
+		} else if ( p.attachEvent ) {
 			p.attachEvent( 'onDOMAttrModified', function () {
 				flag = true;
 			} );
-		}
-		else {
+		} else {
 			return false;
 		}
 
