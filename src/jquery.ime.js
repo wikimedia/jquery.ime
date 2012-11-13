@@ -1,4 +1,4 @@
-( function ( $ ) {
+	( function ( $ ) {
 	'use strict';
 
 	function IME ( element, options ) {
@@ -215,7 +215,9 @@
 			if( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
 				return;
 			}
-
+			if ( $this.hasClass( 'noime' ) ) {
+				return;
+			}
 			if ( !data ) {
 				data = new IME( this, options );
 				$this.data( 'ime', data );
