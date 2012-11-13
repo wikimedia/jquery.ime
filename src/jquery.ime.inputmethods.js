@@ -179,6 +179,14 @@
 			name: 'Transliteration',
 			source: 'rules/ne/ne-transliteration.js'
 		},
+		'no-normforms': {
+			name: 'Normal transliterasjon',
+			source: 'rules/no/no-normforms.js'
+		},
+		'no-tildeforms': {
+			name: 'Tildemerket transliterasjon',
+			source: 'rules/no/no-tildeforms.js'
+		},
 		'or-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/or/or-transliteration.js'
@@ -373,6 +381,18 @@
 		'new': {
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
+		},
+		'no': {
+			autonym: 'Norsk',
+			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
+		},
+		'nb': {
+			autonym: 'Norsk (bokmål)',
+			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
+		},
+		'nn': {
+			autonym: 'Norsk (nynorsk)',
+			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
