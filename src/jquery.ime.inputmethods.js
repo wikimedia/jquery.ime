@@ -78,6 +78,10 @@
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/hi/hi-inscript.js'
 		},
+		'is-normforms': {
+			name: 'Normal forms',
+			source: 'rules/is/is-normforms.js'
+		},
 		'mai-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mai/mai-inscript.js',
@@ -337,6 +341,10 @@
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
 			inputmethods: [ 'hi-transliteration' ]
+		},
+		'is': {
+			autonym: 'Íslenska',
+			inputmethods: [ 'is-normforms' ]
 		},
 		'ka': {
 			autonym: 'ქართული ენა',
