@@ -227,11 +227,57 @@
 		$input: $( '<input>' ).attr( { id: 'sa', type: 'text' } )
 	} );
 
-	// TODO: enhance.
 	imeTest( {
 		description: 'Oriya transliteration test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' }
+			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
+                        { input: 'a',   output: 'ଅ', description: 'Odia transliteration a -> ଅ '},
+                        { input: 'aa',  output: 'ଆ', description: 'Odia transliteration aa -> ଆ'},
+                        { input: 'A',   output: 'ଆ', description: 'Odia transliteration A -> ଆ'},
+                        { input: 'i',   output: 'ଇ', description: 'Odia transliteration i -> ଇ'},
+                        { input: 'I',   output: 'ଈ', description: 'Odia transliteration I -> ଈ'},
+                        { input: 'u',   output: 'ଉ', description: 'Odia transliteration u -> ଉ'},
+                        { input: 'U',   output: 'ଊ', description: 'Odia transliteration U -> ଊ'},
+                        { input: 'r',   output: 'ର୍', description: 'Odia transliteration r -> ର୍'},
+                        { input: 'R',   output: 'ଋ', description: 'Odia transliteration R -> ଋ'},
+                        { input: 'e',   output: 'ଏ', description: 'Odia transliteration e -> ଏ'},
+                        { input: 'ai',  output: 'ଐ', description: 'Odia transliteration ai -> ଐ'},
+                        { input: 'o',   output: 'ଓ', description: 'Odia transliteration o -> ଓ'},
+                        { input: 'O',   output: 'ଔ', description: 'Odia transliteration O -> ଔ'},
+                        { input: 'k',   output: 'କ୍', description: 'Odia transliteration k -> କ୍'},
+                        { input: 'kh',  output: 'ଖ୍', description: 'Odia transliteration kh -> ଖ୍'},
+                        { input: 'g',   output: 'ଗ୍', description: 'Odia transliteration g -> ଗ୍'},
+                        { input: 'gh',  output: 'ଘ୍', description: 'Odia transliteration gh -> ଘ୍'},
+                        { input: 'NGa', output: 'ଙ', description: 'Odia transliteration NGa -> ଙ'},
+                        { input: 'ca',  output: 'ଚ', description: 'Odia transliteration ca -> ଚ'},
+                        { input: 'cha', output: 'ଛ', description: 'Odia transliteration cha -> ଛ'},
+                        { input: 'ja',  output: 'ଜ', description: 'Odia transliteration ja -> ଜ'},
+                        { input: 'jha', output: 'ଝ', description: 'Odia transliteration jha -> ଝ'},
+                        { input: 'Nga', output: 'ଞ', description: 'Odia transliteration Nga -> ଞ'},
+                        { input: 'Ta',  output: 'ଟ', description: 'Odia transliteration Ta -> ଟ'},
+                        { input: 'Tha', output: 'ଠ', description: 'Odia transliteration Tha -> ଠ'},
+                        { input: 'Da',  output: 'ଡ', description: 'Odia transliteration Da -> ଡ'},
+                        { input: 'Dha', output: 'ଢ', description: 'Odia transliteration Dha -> ଢ'},
+                        { input: 'Na',  output: 'ଣ', description: 'Odia transliteration na -> ଣ'},
+                        { input: 'ta',  output: 'ତ', description: 'Odia transliteration ta -> ତ'},
+                        { input: 'tha', output: 'ଥ', description: 'Odia transliteration tha -> ଥ'},
+                        { input: 'da',  output: 'ଦ', description: 'Odia transliteration da -> ଦ'},
+                        { input: 'dha', output: 'ଧ', description: 'Odia transliteration dha -> ଧ'},
+                        { input: 'na',  output: 'ନ', description: 'Odia transliteration na -> ନ'},
+                        { input: 'pa',  output: 'ପ', description: 'Odia transliteration pa -> ପ'},
+                        { input: 'pha', output: 'ଫ', description: 'Odia transliteration pha -> ଫ'},
+                        { input: 'ba',  output: 'ବ', description: 'Odia transliteration ba -> ବ'},
+                        { input: 'bha', output: 'ଭ', description: 'Odia transliteration bha -> ଭ'},
+                        { input: 'ma',  output: 'ମ', description: 'Odia transliteration ma -> ମ'},
+                        { input: 'ya',  output: 'ୟ', description: 'Odia transliteration ya -> ୟ'},
+                        { input: 'ra',  output: 'ର', description: 'Odia transliteration ra -> ର'},
+                        { input: 'la',  output: 'ଲ', description: 'Odia transliteration la -> ଲ'},
+                        { input: 'La',  output: 'ଳ', description: 'Odia transliteration La -> ଳ'},
+                        { input: 'Sa',  output: 'ଶ', description: 'Odia transliteration Sa -> ଶ'},
+                        { input: 'sa',  output: 'ସ', description: 'Odia transliteration sa -> ସ'},
+                        { input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ'},
+                        { input: 'ha',  output: 'ହ', description: 'Odia transliteration ha -> ହ'},
+                                             
 		],
 		inputmethod: 'or-transliteration',
 		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
@@ -239,7 +285,9 @@
 
 	imeTest( {
 		description: 'Oriya InScript test',
-		tests: [{ input: 'ka', output: 'କୋ' }],
+		tests: [
+                       { input: 'ka', output: 'କୋ' , },
+                       ],
 		inputmethod: 'or-inscript',
 		$input: $( '<input>' ).attr( { id: 'or-inscript', type: 'text' } )
 	} );
