@@ -199,6 +199,10 @@
 			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
 		},
+		'se-normforms': {
+			name: 'Normal forms',
+			source: 'rules/se/se-normforms.js'
+		},
 		'te-inscript': {
 			name: 'ఇన్‍స్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
@@ -417,6 +421,10 @@
 		'sa': {
 			autonym: 'संस्कृत',
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ]
+		},
+		'se': {
+			autonym: 'Davvisámegiella',
+			inputmethods: [ 'se-normforms' ]
 		},
 		'shi': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
