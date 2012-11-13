@@ -58,6 +58,10 @@
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
 		},
+		'da-normforms': {
+			name: 'Normal forms',
+			source: 'rules/da/da-normforms.js'
+		},
 		'eo-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/eo/eo-transliteration.js'
@@ -305,6 +309,10 @@
 		'ce': {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'da': {
+			autonym: 'Dansk',
+			inputmethods: [ 'da-normforms' ]
 		},
 		'de': {
 			autonym: 'Deutsch',
