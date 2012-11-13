@@ -62,6 +62,10 @@
 			name: 'Transliteration',
 			source: 'rules/eo/eo-transliteration.js'
 		},
+		'fo-normforms': {
+			name: 'Føroyskt',
+			source: 'rules/fo/fo-normforms.js'
+		},
 		'fi-transliteration': {
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
@@ -289,6 +293,10 @@
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration' ]
+		},
+		'fo': {
+			autonym: 'Føroyskt',
+			inputmethods: [ 'fo-normforms' ]
 		},
 		'fi': {
 			autonym: 'Suomi',
