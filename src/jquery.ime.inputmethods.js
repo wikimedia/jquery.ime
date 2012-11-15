@@ -163,6 +163,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
 		},
+		'mn-cyrl': {
+			name: 'Кирилл',
+			source: 'rules/mn/mn-cyrl.js'
+		},
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -259,14 +263,17 @@
 			name: 'Wijesekara',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'th-kedmanee': {
+			name: 'เกษมณี',
+			source: 'rules/th/th-kedmanee.js'
+		},
+		'th-pattachote': {
+			name: 'ปัตตะโชติ',
+			source: 'rules/th/th-pattachote.js'
+		},
 		'ur-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/ur/ur-transliteration.js'
-		},
-		'mn-cyrl': {
-			name: 'Cyrillc',
-			source: 'rules/mn/mn-cyrl.js'
-		}
 	} );
 
 	$.extend( $.ime.languages, {
@@ -465,6 +472,10 @@
 		'te': {
 			autonym: 'తెలుగు',
 			inputmethods: [ 'te-transliteration', 'te-inscript' ]
+		},
+		'th': {
+			autonym: 'ไทย',
+			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
 		},
 		'tkr': {
 			autonym: 'цӀаӀхна миз',
