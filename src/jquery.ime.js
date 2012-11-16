@@ -8,6 +8,7 @@
 		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;
+		this.language = null;
 		this.context = '';
 		this.selector = this.$element.imeselector( this.options );
 		this.listen();
@@ -170,8 +171,13 @@
 			$.ime.preferences.setIM( inputmethodId );
 		},
 
-		setLanguage: function( languageCode ) {
+		setLanguage: function ( languageCode ) {
+			this.language = languageCode;
 			$.ime.preferences.setLanguage( languageCode );
+		},
+
+		getLanguage: function () {
+			return this.language;
 		},
 
 		load: function ( name, callback ) {

@@ -155,13 +155,20 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var language;
+			var language, ime;
 
+			ime = this.$element.data( 'ime' );
 			language = $.ime.languages[languageCode];
 
 			if ( !language ) {
 				return false;
 			}
+
+			if ( ime.getLanguage() === languageCode ) {
+				// nothing to do. It is same as the current language
+				return false;
+			}
+
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
@@ -169,7 +176,7 @@
 			this.prepareInputMethods( languageCode );
 			this.hide();
 			// And select the default inputmethod
-			this.$element.data( 'ime' ).setLanguage( languageCode );
+			ime.setLanguage( languageCode );
 			this.inputmethod = null;
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 		},
