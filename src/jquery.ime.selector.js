@@ -27,7 +27,8 @@
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
 			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
-			this.$menu.append( imeList() )
+			this.$menu.append( imeListTitle() )
+				.append( imeList() )
 				.append( toggleMenuItem() )
 				.append( languageListTitle() );
 			this.prepareLanguageList();
@@ -342,8 +343,11 @@
 	}
 
 	function imeList () {
-		return $( '<h3>' ).addClass( 'ime-list-title' )
-			.append( $( '<ul>').addClass( 'ime-list' ) );
+		return  $( '<ul>' ).addClass( 'ime-list' );
+	}
+
+	function imeListTitle () {
+		return  $( '<h3>' ).addClass( 'ime-list-title' );
 	}
 
 	function toggleMenuItem () {
