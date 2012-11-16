@@ -42,42 +42,42 @@
 
 		textareaIME.enable();
 		assert.strictEqual( textareaIME.isActive(), true, 'selector is active' );
-		stop();
+		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
 			// selector.selectIM( 'hi-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
 				'Hindi inputmethod is Hindi Transliteration' );
-			start();
+			QUnit.start();
 		} );
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
-		stop();
+		QUnit.stop();
 		textareaIME.load( 'ta-transliteration', function () {
 			selector.selectLanguage( 'ta' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration',
 				'Tamil inputmethod is defaulted to Tamil Transliteration' );
-			start();
+			QUnit.start();
 		} );
-		stop();
+		QUnit.stop();
 		textareaIME.load( 'ta-bamini', function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-bamini' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
 				'Tamil inputmethod is changed to Tamil Bamini' );
-			start();
+			QUnit.start();
 		} );
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'Selector is not active' );
-		stop();
+		QUnit.stop();
 		textareaIME.load( 'kn-transliteration', function () {
 			selector.selectLanguage( 'kn' );
 			// selector.selectIM( 'kn-transliteration' ); Implicit
 			assert.strictEqual( textareaIME.getIM().id, 'kn-transliteration',
 				'Default inputmethod for Kannada is Kannada Transliteration' );
-			start();
+			QUnit.start();
 		} );
-		stop();
+		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
 			textareaIME.enable();
@@ -86,7 +86,7 @@
 			selector.selectLanguage( 'ta' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
 				'inputmethod for Tamil is Tamil Bamini' );
-			start();
+			QUnit.start();
 		} );
 
 	} );
@@ -129,12 +129,12 @@
 			inputmethod: '' // The input method name.
 		}, options );
 
-		test( opt.description, function() {
+		QUnit.test( opt.description, function() {
 			var ime, $input;
 
-			expect( opt.tests.length );
+			QUnit.expect( opt.tests.length );
 			$input = opt.$input;
-			stop();
+			QUnit.stop();
 
 			$input.appendTo( '#qunit-fixture' );
 			$input.ime();
@@ -147,11 +147,11 @@
 				for ( var i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
-					equal( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
+					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
 					$input.val( '' );
 					$input.text( '' );
 				}
-				start();
+				QUnit.start();
 			} );
 		} );
 	};
