@@ -86,6 +86,10 @@
 			name: 'Normal forms',
 			source: 'rules/is/is-normforms.js'
 		},
+		'jv-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/jv/jv-transliteration.js'
+		},
 		'mai-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mai/mai-inscript.js',
@@ -353,6 +357,10 @@
 		'is': {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
+		},
+		'jv': {
+			autonym: 'ꦧꦱꦗꦮ',
+			inputmethods: [ 'jv-transliteration' ]
 		},
 		'ka': {
 			autonym: 'ქართული ენა',

@@ -1563,6 +1563,21 @@
 		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
 	} );
 
+	imeTest( {
+		description: 'Javanese transliteration test',
+		tests: [
+			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
+			{input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
+			{ input: 'A', output: 'ꦄ', description: 'Javanese transliteration - A' },
+			{ input: 'B', output: 'ꦨ', description: 'Javanese transliteration - B' },
+			{ input: 'y', output: 'ꦪ', description: 'Javanese transliteration - y' },
+			{ input: 'z', output: 'ꦗ꦳', description: 'Javanese transliteration - z' },
+			{ input: 'q`', output: '꧀', description: 'Javanese transliteration - q`' }
+		],
+		inputmethod: 'jv-transliteration',
+		$input: $( '<input>' ).attr( { id: 'jv-transliteration', type: 'text' } )
+	} );
+
 	// Basic sendkey-implementation
 	// $input - the input element
 	// characters - either
