@@ -1,14 +1,19 @@
 .imeselector {
 	position: absolute;
-	/* @embed */
-	background: url('../images/ime-active.png') no-repeat 3px center rgba(255,255,255,0.75);
+	background: url('../images/ime-active.png') no-repeat 3px center #fff;
+	background-color: rgba(255,255,255,0.75);
 	cursor: pointer;
 	height: 15px;
 	font-size: small;
 	padding: 2px 2px 1px 20px;
-	box-shadow: 0px 1px 3px 0px #777;
+	-webkit-box-shadow: 0px 1px 3px 0px #777;
+	   -moz-box-shadow: 0px 1px 3px 0px #777;
+	        box-shadow: 0px 1px 3px 0px #777;
 	margin-top: 0px;
-	-webkit-transition: opacity 0.24s ease, margin-top 0.24s ease;
+    -webkit-transition: opacity 0.24s ease, margin-top 0.24s ease;
+       -moz-transition: opacity 0.24s ease, margin-top 0.24s ease;
+         -o-transition: opacity 0.24s ease, margin-top 0.24s ease;
+            transition: opacity 0.24s ease, margin-top 0.24s ease;
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
@@ -16,11 +21,13 @@
 }
 
 div.imeselector:hover {
-	box-shadow: 0px 1px 3px 0px #565656;
+	-webkit-box-shadow: 0px 1px 3px 0px #565656;
+	   -moz-box-shadow: 0px 1px 3px 0px #565656;
+	        box-shadow: 0px 1px 3px 0px #565656;
 	border-top: none;
+	background-color: #eee;
 	background-color: rgba(255,255,255,0.85);
 }
-
 
 .imeselector a {
 	text-decoration: none;
@@ -45,7 +52,7 @@ div.imeselector:hover {
 
 }
 
-span.ime-disable-link {
+.ime-disable-link {
 	color: #222222;
 	line-height: 1em;
 	padding-top: 4px;
@@ -54,7 +61,7 @@ span.ime-disable-link {
 	white-space: nowrap;
 }
 
-span.ime-disable-shortcut {
+.ime-disable-shortcut {
 	text-align: right;
 	margin-left: 10px;
 	color: #888;
