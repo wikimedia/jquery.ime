@@ -99,19 +99,13 @@
 		// set it again
 		$.ime.preferences.setLanguage( 'hi' );
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 1, 'Hindi not duplicated in previous languages' );
-		stop();
-		start();
 		$.ime.preferences.setLanguage( 'kn' );
 		$.ime.preferences.setIM( 'kn-inscript' );
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 2, 'Kannada added to previous languages' );
-		stop();
-		start();
 		$.ime.preferences.setLanguage( 'hi' );
 		$.ime.preferences.setIM( 'hi-inscript' );
 		assert.strictEqual( $.ime.preferences.getIM('hi'), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
 		assert.strictEqual( $.ime.preferences.getIM('kn'), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
-		stop();
-		start();
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
