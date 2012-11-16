@@ -91,13 +91,21 @@
 
 	} );
 
-	QUnit.test( 'Preferences tests', 2, function ( assert ) {
+	QUnit.test( 'Preferences tests', 5, function ( assert ) {
 		$.ime.preferences.registry.previousLanguages = [];
 		$.ime.preferences.setLanguage( 'hi' );
+
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 1, 'Hindi added to previous languages' );
 		// set it again
 		$.ime.preferences.setLanguage( 'hi' );
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 1, 'Hindi not duplicated in previous languages' );
+		$.ime.preferences.setLanguage( 'kn' );
+		$.ime.preferences.setIM( 'kn-inscript' );
+		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 2, 'Kannada added to previous languages' );
+		$.ime.preferences.setLanguage( 'hi' );
+		$.ime.preferences.setIM( 'hi-inscript' );
+		assert.strictEqual( $.ime.preferences.getIM('hi'), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
+		assert.strictEqual( $.ime.preferences.getIM('kn'), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
