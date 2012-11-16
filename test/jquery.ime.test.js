@@ -550,6 +550,18 @@
 	} );
 
 	imeTest ( {
+		description: 'Marathi InScript 2 test',
+		tests: [
+			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
+			{ input: [ [ '1', true ] ], output: '\u200d', description: 'Marathi InScript regular 1 - ZWJ' },
+			{ input: [ [ '2', false ] ], output: '२', description: 'Marathi InScript regular 2 - २' },
+			{ input: [ [ '2', true ] ], output: '\u200c', description: 'Marathi InScript regular 2 - ZWNJ' }
+		],
+		inputmethod: 'mr-inscript2',
+		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+	} );
+
+	imeTest ( {
 		description : 'Kannada Transliteration test',
 		tests: [
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' },
