@@ -237,7 +237,7 @@
 		},
 		'ru-jcuken': {
 			name: 'JCUKEN',
-			source: 'rules/ru/ru-transliteration.js'
+			source: 'rules/ru/ru-jcuken.js'
 		},
 		'sa-inscript': {
 			name: 'Inscript',
