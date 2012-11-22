@@ -3,7 +3,7 @@
 
 	var ruJcuken = {
 		id: 'ru-jcuken',
-		name: 'Russian JCUKEN',
+		name: 'Русский - ЙЦУКЕН',
 		description: 'Russian jcuken',
 		date: '2012-10-16',
 		URL: 'http://github.com/wikimedia/jquery.ime',
