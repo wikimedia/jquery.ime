@@ -69,6 +69,19 @@
 				}
 			} );
 
+			imeselector.$element.on( 'blur.ime', function () {
+				if ( !imeselector.$imeSetting.hasClass( 'onfocus' ) ) {
+					imeselector.$imeSetting.hide();
+					imeselector.hide();
+				}
+			} );
+
+			imeselector.$imeSetting.mouseenter( function () {
+				imeselector.$imeSetting.addClass( 'onfocus' );
+			} ).mouseleave( function () {
+				imeselector.$imeSetting.removeClass( 'onfocus' );
+			} );
+
 			imeselector.$menu.on( 'click.ime', 'li', function() {
 				imeselector.$element.focus();
 			});
