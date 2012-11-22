@@ -236,7 +236,7 @@
 			source: 'rules/pa/pa-phonetic.js'
 		},
 		'ru-jcuken': {
-			name: 'JCUKEN',
+			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
 		},
 		'sa-inscript': {
