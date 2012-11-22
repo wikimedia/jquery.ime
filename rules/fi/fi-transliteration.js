@@ -29,4 +29,4 @@
 	};
 	$.ime.register( fiTransliteration );
 
-}( jQuery ) ); 
+}( jQuery ) );

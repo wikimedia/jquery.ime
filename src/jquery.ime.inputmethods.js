@@ -235,9 +235,9 @@
 			name: 'Phonetic',
 			source: 'rules/pa/pa-phonetic.js'
 		},
-		'ru-transliteration': {
-			name: 'Transliteration',
-			source: 'rules/ru/ru-transliteration.js'
+		'ru-jcuken': {
+			name: 'ЙЦУКЕН',
+			source: 'rules/ru/ru-jcuken.js'
 		},
 		'sa-inscript': {
 			name: 'Inscript',
@@ -436,7 +436,7 @@
 		},
 		'ru': {
 			autonym: 'русский',
-			inputmethods: [ 'ru-transliteration' ]
+			inputmethods: [ 'ru-jcuken' ]
 		},
 		'sah': {
 			autonym: 'саха тыла',

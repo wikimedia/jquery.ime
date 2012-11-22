@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var ruTransliteration = {
-		id: 'ru-transliteration',
-		name: 'Russian Transliteration',
-		description: 'Russian transliteration',
+	var ruJcuken = {
+		id: 'ru-jcuken',
+		name: 'Русский - ЙЦУКЕН',
+		description: 'Стандартная русская раскладка',
 		date: '2012-10-16',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Amir (Алексей) Aharoni',
@@ -91,6 +91,6 @@
 			['&', '?']] // 7
 			// '*', '(' and ')' are the same    // 8, 9, 0
 	};
-	$.ime.register( ruTransliteration );
+	$.ime.register( ruJcuken );
 
 }( jQuery ) );
