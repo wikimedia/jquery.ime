@@ -1649,6 +1649,14 @@
 			{ input: 'j',  output: 'j', description: 'Palatal approximant' },
 			{ input: 'L<', output: 'ʎ', description: 'Palatal lateral approximant' },
 
+			{ input: 'k',  output: 'k', description: 'Voiceless velar stop' },
+			{ input: 'g<', output: 'ɡ', description: 'Voiced velar stop' },
+			{ input: 'n>', output: 'ŋ', description: 'Velar nasal' },
+			{ input: 'x',  output: 'x', description: 'Voiceless velar fricative' },
+			{ input: 'g=', output: 'ɣ', description: 'Voiced velar fricative' },
+			{ input: 'w>', output: 'ɰ', description: 'Velar approximant' },
+			{ input: 'L=', output: 'ʟ', description: 'Velar lateral approximant' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
