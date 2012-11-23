@@ -8,9 +8,6 @@
 	padding: 2px 2px 1px 20px;
 	box-shadow: 0 1px 3px 0 #777;
 	margin-top: 0;
-	-webkit-transition: opacity 0.24s ease, margin-top 0.24s ease;
-	-moz-transition: opacity 0.24s ease, margin-top 0.24s ease;
-	-o-transition: opacity 0.24s ease, margin-top 0.24s ease;
 	text-align: left;
 	font-family: 'sans';
 	white-space: nowrap;
