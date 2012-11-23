@@ -1606,7 +1606,13 @@
 			{ input: 'm',  output: 'm', description: 'Bilabial nasal' },
 			{ input: 'B=', output: 'ʙ', description: 'Voiced bilabial trill' },
 			{ input: 'f=', output: 'ɸ', description: 'Voiceless bilabial fricative' },
-			{ input: 'b=', output: 'β', description: 'Voiced bilabial fricative' }
+			{ input: 'b=', output: 'β', description: 'Voiced bilabial fricative' },
+
+			{ input: 'm>', output: 'ɱ', description: 'Labiodental nasal' },
+			{ input: 'v<', output: 'ⱱ', description: 'Labiodental flap' },
+			{ input: 'f',  output: 'f', description: 'Voiceless abiodental fricative' },
+			{ input: 'v',  output: 'v', description: 'Voiced labiodental fricative' },
+			{ input: 'v=', output: 'ʋ', description: 'Labiodental approximant' }
 		],
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
