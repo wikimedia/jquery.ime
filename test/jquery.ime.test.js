@@ -1664,7 +1664,14 @@
 			{ input: 'x=', output: 'χ', description: 'Voiceless uvular fricative' },
 			{ input: 'R>', output: 'ʁ', description: 'Voiced uvular fricative' },
 
-			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
+			{ input: 'h>', output: 'ħ', description: 'Voiceless pharyngeal fricative' },
+			{ input: '?<', output: 'ʕ', description: 'Voiced pharyngeal fricative' },
+
+			{ input: '?=', output: 'ʔ', description: 'Glottal stop' },
+			{ input: 'h',  output: 'h', description: 'Voiceless glottal fricative' },
+			{ input: 'h<', output: 'ɦ', description: 'Voiced glottal fricative' },
+
+		  { input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )

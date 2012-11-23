@@ -6,7 +6,7 @@
 		name: 'Internation Phonetic Alphabet - SIL',
 		description: 'Internation Phonetic Alphabet - SIL',
 		date: '2012-11-23',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=UniIPAKeyboard',
 		author: 'mapping by Martin Hosken and Lorna A. Priest; implementation by Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',
@@ -58,6 +58,12 @@
 			['R=', 'ʀ'],
 			['x=', 'χ'],
 			['R>', 'ʁ'],
+
+			['h>', 'ħ'],
+			['\\?<', 'ʕ'],
+
+			['\\?=', 'ʔ'],
+			['h<', 'ɦ'],
 
 			['=<', '\u200d'] // Combining Grapheme Joiner
 		]
