@@ -1617,6 +1617,21 @@
 			{ input: 't=', output: 'θ', description: 'Voiceless dental fricative' },
 			{ input: 'd=', output: 'ð', description: 'Voiced dental fricative' },
 
+			{ input: 't',  output: 't', description: 'Voiceless alveolar stop' },
+			{ input: 'd',  output: 'd', description: 'Voiced alveolar stop' },
+			{ input: 'n',  output: 'n', description: 'Alveolar nasal' },
+			{ input: 'r',  output: 'r', description: 'Alveolar trill' },
+			{ input: 'r>', output: 'ɾ', description: 'Alveolar flap' },
+			{ input: 's',  output: 's', description: 'Voiceless alveolar fricative' },
+			{ input: 'z',  output: 'z', description: 'Voiced alveolar fricative' },
+			{ input: 'l=', output: 'ɬ', description: 'Voiceless alveolar lateral fricative' },
+			{ input: 'l>', output: 'ɮ', description: 'Voiced alveolar lateral fricative' },
+			{ input: 'r=', output: 'ɹ', description: 'Alveolar approximant' },
+			{ input: 'l',  output: 'l', description: 'Alveolar lateral approximant' },
+
+			{ input: 's=', output: 'ʃ', description: 'Voiceless postalveolar fricative' },
+			{ input: 'z=', output: 'ʒ', description: 'Voiced postalveolar fricative' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
