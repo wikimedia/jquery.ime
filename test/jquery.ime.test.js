@@ -1612,7 +1612,12 @@
 			{ input: 'v<', output: 'ⱱ', description: 'Labiodental flap' },
 			{ input: 'f',  output: 'f', description: 'Voiceless abiodental fricative' },
 			{ input: 'v',  output: 'v', description: 'Voiced labiodental fricative' },
-			{ input: 'v=', output: 'ʋ', description: 'Labiodental approximant' }
+			{ input: 'v=', output: 'ʋ', description: 'Labiodental approximant' },
+
+			{ input: 't=', output: 'θ', description: 'Voiceless dental fricative' },
+			{ input: 'd=', output: 'ð', description: 'Voiced dental fricative' },
+
+			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
