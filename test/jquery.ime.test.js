@@ -1641,6 +1641,14 @@
 			{ input: 'R<', output: 'ɻ', description: 'Retroflex approximant' },
 			{ input: 'l<', output: 'ɭ', description: 'Retroflex lateral approximant' },
 
+			{ input: 'c',  output: 'c', description: 'Voiceless palatal stop' },
+			{ input: 'j=', output: 'ɟ', description: 'Voiced palatal stop' },
+			{ input: 'n=', output: 'ɲ', description: 'Palatal nasal' },
+			{ input: 'c=', output: 'ç', description: 'Voiceless palatal fricative' },
+			{ input: 'j<', output: 'ʝ', description: 'Voiced palatal fricative' },
+			{ input: 'j',  output: 'j', description: 'Palatal approximant' },
+			{ input: 'L<', output: 'ʎ', description: 'Palatal lateral approximant' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
