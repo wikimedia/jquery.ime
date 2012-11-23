@@ -1587,7 +1587,7 @@
 		description: 'Javanese transliteration test',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
-			{input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
+			{ input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
 			{ input: 'A', output: 'ꦄ', description: 'Javanese transliteration - A' },
 			{ input: 'B', output: 'ꦨ', description: 'Javanese transliteration - B' },
 			{ input: 'y', output: 'ꦪ', description: 'Javanese transliteration - y' },
@@ -1598,11 +1598,25 @@
 		$input: $( '<input>' ).attr( { id: 'jv-transliteration', type: 'text' } )
 	} );
 
+	imeTest( {
+		description: 'IPA keyboard test',
+		tests: [
+			{ input: 'p',  output: 'p', description: 'Voiceless bilabial stop' },
+			{ input: 'b',  output: 'b', description: 'Voiced bilabial stop' },
+			{ input: 'm',  output: 'm', description: 'Bilabial nasal' },
+			{ input: 'B=', output: 'ʙ', description: 'Voiced bilabial trill' },
+			{ input: 'f=', output: 'ɸ', description: 'Voiceless bilabial fricative' },
+			{ input: 'b=', output: 'β', description: 'Voiced bilabial fricative' }
+		],
+		inputmethod: 'ipa-sil',
+		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
+	} );
+
 	// Basic sendkey-implementation
 	// $input - the input element
 	// characters - either
-//			- a string
-//			- an array of pairs of character and altKey value
+	//			- a string
+	//			- an array of pairs of character and altKey value
 	var typeChars = function( $input, characters ) {
 		var len = characters.length;
 		for ( var i = 0; i < len; i++ ) {
