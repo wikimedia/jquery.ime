@@ -1657,6 +1657,13 @@
 			{ input: 'w>', output: 'ɰ', description: 'Velar approximant' },
 			{ input: 'L=', output: 'ʟ', description: 'Velar lateral approximant' },
 
+			{ input: 'q',  output: 'q', description: 'Voiceless uvular stop' },
+			{ input: 'G=', output: 'ɢ', description: 'Voiced uvular stop' },
+			{ input: 'N=', output: 'ɴ', description: 'Uvular nasal' },
+			{ input: 'R=', output: 'ʀ', description: 'Uvular trill' },
+			{ input: 'x=', output: 'χ', description: 'Voiceless uvular fricative' },
+			{ input: 'R>', output: 'ʁ', description: 'Voiced uvular fricative' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
