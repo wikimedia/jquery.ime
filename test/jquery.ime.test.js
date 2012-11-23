@@ -1632,6 +1632,15 @@
 			{ input: 's=', output: 'ʃ', description: 'Voiceless postalveolar fricative' },
 			{ input: 'z=', output: 'ʒ', description: 'Voiced postalveolar fricative' },
 
+			{ input: 't<', output: 'ʈ', description: 'Voiceless retroflex stop' },
+			{ input: 'd<', output: 'ɖ', description: 'Voiced retroflex stop' },
+			{ input: 'n<', output: 'ɳ', description: 'Retroflex nasal' },
+			{ input: 'r<', output: 'ɽ', description: 'Retroflex flap' },
+			{ input: 's<', output: 'ʂ', description: 'Voiceless retroflex fricative' },
+			{ input: 'z<', output: 'ʐ', description: 'Voiced retroflex fricative' },
+			{ input: 'R<', output: 'ɻ', description: 'Retroflex approximant' },
+			{ input: 'l<', output: 'ɭ', description: 'Retroflex lateral approximant' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
