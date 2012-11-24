@@ -1601,6 +1601,7 @@
 	imeTest( {
 		description: 'IPA keyboard test',
 		tests: [
+			// Bilabial consonants
 			{ input: 'p',  output: 'p', description: 'Voiceless bilabial stop' },
 			{ input: 'b',  output: 'b', description: 'Voiced bilabial stop' },
 			{ input: 'm',  output: 'm', description: 'Bilabial nasal' },
@@ -1608,15 +1609,18 @@
 			{ input: 'f=', output: 'ɸ', description: 'Voiceless bilabial fricative' },
 			{ input: 'b=', output: 'β', description: 'Voiced bilabial fricative' },
 
+			// Labiodental consonants
 			{ input: 'm>', output: 'ɱ', description: 'Labiodental nasal' },
 			{ input: 'v<', output: 'ⱱ', description: 'Labiodental flap' },
 			{ input: 'f',  output: 'f', description: 'Voiceless abiodental fricative' },
 			{ input: 'v',  output: 'v', description: 'Voiced labiodental fricative' },
 			{ input: 'v=', output: 'ʋ', description: 'Labiodental approximant' },
 
+			// Dental consonants
 			{ input: 't=', output: 'θ', description: 'Voiceless dental fricative' },
 			{ input: 'd=', output: 'ð', description: 'Voiced dental fricative' },
 
+			// Alveolar consonants
 			{ input: 't',  output: 't', description: 'Voiceless alveolar stop' },
 			{ input: 'd',  output: 'd', description: 'Voiced alveolar stop' },
 			{ input: 'n',  output: 'n', description: 'Alveolar nasal' },
@@ -1629,9 +1633,11 @@
 			{ input: 'r=', output: 'ɹ', description: 'Alveolar approximant' },
 			{ input: 'l',  output: 'l', description: 'Alveolar lateral approximant' },
 
+			// Postalveolar consonants
 			{ input: 's=', output: 'ʃ', description: 'Voiceless postalveolar fricative' },
 			{ input: 'z=', output: 'ʒ', description: 'Voiced postalveolar fricative' },
 
+			// Retroflex consonants
 			{ input: 't<', output: 'ʈ', description: 'Voiceless retroflex stop' },
 			{ input: 'd<', output: 'ɖ', description: 'Voiced retroflex stop' },
 			{ input: 'n<', output: 'ɳ', description: 'Retroflex nasal' },
@@ -1641,6 +1647,7 @@
 			{ input: 'R<', output: 'ɻ', description: 'Retroflex approximant' },
 			{ input: 'l<', output: 'ɭ', description: 'Retroflex lateral approximant' },
 
+			// Palatal consonants
 			{ input: 'c',  output: 'c', description: 'Voiceless palatal stop' },
 			{ input: 'j=', output: 'ɟ', description: 'Voiced palatal stop' },
 			{ input: 'n=', output: 'ɲ', description: 'Palatal nasal' },
@@ -1649,6 +1656,7 @@
 			{ input: 'j',  output: 'j', description: 'Palatal approximant' },
 			{ input: 'L<', output: 'ʎ', description: 'Palatal lateral approximant' },
 
+			// Velar consonants
 			{ input: 'k',  output: 'k', description: 'Voiceless velar stop' },
 			{ input: 'g<', output: 'ɡ', description: 'Voiced velar stop' },
 			{ input: 'n>', output: 'ŋ', description: 'Velar nasal' },
@@ -1657,6 +1665,7 @@
 			{ input: 'w>', output: 'ɰ', description: 'Velar approximant' },
 			{ input: 'L=', output: 'ʟ', description: 'Velar lateral approximant' },
 
+			// Uvular consonants
 			{ input: 'q',  output: 'q', description: 'Voiceless uvular stop' },
 			{ input: 'G=', output: 'ɢ', description: 'Voiced uvular stop' },
 			{ input: 'N=', output: 'ɴ', description: 'Uvular nasal' },
@@ -1664,25 +1673,30 @@
 			{ input: 'x=', output: 'χ', description: 'Voiceless uvular fricative' },
 			{ input: 'R>', output: 'ʁ', description: 'Voiced uvular fricative' },
 
+			// Pharyngeal consonants
 			{ input: 'h>', output: 'ħ', description: 'Voiceless pharyngeal fricative' },
 			{ input: '?<', output: 'ʕ', description: 'Voiced pharyngeal fricative' },
 
+			// Glottal consonants
 			{ input: '?=', output: 'ʔ', description: 'Glottal stop' },
 			{ input: 'h',  output: 'h', description: 'Voiceless glottal fricative' },
 			{ input: 'h<', output: 'ɦ', description: 'Voiced glottal fricative' },
 
+			// Clicks
 			{ input: 'p=', output: 'ʘ', description: 'Bilabial click' },
 			{ input: '!<', output: 'ǀ', description: 'Dental click' },
 			{ input: '!',  output: 'ǃ', description: 'Postalveolar click' },
 			{ input: '!=', output: 'ǂ', description: 'Palatoalveolar click' },
 			{ input: '!>', output: 'ǁ', description: 'Alveolar lateral click' },
 
+			// Implosive
 			{ input: 'b>', output: 'ɓ', description: 'Bilabial voiced implosive' },
 			{ input: 'd>', output: 'ɗ', description: 'Dental/alveolar voiced implosive' },
 			{ input: 'j>', output: 'ʄ', description: 'Palatal voiced implosive' },
 			{ input: 'g>', output: 'ɠ', description: 'Velar voiced implosive' },
 			{ input: 'G>', output: 'ʛ', description: 'Uvular voiced implosive' },
 
+			// Other symbols
 			{ input: 'w=', output: 'ʍ', description: 'Voiceless labial-velar fricative' },
 			{ input: 'w',  output: 'w', description: 'Voiced labial-velar approximant' },
 			{ input: 'y<', output: 'ɥ', description: 'Voiced labial-palatal approximant (y<)' },
@@ -1695,6 +1709,42 @@
 			{ input: 'z>', output: 'ʑ', description: 'Voiced alveolo-palatal fricative' },
 			{ input: 'L>', output: 'ɺ', description: 'Voiced alveolar lateral flap' },
 			{ input: 'H<', output: 'ɧ', description: 'Simultaneous ʃ and x' },
+
+			// Front unrounded vowels
+			{ input: 'i',  output: 'i', description: 'Close front unrounded vowel' },
+			{ input: 'i=', output: 'ɪ', description: 'Near-close near-front unrounded vowel' },
+			{ input: 'e',  output: 'e', description: 'Close-mid front unrounded vowel' },
+			{ input: 'e<', output: 'ɛ', description: 'Open-mid front unrounded vowel' },
+			{ input: 'a<', output: 'æ', description: 'Near-open front unrounded vowel' },
+			{ input: 'a',  output: 'a', description: 'Open front unrounded vowel' },
+
+			// Front rounded vowels
+			{ input: 'y',  output: 'y', description: 'Close front rounded vowel' },
+			{ input: 'y=', output: 'ʏ', description: 'Near-close near-front rounded vowel' },
+			{ input: 'o>', output: 'ø', description: 'Close-mid front rounded vowel' },
+			{ input: 'E<', output: 'œ', description: 'Open-mid front rounded vowel' },
+			{ input: 'E>', output: 'ɶ', description: 'Open front rounded vowel' },
+
+			// Central vowels
+			{ input: 'I=', output: 'ɨ', description: 'Close central unrounded vowel' },
+			{ input: 'E=', output: 'ɘ', description: 'Close-mid central unrounded vowel' },
+			{ input: 'e=', output: 'ə', description: 'Mid-central vowel' },
+			{ input: 'e>', output: 'ɜ', description: 'Open-mid central unrounded vowel' },
+			{ input: 'a>', output: 'ɐ', description: 'Near-open central vowel' },
+			{ input: 'U=', output: 'ʉ', description: 'Close central rounded vowel' },
+			{ input: 'O=', output: 'ɵ', description: 'Close-mid central rounded vowel' },
+			{ input: 'O<', output: 'ɞ', description: 'Open-mid central rounded vowel' },
+
+			// Back vowels
+			{ input: 'u=', output: 'ɯ', description: 'Close back unrounded vowel' },
+			{ input: 'O>', output: 'ɤ', description: 'Close-mid back unrounded vowel' },
+			{ input: 'u>', output: 'ʌ', description: 'Open-mid back unrounded vowel' },
+			{ input: 'a=', output: 'ɑ', description: 'Open back unrounded vowel' },
+			{ input: 'u',  output: 'u', description: 'Close back rounded vowel' },
+			{ input: 'u<', output: 'ʊ', description: 'Near-close near-back vowel' },
+			{ input: 'o',  output: 'o', description: 'Close-mid back rounded vowel' },
+			{ input: 'o<', output: 'ɔ', description: 'Open-mid back rounded vowel' },
+			{ input: 'o=', output: 'ɒ', description: 'Open back rounded vowel' },
 
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
