@@ -141,6 +141,20 @@ span.ime-disable-shortcut {
 	top: -6px;
 }
 
+.imeselector-menu.position-top:before {
+	border-bottom: 0 none;
+	border-top: 7px solid #888;
+	top: auto;
+	bottom: -7px;
+}
+
+.imeselector-menu.position-top:after {
+	border-bottom: 0 none;
+	border-top: 6px solid #FFFFFF;
+	top: auto;
+	bottom: -6px;
+}
+
 .imeselector-menu .checked {
 	/* @embed */
 	background: url(../images/tick.png) 4px center no-repeat;

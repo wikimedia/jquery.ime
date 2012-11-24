@@ -142,11 +142,33 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			var position = this.$element.offset();
+			var that, position, top, left;
+			that = this;
+			position = this.$element.offset();
+			top = position.top + this.$element.outerHeight();
+			left = position.left + this.$element.outerWidth()
+				- this.$imeSetting.outerWidth();
 
-			this.$imeSetting.css( 'top', position.top + this.$element.outerHeight() );
-			this.$imeSetting.css( 'left', position.left + this.$element.outerWidth()
-				- this.$imeSetting.outerWidth() );
+			if ( $( window ).height() - top < this.$imeSetting.outerHeight() ) {
+				top = position.top - this.$imeSetting.outerHeight();
+				this.$menu.css( 'top',
+								- ( this.$menu.outerHeight() +
+									this.$imeSetting.outerHeight()
+								  ) )
+					.addClass( 'position-top' );
+			}
+
+			this.$element.parents().each( function() {
+				if ( $( this ).css( 'position' ) == 'fixed' ) {
+					that.$imeSetting.css( 'position', 'fixed' );
+					return false;
+				}
+			} );
+
+			this.$imeSetting.css({
+				top: top,
+				left: left
+			});
 		},
 
 		/**
