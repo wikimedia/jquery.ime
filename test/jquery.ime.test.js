@@ -1771,13 +1771,14 @@
 			{ input: 'e@0',   output: 'ȅ',   description: 'Extra-low tone diacritic' },
 
 			// Tone combinations
-			// The following tests are taken from the layout description.
+			// The following tone bar tests are taken from the layout description.
 			// Any combination of three tones is possible.
 			{ input: '#04',   output: '˩˥',  description: 'Rising tone bar (04)' },
 			{ input: '#40',   output: '˥˩',  description: 'Falling tone bar (40)' },
 			{ input: '#24',   output: '˧˥',  description: 'High rising tone bar (24)' },
 			{ input: '#12',   output: '˨˧',  description: 'Low rising tone bar (12)' },
 			{ input: '#141',  output: '˨˥˨', description: 'Rising-falling tone bar (141)' },
+
 			{ input: 'e@13',  output: 'ě',   description: 'Rising tone diacritic' },
 			{ input: 'e@31',  output: 'ê',   description: 'Falling tone diacritic' },
 			{ input: 'e@23',  output: 'e᷄',   description: 'High rising tone diacritic' },
@@ -1791,6 +1792,19 @@
 			{ input: '#>',    output: 'ꜛ',   description: 'Upstep' },
 			{ input: '#>>',   output: '↗',   description: 'Global rise' },
 			{ input: '#<<',   output: '↘',   description: 'Global fall' },
+
+			// Tone numbers (non-IPA)
+			{ input: '^0',    output: '⁰',   description: 'Tone number 0' }, // Not IPA sanctioned
+			{ input: '^1',    output: '¹',   description: 'Tone number 1' }, // Not IPA sanctioned
+			{ input: '^2',    output: '²',   description: 'Tone number 2' }, // Not IPA sanctioned
+			{ input: '^3',    output: '³',   description: 'Tone number 3' }, // Not IPA sanctioned
+			{ input: '^4',    output: '⁴',   description: 'Tone number 4' }, // Not IPA sanctioned
+			{ input: '^5',    output: '⁵',   description: 'Tone number 5' }, // Not IPA sanctioned
+			{ input: '^6',    output: '⁶',   description: 'Tone number 6' }, // Not IPA sanctioned
+			{ input: '^7',    output: '⁷',   description: 'Tone number 7' }, // Not IPA sanctioned
+			{ input: '^8',    output: '⁸',   description: 'Tone number 8' }, // Not IPA sanctioned
+			{ input: '^9',    output: '⁹',   description: 'Tone number 9' }, // Not IPA sanctioned
+			{ input: '^-',    output: '⁻',   description: 'Superscript hyphen' }, // Not IPA sanctioned
 
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],

@@ -137,19 +137,34 @@
 			['#2', '˧'],
 			['#1', '˨'],
 			['#0', '˩'],
-			['(?:\u0300)3', '\u030C'], // Combining caron
-			['(?:\u0301)1', '\u0302'], // Combining circumflex accent
-			['(?:\u0304)3', '\u1dc4'], // Combining macron-acute
-			['(?:\u0300)2', '\u1dc5'], // Combining grave-macron
-			['(?:\u030C)1', '\u1dc8'], // Combining grave-acute-grave
-			['(?:\u0304)1', '\u1dc6'], // Combining macron-grave // Not IPA sanctioned
-			['(?:\u0301)2', '\u1dc7'], // Combining acute-macron // Not IPA sanctioned
-			['(?:\u0302)3', '\u1dc9'], // Combining acute-grave-acute // Not IPA sanctioned
+			['(?:\u0300)3', '\u030C'], // @13  - Combining caron
+			['(?:\u0301)1', '\u0302'], // @31  - Combining circumflex accent
+			['(?:\u0304)3', '\u1dc4'], // @23  - Combining macron-acute
+			['(?:\u0300)2', '\u1dc5'], // @12  - Combining grave-macron
+			['(?:\u030C)1', '\u1dc8'], // @131 - Combining grave-acute-grave
+			['(?:\u0304)1', '\u1dc6'], // @21  - Combining macron-grave // Not IPA sanctioned
+			['(?:\u0301)2', '\u1dc7'], // @32  - Combining acute-macron // Not IPA sanctioned
+			['(?:\u0302)3', '\u1dc9'], // @313 - Combining acute-grave-acute // Not IPA sanctioned
 			['@4', '\u030b'], // Combining double acute accent
 			['@3', '\u0301'], // Combining acute accent
 			['@2', '\u0304'], // Combining macron
 			['@1', '\u0300'], // Combining grave accent
 			['@0', '\u030f'], // Combining double grave accent
+
+			// Tone numbers (non-IPA)
+			['\\^0', '⁰'], // Not IPA sanctioned
+			['\\^1', '¹'], // Not IPA sanctioned
+			['\\^2', '²'], // Not IPA sanctioned
+			['\\^3', '³'], // Not IPA sanctioned
+			['\\^4', '⁴'], // Not IPA sanctioned
+			['\\^5', '⁵'], // Not IPA sanctioned
+			['\\^6', '⁶'], // Not IPA sanctioned
+			['\\^7', '⁷'], // Not IPA sanctioned
+			['\\^8', '⁸'], // Not IPA sanctioned
+			['\\^9', '⁹'], // Not IPA sanctioned
+			// This character is called "Superscript hyphen" in the layout document,
+			// and "Superscript minus" in Unicode
+			['\\^-', '⁻'], // Not IPA sanctioned
 
 			['ꜛ>', '↗'], // #>>
 			['ꜜ<', '↘'], // #<<
