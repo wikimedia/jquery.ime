@@ -179,6 +179,15 @@
 			['ʕ\\^', 'ˤ'], // ?<
 			['n\\^', 'ⁿ'],
 			['l\\^', 'ˡ'],
+			// TODO non-IPA superscripts
+			['ʽ\\[', '˞'], // [[[
+			['\\[\\[', 'ʽ'], // [[ // Not IPA sanctioned
+			['(?:\u031a)\\]', '‘'], // ]]]] // Not IPA sanctioned
+			['’\\]', '\u031a'], // ]]] // Combining left angle above
+			['\\]\\]', '’'], // ]]
+			['(?:\u032f)\\$', '\u0330'], // $$$ // Combining tilde below
+			['(?:\u0329)\\$', '\u032f'], // $$ // Combining inverted breve below
+			['\\$', '\u0329'], // $ // Combining vertical line below
 
 			['=<', '\u200d'] // Combining Grapheme Joiner
 		]

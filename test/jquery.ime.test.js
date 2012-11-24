@@ -1814,6 +1814,15 @@
 			{ input: '?<^',   output: 'ˤ',   description: 'Pharyngealised' },
 			{ input: 'n^',    output: 'ⁿ',   description: 'Nasal release' }, // "Pre/post nasalised" in the layout document
 			{ input: 'l^',    output: 'ˡ',   description: 'Lateral release' },
+			// TODO non-IPA superscripts
+			{ input: '[[',    output: 'ʽ',   description: 'Light aspiration' }, // Not IPA sanctioned
+			{ input: 'e[[[',  output: 'e˞',  description: 'Rhoticity' },
+			{ input: ']]',    output: '’',   description: 'Ejective' },
+			{ input: 'd]]]',  output: 'd̚',   description: 'No audible release' },
+			{ input: ']]]]',  output: '‘',   description: 'Weak aspiration' }, // Not IPA sanctioned
+			{ input: 'n$',    output: 'n̩',   description: 'Syllabic' },
+			{ input: 'e$$',   output: 'e̯',   description: 'Non-syllabic' },
+			{ input: 'a$$$',  output: 'a̰',   description: 'Creaky voiced' },
 
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
