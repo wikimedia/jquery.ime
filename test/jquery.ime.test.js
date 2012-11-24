@@ -1599,232 +1599,279 @@
 	} );
 
 	imeTest( {
-		description: 'IPA keyboard test',
+		description: 'SIL IPA keyboard test',
 		tests: [
+			// This test suite follows the layout description document of
+			// of SIL's IPA keyboard, including plaing characters like "." and "v".
+			// The test names are mostly based on IPA character descriptions.
+
 			// Bilabial consonants
-			{ input: 'p',     output: 'p',   description: 'Voiceless bilabial stop' },
-			{ input: 'b',     output: 'b',   description: 'Voiced bilabial stop' },
-			{ input: 'm',     output: 'm',   description: 'Bilabial nasal' },
-			{ input: 'B=',    output: 'ʙ',   description: 'Voiced bilabial trill' },
-			{ input: 'f=',    output: 'ɸ',   description: 'Voiceless bilabial fricative' },
-			{ input: 'b=',    output: 'β',   description: 'Voiced bilabial fricative' },
+			{ input: 'p',      output: 'p',   description: 'Voiceless bilabial stop' },
+			{ input: 'b',      output: 'b',   description: 'Voiced bilabial stop' },
+			{ input: 'm',      output: 'm',   description: 'Bilabial nasal' },
+			{ input: 'B=',     output: 'ʙ',   description: 'Voiced bilabial trill' },
+			{ input: 'f=',     output: 'ɸ',   description: 'Voiceless bilabial fricative' },
+			{ input: 'b=',     output: 'β',   description: 'Voiced bilabial fricative' },
 
 			// Labiodental consonants
-			{ input: 'm>',    output: 'ɱ',   description: 'Labiodental nasal' },
-			{ input: 'v<',    output: 'ⱱ',   description: 'Labiodental flap' },
-			{ input: 'f',     output: 'f',   description: 'Voiceless abiodental fricative' },
-			{ input: 'v',     output: 'v',   description: 'Voiced labiodental fricative' },
-			{ input: 'v=',    output: 'ʋ',   description: 'Labiodental approximant' },
+			{ input: 'm>',     output: 'ɱ',   description: 'Labiodental nasal' },
+			{ input: 'v<',     output: 'ⱱ',   description: 'Labiodental flap' },
+			{ input: 'f',      output: 'f',   description: 'Voiceless abiodental fricative' },
+			{ input: 'v',      output: 'v',   description: 'Voiced labiodental fricative' },
+			{ input: 'v=',     output: 'ʋ',   description: 'Labiodental approximant' },
 
 			// Dental consonants
-			{ input: 't=',    output: 'θ',   description: 'Voiceless dental fricative' },
-			{ input: 'd=',    output: 'ð',   description: 'Voiced dental fricative' },
+			{ input: 't=',     output: 'θ',   description: 'Voiceless dental fricative' },
+			{ input: 'd=',     output: 'ð',   description: 'Voiced dental fricative' },
 
 			// Alveolar consonants
-			{ input: 't',     output: 't',   description: 'Voiceless alveolar stop' },
-			{ input: 'd',     output: 'd',   description: 'Voiced alveolar stop' },
-			{ input: 'n',     output: 'n',   description: 'Alveolar nasal' },
-			{ input: 'r',     output: 'r',   description: 'Alveolar trill' },
-			{ input: 'r>',    output: 'ɾ',   description: 'Alveolar flap' },
-			{ input: 's',     output: 's',   description: 'Voiceless alveolar fricative' },
-			{ input: 'z',     output: 'z',   description: 'Voiced alveolar fricative' },
-			{ input: 'l=',    output: 'ɬ',   description: 'Voiceless alveolar lateral fricative' },
-			{ input: 'l>',    output: 'ɮ',   description: 'Voiced alveolar lateral fricative' },
-			{ input: 'r=',    output: 'ɹ',   description: 'Alveolar approximant' },
-			{ input: 'l',     output: 'l',   description: 'Alveolar lateral approximant' },
+			{ input: 't',      output: 't',   description: 'Voiceless alveolar stop' },
+			{ input: 'd',      output: 'd',   description: 'Voiced alveolar stop' },
+			{ input: 'n',      output: 'n',   description: 'Alveolar nasal' },
+			{ input: 'r',      output: 'r',   description: 'Alveolar trill' },
+			{ input: 'r>',     output: 'ɾ',   description: 'Alveolar flap' },
+			{ input: 's',      output: 's',   description: 'Voiceless alveolar fricative' },
+			{ input: 'z',      output: 'z',   description: 'Voiced alveolar fricative' },
+			{ input: 'l=',     output: 'ɬ',   description: 'Voiceless alveolar lateral fricative' },
+			{ input: 'l>',     output: 'ɮ',   description: 'Voiced alveolar lateral fricative' },
+			{ input: 'r=',     output: 'ɹ',   description: 'Alveolar approximant' },
+			{ input: 'l',      output: 'l',   description: 'Alveolar lateral approximant' },
 
 			// Postalveolar consonants
-			{ input: 's=',    output: 'ʃ',   description: 'Voiceless postalveolar fricative' },
-			{ input: 'z=',    output: 'ʒ',   description: 'Voiced postalveolar fricative' },
+			{ input: 's=',     output: 'ʃ',   description: 'Voiceless postalveolar fricative' },
+			{ input: 'z=',     output: 'ʒ',   description: 'Voiced postalveolar fricative' },
 
 			// Retroflex consonants
-			{ input: 't<',    output: 'ʈ',   description: 'Voiceless retroflex stop' },
-			{ input: 'd<',    output: 'ɖ',   description: 'Voiced retroflex stop' },
-			{ input: 'n<',    output: 'ɳ',   description: 'Retroflex nasal' },
-			{ input: 'r<',    output: 'ɽ',   description: 'Retroflex flap' },
-			{ input: 's<',    output: 'ʂ',   description: 'Voiceless retroflex fricative' },
-			{ input: 'z<',    output: 'ʐ',   description: 'Voiced retroflex fricative' },
-			{ input: 'R<',    output: 'ɻ',   description: 'Retroflex approximant' },
-			{ input: 'l<',    output: 'ɭ',   description: 'Retroflex lateral approximant' },
+			{ input: 't<',     output: 'ʈ',   description: 'Voiceless retroflex stop' },
+			{ input: 'd<',     output: 'ɖ',   description: 'Voiced retroflex stop' },
+			{ input: 'n<',     output: 'ɳ',   description: 'Retroflex nasal' },
+			{ input: 'r<',     output: 'ɽ',   description: 'Retroflex flap' },
+			{ input: 's<',     output: 'ʂ',   description: 'Voiceless retroflex fricative' },
+			{ input: 'z<',     output: 'ʐ',   description: 'Voiced retroflex fricative' },
+			{ input: 'R<',     output: 'ɻ',   description: 'Retroflex approximant' },
+			{ input: 'l<',     output: 'ɭ',   description: 'Retroflex lateral approximant' },
 
 			// Palatal consonants
-			{ input: 'c',     output: 'c',   description: 'Voiceless palatal stop' },
-			{ input: 'j=',    output: 'ɟ',   description: 'Voiced palatal stop' },
-			{ input: 'n=',    output: 'ɲ',   description: 'Palatal nasal' },
-			{ input: 'c=',    output: 'ç',   description: 'Voiceless palatal fricative' },
-			{ input: 'j<',    output: 'ʝ',   description: 'Voiced palatal fricative' },
-			{ input: 'j',     output: 'j',   description: 'Palatal approximant' },
-			{ input: 'L<',    output: 'ʎ',   description: 'Palatal lateral approximant' },
+			{ input: 'c',      output: 'c',   description: 'Voiceless palatal stop' },
+			{ input: 'j=',     output: 'ɟ',   description: 'Voiced palatal stop' },
+			{ input: 'n=',     output: 'ɲ',   description: 'Palatal nasal' },
+			{ input: 'c=',     output: 'ç',   description: 'Voiceless palatal fricative' },
+			{ input: 'j<',     output: 'ʝ',   description: 'Voiced palatal fricative' },
+			{ input: 'j',      output: 'j',   description: 'Palatal approximant' },
+			{ input: 'L<',     output: 'ʎ',   description: 'Palatal lateral approximant' },
 
 			// Velar consonants
-			{ input: 'k',     output: 'k',   description: 'Voiceless velar stop' },
-			{ input: 'g<',    output: 'ɡ',   description: 'Voiced velar stop' },
-			{ input: 'n>',    output: 'ŋ',   description: 'Velar nasal' },
-			{ input: 'x',     output: 'x',   description: 'Voiceless velar fricative' },
-			{ input: 'g=',    output: 'ɣ',   description: 'Voiced velar fricative' },
-			{ input: 'w>',    output: 'ɰ',   description: 'Velar approximant' },
-			{ input: 'L=',    output: 'ʟ',   description: 'Velar lateral approximant' },
+			{ input: 'k',      output: 'k',   description: 'Voiceless velar stop' },
+			{ input: 'g<',     output: 'ɡ',   description: 'Voiced velar stop' },
+			{ input: 'n>',     output: 'ŋ',   description: 'Velar nasal' },
+			{ input: 'x',      output: 'x',   description: 'Voiceless velar fricative' },
+			{ input: 'g=',     output: 'ɣ',   description: 'Voiced velar fricative' },
+			{ input: 'w>',     output: 'ɰ',   description: 'Velar approximant' },
+			{ input: 'L=',     output: 'ʟ',   description: 'Velar lateral approximant' },
 
 			// Uvular consonants
-			{ input: 'q',     output: 'q',   description: 'Voiceless uvular stop' },
-			{ input: 'G=',    output: 'ɢ',   description: 'Voiced uvular stop' },
-			{ input: 'N=',    output: 'ɴ',   description: 'Uvular nasal' },
-			{ input: 'R=',    output: 'ʀ',   description: 'Uvular trill' },
-			{ input: 'x=',    output: 'χ',   description: 'Voiceless uvular fricative' },
-			{ input: 'R>',    output: 'ʁ',   description: 'Voiced uvular fricative' },
+			{ input: 'q',      output: 'q',   description: 'Voiceless uvular stop' },
+			{ input: 'G=',     output: 'ɢ',   description: 'Voiced uvular stop' },
+			{ input: 'N=',     output: 'ɴ',   description: 'Uvular nasal' },
+			{ input: 'R=',     output: 'ʀ',   description: 'Uvular trill' },
+			{ input: 'x=',     output: 'χ',   description: 'Voiceless uvular fricative' },
+			{ input: 'R>',     output: 'ʁ',   description: 'Voiced uvular fricative' },
 
 			// Pharyngeal consonants
-			{ input: 'h>',    output: 'ħ',   description: 'Voiceless pharyngeal fricative' },
-			{ input: '?<',    output: 'ʕ',   description: 'Voiced pharyngeal fricative' },
+			{ input: 'h>',     output: 'ħ',   description: 'Voiceless pharyngeal fricative' },
+			{ input: '?<',     output: 'ʕ',   description: 'Voiced pharyngeal fricative' },
 
 			// Glottal consonants
-			{ input: '?=',    output: 'ʔ',   description: 'Glottal stop' },
-			{ input: 'h',     output: 'h',   description: 'Voiceless glottal fricative' },
-			{ input: 'h<',    output: 'ɦ',   description: 'Voiced glottal fricative' },
+			{ input: '?=',     output: 'ʔ',   description: 'Glottal stop' },
+			{ input: 'h',      output: 'h',   description: 'Voiceless glottal fricative' },
+			{ input: 'h<',     output: 'ɦ',   description: 'Voiced glottal fricative' },
 
 			// Clicks
-			{ input: 'p=',    output: 'ʘ',   description: 'Bilabial click' },
-			{ input: '!<',    output: 'ǀ',   description: 'Dental click' },
-			{ input: '!',     output: 'ǃ',   description: 'Postalveolar click' },
-			{ input: '!=',    output: 'ǂ',   description: 'Palatoalveolar click' },
-			{ input: '!>',    output: 'ǁ',   description: 'Alveolar lateral click' },
+			{ input: 'p=',     output: 'ʘ',   description: 'Bilabial click' },
+			{ input: '!<',     output: 'ǀ',   description: 'Dental click' },
+			{ input: '!',      output: 'ǃ',   description: 'Postalveolar click' },
+			{ input: '!=',     output: 'ǂ',   description: 'Palatoalveolar click' },
+			{ input: '!>',     output: 'ǁ',   description: 'Alveolar lateral click' },
 
 			// Implosive
-			{ input: 'b>',    output: 'ɓ',   description: 'Bilabial voiced implosive' },
-			{ input: 'd>',    output: 'ɗ',   description: 'Dental/alveolar voiced implosive' },
-			{ input: 'j>',    output: 'ʄ',   description: 'Palatal voiced implosive' },
-			{ input: 'g>',    output: 'ɠ',   description: 'Velar voiced implosive' },
-			{ input: 'G>',    output: 'ʛ',   description: 'Uvular voiced implosive' },
+			{ input: 'b>',     output: 'ɓ',   description: 'Bilabial voiced implosive' },
+			{ input: 'd>',     output: 'ɗ',   description: 'Dental/alveolar voiced implosive' },
+			{ input: 'j>',     output: 'ʄ',   description: 'Palatal voiced implosive' },
+			{ input: 'g>',     output: 'ɠ',   description: 'Velar voiced implosive' },
+			{ input: 'G>',     output: 'ʛ',   description: 'Uvular voiced implosive' },
 
 			// Other symbols
-			{ input: 'w=',    output: 'ʍ',   description: 'Voiceless labial-velar fricative' },
-			{ input: 'w',     output: 'w',   description: 'Voiced labial-velar approximant' },
-			{ input: 'y<',    output: 'ɥ',   description: 'Voiced labial-palatal approximant (y<)' },
-			{ input: 'h=',    output: 'ɥ',   description: 'Voiced labial-palatal approximant (h=)' },
-			{ input: 'H=',    output: 'ʜ',   description: 'Voiceless epiglottal fricative' },
-			{ input: 'Q<',    output: 'ʢ',   description: 'Voiced epiglottal fricative' },
-			{ input: 'Q=',    output: 'ʡ',   description: 'Voiced epiglottal stop' },
+			{ input: 'w=',     output: 'ʍ',   description: 'Voiceless labial-velar fricative' },
+			{ input: 'w',      output: 'w',   description: 'Voiced labial-velar approximant' },
+			{ input: 'y<',     output: 'ɥ',   description: 'Voiced labial-palatal approximant (y<)' },
+			{ input: 'h=',     output: 'ɥ',   description: 'Voiced labial-palatal approximant (h=)' },
+			{ input: 'H=',     output: 'ʜ',   description: 'Voiceless epiglottal fricative' },
+			{ input: 'Q<',     output: 'ʢ',   description: 'Voiced epiglottal fricative' },
+			{ input: 'Q=',     output: 'ʡ',   description: 'Voiced epiglottal stop' },
 
-			{ input: 'c<',    output: 'ɕ',   description: 'Voiceless alveolo-palatal fricative' },
-			{ input: 'z>',    output: 'ʑ',   description: 'Voiced alveolo-palatal fricative' },
-			{ input: 'L>',    output: 'ɺ',   description: 'Voiced alveolar lateral flap' },
-			{ input: 'H<',    output: 'ɧ',   description: 'Simultaneous ʃ and x' },
+			{ input: 'c<',     output: 'ɕ',   description: 'Voiceless alveolo-palatal fricative' },
+			{ input: 'z>',     output: 'ʑ',   description: 'Voiced alveolo-palatal fricative' },
+			{ input: 'L>',     output: 'ɺ',   description: 'Voiced alveolar lateral flap' },
+			{ input: 'H<',     output: 'ɧ',   description: 'Simultaneous ʃ and x' },
 
 			// Front unrounded vowels
-			{ input: 'i',     output: 'i',   description: 'Close front unrounded vowel' },
-			{ input: 'i=',    output: 'ɪ',   description: 'Near-close near-front unrounded vowel' },
-			{ input: 'e',     output: 'e',   description: 'Close-mid front unrounded vowel' },
-			{ input: 'e<',    output: 'ɛ',   description: 'Open-mid front unrounded vowel' },
-			{ input: 'a<',    output: 'æ',   description: 'Near-open front unrounded vowel' },
-			{ input: 'a',     output: 'a',   description: 'Open front unrounded vowel' },
+			{ input: 'i',      output: 'i',   description: 'Close front unrounded vowel' },
+			{ input: 'i=',     output: 'ɪ',   description: 'Near-close near-front unrounded vowel' },
+			{ input: 'e',      output: 'e',   description: 'Close-mid front unrounded vowel' },
+			{ input: 'e<',     output: 'ɛ',   description: 'Open-mid front unrounded vowel' },
+			{ input: 'a<',     output: 'æ',   description: 'Near-open front unrounded vowel' },
+			{ input: 'a',      output: 'a',   description: 'Open front unrounded vowel' },
 
 			// Front rounded vowels
-			{ input: 'y',     output: 'y',   description: 'Close front rounded vowel' },
-			{ input: 'y=',    output: 'ʏ',   description: 'Near-close near-front rounded vowel' },
-			{ input: 'o>',    output: 'ø',   description: 'Close-mid front rounded vowel' },
-			{ input: 'E<',    output: 'œ',   description: 'Open-mid front rounded vowel' },
-			{ input: 'E>',    output: 'ɶ',   description: 'Open front rounded vowel' },
+			{ input: 'y',      output: 'y',   description: 'Close front rounded vowel' },
+			{ input: 'y=',     output: 'ʏ',   description: 'Near-close near-front rounded vowel' },
+			{ input: 'o>',     output: 'ø',   description: 'Close-mid front rounded vowel' },
+			{ input: 'E<',     output: 'œ',   description: 'Open-mid front rounded vowel' },
+			{ input: 'E>',     output: 'ɶ',   description: 'Open front rounded vowel' },
 
 			// Central vowels
-			{ input: 'I=',    output: 'ɨ',   description: 'Close central unrounded vowel' },
-			{ input: 'E=',    output: 'ɘ',   description: 'Close-mid central unrounded vowel' },
-			{ input: 'e=',    output: 'ə',   description: 'Mid-central vowel' },
-			{ input: 'e>',    output: 'ɜ',   description: 'Open-mid central unrounded vowel' },
-			{ input: 'a>',    output: 'ɐ',   description: 'Near-open central vowel' },
-			{ input: 'U=',    output: 'ʉ',   description: 'Close central rounded vowel' },
-			{ input: 'O=',    output: 'ɵ',   description: 'Close-mid central rounded vowel' },
-			{ input: 'O<',    output: 'ɞ',   description: 'Open-mid central rounded vowel' },
+			{ input: 'I=',     output: 'ɨ',   description: 'Close central unrounded vowel' },
+			{ input: 'E=',     output: 'ɘ',   description: 'Close-mid central unrounded vowel' },
+			{ input: 'e=',     output: 'ə',   description: 'Mid-central vowel' },
+			{ input: 'e>',     output: 'ɜ',   description: 'Open-mid central unrounded vowel' },
+			{ input: 'a>',     output: 'ɐ',   description: 'Near-open central vowel' },
+			{ input: 'U=',     output: 'ʉ',   description: 'Close central rounded vowel' },
+			{ input: 'O=',     output: 'ɵ',   description: 'Close-mid central rounded vowel' },
+			{ input: 'O<',     output: 'ɞ',   description: 'Open-mid central rounded vowel' },
 
 			// Back vowels
-			{ input: 'u=',    output: 'ɯ',   description: 'Close back unrounded vowel' },
-			{ input: 'O>',    output: 'ɤ',   description: 'Close-mid back unrounded vowel' },
-			{ input: 'u>',    output: 'ʌ',   description: 'Open-mid back unrounded vowel' },
-			{ input: 'a=',    output: 'ɑ',   description: 'Open back unrounded vowel' },
-			{ input: 'u',     output: 'u',   description: 'Close back rounded vowel' },
-			{ input: 'u<',    output: 'ʊ',   description: 'Near-close near-back vowel' },
-			{ input: 'o',     output: 'o',   description: 'Close-mid back rounded vowel' },
-			{ input: 'o<',    output: 'ɔ',   description: 'Open-mid back rounded vowel' },
-			{ input: 'o=',    output: 'ɒ',   description: 'Open back rounded vowel' },
+			{ input: 'u=',     output: 'ɯ',   description: 'Close back unrounded vowel' },
+			{ input: 'O>',     output: 'ɤ',   description: 'Close-mid back unrounded vowel' },
+			{ input: 'u>',     output: 'ʌ',   description: 'Open-mid back unrounded vowel' },
+			{ input: 'a=',     output: 'ɑ',   description: 'Open back unrounded vowel' },
+			{ input: 'u',      output: 'u',   description: 'Close back rounded vowel' },
+			{ input: 'u<',     output: 'ʊ',   description: 'Near-close near-back vowel' },
+			{ input: 'o',      output: 'o',   description: 'Close-mid back rounded vowel' },
+			{ input: 'o<',     output: 'ɔ',   description: 'Open-mid back rounded vowel' },
+			{ input: 'o=',     output: 'ɒ',   description: 'Open back rounded vowel' },
 
 			// Suprasegmentals
-			{ input: '}',     output: 'ˈ',   description: 'Primary stress' },
-			{ input: '}}',    output: 'ˌ',   description: 'Secondary stress' }, // }}
-			{ input: ':',     output: 'ː',   description: 'Long' },
-			{ input: '::',    output: 'ˑ',   description: 'Half long' },
-			{ input: ':::',   output: 'ːː',   description: 'Extra long' }, // Not IPA sanctioned
-			{ input: 'e***',  output: 'ĕ',   description: 'Extra short' },
-			{ input: '.<',    output: '|',   description: 'Minor (foot) group' },
-			{ input: '.=',    output: '‖',   description: 'Major (intonation) group' },
-			{ input: '.',     output: '.',   description: 'Syllable break' },
-			{ input: '#=',    output: '‿',   description: 'Linking (absence of a break)' },
+			{ input: '}',      output: 'ˈ',   description: 'Primary stress' },
+			{ input: '}}',     output: 'ˌ',   description: 'Secondary stress' }, // }}
+			{ input: ':',      output: 'ː',   description: 'Long' },
+			{ input: '::',     output: 'ˑ',   description: 'Half long' },
+			{ input: ':::',    output: 'ːː',  description: 'Extra long' }, // Not IPA sanctioned
+			// Extra short is tested below with other similar diacritics
+			{ input: '.<',     output: '|',   description: 'Minor (foot) group' },
+			{ input: '.=',     output: '‖',   description: 'Major (intonation) group' },
+			{ input: '.',      output: '.',   description: 'Syllable break' },
+			{ input: '#=',     output: '‿',   description: 'Linking (absence of a break)' },
 
 			// Tones
-			{ input: '#4',    output: '˥',   description: 'Extra-high tone bar' },
-			{ input: '#3',    output: '˦',   description: 'High tone bar' },
-			{ input: '#2',    output: '˧',   description: 'Mid tone bar' },
-			{ input: '#1',    output: '˨',   description: 'Low tone bar' },
-			{ input: '#0',    output: '˩',   description: 'Extra-low tone bar' },
-			{ input: 'e@4',   output: 'e̋',   description: 'Extra-high tone diacritic' },
-			{ input: 'e@3',   output: 'é',   description: 'High tone diacritic' },
-			{ input: 'e@2',   output: 'ē',   description: 'Mid tone diacritic' },
-			{ input: 'e@1',   output: 'è',   description: 'Low tone diacritic' },
-			{ input: 'e@0',   output: 'ȅ',   description: 'Extra-low tone diacritic' },
+			{ input: '#4',     output: '˥',   description: 'Extra-high tone bar' },
+			{ input: '#3',     output: '˦',   description: 'High tone bar' },
+			{ input: '#2',     output: '˧',   description: 'Mid tone bar' },
+			{ input: '#1',     output: '˨',   description: 'Low tone bar' },
+			{ input: '#0',     output: '˩',   description: 'Extra-low tone bar' },
+			{ input: 'e@4',    output: 'e̋',   description: 'Extra-high tone diacritic' },
+			{ input: 'e@3',    output: 'é',   description: 'High tone diacritic' },
+			{ input: 'e@2',    output: 'ē',   description: 'Mid tone diacritic' },
+			{ input: 'e@1',    output: 'è',   description: 'Low tone diacritic' },
+			{ input: 'e@0',    output: 'ȅ',   description: 'Extra-low tone diacritic' },
 
 			// Tone combinations
 			// The following tone bar tests are taken from the layout description.
 			// Any combination of three tones is possible.
-			{ input: '#04',   output: '˩˥',  description: 'Rising tone bar (04)' },
-			{ input: '#40',   output: '˥˩',  description: 'Falling tone bar (40)' },
-			{ input: '#24',   output: '˧˥',  description: 'High rising tone bar (24)' },
-			{ input: '#12',   output: '˨˧',  description: 'Low rising tone bar (12)' },
-			{ input: '#141',  output: '˨˥˨', description: 'Rising-falling tone bar (141)' },
+			{ input: '#04',    output: '˩˥',  description: 'Rising tone bar (04)' },
+			{ input: '#40',    output: '˥˩',  description: 'Falling tone bar (40)' },
+			{ input: '#24',    output: '˧˥',  description: 'High rising tone bar (24)' },
+			{ input: '#12',    output: '˨˧',  description: 'Low rising tone bar (12)' },
+			{ input: '#141',   output: '˨˥˨', description: 'Rising-falling tone bar (141)' },
 
-			{ input: 'e@13',  output: 'ě',   description: 'Rising tone diacritic' },
-			{ input: 'e@31',  output: 'ê',   description: 'Falling tone diacritic' },
-			{ input: 'e@23',  output: 'e᷄',   description: 'High rising tone diacritic' },
-			{ input: 'e@12',  output: 'e᷅',   description: 'Low rising tone diacritic' },
-			{ input: 'e@131', output: 'e᷈',   description: 'Rising-falling tone diacritic' },
-			{ input: 'e@21',  output: 'e᷆',   description: 'Low falling tone diacritic' }, // Not IPA sanctioned
-			{ input: 'e@32',  output: 'e᷇',   description: 'High falling tone diacritic' }, // Not IPA sanctioned
-			{ input: 'e@313', output: 'e᷉',   description: 'Falling-rising tone diacritic' }, // Not IPA sanctioned
+			{ input: 'e@13',   output: 'ě',   description: 'Rising tone diacritic' },
+			{ input: 'e@31',   output: 'ê',   description: 'Falling tone diacritic' },
+			{ input: 'e@23',   output: 'e᷄',   description: 'High rising tone diacritic' },
+			{ input: 'e@12',   output: 'e᷅',   description: 'Low rising tone diacritic' },
+			{ input: 'e@131',  output: 'e᷈',   description: 'Rising-falling tone diacritic' },
+			{ input: 'e@21',   output: 'e᷆',   description: 'Low falling tone diacritic' }, // Not IPA sanctioned
+			{ input: 'e@32',   output: 'e᷇',   description: 'High falling tone diacritic' }, // Not IPA sanctioned
+			{ input: 'e@313',  output: 'e᷉',   description: 'Falling-rising tone diacritic' }, // Not IPA sanctioned
 
-			{ input: '#<',    output: 'ꜜ',   description: 'Downstep' },
-			{ input: '#>',    output: 'ꜛ',   description: 'Upstep' },
-			{ input: '#>>',   output: '↗',   description: 'Global rise' },
-			{ input: '#<<',   output: '↘',   description: 'Global fall' },
+			{ input: '#<',     output: 'ꜜ',   description: 'Downstep' },
+			{ input: '#>',     output: 'ꜛ',   description: 'Upstep' },
+			{ input: '#>>',    output: '↗',   description: 'Global rise' },
+			{ input: '#<<',    output: '↘',   description: 'Global fall' },
 
 			// Tone numbers (non-IPA)
-			{ input: '^0',    output: '⁰',   description: 'Tone number 0' }, // Not IPA sanctioned
-			{ input: '^1',    output: '¹',   description: 'Tone number 1' }, // Not IPA sanctioned
-			{ input: '^2',    output: '²',   description: 'Tone number 2' }, // Not IPA sanctioned
-			{ input: '^3',    output: '³',   description: 'Tone number 3' }, // Not IPA sanctioned
-			{ input: '^4',    output: '⁴',   description: 'Tone number 4' }, // Not IPA sanctioned
-			{ input: '^5',    output: '⁵',   description: 'Tone number 5' }, // Not IPA sanctioned
-			{ input: '^6',    output: '⁶',   description: 'Tone number 6' }, // Not IPA sanctioned
-			{ input: '^7',    output: '⁷',   description: 'Tone number 7' }, // Not IPA sanctioned
-			{ input: '^8',    output: '⁸',   description: 'Tone number 8' }, // Not IPA sanctioned
-			{ input: '^9',    output: '⁹',   description: 'Tone number 9' }, // Not IPA sanctioned
-			{ input: '^-',    output: '⁻',   description: 'Superscript hyphen' }, // Not IPA sanctioned
+			{ input: '^0',     output: '⁰',   description: 'Tone number 0' }, // Not IPA sanctioned
+			{ input: '^1',     output: '¹',   description: 'Tone number 1' }, // Not IPA sanctioned
+			{ input: '^2',     output: '²',   description: 'Tone number 2' }, // Not IPA sanctioned
+			{ input: '^3',     output: '³',   description: 'Tone number 3' }, // Not IPA sanctioned
+			{ input: '^4',     output: '⁴',   description: 'Tone number 4' }, // Not IPA sanctioned
+			{ input: '^5',     output: '⁵',   description: 'Tone number 5' }, // Not IPA sanctioned
+			{ input: '^6',     output: '⁶',   description: 'Tone number 6' }, // Not IPA sanctioned
+			{ input: '^7',     output: '⁷',   description: 'Tone number 7' }, // Not IPA sanctioned
+			{ input: '^8',     output: '⁸',   description: 'Tone number 8' }, // Not IPA sanctioned
+			{ input: '^9',     output: '⁹',   description: 'Tone number 9' }, // Not IPA sanctioned
+			{ input: '^-',     output: '⁻',   description: 'Superscript hyphen' }, // Not IPA sanctioned
 
 			// Diacritics and suprasegmentals
-			{ input: 'h^',    output: 'ʰ',   description: 'Aspirated' },
-			{ input: 'w^',    output: 'ʷ',   description: 'Labialised' },
-			{ input: 'j^',    output: 'ʲ',   description: 'Palatalised' },
-			{ input: 'g=^',   output: 'ˠ',   description: 'Velarised' },
-			{ input: '?<^',   output: 'ˤ',   description: 'Pharyngealised' },
-			{ input: 'n^',    output: 'ⁿ',   description: 'Nasal release' }, // "Pre/post nasalised" in the layout document
-			{ input: 'l^',    output: 'ˡ',   description: 'Lateral release' },
-			// TODO non-IPA superscripts
-			{ input: '[[',    output: 'ʽ',   description: 'Light aspiration' }, // Not IPA sanctioned
-			{ input: 'e[[[',  output: 'e˞',  description: 'Rhoticity' },
-			{ input: ']]',    output: '’',   description: 'Ejective' },
-			{ input: 'd]]]',  output: 'd̚',   description: 'No audible release' },
-			{ input: ']]]]',  output: '‘',   description: 'Weak aspiration' }, // Not IPA sanctioned
-			{ input: 'n$',    output: 'n̩',   description: 'Syllabic' },
-			{ input: 'e$$',   output: 'e̯',   description: 'Non-syllabic' },
-			{ input: 'a$$$',  output: 'a̰',   description: 'Creaky voiced' },
+			{ input: 'h^',     output: 'ʰ',   description: 'Aspirated' },
+			{ input: 'w^',     output: 'ʷ',   description: 'Labialised' },
+			{ input: 'j^',     output: 'ʲ',   description: 'Palatalised' },
+			{ input: 'g=^',    output: 'ˠ',   description: 'Velarised' },
+			{ input: '?<^',    output: 'ˤ',   description: 'Pharyngealised' },
+			{ input: 'n^',     output: 'ⁿ',   description: 'Nasal release' }, // "Pre/post nasalised" in the layout document
+			{ input: 'l^',     output: 'ˡ',   description: 'Lateral release' },
 
-			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
+			// TODO non-IPA superscripts
+
+			{ input: '[[',     output: 'ʽ',   description: 'Light aspiration' }, // Not IPA sanctioned
+			{ input: 'e[[[',   output: 'e˞',  description: 'Rhoticity' },
+			{ input: ']]',     output: '’',   description: 'Ejective' },
+			{ input: 'd]]]',   output: 'd̚',   description: 'No audible release' },
+			{ input: ']]]]',   output: '‘',   description: 'Weak aspiration' }, // Not IPA sanctioned
+			{ input: 'n$',     output: 'n̩',   description: 'Syllabic' },
+			{ input: 'e$$',    output: 'e̯',   description: 'Non-syllabic' },
+			{ input: 'a$$$',   output: 'a̰',   description: 'Creaky voiced' },
+
+			// TODO non-IPA retroflex hooks
+
+			{ input: 'n%',     output: 'n̥',   description: 'Voiceless' },
+			{ input: 's%%',    output: 's̬',   description: 'Voiced' },
+			{ input: 'b%%%',   output: 'b̤',   description: 'Breathy voiced' },
+
+			// TODO non-IPA palatal hooks
+
+			{ input: 'n>@',    output: 'ŋ̊',   description: 'Voiceless with diacritic above' },
+			{ input: 't{',     output: 't̪',   description: 'Dental' },
+			{ input: 't{{',    output: 't̺',   description: 'Apical' },
+			{ input: 't{{{',   output: 't̻',   description: 'Laminal' },
+			{ input: 't{{{{',  output: 't̼',   description: 'Lingulabial' },
+			{ input: 's{{{{{', output: 'ṣ',   description: 'Closer variety / Fricative' }, // TODO Find out how standard this is
+			{ input: 'e~',     output: 'ẽ',   description: 'Nasalised' },
+			{ input: 'l~~',    output: 'l̴',   description: 'Velarized or pharyngealized' },
+			{ input: 'e*',     output: 'ë',   description: 'Centralised' },
+			{ input: 'e**',    output: 'e̽',   description: 'Mid centralised' },
+			{ input: 'e***',   output: 'ĕ',   description: 'Extra short' },
+			{ input: 'e****',  output: 'ė',   description: 'Palatalization/Centralization' }, // TODO Find out how standard this is
+			// TODO Find out what the m with the five asterisks is.
+
+			{ input: 'k#&p',   output: 'k͡p',  description: 'Double articulation above' },
+			{ input: 't@&s',   output: 't͜s',  description: 'Double articulation below' },
+
+			{ input: 'u+',     output: 'u̟',   description: 'Advanced' },
+			{ input: 'i_',     output: 'i̠',   description: 'Retracted' },
+			{ input: 'e++',    output: 'e̝',   description: 'Raised' },
+			{ input: 'e__',    output: 'e̞',   description: 'Lowered' },
+			{ input: 'e+++',   output: 'e̘',   description: 'Advanced tongue root' },
+			{ input: 'e___',   output: 'e̙',   description: 'Retracted tongue root' },
+			{ input: 'e++++',  output: 'e̹',   description: 'More rounded' },
+			{ input: 'e____',  output: 'e̜',   description: 'Less rounded' },
+
+			// TODO Non-IPA open vowel, fortis and lenis
+
+			// Addition non-IPA characters
+			{ input: '=>',     output: '→',   description: 'Is realized as (arrow)' },       // Not IPA sanctioned
+			{ input: 's>',     output: 'σ',   description: 'Syllable (sigma)' },             // Not IPA sanctioned
+			{ input: '=<',     output: '\u200d', description: 'Combining Grapheme Joiner' }, // Not IPA sanctioned
+
+			{ input: '[}e:i=ja}}fjatl%a}}jE<:ky=tl%]', output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]', description: 'Eyjafjallajökull' }
 		],
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
