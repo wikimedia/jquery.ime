@@ -362,6 +362,10 @@
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
 		},
+		'fonipa': {
+			autonym: 'International Phonetic Alphabet',
+			inputmethods: [ 'ipa-sil' ]
+		},
 		'jv': {
 			autonym: 'ꦧꦱꦗꦮ',
 			inputmethods: [ 'jv-transliteration' ]
