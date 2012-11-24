@@ -268,8 +268,12 @@
 			source: 'rules/ur/ur-transliteration.js'
 		},
 		'mn-cyrl': {
-			name: 'Cyrillc',
+			name: 'Cyrillic',
 			source: 'rules/mn/mn-cyrl.js'
+		},
+		'ipa-sil': {
+			name: 'International Phonetic Alphabet - SIL',
+			source: 'rules/fonipa/ipa-sil.js'
 		}
 	} );
 
@@ -357,6 +361,10 @@
 		'is': {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
+		},
+		'fonipa': {
+			autonym: 'International Phonetic Alphabet',
+			inputmethods: [ 'ipa-sil' ]
 		},
 		'jv': {
 			autonym: 'ꦧꦱꦗꦮ',

@@ -56,7 +56,7 @@
 			this.stopTimer();
 
 			this.timer = setTimeout(
- 				function () {
+				function () {
 					imeselector.$imeSetting.animate( {
 						'opacity': 0,
 						'marginTop': '-20px'
