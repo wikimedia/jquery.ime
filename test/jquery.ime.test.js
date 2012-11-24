@@ -1751,7 +1751,7 @@
 			{ input: '}}',    output: 'ˌ',   description: 'Secondary stress' }, // }}
 			{ input: ':',     output: 'ː',   description: 'Long' },
 			{ input: '::',    output: 'ˑ',   description: 'Half long' },
-			{ input: ':::',   output: 'ːː',   description: 'Extra long' },
+			{ input: ':::',   output: 'ːː',   description: 'Extra long' }, // Not IPA sanctioned
 			{ input: 'e***',  output: 'ĕ',   description: 'Extra short' },
 			{ input: '.<',    output: '|',   description: 'Minor (foot) group' },
 			{ input: '.=',    output: '‖',   description: 'Major (intonation) group' },
@@ -1783,6 +1783,9 @@
 			{ input: 'e@23',  output: 'e᷄',   description: 'High rising tone diacritic' },
 			{ input: 'e@12',  output: 'e᷅',   description: 'Low rising tone diacritic' },
 			{ input: 'e@131', output: 'e᷈',   description: 'Rising-falling tone diacritic' },
+			{ input: 'e@21',  output: 'e᷆',   description: 'Low falling tone diacritic' }, // Not IPA sanctioned
+			{ input: 'e@32',  output: 'e᷇',   description: 'High falling tone diacritic' }, // Not IPA sanctioned
+			{ input: 'e@313', output: 'e᷉',   description: 'Falling-rising tone diacritic' }, // Not IPA sanctioned
 
 			{ input: '#<',    output: 'ꜜ',   description: 'Downstep' },
 			{ input: '#>',    output: 'ꜛ',   description: 'Upstep' },

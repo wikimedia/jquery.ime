@@ -142,6 +142,9 @@
 			['(?:\u0304)3', '\u1dc4'], // Combining macron-acute
 			['(?:\u0300)2', '\u1dc5'], // Combining grave-macron
 			['(?:\u030C)1', '\u1dc8'], // Combining grave-acute-grave
+			['(?:\u0304)1', '\u1dc6'], // Combining macron-grave // Not IPA sanctioned
+			['(?:\u0301)2', '\u1dc7'], // Combining acute-macron // Not IPA sanctioned
+			['(?:\u0302)3', '\u1dc9'], // Combining acute-grave-acute // Not IPA sanctioned
 			['@4', '\u030b'], // Combining double acute accent
 			['@3', '\u0301'], // Combining acute accent
 			['@2', '\u0304'], // Combining macron
