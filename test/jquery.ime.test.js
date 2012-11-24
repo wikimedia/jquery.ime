@@ -1671,7 +1671,32 @@
 			{ input: 'h',  output: 'h', description: 'Voiceless glottal fricative' },
 			{ input: 'h<', output: 'ɦ', description: 'Voiced glottal fricative' },
 
-		  { input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
+			{ input: 'p=', output: 'ʘ', description: 'Bilabial click' },
+			{ input: '!<', output: 'ǀ', description: 'Dental click' },
+			{ input: '!',  output: 'ǃ', description: 'Postalveolar click' },
+			{ input: '!=', output: 'ǂ', description: 'Palatoalveolar click' },
+			{ input: '!>', output: 'ǁ', description: 'Alveolar lateral click' },
+
+			{ input: 'b>', output: 'ɓ', description: 'Bilabial voiced implosive' },
+			{ input: 'd>', output: 'ɗ', description: 'Dental/alveolar voiced implosive' },
+			{ input: 'j>', output: 'ʄ', description: 'Palatal voiced implosive' },
+			{ input: 'g>', output: 'ɠ', description: 'Velar voiced implosive' },
+			{ input: 'G>', output: 'ʛ', description: 'Uvular voiced implosive' },
+
+			{ input: 'w=', output: 'ʍ', description: 'Voiceless labial-velar fricative' },
+			{ input: 'w',  output: 'w', description: 'Voiced labial-velar approximant' },
+			{ input: 'y<', output: 'ɥ', description: 'Voiced labial-palatal approximant (y<)' },
+			{ input: 'h=', output: 'ɥ', description: 'Voiced labial-palatal approximant (h=)' },
+			{ input: 'H=', output: 'ʜ', description: 'Voiceless epiglottal fricative' },
+			{ input: 'Q<', output: 'ʢ', description: 'Voiced epiglottal fricative' },
+			{ input: 'Q=', output: 'ʡ', description: 'Voiced epiglottal stop' },
+
+			{ input: 'c<', output: 'ɕ', description: 'Voiceless alveolo-palatal fricative' },
+			{ input: 'z>', output: 'ʑ', description: 'Voiced alveolo-palatal fricative' },
+			{ input: 'L>', output: 'ɺ', description: 'Voiced alveolar lateral flap' },
+			{ input: 'H<', output: 'ɧ', description: 'Simultaneous ʃ and x' },
+
+			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
