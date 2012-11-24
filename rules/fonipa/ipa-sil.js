@@ -119,12 +119,39 @@
 			['ˈ}',        'ˌ'], // }}
 			['}',         'ˈ'],
 			['ː:',        'ˑ'], // ::
-			['ˑ:',        'ːː'], // :::
+			['ˑ:',        'ːː'], // ::: // Not IPA sanctioned
 			[':',         'ː'],
 			['\\*\\*\\*', '\u0306'], // Combining breve
 			['\\.<',      '|'],
 			['\\.=',      '‖'],
 			['#=',        '‿'],
+
+			// Tones
+			['([˥-˩])4', '$1˥'],
+			['([˥-˩])3', '$1˦'],
+			['([˥-˩])2', '$1˧'],
+			['([˥-˩])1', '$1˨'],
+			['([˥-˩])0', '$1˩'],
+			['#4', '˥'],
+			['#3', '˦'],
+			['#2', '˧'],
+			['#1', '˨'],
+			['#0', '˩'],
+			['(?:\u0300)3', '\u030C'], // Combining caron
+			['(?:\u0301)1', '\u0302'], // Combining circumflex accent
+			['(?:\u0304)3', '\u1dc4'], // Combining macron-acute
+			['(?:\u0300)2', '\u1dc5'], // Combining grave-macron
+			['(?:\u030C)1', '\u1dc8'], // Combining grave-acute-grave
+			['@4', '\u030b'], // Combining double acute accent
+			['@3', '\u0301'], // Combining acute accent
+			['@2', '\u0304'], // Combining macron
+			['@1', '\u0300'], // Combining grave accent
+			['@0', '\u030f'], // Combining double grave accent
+
+			['ꜛ>', '↗'], // #>>
+			['ꜜ<', '↘'], // #<<
+			['#<', 'ꜜ'],
+			['#>', 'ꜛ'],
 
 			['=<', '\u200d'] // Combining Grapheme Joiner
 		]
