@@ -1806,6 +1806,15 @@
 			{ input: '^9',    output: '⁹',   description: 'Tone number 9' }, // Not IPA sanctioned
 			{ input: '^-',    output: '⁻',   description: 'Superscript hyphen' }, // Not IPA sanctioned
 
+			// Diacritics and suprasegmentals
+			{ input: 'h^',    output: 'ʰ',   description: 'Aspirated' },
+			{ input: 'w^',    output: 'ʷ',   description: 'Labialised' },
+			{ input: 'j^',    output: 'ʲ',   description: 'Palatalised' },
+			{ input: 'g=^',   output: 'ˠ',   description: 'Velarised' },
+			{ input: '?<^',   output: 'ˤ',   description: 'Pharyngealised' },
+			{ input: 'n^',    output: 'ⁿ',   description: 'Nasal release' }, // "Pre/post nasalised" in the layout document
+			{ input: 'l^',    output: 'ˡ',   description: 'Lateral release' },
+
 			{ input: '=<', output: '\u200d', description: 'Combining Grapheme Joiner' }
 		],
 		inputmethod: 'ipa-sil',
