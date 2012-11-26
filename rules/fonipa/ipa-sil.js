@@ -3,8 +3,8 @@
 
 	var ipaSil = {
 		id: 'ipa-sil',
-		name: 'Internation Phonetic Alphabet - SIL',
-		description: 'Internation Phonetic Alphabet - SIL',
+		name: 'International Phonetic Alphabet - SIL',
+		description: 'International Phonetic Alphabet - SIL',
 		date: '2012-11-23',
 		URL: 'http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=UniIPAKeyboard',
 		author: 'mapping by Martin Hosken and Lorna A. Priest; implementation by Amir E. Aharoni',
