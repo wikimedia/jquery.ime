@@ -326,6 +326,10 @@
 			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
 		},
+		'en': {
+			autonym: 'English',
+			inputmethods: [ 'ipa-sil' ]
+		},
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration' ]
