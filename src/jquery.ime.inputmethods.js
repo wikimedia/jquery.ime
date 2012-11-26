@@ -302,6 +302,10 @@
 			autonym: 'беларуская',
 			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
+		'be-tarask': {
+			autonym: 'беларуская (тарашкевіца)',
+			inputmethods: [ 'be-transliteration', 'be-latin' ]
+		},
 		'ber': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
 			inputmethods: [ 'ber-tfng' ]
