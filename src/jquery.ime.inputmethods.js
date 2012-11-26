@@ -540,6 +540,10 @@
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
 		},
+		'ipa-x-sampa': {
+			name: 'International Phonetic Alphabet - X-SAMPA',
+			source: 'rules/fonipa/ipa-x-sampa.js'
+		},
 		'udm-alt': {
 			name: 'Удмурт ALT',
 			source: 'rules/udm/udm-alt.js'
@@ -637,7 +641,7 @@
 		},
 		'en': {
 			autonym: 'English',
-			inputmethods: [ 'ipa-sil' ]
+			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
 		'el': {
 			autonym: 'Ελληνικά',
@@ -689,7 +693,7 @@
 		},
 		'fonipa': {
 			autonym: 'International Phonetic Alphabet',
-			inputmethods: [ 'ipa-sil' ]
+			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
 		'jv': {
 			autonym: 'ꦧꦱꦗꦮ',
