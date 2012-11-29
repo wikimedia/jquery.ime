@@ -284,12 +284,12 @@
 			{ input: 'Sa', output: 'ଶ', description: 'Odia transliteration Sa -> ଶ' },
 			{ input: 'sa', output: 'ସ', description: 'Odia transliteration sa -> ସ' },
 			{ input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ' },
-			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' },
-			{ input: '.',  output: '।', description: 'Odia transliteration a -> ଅ ' }
+			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
 		],
 		inputmethod: 'or-transliteration',
 		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
 	} );
+	
 imeTest( {
 		description: 'Oriya phonetic test',
 		tests: [
