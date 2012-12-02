@@ -218,12 +218,14 @@
 				data = $this.data( 'ime' ),
 				options = typeof option === 'object' && option;
 
-			if ( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
+			// Some exclusions: IME shouldn't be applied to textareas with
+			// these properties.
+			if ( $this.prop( 'readonly' ) ||
+				$this.prop( 'disabled' ) ||
+				$this.hasClass( 'noime' ) ) {
 				return;
 			}
-			if ( $this.hasClass( 'noime' ) ) {
-				return;
-			}
+
 			if ( !data ) {
 				data = new IME( this, options );
 				$this.data( 'ime', data );
