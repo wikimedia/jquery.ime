@@ -13,9 +13,13 @@
 		}
 	} );
 
-	QUnit.test( 'Initialization tests', 7, function ( assert ) {
+	QUnit.test( 'Initialization tests', 11, function ( assert ) {
+		var $readonlyTextarea = $( '<textarea readonly>' ),
+			$disabledTextarea = $( '<textarea disabled>' ),
+			$noimeTextarea = $( '<textarea class="noime">' );
+
 		assert.strictEqual( typeof $textarea.ime, 'function', 'ime function exists' );
-		assert.strictEqual( typeof $textarea.data('ime'), 'undefined', 'ime not initialized before calling ime()' );
+		assert.strictEqual( typeof $textarea.data( 'ime' ), 'undefined', 'ime not initialized before calling ime()' );
 
 		$input.ime();
 		inputIME = $input.data( 'ime' );
@@ -29,11 +33,21 @@
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
 							'imePath is defined correctly using options in the constructor' );
+
+		$readonlyTextarea.ime();
+		$disabledTextarea.ime();
+		$noimeTextarea.ime();
+
+		assert.strictEqual( $readonlyTextarea.data( 'ime' ), undefined, 'ime is not defined for a readonly <textarea>' );
+		assert.strictEqual( $disabledTextarea.data( 'ime' ), undefined, 'ime is not defined for a disabled <textarea>' );
+		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
+
+		$textarea.ime();
+		textareaIME = $textarea.data( 'ime' );
+		assert.strictEqual( typeof textareaIME, 'object', 'ime is defined for a regular <textarea>' );
 	} );
 
 	QUnit.test( 'Selector tests', 12, function ( assert ) {
-		$textarea.ime();
-		textareaIME = $textarea.data( 'ime' );
 		var selector = textareaIME.selector.data( 'imeselector' );
 		assert.strictEqual( typeof selector, 'object', 'selector on textarea is defined' );
 
@@ -41,7 +55,7 @@
 		assert.strictEqual( textareaIME.getIM(), null, 'inputmethod is not enabled initially' );
 
 		textareaIME.enable();
-		assert.strictEqual( textareaIME.isActive(), true, 'selector is active' );
+		assert.strictEqual( textareaIME.isActive(), true, 'selector is active after enabling' );
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
@@ -289,7 +303,7 @@
 		inputmethod: 'or-transliteration',
 		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
 	} );
-	
+
 imeTest( {
 		description: 'Oriya phonetic test',
 		tests: [
