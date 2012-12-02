@@ -1876,6 +1876,40 @@
 		inputmethod: 'ipa-sil',
 		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
 	} );
+	
+	imeTest( {
+		description: 'Thai Kedmanee test',
+		tests: [
+			{ input: '\\~', output: '%', description: '\\~ → %' },
+			{ input: 'v', output: 'อ', description: 'Thai long vowel “o”' },
+			{ input: 'i', output: 'ร', description: 'Thai low consonant “r”' },
+			{ input: 'l^j', output: 'สู่', description: 'The word “to” in Thai' },
+			{ input: 'c,oe', output: 'แมนำ', description: 'The word “parent” in Thai' },
+			{ input: 'xitgmL', output: 'ประเทศ', description: 'The word “nation” in Thai' },
+			{ input: '\\;bdbrugfup', output: 'วิกิพีเดีย', description: 'The word “Wikipedia” in Thai' },
+			{ input: '4kKkwmp', output: 'ภาษาไทย', description: 'The name of the Thai language in Thai' },
+			{ input: 'F*oyo gxuUpt', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
+		],
+		inputmethod: 'th-kedmanee',
+		$input: $( '<input>' ).attr( { id: 'th', type: 'text' } )
+	} );
+
+	imeTest( {
+		description: 'Thai Pattachote test',
+		tests: [
+			{ input: '\\~', output: '฿', description: '\\~ → ฿' },
+			{ input: 'r', output: 'อ', description: 'Thai long vowel “o”' },
+			{ input: 't', output: 'ร', description: 'Thai low consonant “r”' },
+			{ input: 'm6y', output: 'สู่', description: 'The word “to” in Thai' },
+			{ input: 'pikD', output: 'แมนำ', description: 'The word “parent” in Thai' },
+			{ input: 'xt,lsN', output: 'ประเทศ', description: 'The word “nation” in Thai' },
+			{ input: 'obfb\\/hluhe', output: 'วิกิพีเดีย', description: 'The word “Wikipedia” in Thai' },
+			{ input: 'VjTj;se', output: 'ภาษาไทย', description: 'The name of the Thai language in Thai' },
+			{ input: 'Lnkgk lxhQe,', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
+		],
+		inputmethod: 'th-pattachote',
+		$input: $( '<input>' ).attr( { id: 'th', type: 'text' } )
+	} );
 
 	// Basic sendkey-implementation
 	// $input - the input element
