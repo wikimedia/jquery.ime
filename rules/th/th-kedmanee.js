@@ -3,7 +3,7 @@
 
 	var kedmanee = {
 		id: 'th-kedmanee',
-		name: 'Thai Kedmanee',
+		name: 'แป้นพิมพ์เกษมณี',
 		description: 'Thai Kedmanee Input Method',
 		date: '2012-12-02',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -69,7 +69,7 @@
 			['k', 'า'],
 			['l', 'ส'],
 			['\\;', 'ว'],
-			[''', 'ง'],
+			['\\'', 'ง'],
 			['z', 'ผ'],
 			['x', 'ป'],
 			['c', 'แ'],
@@ -106,7 +106,7 @@
 			['\\(', '๖'],
 			['\\)', '๗'],
 			['_', '๘'],
-			['\\+', '๙'],
+			['\\+', '๙']
 		]
 	};
 

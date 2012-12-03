@@ -3,7 +3,7 @@
 
 	var pattachote = {
 		id: 'th-pattachote',
-		name: 'Thai Pattachote',
+		name: 'แป้นพิมพ์ปัตตะโชติ',
 		description: 'Thai Pattachote Input Method',
 		date: '2012-12-02',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -69,7 +69,7 @@
 			['k', 'น'],
 			['l', 'เ'],
 			['\\;', 'ไ'],
-			[''', 'ข'],
+			['\\'', 'ข'],
 			['z', 'บ'],
 			['x', 'ป'],
 			['c', 'ล'],
@@ -106,7 +106,7 @@
 			['\\(', '('],
 			['\\)', ')'],
 			['_', '-'],
-			['\\+', '%'],
+			['\\+', '%']
 		]
 	};
 
