@@ -1,10 +1,10 @@
 JQuery IME
 ==========================
 
-jQuery Input method editor library supporting 50+ input methods across several languages. 
-This is jquery version of the input method tool used in Wikimedia projects. 
-These input methods are well tested and contributed by large wikimedia community.
-This project is a Wikimedia foundation initiative to provide language technology tools to wider audience outside Wikimedia universe.
+jQuery Input method editor library supporting 50+ input methods across several languages.
+This is the jQuery version of the input method tool used in Wikimedia projects, a.k.a. Narayam.
+These input methods are well tested and contributed by large Wikimedia community.
+This project is a Wikimedia foundation initiative to provide language technology tools to wider audience outside the Wikimedia universe.
 
 
 Quick start
@@ -29,6 +29,8 @@ See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page whe
 For Developers
 --------------
 Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules) to learn how to write an input method for language.
+
+Read [rules/README.tests](https://github.com/wikimedia/jquery.ime/tree/master/test/README.tests) to learn how to write and run tests for an input method.
 
 Read the technical specification of project from [wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification)
 
