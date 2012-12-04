@@ -1,13 +1,13 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME,
-		$input, inputIME;
+	var $textarea, textareaIME;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
 			$textarea = $( '<textarea>' );
-			$input = $( '<input>' );
+			$textarea.ime();
+			textareaIME = $textarea.data( 'ime' );
 		},
 		teardown: function () {
 		}
@@ -16,13 +16,16 @@
 	QUnit.test( 'Initialization tests', 11, function ( assert ) {
 		var $readonlyTextarea = $( '<textarea readonly>' ),
 			$disabledTextarea = $( '<textarea disabled>' ),
-			$noimeTextarea = $( '<textarea class="noime">' );
+			$noimeTextarea = $( '<textarea class="noime">' ),
+			$input = $( '<input>' ),
+			inputIME;
 
-		assert.strictEqual( typeof $textarea.ime, 'function', 'ime function exists' );
-		assert.strictEqual( typeof $textarea.data( 'ime' ), 'undefined', 'ime not initialized before calling ime()' );
+		assert.strictEqual( typeof $input.ime, 'function', 'ime function exists' );
+		assert.strictEqual( typeof $input.data( 'ime' ), 'undefined', 'ime not initialized before calling ime()' );
 
 		$input.ime();
 		inputIME = $input.data( 'ime' );
+		assert.strictEqual( typeof inputIME, 'object', 'ime is defined for a regular <input>' );
 		assert.strictEqual( inputIME.isActive(), false, 'ime is initially inactive' );
 		assert.strictEqual( inputIME.context, '', 'context is initially empty' );
 		assert.strictEqual( inputIME.getIM(), null, 'inputmethod is initially null' );
@@ -41,10 +44,6 @@
 		assert.strictEqual( $readonlyTextarea.data( 'ime' ), undefined, 'ime is not defined for a readonly <textarea>' );
 		assert.strictEqual( $disabledTextarea.data( 'ime' ), undefined, 'ime is not defined for a disabled <textarea>' );
 		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
-
-		$textarea.ime();
-		textareaIME = $textarea.data( 'ime' );
-		assert.strictEqual( typeof textareaIME, 'object', 'ime is defined for a regular <textarea>' );
 	} );
 
 	QUnit.test( 'Selector tests', 12, function ( assert ) {
@@ -118,22 +117,31 @@
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 2, 'Kannada added to previous languages' );
 		$.ime.preferences.setLanguage( 'hi' );
 		$.ime.preferences.setIM( 'hi-inscript' );
-		assert.strictEqual( $.ime.preferences.getIM('hi'), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
-		assert.strictEqual( $.ime.preferences.getIM('kn'), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
+		assert.strictEqual( $.ime.preferences.getIM( 'hi' ), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
+		assert.strictEqual( $.ime.preferences.getIM( 'kn' ), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
+	} );
+
+	QUnit.test( 'Utility functions tests', 7, function ( assert ) {
+		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 5, 2 ), 'ba', 'lastNChars works with short buffer.' );
+		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 2, 5 ), 'fo', 'lastNChars works with long buffer.' );
+
+		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abc' ), -1, 'firstDivergence - equal strings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'a', 'b' ), 0, 'firstDivergence - different one-letter strings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'a', 'bb' ), 0, 'firstDivergence - different strings, different lengths' );
+		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abd' ), 2, 'firstDivergence - different strings with equal beginnings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'abcd', 'abd' ), 2, 'firstDivergence - different strings, equal beginnings, different lengths' );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
-			$textarea = $( '<textarea>' );
-			$input = $( '<input>' );
 		},
+
 		teardown: function () {
 		}
 	} );
 
-
-	/* T
-	 * ry for imeTest
+	/**
+	 * A general framework for testing a keyboard layout.
 	 */
 	var imeTest = function( options ) {
 		var opt = $.extend( {
