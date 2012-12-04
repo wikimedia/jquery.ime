@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	function IME ( element, options ) {
+	function IME( element, options ) {
 		this.$element = $( element );
 		// This needs to be delayed here since extending language list happens at DOM ready
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
@@ -172,8 +172,14 @@
 		},
 
 		setLanguage: function ( languageCode ) {
+			if ( $.inArray( languageCode, this.options.languages ) === -1 ) {
+				debug( 'Language ' + languageCode + ' is not known to jquery.ime.' );
+				return false;
+			}
+
 			this.language = languageCode;
 			$.ime.preferences.setLanguage( languageCode );
+			return true;
 		},
 
 		getLanguage: function () {
@@ -354,7 +360,7 @@
 	};
 
 	// private function for debugging
-	function debug ( $obj ) {
+	function debug( $obj ) {
 		if ( window.console && window.console.log ) {
 			window.console.log( $obj );
 		}

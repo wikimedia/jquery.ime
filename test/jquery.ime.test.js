@@ -121,7 +121,8 @@
 		assert.strictEqual( $.ime.preferences.getIM( 'kn' ), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
 	} );
 
-	QUnit.test( 'Utility functions tests', 7, function ( assert ) {
+	QUnit.test( 'Utility functions tests', 12, function ( assert ) {
+		var setLanguageResult;
 		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 5, 2 ), 'ba', 'lastNChars works with short buffer.' );
 		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 2, 5 ), 'fo', 'lastNChars works with long buffer.' );
 
@@ -130,6 +131,14 @@
 		assert.strictEqual( textareaIME.firstDivergence( 'a', 'bb' ), 0, 'firstDivergence - different strings, different lengths' );
 		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abd' ), 2, 'firstDivergence - different strings with equal beginnings' );
 		assert.strictEqual( textareaIME.firstDivergence( 'abcd', 'abd' ), 2, 'firstDivergence - different strings, equal beginnings, different lengths' );
+
+		assert.strictEqual( textareaIME.getLanguage(), null, 'ime language is initially null' );
+		setLanguageResult = textareaIME.setLanguage( 'noSuchLanguage' );
+		assert.strictEqual( setLanguageResult, false, 'Setting an invalid language returns false' );
+		assert.strictEqual( textareaIME.getLanguage(), null, 'Language does not change after an invalid setting' );
+		setLanguageResult = textareaIME.setLanguage( 'ru' );
+		assert.strictEqual( setLanguageResult, true, 'Setting a valid language returns true' );
+		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
