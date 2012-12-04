@@ -189,15 +189,15 @@
 		 */
 		position: function () {
 			this.focus();  // shows the trigger in case it is hidden
-			var that, position, top, left;
+			var that, position, top, left, room;
 			that = this;
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
-
-			if ( $( window ).height() - top < this.$imeSetting.outerHeight() ) {
-				top = position.top - this.$imeSetting.outerHeight();
+			room = $( window ).height() - top;
+			if ( room < this.$imeSetting.outerHeight() ) {
+				top = top - this.$imeSetting.outerHeight()
 				this.$menu.css( 'top',
 								- ( this.$menu.outerHeight() +
 									this.$imeSetting.outerHeight()
