@@ -46,8 +46,10 @@
 		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
 	} );
 
-	QUnit.test( 'Selector tests', 12, function ( assert ) {
-		var selector = textareaIME.selector.data( 'imeselector' );
+	QUnit.test( 'Selector tests', 13, function ( assert ) {
+		var selector = textareaIME.selector.data( 'imeselector' ),
+			nonBrokenImeName, brokenImeName, saveBrokenImeSource;
+
 		assert.strictEqual( typeof selector, 'object', 'selector on textarea is defined' );
 
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active initially' );
@@ -106,6 +108,18 @@
 				'inputmethod for Tamil is Tamil Bamini' );
 			QUnit.start();
 		} );
+
+		// Negative test: trying to load an IME with a broken URL
+		nonBrokenImeName = 'ml-transliteration';
+		brokenImeName = 'ml-inscript';
+		saveBrokenImeSource = $.ime.sources[brokenImeName].source;
+		$.ime.sources[brokenImeName].source = 'This source is wrong';
+		QUnit.stop();
+		selector.selectIM( brokenImeName );
+		QUnit.start();
+		assert.strictEqual( $.ime.preferences.getIM( 'ml' ), nonBrokenImeName,
+							'Trying to load an IME with a broken URL does not change the current IME' );
+		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
 	} );
 
 	QUnit.test( 'Preferences tests', 5, function ( assert ) {
@@ -1658,8 +1672,8 @@ imeTest( {
 	imeTest( {
 		description: 'Belarusian transliteration test',
 		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
+			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
+			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
 		inputmethod: 'be-transliteration',
 		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )

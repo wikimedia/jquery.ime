@@ -171,7 +171,7 @@
 					if ( this.inputmethod !== null ) {
 						this.selectIM( this.inputmethod.id );
 					} else {
-						this.selectLanguage ( $.ime.preferences.getLanguage() );
+						this.selectLanguage( $.ime.preferences.getLanguage() );
 					}
 				}
 
@@ -267,7 +267,6 @@
 				// save this preference
 				$.ime.preferences.save();
 			} );
-
 		},
 
 		/**
