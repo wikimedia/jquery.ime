@@ -1905,7 +1905,7 @@
 			{ input: 'xt\\,lsN', output: 'ประเทศ', description: 'The word “nation” in Thai' },
 			{ input: 'obfb\\/hluhe', output: 'วิกิพีเดีย', description: 'The word “Wikipedia” in Thai' },
 			{ input: 'VjTj\\;se', output: 'ภาษาไทย', description: 'The name of the Thai language in Thai' },
-			{ input: 'Lnkgk lxhQe,', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
+			{ input: 'Lnkgk lxhQe\\,', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
 		],
 		inputmethod: 'th-pattachote',
 		$input: $( '<input>' ).attr( { id: 'th', type: 'text' } )
