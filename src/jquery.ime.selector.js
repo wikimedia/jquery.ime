@@ -189,11 +189,33 @@
 		 */
 		position: function () {
 			this.focus();  // shows the trigger in case it is hidden
-			var position = this.$element.offset();
+			var that, position, top, left, room;
+			that = this;
+			position = this.$element.offset();
+			top = position.top + this.$element.outerHeight();
+			left = position.left + this.$element.outerWidth()
+				- this.$imeSetting.outerWidth();
+			room = $( window ).height() - top;
+			if ( room < this.$imeSetting.outerHeight() ) {
+				top = top - this.$imeSetting.outerHeight()
+				this.$menu.css( 'top',
+								- ( this.$menu.outerHeight() +
+									this.$imeSetting.outerHeight()
+								  ) )
+					.addClass( 'position-top' );
+			}
 
-			this.$imeSetting.css( 'top', position.top + this.$element.outerHeight() );
-			this.$imeSetting.css( 'left', position.left + this.$element.outerWidth()
-				- this.$imeSetting.outerWidth() );
+			this.$element.parents().each( function() {
+				if ( $( this ).css( 'position' ) == 'fixed' ) {
+					that.$imeSetting.css( 'position', 'fixed' );
+					return false;
+				}
+			} );
+
+			this.$imeSetting.css({
+				top: top,
+				left: left
+			});
 		},
 
 		/**
