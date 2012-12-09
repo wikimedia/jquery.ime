@@ -1614,6 +1614,7 @@ imeTest( {
 			{ input: 'ki', output: 'কি', description: 'Bengali Probhat - ki' },
 			{ input: 'k/S', output: 'ক্ষ', description: 'Bengali Probhat - kha' },
 			{ input: 'q<', output: 'দৃ', description: 'Bengali Probhat - drri' },
+			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
 			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
 		],
 		inputmethod: 'bn-probhat',
