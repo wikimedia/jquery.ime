@@ -220,53 +220,7 @@
 		// Returns an array [start, end] of the beginning
 		// and the end of the current selection in $element
 		getCaretPosition: function ( $element ) {
-			var el = $element.get( 0 ),
-				start = 0,
-				end = 0,
-				normalizedValue,
-				range,
-				textInputRange,
-				len,
-				endRange;
-
-			if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
-				start = el.selectionStart;
-				end = el.selectionEnd;
-			} else {
-				// IE
-				range = document.selection.createRange();
-
-				if ( range && range.parentElement() === el ) {
-					len = el.value.length;
-					normalizedValue = el.value.replace( /\r\n/g, '\n' );
-
-					// Create a working TextRange that lives only in the input
-					textInputRange = el.createTextRange();
-					textInputRange.moveToBookmark( range.getBookmark() );
-
-					// Check if the start and end of the selection are at the very end
-					// of the input, since moveStart/moveEnd doesn't return what we want
-					// in those cases
-					endRange = el.createTextRange();
-					endRange.collapse( false );
-
-					if ( textInputRange.compareEndPoints( 'StartToEnd', endRange ) > -1 ) {
-						start = end = len;
-					} else {
-						start = -textInputRange.moveStart( 'character', -len );
-						start += normalizedValue.slice( 0, start ).split( '\n' ).length - 1;
-
-						if ( textInputRange.compareEndPoints( 'EndToEnd', endRange ) > -1 ) {
-							end = len;
-						} else {
-							end = -textInputRange.moveEnd( 'character', -len );
-							end += normalizedValue.slice( 0, end ).split( '\n' ).length - 1;
-						}
-					}
-				}
-			}
-
-			return [ start, end ];
+			return getCaretPosition( $element );
 		},
 
 		/**
@@ -278,17 +232,7 @@
 		 * @return Position at which a and b diverge, or -1 if a === b
 		 */
 		firstDivergence: function ( a, b ) {
-			var minLength, i;
-
-			minLength = a.length < b.length ? a.length : b.length;
-
-			for ( i = 0; i < minLength; i++ ) {
-				if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
-					return i;
-				}
-			}
-
-			return -1;
+			return firstDivergence( a, b );
 		},
 
 		/**
@@ -301,13 +245,7 @@
 		 * @return Substring of str, at most n characters long, immediately preceding pos
 		 */
 		lastNChars: function ( str, pos, n ) {
-			if ( n === 0 ) {
-				return '';
-			} else if ( pos <= n ) {
-				return str.substr( 0, pos );
-			} else {
-				return str.substr( pos - n, n );
-			}
+			return lastNChars( str, pos, n );
 		}
 	};
 
@@ -366,6 +304,58 @@
 		}
 	}
 
+	// Returns an array [start, end] of the beginning
+	// and the end of the current selection in $element
+	function getCaretPosition( $element ) {
+		var el = $element.get( 0 ),
+			start = 0,
+			end = 0,
+			normalizedValue,
+			range,
+			textInputRange,
+			len,
+			endRange;
+
+		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
+			start = el.selectionStart;
+			end = el.selectionEnd;
+		} else {
+			// IE
+			range = document.selection.createRange();
+
+			if ( range && range.parentElement() === el ) {
+				len = el.value.length;
+				normalizedValue = el.value.replace( /\r\n/g, '\n' );
+
+				// Create a working TextRange that lives only in the input
+				textInputRange = el.createTextRange();
+				textInputRange.moveToBookmark( range.getBookmark() );
+
+				// Check if the start and end of the selection are at the very end
+				// of the input, since moveStart/moveEnd doesn't return what we want
+				// in those cases
+				endRange = el.createTextRange();
+				endRange.collapse( false );
+
+				if ( textInputRange.compareEndPoints( 'StartToEnd', endRange ) > -1 ) {
+					start = end = len;
+				} else {
+					start = -textInputRange.moveStart( 'character', -len );
+					start += normalizedValue.slice( 0, start ).split( '\n' ).length - 1;
+
+					if ( textInputRange.compareEndPoints( 'EndToEnd', endRange ) > -1 ) {
+						end = len;
+					} else {
+						end = -textInputRange.moveEnd( 'character', -len );
+						end += normalizedValue.slice( 0, end ).split( '\n' ).length - 1;
+					}
+				}
+			}
+		}
+
+		return [ start, end ];
+	}
+
 	/**
 	 * Helper function to get an IE TextRange object for an element
 	 */
@@ -421,6 +411,47 @@
 		}
 	}
 
+	/**
+	 * Find the point at which a and b diverge, i.e. the first position
+	 * at which they don't have matching characters.
+	 *
+	 * @param a String
+	 * @param b String
+	 * @return Position at which a and b diverge, or -1 if a === b
+	 */
+	function firstDivergence( a, b ) {
+		var minLength, i;
+
+		minLength = a.length < b.length ? a.length : b.length;
+
+		for ( i = 0; i < minLength; i++ ) {
+			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
+				return i;
+			}
+		}
+
+		return -1;
+	}
+
+	/**
+	 * Get the n characters in str that immediately precede pos
+	 * Example: lastNChars( 'foobarbaz', 5, 2 ) === 'ba'
+	 *
+	 * @param str String to search in
+	 * @param pos Position in str
+	 * @param n Number of characters to go back from pos
+	 * @return Substring of str, at most n characters long, immediately preceding pos
+	 */
+	function lastNChars( str, pos, n ) {
+		if ( n === 0 ) {
+			return '';
+		} else if ( pos <= n ) {
+			return str.substr( 0, pos );
+		} else {
+			return str.substr( pos - n, n );
+		}
+	}
+
 	function arrayKeys ( obj ) {
 		var rv = [];
 		$.each( obj, function ( key ) {
@@ -428,5 +459,4 @@
 		} );
 		return rv;
 	}
-
 }( jQuery ) );
