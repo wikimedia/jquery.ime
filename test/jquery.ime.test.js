@@ -1,24 +1,31 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME,
-		$input, inputIME;
+	var $textarea, textareaIME;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
 			$textarea = $( '<textarea>' );
-			$input = $( '<input>' );
+			$textarea.ime();
+			textareaIME = $textarea.data( 'ime' );
 		},
 		teardown: function () {
 		}
 	} );
 
-	QUnit.test( 'Initialization tests', 7, function ( assert ) {
-		assert.strictEqual( typeof $textarea.ime, 'function', 'ime function exists' );
-		assert.strictEqual( typeof $textarea.data('ime'), 'undefined', 'ime not initialized before calling ime()' );
+	QUnit.test( 'Initialization tests', 11, function ( assert ) {
+		var $readonlyTextarea = $( '<textarea readonly>' ),
+			$disabledTextarea = $( '<textarea disabled>' ),
+			$noimeTextarea = $( '<textarea class="noime">' ),
+			$input = $( '<input>' ),
+			inputIME;
+
+		assert.strictEqual( typeof $input.ime, 'function', 'ime function exists' );
+		assert.strictEqual( typeof $input.data( 'ime' ), 'undefined', 'ime not initialized before calling ime()' );
 
 		$input.ime();
 		inputIME = $input.data( 'ime' );
+		assert.strictEqual( typeof inputIME, 'object', 'ime is defined for a regular <input>' );
 		assert.strictEqual( inputIME.isActive(), false, 'ime is initially inactive' );
 		assert.strictEqual( inputIME.context, '', 'context is initially empty' );
 		assert.strictEqual( inputIME.getIM(), null, 'inputmethod is initially null' );
@@ -29,29 +36,39 @@
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
 							'imePath is defined correctly using options in the constructor' );
+
+		$readonlyTextarea.ime();
+		$disabledTextarea.ime();
+		$noimeTextarea.ime();
+
+		assert.strictEqual( $readonlyTextarea.data( 'ime' ), undefined, 'ime is not defined for a readonly <textarea>' );
+		assert.strictEqual( $disabledTextarea.data( 'ime' ), undefined, 'ime is not defined for a disabled <textarea>' );
+		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
 	} );
 
-	QUnit.test( 'Selector tests', 12, function ( assert ) {
-		$textarea.ime();
-		textareaIME = $textarea.data( 'ime' );
-		var selector = textareaIME.selector.data( 'imeselector' );
+	QUnit.test( 'Selector tests', 13, function ( assert ) {
+		var selector = textareaIME.selector.data( 'imeselector' ),
+			nonBrokenImeName, brokenImeName, saveBrokenImeSource;
+
 		assert.strictEqual( typeof selector, 'object', 'selector on textarea is defined' );
 
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active initially' );
 		assert.strictEqual( textareaIME.getIM(), null, 'inputmethod is not enabled initially' );
 
 		textareaIME.enable();
-		assert.strictEqual( textareaIME.isActive(), true, 'selector is active' );
+		assert.strictEqual( textareaIME.isActive(), true, 'selector is active after enabling' );
+
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
-			// selector.selectIM( 'hi-transliteration' );
+
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
 				'Hindi inputmethod is Hindi Transliteration' );
 			QUnit.start();
 		} );
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
+
 		QUnit.stop();
 		textareaIME.load( 'ta-transliteration', function () {
 			selector.selectLanguage( 'ta' );
@@ -59,6 +76,7 @@
 				'Tamil inputmethod is defaulted to Tamil Transliteration' );
 			QUnit.start();
 		} );
+
 		QUnit.stop();
 		textareaIME.load( 'ta-bamini', function () {
 			selector.selectLanguage( 'ta' );
@@ -67,16 +85,18 @@
 				'Tamil inputmethod is changed to Tamil Bamini' );
 			QUnit.start();
 		} );
+
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'Selector is not active' );
 		QUnit.stop();
 		textareaIME.load( 'kn-transliteration', function () {
 			selector.selectLanguage( 'kn' );
-			// selector.selectIM( 'kn-transliteration' ); Implicit
+
 			assert.strictEqual( textareaIME.getIM().id, 'kn-transliteration',
 				'Default inputmethod for Kannada is Kannada Transliteration' );
 			QUnit.start();
 		} );
+
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
@@ -89,6 +109,17 @@
 			QUnit.start();
 		} );
 
+		// Negative test: trying to load an IME with a broken URL
+		nonBrokenImeName = 'ml-transliteration';
+		brokenImeName = 'ml-inscript';
+		saveBrokenImeSource = $.ime.sources[brokenImeName].source;
+		$.ime.sources[brokenImeName].source = 'This source is wrong';
+		QUnit.stop();
+		selector.selectIM( brokenImeName );
+		QUnit.start();
+		assert.strictEqual( $.ime.preferences.getIM( 'ml' ), nonBrokenImeName,
+							'Trying to load an IME with a broken URL does not change the current IME' );
+		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
 	} );
 
 	QUnit.test( 'Preferences tests', 5, function ( assert ) {
@@ -104,22 +135,40 @@
 		assert.strictEqual( $.ime.preferences.getPreviousLanguages().length, 2, 'Kannada added to previous languages' );
 		$.ime.preferences.setLanguage( 'hi' );
 		$.ime.preferences.setIM( 'hi-inscript' );
-		assert.strictEqual( $.ime.preferences.getIM('hi'), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
-		assert.strictEqual( $.ime.preferences.getIM('kn'), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
+		assert.strictEqual( $.ime.preferences.getIM( 'hi' ), 'hi-inscript', 'Hindi Inscript is the preferred IM for Hindi' );
+		assert.strictEqual( $.ime.preferences.getIM( 'kn' ), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
+	} );
+
+	QUnit.test( 'Utility functions tests', 12, function ( assert ) {
+		var setLanguageResult;
+		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 5, 2 ), 'ba', 'lastNChars works with short buffer.' );
+		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 2, 5 ), 'fo', 'lastNChars works with long buffer.' );
+
+		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abc' ), -1, 'firstDivergence - equal strings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'a', 'b' ), 0, 'firstDivergence - different one-letter strings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'a', 'bb' ), 0, 'firstDivergence - different strings, different lengths' );
+		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abd' ), 2, 'firstDivergence - different strings with equal beginnings' );
+		assert.strictEqual( textareaIME.firstDivergence( 'abcd', 'abd' ), 2, 'firstDivergence - different strings, equal beginnings, different lengths' );
+
+		assert.strictEqual( textareaIME.getLanguage(), null, 'ime language is initially null' );
+		setLanguageResult = textareaIME.setLanguage( 'noSuchLanguage' );
+		assert.strictEqual( setLanguageResult, false, 'Setting an invalid language returns false' );
+		assert.strictEqual( textareaIME.getLanguage(), null, 'Language does not change after an invalid setting' );
+		setLanguageResult = textareaIME.setLanguage( 'ru' );
+		assert.strictEqual( setLanguageResult, true, 'Setting a valid language returns true' );
+		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
-			$textarea = $( '<textarea>' );
-			$input = $( '<input>' );
 		},
+
 		teardown: function () {
 		}
 	} );
 
-
-	/* T
-	 * ry for imeTest
+	/**
+	 * A general framework for testing a keyboard layout.
 	 */
 	var imeTest = function( options ) {
 		var opt = $.extend( {
@@ -289,7 +338,7 @@
 		inputmethod: 'or-transliteration',
 		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
 	} );
-	
+
 imeTest( {
 		description: 'Oriya phonetic test',
 		tests: [
@@ -1624,8 +1673,8 @@ imeTest( {
 	imeTest( {
 		description: 'Belarusian transliteration test',
 		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
+			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
+			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
 		inputmethod: 'be-transliteration',
 		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
