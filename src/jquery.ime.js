@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	function IME ( element, options ) {
+	function IME( element, options ) {
 		this.$element = $( element );
 		// This needs to be delayed here since extending language list happens at DOM ready
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
@@ -108,14 +108,14 @@
 			// Get the current caret position. The user may have selected text to overwrite,
 			// so get both the start and end position of the selection. If there is no selection,
 			// startPos and endPos will be equal.
-			pos = getCaretPosition( this.$element );
+			pos = this.getCaretPosition( this.$element );
 			startPos = pos[0];
 			endPos = pos[1];
 
 			// Get the last few characters before the one the user just typed,
 			// to provide context for the transliteration regexes.
 			// We need to append c because it hasn't been added to $this.val() yet
-			input = lastNChars( this.$element.val() || this.$element.text(), startPos,
+			input = this.lastNChars( this.$element.val() || this.$element.text(), startPos,
 					this.inputmethod.maxKeyLength )
 					+ c;
 
@@ -136,7 +136,7 @@
 			}
 
 			// Drop a common prefix, if any
-			divergingPos = firstDivergence( input, replacement );
+			divergingPos = this.firstDivergence( input, replacement );
 			input = input.substring( divergingPos );
 			replacement = replacement.substring( divergingPos );
 			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
@@ -172,8 +172,14 @@
 		},
 
 		setLanguage: function ( languageCode ) {
+			if ( $.inArray( languageCode, this.options.languages ) === -1 ) {
+				debug( 'Language ' + languageCode + ' is not known to jquery.ime.' );
+				return false;
+			}
+
 			this.language = languageCode;
 			$.ime.preferences.setLanguage( languageCode );
+			return true;
 		},
 
 		getLanguage: function () {
@@ -209,21 +215,56 @@
 			} ).fail( function ( jqxhr, settings, exception ) {
 				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
 			} );
+		},
+
+		// Returns an array [start, end] of the beginning
+		// and the end of the current selection in $element
+		getCaretPosition: function ( $element ) {
+			return getCaretPosition( $element );
+		},
+
+		/**
+		 * Find the point at which a and b diverge, i.e. the first position
+		 * at which they don't have matching characters.
+		 *
+		 * @param a String
+		 * @param b String
+		 * @return Position at which a and b diverge, or -1 if a === b
+		 */
+		firstDivergence: function ( a, b ) {
+			return firstDivergence( a, b );
+		},
+
+		/**
+		 * Get the n characters in str that immediately precede pos
+		 * Example: lastNChars( 'foobarbaz', 5, 2 ) === 'ba'
+		 *
+		 * @param str String to search in
+		 * @param pos Position in str
+		 * @param n Number of characters to go back from pos
+		 * @return Substring of str, at most n characters long, immediately preceding pos
+		 */
+		lastNChars: function ( str, pos, n ) {
+			return lastNChars( str, pos, n );
 		}
 	};
 
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
-			var $this = $( this ),
-				data = $this.data( 'ime' ),
+			var data,
+				$this = $( this ),
 				options = typeof option === 'object' && option;
 
-			if ( $this.prop( 'readonly' ) || $this.prop( 'disabled' ) ) {
+			// Some exclusions: IME shouldn't be applied to textareas with
+			// these properties.
+			if ( $this.prop( 'readonly' ) ||
+				$this.prop( 'disabled' ) ||
+				$this.hasClass( 'noime' ) ) {
 				return;
 			}
-			if ( $this.hasClass( 'noime' ) ) {
-				return;
-			}
+
+			data = $this.data( 'ime' );
+
 			if ( !data ) {
 				data = new IME( this, options );
 				$this.data( 'ime', data );
@@ -257,15 +298,14 @@
 	};
 
 	// private function for debugging
-	function debug ( $obj ) {
+	function debug( $obj ) {
 		if ( window.console && window.console.log ) {
 			window.console.log( $obj );
 		}
 	}
 
-	/**
-	 *
-	 */
+	// Returns an array [start, end] of the beginning
+	// and the end of the current selection in $element
 	function getCaretPosition( $element ) {
 		var el = $element.get( 0 ),
 			start = 0,
@@ -330,9 +370,6 @@
 		}
 	}
 
-	/**
-	 *
-	 */
 	function replaceText( $element, replacement, start, end ) {
 		var element = $element.get( 0 ),
 			selection,
@@ -382,7 +419,7 @@
 	 * @param b String
 	 * @return Position at which a and b diverge, or -1 if a === b
 	 */
-	function firstDivergence ( a, b ) {
+	function firstDivergence( a, b ) {
 		var minLength, i;
 
 		minLength = a.length < b.length ? a.length : b.length;
@@ -405,7 +442,7 @@
 	 * @param n Number of characters to go back from pos
 	 * @return Substring of str, at most n characters long, immediately preceding pos
 	 */
-	function lastNChars ( str, pos, n ) {
+	function lastNChars( str, pos, n ) {
 		if ( n === 0 ) {
 			return '';
 		} else if ( pos <= n ) {
@@ -422,5 +459,4 @@
 		} );
 		return rv;
 	}
-
 }( jQuery ) );

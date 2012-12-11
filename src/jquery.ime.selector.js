@@ -171,7 +171,7 @@
 					if ( this.inputmethod !== null ) {
 						this.selectIM( this.inputmethod.id );
 					} else {
-						this.selectLanguage ( $.ime.preferences.getLanguage() );
+						this.selectLanguage( $.ime.preferences.getLanguage() );
 					}
 				}
 
@@ -189,15 +189,17 @@
 		 */
 		position: function () {
 			this.focus();  // shows the trigger in case it is hidden
-			var that, position, top, left, room;
-			that = this;
+			var imeSelector = this,
+				position, top, left, room;
+
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
 			room = $( window ).height() - top;
 			if ( room < this.$imeSetting.outerHeight() ) {
-				top = top - this.$imeSetting.outerHeight()
+				top = top - this.$imeSetting.outerHeight();
+
 				this.$menu.css( 'top',
 								- ( this.$menu.outerHeight() +
 									this.$imeSetting.outerHeight()
@@ -206,8 +208,8 @@
 			}
 
 			this.$element.parents().each( function() {
-				if ( $( this ).css( 'position' ) == 'fixed' ) {
-					that.$imeSetting.css( 'position', 'fixed' );
+				if ( $( this ).css( 'position' ) === 'fixed' ) {
+					imeSelector.$imeSetting.css( 'position', 'fixed' );
 					return false;
 				}
 			} );
@@ -289,7 +291,6 @@
 				// save this preference
 				$.ime.preferences.save();
 			} );
-
 		},
 
 		/**
