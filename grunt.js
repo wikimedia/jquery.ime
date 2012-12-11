@@ -14,7 +14,12 @@ module.exports = function ( grunt ) {
 		},
 		concat: {
 			dist: {
-				src: [ 'src/**/*.js' ],
+				src: ['<banner:meta.banner>',
+					'src/jquery.ime.js',
+					'src/jquery.ime.selector.js',
+					'src/jquery.ime.preferences.js',
+					'src/jquery.ime.inputmethods.js',
+				],
 				dest: 'dist/jquery.ime/<%= pkg.name %>.js'
 			}
 		},
