@@ -156,271 +156,9 @@
 		} );
 	};
 
-	imeTest( {
-		description: 'Malayalam Transliteration test',
-		tests: [
-			{ input: '\\~', output: '~', description: 'Malayalam transliteration - \\~ -> ~' },
-			{ input: 'a', output: 'അ', description: 'Malayalam a' },
-			{ input: 'ra', output: 'ര', description: 'Malayalam ra' },
-			{ input: 'p', output: 'പ്', description: 'Malayalam p' },
-			{ input: 'kh', output: 'ഖ്', description: 'Malayalam kh' },
-			{ input: 'nch', output: 'ഞ്ച്', description: 'Malayalam nch' },
-			{ input: 'au', output: 'ഔ', description: 'Malayalam au' },
-			{ input: 'maU', output: 'മൌ', description: 'Malayalam aU' },
-			{ input: 'kshau', output: 'ക്ഷൗ', description: 'Malayalam kshau' },
-			{ input: 'ram', output: 'രം', description: 'Malayalam ram' },
-			{ input: 'rama', output: 'രമ', description: 'Malayalam rama' },
-			{ input: 'baH', output: 'ബഃ', description: 'baH' },
-			{ input: 'bah', output: 'ബഹ്', description: 'bah' },
-			{ input: 'ai', output: 'ഐ', description: 'ai' },
-			{ input: 'lai', output: 'ലൈ', description: 'lai' },
-			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
-		],
-		inputmethod: 'ml-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ml', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Telugu Transliteration test',
-		tests: [
-			{ input: 'c', output: 'చ్', description: 'Telugu c' },
-			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
-		],
-		inputmethod: 'te-transliteration',
-		$input: $( '<input>' ).attr( { id: 'te', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Telugu InScript test',
-		tests: [
-			{ input: 'k-', output: 'కః', description: 'Telugu k- (visarga)' },
-			{ input: '}', output: 'ఞ', description: 'Telugu } (nya)' },
-			{ input: 'J', output: 'ఱ', description: 'Telugu J (rra)' },
-			{ input: '/', output: 'య', description: 'Telugu / (ya)' },
-			{ input: 'pz', output: 'జె', description: 'Telugu pz (je)' },
-			{ input: 'p`', output: 'జొ', description: 'Telugu p` (jo)' },
-			{ input: 'kX', output: 'కఁ', description: 'Telugu kX (ka@m, candrabindu)' },
-			{ input: 'hx', output: 'పం', description: 'Telugu hx (paM, anusvara)' },
-			{ input: '>', output: '।', description: 'Telugu > (danda)' },
-			{ input: [ [ ';', true ] ], output: 'ౘ', description: 'Telugu Alt ; (tsa)'},
-			{ input: [ [ 'p', true ] ], output: 'ౙ', description: 'Telugu Alt p (dza)'},
-			{ input: [ [ '4', true ] ], output: '₹', description: 'Alt 4; (rupee sign)'},
-			{ input: [ [ '=', true ] ], output: 'ౄ', description: 'Telugu Alt = (RRuu, vowel)'},
-			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)'}
-		],
-		inputmethod: 'te-inscript',
-		$input: $( '<input>' ).attr( { id: 'te-inscript', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Georgian Transliteration test',
-		tests: [
-			{ input: 'vikipedia\\`', output: 'ვიკიპედია`', description: 'Georgian vikipedia with `' },
-			{ input: 'jim morisoni \\~\\~\\~\\~', output: 'ჯიმ მორისონი ~~~~', description: 'Georgian jim morisoni with Wiki Signature' },
-			{ input: 'abcdefghijklmnopqrstuvwxyz', output: 'აბცდეფგჰიჯკლმნოპქრსტუვწხყზ', description: 'a-z in Georgian' },
-			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
-		],
-		inputmethod: 'ka-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ka', type: 'text' } )
-	} );
 
 
-	// TODO: enhance.
-	imeTest( {
-		description: 'Sanskrit transliteration test',
-		tests: [
-			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' }
-		],
-		inputmethod: 'sa-transliteration',
-		$input: $( '<input>' ).attr( { id: 'sa', type: 'text' } )
-	} );
 
-	imeTest( {
-		description: 'Oriya transliteration test',
-		tests: [
-			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
-			{ input: 'a',  output: 'ଅ', description: 'Odia transliteration a -> ଅ ' },
-			{ input: 'aa', output: 'ଆ', description: 'Odia transliteration aa -> ଆ' },
-			{ input: 'A',  output: 'ଆ', description: 'Odia transliteration A -> ଆ' },
-			{ input: 'i',  output: 'ଇ', description: 'Odia transliteration i -> ଇ' },
-			{ input: 'I',  output: 'ଈ', description: 'Odia transliteration I -> ଈ' },
-			{ input: 'u',  output: 'ଉ', description: 'Odia transliteration u -> ଉ' },
-			{ input: 'U',  output: 'ଊ', description: 'Odia transliteration U -> ଊ' },
-			{ input: 'r',  output: 'ର୍', description: 'Odia transliteration r -> ର୍' },
-			{ input: 'R',  output: 'ଋ', description: 'Odia transliteration R -> ଋ' },
-			{ input: 'e',  output: 'ଏ', description: 'Odia transliteration e -> ଏ' },
-			{ input: 'ai', output: 'ଐ', description: 'Odia transliteration ai -> ଐ' },
-			{ input: 'o',  output: 'ଓ', description: 'Odia transliteration o -> ଓ' },
-			{ input: 'O',  output: 'ଔ', description: 'Odia transliteration O -> ଔ' },
-			{ input: 'k',  output: 'କ୍', description: 'Odia transliteration k -> କ୍' },
-			{ input: 'kh', output: 'ଖ୍', description: 'Odia transliteration kh -> ଖ୍' },
-			{ input: 'g',  output: 'ଗ୍', description: 'Odia transliteration g -> ଗ୍' },
-			{ input: 'gh', output: 'ଘ୍', description: 'Odia transliteration gh -> ଘ୍' },
-			{ input: 'NGa', output: 'ଙ', description: 'Odia transliteration NGa -> ଙ' },
-			{ input: 'ca', output: 'ଚ', description: 'Odia transliteration ca -> ଚ' },
-			{ input: 'cha', output: 'ଛ', description: 'Odia transliteration cha -> ଛ' },
-			{ input: 'ja', output: 'ଜ', description: 'Odia transliteration ja -> ଜ' },
-			{ input: 'jha', output: 'ଝ', description: 'Odia transliteration jha -> ଝ' },
-			{ input: 'Nga', output: 'ଞ', description: 'Odia transliteration Nga -> ଞ' },
-			{ input: 'Ta', output: 'ଟ', description: 'Odia transliteration Ta -> ଟ' },
-			{ input: 'Tha', output: 'ଠ', description: 'Odia transliteration Tha -> ଠ' },
-			{ input: 'Da', output: 'ଡ', description: 'Odia transliteration Da -> ଡ' },
-			{ input: 'Dha', output: 'ଢ', description: 'Odia transliteration Dha -> ଢ' },
-			{ input: 'Na', output: 'ଣ', description: 'Odia transliteration na -> ଣ' },
-			{ input: 'ta', output: 'ତ', description: 'Odia transliteration ta -> ତ' },
-			{ input: 'tha', output: 'ଥ', description: 'Odia transliteration tha -> ଥ' },
-			{ input: 'da', output: 'ଦ', description: 'Odia transliteration da -> ଦ' },
-			{ input: 'dha', output: 'ଧ', description: 'Odia transliteration dha -> ଧ' },
-			{ input: 'na', output: 'ନ', description: 'Odia transliteration na -> ନ' },
-			{ input: 'pa', output: 'ପ', description: 'Odia transliteration pa -> ପ' },
-			{ input: 'pha', output: 'ଫ', description: 'Odia transliteration pha -> ଫ' },
-			{ input: 'ba', output: 'ବ', description: 'Odia transliteration ba -> ବ' },
-			{ input: 'bha', output: 'ଭ', description: 'Odia transliteration bha -> ଭ' },
-			{ input: 'ma', output: 'ମ', description: 'Odia transliteration ma -> ମ' },
-			{ input: 'ya', output: 'ୟ', description: 'Odia transliteration ya -> ୟ' },
-			{ input: 'ra', output: 'ର', description: 'Odia transliteration ra -> ର' },
-			{ input: 'la', output: 'ଲ', description: 'Odia transliteration la -> ଲ' },
-			{ input: 'La', output: 'ଳ', description: 'Odia transliteration La -> ଳ' },
-			{ input: 'Sa', output: 'ଶ', description: 'Odia transliteration Sa -> ଶ' },
-			{ input: 'sa', output: 'ସ', description: 'Odia transliteration sa -> ସ' },
-			{ input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ' },
-			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
-		],
-		inputmethod: 'or-transliteration',
-		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Oriya InScript test',
-		tests: [
-			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
-		],
-		inputmethod: 'or-inscript',
-		$input: $( '<input>' ).attr( { id: 'or-inscript', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Malayalam InScript test',
-		tests: [{ input: 'ka', output: 'കോ' }],
-		inputmethod: 'ml-inscript',
-		$input: $( '<input>' ).attr( { id: 'ml-inscript', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Tamil Transliteration test',
-		tests: [
-			//(ks|KS)h should give non-conjunct form of ksh க்‌ஷ் (with ZWNJ)
-			//(ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
-			{ input: 'thikshith', output: 'திக்‌ஷித்', description: 'thikshith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
-			{ input: 'thikShith', output: 'திக்‌ஷித்', description: 'thikShith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
-			{ input: 'thiksHith', output: 'திக்ஷித்', description: 'thiksHith in Tamil transliteration for திக்ஷித் conjunct form' },
-			{ input: 'thiKSHith', output: 'திக்ஷித்', description: 'thiKSHith in Tamil transliteration for திக்ஷித் conjunct form' },
-			{ input: 'Sri', output: 'ஸ்ரீ', description: 'Sri in Tamil transliteration for ஸ்ரீ Sri' },
-			{ input: 'Sruthi', output: 'ஸ்ருதி', description: 'Sruthi in Tamil transliteration for ஸ்ருதி' },
-			{ input: 'Sreeyaa', output: 'ஸ்ரேயா', description: 'Sreeyaa in Tamil transliteration for ஸ்ரேயா' },
-			{ input: 'shaajakaan', output: 'ஷாஜகான்', description: 'shaajakaan in Tamil transliteration for ஷாஜகான் non conjunct form' },
-			{ input: 'anbu', output: 'அன்பு', description: 'anbu in Tamil transliteration for அன்பு non conjunct form' },
-			{ input: 'aarvam', output: 'ஆர்வம்', description: 'aarvam in Tamil transliteration for ஆர்வம் non conjunct form' },
-			{ input: 'inRu', output: 'இன்று', description: 'inRu in Tamil transliteration for இன்று non conjunct form' },
-			{ input: 'iizam', output: 'ஈழம்', description: 'iizam in Tamil transliteration for ஈழம் non conjunct form' },
-			{ input: 'iilam', output: 'ஈலம்', description: 'iilam in Tamil transliteration for ஈலம் non conjunct form' },
-			{ input: 'iiLam', output: 'ஈளம்', description: 'iiLam in Tamil transliteration for ஈளம் non conjunct form' },
-			{ input: 'eNNam', output: 'எண்ணம்', description: 'eNNam in Tamil transliteration for எண்ணம் non conjunct form' },
-			{ input: 'eeu', output: 'ஏஉ', description: 'eeu in Tamil transliteration for ஏஉ non conjunct form' },
-			{ input: 'uuo', output: 'ஊஒ', description: 'uuo in Tamil transliteration for ஊஒ non conjunct form' },
-			{ input: 'ooNam', output: 'ஓணம்', description: 'ooNam in Tamil transliteration for ஓணம் non conjunct form' },
-			{ input: 'autatham', output: 'ஔடதம்', description: 'autatham in Tamil transliteration for ஔடதம் non conjunct form' },
-			{ input: 'kangkaa', output: 'கங்கா', description: 'kangkaa in Tamil transliteration for கங்கா non conjunct form' },
-			{ input: 'ngaasata', output: 'ஙாசட', description: 'ngaasata in Tamil transliteration for ஙாசட non conjunct form' },
-			{ input: 'naNawa', output: 'னணந', description: 'naNawa in Tamil transliteration for னணந non conjunct form' },
-			{ input: 'njaanam', output: 'ஞானம்', description: 'shajakaan in Tamil transliteration for ஞானம் non conjunct form' },
-			{ input: 'thapamayaa', output: 'தபமயா', description: 'thapamayaa in Tamil transliteration for தபமயா non conjunct form' },
-			{ input: 'jijigjaa', output: 'ஜிஜிக்ஜா', description: 'jijigjaa in Tamil transliteration for ஜிஜிக்ஜா non conjunct form' },
-			{ input: 'vaNNam', output: 'வண்ணம்', description: 'vaNNam in Tamil transliteration for வண்ணம் non conjunct form' },
-			{ input: 'haay', output: 'ஹாய்', description: 'haay in Tamil transliteration for ஹாய் non conjunct form' },
-			{ input: 'aHku', output: 'அஃகு', description: 'aHku in Tamil transliteration for அஃகு non conjunct form' },
-			{ input: 'jijoo', output: 'ஜிஜோ', description: 'jijoo in Tamil transliteration for ஜிஜோ non conjunct form' },
-			{ input: 'yarazavalaLaRana', output: 'யரழவலளறன', description: 'yarazavalaLaRana in Tamil transliteration for யரழவலளறன non conjunct form' },
-			{ input: 'juuhuu', output: 'ஜூஹூ', description: 'juuhuu in Tamil transliteration for ஜூஹூ non conjunct form' },
-			{ input: 'Sashasa', output: 'ஸஷச', description: 'Sashasa in Tamil transliteration for ஸஷச non conjunct form' },
-			{ input: 'Shuushaakikuu', output: 'ஷூஷாகிகூ', description: 'Shuushaakikuu in Tamil transliteration for ஷூஷாகிகூ non conjunct form' },
-			{ input: 'kEkAkaa', output: 'கேகாகா', description: 'kEkAkaa in Tamil transliteration for கேகாகா non conjunct form' },
-			{ input: 'zaazAAraRA', output: 'ழாழாஆரறா', description: 'zaazAAraRA in Tamil transliteration for ழாழாஆரறா non conjunct form' },
-			{ input: 'naiwowO', output: 'னைநொநோ', description: 'naiwowO in Tamil transliteration for னைநொநோ non conjunct form' },
-			{ input: 'rarAririireerE', output: 'ரராரிரீரேரே', description: 'rarAririireerE in Tamil transliteration for ரராரிரீரேரே non conjunct form' },
-			{ input: 'lailOlauLau', output: 'லைலோலௌளௌ', description: 'lailOlauLau in Tamil transliteration for லைலோலௌளௌ non conjunct form' },
-			{ input: 'kakaakAkikIkokOkai', output: 'ககாகாகிகீகொகோகை', description: 'kakaakAkikIkokOkai in Tamil transliteration for ககாகாகிகீகொகோகை non conjunct form' },
-			{ input: 'kakaakAkikIkiikukUkuukekEkeekaikokookOkau', output: 'ககாகாகிகீகீகுகூகூகெகேகேகைகொகோகோகௌ', description: 'kakaakAkikIkiikukUkuukekEkeekaikokookOkau in Tamil transliteration for ககாகாகிகீகீகுகூகூகெகேகேகைகொகோகோகௌ non conjunct form' },
-			{ input: 'ngangAngaangingiingIngungUnguungengEngeengaingongoongOngau', output: 'ஙஙாஙாஙிஙீஙீஙுஙூஙூஙெஙேஙேஙைஙொஙோஙோஙௌ', description: 'ngangAngaangingiingIngungUnguungengEngeengaingongoongOngu in Tamil transliteration for ஙஙாஙாஙிஙீஙீஙுஙூஙூஙெஙேஙேஙைஙொஙோஙோனௌ non conjunct form' },
-			{ input: 'sasaasAsisIsiisusUsuusesEseesaisosoosOsau', output: 'சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ', description: 'sasaasAsisIsiisusUsuusesEseesaisosoosOsau in Tamil transliteration for சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ non conjunct form' },
-			{ input: 'njanjaanjAnjinjiinjInjunjuunjUnjenjeenjEnjainjonjoonjOnjau', output: 'ஞஞாஞாஞிஞீஞீஞுஞூஞூஞெஞேஞேஞைஞொஞோஞோஞௌ', description: 'njanjaanjAnjinjiinjInjunjuunjUnjenjeenjEnjainjonjoonjOnjau in Tamil transliteration for ஞஞாஞாஞிஞீஞீஞுஞூஞூஞெஞேஞேஞைஞொஞோஞோஞௌ non conjunct form' },
-			{ input: 'cacaacAcicIciicucUcuucecEceecaicocoocOcau', output: 'சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ', description: 'cacaacAcicIciicucUcuucecEceecaicocoocOcau in Tamil transliteration for சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ non conjunct form' },
-			{ input: 'tataatAtitItiitutUtuutetEteetaitotootOtau', output: 'டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ', description: 'tataatAtitItiitutUtuutetEteetaitotootOtau in Tamil transliteration for டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ non conjunct form' },
-			{ input: 'dadaadAdidIdiidudUduudedEdeedaidodoodOdau', output: 'டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ', description: 'dadaadAdidIdiidudUduudedEdeedaidodoodOdau in Tamil Transliteration for டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ non conjunct form' },
-			{ input: 'NaNaaNANiNINiiNuNUNuuNeNENeeNaiNoNooNONau', output: 'ணணாணாணிணீணீணுணூணூணெணேணேணைணொணோணோணௌ', description: 'NaNaaNANiNINiiNuNUNuuNeNENeeNaiNoNooNONau in Tamil transliteration for ணணாணாணிணீணீணுணூணூணெணேணேணைணொணோணோனணௌ non conjunct form' },
-			{ input: 'thathaathAthithIthiithuthUthuuthethEtheethaithothoothOthau', output: 'ததாதாதிதீதீதுதூதூதெதேதேதைதொதோதோதௌ', description: 'thathaathAthithIthiithuthUthuuthethEtheethaithothoothOthau in Tamil transliteration for ததாதாதிதீதீதுதூதூதெதேதேதைதொதோதோதௌ non conjunct form' },
-			{ input: 'wawaawAwiwIwiiwuwUwuuwewEweewaiwowoowOwau', output: 'நநாநாநிநீநீநுநூநூநெநேநேநைநொநோநோநௌ', description: 'wawaawAwiwIwiiwuwUwuuwewEweewaiwowoowOwau in Tamil transliteration for நநாநிநீநீநுநூநூநெநேநேநைநொநோநோநௌ non conjunct form' },
-			{ input: 'papaapApipIpiipupUpuupepEpeepaipopoopOpau', output: 'பபாபாபிபீபீபுபூபூபெபேபேபைபொபோபோபௌ', description: 'papaapApipIpiipupUpuupepEpeepaipopoopOpau in Tamil transliteration for பபாபாபிபீபீபுபூபூபெபேபேபைபொபோபோபௌ non conjunct form' },
-			{ input: 'mamaamAmimImiimumUmuumemEmeemaimomoomOmau', output: 'மமாமாமிமீமீமுமூமூமெமேமேமைமொமோமோமௌ', description: 'mamaamAmimImiimumUmuumemEmeemaimomoomOmau in Tamil transliteration for மமாமாமிமீமீமுமூமூமெமேமேமைமொமோமோமௌ non conjunct form' },
-			{ input: 'yayaayAyiyIyiiyuyUyuuyeyEyeeyaiyoyooyOyau', output: 'யயாயாயியீயீயுயூயூயெயேயேயையொயோயோயௌ', description: 'yayaayAyiyIyiiyuyUyuuyeyEyeeyaiyoyooyOyau in Tamil transliteration for யயாயாயியீயீயுயூயூயெயேயேயையொயோயோயௌ non conjunct form' },
-			{ input: 'raraarArirIriirurUruurerEreerairoroorOrau', output: 'ரராராரிரீரீருரூரூரெரேரேரைரொரோரோரௌ', description: 'raraarArirIriirurUruurerEreerairoroorOrau in Tamil transliteration for ரராராரிரீரீருரூரூரெரேரேரைரொரோரோரௌ non conjunct form' },
-			{ input: 'lalaalAlilIliilulUluulelEleelailoloolOlau', output: 'லலாலாலிலீலீலுலூலூலெலேலேலைலொலோலோலௌ', desription: 'lalaalAlilIliilulUluulelEleelailoloolOlau in Tamil transliteration for லலாலாலிலீலீலுலூலூலெலேலேலைலொலோலோலௌ non conjunct form' },
-			{ input: 'vavaavAvivIviivuvUvuuvevEveevaivovoovOvau', output: 'வவாவாவிவீவீவுவூவூவெவேவேவைவொவோவோவௌ', description: 'vavaavAvivIviivuvUvuuvevEveevaivovoovOvau in Tamil transliteration for வவாவாவிவீவீவுவூவூவெவேவேவைவொவோவோவௌ non conjunct form' },
-			{ input: 'zazaazAzizIziizuzUzuuzezEzeezaizozoozOzau', output: 'ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ', description: 'zazaazAzizIziizuzUzuuzezEzeezaizozoozOzau in Tamil transliteration for ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ non conjunct form' },
-			{ input: 'zhazhaazhAzhizhIzhiizhuzhUzhuuzhezhEzheezhaizhozhoozhOzhau', output: 'ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ', description: 'zhazhaazhAzhizhIzhiizhuzhUzhuuzhezhEzheezhaizhozhoozhOzhau in Tamil transliteration for ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ non conjunct form' },
-			{ input: 'LaLaaLALiLILiiLuLULuuLeLELeeLaiLoLooLOLau', output: 'ளளாளாளிளீளீளுளூளூளெளேளேளைளொளோளோளௌ', description: 'LaLaaLALiLILiiLuLULuuLeLELeeLaiLoLooLOLau in Tamil transliteration for ளளாளாளிளீளீளுளூளூளெளேளேளைளொளோளோளௌ non conjunct form' },
-			{ input: 'RaRaaRARiRIRiiRuRURuuReREReeRaiRoRooRORau', output: 'றறாறாறிறீறீறுறூறூறெறேறேறைறொறோறோறௌ', description: 'RaRaaRARiRIRiiRuRURuuReREReeRaiRoRooRORau in Tamil transliteration for றறாறாறிறீறீறுறூறூறெறேறேறைறொறோறோறௌ non conjunct form' },
-			{ input: 'nanaanAninIniinunUnuunenEneenainonoonOnau', output: 'னனானானினீனீனுனூனூனெனேனேனைனொனோனோனௌ', description: 'nanaanAninIniinunUnuunenEneenainonoonOnau in Tamil transliteration for னனானானினீனீனுனூனூனெனேனேனைனொனோனோனௌ non conjunct form' },
-			{ input: 'SaSaaSASiSISiiSuSUSuuSeSESeeSaiSoSooSOSau', output: 'ஸஸாஸாஸிஸீஸீஸுஸூஸூஸெஸேஸேஸைஸொஸோஸோஸௌ', description: 'SaSaaSASiSISiiSuSUSuuSeSESeeSaiSoSooSOSau in Tamil transliteration for ஸஸாஸாஸிஸீஸீஸுஸூஸூஸெஸேஸேஸைஸொஸோஸோஸௌ non conjunct form' },
-			{ input: 'shashaashAshishIshiishushUshuusheshEsheeshaishoshooshOshau', output: 'ஷஷாஷாஷிஷீஷீஷுஷூஷூஷெஷேஷேஷைஷொஷோஷோஷௌ', description: 'shashaashAshishIshiishushUshuusheshEsheeshaishoshooshOshau in Tamil transliteration for ஷஷாஷாஷிஷீஷீஷுஷூஷூஷெஷேஷேஷைஷொஷோஷோஷௌ non conjunct form' },
-			{ input: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau', output: 'ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ', description: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau in Tamil transliteration for ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ non conjunct form' },
-			{ input: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau', output: 'ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ', description: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau in Tamil transliteration for ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ non conjunct form' }
-		],
-		inputmethod: 'ta-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ta', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Tamil 99 test',
-		tests: [
-			//hfW should give non-conjunct form of ksha க்‌ஷ (with ZWNJ)
-			//T still gives the conjunct form க்ஷ
-			{ input: 'lshfWslf', output: 'திக்‌ஷித்', description: 'lshfWslf in Tamil99 for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
-			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
-			{ input: 'hfWtkakf', output: 'க்‌ஷேமம்', description: 'hfWtkakf in Tamil99 for க்‌ஷேமம் hfW -> க்‌ஷ non conjunct form' }, // (with ZWNJ)
-			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
-		],
-		inputmethod: 'ta-99',
-		$input: $( '<input>' ).attr( { id: 'ta-99', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Tamil InScript test',
-		tests: [
-			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
-			{ input: 'lfkd)<fld', output: 'திக்‌ஷித்', description: 'Tamil Inscript திக்‌ஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
-			{ input: 'lf&fld', output: 'திக்ஷித்', description: 'Tamil Inscript திக்ஷித் conjunct form' },
-			{ input: ';sjVd', output: 'சேரன்', description: 'Tamil Inscript சேரன் Cheran' },
-			{ input: ';aBVd', output: 'சோழன்', description: 'Tamil Inscript சோழன் Chozhan' },
-			{ input: '/gbjepd', output: 'யுவராஜ்', description: 'Tamil Inscript யுவராஜ் Yuvaraj' },
-			{ input: 'heCd\'f/jd', output: 'பாண்டியர்', description: 'Tamil Inscript பாண்டியர் Pandiyar' },
-			{ input: 'Ecrjd', output: 'ஆமீர்', description: 'Tamil Inscript ஆமீர் Aamir' },
-			{ input: 'Duj`Vf', output: 'அஹரொனி', description: 'Tamil Inscript அஹரொனி Aharoni' },
-			{ input: 'md)jrkevdld', output: 'ஸ்‌ரீகாந்த்', description: 'Tamil Inscript ஸ்‌ரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
-			{ input: 'mdjrkevdld', output: 'ஸ்ரீகாந்த்', description: 'Tamil Inscript ஸ்ரீகாந்த் with SHRI = SA+RII' },
-			{ input: 'MdjrjcC', output: 'ஶ்ரீரமண', description: 'Tamil Inscript ஶ்ரீரமண Shriramana with SHRI = SHA+RII' },
-			{ input: 'Dnanfle', output: 'அலோலிதா', description: 'Tamil Inscript அலோலிதா Alolitha' },
-			{ input: '<jdce', output: 'ஷர்மா', description: 'Tamil Inscript ஷர்மா Sharma' },
-			{ input: 'hfjbrVd', output: 'பிரவீன்', description: 'Tamil Inscript பிரவீன் Pravin' },
-			{ input: ';vdla<d', output: 'சந்தோஷ்', description: 'Tamil Inscript சந்தோஷ் Santhosh' },
-			{ input: 'vfkdnmd', output: 'நிக்லஸ்', description: 'Tamil Inscript நிக்லஸ் Niklas' },
-			{ input: ';rhdjCd\'g', output: 'சீப்ரண்டு', description: 'Tamil Inscript சீப்ரண்டு Siebrand' },
-			{ input: 'hzUdkNtjg', output: 'பெங்களூரு', description: 'Tamil Inscript பெங்களூரு Bengalooru' },
-			{ input: ';qje\'d\'fj', output: 'சௌராட்டிர', description: 'Tamil Inscript சௌராட்டிர Saurattira' }
-		],
-		inputmethod: 'ta-inscript',
-		$input: $( '<input>' ).attr( { id: 'ta-inscript', type: 'text' } )
-	} );
 
 	imeTest ( {
 		description: 'Amharic Transliteration test',
@@ -451,18 +189,214 @@
 		$input: $( '<input>' ).attr( { id: 'am', type: 'text' } )
 	} );
 
-	imeTest ( {
-		description: 'Marathi Transliteration test',
+	imeTest( {
+		description: 'Belarusian Łacinka test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Marathi transliteration - \\~ -> ~' },
-			{ input: 'dny', output: 'ज्ञ्', description: 'dny for ज्ञ् in Marathi transliteration' },
-			{ input: 'kOM', output: 'काँ', description: 'kOM for काँ (काँग्रेस) in Marathi transliteration' },
+			{ input: '=c', output: 'č', description: 'Belarusian Łacinka - =c -> č' },
+			{ input: '-n', output: 'ń', description: 'Belarusian Łacinka - -n -> ń' },
+			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
+			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
+		],
+		inputmethod: 'be-latin',
+		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
+	} );
+	
+		imeTest( {
+		description: 'Belarusian transliteration test',
+		tests: [
+			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
+			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
+		],
+		inputmethod: 'be-transliteration',
+		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
+	} );
+
+	imeTest( {
+		description: 'Bengali Avro layout test',
+		tests: [
+			{ input: 'ka', output: 'কা', description: 'Bengali Avro - ka' },
+			{ input: 'rri', output: 'ঋ', description: 'Bengali Avro - rri' },
+			{ input: 'drri', output: 'দৃ', description: 'Bengali Avro - drri' },
+			{ input: 'kee', output: 'কী', description: 'Bengali Avro - kee' }
+		],
+		inputmethod: 'bn-avro',
+		$input: $( '<input>' ).attr( { id: 'bn-avro', type: 'text' } )
+	} );
+	
+		imeTest( {
+		description: 'Bengali Probhat layout test',
+		tests: [
+			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
+			{ input: 'ki', output: 'কি', description: 'Bengali Probhat - ki' },
+			{ input: 'k/S', output: 'ক্ষ', description: 'Bengali Probhat - kha' },
+			{ input: 'q<', output: 'দৃ', description: 'Bengali Probhat - drri' },
+			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
+			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
+		],
+		inputmethod: 'bn-probhat',
+		$input: $( '<input>' ).attr( { id: 'bn-probhat', type: 'text' } )
+	} );
+
+	// Variables for Cyrillic with palochka transliteration tests.
+	// All the characters are very similar in appearance,
+	// so it's better to give them names to avoid confusion.
+	var palochka = 'Ӏ';
+	var latinSmallL = 'l';
+	var latinCapitalI = 'I';
+	var ukrainianCapitalI = 'І';
+	var digitOne = '1';
+
+	imeTest( {
+		description: 'Cyrillic with palochka transliteration test',
+		tests: [
+			// Sanity test - palochka should produce itself
+			{ input: palochka, output: palochka, description: 'Palochka itself is unchanged' },
+
+			{ input: 'L', output: 'L', description: 'Latin capital L is unchanged' },
+			{ input: latinSmallL, output: palochka, description: 'Latin small l becomes palochka' },
+
+			{ input: latinCapitalI, output: palochka, description: 'Latin capital I becomes palochka' },
+			{ input: 'i', output: 'i', description: 'Latin small i becomes palochka' },
+
+			{ input: ukrainianCapitalI, output: palochka, description: 'Ukrainian capital І becomes palochka' },
+
+			{ input: digitOne, output: digitOne, description: 'Digit one (1) is unchanged' },
+			{ input: [ [ digitOne, true ] ], output: palochka, description: 'Extended digit one (1) becomes palochka' },
+
+			{ input: 'д', output: 'д', description: 'Cyrillic small д is is unchanged' },
+			{ input: [ [ 'д', true ] ], output: palochka, description: 'Extended Cyrillic д becomes palochka' },
+
+			{ input: 'ш', output: 'ш', description: 'Cyrillic small ш is is unchanged' },
+			{ input: [ [ 'ш', true ] ], output: palochka, description: 'Extended Cyrillic small ш becomes palochka' },
+
+			{ input: 'Ш', output: 'Ш', description: 'Cyrillic capital Ш is is unchanged' },
+			{ input: [ [ 'Ш', true ] ], output: palochka, description: 'Extended Cyrillic capital Ш becomes palochka' }
+		],
+		inputmethod: 'cyrl-palochka',
+		$input: $( '<input>' ).attr( { id: 'cyrl-palochka', type: 'text' } )
+	} );
+
+	imeTest( {
+		description: 'Georgian Transliteration test',
+		tests: [
+			{ input: 'vikipedia\\`', output: 'ვიკიპედია`', description: 'Georgian vikipedia with `' },
+			{ input: 'jim morisoni \\~\\~\\~\\~', output: 'ჯიმ მორისონი ~~~~', description: 'Georgian jim morisoni with Wiki Signature' },
+			{ input: 'abcdefghijklmnopqrstuvwxyz', output: 'აბცდეფგჰიჯკლმნოპქრსტუვწხყზ', description: 'a-z in Georgian' },
+			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
+		],
+		inputmethod: 'ka-transliteration',
+		$input: $( '<input>' ).attr( { id: 'ka', type: 'text' } )
+	} );
+
+
+
+	imeTest( {
+		description: 'German Transliteration and keybuffer test',
+		tests: [
+			{ input: '~o', output: 'ö', description: 'German ö' },
+			{ input: '~O', output: 'Ö', description: 'German Ö' },
+			{ input: '~s', output: 'ß', description: 'German ß' }
+		],
+		inputmethod: 'de',
+		$input: $( '<input>' ).attr( { id: 'de', type: 'text' } )
+	} );
+
+
+	imeTest( {
+		description: 'Gujarati Transliteration',
+		tests: [
+			{ input: '~', output: '~', description: 'Gujarati - tilde must not change' },
+			{ input: 'hiMmata', output: 'હિંમત', description: 'Gujarati hiMmata' },
+			{ input: 'aM^bara', output: 'અઁબર', description: 'Gujarati aM^bara - testing candrabindu' },
+			{ input: '_', output: '_', description: 'Gujarati - underscore must not change' },
+			{ input: 'oM', output: 'ઓં', description: 'Gujarati oM' },
+			{ input: 'OM', output: 'ૐ', description: 'Gujarati OM' },
+			{ input: 'K', output: '।', description: 'Gujarati K - testing danda' },
+			{ input: 'KK', output: '॥', description: 'Gujarati KK - testing double danda' },
+			{ input: 'ai', output: 'ઐ', description: 'Gujarati ai' },
+			{ input: 'eka', output: 'એક', description: 'Gujarati eka' },
+			{ input: 'aikya', output: 'ઐક્ય', description: 'Gujarati aikya' },
+			{ input: 'kailaasa', output: 'કૈલાસ', description: 'Gujarati kailaasa' },
+			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
+			{ input: 'sad`bhaava', output: 'સદ્‌ભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
+			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' }
+		],
+		inputmethod: 'gu-transliteration',
+		$input: $( '<input>' ).attr( { id: 'gu', type: 'text' } )
+	} );
+
+	imeTest( {
+		description: 'Hebrew Transliteration and extended keys test',
+		tests: [
+			// The first case is a regular hyphen-minus ('-'), which is the same
+			// when it is pressed by itself without Alt.
+			// The second case is hyphen-minus with Alt, which produces the Hebrew
+			// hyphen (maqaf).
+			{ input: [ [ '-', false ] ], output: '-', description: 'Hebrew regular -' },
+			{ input: [ [ '-', true ] ], output: '־', description: 'Hebrew extended -' }
+		],
+		inputmethod: 'he-standard-2012-extonly',
+		$input: $( '<input>' ).attr( { id: 'he-standard-2011-extonly', type: 'text' } )
+	} );
+	
+	
+	imeTest( {
+		description: 'Hindi InScript layout test',
+		tests: [
+			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
+		],
+		inputmethod: 'hi-inscript',
+		$input: $( '<input>' ).attr( { id: 'hi-inscript', type: 'text' } )
+	} );
+
+	imeTest( {
+		description: 'Hindi transliteration tests',
+		tests: [
+			// The regex returns \n for \r.
+			{ input: "raam\r", output: "राम\n", description: 'Hindi transliteration - raam<line-break> (\\r)' },
+
+			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
+			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
+			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
+
+			{ input: 'namaH', output: 'नमः', description: 'Hindi transliteration - namaH (visarga)' },
+			{ input: 'madhumaChiyoM', output: 'मधुमक्खियों', description: 'Hindi transliteration - madhumaChiyoM (anusvara)' },
+			{ input: '//', output: 'ऽ', description: 'Hindi transliteration - // (avagraha)' },
+			{ input: 'raama', output: 'राम', description: 'Hindi transliteration - raama' },
+			{ input: 'raama ', output: 'राम ', description: 'Hindi transliteration - raama<space> (backwards compatibility)' },
+			{ input: 'raama~ ', output: 'राम् ', description: 'Hindi transliteration - raama<viram><space>' },
+			{ input: 'raam ', output: 'राम ', description: 'Hindi transliteration - raam<space>' },
+			{ input: 'raam~ ', output: 'राम् ', description: 'Hindi transliteration - raam<viram><space>' },
+			{ input: 'raam,', output: 'राम,', description: 'Hindi transliteration - raam,' },
+			{ input: 'raam~,', output: 'राम्,', description: 'Hindi transliteration - raam<viram>,' },
+			{ input: 'raam?', output: 'राम?', description: 'Hindi transliteration - raam?' },
+			{ input: 'raam~?', output: 'राम्?', description: 'Hindi transliteration - raam<viram>?' },
+			{ input: 'raam!', output: 'राम!', description: 'Hindi transliteration - raam!' },
+			{ input: 'raam~!', output: 'राम्!', description: 'Hindi transliteration - raam<viram>!' },
+			{ input: 'raam-', output: 'राम-', description: 'Hindi transliteration - raam-' },
+			{ input: 'raam~-', output: 'राम्-', description: 'Hindi transliteration - raam<viram>-' },
+			{ input: 'raam:', output: 'राम:', description: 'Hindi transliteration - raam:' },
+			{ input: 'raam~:', output: 'राम्:', description: 'Hindi transliteration - raam<viram>:' },
+			{ input: 'raam;', output: 'राम;', description: 'Hindi transliteration - raam;' },
+			{ input: 'raam~;', output: 'राम्;', description: 'Hindi transliteration - raam<viram>;' },
+			{ input: 'raam5', output: 'राम५', description: 'Hindi transliteration - raam5' },
+			{ input: 'raam~5', output: 'राम्५', description: 'Hindi transliteration - raam<viram>5' },
+			{ input: 'santoSh.', output: 'सन्तोष।', description: 'Hindi transliteration - santoSh. (testing clusters and danda)' },
+			{ input: 'santoSh~.', output: 'सन्तोष्।', description: 'Hindi transliteration - santoSh<viram>. (testing clusters and danda)' },
+			{ input: 'raam..', output: 'राम॥', description: 'Hindi transliteration - raam..' },
+			{ input: 'raam~..', output: 'राम्॥', description: 'Hindi transliteration - raam<viram>..' },
+			{ input: 'laxmii', output: 'लक्ष्मी', description: 'Hindi transliteration - laxmii (testing ksh)' },
+			{ input: 'veeNaa', output: 'वीणा', description: 'Hindi transliteration - veeNaa' },
+			{ input: 'soorya', output: 'सूर्य', description: 'Hindi transliteration - soorya' },
+			{ input: 'amRtaa', output: 'अमृता', description: 'Hindi transliteration - amRtaa' },
+			{ input: 'bauThate', output: 'बौठते', description: 'Hindi transliteration - bauThate' },
+			{ input: '.', output: '।', description: 'Hindi transliteration - . (danda)' },
+			{ input: '..', output: '॥', description: 'Hindi transliteration - .. (double danda)' },
+
 			// bug 38238
-			{ input: 'AUM', output: 'ॐ', description: 'AUM - ॐ (OM)' },
-			{ input: 'oMkaara', output: 'ओंकार', description: 'oMkaara (testing correct typing of oM as a simple anusvara)' },
-			{ input: 'kshha', output: 'क्ष', description: 'kshha for क्ष translitration' },
-			{ input: 'mukhapRShTha', output: 'मुखपृष्ठ', description: 'mukhapRShTha for मुखपृष्ठ (Home page) translitration' },
-			{ input: 'La', output: 'ळ', description: 'La for ळ translitration' },
+			{ input: 'AUMkaara', output: 'ॐकार', description: 'Hindi transliteration - auMkaara' },
+			{ input: 'auMsa', output: 'औंस', description: 'Hindi transliteration - auMsa (ounce)' },
+			{ input: 'bhaaShaaoM', output: 'भाषाओं', description: 'Hindi transliteration - bhaaShaaoM (testing correct typing of oM as a simple anusvara)' },
 			{ input: 'a', output: 'अ', description: 'a for अ translitration' },
 			{ input: 'aa', output: 'आ', description: 'aa for आ translitration' },
 			{ input: 'i', output: 'इ', description: 'i for इ translitration' },
@@ -470,11 +404,11 @@
 			{ input: 'u', output: 'उ', description: 'u for U translitration' },
 			{ input: 'U', output: 'ऊ', description: 'U for ऊ translitration' },
 			{ input: 'e', output: 'ए', description: 'e for ए translitration' },
-			{ input: 'ai', output: 'ऐ', description: 'ai for ऐ  translitration' },
+			{ input: 'ai', output: 'ऐ', description: 'ai for ऐ translitration' },
 			{ input: 'o', output: 'ओ', description: 'o for ओ translitration' },
 			{ input: 'au', output: 'औ', description: 'au for औ translitration' },
 			{ input: 'O', output: 'ऑ', description: 'O for ऑ translitration' },
-			{ input: 'E', output: 'ॲ', description: 'E for ॲ translitration' },
+			{ input: 'E', output: 'ऍ', description: 'E for ऍ translitration' },
 			{ input: 'aM', output: 'अं', description: 'aM for अं translitration' },
 			{ input: 'aH', output: 'अः', description: 'aH for अः translitration' },
 			{ input: 'ka', output: 'क', description: 'ka for क translitration' },
@@ -482,8 +416,8 @@
 			{ input: 'ga', output: 'ग', description: 'ga for ग translitration' },
 			{ input: 'gha', output: 'घ', description: 'gha for घ translitration' },
 			{ input: 'nga', output: 'ङ', description: 'nga for ङ translitration' },
-			{ input: 'cha', output: 'च', description: 'cha for च translitration' },
-			{ input: 'chha', output: 'छ', description: 'chha for छ translitration' },
+			{ input: 'ca', output: 'च', description: 'cha for च translitration' },
+			{ input: 'cha', output: 'छ', description: 'chha for छ translitration' },
 			{ input: 'ja', output: 'ज', description: 'ja for ज translitration' },
 			{ input: 'jha', output: 'झ', description: 'jha for झ translitration' },
 			{ input: 'nja', output: 'ञ', description: 'nja for ञ translitration' },
@@ -513,7 +447,6 @@
 			{ input: 'ha', output: 'ह', description: 'ha for ह translitration' },
 			{ input: 'sha', output: 'श', description: 'sha for श translitration' },
 			{ input: 'R', output: 'ऋ', description: 'R for ऋ translitration' },
-			{ input: 'shrI', output: 'श्री', description: 'shrI for श्री translitration' },
 			{ input: '0', output: '०', description: '0 for ० translitration' },
 			{ input: '1', output: '१', description: '1 for १ translitration' },
 			{ input: '2', output: '२', description: '2 for २ translitration' },
@@ -524,43 +457,61 @@
 			{ input: '7', output: '७', description: '7 for ७ translitration' },
 			{ input: '8', output: '८', description: '8 for ८ translitration' },
 			{ input: '9', output: '९', description: '9 for ९ translitration' },
-			{ input: '0', output: '०', description: '0 for ० translitration ' },
-			{ input: 'aMkita', output: 'अंकित', description: 'aMkita for अंकित translitration' },
-			{ input: 'RShi', output: 'ऋषि', description: 'Rshi for ऋषि translitration' },
-			{ input: 'vikipIDiyaa', output: 'विकिपीडिया', description: 'vikipIdiya for विकिपीडिया translitration' },
-			{ input: 'manaHpUrvahaka', output: 'मनःपूर्वहक', description: 'manaHpUrvaka for मनःपूर्वहक translitration' },
-			{ input: 'dhanyavaada', output: 'धन्यवाद', description: 'dhanyavaada for धन्यवाद translitration' },
-			{ input: 'laThTha', output: 'लठ्ठ', description: 'laThTha for लठ्ठ translitration' },
-			{ input: 'iMgrajI', output: 'इंग्रजी', description: 'iMgrajI for इंग्रजी translitration' },
-			{ input: 'nRsiMhasarasvatI', output: 'नृसिंहसरस्वती', description: 'nRsiMhasarasvatI for नृसिंहसरस्वती  translitration' },
-			{ input: 'agni', output: 'अग्नि', description: 'agni for अग्नि translitration' },
-			{ input: 'saMskRta', output: 'संस्कृत', description: 'saMskRta for संस्कृत translitration' },
-			{ input: 'dRShTIkona', output: 'दृष्टीकोन', description: 'dRShTIkona for दृष्टीकोन translitration' },
-			{ input: 'tryaM', output: 'त्र्यं', description: 'tryaM for त्र्यं translitration' },
-			{ input: 'maatRbhaaShaa', output: 'मातृभाषा', description: 'maatRbhaaShaa for मातृभाषा translitration' },
-			{ input: 'vakratuNDa', output: 'वक्रतुण्ड', description: 'vakratuNDa for वक्रतुण्ड translitration' },
-			{ input: 'ariShTanemiH', output: 'अरिष्टनेमिः', description: 'ariShTanemiH for अरिष्टनेमिः translitration' },
-			{ input: 'shiShya', output: 'शिष्य', description: 'shiShya for शिष्य translitration' },
-			{ input: 'bramha', output: 'ब्रम्ह', description: 'bramha for ब्रम्ह translitration' },
-			{ input: 'dvitIya', output: 'द्वितीय', description: 'dvitIya for द्वितीय translitration' },
-			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' }
+			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
-		inputmethod: 'mr-transliteration',
-		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+		inputmethod: 'hi-transliteration',
+		$input: $( '<textarea>' ).attr( { id: 'hi', type: 'text' } )
+	} );
+	
+	
+	imeTest( {
+		description: 'Javanese transliteration test',
+		tests: [
+			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
+			{ input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
+			{ input: 'A', output: 'ꦄ', description: 'Javanese transliteration - A' },
+			{ input: 'B', output: 'ꦨ', description: 'Javanese transliteration - B' },
+			{ input: 'y', output: 'ꦪ', description: 'Javanese transliteration - y' },
+			{ input: 'z', output: 'ꦗ꦳', description: 'Javanese transliteration - z' },
+			{ input: 'q`', output: '꧀', description: 'Javanese transliteration - q`' }
+		],
+		inputmethod: 'jv-transliteration',
+		$input: $( '<input>' ).attr( { id: 'jv-transliteration', type: 'text' } )
 	} );
 
 	imeTest ( {
-		description: 'Marathi InScript 2 test',
+		description : 'Kannada KGP test',
 		tests: [
-			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
-			{ input: [ [ '1', true ] ], output: '\u200d', description: 'Marathi InScript regular 1 - ZWJ' },
-			{ input: [ [ '2', false ] ], output: '२', description: 'Marathi InScript regular 2 - २' },
-			{ input: [ [ '2', true ] ], output: '\u200c', description: 'Marathi InScript regular 2 - ZWNJ' }
+			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
+			{ input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
+			{ input: 'cCjJz', output: 'ಚಛಜಝಞ', description: 'Consonants ಚಛಜಝಞ' },
+			{ input: 'qQwWN', output: 'ಟಠಡಢಣ', description: 'Consonants ಟಠಡಢಣ' },
+			{ input: 'tTdDn', output: 'ತಥದಧನ', description: 'Consonants ತಥದಧನ' },
+			{ input: 'pPbBm', output: 'ಪಫಬಭಮ', description: 'Consonants ಪಫಬಭಮ' },
+			{ input: 'yrrXlvSxshLLX', output: 'ಯರಱಲವಶಷಸಹಳೞ', description: 'Consonants ಯರಲವಶಷಸಹಳ' },
+			{ input: 'kf', output: 'ಕ್', description: 'kf => ಕ್' },
+			{ input: 'kA', output: 'ಕಾ', description: 'kA => ಕಾ' },
+			{ input: 'ki', output: 'ಕಿ', description: 'ki => ಕಿ' },
+			{ input: 'kI', output: 'ಕೀ', description: 'kI => ಕೀ' },
+			{ input: 'ku', output: 'ಕು', description: 'ku => ಕು' },
+			{ input: 'kU', output: 'ಕೂ', description: 'kU => ಕೂ' },
+			{ input: 'kR', output: 'ಕೃ', description: 'kR => ಕೃ' },
+			{ input: 'kRX', output: 'ಕೄ', description: 'kRX => ಕೄ' },
+			{ input: 'ke', output: 'ಕೆ', description: 'ke => ಕೆ' },
+			{ input: 'kE', output: 'ಕೇ', description: 'kE => ಕೇ' },
+			{ input: 'kY', output: 'ಕೈ', description: 'kY => ಕೈ' },
+			{ input: 'ko', output: 'ಕೊ', description: 'ko => ಕೊ' },
+			{ input: 'kO', output: 'ಕೋ', description: 'kO => ಕೋ' },
+			{ input: 'kV', output: 'ಕೌ', description: 'kV => ಕೌ' },
+			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
+			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
+			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
+			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' } // with ZWJ
 		],
-		inputmethod: 'mr-inscript2',
-		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+		inputmethod: 'kn-kgp',
+		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
 	} );
-
+	
 	imeTest ( {
 		description : 'Kannada Transliteration test',
 		tests: [
@@ -1198,62 +1149,212 @@
 	} );
 
 	imeTest ( {
-		description : 'Kannada KGP test',
+		description: 'Marathi InScript 2 test',
 		tests: [
-			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
-			{ input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
-			{ input: 'cCjJz', output: 'ಚಛಜಝಞ', description: 'Consonants ಚಛಜಝಞ' },
-			{ input: 'qQwWN', output: 'ಟಠಡಢಣ', description: 'Consonants ಟಠಡಢಣ' },
-			{ input: 'tTdDn', output: 'ತಥದಧನ', description: 'Consonants ತಥದಧನ' },
-			{ input: 'pPbBm', output: 'ಪಫಬಭಮ', description: 'Consonants ಪಫಬಭಮ' },
-			{ input: 'yrrXlvSxshLLX', output: 'ಯರಱಲವಶಷಸಹಳೞ', description: 'Consonants ಯರಲವಶಷಸಹಳ' },
-			{ input: 'kf', output: 'ಕ್', description: 'kf => ಕ್' },
-			{ input: 'kA', output: 'ಕಾ', description: 'kA => ಕಾ' },
-			{ input: 'ki', output: 'ಕಿ', description: 'ki => ಕಿ' },
-			{ input: 'kI', output: 'ಕೀ', description: 'kI => ಕೀ' },
-			{ input: 'ku', output: 'ಕು', description: 'ku => ಕು' },
-			{ input: 'kU', output: 'ಕೂ', description: 'kU => ಕೂ' },
-			{ input: 'kR', output: 'ಕೃ', description: 'kR => ಕೃ' },
-			{ input: 'kRX', output: 'ಕೄ', description: 'kRX => ಕೄ' },
-			{ input: 'ke', output: 'ಕೆ', description: 'ke => ಕೆ' },
-			{ input: 'kE', output: 'ಕೇ', description: 'kE => ಕೇ' },
-			{ input: 'kY', output: 'ಕೈ', description: 'kY => ಕೈ' },
-			{ input: 'ko', output: 'ಕೊ', description: 'ko => ಕೊ' },
-			{ input: 'kO', output: 'ಕೋ', description: 'kO => ಕೋ' },
-			{ input: 'kV', output: 'ಕೌ', description: 'kV => ಕೌ' },
-			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
-			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
-			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
-			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' } // with ZWJ
+			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
+			{ input: [ [ '1', true ] ], output: '\u200d', description: 'Marathi InScript regular 1 - ZWJ' },
+			{ input: [ [ '2', false ] ], output: '२', description: 'Marathi InScript regular 2 - २' },
+			{ input: [ [ '2', true ] ], output: '\u200c', description: 'Marathi InScript regular 2 - ZWNJ' }
 		],
-		inputmethod: 'kn-kgp',
-		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
+		inputmethod: 'mr-inscript2',
+		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+	} );
+
+	imeTest ( {
+		description: 'Marathi Transliteration test',
+		tests: [
+			{ input: '\\~', output: '~', description: 'Marathi transliteration - \\~ -> ~' },
+			{ input: 'dny', output: 'ज्ञ्', description: 'dny for ज्ञ् in Marathi transliteration' },
+			{ input: 'kOM', output: 'काँ', description: 'kOM for काँ (काँग्रेस) in Marathi transliteration' },
+			// bug 38238
+			{ input: 'AUM', output: 'ॐ', description: 'AUM - ॐ (OM)' },
+			{ input: 'oMkaara', output: 'ओंकार', description: 'oMkaara (testing correct typing of oM as a simple anusvara)' },
+			{ input: 'kshha', output: 'क्ष', description: 'kshha for क्ष translitration' },
+			{ input: 'mukhapRShTha', output: 'मुखपृष्ठ', description: 'mukhapRShTha for मुखपृष्ठ (Home page) translitration' },
+			{ input: 'La', output: 'ळ', description: 'La for ळ translitration' },
+			{ input: 'a', output: 'अ', description: 'a for अ translitration' },
+			{ input: 'aa', output: 'आ', description: 'aa for आ translitration' },
+			{ input: 'i', output: 'इ', description: 'i for इ translitration' },
+			{ input: 'I', output: 'ई', description: 'I for ई translitration' },
+			{ input: 'u', output: 'उ', description: 'u for U translitration' },
+			{ input: 'U', output: 'ऊ', description: 'U for ऊ translitration' },
+			{ input: 'e', output: 'ए', description: 'e for ए translitration' },
+			{ input: 'ai', output: 'ऐ', description: 'ai for ऐ  translitration' },
+			{ input: 'o', output: 'ओ', description: 'o for ओ translitration' },
+			{ input: 'au', output: 'औ', description: 'au for औ translitration' },
+			{ input: 'O', output: 'ऑ', description: 'O for ऑ translitration' },
+			{ input: 'E', output: 'ॲ', description: 'E for ॲ translitration' },
+			{ input: 'aM', output: 'अं', description: 'aM for अं translitration' },
+			{ input: 'aH', output: 'अः', description: 'aH for अः translitration' },
+			{ input: 'ka', output: 'क', description: 'ka for क translitration' },
+			{ input: 'kha', output: 'ख', description: 'kha for ख translitration' },
+			{ input: 'ga', output: 'ग', description: 'ga for ग translitration' },
+			{ input: 'gha', output: 'घ', description: 'gha for घ translitration' },
+			{ input: 'nga', output: 'ङ', description: 'nga for ङ translitration' },
+			{ input: 'cha', output: 'च', description: 'cha for च translitration' },
+			{ input: 'chha', output: 'छ', description: 'chha for छ translitration' },
+			{ input: 'ja', output: 'ज', description: 'ja for ज translitration' },
+			{ input: 'jha', output: 'झ', description: 'jha for झ translitration' },
+			{ input: 'nja', output: 'ञ', description: 'nja for ञ translitration' },
+			{ input: 'Ta', output: 'ट', description: 'Ta for ट translitration' },
+			{ input: 'Tha', output: 'ठ', description: 'Tha for ठ translitration' },
+			{ input: 'Da', output: 'ड', description: 'Da for ड translitration' },
+			{ input: 'Dha', output: 'ढ', description: 'Dha for ढ translitration' },
+			{ input: 'Na', output: 'ण', description: 'Na for ण translitration' },
+			{ input: 'ta', output: 'त', description: 'ta for त translitration' },
+			{ input: 'tha', output: 'थ', description: 'tha for थ translitration' },
+			{ input: 'da', output: 'द', description: 'da for द translitration' },
+			{ input: 'dha', output: 'ध', description: 'dha for ध translitration' },
+			{ input: 'na', output: 'न', description: 'na for न translitration' },
+			{ input: 'pha', output: 'फ', description: 'pha for फ translitration' },
+			{ input: 'tha', output: 'थ', description: 'tha for थ translitration' },
+			{ input: 'ba', output: 'ब', description: 'ba for ब translitration' },
+			{ input: 'bha', output: 'भ', description: 'bha for भ translitration' },
+			{ input: 'ma', output: 'म', description: 'ma for म translitration' },
+			{ input: 'ya', output: 'य', description: 'ya for य translitration' },
+			{ input: 'ra', output: 'र', description: 'ra for र translitration' },
+			{ input: 'la', output: 'ल', description: 'la for ल translitration' },
+			{ input: 'va', output: 'व', description: 'va for व translitration' },
+			{ input: 'sha', output: 'श', description: 'sha for श translitration' },
+			{ input: 'ya', output: 'य', description: 'ya for य translitration' },
+			{ input: 'Sha', output: 'ष', description: 'Sha for ष translitration' },
+			{ input: 'sa', output: 'स', description: 'sa for स translitration' },
+			{ input: 'ha', output: 'ह', description: 'ha for ह translitration' },
+			{ input: 'sha', output: 'श', description: 'sha for श translitration' },
+			{ input: 'R', output: 'ऋ', description: 'R for ऋ translitration' },
+			{ input: 'shrI', output: 'श्री', description: 'shrI for श्री translitration' },
+			{ input: '0', output: '०', description: '0 for ० translitration' },
+			{ input: '1', output: '१', description: '1 for १ translitration' },
+			{ input: '2', output: '२', description: '2 for २ translitration' },
+			{ input: '3', output: '३', description: '3 for ३ translitration' },
+			{ input: '4', output: '४', description: '4 for ४ translitration' },
+			{ input: '5', output: '५', description: '5 for ५ translitration' },
+			{ input: '6', output: '६', description: '6 for ६ translitration' },
+			{ input: '7', output: '७', description: '7 for ७ translitration' },
+			{ input: '8', output: '८', description: '8 for ८ translitration' },
+			{ input: '9', output: '९', description: '9 for ९ translitration' },
+			{ input: '0', output: '०', description: '0 for ० translitration ' },
+			{ input: 'aMkita', output: 'अंकित', description: 'aMkita for अंकित translitration' },
+			{ input: 'RShi', output: 'ऋषि', description: 'Rshi for ऋषि translitration' },
+			{ input: 'vikipIDiyaa', output: 'विकिपीडिया', description: 'vikipIdiya for विकिपीडिया translitration' },
+			{ input: 'manaHpUrvahaka', output: 'मनःपूर्वहक', description: 'manaHpUrvaka for मनःपूर्वहक translitration' },
+			{ input: 'dhanyavaada', output: 'धन्यवाद', description: 'dhanyavaada for धन्यवाद translitration' },
+			{ input: 'laThTha', output: 'लठ्ठ', description: 'laThTha for लठ्ठ translitration' },
+			{ input: 'iMgrajI', output: 'इंग्रजी', description: 'iMgrajI for इंग्रजी translitration' },
+			{ input: 'nRsiMhasarasvatI', output: 'नृसिंहसरस्वती', description: 'nRsiMhasarasvatI for नृसिंहसरस्वती  translitration' },
+			{ input: 'agni', output: 'अग्नि', description: 'agni for अग्नि translitration' },
+			{ input: 'saMskRta', output: 'संस्कृत', description: 'saMskRta for संस्कृत translitration' },
+			{ input: 'dRShTIkona', output: 'दृष्टीकोन', description: 'dRShTIkona for दृष्टीकोन translitration' },
+			{ input: 'tryaM', output: 'त्र्यं', description: 'tryaM for त्र्यं translitration' },
+			{ input: 'maatRbhaaShaa', output: 'मातृभाषा', description: 'maatRbhaaShaa for मातृभाषा translitration' },
+			{ input: 'vakratuNDa', output: 'वक्रतुण्ड', description: 'vakratuNDa for वक्रतुण्ड translitration' },
+			{ input: 'ariShTanemiH', output: 'अरिष्टनेमिः', description: 'ariShTanemiH for अरिष्टनेमिः translitration' },
+			{ input: 'shiShya', output: 'शिष्य', description: 'shiShya for शिष्य translitration' },
+			{ input: 'bramha', output: 'ब्रम्ह', description: 'bramha for ब्रम्ह translitration' },
+			{ input: 'dvitIya', output: 'द्वितीय', description: 'dvitIya for द्वितीय translitration' },
+			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' }
+		],
+		inputmethod: 'mr-transliteration',
+		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+	} );
+
+
+	imeTest( {
+		description: 'Malayalam InScript test',
+		tests: [{ input: 'ka', output: 'കോ' }],
+		inputmethod: 'ml-inscript',
+		$input: $( '<input>' ).attr( { id: 'ml-inscript', type: 'text' } )
+	} );
+
+
+	imeTest( {
+		description: 'Malayalam Transliteration test',
+		tests: [
+			{ input: '\\~', output: '~', description: 'Malayalam transliteration - \\~ -> ~' },
+			{ input: 'a', output: 'അ', description: 'Malayalam a' },
+			{ input: 'ra', output: 'ര', description: 'Malayalam ra' },
+			{ input: 'p', output: 'പ്', description: 'Malayalam p' },
+			{ input: 'kh', output: 'ഖ്', description: 'Malayalam kh' },
+			{ input: 'nch', output: 'ഞ്ച്', description: 'Malayalam nch' },
+			{ input: 'au', output: 'ഔ', description: 'Malayalam au' },
+			{ input: 'maU', output: 'മൌ', description: 'Malayalam aU' },
+			{ input: 'kshau', output: 'ക്ഷൗ', description: 'Malayalam kshau' },
+			{ input: 'ram', output: 'രം', description: 'Malayalam ram' },
+			{ input: 'rama', output: 'രമ', description: 'Malayalam rama' },
+			{ input: 'baH', output: 'ബഃ', description: 'baH' },
+			{ input: 'bah', output: 'ബഹ്', description: 'bah' },
+			{ input: 'ai', output: 'ഐ', description: 'ai' },
+			{ input: 'lai', output: 'ലൈ', description: 'lai' },
+			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
+		],
+		inputmethod: 'ml-transliteration',
+		$input: $( '<input>' ).attr( { id: 'ml', type: 'text' } )
 	} );
 
 	imeTest( {
-		description: 'German Transliteration and keybuffer test',
+		description: 'Oriya InScript test',
 		tests: [
-			{ input: '~o', output: 'ö', description: 'German ö' },
-			{ input: '~O', output: 'Ö', description: 'German Ö' },
-			{ input: '~s', output: 'ß', description: 'German ß' }
+			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
 		],
-		inputmethod: 'de',
-		$input: $( '<input>' ).attr( { id: 'de', type: 'text' } )
+		inputmethod: 'or-inscript',
+		$input: $( '<input>' ).attr( { id: 'or-inscript', type: 'text' } )
 	} );
 
 	imeTest( {
-		description: 'Hebrew Transliteration and extended keys test',
+		description: 'Oriya transliteration test',
 		tests: [
-			// The first case is a regular hyphen-minus ('-'), which is the same
-			// when it is pressed by itself without Alt.
-			// The second case is hyphen-minus with Alt, which produces the Hebrew
-			// hyphen (maqaf).
-			{ input: [ [ '-', false ] ], output: '-', description: 'Hebrew regular -' },
-			{ input: [ [ '-', true ] ], output: '־', description: 'Hebrew extended -' }
+			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
+			{ input: 'a',  output: 'ଅ', description: 'Odia transliteration a -> ଅ ' },
+			{ input: 'aa', output: 'ଆ', description: 'Odia transliteration aa -> ଆ' },
+			{ input: 'A',  output: 'ଆ', description: 'Odia transliteration A -> ଆ' },
+			{ input: 'i',  output: 'ଇ', description: 'Odia transliteration i -> ଇ' },
+			{ input: 'I',  output: 'ଈ', description: 'Odia transliteration I -> ଈ' },
+			{ input: 'u',  output: 'ଉ', description: 'Odia transliteration u -> ଉ' },
+			{ input: 'U',  output: 'ଊ', description: 'Odia transliteration U -> ଊ' },
+			{ input: 'r',  output: 'ର୍', description: 'Odia transliteration r -> ର୍' },
+			{ input: 'R',  output: 'ଋ', description: 'Odia transliteration R -> ଋ' },
+			{ input: 'e',  output: 'ଏ', description: 'Odia transliteration e -> ଏ' },
+			{ input: 'ai', output: 'ଐ', description: 'Odia transliteration ai -> ଐ' },
+			{ input: 'o',  output: 'ଓ', description: 'Odia transliteration o -> ଓ' },
+			{ input: 'O',  output: 'ଔ', description: 'Odia transliteration O -> ଔ' },
+			{ input: 'k',  output: 'କ୍', description: 'Odia transliteration k -> କ୍' },
+			{ input: 'kh', output: 'ଖ୍', description: 'Odia transliteration kh -> ଖ୍' },
+			{ input: 'g',  output: 'ଗ୍', description: 'Odia transliteration g -> ଗ୍' },
+			{ input: 'gh', output: 'ଘ୍', description: 'Odia transliteration gh -> ଘ୍' },
+			{ input: 'NGa', output: 'ଙ', description: 'Odia transliteration NGa -> ଙ' },
+			{ input: 'ca', output: 'ଚ', description: 'Odia transliteration ca -> ଚ' },
+			{ input: 'cha', output: 'ଛ', description: 'Odia transliteration cha -> ଛ' },
+			{ input: 'ja', output: 'ଜ', description: 'Odia transliteration ja -> ଜ' },
+			{ input: 'jha', output: 'ଝ', description: 'Odia transliteration jha -> ଝ' },
+			{ input: 'Nga', output: 'ଞ', description: 'Odia transliteration Nga -> ଞ' },
+			{ input: 'Ta', output: 'ଟ', description: 'Odia transliteration Ta -> ଟ' },
+			{ input: 'Tha', output: 'ଠ', description: 'Odia transliteration Tha -> ଠ' },
+			{ input: 'Da', output: 'ଡ', description: 'Odia transliteration Da -> ଡ' },
+			{ input: 'Dha', output: 'ଢ', description: 'Odia transliteration Dha -> ଢ' },
+			{ input: 'Na', output: 'ଣ', description: 'Odia transliteration na -> ଣ' },
+			{ input: 'ta', output: 'ତ', description: 'Odia transliteration ta -> ତ' },
+			{ input: 'tha', output: 'ଥ', description: 'Odia transliteration tha -> ଥ' },
+			{ input: 'da', output: 'ଦ', description: 'Odia transliteration da -> ଦ' },
+			{ input: 'dha', output: 'ଧ', description: 'Odia transliteration dha -> ଧ' },
+			{ input: 'na', output: 'ନ', description: 'Odia transliteration na -> ନ' },
+			{ input: 'pa', output: 'ପ', description: 'Odia transliteration pa -> ପ' },
+			{ input: 'pha', output: 'ଫ', description: 'Odia transliteration pha -> ଫ' },
+			{ input: 'ba', output: 'ବ', description: 'Odia transliteration ba -> ବ' },
+			{ input: 'bha', output: 'ଭ', description: 'Odia transliteration bha -> ଭ' },
+			{ input: 'ma', output: 'ମ', description: 'Odia transliteration ma -> ମ' },
+			{ input: 'ya', output: 'ୟ', description: 'Odia transliteration ya -> ୟ' },
+			{ input: 'ra', output: 'ର', description: 'Odia transliteration ra -> ର' },
+			{ input: 'la', output: 'ଲ', description: 'Odia transliteration la -> ଲ' },
+			{ input: 'La', output: 'ଳ', description: 'Odia transliteration La -> ଳ' },
+			{ input: 'Sa', output: 'ଶ', description: 'Odia transliteration Sa -> ଶ' },
+			{ input: 'sa', output: 'ସ', description: 'Odia transliteration sa -> ସ' },
+			{ input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ' },
+			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
 		],
-		inputmethod: 'he-standard-2012-extonly',
-		$input: $( '<input>' ).attr( { id: 'he-standard-2011-extonly', type: 'text' } )
+		inputmethod: 'or-transliteration',
+		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
 	} );
+
 
 	imeTest( {
 		description: 'Punjabi Gurmukhi Transliteration',
@@ -1298,202 +1399,166 @@
 		$input: $( '<input>' ).attr( { id: 'pa', type: 'text' } )
 	} );
 
-	// Variables for Cyrillic with palochka transliteration tests.
-	// All the characters are very similar in appearance,
-	// so it's better to give them names to avoid confusion.
-	var palochka = 'Ӏ';
-	var latinSmallL = 'l';
-	var latinCapitalI = 'I';
-	var ukrainianCapitalI = 'І';
-	var digitOne = '1';
 
 	imeTest( {
-		description: 'Cyrillic with palochka transliteration test',
+		description: 'Tamil InScript test',
 		tests: [
-			// Sanity test - palochka should produce itself
-			{ input: palochka, output: palochka, description: 'Palochka itself is unchanged' },
-
-			{ input: 'L', output: 'L', description: 'Latin capital L is unchanged' },
-			{ input: latinSmallL, output: palochka, description: 'Latin small l becomes palochka' },
-
-			{ input: latinCapitalI, output: palochka, description: 'Latin capital I becomes palochka' },
-			{ input: 'i', output: 'i', description: 'Latin small i becomes palochka' },
-
-			{ input: ukrainianCapitalI, output: palochka, description: 'Ukrainian capital І becomes palochka' },
-
-			{ input: digitOne, output: digitOne, description: 'Digit one (1) is unchanged' },
-			{ input: [ [ digitOne, true ] ], output: palochka, description: 'Extended digit one (1) becomes palochka' },
-
-			{ input: 'д', output: 'д', description: 'Cyrillic small д is is unchanged' },
-			{ input: [ [ 'д', true ] ], output: palochka, description: 'Extended Cyrillic д becomes palochka' },
-
-			{ input: 'ш', output: 'ш', description: 'Cyrillic small ш is is unchanged' },
-			{ input: [ [ 'ш', true ] ], output: palochka, description: 'Extended Cyrillic small ш becomes palochka' },
-
-			{ input: 'Ш', output: 'Ш', description: 'Cyrillic capital Ш is is unchanged' },
-			{ input: [ [ 'Ш', true ] ], output: palochka, description: 'Extended Cyrillic capital Ш becomes palochka' }
+			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
+			{ input: 'lfkd)<fld', output: 'திக்‌ஷித்', description: 'Tamil Inscript திக்‌ஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
+			{ input: 'lf&fld', output: 'திக்ஷித்', description: 'Tamil Inscript திக்ஷித் conjunct form' },
+			{ input: ';sjVd', output: 'சேரன்', description: 'Tamil Inscript சேரன் Cheran' },
+			{ input: ';aBVd', output: 'சோழன்', description: 'Tamil Inscript சோழன் Chozhan' },
+			{ input: '/gbjepd', output: 'யுவராஜ்', description: 'Tamil Inscript யுவராஜ் Yuvaraj' },
+			{ input: 'heCd\'f/jd', output: 'பாண்டியர்', description: 'Tamil Inscript பாண்டியர் Pandiyar' },
+			{ input: 'Ecrjd', output: 'ஆமீர்', description: 'Tamil Inscript ஆமீர் Aamir' },
+			{ input: 'Duj`Vf', output: 'அஹரொனி', description: 'Tamil Inscript அஹரொனி Aharoni' },
+			{ input: 'md)jrkevdld', output: 'ஸ்‌ரீகாந்த்', description: 'Tamil Inscript ஸ்‌ரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
+			{ input: 'mdjrkevdld', output: 'ஸ்ரீகாந்த்', description: 'Tamil Inscript ஸ்ரீகாந்த் with SHRI = SA+RII' },
+			{ input: 'MdjrjcC', output: 'ஶ்ரீரமண', description: 'Tamil Inscript ஶ்ரீரமண Shriramana with SHRI = SHA+RII' },
+			{ input: 'Dnanfle', output: 'அலோலிதா', description: 'Tamil Inscript அலோலிதா Alolitha' },
+			{ input: '<jdce', output: 'ஷர்மா', description: 'Tamil Inscript ஷர்மா Sharma' },
+			{ input: 'hfjbrVd', output: 'பிரவீன்', description: 'Tamil Inscript பிரவீன் Pravin' },
+			{ input: ';vdla<d', output: 'சந்தோஷ்', description: 'Tamil Inscript சந்தோஷ் Santhosh' },
+			{ input: 'vfkdnmd', output: 'நிக்லஸ்', description: 'Tamil Inscript நிக்லஸ் Niklas' },
+			{ input: ';rhdjCd\'g', output: 'சீப்ரண்டு', description: 'Tamil Inscript சீப்ரண்டு Siebrand' },
+			{ input: 'hzUdkNtjg', output: 'பெங்களூரு', description: 'Tamil Inscript பெங்களூரு Bengalooru' },
+			{ input: ';qje\'d\'fj', output: 'சௌராட்டிர', description: 'Tamil Inscript சௌராட்டிர Saurattira' }
 		],
-		inputmethod: 'cyrl-palochka',
-		$input: $( '<input>' ).attr( { id: 'cyrl-palochka', type: 'text' } )
+		inputmethod: 'ta-inscript',
+		$input: $( '<input>' ).attr( { id: 'ta-inscript', type: 'text' } )
 	} );
 
 	imeTest( {
-		description: 'Gujarati Transliteration',
+		description: 'Tamil Transliteration test',
 		tests: [
-			{ input: '~', output: '~', description: 'Gujarati - tilde must not change' },
-			{ input: 'hiMmata', output: 'હિંમત', description: 'Gujarati hiMmata' },
-			{ input: 'aM^bara', output: 'અઁબર', description: 'Gujarati aM^bara - testing candrabindu' },
-			{ input: '_', output: '_', description: 'Gujarati - underscore must not change' },
-			{ input: 'oM', output: 'ઓં', description: 'Gujarati oM' },
-			{ input: 'OM', output: 'ૐ', description: 'Gujarati OM' },
-			{ input: 'K', output: '।', description: 'Gujarati K - testing danda' },
-			{ input: 'KK', output: '॥', description: 'Gujarati KK - testing double danda' },
-			{ input: 'ai', output: 'ઐ', description: 'Gujarati ai' },
-			{ input: 'eka', output: 'એક', description: 'Gujarati eka' },
-			{ input: 'aikya', output: 'ઐક્ય', description: 'Gujarati aikya' },
-			{ input: 'kailaasa', output: 'કૈલાસ', description: 'Gujarati kailaasa' },
-			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
-			{ input: 'sad`bhaava', output: 'સદ્‌ભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
-			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' }
+			//(ks|KS)h should give non-conjunct form of ksh க்‌ஷ் (with ZWNJ)
+			//(ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
+			{ input: 'thikshith', output: 'திக்‌ஷித்', description: 'thikshith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thikShith', output: 'திக்‌ஷித்', description: 'thikShith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thiksHith', output: 'திக்ஷித்', description: 'thiksHith in Tamil transliteration for திக்ஷித் conjunct form' },
+			{ input: 'thiKSHith', output: 'திக்ஷித்', description: 'thiKSHith in Tamil transliteration for திக்ஷித் conjunct form' },
+			{ input: 'Sri', output: 'ஸ்ரீ', description: 'Sri in Tamil transliteration for ஸ்ரீ Sri' },
+			{ input: 'Sruthi', output: 'ஸ்ருதி', description: 'Sruthi in Tamil transliteration for ஸ்ருதி' },
+			{ input: 'Sreeyaa', output: 'ஸ்ரேயா', description: 'Sreeyaa in Tamil transliteration for ஸ்ரேயா' },
+			{ input: 'shaajakaan', output: 'ஷாஜகான்', description: 'shaajakaan in Tamil transliteration for ஷாஜகான் non conjunct form' },
+			{ input: 'anbu', output: 'அன்பு', description: 'anbu in Tamil transliteration for அன்பு non conjunct form' },
+			{ input: 'aarvam', output: 'ஆர்வம்', description: 'aarvam in Tamil transliteration for ஆர்வம் non conjunct form' },
+			{ input: 'inRu', output: 'இன்று', description: 'inRu in Tamil transliteration for இன்று non conjunct form' },
+			{ input: 'iizam', output: 'ஈழம்', description: 'iizam in Tamil transliteration for ஈழம் non conjunct form' },
+			{ input: 'iilam', output: 'ஈலம்', description: 'iilam in Tamil transliteration for ஈலம் non conjunct form' },
+			{ input: 'iiLam', output: 'ஈளம்', description: 'iiLam in Tamil transliteration for ஈளம் non conjunct form' },
+			{ input: 'eNNam', output: 'எண்ணம்', description: 'eNNam in Tamil transliteration for எண்ணம் non conjunct form' },
+			{ input: 'eeu', output: 'ஏஉ', description: 'eeu in Tamil transliteration for ஏஉ non conjunct form' },
+			{ input: 'uuo', output: 'ஊஒ', description: 'uuo in Tamil transliteration for ஊஒ non conjunct form' },
+			{ input: 'ooNam', output: 'ஓணம்', description: 'ooNam in Tamil transliteration for ஓணம் non conjunct form' },
+			{ input: 'autatham', output: 'ஔடதம்', description: 'autatham in Tamil transliteration for ஔடதம் non conjunct form' },
+			{ input: 'kangkaa', output: 'கங்கா', description: 'kangkaa in Tamil transliteration for கங்கா non conjunct form' },
+			{ input: 'ngaasata', output: 'ஙாசட', description: 'ngaasata in Tamil transliteration for ஙாசட non conjunct form' },
+			{ input: 'naNawa', output: 'னணந', description: 'naNawa in Tamil transliteration for னணந non conjunct form' },
+			{ input: 'njaanam', output: 'ஞானம்', description: 'shajakaan in Tamil transliteration for ஞானம் non conjunct form' },
+			{ input: 'thapamayaa', output: 'தபமயா', description: 'thapamayaa in Tamil transliteration for தபமயா non conjunct form' },
+			{ input: 'jijigjaa', output: 'ஜிஜிக்ஜா', description: 'jijigjaa in Tamil transliteration for ஜிஜிக்ஜா non conjunct form' },
+			{ input: 'vaNNam', output: 'வண்ணம்', description: 'vaNNam in Tamil transliteration for வண்ணம் non conjunct form' },
+			{ input: 'haay', output: 'ஹாய்', description: 'haay in Tamil transliteration for ஹாய் non conjunct form' },
+			{ input: 'aHku', output: 'அஃகு', description: 'aHku in Tamil transliteration for அஃகு non conjunct form' },
+			{ input: 'jijoo', output: 'ஜிஜோ', description: 'jijoo in Tamil transliteration for ஜிஜோ non conjunct form' },
+			{ input: 'yarazavalaLaRana', output: 'யரழவலளறன', description: 'yarazavalaLaRana in Tamil transliteration for யரழவலளறன non conjunct form' },
+			{ input: 'juuhuu', output: 'ஜூஹூ', description: 'juuhuu in Tamil transliteration for ஜூஹூ non conjunct form' },
+			{ input: 'Sashasa', output: 'ஸஷச', description: 'Sashasa in Tamil transliteration for ஸஷச non conjunct form' },
+			{ input: 'Shuushaakikuu', output: 'ஷூஷாகிகூ', description: 'Shuushaakikuu in Tamil transliteration for ஷூஷாகிகூ non conjunct form' },
+			{ input: 'kEkAkaa', output: 'கேகாகா', description: 'kEkAkaa in Tamil transliteration for கேகாகா non conjunct form' },
+			{ input: 'zaazAAraRA', output: 'ழாழாஆரறா', description: 'zaazAAraRA in Tamil transliteration for ழாழாஆரறா non conjunct form' },
+			{ input: 'naiwowO', output: 'னைநொநோ', description: 'naiwowO in Tamil transliteration for னைநொநோ non conjunct form' },
+			{ input: 'rarAririireerE', output: 'ரராரிரீரேரே', description: 'rarAririireerE in Tamil transliteration for ரராரிரீரேரே non conjunct form' },
+			{ input: 'lailOlauLau', output: 'லைலோலௌளௌ', description: 'lailOlauLau in Tamil transliteration for லைலோலௌளௌ non conjunct form' },
+			{ input: 'kakaakAkikIkokOkai', output: 'ககாகாகிகீகொகோகை', description: 'kakaakAkikIkokOkai in Tamil transliteration for ககாகாகிகீகொகோகை non conjunct form' },
+			{ input: 'kakaakAkikIkiikukUkuukekEkeekaikokookOkau', output: 'ககாகாகிகீகீகுகூகூகெகேகேகைகொகோகோகௌ', description: 'kakaakAkikIkiikukUkuukekEkeekaikokookOkau in Tamil transliteration for ககாகாகிகீகீகுகூகூகெகேகேகைகொகோகோகௌ non conjunct form' },
+			{ input: 'ngangAngaangingiingIngungUnguungengEngeengaingongoongOngau', output: 'ஙஙாஙாஙிஙீஙீஙுஙூஙூஙெஙேஙேஙைஙொஙோஙோஙௌ', description: 'ngangAngaangingiingIngungUnguungengEngeengaingongoongOngu in Tamil transliteration for ஙஙாஙாஙிஙீஙீஙுஙூஙூஙெஙேஙேஙைஙொஙோஙோனௌ non conjunct form' },
+			{ input: 'sasaasAsisIsiisusUsuusesEseesaisosoosOsau', output: 'சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ', description: 'sasaasAsisIsiisusUsuusesEseesaisosoosOsau in Tamil transliteration for சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ non conjunct form' },
+			{ input: 'njanjaanjAnjinjiinjInjunjuunjUnjenjeenjEnjainjonjoonjOnjau', output: 'ஞஞாஞாஞிஞீஞீஞுஞூஞூஞெஞேஞேஞைஞொஞோஞோஞௌ', description: 'njanjaanjAnjinjiinjInjunjuunjUnjenjeenjEnjainjonjoonjOnjau in Tamil transliteration for ஞஞாஞாஞிஞீஞீஞுஞூஞூஞெஞேஞேஞைஞொஞோஞோஞௌ non conjunct form' },
+			{ input: 'cacaacAcicIciicucUcuucecEceecaicocoocOcau', output: 'சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ', description: 'cacaacAcicIciicucUcuucecEceecaicocoocOcau in Tamil transliteration for சசாசாசிசீசீசுசூசூசெசேசேசைசொசோசோசௌ non conjunct form' },
+			{ input: 'tataatAtitItiitutUtuutetEteetaitotootOtau', output: 'டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ', description: 'tataatAtitItiitutUtuutetEteetaitotootOtau in Tamil transliteration for டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ non conjunct form' },
+			{ input: 'dadaadAdidIdiidudUduudedEdeedaidodoodOdau', output: 'டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ', description: 'dadaadAdidIdiidudUduudedEdeedaidodoodOdau in Tamil Transliteration for டடாடாடிடீடீடுடூடூடெடேடேடைடொடோடோடௌ non conjunct form' },
+			{ input: 'NaNaaNANiNINiiNuNUNuuNeNENeeNaiNoNooNONau', output: 'ணணாணாணிணீணீணுணூணூணெணேணேணைணொணோணோணௌ', description: 'NaNaaNANiNINiiNuNUNuuNeNENeeNaiNoNooNONau in Tamil transliteration for ணணாணாணிணீணீணுணூணூணெணேணேணைணொணோணோனணௌ non conjunct form' },
+			{ input: 'thathaathAthithIthiithuthUthuuthethEtheethaithothoothOthau', output: 'ததாதாதிதீதீதுதூதூதெதேதேதைதொதோதோதௌ', description: 'thathaathAthithIthiithuthUthuuthethEtheethaithothoothOthau in Tamil transliteration for ததாதாதிதீதீதுதூதூதெதேதேதைதொதோதோதௌ non conjunct form' },
+			{ input: 'wawaawAwiwIwiiwuwUwuuwewEweewaiwowoowOwau', output: 'நநாநாநிநீநீநுநூநூநெநேநேநைநொநோநோநௌ', description: 'wawaawAwiwIwiiwuwUwuuwewEweewaiwowoowOwau in Tamil transliteration for நநாநிநீநீநுநூநூநெநேநேநைநொநோநோநௌ non conjunct form' },
+			{ input: 'papaapApipIpiipupUpuupepEpeepaipopoopOpau', output: 'பபாபாபிபீபீபுபூபூபெபேபேபைபொபோபோபௌ', description: 'papaapApipIpiipupUpuupepEpeepaipopoopOpau in Tamil transliteration for பபாபாபிபீபீபுபூபூபெபேபேபைபொபோபோபௌ non conjunct form' },
+			{ input: 'mamaamAmimImiimumUmuumemEmeemaimomoomOmau', output: 'மமாமாமிமீமீமுமூமூமெமேமேமைமொமோமோமௌ', description: 'mamaamAmimImiimumUmuumemEmeemaimomoomOmau in Tamil transliteration for மமாமாமிமீமீமுமூமூமெமேமேமைமொமோமோமௌ non conjunct form' },
+			{ input: 'yayaayAyiyIyiiyuyUyuuyeyEyeeyaiyoyooyOyau', output: 'யயாயாயியீயீயுயூயூயெயேயேயையொயோயோயௌ', description: 'yayaayAyiyIyiiyuyUyuuyeyEyeeyaiyoyooyOyau in Tamil transliteration for யயாயாயியீயீயுயூயூயெயேயேயையொயோயோயௌ non conjunct form' },
+			{ input: 'raraarArirIriirurUruurerEreerairoroorOrau', output: 'ரராராரிரீரீருரூரூரெரேரேரைரொரோரோரௌ', description: 'raraarArirIriirurUruurerEreerairoroorOrau in Tamil transliteration for ரராராரிரீரீருரூரூரெரேரேரைரொரோரோரௌ non conjunct form' },
+			{ input: 'lalaalAlilIliilulUluulelEleelailoloolOlau', output: 'லலாலாலிலீலீலுலூலூலெலேலேலைலொலோலோலௌ', desription: 'lalaalAlilIliilulUluulelEleelailoloolOlau in Tamil transliteration for லலாலாலிலீலீலுலூலூலெலேலேலைலொலோலோலௌ non conjunct form' },
+			{ input: 'vavaavAvivIviivuvUvuuvevEveevaivovoovOvau', output: 'வவாவாவிவீவீவுவூவூவெவேவேவைவொவோவோவௌ', description: 'vavaavAvivIviivuvUvuuvevEveevaivovoovOvau in Tamil transliteration for வவாவாவிவீவீவுவூவூவெவேவேவைவொவோவோவௌ non conjunct form' },
+			{ input: 'zazaazAzizIziizuzUzuuzezEzeezaizozoozOzau', output: 'ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ', description: 'zazaazAzizIziizuzUzuuzezEzeezaizozoozOzau in Tamil transliteration for ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ non conjunct form' },
+			{ input: 'zhazhaazhAzhizhIzhiizhuzhUzhuuzhezhEzheezhaizhozhoozhOzhau', output: 'ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ', description: 'zhazhaazhAzhizhIzhiizhuzhUzhuuzhezhEzheezhaizhozhoozhOzhau in Tamil transliteration for ழழாழாழிழீழீழுழூழூழெழேழேழைழொழோழோழௌ non conjunct form' },
+			{ input: 'LaLaaLALiLILiiLuLULuuLeLELeeLaiLoLooLOLau', output: 'ளளாளாளிளீளீளுளூளூளெளேளேளைளொளோளோளௌ', description: 'LaLaaLALiLILiiLuLULuuLeLELeeLaiLoLooLOLau in Tamil transliteration for ளளாளாளிளீளீளுளூளூளெளேளேளைளொளோளோளௌ non conjunct form' },
+			{ input: 'RaRaaRARiRIRiiRuRURuuReREReeRaiRoRooRORau', output: 'றறாறாறிறீறீறுறூறூறெறேறேறைறொறோறோறௌ', description: 'RaRaaRARiRIRiiRuRURuuReREReeRaiRoRooRORau in Tamil transliteration for றறாறாறிறீறீறுறூறூறெறேறேறைறொறோறோறௌ non conjunct form' },
+			{ input: 'nanaanAninIniinunUnuunenEneenainonoonOnau', output: 'னனானானினீனீனுனூனூனெனேனேனைனொனோனோனௌ', description: 'nanaanAninIniinunUnuunenEneenainonoonOnau in Tamil transliteration for னனானானினீனீனுனூனூனெனேனேனைனொனோனோனௌ non conjunct form' },
+			{ input: 'SaSaaSASiSISiiSuSUSuuSeSESeeSaiSoSooSOSau', output: 'ஸஸாஸாஸிஸீஸீஸுஸூஸூஸெஸேஸேஸைஸொஸோஸோஸௌ', description: 'SaSaaSASiSISiiSuSUSuuSeSESeeSaiSoSooSOSau in Tamil transliteration for ஸஸாஸாஸிஸீஸீஸுஸூஸூஸெஸேஸேஸைஸொஸோஸோஸௌ non conjunct form' },
+			{ input: 'shashaashAshishIshiishushUshuusheshEsheeshaishoshooshOshau', output: 'ஷஷாஷாஷிஷீஷீஷுஷூஷூஷெஷேஷேஷைஷொஷோஷோஷௌ', description: 'shashaashAshishIshiishushUshuusheshEsheeshaishoshooshOshau in Tamil transliteration for ஷஷாஷாஷிஷீஷீஷுஷூஷூஷெஷேஷேஷைஷொஷோஷோஷௌ non conjunct form' },
+			{ input: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau', output: 'ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ', description: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau in Tamil transliteration for ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ non conjunct form' },
+			{ input: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau', output: 'ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ', description: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau in Tamil transliteration for ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ non conjunct form' }
 		],
-		inputmethod: 'gu-transliteration',
-		$input: $( '<input>' ).attr( { id: 'gu', type: 'text' } )
+		inputmethod: 'ta-transliteration',
+		$input: $( '<input>' ).attr( { id: 'ta', type: 'text' } )
 	} );
 
 	imeTest( {
-		description: 'Bengali Avro layout test',
+		description: 'Tamil 99 test',
 		tests: [
-			{ input: 'ka', output: 'কা', description: 'Bengali Avro - ka' },
-			{ input: 'rri', output: 'ঋ', description: 'Bengali Avro - rri' },
-			{ input: 'drri', output: 'দৃ', description: 'Bengali Avro - drri' },
-			{ input: 'kee', output: 'কী', description: 'Bengali Avro - kee' }
+			//hfW should give non-conjunct form of ksha க்‌ஷ (with ZWNJ)
+			//T still gives the conjunct form க்ஷ
+			{ input: 'lshfWslf', output: 'திக்‌ஷித்', description: 'lshfWslf in Tamil99 for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
+			{ input: 'hfWtkakf', output: 'க்‌ஷேமம்', description: 'hfWtkakf in Tamil99 for க்‌ஷேமம் hfW -> க்‌ஷ non conjunct form' }, // (with ZWNJ)
+			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
 		],
-		inputmethod: 'bn-avro',
-		$input: $( '<input>' ).attr( { id: 'bn-avro', type: 'text' } )
+		inputmethod: 'ta-99',
+		$input: $( '<input>' ).attr( { id: 'ta-99', type: 'text' } )
+	} );
+
+
+	imeTest( {
+		description: 'Telugu InScript test',
+		tests: [
+			{ input: 'k-', output: 'కః', description: 'Telugu k- (visarga)' },
+			{ input: '}', output: 'ఞ', description: 'Telugu } (nya)' },
+			{ input: 'J', output: 'ఱ', description: 'Telugu J (rra)' },
+			{ input: '/', output: 'య', description: 'Telugu / (ya)' },
+			{ input: 'pz', output: 'జె', description: 'Telugu pz (je)' },
+			{ input: 'p`', output: 'జొ', description: 'Telugu p` (jo)' },
+			{ input: 'kX', output: 'కఁ', description: 'Telugu kX (ka@m, candrabindu)' },
+			{ input: 'hx', output: 'పం', description: 'Telugu hx (paM, anusvara)' },
+			{ input: '>', output: '।', description: 'Telugu > (danda)' },
+			{ input: [ [ ';', true ] ], output: 'ౘ', description: 'Telugu Alt ; (tsa)'},
+			{ input: [ [ 'p', true ] ], output: 'ౙ', description: 'Telugu Alt p (dza)'},
+			{ input: [ [ '4', true ] ], output: '₹', description: 'Alt 4; (rupee sign)'},
+			{ input: [ [ '=', true ] ], output: 'ౄ', description: 'Telugu Alt = (RRuu, vowel)'},
+			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)'}
+		],
+		inputmethod: 'te-inscript',
+		$input: $( '<input>' ).attr( { id: 'te-inscript', type: 'text' } )
 	} );
 
 	imeTest( {
-		description: 'Hindi InScript layout test',
+		description: 'Telugu Transliteration test',
 		tests: [
-			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
+			{ input: 'c', output: 'చ్', description: 'Telugu c' },
+			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
 		],
-		inputmethod: 'hi-inscript',
-		$input: $( '<input>' ).attr( { id: 'hi-inscript', type: 'text' } )
+		inputmethod: 'te-transliteration',
+		$input: $( '<input>' ).attr( { id: 'te', type: 'text' } )
 	} );
 
+	// TODO: enhance.
 	imeTest( {
-		description: 'Hindi transliteration tests',
+		description: 'Sanskrit transliteration test',
 		tests: [
-			// The regex returns \n for \r.
-			{ input: "raam\r", output: "राम\n", description: 'Hindi transliteration - raam<line-break> (\\r)' },
-
-			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
-			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
-			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
-
-			{ input: 'namaH', output: 'नमः', description: 'Hindi transliteration - namaH (visarga)' },
-			{ input: 'madhumaChiyoM', output: 'मधुमक्खियों', description: 'Hindi transliteration - madhumaChiyoM (anusvara)' },
-			{ input: '//', output: 'ऽ', description: 'Hindi transliteration - // (avagraha)' },
-			{ input: 'raama', output: 'राम', description: 'Hindi transliteration - raama' },
-			{ input: 'raama ', output: 'राम ', description: 'Hindi transliteration - raama<space> (backwards compatibility)' },
-			{ input: 'raama~ ', output: 'राम् ', description: 'Hindi transliteration - raama<viram><space>' },
-			{ input: 'raam ', output: 'राम ', description: 'Hindi transliteration - raam<space>' },
-			{ input: 'raam~ ', output: 'राम् ', description: 'Hindi transliteration - raam<viram><space>' },
-			{ input: 'raam,', output: 'राम,', description: 'Hindi transliteration - raam,' },
-			{ input: 'raam~,', output: 'राम्,', description: 'Hindi transliteration - raam<viram>,' },
-			{ input: 'raam?', output: 'राम?', description: 'Hindi transliteration - raam?' },
-			{ input: 'raam~?', output: 'राम्?', description: 'Hindi transliteration - raam<viram>?' },
-			{ input: 'raam!', output: 'राम!', description: 'Hindi transliteration - raam!' },
-			{ input: 'raam~!', output: 'राम्!', description: 'Hindi transliteration - raam<viram>!' },
-			{ input: 'raam-', output: 'राम-', description: 'Hindi transliteration - raam-' },
-			{ input: 'raam~-', output: 'राम्-', description: 'Hindi transliteration - raam<viram>-' },
-			{ input: 'raam:', output: 'राम:', description: 'Hindi transliteration - raam:' },
-			{ input: 'raam~:', output: 'राम्:', description: 'Hindi transliteration - raam<viram>:' },
-			{ input: 'raam;', output: 'राम;', description: 'Hindi transliteration - raam;' },
-			{ input: 'raam~;', output: 'राम्;', description: 'Hindi transliteration - raam<viram>;' },
-			{ input: 'raam5', output: 'राम५', description: 'Hindi transliteration - raam5' },
-			{ input: 'raam~5', output: 'राम्५', description: 'Hindi transliteration - raam<viram>5' },
-			{ input: 'santoSh.', output: 'सन्तोष।', description: 'Hindi transliteration - santoSh. (testing clusters and danda)' },
-			{ input: 'santoSh~.', output: 'सन्तोष्।', description: 'Hindi transliteration - santoSh<viram>. (testing clusters and danda)' },
-			{ input: 'raam..', output: 'राम॥', description: 'Hindi transliteration - raam..' },
-			{ input: 'raam~..', output: 'राम्॥', description: 'Hindi transliteration - raam<viram>..' },
-			{ input: 'laxmii', output: 'लक्ष्मी', description: 'Hindi transliteration - laxmii (testing ksh)' },
-			{ input: 'veeNaa', output: 'वीणा', description: 'Hindi transliteration - veeNaa' },
-			{ input: 'soorya', output: 'सूर्य', description: 'Hindi transliteration - soorya' },
-			{ input: 'amRtaa', output: 'अमृता', description: 'Hindi transliteration - amRtaa' },
-			{ input: 'bauThate', output: 'बौठते', description: 'Hindi transliteration - bauThate' },
-			{ input: '.', output: '।', description: 'Hindi transliteration - . (danda)' },
-			{ input: '..', output: '॥', description: 'Hindi transliteration - .. (double danda)' },
-
-			// bug 38238
-			{ input: 'AUMkaara', output: 'ॐकार', description: 'Hindi transliteration - auMkaara' },
-			{ input: 'auMsa', output: 'औंस', description: 'Hindi transliteration - auMsa (ounce)' },
-			{ input: 'bhaaShaaoM', output: 'भाषाओं', description: 'Hindi transliteration - bhaaShaaoM (testing correct typing of oM as a simple anusvara)' },
-			{ input: 'a', output: 'अ', description: 'a for अ translitration' },
-			{ input: 'aa', output: 'आ', description: 'aa for आ translitration' },
-			{ input: 'i', output: 'इ', description: 'i for इ translitration' },
-			{ input: 'I', output: 'ई', description: 'I for ई translitration' },
-			{ input: 'u', output: 'उ', description: 'u for U translitration' },
-			{ input: 'U', output: 'ऊ', description: 'U for ऊ translitration' },
-			{ input: 'e', output: 'ए', description: 'e for ए translitration' },
-			{ input: 'ai', output: 'ऐ', description: 'ai for ऐ translitration' },
-			{ input: 'o', output: 'ओ', description: 'o for ओ translitration' },
-			{ input: 'au', output: 'औ', description: 'au for औ translitration' },
-			{ input: 'O', output: 'ऑ', description: 'O for ऑ translitration' },
-			{ input: 'E', output: 'ऍ', description: 'E for ऍ translitration' },
-			{ input: 'aM', output: 'अं', description: 'aM for अं translitration' },
-			{ input: 'aH', output: 'अः', description: 'aH for अः translitration' },
-			{ input: 'ka', output: 'क', description: 'ka for क translitration' },
-			{ input: 'kha', output: 'ख', description: 'kha for ख translitration' },
-			{ input: 'ga', output: 'ग', description: 'ga for ग translitration' },
-			{ input: 'gha', output: 'घ', description: 'gha for घ translitration' },
-			{ input: 'nga', output: 'ङ', description: 'nga for ङ translitration' },
-			{ input: 'ca', output: 'च', description: 'cha for च translitration' },
-			{ input: 'cha', output: 'छ', description: 'chha for छ translitration' },
-			{ input: 'ja', output: 'ज', description: 'ja for ज translitration' },
-			{ input: 'jha', output: 'झ', description: 'jha for झ translitration' },
-			{ input: 'nja', output: 'ञ', description: 'nja for ञ translitration' },
-			{ input: 'Ta', output: 'ट', description: 'Ta for ट translitration' },
-			{ input: 'Tha', output: 'ठ', description: 'Tha for ठ translitration' },
-			{ input: 'Da', output: 'ड', description: 'Da for ड translitration' },
-			{ input: 'Dha', output: 'ढ', description: 'Dha for ढ translitration' },
-			{ input: 'Na', output: 'ण', description: 'Na for ण translitration' },
-			{ input: 'ta', output: 'त', description: 'ta for त translitration' },
-			{ input: 'tha', output: 'थ', description: 'tha for थ translitration' },
-			{ input: 'da', output: 'द', description: 'da for द translitration' },
-			{ input: 'dha', output: 'ध', description: 'dha for ध translitration' },
-			{ input: 'na', output: 'न', description: 'na for न translitration' },
-			{ input: 'pha', output: 'फ', description: 'pha for फ translitration' },
-			{ input: 'tha', output: 'थ', description: 'tha for थ translitration' },
-			{ input: 'ba', output: 'ब', description: 'ba for ब translitration' },
-			{ input: 'bha', output: 'भ', description: 'bha for भ translitration' },
-			{ input: 'ma', output: 'म', description: 'ma for म translitration' },
-			{ input: 'ya', output: 'य', description: 'ya for य translitration' },
-			{ input: 'ra', output: 'र', description: 'ra for र translitration' },
-			{ input: 'la', output: 'ल', description: 'la for ल translitration' },
-			{ input: 'va', output: 'व', description: 'va for व translitration' },
-			{ input: 'sha', output: 'श', description: 'sha for श translitration' },
-			{ input: 'ya', output: 'य', description: 'ya for य translitration' },
-			{ input: 'Sha', output: 'ष', description: 'Sha for ष translitration' },
-			{ input: 'sa', output: 'स', description: 'sa for स translitration' },
-			{ input: 'ha', output: 'ह', description: 'ha for ह translitration' },
-			{ input: 'sha', output: 'श', description: 'sha for श translitration' },
-			{ input: 'R', output: 'ऋ', description: 'R for ऋ translitration' },
-			{ input: '0', output: '०', description: '0 for ० translitration' },
-			{ input: '1', output: '१', description: '1 for १ translitration' },
-			{ input: '2', output: '२', description: '2 for २ translitration' },
-			{ input: '3', output: '३', description: '3 for ३ translitration' },
-			{ input: '4', output: '४', description: '4 for ४ translitration' },
-			{ input: '5', output: '५', description: '5 for ५ translitration' },
-			{ input: '6', output: '६', description: '6 for ६ translitration' },
-			{ input: '7', output: '७', description: '7 for ७ translitration' },
-			{ input: '8', output: '८', description: '8 for ८ translitration' },
-			{ input: '9', output: '९', description: '9 for ९ translitration' },
-			{ input: '0', output: '०', description: '0 for ० translitration' }
+			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' }
 		],
-		inputmethod: 'hi-transliteration',
-		$input: $( '<textarea>' ).attr( { id: 'hi', type: 'text' } )
+		inputmethod: 'sa-transliteration',
+		$input: $( '<input>' ).attr( { id: 'sa', type: 'text' } )
 	} );
+
 
 	// Based on SRI LANKA STANDARD 1134 : 2004
 	imeTest( {
@@ -1548,56 +1613,6 @@
 		$input: $( '<input>' ).attr( { id: 'si-wijesekara', type: 'text' } )
 	} );
 
-	imeTest( {
-		description: 'Bengali Probhat layout test',
-		tests: [
-			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
-			{ input: 'ki', output: 'কি', description: 'Bengali Probhat - ki' },
-			{ input: 'k/S', output: 'ক্ষ', description: 'Bengali Probhat - kha' },
-			{ input: 'q<', output: 'দৃ', description: 'Bengali Probhat - drri' },
-			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
-			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
-		],
-		inputmethod: 'bn-probhat',
-		$input: $( '<input>' ).attr( { id: 'bn-probhat', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Belarusian transliteration test',
-		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
-		],
-		inputmethod: 'be-transliteration',
-		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Belarusian Łacinka test',
-		tests: [
-			{ input: '=c', output: 'č', description: 'Belarusian Łacinka - =c -> č' },
-			{ input: '-n', output: 'ń', description: 'Belarusian Łacinka - -n -> ń' },
-			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
-			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
-		],
-		inputmethod: 'be-latin',
-		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
-	} );
-
-	imeTest( {
-		description: 'Javanese transliteration test',
-		tests: [
-			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
-			{ input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
-			{ input: 'A', output: 'ꦄ', description: 'Javanese transliteration - A' },
-			{ input: 'B', output: 'ꦨ', description: 'Javanese transliteration - B' },
-			{ input: 'y', output: 'ꦪ', description: 'Javanese transliteration - y' },
-			{ input: 'z', output: 'ꦗ꦳', description: 'Javanese transliteration - z' },
-			{ input: 'q`', output: '꧀', description: 'Javanese transliteration - q`' }
-		],
-		inputmethod: 'jv-transliteration',
-		$input: $( '<input>' ).attr( { id: 'jv-transliteration', type: 'text' } )
-	} );
 
 	imeTest( {
 		description: 'SIL IPA keyboard test',
