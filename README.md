@@ -30,7 +30,7 @@ For Developers
 --------------
 Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules) to learn how to write an input method for language.
 
-Read [rules/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test/README.md) to learn how to write and run tests for an input method.
+Read [test/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test) to learn how to write and run tests for an input method.
 
 Read the technical specification of project from [wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification)
 
