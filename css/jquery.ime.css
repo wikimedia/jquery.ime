@@ -1,5 +1,8 @@
 .imeselector {
 	position: absolute;
+	/* Fix rgba fallback bug - http://css-tricks.com/ie-background-rgb-bug */
+	/* @embed */
+	background: url('../images/ime-active.png') no-repeat 3px center #fff;
 	/* @embed */
 	background: url('../images/ime-active.png') no-repeat 3px center rgba(255,255,255,0.75);
 	cursor: pointer;
