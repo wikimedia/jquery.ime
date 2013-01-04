@@ -223,6 +223,14 @@
 			name: 'లిప్యంతరీకరణ',
 			source: 'rules/te/te-transliteration.js'
 		},
+		'th-kedmanee': {
+			name: 'เกษมณี',
+			source: 'rules/th/th-kedmanee.js'
+		},
+		'th-pattachote': {
+			name: 'ปัตตะโชติ',
+			source: 'rules/th/th-pattachote.js'
+		},
 		'pa-inscript': {
 			name: 'Inscript',
 			source: 'rules/pa/pa-inscript.js'
@@ -489,6 +497,10 @@
 		'te': {
 			autonym: 'తెలుగు',
 			inputmethods: [ 'te-transliteration', 'te-inscript' ]
+		},
+		'th': {
+			autonym: 'ไทย',
+			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
 		},
 		'tkr': {
 			autonym: 'цӀаӀхна миз',
