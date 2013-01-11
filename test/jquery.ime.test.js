@@ -173,7 +173,7 @@
 	var imeTest = function( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
-			$input: null,
+			multiline: false, // <input> or <textarea>
 			tests: [],
 			inputmethod: '' // The input method name.
 		}, options );
@@ -182,7 +182,12 @@
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length );
-			$input = opt.$input;
+			if( opt.multiline ) {
+				$input = $( '<textarea>' );
+			} else {
+				$input = $( '<input>' );
+			}
+			$input.attr( { id: opt.inputmethod, type: 'text' } );
 			QUnit.stop();
 
 			$input.appendTo( '#qunit-fixture' );

@@ -34,16 +34,14 @@ var testFixtures = [{
 			{ input: 'aa.m.', output: 'ዓ.ም.', description: 'Amharic aa.m. -> ዓ.ም.' },
 			{ input: 'ea', output: 'ኧ', description: 'Amharic ea -> ኧ' }
 		],
-		inputmethod: 'am-transliteration',
-		$input: $( '<input>' ).attr( { id: 'am', type: 'text' } )
+		inputmethod: 'am-transliteration'
 	},{
 		description: 'Belarusian transliteration test',
 		tests: [
 			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
 			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
-		inputmethod: 'be-transliteration',
-		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
+		inputmethod: 'be-transliteration'
 	},{
 		description: 'Belarusian Łacinka test',
 		tests: [
@@ -52,8 +50,7 @@ var testFixtures = [{
 			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
 			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
 		],
-		inputmethod: 'be-latin',
-		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
+		inputmethod: 'be-latin'
 	},{
 		description: 'Belarusian Łacinka test',
 		tests: [
@@ -62,16 +59,14 @@ var testFixtures = [{
 			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
 			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
 		],
-		inputmethod: 'be-latin',
-		$input: $( '<input>' ).attr( { id: 'be-latin', type: 'text' } )
+		inputmethod: 'be-latin'
 	},{
 		description: 'Belarusian transliteration test',
 		tests: [
 			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
 			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
-		inputmethod: 'be-transliteration',
-		$input: $( '<input>' ).attr( { id: 'be-transliteration', type: 'text' } )
+		inputmethod: 'be-transliteration'
 	},{
 		description: 'Bengali Probhat layout test',
 		tests: [
@@ -82,8 +77,7 @@ var testFixtures = [{
 			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
 			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
 		],
-		inputmethod: 'bn-probhat',
-		$input: $( '<input>' ).attr( { id: 'bn-probhat', type: 'text' } )
+		inputmethod: 'bn-probhat'
 	},{
 		description: 'Bengali Avro layout test',
 		tests: [
@@ -92,8 +86,7 @@ var testFixtures = [{
 			{ input: 'drri', output: 'দৃ', description: 'Bengali Avro - drri' },
 			{ input: 'kee', output: 'কী', description: 'Bengali Avro - kee' }
 		],
-		inputmethod: 'bn-avro',
-		$input: $( '<input>' ).attr( { id: 'bn-avro', type: 'text' } )
+		inputmethod: 'bn-avro'
 	},{
 		description: 'Cyrillic with palochka transliteration test',
 		tests: [
@@ -120,8 +113,7 @@ var testFixtures = [{
 			{ input: 'Ш', output: 'Ш', description: 'Cyrillic capital Ш is is unchanged' },
 			{ input: [ [ 'Ш', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic capital Ш becomes palochka' }
 		],
-		inputmethod: 'cyrl-palochka',
-		$input: $( '<input>' ).attr( { id: 'cyrl-palochka', type: 'text' } )
+		inputmethod: 'cyrl-palochka'
 	},{
 		description: 'Georgian Transliteration test',
 		tests: [
@@ -130,8 +122,7 @@ var testFixtures = [{
 			{ input: 'abcdefghijklmnopqrstuvwxyz', output: 'აბცდეფგჰიჯკლმნოპქრსტუვწხყზ', description: 'a-z in Georgian' },
 			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
 		],
-		inputmethod: 'ka-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ka', type: 'text' } )
+		inputmethod: 'ka-transliteration'
 	},{
 		description: 'German Transliteration and keybuffer test',
 		tests: [
@@ -139,8 +130,7 @@ var testFixtures = [{
 			{ input: '~O', output: 'Ö', description: 'German Ö' },
 			{ input: '~s', output: 'ß', description: 'German ß' }
 		],
-		inputmethod: 'de',
-		$input: $( '<input>' ).attr( { id: 'de', type: 'text' } )
+		inputmethod: 'de'
 	},{
 		description: 'Gujarati Transliteration',
 		tests: [
@@ -160,8 +150,7 @@ var testFixtures = [{
 			{ input: 'sad`bhaava', output: 'સદ્‌ભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
 			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' }
 		],
-		inputmethod: 'gu-transliteration',
-		$input: $( '<input>' ).attr( { id: 'gu', type: 'text' } )
+		inputmethod: 'gu-transliteration'
 	},{
 		description: 'Hebrew Transliteration and extended keys test',
 		tests: [
@@ -172,15 +161,13 @@ var testFixtures = [{
 			{ input: [ [ '-', false ] ], output: '-', description: 'Hebrew regular -' },
 			{ input: [ [ '-', true ] ], output: '־', description: 'Hebrew extended -' }
 		],
-		inputmethod: 'he-standard-2012-extonly',
-		$input: $( '<input>' ).attr( { id: 'he-standard-2011-extonly', type: 'text' } )
+		inputmethod: 'he-standard-2012-extonly'
 	},{
 		description: 'Hindi InScript layout test',
 		tests: [
 			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
 		],
-		inputmethod: 'hi-inscript',
-		$input: $( '<input>' ).attr( { id: 'hi-inscript', type: 'text' } )
+		inputmethod: 'hi-inscript'
 	},{
 		description: 'Hindi transliteration tests',
 		tests: [
@@ -292,7 +279,7 @@ var testFixtures = [{
 			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
 		inputmethod: 'hi-transliteration',
-		$input: $( '<textarea>' ).attr( { id: 'hi', type: 'text' } )
+		multiline: true
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
@@ -304,8 +291,7 @@ var testFixtures = [{
 			{ input: 'z', output: 'ꦗ꦳', description: 'Javanese transliteration - z' },
 			{ input: 'q`', output: '꧀', description: 'Javanese transliteration - q`' }
 		],
-		inputmethod: 'jv-transliteration',
-		$input: $( '<input>' ).attr( { id: 'jv-transliteration', type: 'text' } )
+		inputmethod: 'jv-transliteration'
 	},{
 		description : 'Kannada KGP test',
 		tests: [
@@ -335,8 +321,7 @@ var testFixtures = [{
 			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
 			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' } // with ZWJ
 		],
-		inputmethod: 'kn-kgp',
-		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
+		inputmethod: 'kn-kgp'
 	},{
 		description : 'Kannada Transliteration test',
 		tests: [
@@ -969,8 +954,7 @@ var testFixtures = [{
 			{ input: 'Q', output: 'ೞ್', description: 'Q for ೞ್ in Kannada transliteration' },
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
 		],
-		inputmethod: 'kn-transliteration',
-		$input: $( '<input>' ).attr( {id: 'kn', type: 'text' } )
+		inputmethod: 'kn-transliteration'
 	},{
 		description: 'Marathi InScript 2 test',
 		tests: [
@@ -979,8 +963,7 @@ var testFixtures = [{
 			{ input: [ [ '2', false ] ], output: '२', description: 'Marathi InScript regular 2 - २' },
 			{ input: [ [ '2', true ] ], output: '\u200c', description: 'Marathi InScript regular 2 - ZWNJ' }
 		],
-		inputmethod: 'mr-inscript2',
-		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+		inputmethod: 'mr-inscript2'
 	},{
 		description: 'Marathi Transliteration test',
 		tests: [
@@ -1075,13 +1058,11 @@ var testFixtures = [{
 			{ input: 'dvitIya', output: 'द्वितीय', description: 'dvitIya for द्वितीय translitration' },
 			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' }
 		],
-		inputmethod: 'mr-transliteration',
-		$input: $( '<input>' ).attr( { id: 'mr', type: 'text' } )
+		inputmethod: 'mr-transliteration'
 	},{
 		description: 'Malayalam InScript test',
 		tests: [{ input: 'ka', output: 'കോ' }],
-		inputmethod: 'ml-inscript',
-		$input: $( '<input>' ).attr( { id: 'ml-inscript', type: 'text' } )
+		inputmethod: 'ml-inscript'
 	},{
 		description: 'Malayalam Transliteration test',
 		tests: [
@@ -1102,15 +1083,13 @@ var testFixtures = [{
 			{ input: 'lai', output: 'ലൈ', description: 'lai' },
 			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
 		],
-		inputmethod: 'ml-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ml', type: 'text' } )
+		inputmethod: 'ml-transliteration'
 	},{
 		description: 'Oriya InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
 		],
-		inputmethod: 'or-inscript',
-		$input: $( '<input>' ).attr( { id: 'or-inscript', type: 'text' } )
+		inputmethod: 'or-inscript'
 	},{
 		description: 'Oriya phonetic test',
 		tests: [
@@ -1166,8 +1145,7 @@ var testFixtures = [{
 			{ input: 'dxiNeSwr',  output: 'ଦକ୍ଷିଣେଶ୍ୱର', description: 'Odia phonetic dxiNeSwr -> ଦକ୍ଷିଣେଶ୍ୱର ' },
 			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ'}
 		],
-		inputmethod: 'or-lekhani',
-		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
+		inputmethod: 'or-lekhani'
 	},{
 		description: 'Oriya transliteration test',
 		tests: [
@@ -1219,8 +1197,7 @@ var testFixtures = [{
 			{ input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ' },
 			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
 		],
-		inputmethod: 'or-transliteration',
-		$input: $( '<input>' ).attr( { id: 'or', type: 'text' } )
+		inputmethod: 'or-transliteration'
 	},{
 		description: 'Punjabi Gurmukhi Transliteration',
 		tests: [
@@ -1260,8 +1237,7 @@ var testFixtures = [{
 			{ input: 'iiTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi iiTaanagara' },
 			{ input: 'eeTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi eeTaanagara' }
 		],
-		inputmethod: 'pa-transliteration',
-		$input: $( '<input>' ).attr( { id: 'pa', type: 'text' } )
+		inputmethod: 'pa-transliteration'
 	},{
 		description: 'Tamil InScript test',
 		tests: [
@@ -1286,8 +1262,7 @@ var testFixtures = [{
 			{ input: 'hzUdkNtjg', output: 'பெங்களூரு', description: 'Tamil Inscript பெங்களூரு Bengalooru' },
 			{ input: ';qje\'d\'fj', output: 'சௌராட்டிர', description: 'Tamil Inscript சௌராட்டிர Saurattira' }
 		],
-		inputmethod: 'ta-inscript',
-		$input: $( '<input>' ).attr( { id: 'ta-inscript', type: 'text' } )
+		inputmethod: 'ta-inscript'
 	},{
 		description: 'Tamil Transliteration test',
 		tests: [
@@ -1358,8 +1333,7 @@ var testFixtures = [{
 			{ input: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau', output: 'ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ', description: 'jajaajAjijIjiijujUjuujejEjeejaijojoojOjau in Tamil transliteration for ஜஜாஜாஜிஜீஜீஜுஜூஜூஜெஜேஜேஜைஜொஜோஜோஜௌ non conjunct form' },
 			{ input: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau', output: 'ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ', description: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau in Tamil transliteration for ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ non conjunct form' }
 		],
-		inputmethod: 'ta-transliteration',
-		$input: $( '<input>' ).attr( { id: 'ta', type: 'text' } )
+		inputmethod: 'ta-transliteration'
 	},{
 		description: 'Tamil 99 test',
 		tests: [
@@ -1370,8 +1344,7 @@ var testFixtures = [{
 			{ input: 'hfWtkakf', output: 'க்‌ஷேமம்', description: 'hfWtkakf in Tamil99 for க்‌ஷேமம் hfW -> க்‌ஷ non conjunct form' }, // (with ZWNJ)
 			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
 		],
-		inputmethod: 'ta-99',
-		$input: $( '<input>' ).attr( { id: 'ta-99', type: 'text' } )
+		inputmethod: 'ta-99'
 	},{
 		description: 'Telugu InScript test',
 		tests: [
@@ -1390,23 +1363,20 @@ var testFixtures = [{
 			{ input: [ [ '=', true ] ], output: 'ౄ', description: 'Telugu Alt = (RRuu, vowel)'},
 			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)'}
 		],
-		inputmethod: 'te-inscript',
-		$input: $( '<input>' ).attr( { id: 'te-inscript', type: 'text' } )
+		inputmethod: 'te-inscript'
 	},{
 		description: 'Telugu Transliteration test',
 		tests: [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
 		],
-		inputmethod: 'te-transliteration',
-		$input: $( '<input>' ).attr( { id: 'te', type: 'text' } )
+		inputmethod: 'te-transliteration'
 	},{
 		description: 'Sanskrit transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' }
 		],
-		inputmethod: 'sa-transliteration',
-		$input: $( '<input>' ).attr( { id: 'sa', type: 'text' } )
+		inputmethod: 'sa-transliteration'
 	},{
 		description: 'Sinhala Wijesekara transliteration tests',
 		tests: [
@@ -1455,8 +1425,7 @@ var testFixtures = [{
 			{ input: 'nD', output: 'බෘ', description: 'Sinhala Wijesekara - nD -> බෘ (BR)' },
 			{ input: 'iDD', output: 'සෲ', description: 'Sinhala Wijesekara - iDD -> සෲ (SRR)' }
 		],
-		inputmethod: 'si-wijesekara',
-		$input: $( '<input>' ).attr( { id: 'si-wijesekara', type: 'text' } )
+		inputmethod: 'si-wijesekara'
 	},{
 		description: 'SIL IPA keyboard test',
 		tests: [
@@ -1732,7 +1701,6 @@ var testFixtures = [{
 
 			{ input: '[}e:i=ja}}fjatl%a}}jE<:ky=tl%]', output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]', description: 'Eyjafjallajökull' }
 		],
-		inputmethod: 'ipa-sil',
-		$input: $( '<input>' ).attr( { id: 'ipa-sil', type: 'text' } )
+		inputmethod: 'ipa-sil'
 	}
 ];
