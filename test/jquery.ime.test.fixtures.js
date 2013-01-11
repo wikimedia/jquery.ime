@@ -52,15 +52,6 @@ var testFixtures = [{
 		],
 		inputmethod: 'be-latin'
 	},{
-		description: 'Belarusian Łacinka test',
-		tests: [
-			{ input: '=c', output: 'č', description: 'Belarusian Łacinka - =c -> č' },
-			{ input: '-n', output: 'ń', description: 'Belarusian Łacinka - -n -> ń' },
-			{ input: '=u', output: 'ŭ', description: 'Belarusian Łacinka - =u -> ŭ' },
-			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
-		],
-		inputmethod: 'be-latin'
-	},{
 		description: 'Belarusian transliteration test',
 		tests: [
 			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
