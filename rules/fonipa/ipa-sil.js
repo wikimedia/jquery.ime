@@ -202,11 +202,11 @@
 
 			['@', '\u030a'], // Combining ring above
 
-			['(?:\u033c){',   '\u0323'], // {{{{{ // Combining dot below
-			['(?:\u033b){',   '\u033c'], // {{{{  // Combining seagull below
-			['(?:\u033a){',   '\u033b'], // {{{   // Combining square below
-			['(?:\u032a){',   '\u033a'], // {{    // Combining inverted bridge below
-			['{', '\u032a'],             // {     // Combining  bridge below
+			['(?:\u033c)\\{',   '\u0323'], // {{{{{ // Combining dot below
+			['(?:\u033b)\\{',   '\u033c'], // {{{{  // Combining seagull below
+			['(?:\u033a)\\{',   '\u033b'], // {{{   // Combining square below
+			['(?:\u032a)\\{',   '\u033a'], // {{    // Combining inverted bridge below
+			['\\{', '\u032a'],             // {     // Combining  bridge below
 
 			['(?:\u0303)~',   '\u0334'], // ~~    // Combining tilde overlay
 			['~',             '\u0303'], // ~     // Combining tilde
