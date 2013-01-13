@@ -9,7 +9,8 @@ var palochkaVariants = {
 	digitOne: '1'
 };
 
-var testFixtures = [{
+var testFixtures = [
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
@@ -143,7 +144,7 @@ var testFixtures = [{
 		],
 		inputmethod: 'gu-transliteration'
 	},{
-		description: 'Hebrew Transliteration and extended keys test',
+		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The first case is a regular hyphen-minus ('-'), which is the same
 			// when it is pressed by itself without Alt.
@@ -163,7 +164,7 @@ var testFixtures = [{
 		description: 'Hindi transliteration tests',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: "raam\r", output: "राम\n", description: 'Hindi transliteration - raam<line-break> (\\r)' },
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' },
 
 			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
 			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
@@ -1052,7 +1053,9 @@ var testFixtures = [{
 		inputmethod: 'mr-transliteration'
 	},{
 		description: 'Malayalam InScript test',
-		tests: [{ input: 'ka', output: 'കോ' }],
+		tests: [
+			{ input: 'ka', output: 'കോ' }
+		],
 		inputmethod: 'ml-inscript'
 	},{
 		description: 'Malayalam Transliteration test',
@@ -1421,7 +1424,7 @@ var testFixtures = [{
 		description: 'SIL IPA keyboard test',
 		tests: [
 			// This test suite follows the layout description document of
-			// of SIL's IPA keyboard, including plaing characters like "." and "v".
+			// of SIL's IPA keyboard, including plaing characters like '.' and 'v'.
 			// The test names are mostly based on IPA character descriptions.
 
 			// Bilabial consonants
