@@ -227,6 +227,14 @@
 			name: 'Inscript',
 			source: 'rules/pa/pa-inscript.js'
 		},
+		'pa-inscript2': {
+                        name: 'Inscript2',
+                        source: 'rules/pa/pa-inscript2.js'
+                },
+		'Jhelum': {
+                        name: 'Jhelum',
+                        source: 'rules/pa/pa-jhelum.js'
+                },
 		'pa-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/pa/pa-transliteration.js'
