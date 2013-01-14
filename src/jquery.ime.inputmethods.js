@@ -227,6 +227,14 @@
 			name: 'Inscript',
 			source: 'rules/pa/pa-inscript.js'
 		},
+		'pa-inscript2': {
+			name: 'Inscript2',
+			source: 'rules/pa/pa-inscript2.js'
+		},
+		'pa-jhelum': {
+			name: 'Jhelum',
+			source: 'rules/pa/pa-jhelum.js'
+		},
 		'pa-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/pa/pa-transliteration.js'
@@ -444,7 +452,7 @@
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
-			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic' ]
+			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
 		},
 		'rif': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
