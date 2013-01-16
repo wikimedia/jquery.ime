@@ -14,11 +14,13 @@
 	} );
 
 	QUnit.test( 'Initialization tests', 11, function ( assert ) {
-		var $readonlyTextarea = $( '<textarea readonly>' ),
+		var inputIME,
+			$readonlyTextarea = $( '<textarea readonly>' ),
 			$disabledTextarea = $( '<textarea disabled>' ),
 			$noimeTextarea = $( '<textarea class="noime">' ),
 			$input = $( '<input>' ),
-			inputIME;
+			$specialPath = $( '<textarea>' ),
+			specialPath = '../test';
 
 		assert.strictEqual( typeof $input.ime, 'function', 'ime function exists' );
 		assert.strictEqual( typeof $input.data( 'ime' ), 'undefined', 'ime not initialized before calling ime()' );
@@ -31,8 +33,6 @@
 		assert.strictEqual( inputIME.getIM(), null, 'inputmethod is initially null' );
 		assert.strictEqual( inputIME.options.imePath, '../', 'imePath is "../" by default' );
 
-		var $specialPath = $( '<textarea>' ),
-			specialPath = '../test';
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
 							'imePath is defined correctly using options in the constructor' );
@@ -141,6 +141,7 @@
 
 	QUnit.test( 'Utility functions tests', 12, function ( assert ) {
 		var setLanguageResult;
+
 		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 5, 2 ), 'ba', 'lastNChars works with short buffer.' );
 		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 2, 5 ), 'fo', 'lastNChars works with long buffer.' );
 
@@ -182,11 +183,13 @@
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length );
+
 			if( opt.multiline ) {
 				$input = $( '<textarea>' );
 			} else {
 				$input = $( '<input>' );
 			}
+
 			$input.attr( { id: opt.inputmethod, type: 'text' } );
 			QUnit.stop();
 
@@ -195,35 +198,42 @@
 			$input.focus();
 
 			ime = $input.data( 'ime' );
+
 			ime.load( opt.inputmethod, function () {
+				var i;
+
 				ime.setIM( opt.inputmethod );
 				ime.enable();
-				for ( var i = 0 ; i < opt.tests.length; i++ ) {
+
+				for ( i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
 					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
 					$input.val( '' );
 					$input.text( '' );
 				}
+
 				QUnit.start();
 			} );
 		} );
 	};
 
+	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function( i, fixture ) {
 		imeTest( fixture );
 	} );
+
 	// Basic sendkey-implementation
 	// $input - the input element
 	// characters - either
-	//			- a string
-	//			- an array of pairs of character and altKey value
+	//            - a string
+	//            - an array of pairs of character and altKey value
 	var typeChars = function( $input, characters ) {
-		var len = characters.length;
-		for ( var i = 0; i < len; i++ ) {
+		var i, character, altKeyValue, code, event,
+			len = characters.length;
+
+		for ( i = 0; i < len; i++ ) {
 			// Get the key code
-			var character,
-				altKeyValue;
 			if ( typeof( characters ) === 'string' ) {
 				character = characters[i];
 				altKeyValue = false;
@@ -232,19 +242,19 @@
 				altKeyValue = characters[i][1];
 			}
 
-			var code = character.charCodeAt(0);
+			code = character.charCodeAt(0);
 
 			// Trigger event and undo if prevented
-			var event = new jQuery.Event( 'keypress', {
+			event = new jQuery.Event( 'keypress', {
 				keyCode: code,
 				which: code,
 				charCode: code,
 				altKey: altKeyValue
 			} );
+
 			if ( $input.triggerHandler( event ) ) {
 				$input.val( $input.val() + character ) ;
 			}
 		}
 	};
-
 }( jQuery ) );
