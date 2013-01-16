@@ -143,6 +143,14 @@
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
 		},
+		'gu-inscript2': {
+			name: 'ઇનસ્ક્રિપ્ટ ૨',
+			source: 'rules/gu/gu-inscript2.js'
+		},
+		'gu-phonetic': {
+			name: 'ફોનેતિક',
+			source: 'rules/gu/gu-phonetic.js'
+		},
 		'gu-transliteration': {
 			name: 'લિપ્યાંતરણ',
 			source: 'rules/gu/gu-transliteration.js'
@@ -360,7 +368,7 @@
 		},
 		'gu': {
 			autonym: 'ગુજરાતી',
-			inputmethods: [ 'gu-transliteration', 'gu-inscript' ]
+			inputmethods: [ 'gu-transliteration', 'gu-inscript', 'gu-inscript2', 'gu-phonetic' ]
 		},
 		'he': {
 			autonym: 'עברית',
