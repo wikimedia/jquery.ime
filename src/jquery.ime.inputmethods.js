@@ -167,6 +167,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
 		},
+		'mn-cyrl': {
+			name: 'Cyrillic',
+			source: 'rules/mn/mn-cyrl.js'
+		},
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -223,6 +227,14 @@
 			name: 'లిప్యంతరీకరణ',
 			source: 'rules/te/te-transliteration.js'
 		},
+		'th-kedmanee': {
+			name: 'เกษมณี',
+			source: 'rules/th/th-kedmanee.js'
+		},
+		'th-pattachote': {
+			name: 'ปัตตะโชติ',
+			source: 'rules/th/th-pattachote.js'
+		},
 		'pa-inscript': {
 			name: 'Inscript',
 			source: 'rules/pa/pa-inscript.js'
@@ -274,10 +286,6 @@
 		'ur-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/ur/ur-transliteration.js'
-		},
-		'mn-cyrl': {
-			name: 'Cyrillic',
-			source: 'rules/mn/mn-cyrl.js'
 		},
 		'ipa-sil': {
 			name: 'International Phonetic Alphabet - SIL',
@@ -497,6 +505,10 @@
 		'te': {
 			autonym: 'తెలుగు',
 			inputmethods: [ 'te-transliteration', 'te-inscript' ]
+		},
+		'th': {
+			autonym: 'ไทย',
+			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
 		},
 		'tkr': {
 			autonym: 'цӀаӀхна миз',
