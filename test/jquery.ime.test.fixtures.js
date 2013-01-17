@@ -1075,6 +1075,7 @@ var testFixtures = [
 			{ input: 'bah', output: 'ബഹ്', description: 'bah' },
 			{ input: 'ai', output: 'ഐ', description: 'ai' },
 			{ input: 'lai', output: 'ലൈ', description: 'lai' },
+			{ input: 'N', output: 'ൺ', description: 'Malayalam N' },
 			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
 		],
 		inputmethod: 'ml-transliteration'
