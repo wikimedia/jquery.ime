@@ -107,6 +107,10 @@
 			name: 'ഇൻസ്ക്രിപ്റ്റ്',
 			source: 'rules/ml/ml-inscript.js'
 		},
+		'ml-inscript2': {
+			name: 'ഇൻസ്ക്രിപ്റ്റ് 2',
+			source: 'rules/ml/ml-inscript2.js'
+		},
 		'sv-normforms': {
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
@@ -114,6 +118,10 @@
 		'ta-inscript': {
 			name: 'இன்ஸ்கிரிப்ட்',
 			source: 'rules/ta/ta-inscript.js'
+		},
+		'ta-inscript2': {
+			name: 'இன்ஸ்கிரிப்ட் 2',
+			source: 'rules/ta/ta-inscript2.js'
 		},
 		'ta-transliteration': {
 			name: 'எழுத்துப்பெயர்ப்பு',
@@ -162,6 +170,10 @@
 		'kn-inscript': {
 			name: 'Inscript',
 			source: 'rules/kn/kn-inscript.js'
+		},
+		'kn-inscript2': {
+			name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್ ೨',
+			source: 'rules/kn/kn-inscript2.js'
 		},
 		'kn-transliteration': {
 			name: 'Transliteration',
@@ -226,6 +238,10 @@
 		'te-inscript': {
 			name: 'ఇన్‍స్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
+		},
+		'te-inscript2': {
+			name: 'ఇన్‍స్క్రిప్ట్ 2',
+			source: 'rules/te/te-inscript2.js'
 		},
 		'te-transliteration': {
 			name: 'లిప్యంతరీకరణ',
@@ -404,7 +420,7 @@
 		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
-			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp' ]
+			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
 		'kok': {
 			autonym: 'कोंकणी',
@@ -424,7 +440,7 @@
 		},
 		'ml': {
 			autonym: 'മലയാളം',
-			inputmethods: [ 'ml-transliteration', 'ml-inscript' ]
+			inputmethods: [ 'ml-transliteration', 'ml-inscript', 'ml-inscript2' ]
 		},
 		'mn': {
 			autonym: 'Монгол',
@@ -496,7 +512,7 @@
 		},
 		'ta': {
 			autonym: 'தமிழ்',
-			inputmethods: [ 'ta-transliteration', 'ta-99', 'ta-inscript', 'ta-bamini' ]
+			inputmethods: [ 'ta-transliteration', 'ta-99', 'ta-inscript', 'ta-bamini', 'ta-inscript2' ]
 		},
 		'tcy': {
 			autonym: 'ತುಳು',
@@ -504,7 +520,7 @@
 		},
 		'te': {
 			autonym: 'తెలుగు',
-			inputmethods: [ 'te-transliteration', 'te-inscript' ]
+			inputmethods: [ 'te-transliteration', 'te-inscript', 'te-inscript2' ]
 		},
 		'tkr': {
 			autonym: 'цӀаӀхна миз',
