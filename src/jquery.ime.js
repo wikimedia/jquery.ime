@@ -325,8 +325,17 @@
 
 			if ( range && range.parentElement() === el ) {
 				len = el.value.length;
+				
 				normalizedValue = el.value.replace( /\r\n/g, '\n' );
+				
+				// IE doesn't count \n when computing the offset, so we won't either
+				newLines = normalizedValue.match( /\n/g );
 
+				if ( newLines ) {
+					len -= newLines.length;
+				}				
+				
+				
 				// Create a working TextRange that lives only in the input
 				textInputRange = el.createTextRange();
 				textInputRange.moveToBookmark( range.getBookmark() );
