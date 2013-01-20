@@ -357,8 +357,10 @@
 				}
 				
 				if( newLines ){
-					newLines = $.filter( newLines, function( position ){
-						return position <= start; // If position < start reduce those lines from start
+					newLines = $.map( newLines, function( position ){
+						return ( position <= start ) ? position : null; 
+						// If position < start reduce those lines from start
+						// Would off been much cleaner if jQuery would of followed Array.prototype.filter Spec.
 					});
 					start -= newLines.length;
 					end -= newLines.length;
