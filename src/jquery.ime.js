@@ -314,7 +314,8 @@
 			range,
 			textInputRange,
 			len,
-			endRange;
+			endRange,
+			newLines;
 
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
@@ -329,12 +330,7 @@
 				normalizedValue = el.value.replace( /\r\n/g, '\n' );
 				
 				// IE doesn't count \n when computing the offset, so we won't either
-				newLines = normalizedValue.match( /\n/g );
-
-				if ( newLines ) {
-					len -= newLines.length;
-				}				
-				
+				newLines = normalizedValue.match( /\n/g );				
 				
 				// Create a working TextRange that lives only in the input
 				textInputRange = el.createTextRange();
@@ -359,6 +355,15 @@
 						end += normalizedValue.slice( 0, end ).split( '\n' ).length - 1;
 					}
 				}
+				
+				if( newLines ){
+					newLines = $.filter( newLines, function( position ){
+						return position <= start; // If position < start reduce those lines from start
+					});
+					start -= newLines.length;
+					end -= newLines.length;
+				}
+				
 			}
 		}
 
