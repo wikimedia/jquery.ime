@@ -156,7 +156,7 @@
 			source: 'rules/gu/gu-inscript2.js'
 		},
 		'gu-phonetic': {
-			name: 'ફોનેતિક',
+			name: 'ફોનૅટિક',
 			source: 'rules/gu/gu-phonetic.js'
 		},
 		'gu-transliteration': {
