@@ -3,7 +3,7 @@
 
 	var guPhonetic = {
 		id: 'gu-phonetic',
-		name: 'ફોનેતિક',
+		name: 'ફોનૅટિક',
 		description: 'Phonetic keyboard for Gujarati script',
 		date: '2013-11-15',
 		author: 'Parag Nemade',
