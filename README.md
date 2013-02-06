@@ -34,6 +34,8 @@ Read [test/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test) 
 
 Read the technical specification of project from [wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification)
 
+Code walkthrough by Chris Forno: http://www.youtube.com/watch?v=LPec-KIBVeI
+
 License
 -------
 This project is dual licensed with GPLv2+ and MIT license. See the license files in the source code for more details.
