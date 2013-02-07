@@ -1592,10 +1592,10 @@ var testFixtures = [
 			{ input: '#1',     output: '˨',   description: 'Low tone bar' },
 			{ input: '#0',     output: '˩',   description: 'Extra-low tone bar' },
 			{ input: 'e@4',    output: 'e̋',   description: 'Extra-high tone diacritic' },
-			{ input: 'e@3',    output: 'é',   description: 'High tone diacritic' },
-			{ input: 'e@2',    output: 'ē',   description: 'Mid tone diacritic' },
-			{ input: 'e@1',    output: 'è',   description: 'Low tone diacritic' },
-			{ input: 'e@0',    output: 'ȅ',   description: 'Extra-low tone diacritic' },
+			{ input: 'e@3',    output: 'é',   description: 'High tone diacritic' },
+			{ input: 'e@2',    output: 'ē',   description: 'Mid tone diacritic' },
+			{ input: 'e@1',    output: 'è',   description: 'Low tone diacritic' },
+			{ input: 'e@0',    output: 'ȅ',   description: 'Extra-low tone diacritic' },
 
 			// Tone combinations
 			// The following tone bar tests are taken from the layout description.
@@ -1606,8 +1606,8 @@ var testFixtures = [
 			{ input: '#12',    output: '˨˧',  description: 'Low rising tone bar (12)' },
 			{ input: '#141',   output: '˨˥˨', description: 'Rising-falling tone bar (141)' },
 
-			{ input: 'e@13',   output: 'ě',   description: 'Rising tone diacritic' },
-			{ input: 'e@31',   output: 'ê',   description: 'Falling tone diacritic' },
+			{ input: 'e@13',   output: 'ě',   description: 'Rising tone diacritic' },
+			{ input: 'e@31',   output: 'ê',   description: 'Falling tone diacritic' },
 			{ input: 'e@23',   output: 'e᷄',   description: 'High rising tone diacritic' },
 			{ input: 'e@12',   output: 'e᷅',   description: 'Low rising tone diacritic' },
 			{ input: 'e@131',  output: 'e᷈',   description: 'Rising-falling tone diacritic' },
@@ -1666,13 +1666,13 @@ var testFixtures = [
 			{ input: 't{{',    output: 't̺',   description: 'Apical' },
 			{ input: 't{{{',   output: 't̻',   description: 'Laminal' },
 			{ input: 't{{{{',  output: 't̼',   description: 'Lingulabial' },
-			{ input: 's{{{{{', output: 'ṣ',   description: 'Closer variety / Fricative' }, // TODO Find out how standard this is
-			{ input: 'e~',     output: 'ẽ',   description: 'Nasalised' },
+			{ input: 's{{{{{', output: 'ṣ',   description: 'Closer variety / Fricative' }, // TODO Find out how standard this is
+			{ input: 'e~',     output: 'ẽ',   description: 'Nasalised' },
 			{ input: 'l~~',    output: 'l̴',   description: 'Velarized or pharyngealized' },
-			{ input: 'e*',     output: 'ë',   description: 'Centralised' },
+			{ input: 'e*',     output: 'ë',   description: 'Centralised' },
 			{ input: 'e**',    output: 'e̽',   description: 'Mid centralised' },
-			{ input: 'e***',   output: 'ĕ',   description: 'Extra short' },
-			{ input: 'e****',  output: 'ė',   description: 'Palatalization/Centralization' }, // TODO Find out how standard this is
+			{ input: 'e***',   output: 'ĕ',   description: 'Extra short' },
+			{ input: 'e****',  output: 'ė',   description: 'Palatalization/Centralization' }, // TODO Find out how standard this is
 			// TODO Find out what the m with the five asterisks is.
 
 			{ input: 'k#&p',   output: 'k͡p',  description: 'Double articulation above' },
@@ -1697,5 +1697,33 @@ var testFixtures = [
 			{ input: '[}e:i=ja}}fjatl%a}}jE<:ky=tl%]', output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]', description: 'Eyjafjallajökull' }
 		],
 		inputmethod: 'ipa-sil'
+	},{
+		description: 'Thai Kedmanee test',
+		tests: [
+			{ input: '\\~', output: '%', description: '\\~ → %' },
+			{ input: 'v', output: 'อ', description: 'Thai long vowel “o”' },
+			{ input: 'i', output: 'ร', description: 'Thai low consonant “r”' },
+			{ input: 'l^j', output: 'สู่', description: 'The word “to” in Thai' },
+			{ input: 'c\\,oe', output: 'แมนำ', description: 'The word “parent” in Thai' },
+			{ input: 'xitgmL', output: 'ประเทศ', description: 'The word “nation” in Thai' },
+			{ input: '\\;bdbrugfup', output: 'วิกิพีเดีย', description: 'The word “Wikipedia” in Thai' },
+			{ input: '4kKkwmp', output: 'ภาษาไทย', description: 'The name of the Thai language in Thai' },
+			{ input: 'F*oyo gxuUpt', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
+		],
+		inputmethod: 'th-kedmanee'
+	},{
+		description: 'Thai Pattachote test',
+		tests: [
+			{ input: '\\~', output: '฿', description: '\\~ → ฿' },
+			{ input: 'r', output: 'อ', description: 'Thai long vowel “o”' },
+			{ input: 't', output: 'ร', description: 'Thai low consonant “r”' },
+			{ input: 'm6y', output: 'สู่', description: 'The word “to” in Thai' },
+			{ input: 'pikD', output: 'แมนำ', description: 'The word “parent” in Thai' },
+			{ input: 'xt\\,lsN', output: 'ประเทศ', description: 'The word “nation” in Thai' },
+			{ input: 'obfb\\/hluhe', output: 'วิกิพีเดีย', description: 'The word “Wikipedia” in Thai' },
+			{ input: 'VjTj\\;se', output: 'ภาษาไทย', description: 'The name of the Thai language in Thai' },
+			{ input: 'Lnkgk lxhQe\\,', output: 'โคนัน เปี๊ยะ', description: 'My user name (translated from Chinese)' },
+		],
+		inputmethod: 'th-pattachote'
 	}
 ];
