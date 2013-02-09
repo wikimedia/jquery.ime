@@ -235,9 +235,17 @@
 			name: 'Inscript',
 			source: 'rules/or/or-inscript.js'
 		},
+		'or-inscript2': {
+			name: 'Inscript2',
+			source: 'rules/or/or-inscript2.js'
+		},
 		'or-lekhani': {
 			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
+		},
+		'or-phonetic': {
+			name: 'Phonetic',
+			source: 'rules/or/or-phonetic.js'
 		},
 		'se-normforms': {
 			name: 'Normal forms',
@@ -480,7 +488,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript' ]
+			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript', 'or-phonetic', 'or-inscript2' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
