@@ -211,6 +211,10 @@
 			name: 'अक्षरांतरण',
 			source: 'rules/mr/mr-transliteration.js'
 		},
+		'mr-phonetic': {
+			name: 'phonetic',
+			source: 'rules/mr/mr-phonetic.js'
+		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -468,7 +472,7 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
