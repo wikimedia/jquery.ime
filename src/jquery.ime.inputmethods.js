@@ -207,6 +207,14 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
 		},
+               'ks-inscript': {
+                        name: 'इनस्क्रिप्ट',
+                        source: 'rules/ks/ks-inscript.js'
+                },
+               'ks-kbd': {
+                        name: 'kbd',
+                        source: 'rules/ks/ks-kbd.js'
+                },
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -457,6 +465,10 @@
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
+		},
+		'ks': {
+                        autonym: 'Kashmiri',
+                        inputmethods: [ 'ks-inscript', 'ks-kbd' ]
 		},
 		'kok': {
 			autonym: 'कोंकणी',
