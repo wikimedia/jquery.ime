@@ -6,6 +6,10 @@
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
+		'ar-kbd': {
+                        name: 'Arabic',
+                        source: 'rules/ar/ar-kbd.js'
+                },
 		'as-avro': {
 			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
@@ -350,6 +354,10 @@
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
 		},
+		'ar': {
+                        autonym: 'Arabic',
+                        inputmethods: [ 'ar-kbd' ]
+                },
 		'as': {
 			autonym: 'অসমীয়া',
 			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
