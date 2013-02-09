@@ -18,6 +18,14 @@
 			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/as/as-inscript.js'
 		},
+		'as-inscript2': {
+			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			source: 'rules/as/as-inscript2.js'
+		},
+		'as-phonetic': {
+			name: 'phonetic',
+			source: 'rules/as/as-phonetic.js'
+		},
 		'as-transliteration': {
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
@@ -324,7 +332,7 @@
 		},
 		'as': {
 			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript' ]
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
 		},
 		'av': {
 			autonym: 'авар',
