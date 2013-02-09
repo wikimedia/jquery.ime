@@ -90,6 +90,10 @@
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/hi/hi-inscript.js'
 		},
+		'hi-phonetic': {
+			name: 'phonetic',
+			source: 'rules/hi/hi-phonetic.js'
+		},
 		'is-normforms': {
 			name: 'Normal forms',
 			source: 'rules/is/is-normforms.js'
@@ -408,7 +412,7 @@
 		},
 		'hi': {
 			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
