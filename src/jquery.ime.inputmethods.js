@@ -50,6 +50,10 @@
 			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/bn/bn-inscript.js'
 		},
+		'bn-inscript2': {
+			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			source: 'rules/bn/bn-inscript2.js'
+		},
 		'bn-nkb': {
 			name: 'National Keyboard',
 			source: 'rules/bn/bn-nkb.js'
@@ -368,7 +372,7 @@
 		},
 		'bn': {
 			autonym: 'বাংলা',
-			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat' ]
+			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
 		},
 		'brx': {
 			autonym: 'बोड़ो',
