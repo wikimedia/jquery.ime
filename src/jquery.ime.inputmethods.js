@@ -18,6 +18,14 @@
 			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/as/as-inscript.js'
 		},
+		'as-inscript2': {
+			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			source: 'rules/as/as-inscript2.js'
+		},
+		'as-phonetic': {
+			name: 'phonetic',
+			source: 'rules/as/as-phonetic.js'
+		},
 		'as-transliteration': {
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
@@ -41,6 +49,10 @@
 		'bn-inscript': {
 			name: 'ইন্‌স্ক্ৰিপ্ত',
 			source: 'rules/bn/bn-inscript.js'
+		},
+		'bn-inscript2': {
+			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			source: 'rules/bn/bn-inscript2.js'
 		},
 		'bn-nkb': {
 			name: 'National Keyboard',
@@ -81,6 +93,10 @@
 		'hi-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/hi/hi-inscript.js'
+		},
+		'hi-phonetic': {
+			name: 'phonetic',
+			source: 'rules/hi/hi-phonetic.js'
 		},
 		'is-normforms': {
 			name: 'Normal forms',
@@ -199,6 +215,10 @@
 			name: 'अक्षरांतरण',
 			source: 'rules/mr/mr-transliteration.js'
 		},
+		'mr-phonetic': {
+			name: 'phonetic',
+			source: 'rules/mr/mr-phonetic.js'
+		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -227,9 +247,17 @@
 			name: 'Inscript',
 			source: 'rules/or/or-inscript.js'
 		},
+		'or-inscript2': {
+			name: 'Inscript2',
+			source: 'rules/or/or-inscript2.js'
+		},
 		'or-lekhani': {
 			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
+		},
+		'or-phonetic': {
+			name: 'Phonetic',
+			source: 'rules/or/or-phonetic.js'
 		},
 		'se-normforms': {
 			name: 'Normal forms',
@@ -324,7 +352,7 @@
 		},
 		'as': {
 			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript' ]
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
 		},
 		'av': {
 			autonym: 'авар',
@@ -344,7 +372,7 @@
 		},
 		'bn': {
 			autonym: 'বাংলা',
-			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat' ]
+			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
 		},
 		'brx': {
 			autonym: 'बोड़ो',
@@ -392,7 +420,7 @@
 		},
 		'hi': {
 			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
@@ -448,7 +476,7 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
@@ -472,7 +500,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript' ]
+			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript', 'or-phonetic', 'or-inscript2' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
