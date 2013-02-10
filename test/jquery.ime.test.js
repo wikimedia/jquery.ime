@@ -122,6 +122,43 @@
 		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
 	} );
 
+    QUnit.test( 'Selector language pre selection', 4, function ( assert ) {
+        var selector = textareaIME.selector.data( 'imeselector' ), originalIsDirty, originalLang;
+        originalIsDirty = $.ime.preferences.registry.isDirty;
+        originalLang = $.ime.preferences.registry.language;
+
+        $.ime.preferences.registry.isDirty = false;
+        $.ime.preferences.registry.language = "en";
+        selector.$element.focus();
+        assert.strictEqual(textareaIME.getLanguage(), "en",
+            "Selects the default lang from preference when no lang attr is set");
+
+        $textarea.attr("lang","hi");
+        $.ime.preferences.registry.isDirty = false;
+        $.ime.preferences.registry.language = "en";
+        selector.$element.focus();
+        assert.strictEqual(textareaIME.getLanguage(), "hi",
+            "Selects the language that has been set as an attribute");
+
+        $textarea.attr("lang","hi");
+        $.ime.preferences.registry.isDirty = true;
+        $.ime.preferences.registry.language = "ta";
+        selector.$element.focus();
+        assert.strictEqual(textareaIME.getLanguage(), "ta",
+            "Overrides the lang attr and uses user preference");
+
+        $textarea.attr("lang","sdas");
+        $.ime.preferences.registry.isDirty = false;
+        $.ime.preferences.registry.language = "en";
+        selector.$element.focus();
+        assert.strictEqual(textareaIME.getLanguage(), "en",
+            "Selects default lang when lang attr is wrong or IM doesnt exist");
+
+        $.ime.preferences.registry.isDirty = originalIsDirty;
+        $.ime.preferences.registry.language = originalLang;
+
+    } );
+
 	QUnit.test( 'Preferences tests', 5, function ( assert ) {
 		$.ime.preferences.registry.previousLanguages = [];
 		$.ime.preferences.setLanguage( 'hi' );
