@@ -144,7 +144,7 @@
 				e.stopPropagation();
 			} );
 
-			imeselector.$element.attrchange( function ( attrName ) {
+			imeselector.$element.attrchange( function ( ) {
 				if( imeselector.$element.is( ':hidden') ) {
 					imeselector.$imeSetting.hide();
 				}
@@ -203,7 +203,7 @@
 				this.$menu.css( 'top',
 								- ( this.$menu.outerHeight() +
 									this.$imeSetting.outerHeight()
-								  ) )
+								) )
 					.addClass( 'position-top' );
 			}
 
@@ -443,7 +443,10 @@
 
 	var selectorTemplate = '<div class="imeselector">'
 		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="ime-setting-caret"></b></div>';
+		+ '<b class="ime-setting-caret"></b></div>',
+
+		MutationObserver = window.MutationObserver || window.WebKitMutationObserver
+		|| window.MozMutationObserver;
 
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
@@ -456,9 +459,6 @@
 		// 13 - The Enter key
 		return event.ctrlKey && ( event.which === 77 || event.which === 13 );
 	}
-
-	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver
-		|| window.MozMutationObserver;
 
 	function isDOMAttrModifiedSupported () {
 		var p = document.createElement( 'p' ),
