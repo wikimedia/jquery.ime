@@ -171,6 +171,10 @@
 			name: 'Hebrew 2012',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
+		'he-kbd': {
+                        name: 'Hebrew kbd',
+                        source: 'rules/he/he-kbd.js'
+                },
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -436,7 +440,7 @@
 		},
 		'he': {
 			autonym: 'עברית',
-			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
+			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012', 'he-kbd' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',
