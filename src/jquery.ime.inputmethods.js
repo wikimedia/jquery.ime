@@ -34,6 +34,10 @@
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
+		'be-kbd': {
+                        name: 'kbd',
+                        source: 'rules/be/be-kbd.js'
+                },
 		'be-latin': {
 			name: 'Łacinka',
 			source: 'rules/be/be-latin.js'
@@ -376,7 +380,7 @@
 		},
 		'be': {
 			autonym: 'беларуская',
-			inputmethods: [ 'be-transliteration', 'be-latin' ]
+			inputmethods: [ 'be-transliteration', 'be-latin', 'be-kbd' ]
 		},
 		'be-tarask': {
 			autonym: 'беларуская (тарашкевіца)',
