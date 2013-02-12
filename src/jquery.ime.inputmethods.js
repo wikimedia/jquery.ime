@@ -86,6 +86,30 @@
 			name: 'Transliteration',
 			source: 'rules/eo/eo-transliteration.js'
 		},
+		'eo-h': {
+                        name: 'Esperanto h',
+                        source: 'rules/eo/eo-h.js'
+                },
+		'eo-h-f': {
+                        name: 'Esperanto h fundamente',
+                        source: 'rules/eo/eo-h-f.js'
+                },
+		'eo-plena': {
+                        name: 'Esperanto plena',
+                        source: 'rules/eo/eo-plena.js'
+                },
+		'eo-q': {
+                        name: 'Esperanto q sistemo',
+                        source: 'rules/eo/eo-q.js'
+                },
+		'eo-vi': {
+                        name: 'Esperanto vi sistemo',
+                        source: 'rules/eo/eo-vi.js'
+                },
+		'eo-x': {
+                        name: 'Esperanto x sistemo',
+                        source: 'rules/eo/eo-x.js'
+                },
 		'fo-normforms': {
 			name: 'Føroyskt',
 			source: 'rules/fo/fo-normforms.js'
@@ -488,7 +512,7 @@
 		},
 		'eo': {
 			autonym: 'Esperanto',
-			inputmethods: [ 'eo-transliteration' ]
+			inputmethods: [ 'eo-transliteration', 'eo-h', 'eo-h-f', 'eo-plena', 'eo-q', 'eo-vi', 'eo-x' ]
 		},
 		'fo': {
 			autonym: 'Føroyskt',
