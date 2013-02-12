@@ -163,6 +163,10 @@
 			name: 'Deutsch',
 			source: 'rules/de/de.js'
 		},
+		'el-kbd': {
+                        name: 'Greek kbd',
+                        source: 'rules/el/el-kbd.js'
+                },
 		'he-standard-2012': {
 			name: 'Hebrew 2012 (from English)',
 			source: 'rules/he/he-standard-2012.js'
@@ -215,11 +219,11 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
 		},
-               'ks-inscript': {
+                'ks-inscript': {
                         name: 'इनस्क्रिप्ट',
                         source: 'rules/ks/ks-inscript.js'
                 },
-               'ks-kbd': {
+                'ks-kbd': {
                         name: 'kbd',
                         source: 'rules/ks/ks-kbd.js'
                 },
@@ -418,6 +422,10 @@
 			autonym: 'English',
 			inputmethods: [ 'ipa-sil' ]
 		},
+		'el': {
+                        autonym: 'Greek',
+                        inputmethods: [ 'el-kbd' ]
+                },
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration' ]
