@@ -7,9 +7,9 @@
 			source: 'rules/am/am-transliteration.js'
 		},
 		'ar-kbd': {
-                        name: 'Arabic',
-                        source: 'rules/ar/ar-kbd.js'
-                },
+			name: 'Arabic',
+			source: 'rules/ar/ar-kbd.js'
+		},
 		'as-avro': {
 			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
@@ -35,9 +35,9 @@
 			source: 'rules/as/as-transliteration.js'
 		},
 		'be-kbd': {
-                        name: 'kbd',
-                        source: 'rules/be/be-kbd.js'
-                },
+			name: 'kbd',
+			source: 'rules/be/be-kbd.js'
+		},
 		'be-latin': {
 			name: 'Łacinka',
 			source: 'rules/be/be-latin.js'
@@ -172,9 +172,9 @@
 			source: 'rules/de/de.js'
 		},
 		'el-kbd': {
-                        name: 'Greek kbd',
-                        source: 'rules/el/el-kbd.js'
-                },
+			name: 'Greek kbd',
+			source: 'rules/el/el-kbd.js'
+		},
 		'he-standard-2012': {
 			name: 'Hebrew 2012 (from English)',
 			source: 'rules/he/he-standard-2012.js'
@@ -184,17 +184,17 @@
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'he-kbd': {
-                        name: 'Hebrew kbd',
-                        source: 'rules/he/he-kbd.js'
-                },
+			name: 'Hebrew kbd',
+			source: 'rules/he/he-kbd.js'
+		},
 		'hr-kbd': {
-                        name: 'Croatian kbd',
-                        source: 'rules/hr/hr-kbd.js'
-                },
+			name: 'Croatian kbd',
+			source: 'rules/hr/hr-kbd.js'
+		},
 		'hy-kbd': {
-                        name: 'Armenian kbd',
-                        source: 'rules/hy/hy-kbd.js'
-                },
+			name: 'Armenian kbd',
+			source: 'rules/hy/hy-kbd.js'
+		},
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -215,18 +215,18 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
-                'ka-kbd': {
-                        name: 'Georgian kbd',
-                        source: 'rules/ka/ka-kbd.js'
-                },
-                'kk-arabic': {
-                        name: 'Kazak Arabic',
-                        source: 'rules/kk/kk-arabic.js'
-                },
+		'ka-kbd': {
+			name: 'Georgian kbd',
+			source: 'rules/ka/ka-kbd.js'
+		},
+		'kk-arabic': {
+			name: 'Kazak Arabic',
+			source: 'rules/kk/kk-arabic.js'
+		},
 		'kk-kbd': {
-                        name: 'Kazak kbd',
-                        source: 'rules/kk/kk-kbd.js'
-                },
+			name: 'Kazak kbd',
+			source: 'rules/kk/kk-kbd.js'
+		},
 		'kn-inscript': {
 			name: 'Inscript',
 			source: 'rules/kn/kn-inscript.js'
