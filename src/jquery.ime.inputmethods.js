@@ -179,6 +179,10 @@
                         name: 'Hebrew kbd',
                         source: 'rules/he/he-kbd.js'
                 },
+		'hr-kbd': {
+                        name: 'Croatian kbd',
+                        source: 'rules/hr/hr-kbd.js'
+                },
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -454,6 +458,10 @@
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
 		},
+		'hr': {
+                        autonym: 'Croatian',
+                        inputmethods: [ 'hr-kbd' ]
+                },
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
 			inputmethods: [ 'hi-transliteration' ]
