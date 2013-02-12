@@ -259,6 +259,10 @@
 			name: 'phonetic',
 			source: 'rules/mr/mr-phonetic.js'
 		},
+		'my-kbd': {
+			name: 'Myanmar kbd',
+			source: 'rules/my/my-kbd.js'
+		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -561,6 +565,10 @@
 		'mr': {
 			autonym: 'मराठी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
+		},
+		'my': {
+			autonym: 'Myanmar',
+			inputmethods: [ 'my-kbd' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
