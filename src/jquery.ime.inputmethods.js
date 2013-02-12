@@ -6,6 +6,10 @@
 			name: 'Transliteration',
 			source: 'rules/am/am-transliteration.js'
 		},
+		'ar-kbd': {
+                        name: 'Arabic',
+                        source: 'rules/ar/ar-kbd.js'
+                },
 		'as-avro': {
 			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
@@ -30,6 +34,10 @@
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
+		'be-kbd': {
+                        name: 'kbd',
+                        source: 'rules/be/be-kbd.js'
+                },
 		'be-latin': {
 			name: 'Łacinka',
 			source: 'rules/be/be-latin.js'
@@ -163,6 +171,10 @@
 			name: 'Deutsch',
 			source: 'rules/de/de.js'
 		},
+		'el-kbd': {
+                        name: 'Greek kbd',
+                        source: 'rules/el/el-kbd.js'
+                },
 		'he-standard-2012': {
 			name: 'Hebrew 2012 (from English)',
 			source: 'rules/he/he-standard-2012.js'
@@ -171,6 +183,18 @@
 			name: 'Hebrew 2012',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
+		'he-kbd': {
+                        name: 'Hebrew kbd',
+                        source: 'rules/he/he-kbd.js'
+                },
+		'hr-kbd': {
+                        name: 'Croatian kbd',
+                        source: 'rules/hr/hr-kbd.js'
+                },
+		'hy-kbd': {
+                        name: 'Armenian kbd',
+                        source: 'rules/hy/hy-kbd.js'
+                },
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -191,6 +215,18 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
+                'ka-kbd': {
+                        name: 'Georgian kbd',
+                        source: 'rules/ka/ka-kbd.js'
+                },
+                'kk-arabic': {
+                        name: 'Kazak Arabic',
+                        source: 'rules/kk/kk-arabic.js'
+                },
+		'kk-kbd': {
+                        name: 'Kazak kbd',
+                        source: 'rules/kk/kk-kbd.js'
+                },
 		'kn-inscript': {
 			name: 'Inscript',
 			source: 'rules/kn/kn-inscript.js'
@@ -211,6 +247,18 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/kok/kok-inscript2.js'
 		},
+		'ks-inscript': {
+			name: 'इनस्क्रिप्ट',
+			source: 'rules/ks/ks-inscript.js'
+		},
+		'ks-kbd': {
+			name: 'kbd',
+			source: 'rules/ks/ks-kbd.js'
+		},
+		'lo-kbd': {
+			name: 'Lao kbd',
+			source: 'rules/lo/lo-kbd.js'
+		},
 		'mn-cyrl': {
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
@@ -230,6 +278,10 @@
 		'mr-phonetic': {
 			name: 'phonetic',
 			source: 'rules/mr/mr-phonetic.js'
+		},
+		'my-kbd': {
+			name: 'Myanmar kbd',
+			source: 'rules/my/my-kbd.js'
 		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -275,6 +327,14 @@
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
 		},
+		'sk-kbd': {
+			name: 'Slovak kbd',
+			source: 'rules/sk/sk-kbd.js'
+		},
+		'sr-kbd': {
+			name: 'Serbian kbd',
+			source: 'rules/sr/sr-kbd.js'
+		},
 		'te-inscript': {
 			name: 'ఇన్‍స్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
@@ -311,6 +371,10 @@
 			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
 		},
+		'ru-kbd': {
+			name: 'kbd',
+			source: 'rules/ru/ru-kbd.js'
+		},
 		'sa-inscript': {
 			name: 'Inscript',
 			source: 'rules/sa/sa-inscript.js'
@@ -342,6 +406,18 @@
 		'ipa-sil': {
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
+		},
+		'ua-kbd': {
+			name: 'Ukranian kbd',
+			source: 'rules/ua/ua-kbd.js'
+		},
+		'ug-kbd': {
+			name: 'Uyghur kbd',
+			source: 'rules/ug/ug-kbd.js'
+		},
+		'uz-kbd': {
+			name: 'Uzbek kbd',
+			source: 'rules/uz/uz-kbd.js'
 		}
 	} );
 
@@ -358,6 +434,10 @@
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
 		},
+		'ar': {
+			autonym: 'Arabic',
+			inputmethods: [ 'ar-kbd' ]
+		},
 		'as': {
 			autonym: 'অসমীয়া',
 			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
@@ -368,7 +448,7 @@
 		},
 		'be': {
 			autonym: 'беларуская',
-			inputmethods: [ 'be-transliteration', 'be-latin' ]
+			inputmethods: [ 'be-transliteration', 'be-latin', 'be-kbd' ]
 		},
 		'be-tarask': {
 			autonym: 'беларуская (тарашкевіца)',
@@ -402,6 +482,10 @@
 			autonym: 'English',
 			inputmethods: [ 'ipa-sil' ]
 		},
+		'el': {
+			autonym: 'Greek',
+			inputmethods: [ 'el-kbd' ]
+		},
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration' ]
@@ -424,11 +508,19 @@
 		},
 		'he': {
 			autonym: 'עברית',
-			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
+			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012', 'he-kbd' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
+		},
+		'hr': {
+			autonym: 'Croatian',
+			inputmethods: [ 'hr-kbd' ]
+		},
+		'hy': {
+			autonym: 'Armenian',
+			inputmethods: [ 'hy-kbd' ]
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
@@ -448,15 +540,23 @@
 		},
 		'ka': {
 			autonym: 'ქართული ენა',
-			inputmethods: [ 'ka-transliteration' ]
+			inputmethods: [ 'ka-transliteration', 'ka-kbd' ]
 		},
 		'kbd': {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
+		'kk': {
+			autonym: 'Kazak',
+			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
+		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
+		},
+		'ks': {
+			autonym: 'Kashmiri',
+			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
 		},
 		'kok': {
 			autonym: 'कोंकणी',
@@ -469,6 +569,10 @@
 		'lez': {
 			autonym: 'лезги',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'lo': {
+			autonym: 'Lao',
+			inputmethods: [ 'lo-kbd' ]
 		},
 		'mai': {
 			autonym: 'मैथिली',
@@ -485,6 +589,10 @@
 		'mr': {
 			autonym: 'मराठी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
+		},
+		'my': {
+			autonym: 'Myanmar',
+			inputmethods: [ 'my-kbd' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
@@ -520,7 +628,7 @@
 		},
 		'ru': {
 			autonym: 'русский',
-			inputmethods: [ 'ru-jcuken' ]
+			inputmethods: [ 'ru-jcuken', 'ru-kbd' ]
 		},
 		'sah': {
 			autonym: 'саха тыла',
@@ -541,6 +649,14 @@
 		'si': {
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
+		},
+		'sk': {
+			autonym: 'Slovak',
+			inputmethods: [ 'sk-kbd' ]
+		},
+		'sr': {
+			autonym: 'Serbian',
+			inputmethods: [ 'sr-kbd' ]
 		},
 		'sv': {
 			autonym: 'Svenska',
@@ -566,9 +682,21 @@
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
+		'ua': {
+			autonym: 'Ukranian',
+			inputmethods: [ 'ua-kbd' ]
+		},
+		'ug': {
+			autonym: 'Ughyur',
+			inputmethods: [ 'ug-kbd' ]
+		},
 		'ur': {
 			autonym: 'اردو',
 			inputmethods: [ 'ur-transliteration' ]
+		},
+		'uz': {
+			autonym: 'Uzbek',
+			inputmethods: [ 'uz-kbd' ]
 		}
 	} );
 
