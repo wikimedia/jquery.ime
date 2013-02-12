@@ -211,6 +211,10 @@
                         name: 'Georgian kbd',
                         source: 'rules/ka/ka-kbd.js'
                 },
+                'kk-arabic': {
+                        name: 'Kazak Arabic',
+                        source: 'rules/kk/kk-arabic.js'
+                },
 		'kk-kbd': {
                         name: 'Kazak kbd',
                         source: 'rules/kk/kk-kbd.js'
@@ -536,7 +540,7 @@
 		},
 		'kk': {
 			autonym: 'Kazak',
-			inputmethods: [ 'kk-kbd' ]
+			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
 		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
