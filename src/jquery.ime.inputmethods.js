@@ -243,6 +243,10 @@
                         name: 'kbd',
                         source: 'rules/ks/ks-kbd.js'
                 },
+                'lo-kbd': {
+                        name: 'Lao kbd',
+                        source: 'rules/lo/lo-kbd.js'
+                },
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -549,6 +553,10 @@
 		'lez': {
 			autonym: 'лезги',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'lo': {
+			autonym: 'Lao',
+			inputmethods: [ 'lo-kbd' ]
 		},
 		'mai': {
 			autonym: 'मैथिली',
