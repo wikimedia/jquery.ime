@@ -303,6 +303,14 @@
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
 		},
+		'sk-kbd': {
+			name: 'Slovak kbd',
+			source: 'rules/sk/sk-kbd.js'
+		},
+		'sr-kbd': {
+			name: 'Serbian kbd',
+			source: 'rules/sr/sr-kbd.js'
+		},
 		'te-inscript': {
 			name: 'ఇన్‍స్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
@@ -609,6 +617,14 @@
 		'si': {
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
+		},
+		'sk': {
+			autonym: 'Slovak',
+			inputmethods: [ 'sk-kbd' ]
+		},
+		'sr': {
+			autonym: 'Serbian',
+			inputmethods: [ 'sr-kbd' ]
 		},
 		'sv': {
 			autonym: 'Svenska',
