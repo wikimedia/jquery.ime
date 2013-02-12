@@ -303,11 +303,19 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/ne/ne-inscript2.js'
 		},
-		'ne-transliteration': {
-			name: 'Transliteration',
-			source: 'rules/ne/ne-transliteration.js'
+                'ne-rom': {
+                        name: 'Romanized',
+                        source: 'rules/ne/ne-rom.js'
+                },
+  		'ne-trad': {
+			name: 'Traditional',
+			source: 'rules/ne/ne-trad.js'
 		},
-		'no-normforms': {
+                'ne-transliteration': {
+                        name: 'Transliteration',
+                        source: 'rules/ne/ne-transliteration.js'
+                },
+  		'no-normforms': {
 			name: 'Normal transliterasjon',
 			source: 'rules/no/no-normforms.js'
 		},
@@ -612,7 +620,7 @@
 		},
 		'ne': {
 			autonym: 'नेपाली',
-			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript' ]
+			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad' ]
 		},
 		'new': {
 			autonym: 'नेपाल भाषा',
