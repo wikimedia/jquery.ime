@@ -207,6 +207,14 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
+                'ka-kbd': {
+                        name: 'Georgian kbd',
+                        source: 'rules/ka/ka-kbd.js'
+                },
+		'kk-kbd': {
+                        name: 'Kazak kbd',
+                        source: 'rules/kk/kk-kbd.js'
+                },
 		'kn-inscript': {
 			name: 'Inscript',
 			source: 'rules/kn/kn-inscript.js'
@@ -488,11 +496,15 @@
 		},
 		'ka': {
 			autonym: 'ქართული ენა',
-			inputmethods: [ 'ka-transliteration' ]
+			inputmethods: [ 'ka-transliteration', 'ka-kbd' ]
 		},
 		'kbd': {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'kk': {
+			autonym: 'Kazak',
+			inputmethods: [ 'kk-kbd' ]
 		},
 		'kn': {
 			autonym: 'ಕನ್ನಡ',
