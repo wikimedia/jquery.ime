@@ -459,7 +459,7 @@
 			inputmethods: [ 'am-transliteration' ]
 		},
 		'ar': {
-			autonym: 'Arabic',
+			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ]
 		},
 		'as': {
@@ -507,7 +507,7 @@
 			inputmethods: [ 'ipa-sil' ]
 		},
 		'el': {
-			autonym: 'Greek',
+			autonym: 'Ελληνικά',
 			inputmethods: [ 'el-kbd' ]
 		},
 		'eo': {
@@ -539,11 +539,11 @@
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
 		},
 		'hr': {
-			autonym: 'Croatian',
+			autonym: 'Hrvatski',
 			inputmethods: [ 'hr-kbd' ]
 		},
 		'hy': {
-			autonym: 'Armenian',
+			autonym: 'Հայերեն',
 			inputmethods: [ 'hy-kbd' ]
 		},
 		'hne': {
@@ -571,7 +571,7 @@
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'kk': {
-			autonym: 'Kazak',
+			autonym: 'Қазақша',
 			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
 		},
 		'kn': {
@@ -579,7 +579,7 @@
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
 		'ks': {
-			autonym: 'Kashmiri',
+			autonym: 'कॉशुर / کٲشُر',
 			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
 		},
 		'kok': {
@@ -595,7 +595,7 @@
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'lo': {
-			autonym: 'Lao',
+			autonym: 'ລາວ',
 			inputmethods: [ 'lo-kbd' ]
 		},
 		'mai': {
@@ -615,7 +615,7 @@
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
 		},
 		'my': {
-			autonym: 'Myanmar',
+			autonym: 'မြန်မာဘာသာ',
 			inputmethods: [ 'my-kbd' ]
 		},
 		'ne': {
@@ -675,11 +675,11 @@
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
 		},
 		'sk': {
-			autonym: 'Slovak',
+			autonym: 'Slovenčina',
 			inputmethods: [ 'sk-kbd' ]
 		},
 		'sr': {
-			autonym: 'Serbian',
+			autonym: 'Српски / srpski',
 			inputmethods: [ 'sr-kbd' ]
 		},
 		'sv': {
@@ -707,11 +707,11 @@
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'ua': {
-			autonym: 'Ukranian',
+			autonym: 'Українська',
 			inputmethods: [ 'ua-kbd' ]
 		},
 		'ug': {
-			autonym: 'Ughyur',
+			autonym: 'ئۇيغۇرچە / Uyghurche',
 			inputmethods: [ 'ug-kbd' ]
 		},
 		'ur': {
@@ -719,7 +719,7 @@
 			inputmethods: [ 'ur-transliteration' ]
 		},
 		'uz': {
-			autonym: 'Uzbek',
+			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
 		}
 	} );
