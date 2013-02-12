@@ -374,6 +374,18 @@
 		'ipa-sil': {
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
+		},
+		'ua-kbd': {
+			name: 'Ukranian kbd',
+			source: 'rules/ua/ua-kbd.js'
+		},
+		'ug-kbd': {
+			name: 'Uyghur kbd',
+			source: 'rules/ug/ug-kbd.js'
+		},
+		'uz-kbd': {
+			name: 'Uzbek kbd',
+			source: 'rules/uz/uz-kbd.js'
 		}
 	} );
 
@@ -618,9 +630,21 @@
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
+		'ua': {
+			autonym: 'Ukranian',
+			inputmethods: [ 'ua-kbd' ]
+		},
+		'ug': {
+			autonym: 'Ughyur',
+			inputmethods: [ 'ug-kbd' ]
+		},
 		'ur': {
 			autonym: 'اردو',
 			inputmethods: [ 'ur-transliteration' ]
+		},
+		'uz': {
+			autonym: 'Uzbek',
+			inputmethods: [ 'uz-kbd' ]
 		}
 	} );
 
