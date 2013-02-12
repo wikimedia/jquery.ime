@@ -183,6 +183,10 @@
                         name: 'Croatian kbd',
                         source: 'rules/hr/hr-kbd.js'
                 },
+		'hy-kbd': {
+                        name: 'Armenian kbd',
+                        source: 'rules/hy/hy-kbd.js'
+                },
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -461,6 +465,10 @@
 		'hr': {
                         autonym: 'Croatian',
                         inputmethods: [ 'hr-kbd' ]
+                },
+		'hy': {
+                        autonym: 'Armenian',
+                        inputmethods: [ 'hy-kbd' ]
                 },
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
