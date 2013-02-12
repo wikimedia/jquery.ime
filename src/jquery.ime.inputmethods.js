@@ -355,6 +355,10 @@
 			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
 		},
+                'ru-kbd': {
+                        name: 'kbd',
+                        source: 'rules/ru/ru-kbd.js'
+                },
 		'sa-inscript': {
 			name: 'Inscript',
 			source: 'rules/sa/sa-inscript.js'
@@ -612,7 +616,7 @@
 		},
 		'ru': {
 			autonym: 'русский',
-			inputmethods: [ 'ru-jcuken' ]
+			inputmethods: [ 'ru-jcuken', 'ru-kbd' ]
 		},
 		'sah': {
 			autonym: 'саха тыла',
