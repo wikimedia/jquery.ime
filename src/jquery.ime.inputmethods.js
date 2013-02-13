@@ -424,6 +424,14 @@
 			name: 'kbd',
 			source: 'rules/ru/ru-kbd.js'
 		},
+		'ru-phonetic': {
+                        name: 'phonetic',
+                        source: 'rules/ru/ru-phonetic.js'
+                },
+		'ru-yawerty': {
+                        name: 'yawerty',
+                        source: 'rules/ru/ru-yawerty.js'
+                },
 		'sa-inscript': {
 			name: 'Inscript',
 			source: 'rules/sa/sa-inscript.js'
@@ -689,7 +697,7 @@
 		},
 		'ru': {
 			autonym: 'русский',
-			inputmethods: [ 'ru-jcuken', 'ru-kbd' ]
+			inputmethods: [ 'ru-jcuken', 'ru-kbd', 'ru-phonetic', 'ru-yawerty' ]
 		},
 		'sah': {
 			autonym: 'саха тыла',
