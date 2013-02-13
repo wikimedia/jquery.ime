@@ -74,6 +74,10 @@
 			name: 'Inscript',
 			source: 'rules/brx/brx-inscript.js'
 		},
+		'brx-inscript2': {
+                        name: 'इनस्क्रिप्ट २',
+                        source: 'rules/brx/brx-inscript2.js'
+                },
 		'cyrl-palochka': {
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
@@ -82,6 +86,10 @@
 			name: 'Normal forms',
 			source: 'rules/da/da-normforms.js'
 		},
+		'doi-inscript2': {
+                        name: 'इनस्क्रिप्ट २',
+                        source: 'rules/doi/doi-inscript2.js'
+                },
 		'eo-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/eo/eo-transliteration.js'
@@ -126,6 +134,10 @@
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/hi/hi-inscript.js'
 		},
+		'hi-inscript2': {
+                        name: 'इनस्क्रिप्ट २',
+                        source: 'rules/hi/hi-inscript2.js'
+                },
 		'hi-phonetic': {
 			name: 'phonetic',
 			source: 'rules/hi/hi-phonetic.js'
@@ -143,6 +155,11 @@
 			source: 'rules/mai/mai-inscript.js',
 			depends: 'hi-inscript'
 		},
+		'mai-inscript2': {
+                        name: 'इनस्क्रिप्ट २',
+                        source: 'rules/mai/mai-inscript2.js',
+                        depends: 'hi-inscript2'
+                },
 		'hi-bolnagri': {
 			name: 'बोलनागरी',
 			source: 'rules/hi/hi-bolnagri.js'
@@ -287,6 +304,10 @@
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
 		},
+		'mni-inscript2': {
+                        name: 'ইন্‌স্ক্ৰিপ্ত ২',
+                        source: 'rules/mni/mni-inscript2.js'
+                },
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -347,6 +368,10 @@
 			name: 'Phonetic',
 			source: 'rules/or/or-phonetic.js'
 		},
+		'sd-inscript2': {
+                        name: 'इनस्क्रिप्ट २',
+                        source: 'rules/sd/sd-inscript2.js'
+                },
 		'se-normforms': {
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
@@ -414,6 +439,10 @@
 		'sah-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/sah/sah-transliteration.js'
+		},
+		'sat-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/sat/sat-inscript2.js'
 		},
 		'si-singlish': {
 			name: 'Singlish',
@@ -488,7 +517,7 @@
 		},
 		'brx': {
 			autonym: 'बोड़ो',
-			inputmethods: [ 'brx-inscript' ]
+			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
 		'ce': {
 			autonym: 'нохчийн',
@@ -501,6 +530,10 @@
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de' ]
+		},
+		'doi': {
+			autonym: 'डोगरी',
+			inputmethods: [ 'doi-inscript2' ]
 		},
 		'en': {
 			autonym: 'English',
@@ -536,7 +569,7 @@
 		},
 		'hi': {
 			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
 		'hr': {
 			autonym: 'Croatian',
@@ -600,7 +633,7 @@
 		},
 		'mai': {
 			autonym: 'मैथिली',
-			inputmethods: [ 'mai-inscript' ]
+			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
 		},
 		'ml': {
 			autonym: 'മലയാളം',
@@ -609,6 +642,10 @@
 		'mn': {
 			autonym: 'Монгол',
 			inputmethods: [ 'mn-cyrl' ]
+		},
+		'mni': {
+			autonym: 'Manipuri',
+			inputmethods: [ 'mni-inscript2' ]
 		},
 		'mr': {
 			autonym: 'मराठी',
@@ -662,6 +699,14 @@
 			autonym: 'संस्कृत',
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ]
 		},
+		'sat': {
+			autonym: 'Santali',
+			inputmethods: [ 'sat-inscript2']
+		},
+                'sd': {
+                        autonym: 'Sindhi',
+                        inputmethods: [ 'sd-inscript2' ]
+                },
 		'se': {
 			autonym: 'Davvisámegiella',
 			inputmethods: [ 'se-normforms' ]
