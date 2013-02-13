@@ -328,6 +328,10 @@
 			name: 'Myanmar kbd',
 			source: 'rules/my/my-kbd.js'
 		},
+		'my-xkb': {
+                        name: 'Myanmar xkb',
+                        source: 'rules/my/my-xkb.js'
+                },
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -661,7 +665,7 @@
 		},
 		'my': {
 			autonym: 'Myanmar',
-			inputmethods: [ 'my-kbd' ]
+			inputmethods: [ 'my-kbd', 'my-xkb' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
