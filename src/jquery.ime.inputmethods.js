@@ -3,11 +3,11 @@
 
 	$.extend( $.ime.sources, {
 		'am-transliteration': {
-			name: 'Transliteration',
+			name: 'ትራንስልተራትዖን',
 			source: 'rules/am/am-transliteration.js'
 		},
 		'ar-kbd': {
-			name: 'Arabic',
+			name: 'أرابيك',
 			source: 'rules/ar/ar-kbd.js'
 		},
 		'as-avro': {
@@ -27,7 +27,7 @@
 			source: 'rules/as/as-inscript2.js'
 		},
 		'as-phonetic': {
-			name: 'phonetic',
+			name: 'ফনেটিক',
 			source: 'rules/as/as-phonetic.js'
 		},
 		'as-transliteration': {
@@ -35,7 +35,7 @@
 			source: 'rules/as/as-transliteration.js'
 		},
 		'be-kbd': {
-			name: 'kbd',
+			name: 'кбд',
 			source: 'rules/be/be-kbd.js'
 		},
 		'be-latin': {
@@ -43,7 +43,7 @@
 			source: 'rules/be/be-latin.js'
 		},
 		'be-transliteration': {
-			name: 'Transliteration',
+			name: 'Транслітератыён',
 			source: 'rules/be/be-transliteration.js'
 		},
 		'ber-tfng': {
@@ -51,7 +51,7 @@
 			source: 'rules/ber/ber-tfng.js'
 		},
 		'bn-avro': {
-			name: 'Avro',
+			name: 'অভ্র',
 			source: 'rules/bn/bn-avro.js'
 		},
 		'bn-inscript': {
@@ -63,11 +63,11 @@
 			source: 'rules/bn/bn-inscript2.js'
 		},
 		'bn-nkb': {
-			name: 'National Keyboard',
+			name: 'ন্যাশনাল কিবোর্ড',
 			source: 'rules/bn/bn-nkb.js'
 		},
 		'bn-probhat': {
-			name: 'Probhat',
+			name: 'প্রভাত',
 			source: 'rules/bn/bn-probhat.js'
 		},
 		'brx-inscript': {
@@ -79,11 +79,11 @@
 			source: 'rules/cyrl/cyrl-palochka.js'
 		},
 		'da-normforms': {
-			name: 'Normal forms',
+			name: 'normalformer',
 			source: 'rules/da/da-normforms.js'
 		},
 		'eo-transliteration': {
-			name: 'Transliteration',
+			name: 'transliterigo',
 			source: 'rules/eo/eo-transliteration.js'
 		},
 		'eo-h': {
@@ -127,11 +127,11 @@
 			source: 'rules/hi/hi-inscript.js'
 		},
 		'hi-phonetic': {
-			name: 'phonetic',
+			name: 'फोनेटिक',
 			source: 'rules/hi/hi-phonetic.js'
 		},
 		'is-normforms': {
-			name: 'Normal forms',
+			name: 'Venjuleg eyðublöð',
 			source: 'rules/is/is-normforms.js'
 		},
 		'jv-transliteration': {
@@ -196,19 +196,19 @@
 			source: 'rules/de/de.js'
 		},
 		'el-kbd': {
-			name: 'Greek kbd',
+			name: 'κπδ',
 			source: 'rules/el/el-kbd.js'
 		},
 		'he-standard-2012': {
-			name: 'Hebrew 2012 (from English)',
+			name: 'חברו 2012 ( פרום אנגליש )',
 			source: 'rules/he/he-standard-2012.js'
 		},
 		'he-standard-2012-extonly': {
-			name: 'Hebrew 2012',
+			name: 'חברו 2012',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'he-kbd': {
-			name: 'Hebrew kbd',
+			name: 'כבד',
 			source: 'rules/he/he-kbd.js'
 		},
 		'hr-kbd': {
@@ -216,7 +216,7 @@
 			source: 'rules/hr/hr-kbd.js'
 		},
 		'hy-kbd': {
-			name: 'Armenian kbd',
+			name: 'կբդ',
 			source: 'rules/hy/hy-kbd.js'
 		},
 		'gu-inscript': {
@@ -240,19 +240,19 @@
 			source: 'rules/ka/ka-transliteration.js'
 		},
 		'ka-kbd': {
-			name: 'Georgian kbd',
+			name: 'კბდ',
 			source: 'rules/ka/ka-kbd.js'
 		},
 		'kk-arabic': {
-			name: 'Kazak Arabic',
+			name: 'كذاك أرابيك ',
 			source: 'rules/kk/kk-arabic.js'
 		},
 		'kk-kbd': {
-			name: 'Kazak kbd',
+			name: 'лив',
 			source: 'rules/kk/kk-kbd.js'
 		},
 		'kn-inscript': {
-			name: 'Inscript',
+			name: 'ಇನ್ಸ್ಕ್ರಿಪ್ಟ್',
 			source: 'rules/kn/kn-inscript.js'
 		},
 		'kn-inscript2': {
@@ -260,7 +260,7 @@
 			source: 'rules/kn/kn-inscript2.js'
 		},
 		'kn-transliteration': {
-			name: 'Transliteration',
+			name: 'எழுத்துப்பெயர்ப்பு',
 			source: 'rules/kn/kn-transliteration.js'
 		},
 		'kn-kgp': {
@@ -280,7 +280,7 @@
 			source: 'rules/ks/ks-kbd.js'
 		},
 		'lo-kbd': {
-			name: 'Lao kbd',
+			name: 'າຶກ',
 			source: 'rules/lo/lo-kbd.js'
 		},
 		'mn-cyrl': {
@@ -300,7 +300,7 @@
 			source: 'rules/mr/mr-transliteration.js'
 		},
 		'mr-phonetic': {
-			name: 'phonetic',
+			name: 'फोनेटिक',
 			source: 'rules/mr/mr-phonetic.js'
 		},
 		'my-kbd': {
@@ -316,7 +316,7 @@
 			source: 'rules/ne/ne-inscript2.js'
 		},
 		'ne-transliteration': {
-			name: 'Transliteration',
+			name: 'ट्रांस्लितेरेशन',
 			source: 'rules/ne/ne-transliteration.js'
 		},
 		'no-normforms': {
@@ -328,15 +328,15 @@
 			source: 'rules/no/no-tildeforms.js'
 		},
 		'or-transliteration': {
-			name: 'Transliteration',
+			name: 'ଟରନସଲିତେରତିଓନ',
 			source: 'rules/or/or-transliteration.js'
 		},
 		'or-inscript': {
-			name: 'Inscript',
+			name: 'ଈନସକରିପତ',
 			source: 'rules/or/or-inscript.js'
 		},
 		'or-inscript2': {
-			name: 'Inscript2',
+			name: 'ଈନସକରିପତ2',
 			source: 'rules/or/or-inscript2.js'
 		},
 		'or-lekhani': {
@@ -344,7 +344,7 @@
 			source: 'rules/or/or-lekhani.js'
 		},
 		'or-phonetic': {
-			name: 'Phonetic',
+			name: 'ହୋନେତିକ',
 			source: 'rules/or/or-phonetic.js'
 		},
 		'se-normforms': {
@@ -356,7 +356,7 @@
 			source: 'rules/sk/sk-kbd.js'
 		},
 		'sr-kbd': {
-			name: 'Serbian kbd',
+			name: 'кбд',
 			source: 'rules/sr/sr-kbd.js'
 		},
 		'te-inscript': {
@@ -372,23 +372,23 @@
 			source: 'rules/te/te-transliteration.js'
 		},
 		'pa-inscript': {
-			name: 'Inscript',
+			name: 'ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ',
 			source: 'rules/pa/pa-inscript.js'
 		},
 		'pa-inscript2': {
-			name: 'Inscript2',
+			name: 'ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ2',
 			source: 'rules/pa/pa-inscript2.js'
 		},
 		'pa-jhelum': {
-			name: 'Jhelum',
+			name: 'ਜੇਹਲਮ',
 			source: 'rules/pa/pa-jhelum.js'
 		},
 		'pa-transliteration': {
-			name: 'Transliteration',
+			name: 'ਤ੍ਰਾਨ੍ਸ੍ਲਿਤੇਰਾਤਿਓਂ',
 			source: 'rules/pa/pa-transliteration.js'
 		},
 		'pa-phonetic': {
-			name: 'Phonetic',
+			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
 		'ru-jcuken': {
@@ -396,11 +396,11 @@
 			source: 'rules/ru/ru-jcuken.js'
 		},
 		'ru-kbd': {
-			name: 'kbd',
+			name: 'кбд',
 			source: 'rules/ru/ru-kbd.js'
 		},
 		'sa-inscript': {
-			name: 'Inscript',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/sa/sa-inscript.js'
 		},
 		'sa-inscript2': {
@@ -408,7 +408,7 @@
 			source: 'rules/sa/sa-inscript2.js'
 		},
 		'sa-transliteration': {
-			name: 'Transliteration',
+			name: 'ट्रन्स्लितेरतिओन्',
 			source: 'rules/sa/sa-transliteration.js'
 		},
 		'sah-transliteration': {
@@ -416,15 +416,15 @@
 			source: 'rules/sah/sah-transliteration.js'
 		},
 		'si-singlish': {
-			name: 'Singlish',
+			name: 'සිංග්ලිෂ්',
 			source: 'rules/si/si-singlish.js'
 		},
 		'si-wijesekara': {
-			name: 'Wijesekara',
+			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
 		'ur-transliteration': {
-			name: 'Transliteration',
+			name: 'ٹرانسلٹریشن',
 			source: 'rules/ur/ur-transliteration.js'
 		},
 		'ipa-sil': {
@@ -432,7 +432,7 @@
 			source: 'rules/fonipa/ipa-sil.js'
 		},
 		'ua-kbd': {
-			name: 'Ukranian kbd',
+			name: 'кбд',
 			source: 'rules/ua/ua-kbd.js'
 		},
 		'ug-kbd': {
