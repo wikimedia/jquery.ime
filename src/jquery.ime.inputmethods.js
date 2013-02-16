@@ -478,6 +478,14 @@
 			autonym: 'беларуская (тарашкевіца)',
 			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
+		'bh': {
+			autonym: 'भोजपुरी',
+			inputmethods: [ 'hi-transliteration' ]
+		},
+		'bho': {
+			autonym: ''भोजपुरी',
+			inputmethods: [ 'hi-transliteration' ]
+		},
 		'ber': {
 			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
 			inputmethods: [ 'ber-tfng' ]
