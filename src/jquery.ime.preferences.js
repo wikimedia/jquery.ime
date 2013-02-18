@@ -33,9 +33,9 @@
 			return this.registry.language;
 		},
 
-        getDefaultLanguage: function () {
-            return 'en';
-        },
+		getDefaultLanguage: function () {
+			return 'en';
+		},
 
 		getPreviousLanguages: function () {
 			return this.registry.previousLanguages;

@@ -252,23 +252,22 @@
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 		},
 
-        /**
+		/**
 		 * Decide on initial language to select
 		 *
 		 */
-        decideLanguage : function () {
-            if( $.ime.preferences.getLanguage() ) {
-                // There has been an override by the user return the language selected by user
-                return $.ime.preferences.getLanguage();
-            }
-            if( this.$element.attr('lang') ) {
-                if ( $.ime.languages[this.$element.attr('lang')] ) {
-                    return this.$element.attr('lang');
-                }
-            }
-            /// There is either no IMs for the given language attr or there is no lang attr at all.
-            return $.ime.preferences.getDefaultLanguage();
-        },
+		decideLanguage : function () {
+			if( $.ime.preferences.getLanguage() ) {
+				// There has been an override by the user return the language selected by user
+				return $.ime.preferences.getLanguage();
+			}
+			if ( this.$element.attr('lang') &&
+				$.ime.languages[this.$element.attr('lang')] ) {
+					return this.$element.attr('lang');
+			}
+			// There is either no IMs for the given language attr or there is no lang attr at all.
+			return $.ime.preferences.getDefaultLanguage();
+		},
 
 		/**
 		 * Select an input method
