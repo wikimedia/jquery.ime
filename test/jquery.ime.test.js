@@ -122,6 +122,36 @@
 		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
 	} );
 
+    QUnit.test( 'Selector decideLanguage tests', 4, function ( assert ) {
+        var selector = textareaIME.selector.data( 'imeselector' ), originalLang;
+        originalLang = $.ime.preferences.registry.language;
+
+        $.ime.preferences.registry.language = null;
+        assert.strictEqual(selector.decideLanguage(), 'en',
+            'Selects the default lang from preference when no lang attr is set');
+
+        $textarea.attr('lang','hi');
+        $.ime.preferences.registry.language = null;
+        selector.$element.focus();
+        assert.strictEqual(selector.decideLanguage(), 'hi',
+            'Selects the language that has been set as an attribute');
+
+        $textarea.attr('lang','hi');
+        $.ime.preferences.registry.language = "ta";
+        selector.$element.focus();
+        assert.strictEqual(selector.decideLanguage(), 'ta',
+            'Overrides the lang attr and uses user preference');
+
+        $textarea.attr('lang','sdas');
+        $.ime.preferences.registry.language = null;
+        selector.$element.focus();
+        assert.strictEqual(selector.decideLanguage(), 'en',
+            'Selects default lang when lang attr is wrong or IM doesnt exist');
+
+        $.ime.preferences.registry.language = originalLang;
+
+    } );
+
 	QUnit.test( 'Preferences tests', 5, function ( assert ) {
 		$.ime.preferences.registry.previousLanguages = [];
 		$.ime.preferences.setLanguage( 'hi' );
