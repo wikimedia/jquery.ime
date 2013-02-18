@@ -127,32 +127,28 @@
         originalIsDirty = $.ime.preferences.registry.isDirty;
         originalLang = $.ime.preferences.registry.language;
 
-        $.ime.preferences.registry.isDirty = false;
-        $.ime.preferences.registry.language = "en";
+        $.ime.preferences.registry.language = null;
         selector.$element.focus();
-        assert.strictEqual(textareaIME.getLanguage(), "en",
-            "Selects the default lang from preference when no lang attr is set");
+        assert.strictEqual(textareaIME.getLanguage(), 'en',
+            'Selects the default lang from preference when no lang attr is set');
 
-        $textarea.attr("lang","hi");
-        $.ime.preferences.registry.isDirty = false;
-        $.ime.preferences.registry.language = "en";
+        $textarea.attr('lang','hi');
+        $.ime.preferences.registry.language = null;
         selector.$element.focus();
-        assert.strictEqual(textareaIME.getLanguage(), "hi",
-            "Selects the language that has been set as an attribute");
+        assert.strictEqual(textareaIME.getLanguage(), 'hi',
+            'Selects the language that has been set as an attribute');
 
-        $textarea.attr("lang","hi");
-        $.ime.preferences.registry.isDirty = true;
+        $textarea.attr('lang','hi');
         $.ime.preferences.registry.language = "ta";
         selector.$element.focus();
-        assert.strictEqual(textareaIME.getLanguage(), "ta",
-            "Overrides the lang attr and uses user preference");
+        assert.strictEqual(textareaIME.getLanguage(), 'ta',
+            'Overrides the lang attr and uses user preference');
 
-        $textarea.attr("lang","sdas");
-        $.ime.preferences.registry.isDirty = false;
-        $.ime.preferences.registry.language = "en";
+        $textarea.attr('lang','sdas');
+        $.ime.preferences.registry.language = null;
         selector.$element.focus();
-        assert.strictEqual(textareaIME.getLanguage(), "en",
-            "Selects default lang when lang attr is wrong or IM doesnt exist");
+        assert.strictEqual(textareaIME.getLanguage(), 'en',
+            'Selects default lang when lang attr is wrong or IM doesnt exist');
 
         $.ime.preferences.registry.isDirty = originalIsDirty;
         $.ime.preferences.registry.language = originalLang;

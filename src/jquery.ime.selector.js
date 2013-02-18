@@ -140,17 +140,17 @@
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
                 function decideLanguage() {
-                    if( $.ime.preferences.registry.isDirty ) {
+                    if( $.ime.preferences.getLanguage() ) {
                         // There has been an override by the user return the language selected by user
                         return $.ime.preferences.getLanguage();
                     }
-                    if( imeselector.$element.attr("lang") ) {
-                        if ( $.ime.languages[imeselector.$element.attr("lang")] ) {
-                            return imeselector.$element.attr("lang");
+                    if( imeselector.$element.attr('lang') ) {
+                        if ( $.ime.languages[imeselector.$element.attr('lang')] ) {
+                            return imeselector.$element.attr('lang');
                         }
                     }
                     /// There is either no IMs for the given language attr or there is no lang attr at all.
-                    return $.ime.preferences.getLanguage();
+                    return $.ime.preferences.getDefaultLanguage();
                 }
                 
 				imeselector.selectLanguage( decideLanguage() );
