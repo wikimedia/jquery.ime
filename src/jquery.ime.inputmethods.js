@@ -71,7 +71,7 @@
 			source: 'rules/bn/bn-probhat.js'
 		},
 		'brx-inscript': {
-			name: 'Inscript',
+			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
 		},
 		'brx-inscript2': {
@@ -528,8 +528,8 @@
 			inputmethods: [ 'hi-transliteration' ]
 		},
 		'ber': {
+                        autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
 			inputmethods: [ 'ber-tfng' ]
-			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
 		},
 		'bn': {
 			autonym: 'বাংলা',
@@ -720,11 +720,11 @@
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ]
 		},
 		'sat': {
-			autonym: 'Santali',
+			autonym: 'संताली',
 			inputmethods: [ 'sat-inscript2']
 		},
                 'sd': {
-                        autonym: 'Sindhi',
+                        autonym: 'सिंधी',
                         inputmethods: [ 'sd-inscript2' ]
                 },
 		'se': {
