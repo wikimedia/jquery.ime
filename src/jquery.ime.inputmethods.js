@@ -325,11 +325,11 @@
 			source: 'rules/mr/mr-phonetic.js'
 		},
 		'my-kbd': {
-			name: 'Myanmar kbd',
+			name: 'Burmese kbd',
 			source: 'rules/my/my-kbd.js'
 		},
 		'my-xkb': {
-                        name: 'Myanmar xkb',
+                        name: 'Burmese xkb',
                         source: 'rules/my/my-xkb.js'
                 },
 		'ne-inscript': {
@@ -672,7 +672,7 @@
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
 		},
 		'my': {
-			autonym: 'မြန်မာဘာသာ',
+			autonym: 'မြန်မာ',
 			inputmethods: [ 'my-kbd', 'my-xkb' ]
 		},
 		'ne': {
