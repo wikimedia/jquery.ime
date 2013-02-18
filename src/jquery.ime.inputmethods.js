@@ -464,6 +464,10 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'ur-phonetic': {
+			name: 'صوتی',
+			source: 'rules/ur/ur-phonetic.js'
+		},
 		'ur-transliteration': {
 			name: 'ٹرانسلٹریشن',
 			source: 'rules/ur/ur-transliteration.js'
@@ -781,7 +785,7 @@
 		},
 		'ur': {
 			autonym: 'اردو',
-			inputmethods: [ 'ur-transliteration' ]
+			inputmethods: [ 'ur-transliteration', 'ur-phonetic' ]
 		},
 		'uz': {
 			autonym: 'Oʻzbekcha',
