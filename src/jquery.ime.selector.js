@@ -139,21 +139,7 @@
 			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.show, this ) );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
-                function decideLanguage() {
-                    if( $.ime.preferences.getLanguage() ) {
-                        // There has been an override by the user return the language selected by user
-                        return $.ime.preferences.getLanguage();
-                    }
-                    if( imeselector.$element.attr('lang') ) {
-                        if ( $.ime.languages[imeselector.$element.attr('lang')] ) {
-                            return imeselector.$element.attr('lang');
-                        }
-                    }
-                    /// There is either no IMs for the given language attr or there is no lang attr at all.
-                    return $.ime.preferences.getDefaultLanguage();
-                }
-                
-				imeselector.selectLanguage( decideLanguage() );
+				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.focus();
 				e.stopPropagation();
 			} );
@@ -185,7 +171,7 @@
 					if ( this.inputmethod !== null ) {
 						this.selectIM( this.inputmethod.id );
 					} else {
-						this.selectLanguage( $.ime.preferences.getLanguage() );
+						this.selectLanguage( this.decideLanguage() );
 					}
 				}
 
@@ -265,6 +251,24 @@
 			this.inputmethod = null;
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 		},
+
+        /**
+		 * Decide on initial language to select
+		 *
+		 */
+        decideLanguage : function () {
+            if( $.ime.preferences.getLanguage() ) {
+                // There has been an override by the user return the language selected by user
+                return $.ime.preferences.getLanguage();
+            }
+            if( this.$element.attr('lang') ) {
+                if ( $.ime.languages[this.$element.attr('lang')] ) {
+                    return this.$element.attr('lang');
+                }
+            }
+            /// There is either no IMs for the given language attr or there is no lang attr at all.
+            return $.ime.preferences.getDefaultLanguage();
+        },
 
 		/**
 		 * Select an input method
