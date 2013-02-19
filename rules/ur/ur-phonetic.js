@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var guPhonetic = {
+	var urPhonetic = {
 		id: 'ur-phonetic',
 		name: 'صوتی',
 		description: 'Phonetic keyboard for Urdu script',

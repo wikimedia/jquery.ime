@@ -2,8 +2,11 @@
 	'use strict';
 
 	var hiInScript2, maithiliPatterns2, maithiliInScript2;
+
 	hiInScript2 = $.ime.inputmethods['hi-inscript2'];
-	maithiliPatterns2 = $.extend( hiInScript2.patterns, [ [ 'z', '\u02BC' ] ] ); // apostrophe
+	maithiliPatterns2 = $.extend( hiInScript2.patterns,
+		[ [ 'z', '\u02BC' ] ]
+	); // apostrophe
 
 	maithiliInScript2 = {
 		id: 'mai-inscript2',

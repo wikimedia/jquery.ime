@@ -156,10 +156,10 @@
 			depends: 'hi-inscript'
 		},
 		'mai-inscript2': {
-                         name: 'इनस्क्रिप्ट २',
-                         source: 'rules/mai/mai-inscript2.js',
-                         depends: 'hi-inscript2'
-                },
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/mai/mai-inscript2.js',
+			depends: 'hi-inscript2'
+		},
 		'hi-bolnagri': {
 			name: 'बोलनागरी',
 			source: 'rules/hi/hi-bolnagri.js'
@@ -727,10 +727,10 @@
 			autonym: 'संताली',
 			inputmethods: [ 'sat-inscript2']
 		},
-                'sd': {
-                        autonym: 'सिंधी',
-                        inputmethods: [ 'sd-inscript2' ]
-                },
+		'sd': {
+			autonym: 'सिंधी',
+			inputmethods: [ 'sd-inscript2' ]
+		},
 		'se': {
 			autonym: 'Davvisámegiella',
 			inputmethods: [ 'se-normforms' ]
