@@ -110,8 +110,11 @@
 			} );
 
 			imeselector.$imeSetting.mouseenter( function () {
+				// We don't want the selector to disappear while the user is trying to click it
+				imeselector.stopTimer();
 				imeselector.$imeSetting.addClass( 'onfocus' );
 			} ).mouseleave( function () {
+				imeselector.resetTimer();
 				imeselector.$imeSetting.removeClass( 'onfocus' );
 			} );
 
