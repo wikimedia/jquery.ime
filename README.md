@@ -1,7 +1,7 @@
 JQuery IME
 ==========================
 
-jQuery Input method editor library supporting 50+ input methods across several languages.
+jQuery Input method editor library supporting 150+ input methods across several languages.
 This is the jQuery version of the input method tool used in Wikimedia projects, a.k.a. Narayam.
 These input methods are well tested and contributed by large Wikimedia community.
 This project is a Wikimedia foundation initiative to provide language technology tools to wider audience outside the Wikimedia universe.
@@ -23,7 +23,21 @@ $( 'textarea' ).ime();
 jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method support for any editable elements in a page.
 
 
+Example
+-------
 See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page where jquery.ime in action
+
+To try the example locally, after checking out the code, start a local webserver to serve the files. This is very easy.
+If you have python installed, run 
+```bash
+python -m SimpleHTTPServer
+```
+or, In case you have python3
+```bash
+python3 -m http.server
+```
+
+Alternatively you can use tools like webfsd. If you know how to use advanced web servers like apache or nginx, you already know how to put the code in a webserver.
 
 
 For Developers
