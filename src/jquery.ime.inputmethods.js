@@ -75,9 +75,9 @@
 			source: 'rules/brx/brx-inscript.js'
 		},
 		'brx-inscript2': {
-                         name: 'इनस्क्रिप्ट २',
-                         source: 'rules/brx/brx-inscript2.js'
-                 },
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/brx/brx-inscript2.js'
+		},
 		'cyrl-palochka': {
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
@@ -87,9 +87,9 @@
 			source: 'rules/da/da-normforms.js'
 		},
 		'doi-inscript2': {
-                         name: 'इनस्क्रिप्ट २',
-                         source: 'rules/doi/doi-inscript2.js'
-                },
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/doi/doi-inscript2.js'
+		},
 		'eo-transliteration': {
 			name: 'transliterigo',
 			source: 'rules/eo/eo-transliteration.js'
@@ -135,9 +135,9 @@
 			source: 'rules/hi/hi-inscript.js'
 		},
 		'hi-inscript2': {
-                         name: 'इनस्क्रिप्ट २',
-                         source: 'rules/hi/hi-inscript2.js'
-                },
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/hi/hi-inscript2.js'
+		},
 		'hi-phonetic': {
 			name: 'फोनेटिक',
 			source: 'rules/hi/hi-phonetic.js'
@@ -305,9 +305,9 @@
 			source: 'rules/mn/mn-cyrl.js'
 		},
 		'mni-inscript2': {
-                        name: 'ইন্‌স্ক্ৰিপ্ত ২',
-                        source: 'rules/mni/mni-inscript2.js'
-                },
+			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			source: 'rules/mni/mni-inscript2.js'
+		},
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -329,9 +329,9 @@
 			source: 'rules/my/my-kbd.js'
 		},
 		'my-xkb': {
-                        name: 'Burmese xkb',
-                        source: 'rules/my/my-xkb.js'
-                },
+				name: 'Burmese xkb',
+				source: 'rules/my/my-xkb.js'
+		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -373,9 +373,9 @@
 			source: 'rules/or/or-phonetic.js'
 		},
 		'sd-inscript2': {
-                        name: 'इनस्क्रिप्ट २',
-                        source: 'rules/sd/sd-inscript2.js'
-                },
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/sd/sd-inscript2.js'
+		},
 		'se-normforms': {
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
@@ -429,13 +429,13 @@
 			source: 'rules/ru/ru-kbd.js'
 		},
 		'ru-phonetic': {
-                        name: 'фонетический',
-                        source: 'rules/ru/ru-phonetic.js'
-                },
+			name: 'фонетический',
+			source: 'rules/ru/ru-phonetic.js'
+		},
 		'ru-yawerty': {
-                        name: 'yawerty',
-                        source: 'rules/ru/ru-yawerty.js'
-                },
+			name: 'yawerty',
+			source: 'rules/ru/ru-yawerty.js'
+		},
 		'sa-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/sa/sa-inscript.js'
