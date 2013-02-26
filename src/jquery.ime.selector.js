@@ -8,9 +8,9 @@
 		this.$imeSetting = null;
 		this.$menu = null;
 		this.inputmethod = null;
+		this.timer = null;
 		this.init();
 		this.listen();
-		this.timer = null;
 	}
 
 	IMESelector.prototype = {
