@@ -344,6 +344,14 @@
 			name: 'ट्रांस्लितेरेशन',
 			source: 'rules/ne/ne-transliteration.js'
 		},
+		'ne-rom': {
+			name: 'Romanized',
+			source: 'rules/ne/ne-rom.js'
+		},
+		'ne-trad': {
+			name: 'Traditional',
+			source: 'rules/ne/ne-trad.js'
+		},
 		'no-normforms': {
 			name: 'Normal transliterasjon',
 			source: 'rules/no/no-normforms.js'
@@ -681,7 +689,7 @@
 		},
 		'ne': {
 			autonym: 'नेपाली',
-			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript' ]
+			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad' ]
 		},
 		'new': {
 			autonym: 'नेपाल भाषा',
