@@ -1,8 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var uaKbd = {
-		id: 'ua-kbd',
+	var ukKbd = {
+		id: 'uk-kbd',
 		name: 'Ukrarian kbd',
 		description: 'Ukrainian kbd keyboard layout',
 		date: '2013-02-12',
@@ -96,7 +96,7 @@
 		]
 
 	};
-	$.ime.register( uaKbd );
+	$.ime.register( ukKbd );
 
 }( jQuery ) );
 
