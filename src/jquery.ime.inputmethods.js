@@ -484,9 +484,9 @@
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
 		},
-		'ua-kbd': {
+		'uk-kbd': {
 			name: 'кбд',
-			source: 'rules/ua/ua-kbd.js'
+			source: 'rules/uk/uk-kbd.js'
 		},
 		'ug-kbd': {
 			name: 'Uyghur kbd',
@@ -783,9 +783,9 @@
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'ua': {
+		'uk': {
 			autonym: 'Українська',
-			inputmethods: [ 'ua-kbd' ]
+			inputmethods: [ 'uk-kbd' ]
 		},
 		'ug': {
 			autonym: 'ئۇيغۇرچە / Uyghurche',
