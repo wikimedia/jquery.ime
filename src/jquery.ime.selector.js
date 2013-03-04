@@ -70,8 +70,9 @@
 		},
 
 		focus: function () {
-			// Hide all other IME settings
+			// Hide all other IME settings and collapse open menus
 			$( 'div.imeselector' ).hide();
+			$( 'div.imeselector-menu' ).removeClass( 'open' );
 			this.$imeSetting.show();
 			this.resetTimer();
 		},
@@ -89,16 +90,24 @@
 			return false;
 		},
 
+		toggle: function () {
+			if ( this.$menu.hasClass( 'open' ) ) {
+				this.hide();
+			} else {
+				this.show();
+			}
+		},
+
 		/**
 		 * Bind the events and listen
 		 */
 		listen: function () {
 			var imeselector = this;
 
-			$( 'html' ).on( 'click.ime', function () {
-				imeselector.hide();
-				if ( imeselector.$element.is( ':hidden' ) ) {
-					imeselector.$imeSetting.hide();
+			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
+				var t = $( e.target );
+				if ( t.hasClass( 'imeselector-toggle' ) ) {
+					imeselector.toggle();
 				}
 			} );
 
@@ -138,8 +147,6 @@
 				e.stopPropagation();
 				e.preventDefault();
 			} );
-
-			imeselector.$imeSetting.on( 'click.ime', $.proxy( this.show, this ) );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
 				imeselector.selectLanguage( imeselector.decideLanguage() );
@@ -461,9 +468,9 @@
 			);
 	}
 
-	var selectorTemplate = '<div class="imeselector">'
+	var selectorTemplate = '<div class="imeselector imeselector-toggle">'
 		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="ime-setting-caret"></b></div>',
+		+ '<b class="ime-setting-caret imeselector-toggle"></b>',
 
 		MutationObserver = window.MutationObserver || window.WebKitMutationObserver
 		|| window.MozMutationObserver;
