@@ -1,20 +1,27 @@
 /* jshint node: true */
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks('grunt-css');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-qunit');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	// Project configuration.
 	grunt.initConfig( {
-		pkg: '<json:package.json>',
+		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
 			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - '
 					+ '<%= grunt.template.today("yyyy-mm-dd") %>\n'
-					+ '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>'
+					+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
 					+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-					+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
+					+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
 		},
 		concat: {
+			options: {
+				banner: '<%= meta.banner %>'
+			},
 			dist: {
-				src: ['<banner:meta.banner>',
+				src: [
 					'src/jquery.ime.js',
 					'src/jquery.ime.selector.js',
 					'src/jquery.ime.preferences.js',
@@ -23,26 +30,29 @@ module.exports = function ( grunt ) {
 				dest: 'dist/jquery.ime/<%= pkg.name %>.js'
 			}
 		},
-		min: {
+		uglify: {
+			options: {
+				banner: '<%= meta.banner %>'
+			},
 			dist: {
-				src: [ '<banner:meta.banner>', '<config:concat.dist.dest>' ],
-				dest: 'dist/jquery.ime/<%= pkg.name %>.min.js'
+				files: {
+					'dist/jquery.ime/<%= pkg.name %>.min.js': [
+						'src/jquery.ime.js',
+						'src/jquery.ime.selector.js',
+						'src/jquery.ime.preferences.js',
+						'src/jquery.ime.inputmethods.js' ]
+				}
 			}
 		},
 		copy: {
 			dist: {
 				files: {
-					'dist/jquery.ime/rules/': 'rules/**',
-					'dist/jquery.ime/images/': 'images/**',
-					'dist/jquery.ime/css/': 'css/**'
+					'dist/jquery.ime/': ['rules/**', 'images/**', 'css/**']
 				}
 			}
 		},
 		qunit: {
 			files: [ 'test/index.html' ]
-		},
-		lint: {
-			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
 		},
 		csslint : {
 			file: [ 'css/**/*.css' ]
@@ -66,21 +76,18 @@ module.exports = function ( grunt ) {
 				browser: true,
 				smarttabs: true,
 				laxbreak: true,
-				white: false
+				white: false,
+				globals: {
+					jQuery: true,
+					QUnit: true
+				}
 			},
-			globals: {
-				jQuery: true,
-				QUnit: true
-			}
-		},
-		uglify: {
-			src: [ '<banner:meta.banner>', '<config:concat.dist.dest>' ],
-			dest: 'dist/<%= pkg.name %>.min.js'
+			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
 		}
 	} );
 
 	// Default task.
-	grunt.registerTask( 'default', 'lint qunit concat min copy csslint' );
-	grunt.registerTask( 'test', 'lint qunit' );
+	grunt.registerTask( 'default', ['jshint', 'qunit', 'concat', 'uglify', 'copy', 'csslint'] );
+	grunt.registerTask( 'test', ['jshint', 'qunit'] );
 
 };
