@@ -201,7 +201,7 @@
 				- this.$imeSetting.outerWidth();
 			room = $( window ).height() - top;
 			if ( room < this.$imeSetting.outerHeight() ) {
-				top = top - this.$imeSetting.outerHeight();
+				top = position.top - this.$imeSetting.outerHeight();
 
 				this.$menu.css( 'top',
 								- ( this.$menu.outerHeight() +
