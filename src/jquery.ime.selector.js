@@ -470,7 +470,7 @@
 
 	var selectorTemplate = '<div class="imeselector imeselector-toggle">'
 		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="ime-setting-caret imeselector-toggle"></b>',
+		+ '<b class="ime-setting-caret imeselector-toggle"></b></div>',
 
 		MutationObserver = window.MutationObserver || window.WebKitMutationObserver
 		|| window.MozMutationObserver;
