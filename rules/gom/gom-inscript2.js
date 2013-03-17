@@ -1,8 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var kokInScript2 = {
-		id: 'kok-inscript2',
+	var gomInScript2 = {
+		id: 'gom-inscript2',
 		name: 'कोंकणी इनस्क्रिप्ट २',
 		description: 'Enhanced InScript keyboard for Kokani language',
 		date: '2012-11-06',
@@ -112,6 +112,6 @@
 			["\\>", "ऽ"],
 			["\\.", "॥"]]
 	};
-	$.ime.register( kokInScript2 );
+	$.ime.register( gomInScript2 );
 
 }( jQuery ) );
