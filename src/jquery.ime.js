@@ -134,7 +134,7 @@
 			}
 
 			// it is a noop
-			if ( replacement === input ) {
+			if ( !altGr && replacement === input ) {
 				return true;
 			}
 
