@@ -444,10 +444,14 @@
 			name: 'yawerty',
 			source: 'rules/ru/ru-yawerty.js'
 		},
-		'sa-inscript': {
-			name: 'इनस्क्रिप्ट',
-			source: 'rules/sa/sa-inscript.js'
+		'sa-iast': {
+			name: 'Romanized',
+			source: 'rules/sa/sa-iast.js'
 		},
+                'sa-inscript': {
+                        name: 'इनस्क्रिप्ट',
+                        source: 'rules/sa/sa-inscript.js'
+                },
 		'sa-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/sa/sa-inscript2.js'
@@ -729,7 +733,7 @@
 		},
 		'sa': {
 			autonym: 'संस्कृत',
-			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ]
+			inputmethods: [ 'sa-transliteration', 'sa-iast', 'sa-inscript2', 'sa-inscript' ]
 		},
 		'sat': {
 			autonym: 'संताली',
