@@ -539,10 +539,6 @@
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
 		},
-		'ber': {
-                        autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
-			inputmethods: [ 'ber-tfng' ]
-		},
 		'bn': {
 			autonym: 'বাংলা',
 			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
@@ -647,6 +643,10 @@
 			autonym: 'कॉशुर / کٲشُر',
 			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
 		},
+		'kab': {
+			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
+			inputmethods: [ 'ber-tfng' ]
+		},
 		'kok': {
 			autonym: 'कोंकणी',
 			inputmethods: [ 'kok-inscript2' ]
@@ -716,7 +716,7 @@
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
 		},
 		'rif': {
-			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
+			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
 		'ru': {
@@ -744,7 +744,7 @@
 			inputmethods: [ 'se-normforms' ]
 		},
 		'shi': {
-			autonym: 'ⵜⵉⴼⵉⵏⴰⵖ',
+			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
 		'si': {
@@ -782,6 +782,10 @@
 		'tkr': {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'tzm': {
+			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
+			inputmethods: [ 'ber-tfng' ]
 		},
 		'uk': {
 			autonym: 'Українська',
