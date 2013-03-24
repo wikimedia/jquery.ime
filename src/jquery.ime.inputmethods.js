@@ -82,6 +82,14 @@
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
 		},
+		'cv-lat-altgr': {
+			name: 'Căvašla (AltGr)',
+			source: 'rules/cv/cv-lat-altgr.js'
+		},
+		'cv-cyr-numbers': {
+			name: 'Чăвашла (цифрилисем)',
+			source: 'rules/cv/cv-cyr-numbers.js'
+		},
 		'cyrl-palochka': {
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
@@ -557,7 +565,7 @@
 		},
 		'cv': {
 			autonym: 'Чăвашла',
-			inputmethods: [ 'cv-cyr-altgr' ]
+			inputmethods: [ 'cv-cyr-altgr', 'cv-lat-altgr', 'cv-cyr-numbers' ]
 		},
 		'da': {
 			autonym: 'Dansk',
