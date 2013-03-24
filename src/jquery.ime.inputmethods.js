@@ -78,6 +78,18 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
 		},
+		'cv-cyr-altgr': {
+			name: 'Чăвашла (AltGr)',
+			source: 'rules/cv/cv-cyr-altgr.js'
+		},
+		'cv-lat-altgr': {
+			name: 'Căvašla (AltGr)',
+			source: 'rules/cv/cv-lat-altgr.js'
+		},
+		'cv-cyr-numbers': {
+			name: 'Чăвашла (цифрилисем)',
+			source: 'rules/cv/cv-cyr-numbers.js'
+		},
 		'cyrl-palochka': {
 			name: 'Palochka',
 			source: 'rules/cyrl/cyrl-palochka.js'
@@ -550,6 +562,10 @@
 		'ce': {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'cv': {
+			autonym: 'Чăвашла',
+			inputmethods: [ 'cv-cyr-altgr', 'cv-lat-altgr', 'cv-cyr-numbers' ]
 		},
 		'da': {
 			autonym: 'Dansk',
