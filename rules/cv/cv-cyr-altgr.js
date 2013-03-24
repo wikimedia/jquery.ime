@@ -6,11 +6,8 @@
 // The keyboard layout is an agreement
 // of the Chuvash Language  Committee 2009-03-12
 // http://comissi.chv.su/node/23
-// The additional three letters are latin letters: ă ĕ ç
-// The only exception is the Ue letter:
-// ӳ is from the Cyrillic subset of Unicode
-// its look differs so much from the its latin counterpart
-// so that chuvash.org decided to use it
+// This layout differs from the agreement in that matter
+// that all letters are from the Cyrillic subset of Unicode
 
 ( function ( $ ) {
 	'use strict';
@@ -19,7 +16,7 @@
 		id: 'cv-cyr-altgr',
 		name: 'Чăвашла (AltGr)',
 		description: 'AltGr пускăчлă чăваш сарăмĕ',
-		date: '2013-03-21',
+		date: '2013-03-24',
 		URL: 'http://comissi.chv.su/',
 		author: 'Anatoly Mironov, @mirontoli',
 		license: 'MIT',
@@ -105,16 +102,16 @@
 			['&', '?'] // 7
 			// '*', '(' and ')' are the same    // 8, 9, 0
 			],
-			//support both translit mode and native jcuken
+			//support both qwerty and jcuken keyboards
 			patterns_x: [
-				['f|а', 'ă'],
-				['F|А', 'Ă'],
-				['t|е', 'ĕ'],
-				['T|Е', 'Ĕ'],
-				['c|с', 'ç'],
-				['C|С', 'Ç'],
-				['e|у', 'ÿ'],
-				['E|У', 'Ϋ']
+				['f|а', 'ӑ'],
+				['F|А', 'Ӑ'],
+				['t|е', 'ӗ'],
+				['T|Е', 'Ӗ'],
+				['c|с', 'ҫ'],
+				['C|С', 'Ҫ'],
+				['e|у', 'ӳ'],
+				['E|У', 'Ӳ']
 			]
 	};
 

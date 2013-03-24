@@ -1,7 +1,9 @@
 // This Chuvash keyboard layout is designed by Ikăruk
 // http://ru.wikipedia.org/wiki/Чувашские_раскладки_клавиатуры#Раскладка_«Chuvash_Cyrillic»
 // This uses the number row of the keyboard
+// as it is in Sakha keyboard layout, in Bashkir, Slovak and many more
 // Some other keys are added which are often used in wikipedia editing
+// all letters are from the Cyrillic subset of Unicode
 
 ( function ( $ ) {
 	'use strict';
@@ -89,18 +91,18 @@
 			['1', '?'], // 1
 			['2', '\''], // 2
 			['@', '"'], // 2
-			['3', 'ç'], // 3
-			['#', 'Ç'], // 3
+			['3', 'ҫ'], // 3
+			['#', 'Ҫ'], // 3
 			['4', '|'], // 4
 			['\\$', ';'], // 4
-			['5', 'ÿ'], // 5
-			['%', 'Ϋ'], // 5
+			['5', 'ӳ'], // 5
+			['%', 'Ӳ'], // 5
 			['6', '—'], // 6
 			['\\^', ':'], // 6
-			['7', 'ĕ'], // 7
-			['&', 'Ĕ'], // 7
-			['8', 'ă'], // 8
-			['\\*', 'Ă'], // 8
+			['7', 'ӗ'], // 7
+			['&', 'Ӗ'], // 7
+			['8', 'ӑ'], // 8
+			['\\*', 'Ӑ'], // 8
 			['9', '['], // 9
 			['0', ']'] // 0
 		]
