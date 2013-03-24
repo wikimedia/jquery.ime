@@ -2,7 +2,7 @@ jquery.ime has a simple, but powerful, QUnit-based testing framework.
 
 When you are developing a new layout or making changes in an existing one, begin by running the tests. Run `grunt --force` or open jquery.ime/test/index.html in your browser. Check that all the tests pass.
 
-When you are adding or changing rules, edit the jquery.ime.test.js file and add a test for every rule that you are adding or changing, before you are actually programming the rules.
+When you are adding or changing rules, edit the jquery.ime.test.fixtures.js file and add a test for every rule that you are adding or changing, before you are actually programming the rules.
 
 Here's an example test block for a layout:
 
