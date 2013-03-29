@@ -11,7 +11,7 @@
 
 	var mh = {
 		id: 'mh',
-		name: 'Kajin Majōl',
+		name: 'Kajin M̧ajeļ',
 		description: 'Marshallese Language',
 		date: '2013-03-29',
 		URL: 'http://github.com/wikimedia/jquery.ime',

@@ -301,7 +301,7 @@
 			source: 'rules/lo/lo-kbd.js'
 		},
 		'mh': {
-			name: 'Kajin Majōl',
+			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
 		},
 		'mn-cyrl': {
@@ -672,7 +672,7 @@
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
 		},
 		'mh': {
-			autonym: 'Kajin Majōl',
+			autonym: 'Kajin M̧ajeļ',
 			inputmethods: [ 'mh' ]
 		},
 		'ml': {

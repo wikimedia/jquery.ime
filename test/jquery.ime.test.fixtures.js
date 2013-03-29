@@ -949,7 +949,7 @@ var testFixtures = [
 		],
 		inputmethod: 'kn-transliteration'
 	},{
-		description: "Kajin Majōl (Marshallese) test",
+		description: "Kajin M̧ajeļ (Marshallese) test",
 		tests: [
 			{ input: 'Y', output: 'Ū', description: 'Y for Ū in Marshallese' },
 			{ input: 'S', output: 'Ā', description: 'S for Ā in Marshallese' },
