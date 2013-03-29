@@ -949,6 +949,27 @@ var testFixtures = [
 		],
 		inputmethod: 'kn-transliteration'
 	},{
+		description: "Kajin Majōl (Marshallese) test",
+		tests: [
+			{ input: 'Y', output: 'Ū', description: 'Y for Ū in Marshallese' },
+			{ input: 'S', output: 'Ā', description: 'S for Ā in Marshallese' },
+			{ input: 'F', output: 'Ņ', description: 'F for Ņ in Marshallese' },
+			{ input: 'G', output: 'N̄', description: 'G for N̄ in Marshallese' },
+			{ input: 'H', output: 'M̧', description: 'H for M̧ in Marshallese' },
+			{ input: 'X', output: 'O̧', description: 'X for O̧ in Marshallese' },
+			{ input: 'C', output: 'Ō', description: 'C for Ō in Marshallese' },
+			{ input: 'V', output: 'Ļ', description: 'V for Ļ in Marshallese' },
+			{ input: 'y', output: 'ū', description: 'y for ū in Marshallese' },
+			{ input: 's', output: 'ā', description: 's for ā in Marshallese' },
+			{ input: 'f', output: 'ņ', description: 'f for ņ in Marshallese' },
+			{ input: 'g', output: 'n̄', description: 'g for n̄ in Marshallese' },
+			{ input: 'h', output: 'm̧', description: 'h for m̧ in Marshallese' },
+			{ input: 'x', output: 'o̧', description: 'x for o̧ in Marshallese' },
+			{ input: 'c', output: 'ō', description: 'c for ō in Marshallese' },
+			{ input: 'v', output: 'ļ', description: 'v for ļ in Marshallese' }
+		],
+		inputmethod: 'mh'
+	},{
 		description: 'Marathi InScript 2 test',
 		tests: [
 			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
