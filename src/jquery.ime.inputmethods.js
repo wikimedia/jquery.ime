@@ -300,6 +300,10 @@
 			name: 'າຶກ',
 			source: 'rules/lo/lo-kbd.js'
 		},
+		'mh': {
+			name: 'Kajin M̧ajeļ',
+			source: 'rules/mh/mh.js'
+		},
 		'mn-cyrl': {
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
@@ -666,6 +670,10 @@
 		'mai': {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+		},
+		'mh': {
+			autonym: 'Kajin M̧ajeļ',
+			inputmethods: [ 'mh' ]
 		},
 		'ml': {
 			autonym: 'മലയാളം',
