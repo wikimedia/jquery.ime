@@ -664,7 +664,7 @@
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'lo': {
-			autonym: 'ພາສາລາວ',
+			autonym: 'ລາວ',
 			inputmethods: [ 'lo-kbd' ]
 		},
 		'mai': {
