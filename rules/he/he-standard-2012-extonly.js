@@ -51,8 +51,8 @@
 
 			// Some source code editors may show the next two lines
 			// in a weird way because of auto-directionality.
-			[';', '׳'],      // Geresh, ;
-			[',', '״'],      // Gershayim, ,
+			[';', '׳'],      // Geresh, ';'
+			[',', '״'],      // Gershayim, ','
 			['\u05E3', '„'],      // Opening double quote, ף
 			['\u05DA', '”'],      // Closing double quote, ך
 			['\u05E5', '‚'],      // Opening single quote, ץ
