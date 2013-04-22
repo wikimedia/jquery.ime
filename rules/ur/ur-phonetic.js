@@ -105,7 +105,6 @@
 			['\\&', 'ٔ'],
 			['\\*', 'ٌ']]
 	};
+
 	$.ime.register( urPhonetic );
-
 }( jQuery ) );
-
