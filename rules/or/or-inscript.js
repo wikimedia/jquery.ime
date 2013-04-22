@@ -3,8 +3,8 @@
 
 	var orInScript = {
 		id: 'or-inscript',
-		name: 'Odiya InScript',
-		description: 'InScript keyboard for Odiya script',
+		name: 'Odia InScript',
+		description: 'InScript keyboard for Odia script',
 		date: '2012-10-14',
 		author: 'Junaid P V',
 		license: 'GPLv3',
