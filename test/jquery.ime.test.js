@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME;
+	var $textarea, textareaIME, imeTest, typeChars;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -137,7 +137,7 @@
 			'Selects the language that has been set as an attribute' );
 
 		$textarea.attr( 'lang', 'hi' );
-		$.ime.preferences.registry.language = "ta";
+		$.ime.preferences.registry.language = 'ta';
 		selector.$element.focus();
 		assert.strictEqual( selector.decideLanguage(), 'ta',
 			'Overrides the lang attr and uses user preference' );
@@ -201,7 +201,7 @@
 	/**
 	 * A general framework for testing a keyboard layout.
 	 */
-	var imeTest = function( options ) {
+	imeTest = function( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
 			multiline: false, // <input> or <textarea>
@@ -258,7 +258,7 @@
 	// characters - either
 	//            - a string
 	//            - an array of pairs of character and altKey value
-	var typeChars = function( $input, characters ) {
+	typeChars = function( $input, characters ) {
 		var i, character, altKeyValue, code, event,
 			len = characters.length;
 
