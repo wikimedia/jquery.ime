@@ -119,6 +119,6 @@
 			['\\.', '॥']
 		]
 	};
-	$.ime.register( sdInScript2 );
 
+	$.ime.register( sdInScript2 );
 }( jQuery ) );

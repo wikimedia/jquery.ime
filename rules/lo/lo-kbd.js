@@ -11,7 +11,7 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-  			['\\!', '1'],
+			['\\!', '1'],
 			['\"', '='],
 			['\\#', '3'],
 			['\\$', '4'],
@@ -117,7 +117,7 @@
 			['9', '໙']
 		]
 	};
-	$.ime.register( loKbd );
 
+	$.ime.register( loKbd );
 }( jQuery ) );
 
