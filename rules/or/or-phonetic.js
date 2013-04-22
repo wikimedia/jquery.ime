@@ -3,8 +3,8 @@
 
 	var orPhonetic = {
 		id: 'or-phonetic',
-		name: 'Odiya Phonetic',
-		description: 'Phonetic keyboard for Odiya script',
+		name: 'Odia Phonetic',
+		description: 'Phonetic keyboard for Odia script',
 		date: '2013-02-09',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Parag Nemade',
