@@ -108,7 +108,6 @@
 			['_', '-'],
 			['\\+', '%']
 		]
-		
 	};
 
 	$.ime.register( pattachote );
