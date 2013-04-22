@@ -207,13 +207,14 @@
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
 			room = $( window ).height() - top;
+
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
 
 				this.$menu.css( 'top',
-								- ( this.$menu.outerHeight() +
-									this.$imeSetting.outerHeight()
-								) )
+						- ( this.$menu.outerHeight() +
+						this.$imeSetting.outerHeight() )
+					)
 					.addClass( 'position-top' );
 			}
 
@@ -224,10 +225,16 @@
 				}
 			} );
 
-			this.$imeSetting.css({
+			this.$imeSetting.css( {
 				top: top,
 				left: left
-			});
+			} );
+
+			if ( parseInt( this.$menu.css( 'min-width' ) ) > left ) {
+				this.$menu
+					.css( { left: position.left } )
+					.addClass( 'right' );
+			}
 		},
 
 		/**

@@ -19,6 +19,9 @@
 
 		listen: function () {
 			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
+			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
+			this.$element.on( 'enable.ime', $.proxy( this.enable, this ) );
+			this.$element.on( 'disable.ime', $.proxy( this.disable, this ) );
 		},
 
 		/**
@@ -160,6 +163,11 @@
 
 		toggle: function () {
 			this.active = !this.active;
+		},
+
+		destroy: function () {
+			$( 'body' ).off( '.ime' );
+			this.$element.off( '.ime' ).removeData( 'ime' ).removeData( 'imeselector' );
 		},
 
 		getIM: function () {
