@@ -133,7 +133,11 @@
 						- this.inputmethod.contextLength );
 			}
 
-			// it is a noop
+			// If replacement equals to input, no replacement is made, because
+			// there's apparently nothing to do. However, there may be something
+			// to do if AltGr was pressed. For example, if a layout is built in
+			// a way that allows typing the original character instead of
+			// the replacement by pressing it with AltGr.
 			if ( !altGr && replacement === input ) {
 				return true;
 			}
