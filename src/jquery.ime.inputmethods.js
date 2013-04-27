@@ -312,6 +312,38 @@
 			name: 'ইন্‌স্ক্ৰিপ্ত ২',
 			source: 'rules/mni/mni-inscript2.js'
 		},
+				'mo-tm': {
+			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
+			source: 'rules/mo/mo-tm.js'
+		},
+		'mo-mt': {
+			name: 'ᡐᡆᡑᡆ ᡋᡅᡔᡅᡎ᠌',
+			source: 'rules/mo/mo-mt.js'
+		},
+		'mo-mm': {
+			name: 'ᠮᠠᠨᠵᡠ',
+			source: 'rules/mo/mo-mm.js'
+		},
+		'mo-ms': {
+			name: 'ᠰᡞᠪᡝ',
+			source: 'rules/mo/mo-ms.js'
+		},
+		'mo-tma': {
+			name: 'Mongolian Ali-gali',
+			source: 'rules/mo/mo-tma.js'
+		},
+		'mo-mta': {
+			name: 'Todo Ali-gali',
+			source: 'rules/mo/mo-mta.js'
+		},
+		'mo-mma': {
+			name: 'Manchu Ali-gali',
+			source: 'rules/mo/mo-mma.js'
+		},
+		'ph-kbd': {
+			name: 'PhagsPa',
+			source: 'rules/ph/phagspa.js'
+		},
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mr/mr-inscript.js'
@@ -687,6 +719,10 @@
 			autonym: 'Manipuri',
 			inputmethods: [ 'mni-inscript2' ]
 		},
+		'mo': {
+			autonym: 'ᠮᠣᠩᠭᠣᠯ',
+			inputmethods: [ 'mo-tm', 'mo-mt', 'mo-ms', 'mo-mm', 'mo-tma', 'mo-mta', 'mo-mma' ]
+		},
 		'mr': {
 			autonym: 'मराठी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
@@ -722,6 +758,10 @@
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
+		},
+		'ph': {
+			autonym: 'PhagsPa',
+			inputmethods: [ 'ph-kbd' ]
 		},
 		'rif': {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
