@@ -207,7 +207,7 @@
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
 			// RTL element position fix:
-			if ( $( 'html' ).attr( 'dir' ) === 'rtl' || this.$element.attr( 'dir' ) === 'rtl' ) {
+			if ( this.$element.attr( 'direction' ) === 'rtl' ) {
 				left = position.left;
 			}
 			room = $( window ).height() - top;
@@ -236,7 +236,7 @@
 
 			if ( parseInt( this.$menu.css( 'min-width' ) ) > left ) {
 				// RTL element position fix
-				if ( $( 'html' ).attr( 'dir' ) === 'rtl' || this.$element.attr( 'dir' ) === 'rtl' ) {
+				if ( this.$element.css( 'direction' ) === 'rtl' ) {
 					this.$menu
 					.css( { left: 0 } )
 				} else {
@@ -244,7 +244,7 @@
 					.css( { left: position.left } )
 					.addClass( 'right' );
 				}
-		},
+			},
 
 		/**
 		 * Select a language
