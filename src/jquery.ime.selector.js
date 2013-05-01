@@ -204,11 +204,11 @@
 
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
-			left = position.left + this.$element.outerWidth()
-				- this.$imeSetting.outerWidth();
+			left = position.left;
 			// RTL element position fix:
-			if ( this.$element.css( 'direction' ) === 'rtl' ) {
-				left = position.left;
+			if ( this.$element.css( 'direction' ) === 'ltr' ) {
+				left = position.left + this.$element.outerWidth()
+				- this.$imeSetting.outerWidth();
 			}
 			room = $( window ).height() - top;
 
