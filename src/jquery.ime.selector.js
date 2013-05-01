@@ -207,7 +207,7 @@
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
 			// RTL element position fix:
-			if ( this.$element.attr( 'direction' ) === 'rtl' ) {
+			if ( this.$element.css( 'direction' ) === 'rtl' ) {
 				left = position.left;
 			}
 			room = $( window ).height() - top;
