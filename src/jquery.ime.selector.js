@@ -239,6 +239,7 @@
 				if ( this.$element.css( 'direction' ) === 'rtl' ) {
 					this.$menu
 					.css( { left: 0 } )
+					.addClass( 'left' );
 				} else {
 					this.$menu
 					.css( { left: position.left } )
