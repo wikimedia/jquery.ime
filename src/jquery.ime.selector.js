@@ -207,8 +207,8 @@
 			left = position.left;
 			// RTL element position fix:
 			if ( this.$element.css( 'direction' ) === 'ltr' ) {
-				left = position.left + this.$element.outerWidth()
-				- this.$imeSetting.outerWidth();
+				left = position.left + this.$element.outerWidth() -
+					this.$imeSetting.outerWidth();
 			}
 			room = $( window ).height() - top;
 
@@ -245,7 +245,8 @@
 					.css( { left: position.left } )
 					.addClass( 'right' );
 				}
-			},
+			}
+		},
 
 		/**
 		 * Select a language
