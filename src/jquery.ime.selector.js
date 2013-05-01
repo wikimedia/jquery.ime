@@ -163,6 +163,12 @@
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
+
+			// Update IM selector position when window is resized
+			// or browser window is zoomed in or zoomed out
+			$( window ).resize( function () {
+				imeselector.position();
+			});
 		},
 
 		/**
