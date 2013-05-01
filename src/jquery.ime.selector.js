@@ -206,6 +206,10 @@
 			top = position.top + this.$element.outerHeight();
 			left = position.left + this.$element.outerWidth()
 				- this.$imeSetting.outerWidth();
+			// RTL element position fix:
+			if ( $( 'html' ).attr( 'dir' ) == 'rtl' || this.$element.attr( 'dir' ) == 'rtl' ) {
+				left = position.left;
+			}
 			room = $( window ).height() - top;
 
 			if ( room < this.$imeSetting.outerHeight() ) {
@@ -231,9 +235,15 @@
 			} );
 
 			if ( parseInt( this.$menu.css( 'min-width' ) ) > left ) {
-				this.$menu
-					.css( { left: position.left } )
-					.addClass( 'right' );
+				// RTL element position fix
+				if ( $( 'html' ).attr( 'dir' ) == 'rtl' || this.$element.attr( 'dir' ) == 'rtl' ) {
+					this.$menu
+						.css( { left: 0 } )
+				} else {
+					this.$menu
+						.css( { left: position.left } )
+						.addClass( 'right' );
+				}
 			}
 		},
 
