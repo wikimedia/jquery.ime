@@ -308,41 +308,37 @@
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
 		},
+		'mn-tm': {
+			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
+			source: 'rules/mn/mn-tm.js'
+		},
+		'mn-mt': {
+			name: 'ᡐᡆᡑᡆ ᡋᡅᡔᡅᡎ᠌',
+			source: 'rules/mn/mn-mt.js'
+		},
+		'mn-tma': {
+      name: 'Traditional Mongolian Ali-gali',
+      source: 'rules/mn/mn-tma.js'
+    },
+    'mn-mta': {
+      name: 'Todo Mongolian Ali-gali',
+      source: 'rules/mn/mn-mta.js'
+    },
+    'ph-kbd': {
+      name: 'PhagsPa',
+      source: 'rules/mn/phagspa.js'
+    },
+    'mnc': {
+      name: 'ᠮᠠᠨᠵᡠ',
+      source: 'rules/mnc/mnc.js'
+    },
+    'mnc-ali': {
+      name: 'Manchu Ali-gali',
+      source: 'rules/mnc/mnc-ali.js'
+    },
 		'mni-inscript2': {
 			name: 'ইন্‌স্ক্ৰিপ্ত ২',
 			source: 'rules/mni/mni-inscript2.js'
-		},
-				'mo-tm': {
-			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
-			source: 'rules/mo/mo-tm.js'
-		},
-		'mo-mt': {
-			name: 'ᡐᡆᡑᡆ ᡋᡅᡔᡅᡎ᠌',
-			source: 'rules/mo/mo-mt.js'
-		},
-		'mo-mm': {
-			name: 'ᠮᠠᠨᠵᡠ',
-			source: 'rules/mo/mo-mm.js'
-		},
-		'mo-ms': {
-			name: 'ᠰᡞᠪᡝ',
-			source: 'rules/mo/mo-ms.js'
-		},
-		'mo-tma': {
-			name: 'Mongolian Ali-gali',
-			source: 'rules/mo/mo-tma.js'
-		},
-		'mo-mta': {
-			name: 'Todo Ali-gali',
-			source: 'rules/mo/mo-mta.js'
-		},
-		'mo-mma': {
-			name: 'Manchu Ali-gali',
-			source: 'rules/mo/mo-mma.js'
-		},
-		'ph-kbd': {
-			name: 'PhagsPa',
-			source: 'rules/ph/phagspa.js'
 		},
 		'mr-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -508,6 +504,10 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'sjo': {
+      name: 'ᠰᡞᠪᡝ',
+      source: 'rules/sjo/sjo.js'
+    },
 		'ur-phonetic': {
 			name: 'صوتی',
 			source: 'rules/ur/ur-phonetic.js'
@@ -712,16 +712,16 @@
 			inputmethods: [ 'ml-transliteration', 'ml-inscript', 'ml-inscript2' ]
 		},
 		'mn': {
-			autonym: 'Монгол',
-			inputmethods: [ 'mn-cyrl' ]
+			autonym: 'Mongolian',
+			inputmethods: [ 'mn-cyrl', 'mn-tm', 'mn-mt', 'mn-tma', 'mn-mta', 'ph-kbd' ]
 		},
+		'mnc': {
+      autonym: 'ᠮᠠᠨᠵᡠ',
+      inputmethods: [ 'mnc', 'mnc-ali' ]
+    },
 		'mni': {
 			autonym: 'Manipuri',
 			inputmethods: [ 'mni-inscript2' ]
-		},
-		'mo': {
-			autonym: 'ᠮᠣᠩᠭᠣᠯ',
-			inputmethods: [ 'mo-tm', 'mo-mt', 'mo-ms', 'mo-mm', 'mo-tma', 'mo-mta', 'mo-mma' ]
 		},
 		'mr': {
 			autonym: 'मराठी',
@@ -759,10 +759,6 @@
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
 		},
-		'ph': {
-			autonym: 'PhagsPa',
-			inputmethods: [ 'ph-kbd' ]
-		},
 		'rif': {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
@@ -799,6 +795,10 @@
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
 		},
+		'sjo': {
+      autonym: 'ᠰᡞᠪᡝ',
+      inputmethods: [ 'sjo' ]
+    },
 		'sk': {
 			autonym: 'Slovenčina',
 			inputmethods: [ 'sk-kbd' ]
