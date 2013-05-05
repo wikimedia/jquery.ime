@@ -502,6 +502,9 @@
 		}
 	} );
 
+	/**
+	* range : [a, b] both included
+	*/
 	$.extend( $.ime.languages, {
 		'ady': {
 			autonym: 'адыгэбзэ',
@@ -516,17 +519,17 @@
 		'am': {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ],
-			range: [0,0]
+			range: ['1200','137F']
 		},
 		'ar': {
 			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ],
-			range: [0,0]
+			range: ['0600','06FF']
 		},
 		'as': {
 			autonym: 'অসমীয়া',
 			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ],
-			range: [0,0]
+			range: ['0980','09FF']
 		},
 		'av': {
 			autonym: 'авар',
@@ -556,7 +559,7 @@
 		'bn': {
 			autonym: 'বাংলা',
 			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ],
-			range: [0,0]
+			range: ['0980','09FF']
 		},
 		'brx': {
 			autonym: 'बोड़ो',
@@ -571,7 +574,7 @@
 		'da': {
 			autonym: 'Dansk',
 			inputmethods: [ 'da-normforms' ],
-			range: [0,0]
+			range: ['01FA','01FF']
 		},
 		'de': {
 			autonym: 'Deutsch',
@@ -591,7 +594,7 @@
 		'el': {
 			autonym: 'Ελληνικά',
 			inputmethods: [ 'el-kbd' ],
-			range: [0,0]
+			range: ['0374', '03FF']
 		},
 		'eo': {
 			autonym: 'Esperanto',
@@ -616,7 +619,7 @@
 		'gu': {
 			autonym: 'ગુજરાતી',
 			inputmethods: [ 'gu-transliteration', 'gu-inscript', 'gu-inscript2', 'gu-phonetic' ],
-			range: [0,0]
+			range: ['0A80','0AFF']
 		},
 		'he': {
 			autonym: 'עברית',
@@ -626,7 +629,7 @@
 		'hi': {
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ],
-			range: [0,0]
+			range: ['0900','097F']
 		},
 		'hr': {
 			autonym: 'Hrvatski',
@@ -776,7 +779,7 @@
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ],
-			range: [0,0]
+			range: ['0A00','0A7F']
 		},
 		'rif': {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
@@ -796,7 +799,7 @@
 		'sa': {
 			autonym: 'संस्कृत',
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript' ],
-			range: [0,0]
+			range: ['0900','097F']
 		},
 		'sat': {
 			autonym: 'संताली',
@@ -866,7 +869,7 @@
 		'tzm': {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
 			inputmethods: [ 'ber-tfng' ],
-			range: [0,0]
+			range: ['2D30','2D7F']
 		},
 		'uk': {
 			autonym: 'Українська',
