@@ -506,6 +506,12 @@
 	* range : [a, b] both included
 	*/
 	$.extend( $.ime.languages, {
+		//Please keep 'hi' before all other devanagari script using languages. It helps in automatic selection.
+		'hi': {
+			autonym: 'हिन्दी',
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ],
+			range: ['0900','097F']
+		},
 		'ady': {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ],
@@ -625,11 +631,6 @@
 			autonym: 'עברית',
 			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012', 'he-kbd' ],
 			range: [0,0]
-		},
-		'hi': {
-			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ],
-			range: ['0900','097F']
 		},
 		'hr': {
 			autonym: 'Hrvatski',

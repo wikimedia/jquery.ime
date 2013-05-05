@@ -293,7 +293,8 @@
 		decideLanguage : function () {
 			// Try to match the language using already present text, if possible
 			if( this.matchLanguage() ){
-				return this.matchLanguage();
+				var matched = this.matchLanguage();
+				return matched[0];
 			}
 			
 			if( $.ime.preferences.getLanguage() ) {
@@ -313,18 +314,20 @@
 			
 			ime = this.$element.data('ime');
 			pos = ime.getCaretPosition(this.$element);
-			cursorPos = pos[1]>pos[0] ? pos[1] : pos[0];
+			cursorPos = pos[1]>pos[0] ? pos[0]+1 : pos[0];
+			if(!cursorPos){
+				return false;
+			}
 			
 			input = ime.lastNChars( this.$element.val() || this.$element.text(), cursorPos, 1 );
 			hex = ime.getHexcode(input);
 			
 			var ranges = $.ime.languages;
-			var languageCode = null;
+			var languageCode = [];
 			$.each(ranges, function(langCode, l){
 				if(hex >= l.range[0] && hex <= l.range[1]){
-					languageCode = langCode;
+					languageCode.push(langCode);
 				}
-				return !languageCode;
 			});
 			
 			return languageCode;
