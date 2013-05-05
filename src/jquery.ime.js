@@ -258,6 +258,16 @@
 		 */
 		lastNChars: function ( str, pos, n ) {
 			return lastNChars( str, pos, n );
+		},
+		
+		/**
+		 * Get the hex code of first character of the string passed.
+		 * 
+		 * @param ch String
+		 * @return A 4 letter hexcode, like 02AF.
+		 */
+		getHexcode : function ( ch ) {
+			return getHexcode( ch );
 		}
 	};
 
@@ -464,6 +474,25 @@
 		}
 	}
 
+	/**
+	 * Get the hex code of first character of the string passed.
+	 * 
+	 * @param ch String
+	 * @return A 4 letter hexcode, like 02AF.
+	 */
+	function getHexcode( ch ){
+		if(ch === '' || ch === null){
+			return;
+		}
+		var code, hex;
+		code = ch.charCodeAt(0);
+		hex = code.toString(16).toUpperCase();
+		while (hex.length < 4) {
+			hex = "0" + hex;
+		}
+		return hex;		
+	}
+	
 	function arrayKeys ( obj ) {
 		var rv = [];
 		$.each( obj, function ( key ) {

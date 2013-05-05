@@ -291,6 +291,11 @@
 		 *
 		 */
 		decideLanguage : function () {
+			// Try to match the language using already present text, if possible
+			if( this.matchLanguage() ){
+				return this.matchLanguage();
+			}
+			
 			if( $.ime.preferences.getLanguage() ) {
 				// There has been an override by the user return the language selected by user
 				return $.ime.preferences.getLanguage();
@@ -301,6 +306,28 @@
 			}
 			// There is either no IMs for the given language attr or there is no lang attr at all.
 			return $.ime.preferences.getDefaultLanguage();
+		},
+		
+		matchLanguage : function(){
+			var ime, pos, cursorPos, input, hex, languageCode;
+			
+			ime = this.$element.data('ime');
+			pos = ime.getCaretPosition(this.$element);
+			cursorPos = pos[1]>pos[0] ? pos[1] : pos[0];
+			
+			input = ime.lastNChars( this.$element.val() || this.$element.text(), cursorPos, 1 );
+			hex = ime.getHexcode(input);
+			
+			var ranges = $.ime.languages;
+			var languageCode = null;
+			$.each(ranges, function(langCode, l){
+				if(hex >= l.range[0] && hex <= l.range[1]){
+					languageCode = langCode;
+				}
+				return !languageCode;
+			});
+			
+			return languageCode;
 		},
 
 		/**
