@@ -326,6 +326,7 @@
 			range,
 			textInputRange,
 			len,
+			newLines,
 			endRange;
 
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
@@ -362,6 +363,14 @@
 						end += normalizedValue.slice( 0, end ).split( '\n' ).length - 1;
 					}
 				}
+			}
+			
+			// only find newlines till current caret position and update
+			// start and end caret positions accordingly
+			newLines = normalizedValue.substring(0,start).match( /\n/g );
+			if ( newLines ) {
+				start -= newLines.length;
+				end -= newLines.length;
 			}
 		}
 
