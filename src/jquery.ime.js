@@ -367,7 +367,7 @@
 			
 			// only find newlines till current caret position and update
 			// start and end caret positions accordingly
-			newLines = normalizedValue.substring(0,start).match( /\n/g );
+			newLines = normalizedValue.substring( 0, start ).match( /\n/g );
 			if ( newLines ) {
 				start -= newLines.length;
 				end -= newLines.length;
