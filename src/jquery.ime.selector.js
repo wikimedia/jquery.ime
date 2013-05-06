@@ -316,11 +316,14 @@
 			pos = ime.getCaretPosition(this.$element);
 			cursorPos = pos[1]>pos[0] ? pos[0]+1 : pos[0];
 			if(!cursorPos){
-				return false;
+				cursorPos = 1;
 			}
 			
 			input = ime.lastNChars( this.$element.val() || this.$element.text(), cursorPos, 1 );
 			hex = ime.getHexcode(input);
+			if(hex === 'undefined'){
+				return;
+			}
 			
 			var ranges = $.ime.languages;
 			var languageCode = [];
