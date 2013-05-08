@@ -393,8 +393,22 @@
 			newLines,
 			scrollTop;
 
-		if ( document.body.createTextRange ) {
-			// IE
+		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
+			// IE9+ and all other browsers
+			scrollTop = element.scrollTop;
+
+			// This could be made better if range selection worked on browsers.
+			// But for complex scripts, browsers place cursor in unexpected places
+			// and it's not possible to fix cursor programmatically.
+			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+			element.value = element.value.substring( 0, start ) + replacement
+					+ element.value.substring( end, element.value.length );
+			// restore scroll
+			element.scrollTop = scrollTop;
+			// set selection
+			element.selectionStart = element.selectionEnd = start + replacement.length;
+		} else {
+			// IE8 and lower
 			selection = rangeForElementIE(element);
 			length = element.value.length;
 			// IE doesn't count \n when computing the offset, so we won't either
@@ -410,20 +424,6 @@
 			selection.text = replacement;
 			selection.collapse( false );
 			selection.select();
-		} else {
-			// All other browsers
-			scrollTop = element.scrollTop;
-
-			// This could be made better if range selection worked on browsers.
-			// But for complex scripts, browsers place cursor in unexpected places
-			// and it's not possible to fix cursor programmatically.
-			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) + replacement
-					+ element.value.substring( end, element.value.length );
-			// restore scroll
-			element.scrollTop = scrollTop;
-			// set selection
-			element.selectionStart = element.selectionEnd = start + replacement.length;
 		}
 	}
 
