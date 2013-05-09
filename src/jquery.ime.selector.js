@@ -148,10 +148,13 @@
 				e.preventDefault();
 			} );
 
+			//Delay by 1ms to allow getCaretPosition capture the cursor location on focus.
 			imeselector.$element.on( 'focus.ime', function ( e ) {
+				setTimeout( function ( ) {
 				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.focus();
 				e.stopPropagation();
+				}, 1 );
 			} );
 
 			imeselector.$element.attrchange( function ( ) {
@@ -293,23 +296,29 @@
 		decideLanguage : function () {
 			// Try to match the language using already present text, if possible
 			if( this.matchLanguage() ){
-				var matched = this.matchLanguage();
+				var matched = this.matchLanguage();				
 				return matched[0];
 			}
-			
+						
 			if( $.ime.preferences.getLanguage() ) {
 				// There has been an override by the user return the language selected by user
 				return $.ime.preferences.getLanguage();
 			}
+			
 			if ( this.$element.attr('lang') &&
 				$.ime.languages[this.$element.attr('lang')] ) {
 					return this.$element.attr('lang');
 			}
 			// There is either no IMs for the given language attr or there is no lang attr at all.
+			
 			return $.ime.preferences.getDefaultLanguage();
 		},
 		
-		matchLanguage : function(){
+		/**
+		*  Match the language using already present text
+		*
+		*/
+		matchLanguage : function () {
 			var ime, pos, cursorPos, input, hex, languageCode;
 			
 			ime = this.$element.data('ime');
@@ -596,4 +605,3 @@
 
 
 }( jQuery ) );
-
