@@ -318,25 +318,30 @@
 		*  Match the language using already present text
 		*
 		*/
-		matchLanguage : function () {
-			var ime, pos, cursorPos, input, hex, languageCode;
+		matchLanguage : function (cursorPos){
+			var ime, pos, input, hex, languageCode;
 			
 			ime = this.$element.data('ime');
-			pos = ime.getCaretPosition(this.$element);
-			cursorPos = pos[1]>pos[0] ? pos[0]+1 : pos[0];
-			if(!cursorPos){
-				cursorPos = 1;
+			if(typeof cursorPos === 'undefined'){
+				pos = ime.getCaretPosition(this.$element);
+				cursorPos = pos[1]>pos[0] ? pos[0]+1 : pos[0];
+				if(!cursorPos){
+					cursorPos = 1;
+				}
 			}
 			
 			input = ime.lastNChars( this.$element.val() || this.$element.text(), cursorPos, 1 );
 			hex = ime.getHexcode(input);
 			if(hex === 'undefined'){
 				return;
+			//get one more character, if this is a special char
+			}else if(hex >= '0020' && hex <= '002F') {
+				return this.matchLanguage( --cursorPos );
 			}
 			
-			var ranges = $.ime.languages;
+			var langs = $.ime.languages;
 			var languageCode = [];
-			$.each(ranges, function(langCode, l){
+			$.each(langs, function(langCode, l){
 				if(hex >= l.range[0] && hex <= l.range[1]){
 					languageCode.push(langCode);
 				}
