@@ -294,12 +294,6 @@
 		 *
 		 */
 		decideLanguage : function () {
-			// Try to match the language using already present text, if possible
-			if( this.matchLanguage() ){
-				var matched = this.matchLanguage();				
-				return matched[0];
-			}
-						
 			if( $.ime.preferences.getLanguage() ) {
 				// There has been an override by the user return the language selected by user
 				return $.ime.preferences.getLanguage();
@@ -310,6 +304,12 @@
 					return this.$element.attr('lang');
 			}
 			// There is either no IMs for the given language attr or there is no lang attr at all.
+			
+			// Try to match the language using already present text, if possible
+			if( this.matchLanguage() ){
+				var matched = this.matchLanguage();				
+				return matched[0];
+			}
 			
 			return $.ime.preferences.getDefaultLanguage();
 		},
