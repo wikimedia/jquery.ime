@@ -497,7 +497,7 @@
 	function isShortcutKey ( event ) {
 		// 77 - The letter M, for Ctrl-M
 		// 13 - The Enter key
-		return event.ctrlKey && ( event.which === 77 || event.which === 13 );
+		return event.ctrlKey && !event.altKey && ( event.which === 77 || event.which === 13 );
 	}
 
 	function isDOMAttrModifiedSupported () {
