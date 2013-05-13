@@ -1098,7 +1098,9 @@ var testFixtures = [
 			{ input: 'ai', output: 'ഐ', description: 'ai' },
 			{ input: 'lai', output: 'ലൈ', description: 'lai' },
 			{ input: 'N', output: 'ൺ', description: 'Malayalam N' },
-			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' }
+			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' },
+			{ input: 'r#', output: 'ൎ', description: 'Malayalam dot repha' },
+			{ input: 'ar#ththham', output: 'അൎത്ഥം', description: 'Malayalam word with dot repha' }
 		],
 		inputmethod: 'ml-transliteration'
 	},{
