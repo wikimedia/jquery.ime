@@ -5,6 +5,9 @@
 		this.$element = $( element );
 		// This needs to be delayed here since extending language list happens at DOM ready
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
+		// Load previous input methods from local storage
+		// It should probably take place somewhere else.
+		$.ime.preferences.loadLayoutHistory();
 		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
 		this.inputmethod = null;

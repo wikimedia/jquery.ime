@@ -195,6 +195,11 @@
 				e.stopPropagation();
 
 				return false;
+			} else if ( isToggleLayoutShortcut( e ) ) {
+				this.selectIM ( $.ime.preferences.getPreviousLayout() );
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
 			}
 
 			return true;
@@ -498,6 +503,17 @@
 		// 77 - The letter M, for Ctrl-M
 		// 13 - The Enter key
 		return event.ctrlKey && ( event.which === 77 || event.which === 13 );
+	}
+
+	/**
+	 * Check whether a keypress event corresponds to the toggle layout shortcut key
+	 *
+	 * @param event Event object
+	 * @return bool
+	 */
+	function isToggleLayoutShortcut ( event ) {
+		// 76 - The letter L, for Ctrl + L
+		return event.ctrlKey && ( event.which === 76 );
 	}
 
 	function isDOMAttrModifiedSupported () {
