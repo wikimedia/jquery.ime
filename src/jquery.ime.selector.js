@@ -271,7 +271,11 @@
 
 			if ( ime.getLanguage() === languageCode ) {
 				// nothing to do. It is same as the current language
-				return false;
+				// but check whether input method changed
+				if( ime.inputmethod &&
+					ime.inputmethod.id === $.ime.preferences.getIM( languageCode ) ) {
+					return false;
+				}
 			}
 
 			this.$menu.find( 'li.ime-lang' ).show();
