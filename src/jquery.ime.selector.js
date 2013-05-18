@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	var selectorTemplate, MutationObserver;
+
 	function IMESelector ( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
@@ -106,6 +108,7 @@
 
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
 				var t = $( e.target );
+
 				if ( t.hasClass( 'imeselector-toggle' ) ) {
 					imeselector.toggle();
 				}
@@ -179,7 +182,9 @@
 		 */
 		keydown: function ( e ) {
 			var ime = $( e.target ).data( 'ime' );
+
 			this.focus(); // shows the trigger in case it is hidden
+
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
 					this.disableIM();
@@ -204,9 +209,10 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			this.focus();  // shows the trigger in case it is hidden
 			var imeSelector = this,
 				position, top, left, room;
+
+			this.focus();  // shows the trigger in case it is hidden
 
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
@@ -227,16 +233,18 @@
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
 
-				this.$menu.css( 'top',
+				this.$menu
+					.addClass( 'position-top' )
+					.css( 'top',
 						- ( this.$menu.outerHeight() +
 						this.$imeSetting.outerHeight() )
-					)
-					.addClass( 'position-top' );
+					);
 			}
 
 			this.$element.parents().each( function() {
 				if ( $( this ).css( 'position' ) === 'fixed' ) {
 					imeSelector.$imeSetting.css( 'position', 'fixed' );
+
 					return false;
 				}
 			} );
@@ -246,7 +254,7 @@
 				left: left
 			} );
 
-			if ( parseInt( this.$menu.css( 'min-width' ) ) > left ) {
+			if ( parseInt( this.$menu.css( 'min-width' ), 10 ) > left ) {
 				// RTL element position fix
 				if ( this.$element.css( 'direction' ) === 'rtl' ) {
 					this.$menu
@@ -266,14 +274,14 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var language, ime;
-
-			ime = this.$element.data( 'ime' );
-			language = $.ime.languages[languageCode];
+			var ime,
+				language = $.ime.languages[languageCode];
 
 			if ( !language ) {
 				return false;
 			}
+
+			ime = this.$element.data( 'ime' );
 
 			if ( ime.getLanguage() === languageCode ) {
 				// nothing to do. It is same as the current language
@@ -330,6 +338,7 @@
 
 			if ( inputmethodId === 'system' ) {
 				this.disableIM();
+
 				return;
 			}
 
@@ -338,14 +347,13 @@
 			}
 
 			ime.load( inputmethodId, function () {
-				var name;
-
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
 				imeselector.hide();
 				ime.enable();
-				name = imeselector.inputmethod.name;
 				ime.setIM( inputmethodId );
-				imeselector.$imeSetting.find( 'a.ime-name' ).text( name );
+				imeselector.$imeSetting.find( 'a.ime-name' ).text(
+					imeselector.inputmethod.name
+				);
 
 				imeselector.position();
 
@@ -461,6 +469,7 @@
 		return this.each( function () {
 			var $this = $( this ),
 				data = $this.data( 'imeselector' );
+
 			if ( !data ) {
 				$this.data( 'imeselector', ( data = new IMESelector( this, options ) ) );
 			}
@@ -502,12 +511,13 @@
 			);
 	}
 
-	var selectorTemplate = '<div class="imeselector imeselector-toggle">'
-		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="ime-setting-caret imeselector-toggle"></b></div>',
+	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
+		'<a class="ime-name imeselector-toggle" href="#"></a>' +
+		'<b class="ime-setting-caret imeselector-toggle"></b></div>';
 
-		MutationObserver = window.MutationObserver || window.WebKitMutationObserver
-		|| window.MozMutationObserver;
+	MutationObserver = window.MutationObserver ||
+		window.WebKitMutationObserver ||
+		window.MozMutationObserver;
 
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
@@ -544,11 +554,7 @@
 
 	$.fn.attrchange = function ( callback ) {
 		if ( MutationObserver ) {
-			var observer,
-				options = {
-				subtree: false,
-				attributes: true
-			};
+			var observer;
 
 			observer = new MutationObserver( function ( mutations ) {
 				mutations.forEach( function ( e ) {
@@ -557,9 +563,11 @@
 			} );
 
 			return this.each( function () {
-				observer.observe( this, options );
+				observer.observe( this, {
+					subtree: false,
+					attributes: true
+				} );
 			} );
-
 		} else if ( isDOMAttrModifiedSupported() ) {
 			return this.on( 'DOMAttrModified', function ( e ) {
 				callback.call( this, e.attrName );
@@ -570,7 +578,4 @@
 			} );
 		}
 	};
-
-
 }( jQuery ) );
-
