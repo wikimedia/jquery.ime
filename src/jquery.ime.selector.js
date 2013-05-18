@@ -1,6 +1,7 @@
 ( function ( $ ) {
 	'use strict';
-
+	var index=0;	//variable used in keyboard navigation script
+	
 	function IMESelector ( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
@@ -169,6 +170,58 @@
 			$( window ).resize( function () {
 				imeselector.position();
 			});
+			
+			$(document).on( 'keydown.ime', $.proxy( this.navigation, this ) );
+			//mouse hover listener on language list
+			$(".ime-language-list li").hover(function () {
+				index=$(this).index();
+				imeselector.highlight(index);
+			});
+		},
+
+		/**
+		 * Keyboard Navigation in Language Selection List
+		 */
+		navigation: function ( e ) {
+			if ( this.$menu.hasClass( 'open' ) ) {
+				var list=$('.ime-language-list:visible');
+				var total=list.children('li').length;
+				switch(e.which){
+					case 38:this.resetTimer();
+							e.preventDefault();
+							if(index==0)
+								index=total-1;
+							else
+								index--;
+							this.highlight(index);
+							break;
+					
+					case 40:this.resetTimer();
+							e.preventDefault();
+							if(index==total-1)
+								index=0;
+							else
+								index++;
+							this.highlight(index);
+							break;
+					
+					case 13:e.preventDefault();
+							$($('.ime-language-list:visible li')[index]).trigger('click');
+							break;
+				}
+			}
+		},
+		
+		/**
+		 * AutoScroll Language list and highlight the language under selection
+		 */
+		highlight: function ( current ) {
+			var acco=parseInt($('.ime-language-list-wrapper').height()/$('.ime-language-list:visible li').first().height());
+			current=current-acco+1;
+			var offset=current*$('.ime-language-list:visible li').first().height();
+			$('.ime-language-list-wrapper').scrollTop(offset);
+			$('.ime-language-list:visible li.key-hover').removeClass('key-hover');
+			$($('.ime-language-list:visible li')[index]).addClass('key-hover');
 		},
 
 		/**

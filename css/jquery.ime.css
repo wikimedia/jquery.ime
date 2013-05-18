@@ -201,7 +201,7 @@ span.ime-disable-shortcut {
 	white-space: nowrap;
 }
 
-.imeselector-menu li > a:hover {
+.imeselector-menu li.key-hover > a , .imeselector-menu li > a:hover {
 	text-decoration: none;
 	color: #ffffff;
 	background-color: #5089e8;
