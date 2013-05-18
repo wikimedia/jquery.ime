@@ -211,12 +211,18 @@
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
 			left = position.left;
+
 			// RTL element position fix:
 			if ( this.$element.css( 'direction' ) === 'ltr' ) {
 				left = position.left + this.$element.outerWidth() -
 					this.$imeSetting.outerWidth();
 			}
-			room = $( window ).height() - top;
+
+			// While determining whether to place the selector above or below the input box,
+			// take into account the value of scrollTop to avoid the selector from always
+			// getting placed above the input box since window.height would be less than top
+			// if the page has been scrolled.
+			room = $( window ).height() + $( document ).scrollTop() - top;
 
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
