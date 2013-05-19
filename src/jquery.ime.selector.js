@@ -307,8 +307,9 @@
 			
 			// Try to match the language using already present text, if possible
 			if( this.matchLanguage() ){
-				var matched = this.matchLanguage();				
-				return matched[0];
+				var matched = this.matchLanguage();
+				this.prepareInputMethods(matched[0]);
+				return;
 			}
 			
 			return $.ime.preferences.getDefaultLanguage();
