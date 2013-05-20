@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	var selectorTemplate, MutationObserver;
+
 	function IMESelector ( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
@@ -62,7 +64,7 @@
 						'marginTop': '-20px'
 					}, 500, function () {
 						imeselector.$imeSetting.hide();
-						// Restore properties for next time it becomes visible:
+						// Restore properties for the next time it becomes visible:
 						imeselector.$imeSetting.css( 'opacity', 1 );
 						imeselector.$imeSetting.css( 'margin-top', 0 );
 					} );
@@ -81,12 +83,14 @@
 			this.$menu.addClass( 'open' );
 			this.stopTimer();
 			this.$imeSetting.show();
+
 			return false;
 		},
 
 		hide: function () {
 			this.$menu.removeClass( 'open' );
 			this.resetTimer();
+
 			return false;
 		},
 
@@ -106,6 +110,7 @@
 
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
 				var t = $( e.target );
+
 				if ( t.hasClass( 'imeselector-toggle' ) ) {
 					imeselector.toggle();
 				}
@@ -119,7 +124,8 @@
 			} );
 
 			imeselector.$imeSetting.mouseenter( function () {
-				// We don't want the selector to disappear while the user is trying to click it
+				// We don't want the selector to disappear
+				// while the user is trying to click it
 				imeselector.stopTimer();
 				imeselector.$imeSetting.addClass( 'onfocus' );
 			} ).mouseleave( function () {
@@ -129,7 +135,7 @@
 
 			imeselector.$menu.on( 'click.ime', 'li', function() {
 				imeselector.$element.focus();
-			});
+			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
@@ -155,7 +161,7 @@
 			} );
 
 			imeselector.$element.attrchange( function ( ) {
-				if( imeselector.$element.is( ':hidden') ) {
+				if ( imeselector.$element.is( ':hidden' ) ) {
 					imeselector.$imeSetting.hide();
 				}
 			} );
@@ -164,11 +170,11 @@
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
 
-			// Update IM selector position when window is resized
-			// or browser window is zoomed in or zoomed out
+			// Update IM selector position when the window is resized
+			// or the browser window is zoomed in or zoomed out
 			$( window ).resize( function () {
 				imeselector.position();
-			});
+			} );
 		},
 
 		/**
@@ -179,7 +185,9 @@
 		 */
 		keydown: function ( e ) {
 			var ime = $( e.target ).data( 'ime' );
+
 			this.focus(); // shows the trigger in case it is hidden
+
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
 					this.disableIM();
@@ -204,22 +212,23 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			this.focus();  // shows the trigger in case it is hidden
 			var imeSelector = this,
 				position, top, left, room;
+
+			this.focus(); // shows the trigger in case it is hidden
 
 			position = this.$element.offset();
 			top = position.top + this.$element.outerHeight();
 			left = position.left;
 
-			// RTL element position fix:
+			// RTL element position fix
 			if ( this.$element.css( 'direction' ) === 'ltr' ) {
 				left = position.left + this.$element.outerWidth() -
 					this.$imeSetting.outerWidth();
 			}
 
 			// While determining whether to place the selector above or below the input box,
-			// take into account the value of scrollTop to avoid the selector from always
+			// take into account the value of scrollTop, to avoid the selector from always
 			// getting placed above the input box since window.height would be less than top
 			// if the page has been scrolled.
 			room = $( window ).height() + $( document ).scrollTop() - top;
@@ -227,16 +236,18 @@
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
 
-				this.$menu.css( 'top',
+				this.$menu
+					.addClass( 'position-top' )
+					.css( 'top',
 						- ( this.$menu.outerHeight() +
 						this.$imeSetting.outerHeight() )
-					)
-					.addClass( 'position-top' );
+					);
 			}
 
 			this.$element.parents().each( function() {
 				if ( $( this ).css( 'position' ) === 'fixed' ) {
 					imeSelector.$imeSetting.css( 'position', 'fixed' );
+
 					return false;
 				}
 			} );
@@ -246,15 +257,15 @@
 				left: left
 			} );
 
-			if ( parseInt( this.$menu.css( 'min-width' ) ) > left ) {
+			if ( parseInt( this.$menu.css( 'min-width' ), 10 ) > left ) {
 				// RTL element position fix
 				if ( this.$element.css( 'direction' ) === 'rtl' ) {
 					this.$menu
-					.css( { left: 0 } )
+					.css( 'left', 0 )
 					.addClass( 'left' );
 				} else {
 					this.$menu
-					.css( { left: position.left } )
+					.css( 'left', position.left )
 					.addClass( 'right' );
 				}
 			}
@@ -266,20 +277,21 @@
 		 * @param languageCode
 		 */
 		selectLanguage: function ( languageCode ) {
-			var language, ime;
-
-			ime = this.$element.data( 'ime' );
-			language = $.ime.languages[languageCode];
+			var ime,
+				language = $.ime.languages[languageCode];
 
 			if ( !language ) {
 				return false;
 			}
 
+			ime = this.$element.data( 'ime' );
+
 			if ( ime.getLanguage() === languageCode ) {
-				// nothing to do. It is same as the current language
-				// but check whether input method changed
-				if( ime.inputmethod &&
-					ime.inputmethod.id === $.ime.preferences.getIM( languageCode ) ) {
+				// Nothing to do. It is same as the current language,
+				// but check whether the input method changed.
+				if ( ime.inputmethod &&
+					ime.inputmethod.id === $.ime.preferences.getIM( languageCode )
+				) {
 					return false;
 				}
 			}
@@ -301,15 +313,20 @@
 		 *
 		 */
 		decideLanguage : function () {
-			if( $.ime.preferences.getLanguage() ) {
-				// There has been an override by the user return the language selected by user
+			if ( $.ime.preferences.getLanguage() ) {
+				// There has been an override by the user,
+				// so return the language selected by user
 				return $.ime.preferences.getLanguage();
 			}
-			if ( this.$element.attr('lang') &&
-				$.ime.languages[this.$element.attr('lang')] ) {
-					return this.$element.attr('lang');
+
+			if ( this.$element.attr('lang' ) &&
+				$.ime.languages[ this.$element.attr( 'lang' ) ]
+			) {
+					return this.$element.attr( 'lang' );
 			}
-			// There is either no IMs for the given language attr or there is no lang attr at all.
+
+			// There is either no IMs for the given language attr
+			// or there is no lang attr at all.
 			return $.ime.preferences.getDefaultLanguage();
 		},
 
@@ -330,6 +347,7 @@
 
 			if ( inputmethodId === 'system' ) {
 				this.disableIM();
+
 				return;
 			}
 
@@ -338,18 +356,17 @@
 			}
 
 			ime.load( inputmethodId, function () {
-				var name;
-
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
 				imeselector.hide();
 				ime.enable();
-				name = imeselector.inputmethod.name;
 				ime.setIM( inputmethodId );
-				imeselector.$imeSetting.find( 'a.ime-name' ).text( name );
+				imeselector.$imeSetting.find( 'a.ime-name' ).text(
+					imeselector.inputmethod.name
+				);
 
 				imeselector.position();
 
-				// save this preference
+				// Save this preference
 				$.ime.preferences.save();
 			} );
 		},
@@ -365,7 +382,7 @@
 			this.hide();
 			this.position();
 
-			// save this preference
+			// Save this preference
 			$.ime.preferences.save();
 		},
 
@@ -382,8 +399,8 @@
 				languageCode,
 				language;
 
-			// Language list can be very long. So we use a container with
-			// overflow auto.
+			// Language list can be very long, so we use a container with
+			// overflow auto
 			$languageListWrapper = $( '<div class="ime-language-list-wrapper">' );
 			$languageList = $( '<ul class="ime-language-list">' );
 
@@ -461,6 +478,7 @@
 		return this.each( function () {
 			var $this = $( this ),
 				data = $this.data( 'imeselector' );
+
 			if ( !data ) {
 				$this.data( 'imeselector', ( data = new IMESelector( this, options ) ) );
 			}
@@ -502,12 +520,13 @@
 			);
 	}
 
-	var selectorTemplate = '<div class="imeselector imeselector-toggle">'
-		+ '<a class="ime-name imeselector-toggle" href="#"></a>'
-		+ '<b class="ime-setting-caret imeselector-toggle"></b></div>',
+	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
+		'<a class="ime-name imeselector-toggle" href="#"></a>' +
+		'<b class="ime-setting-caret imeselector-toggle"></b></div>';
 
-		MutationObserver = window.MutationObserver || window.WebKitMutationObserver
-		|| window.MozMutationObserver;
+	MutationObserver = window.MutationObserver ||
+		window.WebKitMutationObserver ||
+		window.MozMutationObserver;
 
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
@@ -544,11 +563,7 @@
 
 	$.fn.attrchange = function ( callback ) {
 		if ( MutationObserver ) {
-			var observer,
-				options = {
-				subtree: false,
-				attributes: true
-			};
+			var observer;
 
 			observer = new MutationObserver( function ( mutations ) {
 				mutations.forEach( function ( e ) {
@@ -557,9 +572,11 @@
 			} );
 
 			return this.each( function () {
-				observer.observe( this, options );
+				observer.observe( this, {
+					subtree: false,
+					attributes: true
+				} );
 			} );
-
 		} else if ( isDOMAttrModifiedSupported() ) {
 			return this.on( 'DOMAttrModified', function ( e ) {
 				callback.call( this, e.attrName );
@@ -570,7 +587,4 @@
 			} );
 		}
 	};
-
-
 }( jQuery ) );
-
