@@ -9,6 +9,7 @@
 		this.$menu = null;
 		this.inputmethod = null;
 		this.timer = null;
+		this.ctrlKeyPressed = false;
 		this.init();
 		this.listen();
 	}
@@ -133,11 +134,13 @@
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
+				$.ime.preferences.saveLayoutHistory( $( this ).data( 'ime-inputmethod' ) );
 				e.stopPropagation();
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function ( e ) {
 				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
+				$.ime.preferences.saveLayoutHistory( $.ime.preferences.getIM( $( this ).attr( 'lang' ) ) );
 				e.stopPropagation();
 				e.preventDefault();
 			} );
@@ -163,6 +166,7 @@
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
+			imeselector.$element.on( 'keyup.ime', $.proxy( this.keyup, this ) );
 
 			// Update IM selector position when window is resized
 			// or browser window is zoomed in or zoomed out
@@ -196,13 +200,31 @@
 
 				return false;
 			} else if ( isToggleLayoutShortcut( e ) ) {
-				this.selectIM ( $.ime.preferences.getPreviousLayout() );
+				this.ctrlKeyPressed = true;
+				this.selectIM( $.ime.preferences.getPreviousLayout() );
 				e.preventDefault();
 				e.stopPropagation();
 				return false;
 			}
 
 			return true;
+		},
+
+		/**
+		 * Keyup event handler. Handles  keyup events for shortcut key
+		 *
+		 * @context {HTMLElement}
+		 * @param {jQuery.Event} e
+		 */
+		keyup: function ( e ) {
+			// e.ctrlKey is not working on keyup, need to look into it
+			// using e.which until then
+			if ( this.ctrlKeyPressed && e.which === 17 ) {
+				this.ctrlKeyPressed = false;
+				if ( this.inputmethod !== null ) {
+					$.ime.preferences.saveLayoutHistory( this.inputmethod.id );
+				}
+			}
 		},
 
 		/**
@@ -512,8 +534,8 @@
 	 * @return bool
 	 */
 	function isToggleLayoutShortcut ( event ) {
-		// 76 - The letter L, for Ctrl + L
-		return event.ctrlKey && ( event.which === 76 );
+		// 81 - The letter Q, for Ctrl + Q
+		return event.ctrlKey && ( event.which === 81 );
 	}
 
 	function isDOMAttrModifiedSupported () {
