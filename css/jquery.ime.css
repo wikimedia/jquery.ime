@@ -63,10 +63,6 @@ span.ime-disable-shortcut {
 	padding-right: 4px;
 }
 
-.ime-disable-link:hover span {
-	color: #eee;
-}
-
 .ime-list-title,
 .ime-lang-title {
 	color: #39d;
