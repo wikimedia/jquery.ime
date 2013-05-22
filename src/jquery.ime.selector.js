@@ -114,6 +114,7 @@
 				if ( t.hasClass( 'imeselector-toggle' ) ) {
 					imeselector.toggle();
 				}
+				return false;
 			} );
 
 			imeselector.$element.on( 'blur.ime', function () {
@@ -135,23 +136,22 @@
 
 			imeselector.$menu.on( 'click.ime', 'li', function() {
 				imeselector.$element.focus();
+				return false;
 			} );
 
-			imeselector.$menu.on( 'click.ime', 'li.ime-im', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'li.ime-im', function () {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
-				e.stopPropagation();
+				return false;
 			} );
 
-			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function () {
 				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
-				e.stopPropagation();
-				e.preventDefault();
+				return false;
 			} );
 
-			imeselector.$menu.on( 'click.ime', 'div.ime-disable', function ( e ) {
+			imeselector.$menu.on( 'click.ime', 'div.ime-disable', function () {
 				imeselector.disableIM();
-				e.stopPropagation();
-				e.preventDefault();
+				return false;
 			} );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
