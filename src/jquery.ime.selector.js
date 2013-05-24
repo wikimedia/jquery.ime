@@ -340,6 +340,10 @@
 			var imeselector = this,
 				ime;
 
+			if ( !inputmethodId ) {
+				return;
+			}
+
 			this.$menu.find( '.checked' ).removeClass( 'checked' );
 			this.$menu.find( 'li.ime-disable' ).removeClass( 'checked' );
 			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
@@ -349,10 +353,6 @@
 			if ( inputmethodId === 'system' ) {
 				this.disableIM();
 
-				return;
-			}
-
-			if ( !inputmethodId ) {
 				return;
 			}
 
