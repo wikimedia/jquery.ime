@@ -284,9 +284,9 @@
 			name: 'KGP/Nudi/KP Rao',
 			source: 'rules/kn/kn-kgp.js'
 		},
-		'kok-inscript2': {
+		'gom-inscript2': {
 			name: 'इनस्क्रिप्ट २',
-			source: 'rules/kok/kok-inscript2.js'
+			source: 'rules/gom/gom-inscript2.js'
 		},
 		'ks-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -593,7 +593,7 @@
 		},
 		'gom': {
 			autonym: 'कोंकणी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
 		},
 		'gu': {
 			autonym: 'ગુજરાતી',
@@ -654,10 +654,6 @@
 		'kab': {
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
-		},
-		'kok': {
-			autonym: 'कोंकणी',
-			inputmethods: [ 'kok-inscript2' ]
 		},
 		'lbe': {
 			autonym: 'лакку',
