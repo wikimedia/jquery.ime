@@ -488,6 +488,10 @@
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
 		},
+		'udm-alt': {
+			name: 'Удмурт ALT',
+			source: 'rules/udm/udm-alt.js'
+		},
 		'uk-kbd': {
 			name: 'кбд',
 			source: 'rules/uk/uk-kbd.js'
@@ -794,6 +798,10 @@
 		'tzm': {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
 			inputmethods: [ 'ber-tfng' ]
+		},
+		'udm': {
+			autonym: 'удмурт',
+			inputmethods: [ 'udm-alt' ]
 		},
 		'uk': {
 			autonym: 'Українська',

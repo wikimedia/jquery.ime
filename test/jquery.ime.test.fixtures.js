@@ -1104,6 +1104,31 @@ var testFixtures = [
 		],
 		inputmethod: 'ml-transliteration'
 	},{
+		description: 'Udmurt ALT test',
+		tests: [
+			{ input: 'ц', output: 'ӵ', description: 'Udmurt letters, ц > ӵ' },
+			{ input: 'Ц', output: 'Ӵ', description: 'Udmurt letters, Ц > Ӵ' },
+			{ input: 'щ', output: 'ӥ', description: 'Udmurt letters, щ > ӥ' },
+			{ input: 'Щ', output: 'Ӥ', description: 'Udmurt letters, Щ > Ӥ' },
+			{ input: 'х', output: 'ӟ', description: 'Udmurt letters, х > ӟ' },
+			{ input: 'Х', output: 'Ӟ', description: 'Udmurt letters, Х > Ӟ' },
+			{ input: 'ф', output: 'ӝ', description: 'Udmurt letters, ф > ӝ' },
+			{ input: 'Ф', output: 'Ӝ', description: 'Udmurt letters, Ф > Ӝ' },
+			{ input: [ [ 'ц', true ] ], output: 'ц', description: 'Udmurt letters, Alt-ц' },
+			{ input: [ [ 'Ц', true ] ], output: 'Ц', description: 'Udmurt letters, Alt-Ц' },
+			{ input: [ [ 'щ', true ] ], output: 'щ', description: 'Udmurt letters, Alt-щ' },
+			{ input: [ [ 'Щ', true ] ], output: 'Щ', description: 'Udmurt letters, Alt-Щ' },
+			{ input: [ [ 'х', true ] ], output: 'х', description: 'Udmurt letters, Alt-х' },
+			{ input: [ [ 'Х', true ] ], output: 'Х', description: 'Udmurt letters, Alt-Х' },
+			{ input: [ [ 'ф', true ] ], output: 'ф', description: 'Udmurt letters, Alt-ф' },
+			{ input: [ [ 'Ф', true ] ], output: 'Ф', description: 'Udmurt letters, Alt-Ф' },
+			{ input: 'ё', output: 'ё', description: 'Udmurt letters, ё does not change' },
+			{ input: 'Ё', output: 'Ё', description: 'Udmurt letters, Ё does not change' },
+			{ input: [ [ 'ё', true ] ], output: 'ӧ', description: 'Udmurt letters, Alt-ё -> ӧ' },
+			{ input: [ [ 'Ё', true ] ], output: 'Ӧ', description: 'Udmurt letters, Alt-Ё -> Ӧ' }
+		],
+		inputmethod: 'udm-alt'
+	},{
 		description: 'Oriya InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
