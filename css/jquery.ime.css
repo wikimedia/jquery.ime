@@ -6,7 +6,7 @@
 	background-image: -moz-linear-gradient(transparent, transparent), url('../images/ime-active.svg');
 	background-image: linear-gradient(transparent, transparent), url('../images/ime-active.svg');
 	background-color: #fff;
-	background-position: 3px;
+	background-position: left 3px center;
 	cursor: pointer;
 	height: 15px;
 	font-size: small;
