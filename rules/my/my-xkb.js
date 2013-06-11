@@ -3,7 +3,7 @@
 
 	var myXkb = {
 		id: 'my-xkb',
-		name: 'Myanmar xkb',
+		name: 'မြန်မာဘာသာ xkb',
 		description: 'Myanmar xkb keyboard layout',
 		date: '2013-02-12',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -207,4 +207,3 @@
 	$.ime.register( myXkb );
 
 }( jQuery ) );
-

@@ -329,11 +329,11 @@
 			source: 'rules/mr/mr-phonetic.js'
 		},
 		'my-kbd': {
-			name: 'Burmese kbd',
+			name: 'မြန်မာဘာသာ kbd',
 			source: 'rules/my/my-kbd.js'
 		},
 		'my-xkb': {
-				name: 'Burmese xkb',
+				name: 'မြန်မာဘာသာ xkb',
 				source: 'rules/my/my-xkb.js'
 		},
 		'ne-inscript': {

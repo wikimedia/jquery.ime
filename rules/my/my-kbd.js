@@ -3,7 +3,7 @@
 
 	var myKbd = {
 		id: 'my-kbd',
-		name: 'Myanmar kbd',
+		name: 'မြန်မာဘာသာ kbd',
 		description: 'Myanmar kbd keyboard layout',
 		date: '2013-02-12',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -89,4 +89,3 @@
 	$.ime.register( myKbd );
 
 }( jQuery ) );
-
