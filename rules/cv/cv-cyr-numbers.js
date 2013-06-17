@@ -7,7 +7,7 @@
 
 ( function ( $ ) {
 	'use strict';
-    
+
 	var cv = {
 		id: 'cv-cyr-numbers',
 		name: 'Чăвашла (Цифрили)',

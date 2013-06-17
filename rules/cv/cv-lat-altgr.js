@@ -5,7 +5,7 @@
 
 ( function ( $ ) {
 	'use strict';
-    
+
 	var cv = {
 		id: 'cv-lat-altgr',
 		name: 'Căvašla - Mercen',

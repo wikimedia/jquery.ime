@@ -1,4 +1,4 @@
-// This Chuvash keyboard layout is the "official" layout 
+// This Chuvash keyboard layout is the "official" layout
 // in chuvash.org
 // This implementation is based on ru-jcuken ime rule
 // which supports both transliteration mode and the native jcuken
@@ -11,7 +11,7 @@
 
 ( function ( $ ) {
 	'use strict';
-    
+
 	var cv = {
 		id: 'cv-cyr-altgr',
 		name: 'Чăвашла (AltGr)',
