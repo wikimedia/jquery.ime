@@ -39,7 +39,7 @@
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
 			} else {
-				patterns = this.inputmethod.patterns;
+				patterns = this.inputmethod.patterns || [];
 			}
 
 			if ( $.isFunction( patterns ) ) {
