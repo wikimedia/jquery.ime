@@ -71,6 +71,92 @@ var testFixtures = [
 		],
 		inputmethod: 'bn-probhat'
 	},{
+		description: 'Chuvash (AltGr) with jcuken',
+		tests: [
+			{ input: [ [ 'а', true ] ], output: 'ӑ', description: 'Alt + a (Cyrillic) -> a breve (Cyrillic), lower case' },
+			{ input: [ [ 'А', true ] ], output: 'Ӑ', description: 'Alt + А (Cyrillic) -> A breve (Cyrillic), upper case' },
+			{ input: [ [ 'е', true ] ], output: 'ӗ', description: 'Alt + е (Cyrillic) -> e breve (Cyrillic), lower case' },
+			{ input: [ [ 'Е', true ] ], output: 'Ӗ', description: 'Alt + Е (Cyrillic) -> E breve (Cyrillic), upper case' },
+			{ input: [ [ 'с', true ] ], output: 'ҫ', description: 'Alt + с (Cyrillic) -> с cedilla (Cyrillic), lower case' },
+			{ input: [ [ 'С', true ] ], output: 'Ҫ', description: 'Alt + С (Cyrillic) -> C cedilla (Cyrillic), upper case' },
+			{ input: [ [ 'у', true ] ], output: 'ӳ', description: 'Alt + у (Cyrillic) -> ue  (Cyrillic), lower case' },
+			{ input: [ [ 'У', true ] ], output: 'Ӳ', description: 'Alt + У (Cyrillic) -> Ue (Cyrillic), upper case' }
+		],
+		inputmethod: 'cv-cyr-altgr'
+	},{
+		description: 'Chuvash (AltGr) with qwerty (en-US)',
+		tests: [
+			{ input: [ [ 'f', true ] ], output: 'ӑ', description: 'Alt + f -> a breve (Cyrillic), lower case' },
+			{ input: [ [ 'F', true ] ], output: 'Ӑ', description: 'Alt + F -> A breve (Cyrillic), upper case' },
+			{ input: [ [ 't', true ] ], output: 'ӗ', description: 'Alt + t -> e breve (Cyrillic), lower case' },
+			{ input: [ [ 'T', true ] ], output: 'Ӗ', description: 'Alt + T -> E breve (Cyrillic), upper case' },
+			{ input: [ [ 'c', true ] ], output: 'ҫ', description: 'Alt + c (Latin) -> с cedilla (Cyrillic), lower case' },
+			{ input: [ [ 'C', true ] ], output: 'Ҫ', description: 'Alt + C (Latin) -> C cedilla (Cyrillic), upper case' },
+			{ input: [ [ 'e', true ] ], output: 'ӳ', description: 'Alt + e (Latin) -> ue  (Cyrillic), lower case' },
+			{ input: [ [ 'E', true ] ], output: 'Ӳ', description: 'Alt + E (Latin) -> Ue (Cyrillic), upper case' }
+		],
+		inputmethod: 'cv-cyr-altgr'
+	},{
+		description: 'Chuvash (Mercen): CVLat with qwerty (en-US)',
+		tests: [
+			{ input: [ [ 'a', true ] ], output: 'ă', description: 'Alt + a -> a breve, lower case' },
+			{ input: [ [ 'A', true ] ], output: 'Ă', description: 'Alt + A -> A breve, upper case' },
+			{ input: [ [ 's', true ] ], output: 'ş', description: 'Alt + s -> s cedilla, lower case' },
+			{ input: [ [ 'S', true ] ], output: 'Ş', description: 'Alt + S -> S cedilla, upper case' },
+			{ input: [ [ 'd', true ] ], output: 'š', description: 'Alt + d -> s caron, lower case' },
+			{ input: [ [ 'D', true ] ], output: 'Š', description: 'Alt + D -> S caron , upper case' },
+			{ input: [ [ 'e', true ] ], output: 'ĕ', description: 'Alt + e -> e breve, lower case' },
+			{ input: [ [ 'E', true ] ], output: 'Ĕ', description: 'Alt + E -> E breve, upper case' },
+			{ input: [ [ 'u', true ] ], output: 'ü', description: 'Alt + u -> ue, lower case' },
+			{ input: [ [ 'U', true ] ], output: 'Ü', description: 'Alt + U -> Ue, upper case' },
+			{ input: [ [ 'w', true ] ], output: 'ü', description: 'Alt + w -> ue, lower case' },
+			{ input: [ [ 'W', true ] ], output: 'Ü', description: 'Alt + W -> Ue, upper case' }
+		],
+		inputmethod: 'cv-lat-altgr'
+	},{
+		description: 'Chuvash (Number based) with qwerty (en-US)',
+		tests: [
+			{ input: '1', output: '?', description: '1 -> ?' },
+			{ input: '2', output: '\'', description: '2 -> \', simple quote' },
+			{ input: '@', output: '"', description: '@ (shift + 2) -> ", double quote' },
+			{ input: '3', output: 'ҫ', description: '3 -> c cedilla (Cyrillic), lower case' },
+			{ input: '#', output: 'Ҫ', description: '# (shift + 3) -> C cedilla (Cyrillic), upper case case' },
+			{ input: '4', output: '|', description: '4 -> | (for Wikipedia edits)' },
+			{ input: '$', output: ';', description: '$ (shift + 4) -> semicolon (;) as in standard Russian' },
+			{ input: '5', output: 'ӳ', description: '5 -> ue (Cyrillic), upper case' },
+			{ input: '%', output: 'Ӳ', description: '% (shift + 5) -> Ue  (Cyrillic), upper case' },
+			{ input: '6', output: '—', description: '6 -> — (em dash)' },
+			{ input: '^', output: ':', description: '^ (shift + 6) -> : (colon) as in standard Russian' },
+			{ input: '7', output: 'ӗ', description: '7 -> e breve (Cyrillic), lower case' },
+			{ input: '&', output: 'Ӗ', description: '& (shift + 7) -> E breve (Cyrillic), upper case' },
+			{ input: '8', output: 'ӑ', description: '8 -> a breve (Cyrillic), lower case' },
+			{ input: '*', output: 'Ӑ', description: '* (shift + 8) -> A breve (Cyrillic), upper case' },
+			{ input: '9', output: '[', description: '9 -> [ (wiki format links)' },
+			{ input: '0', output: ']', description: '0 -> [ (wiki format links)' }
+		],
+		inputmethod: 'cv-cyr-numbers'
+	},{
+		description: 'Chuvash (Number based) with jcuken',
+		tests: [
+			{ input: '1', output: '?', description: '1 -> ?' },
+			{ input: '2', output: '\'', description: '2 -> \', simple quote' },
+			{ input: '3', output: 'ҫ', description: '3 -> c cedilla (Cyrillic), lower case' },
+			{ input: '№', output: 'Ҫ', description: '№ (shift + 3) -> C cedilla (Cyrillic), upper case case' },
+			{ input: '4', output: '|', description: '4 -> | (for Wikipedia edits)' },
+			{ input: '5', output: 'ӳ', description: '5 -> ue (Cyrillic), upper case' },
+			{ input: '%', output: 'Ӳ', description: '% (shift + 5) -> Ue  (Cyrillic), upper case' },
+			{ input: '6', output: '—', description: '6 -> — (em dash)' },
+			{ input: '7', output: 'ӗ', description: '7 -> e breve (Cyrillic), lower case' },
+			// For now ? doesn't work. I should have context and know if Shift is pressed. 
+                        // It only appears in jcuken scenario instead of E breve you'll get a comma
+			// { input: '?', output: 'Ӗ', description: '? (shift + 7) -> E breve (Cyrillic), upper case' },
+			{ input: '8', output: 'ӑ', description: '8 -> a breve (Cyrillic), lower case' },
+			{ input: '*', output: 'Ӑ', description: '* (shift + 8) -> A breve (Cyrillic), upper case' },
+			{ input: '9', output: '[', description: '9 -> [ (wiki format links)' },
+			{ input: '0', output: ']', description: '0 -> [ (wiki format links)' }
+		],
+		inputmethod: 'cv-cyr-numbers'
+	},{
 		description: 'Bengali Avro layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Avro - ka' },
