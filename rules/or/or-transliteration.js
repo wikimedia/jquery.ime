@@ -4,7 +4,7 @@
 	var orTransliteration = {
 		id: 'or-transliteration',
 		name: 'Odia Transliteration',
-		description: 'Odiya transliteration',
+		description: 'Odia transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V and Subhashish Panigrahi',
