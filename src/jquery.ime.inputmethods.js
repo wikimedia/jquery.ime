@@ -35,7 +35,7 @@
 			source: 'rules/as/as-transliteration.js'
 		},
 		'be-kbd': {
-			name: 'кбд',
+			name: 'Стандартная',
 			source: 'rules/be/be-kbd.js'
 		},
 		'be-latin': {
@@ -43,7 +43,7 @@
 			source: 'rules/be/be-latin.js'
 		},
 		'be-transliteration': {
-			name: 'Транслітератыён',
+			name: 'Транслітэрацыя',
 			source: 'rules/be/be-transliteration.js'
 		},
 		'ber-tfng': {
@@ -225,15 +225,15 @@
 			source: 'rules/de/de.js'
 		},
 		'el-kbd': {
-			name: 'κπδ',
+			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
 		},
 		'he-standard-2012': {
-			name: 'חברו 2012 ( פרום אנגליש )',
+			name: 'עברית עם ניקוד על בסיס אנגלית',
 			source: 'rules/he/he-standard-2012.js'
 		},
 		'he-standard-2012-extonly': {
-			name: 'חברו 2012',
+			name: 'עברית עם ניקוד',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
 		'he-kbd': {
@@ -245,7 +245,7 @@
 			source: 'rules/hr/hr-kbd.js'
 		},
 		'hy-kbd': {
-			name: 'կբդ',
+			name: 'Ստանդարտ ստեղնաշար',
 			source: 'rules/hy/hy-kbd.js'
 		},
 		'gu-inscript': {
@@ -269,15 +269,15 @@
 			source: 'rules/ka/ka-transliteration.js'
 		},
 		'ka-kbd': {
-			name: 'კბდ',
+			name: 'სტანდარტული კლავიატურის',
 			source: 'rules/ka/ka-kbd.js'
 		},
 		'kk-arabic': {
-			name: 'كذاك أرابيك ',
+			name: 'Kazakh Arabic transliteration',
 			source: 'rules/kk/kk-arabic.js'
 		},
 		'kk-kbd': {
-			name: 'лив',
+			name: 'Кирил',
 			source: 'rules/kk/kk-kbd.js'
 		},
 		'kn-inscript': {
@@ -305,7 +305,7 @@
 			source: 'rules/ks/ks-inscript.js'
 		},
 		'ks-kbd': {
-			name: 'kbd',
+			name: 'Kashmiri Arabic',
 			source: 'rules/ks/ks-kbd.js'
 		},
 		'lo-kbd': {
@@ -345,8 +345,8 @@
 			source: 'rules/my/my-kbd.js'
 		},
 		'my-xkb': {
-				name: 'မြန်မာဘာသာ xkb',
-				source: 'rules/my/my-xkb.js'
+			name: 'မြန်မာဘာသာ xkb',
+			source: 'rules/my/my-xkb.js'
 		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -405,11 +405,11 @@
 			source: 'rules/se/se-normforms.js'
 		},
 		'sk-kbd': {
-			name: 'Slovak kbd',
+			name: 'Štandardná',
 			source: 'rules/sk/sk-kbd.js'
 		},
 		'sr-kbd': {
-			name: 'кбд',
+			name: 'Стандардна',
 			source: 'rules/sr/sr-kbd.js'
 		},
 		'te-inscript': {
