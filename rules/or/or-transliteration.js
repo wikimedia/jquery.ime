@@ -3,7 +3,7 @@
 
 	var orTransliteration = {
 		id: 'or-transliteration',
-		name: 'Odiya Transliteration',
+		name: 'Odia Transliteration',
 		description: 'Odiya transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
