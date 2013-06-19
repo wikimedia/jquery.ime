@@ -147,7 +147,7 @@ var testFixtures = [
 			{ input: '%', output: 'Ӳ', description: '% (shift + 5) -> Ue  (Cyrillic), upper case' },
 			{ input: '6', output: '—', description: '6 -> — (em dash)' },
 			{ input: '7', output: 'ӗ', description: '7 -> e breve (Cyrillic), lower case' },
-			// For now ? doesn't work. I should have context and know if Shift is pressed. 
+			// For now ? doesn't work. I should have context and know if Shift is pressed.
                         // It only appears in jcuken scenario instead of E breve you'll get a comma
 			// { input: '?', output: 'Ӗ', description: '? (shift + 7) -> E breve (Cyrillic), upper case' },
 			{ input: '8', output: 'ӑ', description: '8 -> a breve (Cyrillic), lower case' },
@@ -1502,6 +1502,30 @@ var testFixtures = [
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
 		],
 		inputmethod: 'te-transliteration'
+	},{
+		description: 'Uzbek kbd keyboard test',
+		tests: [
+			{ input: '.', output: 'ю', description: 'Uzbek kbd - . -> ю' }
+		],
+		inputmethod: 'uz-kbd'
+	},{
+		description: 'Belarusian kbd keyboard test',
+		tests: [
+			{ input: '.', output: 'ю', description: 'Belarusian kbd - . -> ю' }
+		],
+		inputmethod: 'be-kbd'
+	},{
+		description: 'Ukrainian kbd keyboard test',
+		tests: [
+			{ input: '.', output: 'ю', description: 'Ukrainian kbd - . -> ю' }
+		],
+		inputmethod: 'uk-kbd'
+	},{
+		description: 'Russian kbd keyboard test',
+		tests: [
+			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }
+		],
+		inputmethod: 'ru-kbd'
 	},{
 		description: 'Sanskrit transliteration test',
 		tests: [

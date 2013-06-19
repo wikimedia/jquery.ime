@@ -99,4 +99,3 @@
 	$.ime.register( ukKbd );
 
 }( jQuery ) );
-
