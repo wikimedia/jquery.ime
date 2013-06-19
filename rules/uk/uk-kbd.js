@@ -3,7 +3,7 @@
 
 	var ukKbd = {
 		id: 'uk-kbd',
-		name: 'Ukrarian kbd',
+		name: 'Українська',
 		description: 'Ukrainian kbd keyboard layout',
 		date: '2013-02-12',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -44,7 +44,7 @@
 			['n', 'т'],
 			['m', 'ь'],
 			[',', 'б'],
-			['.', 'ю'],
+			['\\.', 'ю'],
 			['/', '.'],
 			['\\!', '!'],
 			['\\@', '"'],
