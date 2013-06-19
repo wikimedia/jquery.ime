@@ -61,7 +61,7 @@
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
 			selector.selectLanguage( 'hi' );
-
+			selector.selectIM( 'hi-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
 				'Hindi inputmethod is Hindi Transliteration' );
 			QUnit.start();
@@ -72,6 +72,7 @@
 		QUnit.stop();
 		textareaIME.load( 'ta-transliteration', function () {
 			selector.selectLanguage( 'ta' );
+			selector.selectIM( 'ta-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration',
 				'Tamil inputmethod is defaulted to Tamil Transliteration' );
 			QUnit.start();
@@ -88,14 +89,9 @@
 
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'Selector is not active' );
-		QUnit.stop();
-		textareaIME.load( 'kn-transliteration', function () {
-			selector.selectLanguage( 'kn' );
-
-			assert.strictEqual( textareaIME.getIM().id, 'kn-transliteration',
-				'Default inputmethod for Kannada is Kannada Transliteration' );
-			QUnit.start();
-		} );
+		selector.selectLanguage( 'kn' );
+		assert.strictEqual( textareaIME.getIM(), null,
+			'Default inputmethod for Kannada is system' );
 
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration', function () {
@@ -110,7 +106,7 @@
 		} );
 
 		// Negative test: trying to load an IME with a broken URL
-		nonBrokenImeName = 'ml-transliteration';
+		nonBrokenImeName = 'system';
 		brokenImeName = 'ml-inscript';
 		saveBrokenImeSource = $.ime.sources[brokenImeName].source;
 		$.ime.sources[brokenImeName].source = 'This source is wrong';

@@ -61,9 +61,7 @@
 			if ( !this.registry.imes ) {
 				this.registry.imes = {};
 			}
-			return this.registry.imes[language] ||
-				( $.ime.languages[language] &&
-					$.ime.languages[language].inputmethods[0] );
+			return this.registry.imes[language] || 'system';
 		},
 
 		save: function () {
