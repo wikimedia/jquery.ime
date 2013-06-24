@@ -372,7 +372,7 @@ var testFixtures = [
 		],
 		inputmethod: 'jv-transliteration'
 	},{
-		description : 'Kannada KGP test',
+		description: 'Kannada KGP test',
 		tests: [
 			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
 			{ input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
@@ -402,7 +402,7 @@ var testFixtures = [
 		],
 		inputmethod: 'kn-kgp'
 	},{
-		description : 'Kannada Transliteration test',
+		description: 'Kannada Transliteration test',
 		tests: [
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' },
 			{ input: 'W', output: 'ಔ', description: 'W for ಔ in Kannada transliteration' },
@@ -1526,6 +1526,15 @@ var testFixtures = [
 			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }
 		],
 		inputmethod: 'ru-kbd'
+	},{
+		description: 'Romanized input method for Sanskrit test',
+		tests: [
+			{ input: 'aa', output: 'ā', description: 'Sanskrit transliteration - aa -> ā' },
+			{ input: '^a', output: 'â', description: 'Sanskrit transliteration - aa -> â' },
+			{ input: '.N', output: 'Ṇ', description: 'Sanskrit transliteration - .N -> Ṇ' },
+			{ input: 'ḶL', output: 'Ḹ', description: 'Sanskrit transliteration - ḶL -> Ḹ' }
+		],
+		inputmethod: 'sa-iast'
 	},{
 		description: 'Sanskrit transliteration test',
 		tests: [
