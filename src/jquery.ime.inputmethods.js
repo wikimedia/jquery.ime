@@ -289,7 +289,7 @@
 			source: 'rules/kn/kn-inscript2.js'
 		},
 		'kn-transliteration': {
-			name: 'எழுத்துப்பெயர்ப்பு',
+			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
 		'kn-kgp': {
