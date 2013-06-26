@@ -244,9 +244,10 @@
 
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
-				menutop = his.$menu.outerHeight() +
-					this.$imeSetting.outerHeight()
-				// Flip the menu to top if menu can fit in the space there.
+				menutop = this.$menu.outerHeight() +
+					this.$imeSetting.outerHeight();
+
+				// Flip the menu to the top only if it can fit in the space there
 				if ( menutop < top ) {
 					this.$menu
 						.addClass( 'position-top' )
