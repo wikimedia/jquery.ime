@@ -222,7 +222,7 @@
 		 */
 		position: function () {
 			var imeSelector = this,
-				position, top, left, room;
+				menutop, position, top, left, room;
 
 			this.focus(); // shows the trigger in case it is hidden
 
@@ -244,13 +244,14 @@
 
 			if ( room < this.$imeSetting.outerHeight() ) {
 				top = position.top - this.$imeSetting.outerHeight();
-
-				this.$menu
-					.addClass( 'position-top' )
-					.css( 'top',
-						- ( this.$menu.outerHeight() +
-						this.$imeSetting.outerHeight() )
-					);
+				menutop = his.$menu.outerHeight() +
+					this.$imeSetting.outerHeight()
+				// Flip the menu to top if menu can fit in the space there.
+				if ( menutop < top ) {
+					this.$menu
+						.addClass( 'position-top' )
+						.css( 'top', -menutop );
+				}
 			}
 
 			this.$element.parents().each( function() {
