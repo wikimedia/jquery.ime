@@ -683,6 +683,10 @@
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
+		'ku': {
+			autonym: 'Kurdish',
+			inputmethods: [ 'ku-h', 'ku-tr' ]
+		},
 		'lbe': {
 			autonym: 'лакку',
 			inputmethods: [ 'cyrl-palochka' ]
