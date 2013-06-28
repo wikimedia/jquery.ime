@@ -7,6 +7,7 @@
 <meta name="author" content="Santhosh Thottingal" />
 <link href="../css/jquery.ime.css" rel="stylesheet" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+<script src="../src/rangy/rangy-core.js"></script>
 <script src="../src/jquery.ime.js"></script>
 <script src="../src/jquery.ime.selector.js"></script>
 <script src="../src/jquery.ime.preferences.js"></script>
@@ -15,7 +16,7 @@
 <link href="demo.css" rel="stylesheet" />
 <script>
 	$( document ).ready( function () {
-		$( 'input,textarea' ).ime();
+		$( 'input,textarea, [contenteditable]' ).ime();
 	} );
 </script>
 </head>
@@ -31,9 +32,9 @@
 		<div>
 			<textarea></textarea>
 		</div>
-
+		<div contenteditable=true lang=ml></div>
 		<footer>
-			<p>&copy; Copyright by Santhosh Thottingal</p>
+			<p>(♥) Copyheart by Santhosh Thottingal</p>
 		</footer>
 	</div>
 </body>

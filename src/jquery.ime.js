@@ -329,6 +329,10 @@
 			newLines,
 			endRange;
 
+		if ( $element.attr( 'contenteditable' ) ) {
+			return getDivCaretPosition( $element );
+		}
+
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
 			end = el.selectionEnd;
@@ -372,18 +376,60 @@
 		return [ start, end ];
 	}
 
+	function getDivCaretPosition( $element ) {
+		var element = $element.get( 0 ),
+			charIndex = 0,
+			start = 0,
+			end = 0,
+			foundStart = false,
+			stop = {},
+			sel = rangy.getSelection(),
+			range;
+
+		function traverseTextNodes( node, range) {
+			if ( node.nodeType === 3 ) {
+				if ( !foundStart && node === range.startContainer ) {
+					start = charIndex + range.startOffset;
+					foundStart = true;
+				}
+				if ( foundStart && node === range.endContainer ) {
+					end = charIndex + range.endOffset;
+					throw stop;
+				}
+				charIndex += node.length;
+			} else {
+				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+					traverseTextNodes( node.childNodes[i], range );
+				}
+			}
+		}
+
+		if ( sel.rangeCount ) {
+			try {
+				traverseTextNodes( element, sel.getRangeAt(0) );
+			} catch (ex) {
+				if ( ex != stop ) {
+					throw ex;
+				}
+			}
+		}
+
+		return [start, end];
+	}
+
 	/**
 	 * Helper function to get an IE TextRange object for an element
 	 */
-	function rangeForElementIE( e ) {
-		if ( e.nodeName.toLowerCase() === 'input' ) {
-			return e.createTextRange();
-		} else {
-			var sel = document.body.createTextRange();
+	function rangeForElementIE( element ) {
+		var selection;
 
-			sel.moveToElementText( e );
-			return sel;
+		if ( element.nodeName.toLowerCase() === 'input' ) {
+			selection = element.createTextRange();
+		} else {
+			selection = document.body.createTextRange();
+			selection.moveToElementText( element );
 		}
+		return selection;
 	}
 
 	function replaceText( $element, replacement, start, end ) {
@@ -392,6 +438,18 @@
 			length,
 			newLines,
 			scrollTop;
+
+		if ( $element.attr( 'contenteditable' ) ) {
+			// Replace the text in the selection part with translterated text.
+			// FIXME this is dangerous - destroys the whole html in the div.
+			$element.text( $element.text().substr( 0, start ) + replacement + $element.text().substr( end, $element.text().length ) );
+			// Move the cursor to the end of the replaced text.
+			setDivCaretPosition( element, {
+				start: start + replacement.length,
+				end:  start + replacement.length
+			} );
+			return;
+		}
 
 		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
 			// IE9+ and all other browsers
@@ -426,6 +484,49 @@
 			selection.select();
 		}
 	}
+
+	/**
+	 * Set the caret position in the div.
+	 * @param element The content editable div element
+	 * @param position an object with start and end properties.
+	 */
+	function setDivCaretPosition( element , position ) {
+		var charIndex = 0,
+			range = rangy.createRange(),
+			foundStart = false,
+			stop = {};
+
+		range.collapseToPoint( element, 0 );
+
+		function traverseTextNodes( node ) {
+			if ( node.nodeType === 3 ) {
+				var nextCharIndex = charIndex + node.length;
+				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
+					range.setStart( node, position.start - charIndex );
+					foundStart = true;
+				}
+				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
+					range.setEnd( node, position.end - charIndex );
+					throw stop;
+				}
+				charIndex = nextCharIndex;
+			} else {
+				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+					traverseTextNodes( node.childNodes[i] );
+				}
+			}
+		}
+
+		try {
+			traverseTextNodes( element );
+		} catch ( ex ) {
+			if ( ex == stop ) {
+				rangy.getSelection().setSingleRange( range );
+			} else {
+				throw ex;
+			}
+		}
+	};
 
 	/**
 	 * Find the point at which a and b diverge, i.e. the first position
