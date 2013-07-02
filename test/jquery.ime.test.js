@@ -200,7 +200,8 @@
 	imeTest = function( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
-			multiline: false, // <input> or <textarea>
+			multiline: false,
+			inputType: 'input', // input, textarea, or contenteditable
 			tests: [],
 			inputmethod: '' // The input method name.
 		}, options );
@@ -210,8 +211,11 @@
 
 			QUnit.expect( opt.tests.length );
 
-			if( opt.multiline ) {
+			if( opt.multiline && opt.inputType  === 'input' ) {
 				$input = $( '<textarea>' );
+				opt.inputType = 'textarea';
+			} else if( opt.inputType  === 'contenteditable' ) {
+				$input = $( '<div contenteditable=true>' );
 			} else {
 				$input = $( '<input>' );
 			}
@@ -234,9 +238,10 @@
 				for ( i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
-					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
+					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description + " - " + opt.inputType );
 					$input.val( '' );
 					$input.text( '' );
+					$input.html( '' );
 				}
 
 				QUnit.start();
@@ -246,6 +251,9 @@
 
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function( i, fixture ) {
+		imeTest( fixture );
+		// Run all tests for content editable divs too
+		fixture.inputType = 'contenteditable';
 		imeTest( fixture );
 	} );
 
