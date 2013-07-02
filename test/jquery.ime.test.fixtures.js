@@ -1618,7 +1618,7 @@ var testFixtures = [
 			{ input: 'XhH', output: 'XE', description: 'XhH -> XE' },
 			{ input: 'EeE', output: 'EE', description: 'EeE -> EE' },
 			{ input: 'IiI', output: 'II', description: 'IiI -> II' },
-			{ input: 'UiU', output: 'UU', description: 'UiU -> UU' },
+			{ input: 'UuU', output: 'UU', description: 'UuU -> UU' },
 		
 			{ input: 'ch', output: 'ç', description: 'ch -> ç' },
 			{ input: 'sh', output: 'ş', description: 'sh -> ş' },
