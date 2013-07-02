@@ -383,10 +383,9 @@
 			end = 0,
 			foundStart = false,
 			stop = {},
-			sel = rangy.getSelection(),
-			range;
+			sel = rangy.getSelection();
 
-		function traverseTextNodes( node, range) {
+		function traverseTextNodes( node, range ) {
 			if ( node.nodeType === 3 ) {
 				if ( !foundStart && node === range.startContainer ) {
 					start = charIndex + range.startOffset;
@@ -406,9 +405,9 @@
 
 		if ( sel.rangeCount ) {
 			try {
-				traverseTextNodes( element, sel.getRangeAt(0) );
+				traverseTextNodes( element, sel.getRangeAt( 0 ) );
 			} catch (ex) {
-				if ( ex != stop ) {
+				if ( ex !== stop ) {
 					throw ex;
 				}
 			}
@@ -437,16 +436,24 @@
 			selection,
 			length,
 			newLines,
-			scrollTop;
+			scrollTop,
+			range,
+			textNode;
 
 		if ( $element.attr( 'contenteditable' ) ) {
-			// Replace the text in the selection part with translterated text.
-			// FIXME this is dangerous - destroys the whole html in the div.
-			$element.text( $element.text().substr( 0, start ) + replacement + $element.text().substr( end, $element.text().length ) );
-			// Move the cursor to the end of the replaced text.
+			setDivCaretPosition( element, {
+				start: start,
+				end: end
+			} );
+			selection = rangy.getSelection();
+			range = selection.getRangeAt( 0 );
+			textNode = document.createTextNode( replacement );
+			range.deleteContents();
+			range.insertNode( textNode );
+			range.commonAncestorContainer.normalize();
 			setDivCaretPosition( element, {
 				start: start + replacement.length,
-				end:  start + replacement.length
+				end: start+ replacement.length
 			} );
 			return;
 		}
@@ -492,6 +499,9 @@
 	 */
 	function setDivCaretPosition( element , position ) {
 		var charIndex = 0,
+			i,
+			len,
+			nextCharIndex,
 			range = rangy.createRange(),
 			foundStart = false,
 			stop = {};
@@ -500,7 +510,7 @@
 
 		function traverseTextNodes( node ) {
 			if ( node.nodeType === 3 ) {
-				var nextCharIndex = charIndex + node.length;
+				nextCharIndex = charIndex + node.length;
 				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
 					range.setStart( node, position.start - charIndex );
 					foundStart = true;
@@ -511,7 +521,7 @@
 				}
 				charIndex = nextCharIndex;
 			} else {
-				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
 					traverseTextNodes( node.childNodes[i] );
 				}
 			}
@@ -520,13 +530,13 @@
 		try {
 			traverseTextNodes( element );
 		} catch ( ex ) {
-			if ( ex == stop ) {
+			if ( ex === stop ) {
 				rangy.getSelection().setSingleRange( range );
 			} else {
 				throw ex;
 			}
 		}
-	};
+	}
 
 	/**
 	 * Find the point at which a and b diverge, i.e. the first position
