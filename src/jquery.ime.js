@@ -330,7 +330,7 @@
 			endRange;
 
 		if ( $element.attr( 'contenteditable' ) ) {
-			return getDivCaretPosition( $element );
+			return getDivCaretPosition( el );
 		}
 
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
@@ -376,9 +376,94 @@
 		return [ start, end ];
 	}
 
-	function getDivCaretPosition( $element ) {
+	/**
+	 * Helper function to get an IE TextRange object for an element
+	 */
+	function rangeForElementIE( element ) {
+		var selection;
+
+		if ( element.nodeName.toLowerCase() === 'input' ) {
+			selection = element.createTextRange();
+		} else {
+			selection = document.body.createTextRange();
+			selection.moveToElementText( element );
+		}
+		return selection;
+	}
+
+	function replaceText( $element, replacement, start, end ) {
 		var element = $element.get( 0 ),
-			charIndex = 0,
+			selection,
+			length,
+			newLines,
+			scrollTop,
+			range,
+			correction,
+			textNode;
+
+		if ( $element.attr( 'contenteditable' ) ) {
+			debug( 'Replacing at start and end: ' + start + ',' + end );
+			correction = setDivCaretPosition( element, {
+				start: start,
+				end: end
+			} );
+			selection = rangy.getSelection();
+			range = selection.getRangeAt( 0 );
+			if ( correction > 0 ) {
+				debug( 'Start Correction: ' + correction );
+				replacement = selection.toString().substring( 0, correction ) +replacement;
+			}
+			textNode = document.createTextNode( replacement );
+			range.deleteContents();
+			range.insertNode( textNode );
+			range.commonAncestorContainer.normalize();
+			start = end = start + replacement.length - correction;
+			correction = setDivCaretPosition( element, {
+				start: start,
+				end: start
+			} );
+			if ( correction > 0 ) {
+				debug( 'still Correction: ' + correction );
+			}
+			return;
+		}
+
+		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
+			// IE9+ and all other browsers
+			scrollTop = element.scrollTop;
+
+			// This could be made better if range selection worked on browsers.
+			// But for complex scripts, browsers place cursor in unexpected places
+			// and it's not possible to fix cursor programmatically.
+			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+			element.value = element.value.substring( 0, start ) + replacement
+					+ element.value.substring( end, element.value.length );
+			// restore scroll
+			element.scrollTop = scrollTop;
+			// set selection
+			element.selectionStart = element.selectionEnd = start + replacement.length;
+		} else {
+			// IE8 and lower
+			selection = rangeForElementIE(element);
+			length = element.value.length;
+			// IE doesn't count \n when computing the offset, so we won't either
+			newLines = element.value.match( /\n/g );
+
+			if ( newLines ) {
+				length = length - newLines.length;
+			}
+
+			selection.moveStart( 'character', start );
+			selection.moveEnd( 'character', end - length );
+
+			selection.text = replacement;
+			selection.collapse( false );
+			selection.select();
+		}
+	}
+
+	function getDivCaretPosition( element ) {
+		var charIndex = 0,
 			start = 0,
 			end = 0,
 			foundStart = false,
@@ -417,85 +502,11 @@
 	}
 
 	/**
-	 * Helper function to get an IE TextRange object for an element
-	 */
-	function rangeForElementIE( element ) {
-		var selection;
-
-		if ( element.nodeName.toLowerCase() === 'input' ) {
-			selection = element.createTextRange();
-		} else {
-			selection = document.body.createTextRange();
-			selection.moveToElementText( element );
-		}
-		return selection;
-	}
-
-	function replaceText( $element, replacement, start, end ) {
-		var element = $element.get( 0 ),
-			selection,
-			length,
-			newLines,
-			scrollTop,
-			range,
-			textNode;
-
-		if ( $element.attr( 'contenteditable' ) ) {
-			setDivCaretPosition( element, {
-				start: start,
-				end: end
-			} );
-			selection = rangy.getSelection();
-			range = selection.getRangeAt( 0 );
-			textNode = document.createTextNode( replacement );
-			range.deleteContents();
-			range.insertNode( textNode );
-			range.commonAncestorContainer.normalize();
-			setDivCaretPosition( element, {
-				start: start + replacement.length,
-				end: start+ replacement.length
-			} );
-			return;
-		}
-
-		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
-			// IE9+ and all other browsers
-			scrollTop = element.scrollTop;
-
-			// This could be made better if range selection worked on browsers.
-			// But for complex scripts, browsers place cursor in unexpected places
-			// and it's not possible to fix cursor programmatically.
-			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) + replacement
-					+ element.value.substring( end, element.value.length );
-			// restore scroll
-			element.scrollTop = scrollTop;
-			// set selection
-			element.selectionStart = element.selectionEnd = start + replacement.length;
-		} else {
-			// IE8 and lower
-			selection = rangeForElementIE(element);
-			length = element.value.length;
-			// IE doesn't count \n when computing the offset, so we won't either
-			newLines = element.value.match( /\n/g );
-
-			if ( newLines ) {
-				length = length - newLines.length;
-			}
-
-			selection.moveStart( 'character', start );
-			selection.moveEnd( 'character', end - length );
-
-			selection.text = replacement;
-			selection.collapse( false );
-			selection.select();
-		}
-	}
-
-	/**
 	 * Set the caret position in the div.
-	 * @param element The content editable div element
-	 * @param position an object with start and end properties.
+	 * @param {Element} element The content editable div element
+	 * @param {number} position an object with start and end properties.
+	 * @return {number} If the cursor could not be placed at given position, how
+	 * many characters had to go back to place the cursor
 	 */
 	function setDivCaretPosition( element , position ) {
 		var charIndex = 0,
@@ -504,6 +515,7 @@
 			nextCharIndex,
 			range = rangy.createRange(),
 			foundStart = false,
+			correction = 0,
 			stop = {};
 
 		range.collapseToPoint( element, 0 );
@@ -536,6 +548,13 @@
 				throw ex;
 			}
 		}
+
+		// see Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+		if ( position.start !== getDivCaretPosition( element )[0] ) {
+			position.start -= 1; // go back one more position.
+			correction = 1 + setDivCaretPosition( element, position );
+		}
+		return correction;
 	}
 
 	/**
