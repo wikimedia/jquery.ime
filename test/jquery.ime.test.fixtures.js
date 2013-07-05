@@ -1646,21 +1646,8 @@ var testFixtures = [
 	},{
 		description: 'Kurdish tr test (for Turkish keyboard)',
 		tests: [
-			{ input: 'ğğ', output: 'ğ', description: 'ğğ -> ğ' },
-			{ input: 'ıı', output: 'ı', description: 'ıı -> ı' },
-			{ input: 'ii', output: 'i', description: 'ii -> i' },
-			{ input: 'öö', output: 'ö', description: 'öö -> ö' },
-			{ input: 'üü', output: 'ü', description: 'üü -> ü' },
 			{ input: 'hhh', output: 'hh', description: 'hhh -> hh' },
-			{ input: 'Ğğ', output: 'Ğ', description: 'Ğğ -> Ğ' },
-			{ input: 'İi', output: 'İ', description: 'İi -> İ' },
-			{ input: 'Öö', output: 'Ö', description: 'Öö -> Ö' },
-			{ input: 'Üü', output: 'Ü', description: 'Üü -> Ü' },
 			{ input: 'Hhh', output: 'Hh', description: 'Hhh -> Hh' },
-			{ input: 'ĞĞ', output: 'Ğ', description: 'ĞĞ -> Ğ' },
-			{ input: 'İİ', output: 'İ', description: 'İİ -> İ' },
-			{ input: 'ÖÖ', output: 'Ö', description: 'ÖÖ -> Ö' },
-			{ input: 'ÜÜ', output: 'Ü', description: 'ÜÜ -> Ü' },
 			{ input: 'HHH', output: 'HH', description: 'HHH -> HH' },
 			{ input: 'HhH', output: 'HH', description: 'HhH -> HH' },
 		
