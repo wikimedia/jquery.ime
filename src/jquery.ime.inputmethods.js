@@ -737,7 +737,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript', 'or-phonetic', 'or-inscript2' ]
+			inputmethods: [ 'or-transliteration', 'or-phonetic', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
