@@ -377,15 +377,15 @@
 			source: 'rules/no/no-tildeforms.js'
 		},
 		'or-transliteration': {
-			name: 'ଟରନସଲିତେରତିଓନ',
+			name: 'ଟ୍ରାନ୍ସଲି ଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
 		'or-inscript': {
-			name: 'ଈନସକରିପତ',
+			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
 		},
 		'or-inscript2': {
-			name: 'ଈନସକରିପତ2',
+			name: 'ଇନସ୍କ୍ରିପ୍ଟ2',
 			source: 'rules/or/or-inscript2.js'
 		},
 		'or-lekhani': {
@@ -393,7 +393,7 @@
 			source: 'rules/or/or-lekhani.js'
 		},
 		'or-phonetic': {
-			name: 'ହୋନେତିକ',
+			name: 'ଫୋନେଟିକ',
 			source: 'rules/or/or-phonetic.js'
 		},
 		'sd-inscript2': {
@@ -737,7 +737,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-phonetic', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
+			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
