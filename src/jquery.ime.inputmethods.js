@@ -308,6 +308,14 @@
 			name: 'Kashmiri Arabic',
 			source: 'rules/ks/ks-kbd.js'
 		},
+		'ku-h': {
+			name: 'Kurdish h',
+			source: 'rules/ku/ku-h.js'
+		},
+		'ku-tr': {
+			name: 'Kurdish tr',
+			source: 'rules/ku/ku-tr.js'
+		},
 		'lo-kbd': {
 			name: 'າຶກ',
 			source: 'rules/lo/lo-kbd.js'
@@ -674,6 +682,10 @@
 		'kab': {
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
+		},
+		'ku': {
+			autonym: 'Kurdish',
+			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'lbe': {
 			autonym: 'лакку',
