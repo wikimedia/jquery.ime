@@ -6,6 +6,7 @@
 			isDirty: false,
 			language : null,
 			previousLanguages: [], // array of previous languages
+			previousInputMethods: [], // array of previous inputmethods
 			imes: {
 				'en': 'system'
 			}
@@ -26,6 +27,7 @@
 			// Add to the previous languages, but avoid duplicates.
 			if ( $.inArray( language, this.registry.previousLanguages ) === -1 ) {
 				this.registry.previousLanguages.push( language );
+				this.registry.previousLanguages = this.registry.previousLanguages.slice( 0, 5 );
 			}
 		},
 
@@ -41,6 +43,10 @@
 			return this.registry.previousLanguages;
 		},
 
+		getPreviousInputMethods: function () {
+			return this.registry.previousInputMethods;
+		},
+
 		// Set the given IM as the last used for the language
 		setIM: function ( inputMethod ) {
 			if ( !this.registry.imes ) {
@@ -54,6 +60,15 @@
 
 			this.registry.imes[this.getLanguage()] = inputMethod;
 			this.registry.isDirty = true;
+			if ( !this.registry.previousInputMethods ) {
+				this.registry.previousInputMethods = [];
+			}
+
+			// Add to the previous languages, but avoid duplicates.
+			if ( $.inArray( inputMethod, this.registry.previousInputMethods ) === -1 ) {
+				this.registry.previousInputMethods.push( inputMethod );
+				this.registry.previousInputMethods = this.registry.previousInputMethods.slice( 0, 5 );
+			}
 		},
 
 		// Return the last used or the default IM for language
