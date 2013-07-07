@@ -236,10 +236,6 @@
 			name: 'עברית עם ניקוד',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
-		'he-kbd': {
-			name: 'כבד',
-			source: 'rules/he/he-kbd.js'
-		},
 		'hr-kbd': {
 			name: 'Croatian kbd',
 			source: 'rules/hr/hr-kbd.js'
@@ -621,7 +617,7 @@
 		},
 		'he': {
 			autonym: 'עברית',
-			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012', 'he-kbd' ]
+			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',
