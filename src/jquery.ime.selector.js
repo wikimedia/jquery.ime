@@ -3,7 +3,7 @@
 
 	var selectorTemplate, MutationObserver;
 
-	function IMESelector ( element, options ) {
+	function IMESelector( element, options ) {
 		this.$element = $( element );
 		this.options = $.extend( {}, IMESelector.defaults, options );
 		this.active = false;
@@ -25,20 +25,24 @@
 		},
 
 		prepareSelectorMenu: function () {
-
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
 			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
-			this.$menu.append( imeListTitle() )
-				.append( imeList() )
-				.append( toggleMenuItem() )
-				.append( languageListTitle() );
+			this.$menu.append(
+				imeListTitle(),
+				imeList(),
+				toggleMenuItem(),
+				languageListTitle()
+			);
+
 			this.prepareLanguageList();
 			this.$menu.append( this.helpLink() );
+
 			if ( $.i18n ) {
 				this.$menu.i18n();
 			}
+
 			this.$imeSetting.append( this.$menu );
 			$( 'body' ).append( this.$imeSetting );
 		},
@@ -68,7 +72,8 @@
 						imeselector.$imeSetting.css( 'opacity', 1 );
 						imeselector.$imeSetting.css( 'margin-top', 0 );
 					} );
-				}, 2500 );
+				}, 2500
+			);
 		},
 
 		focus: function () {
@@ -114,6 +119,7 @@
 				if ( t.hasClass( 'imeselector-toggle' ) ) {
 					imeselector.toggle();
 				}
+
 				return false;
 			} );
 
@@ -136,21 +142,25 @@
 
 			imeselector.$menu.on( 'click.ime', 'li', function() {
 				imeselector.$element.focus();
+
 				return false;
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function () {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
+
 				return false;
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function () {
 				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
+
 				return false;
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'div.ime-disable', function () {
 				imeselector.disableIM();
+
 				return false;
 			} );
 
@@ -200,10 +210,12 @@
 					} else {
 						languageCode = this.decideLanguage();
 						this.selectLanguage( languageCode );
+
 						if ( !ime.isActive() && $.ime.languages[languageCode] ) {
 							// Even after pressing toggle shortcut again, it is still disabled
 							// Check if there is a previously used input method.
 							previousInputMethods = $.ime.preferences.getPreviousInputMethods();
+
 							if ( previousInputMethods[0] ) {
 								this.selectIM( previousInputMethods[0] );
 							} else {
@@ -329,9 +341,8 @@
 
 		/**
 		 * Decide on initial language to select
-		 *
 		 */
-		decideLanguage : function () {
+		decideLanguage: function () {
 			if ( $.ime.preferences.getLanguage() ) {
 				// There has been an override by the user,
 				// so return the language selected by user
@@ -341,7 +352,7 @@
 			if ( this.$element.attr('lang' ) &&
 				$.ime.languages[ this.$element.attr( 'lang' ) ]
 			) {
-					return this.$element.attr( 'lang' );
+				return this.$element.attr( 'lang' );
 			}
 
 			// There is either no IMs for the given language attr
@@ -467,8 +478,12 @@
 					$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name ),
 					$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
 
-				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
-				$inputMethod.addClass( 'ime-im' );
+				$inputMethod
+					.append(
+						'<span class="ime-im-check">',
+						$imeItem
+					)
+					.addClass( 'ime-im' );
 				$imeList.append( $inputMethod );
 			} );
 		},
@@ -510,33 +525,33 @@
 
 	$.fn.imeselector.Constructor = IMESelector;
 
-	function languageListTitle () {
+	function languageListTitle() {
 		return $( '<h3>' )
 			.addClass( 'ime-lang-title' )
 			.attr( 'data-i18n', 'jquery-ime-other-languages' )
 			.text( 'Other languages' );
 	}
 
-	function imeList () {
+	function imeList() {
 		return  $( '<ul>' ).addClass( 'ime-list' );
 	}
 
-	function imeListTitle () {
+	function imeListTitle() {
 		return  $( '<h3>' ).addClass( 'ime-list-title' );
 	}
 
-	function toggleMenuItem () {
-		return $( '<div class="ime-disable">' )
-			.append( $( '<span>' )
+	function toggleMenuItem() {
+		return $( '<div class="ime-disable">' ).append(
+			$( '<span>' )
 				.attr( {
 					'class': 'ime-disable-link',
 					'data-i18n': 'jquery-ime-disable-text'
 				} )
-				.text( 'System input method' )
-			).append( $( '<span>' )
+				.text( 'System input method' ),
+			$( '<span>' )
 				.addClass( 'ime-disable-shortcut' )
 				.text( 'CTRL+M' )
-			);
+		);
 	}
 
 	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
@@ -553,13 +568,13 @@
 	 * @param event Event object
 	 * @return bool
 	 */
-	function isShortcutKey ( event ) {
+	function isShortcutKey( event ) {
 		// 77 - The letter M, for Ctrl-M
 		// 13 - The Enter key
 		return event.ctrlKey && !event.altKey && ( event.which === 77 || event.which === 13 );
 	}
 
-	function isDOMAttrModifiedSupported () {
+	function isDOMAttrModifiedSupported() {
 		var p = document.createElement( 'p' ),
 			flag = false;
 
