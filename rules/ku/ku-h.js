@@ -3,7 +3,7 @@
 
 	var kuH = {
 		id: 'ku-h',
-		name: 'Kurdish h',
+		name: 'Ku h',
 		description: 'writing Kurdish-letters adding h\'s',
 		date: '2013-06-26',
 		URL: 'http://github.com/wikimedia/jquery.ime',

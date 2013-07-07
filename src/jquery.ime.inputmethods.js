@@ -309,11 +309,11 @@
 			source: 'rules/ks/ks-kbd.js'
 		},
 		'ku-h': {
-			name: 'Kurdish h',
+			name: 'Kurdî / Kurdkî h',
 			source: 'rules/ku/ku-h.js'
 		},
 		'ku-tr': {
-			name: 'Kurdish tr',
+			name: 'Kurdî / Kurdkî tr',
 			source: 'rules/ku/ku-tr.js'
 		},
 		'lo-kbd': {
@@ -684,7 +684,7 @@
 			inputmethods: [ 'ber-tfng' ]
 		},
 		'ku': {
-			autonym: 'Kurdish',
+			autonym: 'Kurdî / Kurdkî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'lbe': {

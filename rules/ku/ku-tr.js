@@ -3,7 +3,7 @@
 
 	var kuTr = {
 		id: 'ku-tr',
-		name: 'Kurdish tr',
+		name: 'Ku tr',
 		description: 'writing Kurdish-letters using the TR keyboard',
 		date: '2013-06-26',
 		URL: 'http://github.com/wikimedia/jquery.ime',
