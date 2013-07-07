@@ -26,7 +26,7 @@
 
 			// Add to the previous languages, but avoid duplicates.
 			if ( $.inArray( language, this.registry.previousLanguages ) === -1 ) {
-				this.registry.previousLanguages.push( language );
+				this.registry.previousLanguages.unshift( language );
 				this.registry.previousLanguages = this.registry.previousLanguages.slice( 0, 5 );
 			}
 		},
@@ -64,9 +64,9 @@
 				this.registry.previousInputMethods = [];
 			}
 
-			// Add to the previous languages, but avoid duplicates.
-			if ( $.inArray( inputMethod, this.registry.previousInputMethods ) === -1 ) {
-				this.registry.previousInputMethods.push( inputMethod );
+			// Add to the previous languages,
+			if ( inputMethod !== 'system' ) {
+				this.registry.previousInputMethods.unshift( inputMethod );
 				this.registry.previousInputMethods = this.registry.previousInputMethods.slice( 0, 5 );
 			}
 		},
