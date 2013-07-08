@@ -1,4 +1,4 @@
-( function ( $ ) {
+﻿( function ( $ ) {
 	'use strict';
 
 	$.extend( $.ime.sources, {
@@ -236,18 +236,30 @@
 			name: 'עברית עם ניקוד',
 			source: 'rules/he/he-standard-2012-extonly.js'
 		},
-		'he-kbd': {
-			name: 'כבד',
-			source: 'rules/he/he-kbd.js'
-		},
 		'hr-kbd': {
 			name: 'Croatian kbd',
 			source: 'rules/hr/hr-kbd.js'
 		},
-		'hy-kbd': {
-			name: 'Ստանդարտ ստեղնաշար',
-			source: 'rules/hy/hy-kbd.js'
+		'hy-ephonetic': {
+			name: 'Հնչյունային դասավորություն',
+			source: 'rules/hy/hy-ephonetic.js'
 		},
+		'hy-typewriter': {
+			name: 'Գրամեքենայի դասավորություն',
+			source: 'rules/hy/hy-typewriter.js'
+		},		
+		'hy-ephoneticalt': {
+			name: 'Հնչյունային դասավորություն (R->Ր, F->Թ)',
+			source: 'rules/hy/hy-ephoneticalt.js'
+		},
+		'hy-emslegacy': {
+			name: 'Մայքրոսոֆթի Արևելահայերեն հին դասավորություն',
+			source: 'rules/hy/hy-emslegacy.js'
+		},
+		'hy-wmslegacy': {
+			name: 'Մայքրոսոֆթի Արևմտահայերեն հին դասավորություն',
+			source: 'rules/hy/hy-wmslegacy.js'
+		},	
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
@@ -377,15 +389,15 @@
 			source: 'rules/no/no-tildeforms.js'
 		},
 		'or-transliteration': {
-			name: 'ଟରନସଲିତେରତିଓନ',
+			name: 'ଟ୍ରାନ୍ସଲି ଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
 		'or-inscript': {
-			name: 'ଈନସକରିପତ',
+			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
 		},
 		'or-inscript2': {
-			name: 'ଈନସକରିପତ2',
+			name: 'ଇନସ୍କ୍ରିପ୍ଟ2',
 			source: 'rules/or/or-inscript2.js'
 		},
 		'or-lekhani': {
@@ -393,7 +405,7 @@
 			source: 'rules/or/or-lekhani.js'
 		},
 		'or-phonetic': {
-			name: 'ହୋନେତିକ',
+			name: 'ଫୋନେଟିକ',
 			source: 'rules/or/or-phonetic.js'
 		},
 		'sd-inscript2': {
@@ -621,7 +633,7 @@
 		},
 		'he': {
 			autonym: 'עברית',
-			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012', 'he-kbd' ]
+			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
 		},
 		'hi': {
 			autonym: 'हिन्दी',
@@ -632,8 +644,8 @@
 			inputmethods: [ 'hr-kbd' ]
 		},
 		'hy': {
-			autonym: 'Հայերեն',
-			inputmethods: [ 'hy-kbd' ]
+			autonym: 'հայերեն',
+			inputmethods: [ 'hy-ephonetic', 'hy-typewriter', 'hy-ephoneticalt', 'hy-emslegacy', 'hy-wmslegacy' ]
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
@@ -737,7 +749,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript', 'or-phonetic', 'or-inscript2' ]
+			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
