@@ -154,6 +154,11 @@
 				return false;
 			} );
 
+			// Just make it work as a regular link
+			imeselector.$menu.on( 'click.ime', '.ime-help-link', function ( e ) {
+				e.stopPropagation();
+			} );
+
 			imeselector.$element.on( 'focus.ime', function ( e ) {
 				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.focus();
