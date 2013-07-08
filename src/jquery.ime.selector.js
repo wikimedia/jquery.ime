@@ -425,7 +425,7 @@
 		 * Prepare language list
 		 */
 		prepareLanguageList: function () {
-			var languageCodeIndex = 0,
+			var languageCodeIndex,
 				$languageListWrapper,
 				$languageList,
 				languageList,
