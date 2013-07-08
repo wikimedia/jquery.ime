@@ -11,7 +11,7 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-			['ḧh', 'hh'],
+			['ḧh', 'h', 'hh'],
 			['Ḧ(H|h)', 'h', 'H$1'],
 			['Ḧ(H|h)', 'H', 'H$1'],
 
