@@ -3,7 +3,7 @@
 
 	var orInScript2 = {
 		id: 'or-inscript2',
-		name: 'InScript2',
+		name: 'ଇନସ୍କ୍ରିପ୍ଟ2',
 		description: 'Enhanced InScript keyboard for Odia language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
