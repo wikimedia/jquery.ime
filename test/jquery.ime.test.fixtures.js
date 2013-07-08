@@ -1187,7 +1187,7 @@ var testFixtures = [
 			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' },
 			{ input: 'r#', output: 'ൎ', description: 'Malayalam dot repha' },
 			{ input: 'ar#ththham', output: 'അൎത്ഥം', description: 'Malayalam word with dot repha' },
-			{ input: '//', output: 'ഽ', description: 'Malayalam sign Avagraha' },
+			{ input: '//', output: 'ഽ', description: 'Malayalam sign Avagraha' }
 		],
 		inputmethod: 'ml-transliteration'
 	},{
