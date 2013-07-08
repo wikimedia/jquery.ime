@@ -1056,6 +1056,13 @@ var testFixtures = [
 		],
 		inputmethod: 'mh'
 	},{
+		description: 'Marathi Phonetic test',
+		tests: [
+			{ input: '.', output: '।', description: 'Marathi phonetic . -> ।' },
+			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
+		],
+		inputmethod: 'mr-phonetic'
+	},{
 		description: 'Marathi InScript 2 test',
 		tests: [
 			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
