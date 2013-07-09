@@ -259,7 +259,7 @@
 		'hy-wmslegacy': {
 			name: 'Մայքրոսոֆթի Արևմտահայերեն հին դասավորություն',
 			source: 'rules/hy/hy-wmslegacy.js'
-		},	
+		},
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
 			source: 'rules/gu/gu-inscript.js'
