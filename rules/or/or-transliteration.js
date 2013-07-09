@@ -3,8 +3,8 @@
 
 	var orTransliteration = {
 		id: 'or-transliteration',
-		name: 'Odia Transliteration',
-		description: 'ଟ୍ରାନ୍ସଲି ଟରେସନ',
+		name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
+		description: 'Odia Transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Junaid P V and Subhashish Panigrahi',
