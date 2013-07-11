@@ -78,6 +78,18 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
 		},
+		'ckb-transliteration-arkbd': {
+			name: 'باشووری',
+			source: 'rules/ckb/ckb-transliteration-arkbd.js'
+		},
+		'ckb-transliteration-fakbd': {
+			name: 'ڕۆژھەڵاتی',
+			source: 'rules/ckb/ckb-transliteration-fakbd.js'
+		},
+		'ckb-transliteration-lakbd': {
+			name: 'لاتینی',
+			source: 'rules/ckb/ckb-transliteration-lakbd.js'
+		},
 		'cv-cyr-altgr': {
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
@@ -578,6 +590,10 @@
 		'brx': {
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
+		},
+		'ckb': {
+			autonym: 'کوردی',
+			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
 		},
 		'ce': {
 			autonym: 'нохчийн',
