@@ -79,13 +79,13 @@
 		focus: function () {
 			// Hide all other IME settings and collapse open menus
 			$( 'div.imeselector' ).hide();
-			$( 'div.imeselector-menu' ).removeClass( 'open' );
+			$( 'div.imeselector-menu' ).removeClass( 'ime-open' );
 			this.$imeSetting.show();
 			this.resetTimer();
 		},
 
 		show: function () {
-			this.$menu.addClass( 'open' );
+			this.$menu.addClass( 'ime-open' );
 			this.stopTimer();
 			this.$imeSetting.show();
 
@@ -93,14 +93,14 @@
 		},
 
 		hide: function () {
-			this.$menu.removeClass( 'open' );
+			this.$menu.removeClass( 'ime-open' );
 			this.resetTimer();
 
 			return false;
 		},
 
 		toggle: function () {
-			if ( this.$menu.hasClass( 'open' ) ) {
+			if ( this.$menu.hasClass( 'ime-open' ) ) {
 				this.hide();
 			} else {
 				this.show();
@@ -124,7 +124,7 @@
 			} );
 
 			imeselector.$element.on( 'blur.ime', function () {
-				if ( !imeselector.$imeSetting.hasClass( 'onfocus' ) ) {
+				if ( !imeselector.$imeSetting.hasClass( 'ime-onfocus' ) ) {
 					imeselector.$imeSetting.hide();
 					imeselector.hide();
 				}
@@ -134,10 +134,10 @@
 				// We don't want the selector to disappear
 				// while the user is trying to click it
 				imeselector.stopTimer();
-				imeselector.$imeSetting.addClass( 'onfocus' );
+				imeselector.$imeSetting.addClass( 'ime-onfocus' );
 			} ).mouseleave( function () {
 				imeselector.resetTimer();
-				imeselector.$imeSetting.removeClass( 'onfocus' );
+				imeselector.$imeSetting.removeClass( 'ime-onfocus' );
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li', function() {
@@ -274,7 +274,7 @@
 				// Flip the menu to the top only if it can fit in the space there
 				if ( menutop < top ) {
 					this.$menu
-						.addClass( 'position-top' )
+						.addClass( 'ime-position-top' )
 						.css( 'top', -menutop );
 				}
 			}
@@ -297,11 +297,11 @@
 				if ( this.$element.css( 'direction' ) === 'rtl' ) {
 					this.$menu
 					.css( 'left', 0 )
-					.addClass( 'left' );
+					.addClass( 'ime-left' );
 				} else {
 					this.$menu
 					.css( 'left', position.left )
-					.addClass( 'right' );
+					.addClass( 'ime-right' );
 				}
 			}
 		},
@@ -378,10 +378,10 @@
 				return;
 			}
 
-			this.$menu.find( '.checked' ).removeClass( 'checked' );
-			this.$menu.find( 'li.ime-disable' ).removeClass( 'checked' );
+			this.$menu.find( '.ime-checked' ).removeClass( 'ime-checked' );
+			this.$menu.find( 'li.ime-disable' ).removeClass( 'ime-checked' );
 			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
-				.addClass( 'checked' );
+				.addClass( 'ime-checked' );
 			ime = this.$element.data( 'ime' );
 
 			if ( inputmethodId === 'system' ) {
@@ -410,8 +410,8 @@
 		 * Disable the inputmethods (Use the system input method)
 		 */
 		disableIM: function () {
-			this.$menu.find( '.checked' ).removeClass( 'checked' );
-			this.$menu.find( 'div.ime-disable' ).addClass( 'checked' );
+			this.$menu.find( '.ime-checked' ).removeClass( 'ime-checked' );
+			this.$menu.find( 'div.ime-disable' ).addClass( 'ime-checked' );
 			this.$element.data( 'ime' ).disable();
 			this.$imeSetting.find( 'a.ime-name' ).text( '' );
 			this.hide();
