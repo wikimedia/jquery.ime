@@ -1035,6 +1035,12 @@ var testFixtures = [
 		],
 		inputmethod: 'kn-transliteration'
 	},{
+		description: 'Kannada InScript 2 test',
+		tests: [
+			{ input: [ [ '.', true ] ], output: '॥', description: 'Kannada InScript 2 AltGr-. -> ॥' }
+		],
+		inputmethod: 'kn-inscript2'
+	},{
 		description: 'Kajin M̧ajeļ (Marshallese) test',
 		tests: [
 			{ input: 'Y', output: 'Ū', description: 'Y for Ū in Marshallese' },
@@ -1055,6 +1061,13 @@ var testFixtures = [
 			{ input: 'v', output: 'ļ', description: 'v for ļ in Marshallese' }
 		],
 		inputmethod: 'mh'
+	},{
+		description: 'Marathi Phonetic test',
+		tests: [
+			{ input: '.', output: '।', description: 'Marathi phonetic . -> ।' },
+			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
+		],
+		inputmethod: 'mr-phonetic'
 	},{
 		description: 'Marathi InScript 2 test',
 		tests: [
@@ -1394,6 +1407,12 @@ var testFixtures = [
 			{ input: ';qje\'d\'fj', output: 'சௌராட்டிர', description: 'Tamil Inscript சௌராட்டிர Saurattira' }
 		],
 		inputmethod: 'ta-inscript'
+	},{
+		description: 'Tamil InScript 2 test',
+		tests: [
+			{ input: [ [ '.', true ] ], output: '॥', description: 'Tamil InScript 2 AltGr-. -> ॥' }
+		],
+		inputmethod: 'ta-inscript2'
 	},{
 		description: 'Tamil Transliteration test',
 		tests: [
