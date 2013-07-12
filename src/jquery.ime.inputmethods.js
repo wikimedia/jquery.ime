@@ -220,9 +220,9 @@
 			name: 'ปัตตะโชติ',
 			source: 'rules/th/th-pattachote.js'
 		},
-		'de': {
+		'de-transliteration': {
 			name: 'Deutsch',
-			source: 'rules/de/de.js'
+			source: 'rules/de/de-transliteration.js'
 		},
 		'el-kbd': {
 			name: 'Τυπική πληκτρολόγιο',

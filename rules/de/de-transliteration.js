@@ -2,7 +2,7 @@
 	'use strict';
 
 	var de = {
-		id: 'de',
+		id: 'de-transliteration',
 		name: 'Deutsch',
 		description: 'German input method',
 		date: '2012-11-20',
