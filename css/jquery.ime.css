@@ -110,7 +110,7 @@ span.ime-disable-shortcut {
 	text-align: left;
 }
 
-.imeselector-menu.right {
+.imeselector-menu.ime-right {
 	right: auto;
 }
 
@@ -133,7 +133,7 @@ span.ime-disable-shortcut {
 	top: -7px;
 }
 
-.imeselector-menu.right:before {
+.imeselector-menu.ime-right:before {
 	right: auto;
 	left: 9px;
 }
@@ -150,26 +150,26 @@ span.ime-disable-shortcut {
 }
 
 
-.imeselector-menu.right:after {
+.imeselector-menu.ime-right:after {
 	right: auto;
 	left: 10px;
 }
 
-.imeselector-menu.position-top:before {
+.imeselector-menu.ime-position-top:before {
 	border-bottom: 0 none;
 	border-top: 7px solid #888;
 	top: auto;
 	bottom: -7px;
 }
 
-.imeselector-menu.position-top:after {
+.imeselector-menu.ime-position-top:after {
 	border-bottom: 0 none;
 	border-top: 6px solid #FFFFFF;
 	top: auto;
 	bottom: -6px;
 }
 
-.imeselector-menu .checked {
+.imeselector-menu .ime-checked {
 	/* @embed */
 	background: url(../images/tick.png) left 4px center no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/tick.svg');
@@ -208,7 +208,7 @@ span.ime-disable-shortcut {
 	background-color: #5089e8;
 }
 
-.open {
+.ime-open {
 	*z-index: 1000;
 	display: block;
 }
