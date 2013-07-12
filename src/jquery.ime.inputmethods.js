@@ -240,9 +240,25 @@
 			name: 'Croatian kbd',
 			source: 'rules/hr/hr-kbd.js'
 		},
-		'hy-kbd': {
-			name: 'Ստանդարտ ստեղնաշար',
-			source: 'rules/hy/hy-kbd.js'
+		'hy-ephonetic': {
+			name: 'Հնչյունային դասավորություն',
+			source: 'rules/hy/hy-ephonetic.js'
+		},
+		'hy-typewriter': {
+			name: 'Գրամեքենայի դասավորություն',
+			source: 'rules/hy/hy-typewriter.js'
+		},		
+		'hy-ephoneticalt': {
+			name: 'Հնչյունային դասավորություն (R->Ր, F->Թ)',
+			source: 'rules/hy/hy-ephoneticalt.js'
+		},
+		'hy-emslegacy': {
+			name: 'Մայքրոսոֆթի արևելահայերեն (հնացած)',
+			source: 'rules/hy/hy-emslegacy.js'
+		},
+		'hy-wmslegacy': {
+			name: 'Մայքրոսոֆթի արևմտահայերեն (հնացած)',
+			source: 'rules/hy/hy-wmslegacy.js'
 		},
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
@@ -628,8 +644,8 @@
 			inputmethods: [ 'hr-kbd' ]
 		},
 		'hy': {
-			autonym: 'Հայերեն',
-			inputmethods: [ 'hy-kbd' ]
+			autonym: 'հայերեն',
+			inputmethods: [ 'hy-ephonetic', 'hy-typewriter', 'hy-ephoneticalt', 'hy-emslegacy', 'hy-wmslegacy' ]
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',

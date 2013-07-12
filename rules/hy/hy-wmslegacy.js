@@ -1,5 +1,5 @@
 /**
- * Eastern Armenian phonetic layout introduced by Microsoft in Windows 2000 and depreceated in Windows 8.
+ * Western Armenian phonetic layout introduced by Microsoft in Windows 2000 and depreceated in Windows 8.
  * Original layout was created in late 90-ies based on Unicode 3, and was never updated since release,
  * causing it to be incompatible with Unicode.
  *
@@ -14,15 +14,15 @@
 ( function ( $ ) {
 	'use strict';
 
-	var hyEmslegacy = {
-		id: 'hy-emslegacy',
-		name: 'ՄՍ Արևելահայերեն (հնացած)',
-		description: 'Legacy keyboard layout for Eastern Armenian by Microsoft',
-		date: '2013-02-11',
-		URL: 'http://www.microsoft.com/resources/msdn/goglobal/keyboards/kbdarme.html',
-		author: 'Parag Nemade, Aleksey Chalabyan',
+	var hyWmslegacy = {
+		id: 'hy-wmslegacy',
+		name: 'ՄՍ Արևմտահայերեն (հնացած)',
+		description: 'Legacy keyboard layout for Western Armenian by Microsoft',
+		date: '2013-07-08',
+		URL: 'http://www.microsoft.com/resources/msdn/goglobal/keyboards/kbdarmw.html',
+		author: 'Aleksey Chalabyan Ալեքսեյ Չալաբյան a.k.a Xelgen',
 		license: 'GPLv3',
-		version: '1.1',
+		version: '1.0',
 		patterns: [
 			['1', '։'],
 			['\\!', '1'],
@@ -52,14 +52,14 @@
 			['\\~', '՜'],
 			['q', 'խ'],
 			['Q', 'Խ'],
-			['w', 'ւ'],
-			['W', 'Ւ'],
+			['w', 'վ'],
+			['W', 'Վ'],
 			['e', 'է'],
 			['E', 'Է'],
 			['r', 'ր'],
 			['R', 'Ր'],
-			['t', 'տ'],
-			['T', 'Տ'],
+			['t', 'դ'],
+			['T', 'Դ'],
 			['y', 'ե'],
 			['Y', 'Ե'],
 			['u', 'ը'],
@@ -68,8 +68,8 @@
 			['I', 'Ի'],
 			['o', 'ո'],
 			['O', 'Ո'],
-			['p', 'պ'],
-			['P', 'Պ'],
+			['p', 'բ'],
+			['P', 'Բ'],
 			['\\[', 'չ'],
 			['\\{', 'Չ'],
 			['\\]', 'ջ'],
@@ -80,22 +80,22 @@
 			['A', 'Ա'],
 			['s', 'ս'],
 			['S', 'Ս'],
-			['d', 'դ'],
-			['D', 'Դ'],
+			['d', 'տ'],
+			['D', 'Տ'],
 			['f', 'ֆ'],
 			['F', 'Ֆ'],
-			['g', 'ք'],
-			['G', 'Ք'],
+			['g', 'կ'],
+			['G', 'Կ'],
 			['h', 'հ'],
 			['H', 'Հ'],
 			['j', 'ճ'],
 			['J', 'Ճ'],
-			['k', 'կ'],
-			['K', 'Կ'],
+			['k', 'ք'],
+			['K', 'Ք'],
 			['l', 'լ'],
 			['L', 'Լ'],
 			[';', 'թ'],
-			['\:', 'Թ'],
+			[':', 'Թ'],
 			['\'', 'փ'],
 			['\"', 'Փ'],
 			['z', 'զ'],
@@ -104,10 +104,10 @@
 			['X', 'Ց'],
 			['c', 'գ'],
 			['C', 'Գ'],
-			['v', 'վ'],
-			['V', 'Վ'],
-			['b', 'բ'],
-			['B', 'Բ'],
+			['v', 'ւ'],
+			['V', 'Ւ'],
+			['b', 'պ'],
+			['B', 'Պ'],
 			['n', 'ն'],
 			['N', 'Ն'],
 			['m', 'մ'],
@@ -164,6 +164,6 @@
 		]
 	};
 
-	$.ime.register( hyEmslegacy );
+	$.ime.register( hyWmslegacy );
 
 }( jQuery ) );
