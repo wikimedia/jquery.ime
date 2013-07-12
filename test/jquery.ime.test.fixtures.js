@@ -364,7 +364,7 @@ var testFixtures = [
 		tests: [
 			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },        
 			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },			
+			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷԹՓՁՋ()ՐՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոեռտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
 			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՌՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
@@ -379,7 +379,7 @@ var testFixtures = [
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },        
 			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },			
+			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ՖՁ֏֊—և՚(ՕԷՂ', description: 'Armenian typewriter digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'ճփբսմուկըթծց', description: 'Armenian typewriter 1st row No Shift' },
 			{ input: 'QWERTYUIOP{}',output: 'ՃՓԲՍՄՈՒԿԸԹԾՑ', description: 'Armenian typewriter 1st row With Shift' },
@@ -392,9 +392,9 @@ var testFixtures = [
 	},{
 		description: 'Armenian alternative phonetic layout with extended keys test',
 		tests: [
-			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },        
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
 			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },			
+			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷՖՓՁՋ()ՌՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոերտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
 			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՐՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
@@ -407,9 +407,9 @@ var testFixtures = [
 	},{
 		description: 'Armenian MS legacy Eastern layout with extended keys test',
 		tests: [
-			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },        
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
 			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },			
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Eastern digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'խւէրտեըիոպչջ', description: 'Armenian MS legacy Eastern 1st row No Shift' },
 			{ input: 'QWERTYUIOP{}',output: 'ԽՒԷՐՏԵԸԻՈՊՉՋ', description: 'Armenian MS legacy Eastern 1st row With Shift' },
@@ -422,9 +422,9 @@ var testFixtures = [
 	},{
 		description: 'Armenian MS legacy Westerm layout with extended keys test',
 		tests: [
-			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },        
-			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },			
-			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Westerm digits row No Shift' },			
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Westerm digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Westerm digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Westerm 1st row No Shift' },
 			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Westerm 1st row With Shift' },
