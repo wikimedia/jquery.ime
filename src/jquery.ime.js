@@ -96,9 +96,9 @@
 				altGr = true;
 			}
 
-			// Don't process ASCII control characters (except linefeed),
-			// as well as anything involving
-			// Alt (except for extended keymaps), Ctrl and Meta
+			// Don't process ASCII control characters except linefeed,
+			// as well as anything involving Ctrl, Meta and Alt,
+			// but do process extended keymaps
 			if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
 				// Blank the context
 				this.context = '';
