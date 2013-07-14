@@ -211,11 +211,11 @@
 
 			QUnit.expect( opt.tests.length );
 
-			if( opt.multiline && opt.inputType  === 'input' ) {
+			if ( opt.multiline && opt.inputType  === 'input' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
-			} else if( opt.inputType  === 'contenteditable' ) {
-				$input = $( '<div contenteditable=true>' );
+			} else if ( opt.inputType === 'contenteditable' ) {
+				$input = $( '<div contenteditable="true">' );
 			} else {
 				$input = $( '<input>' );
 			}

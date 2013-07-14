@@ -388,43 +388,52 @@
 			selection = document.body.createTextRange();
 			selection.moveToElementText( element );
 		}
+
 		return selection;
 	}
 
 	function replaceText( $element, replacement, start, end ) {
-		var element = $element.get( 0 ),
-			selection,
+		var selection,
 			length,
 			newLines,
 			scrollTop,
 			range,
 			correction,
-			textNode;
+			textNode,
+			element = $element.get( 0 );
 
 		if ( $element.attr( 'contenteditable' ) ) {
 			debug( 'Replacing at start and end: ' + start + ',' + end );
+
 			correction = setDivCaretPosition( element, {
 				start: start,
 				end: end
 			} );
+
 			selection = rangy.getSelection();
 			range = selection.getRangeAt( 0 );
+
 			if ( correction > 0 ) {
-				debug( 'Start Correction: ' + correction );
-				replacement = selection.toString().substring( 0, correction ) +replacement;
+				debug( 'Start correction: ' + correction );
+				replacement = selection.toString().substring( 0, correction ) + replacement;
 			}
+
 			textNode = document.createTextNode( replacement );
 			range.deleteContents();
 			range.insertNode( textNode );
 			range.commonAncestorContainer.normalize();
+
 			start = end = start + replacement.length - correction;
+
 			correction = setDivCaretPosition( element, {
 				start: start,
 				end: start
 			} );
+
 			if ( correction > 0 ) {
-				debug( 'still Correction: ' + correction );
+				debug( 'More correction: ' + correction );
 			}
+
 			return;
 		}
 
@@ -436,8 +445,10 @@
 			// But for complex scripts, browsers place cursor in unexpected places
 			// and it's not possible to fix cursor programmatically.
 			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) + replacement
-					+ element.value.substring( end, element.value.length );
+			element.value = element.value.substring( 0, start ) +
+				replacement +
+				element.value.substring( end, element.value.length );
+
 			// restore scroll
 			element.scrollTop = scrollTop;
 			// set selection
@@ -509,10 +520,10 @@
 	 * many characters had to go back to place the cursor
 	 */
 	function setDivCaretPosition( element , position ) {
-		var charIndex = 0,
-			i,
+		var i,
 			len,
 			nextCharIndex,
+			charIndex = 0,
 			range = rangy.createRange(),
 			foundStart = false,
 			correction = 0,
@@ -523,14 +534,18 @@
 		function traverseTextNodes( node ) {
 			if ( node.nodeType === 3 ) {
 				nextCharIndex = charIndex + node.length;
+
 				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
 					range.setStart( node, position.start - charIndex );
 					foundStart = true;
 				}
+
 				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
 					range.setEnd( node, position.end - charIndex );
+
 					throw stop;
 				}
+
 				charIndex = nextCharIndex;
 			} else {
 				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
@@ -554,6 +569,7 @@
 			position.start -= 1; // go back one more position.
 			correction = 1 + setDivCaretPosition( element, position );
 		}
+
 		return correction;
 	}
 
