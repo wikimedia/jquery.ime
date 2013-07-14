@@ -10,10 +10,10 @@
 		author: 'Ghybu',
 		license: 'GPLv3',
 		version: '1.0',
+		contextLength: 1,
 		patterns: [
 			['ḧh', 'h', 'hh'],
-			['Ḧ(H|h)', 'h', 'H$1'],
-			['Ḧ(H|h)', 'H', 'H$1'],
+			['Ḧ(H|h)', '(H|h)', 'H$1'],
 
 			['ğ', 'ẍ'],
 			['ı', 'i'],
