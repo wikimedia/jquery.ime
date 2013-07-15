@@ -453,8 +453,11 @@
 					continue;
 				}
 
-				$languageItem = $( '<a>' ).attr( 'href', '#' ).text( language.autonym );
-				$language = $( '<li class="ime-lang">' ).attr( 'lang', languageCode );
+				$languageItem = $( '<a>' )
+					.attr( 'href', '#' )
+					.text( language.autonym )
+					.addClass( 'selectable-row-item' );
+				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
 			}
@@ -470,32 +473,41 @@
 		/**
 		 * Prepare input methods in menu for the given language code
 		 *
-		 * @param languageCode
+		 * @param {String} languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
 			var language = $.ime.languages[languageCode],
-				$imeList = this.$menu.find( '.ime-list' );
+				$imeList = this.$menu.find( '.ime-list' ),
+				imeSelector = this;
 
 			$imeList.empty();
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
-				var name = $.ime.sources[inputmethod].name,
-					$imeItem = $( '<a>' ).attr( 'href', '#' ).text( name ),
-					$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
+				var $imeItem, $inputMethod,
+					name = $.ime.sources[inputmethod].name;
 
-				$inputMethod
-					.append(
-						'<span class="ime-im-check">',
-						$imeItem
-					)
-					.addClass( 'ime-im' );
+				$imeItem = $( '<a>' )
+					.attr( 'href', '#' )
+					.text( name )
+					.addClass( 'selectable-row-item' );
+
+				$inputMethod = $( '<li>' )
+					.attr( 'data-ime-inputmethod', inputmethod )
+					.addClass( 'ime-im selectable-row' )
+					.append( '<span class="ime-im-check"></span>', $imeItem );
+
+				if ( imeSelector.options.helpHandler ) {
+					$inputMethod.append( imeSelector.options.helpHandler.call( imeSelector, inputmethod ) );
+				}
+
 				$imeList.append( $inputMethod );
 			} );
 		},
 
 		helpLink: function () {
-			return $( '<div class="ime-help-link">' )
+			return $( '<div class="ime-help-link selectable-row">' )
 				.append( $( '<a>' ).text( 'Help' )
+					.addClass( 'selectable-row-item' )
 					.attr( {
 						'href': 'http://github.com/wikimedia/jquery.ime',
 						'target': '_blank',
@@ -546,7 +558,7 @@
 	}
 
 	function toggleMenuItem() {
-		return $( '<div class="ime-disable">' ).append(
+		return $( '<div class="ime-disable selectable-row">' ).append(
 			$( '<span>' )
 				.attr( {
 					'class': 'ime-disable-link',
