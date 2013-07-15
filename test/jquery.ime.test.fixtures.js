@@ -233,6 +233,10 @@ var testFixtures = [
 	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
+			// The output is the LRM control character
+			{ input: [ [ '9', true ] ], output: '‎', description: 'Hebrew Alt-9 -> LRM' },
+			// The output is the RLM control character
+			{ input: [ [ '0', true ] ], output: '‏', description: 'Hebrew Alt-0 -> RLM' },
 			// The first case is a regular hyphen-minus ('-'), which is the same
 			// when it is pressed by itself without Alt.
 			// The second case is hyphen-minus with Alt, which produces the Hebrew
@@ -1139,7 +1143,11 @@ var testFixtures = [
 	},{
 		description: 'Marathi Phonetic test',
 		tests: [
-			{ input: '.', output: '।', description: 'Marathi phonetic . -> ।' },
+			{
+				input: 'sfpes deta.',
+				output: 'स्पेस देता.',
+				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
+			},
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
 		inputmethod: 'mr-phonetic'
