@@ -1,6 +1,12 @@
 ( function ( $ ) {
 	'use strict';
 
+	/**
+	 * @TODO: document
+	 * @param {Function} [options.helpHandler] Called for each input method row in the selector
+	 * @param {Object} options.helpHandler.imeSelector
+	 * @param {String} options.helpHandler.ime Id of the input method
+	 */
 	function IME( element, options ) {
 		this.$element = $( element );
 		// This needs to be delayed here since extending language list happens at DOM ready
@@ -310,7 +316,8 @@
 	// default options
 	$.ime.defaults = {
 		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
-		languages: [] // Languages to be used- by default all languages
+		languages: [], // Languages to be used- by default all languages
+		helpHandler: null // Called for each ime option in the menu
 	};
 
 	// private function for debugging
