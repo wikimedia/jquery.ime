@@ -1064,7 +1064,11 @@ var testFixtures = [
 	},{
 		description: 'Marathi Phonetic test',
 		tests: [
-			{ input: '.', output: '।', description: 'Marathi phonetic . -> ।' },
+			{
+				input: 'sfpes deta.',
+				output: 'स्पेस देता.',
+				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
+			},
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
 		inputmethod: 'mr-phonetic'
