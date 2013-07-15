@@ -7,7 +7,6 @@
 	background-image: linear-gradient(transparent, transparent), url('../images/ime-active.svg');
 	background-color: rgba(255,255,255,0.75);
 	background-position: left 3px center;
-	cursor: pointer;
 	height: 15px;
 	font-size: small;
 	padding: 2px 2px 1px 20px;
@@ -19,13 +18,15 @@
 	z-index: 9999;
 }
 
-div.imeselector:hover {
+.imeselector:hover {
 	box-shadow: 0 1px 3px 0 #565656;
 	border-top: none;
 	background-color: rgba(255,255,255,0.85);
 }
 
-.imeselector a {
+.imeselector a,
+.ime-disable {
+	cursor: pointer;
 	text-decoration: none;
 	outline: none;
 	color: #222222;
@@ -49,11 +50,7 @@ div.imeselector:hover {
 }
 
 span.ime-disable-link {
-	color: #222222;
-	line-height: 1em;
-	padding-top: 4px;
 	padding-left: 20px;
-	padding-bottom: 4px;
 	white-space: nowrap;
 }
 
@@ -110,7 +107,7 @@ span.ime-disable-shortcut {
 	text-align: left;
 }
 
-.imeselector-menu.ime-right {
+.imeselector-menu.right {
 	right: auto;
 }
 
@@ -133,7 +130,7 @@ span.ime-disable-shortcut {
 	top: -7px;
 }
 
-.imeselector-menu.ime-right:before {
+.imeselector-menu.right:before {
 	right: auto;
 	left: 9px;
 }
@@ -150,26 +147,26 @@ span.ime-disable-shortcut {
 }
 
 
-.imeselector-menu.ime-right:after {
+.imeselector-menu.right:after {
 	right: auto;
 	left: 10px;
 }
 
-.imeselector-menu.ime-position-top:before {
+.imeselector-menu.position-top:before {
 	border-bottom: 0 none;
 	border-top: 7px solid #888;
 	top: auto;
 	bottom: -7px;
 }
 
-.imeselector-menu.ime-position-top:after {
+.imeselector-menu.position-top:after {
 	border-bottom: 0 none;
 	border-top: 6px solid #FFFFFF;
 	top: auto;
 	bottom: -6px;
 }
 
-.imeselector-menu .ime-checked {
+.imeselector-menu .checked {
 	/* @embed */
 	background: url(../images/tick.png) left 4px center no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/tick.svg');
@@ -191,24 +188,26 @@ span.ime-disable-shortcut {
 	color: #000;
 }
 
-.imeselector-menu a {
+.imeselector-menu .selectable-row-item {
 	display: block;
 	padding-left: 20px;
 	padding-right: 20px;
-	clear: both;
 	font-weight: normal;
 	color: #333333;
 	outline: none;
 	white-space: nowrap;
+	position: relative;
 }
 
-.imeselector-menu li > a:hover {
-	text-decoration: none;
-	color: #ffffff;
-	background-color: #5089e8;
+.imeselector-menu .selectable-row {
+	cursor: pointer;
 }
 
-.ime-open {
+.imeselector-menu .selectable-row:hover {
+	background-color: #f0f0f0;
+}
+
+.open {
 	*z-index: 1000;
 	display: block;
 }
