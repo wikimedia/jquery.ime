@@ -2,11 +2,11 @@
  * Armenian typewriter layout
  * Based on only official state standard for Armenian keyboard layout http://www.sarm.am/en/standarts/view/5741
  *
- * This layout complies with Unicode 6.1, including all valid Armenian punctuation signs, 
- * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign. 
+ * This layout complies with Unicode 6.1, including all valid Armenian punctuation signs,
+ * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign.
  * Please, double-check with Unicode before making any changes here.
- *   
- * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key, 
+ *
+ * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key,
  * producing digits and punctuation marks from standard US keyboard layout.
  */
  
@@ -144,17 +144,17 @@
 			['\\=', '\='],
 			['\\+', '\+'],
 			['\\`', '\`'],
-			['\\~', '\~'],			
+			['\\~', '\~'],
 			['\\[', '\['],
 			['\\{', '\{'],
 			['\\]', '\]'],
 			['\\}', '\}'],
 			['\\\\', '\\'],
-			['\\|', '\|'],			
+			['\\|', '\|'],
 			[';', ';'],
 			['\\:', '\:'],
 			['\'', '\''],
-			['\"', '\"'],			
+			['\"', '\"'],
 			['\\<', '\<'],
 			['\\.', '\.'],
 			['\\>', '\>'],

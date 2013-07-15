@@ -3,11 +3,11 @@
  * Original layout was created in late 90-ies based on Unicode 3, and was never updated since release,
  * causing it to be incompatible with Unicode.
  *
- * This layout version complies with Unicode 6.1, including all valid Armenian punctuation signs, 
- * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign under USD sign (Shift + 4). 
+ * This layout version complies with Unicode 6.1, including all valid Armenian punctuation signs,
+ * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign under USD sign (Shift + 4).
  * Please, double-check with Unicode before making any changes here.
- *   
- * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key, 
+ *
+ * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key,
  * producing digits and punctuation marks from standard US keyboard layout.
  */
 
@@ -145,17 +145,17 @@
 			['\\=', '\='],
 			['\\+', '\+'],
 			['\\`', '\`'],
-			['\\~', '\~'],			
+			['\\~', '\~'],
 			['\\[', '\['],
 			['\\{', '\{'],
 			['\\]', '\]'],
 			['\\}', '\}'],
 			['\\\\', '\\'],
-			['\\|', '\|'],			
+			['\\|', '\|'],
 			[';', ';'],
 			['\\:', '\:'],
 			['\'', '\''],
-			['\"', '\"'],			
+			['\"', '\"'],
 			['\\<', '\<'],
 			['\\.', '\.'],
 			['\\>', '\>'],

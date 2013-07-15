@@ -2,13 +2,13 @@
  * This is phonetic layout for Armenian language (hy, arm, hye). 
  * Layout comes from DOS times, and was later popularised by KDWin and WinKeys keyboard "drivers"
  * While not as effecient and well thought as official typewriter layout, it is very popular as 
- * it uses similary sounding latin letters which is very handy, as keybords in Armenia 
+ * it uses similary sounding latin letters which is very handy, as keybords in Armenia
  * don't come engraved with Armenian letters.
  *
- * This layout complies with Unicode 6.1, including all valid Armenian punctuation signs, 
- * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign. 
+ * This layout complies with Unicode 6.1, including all valid Armenian punctuation signs,
+ * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign.
  * Please, double-check with Unicode before making any changes here.
- *   
+ *
  * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key, 
  * producing digits and punctuation marks from standard US keyboard layout.
  */
@@ -149,17 +149,17 @@
 			['\\=', '\='],
 			['\\+', '\+'],
 			['\\`', '\`'],
-			['\\~', '\~'],			
+			['\\~', '\~'],
 			['\\[', '\['],
 			['\\{', '\{'],
 			['\\]', '\]'],
 			['\\}', '\}'],
 			['\\\\', '\\'],
-			['\\|', '\|'],			
+			['\\|', '\|'],
 			[';', ';'],
 			['\\:', '\:'],
 			['\'', '\''],
-			['\"', '\"'],			
+			['\"', '\"'],
 			['\\<', '\<'],
 			['\\.', '\.'],
 			['\\>', '\>'],
