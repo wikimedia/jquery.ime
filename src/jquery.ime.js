@@ -118,9 +118,12 @@
 			// Get the last few characters before the one the user just typed,
 			// to provide context for the transliteration regexes.
 			// We need to append c because it hasn't been added to $this.val() yet
-			input = this.lastNChars( this.$element.val() || this.$element.text(), startPos,
-					this.inputmethod.maxKeyLength )
-					+ c;
+			input = this.lastNChars(
+				this.$element.val() || this.$element.text(),
+				startPos,
+				this.inputmethod.maxKeyLength
+			);
+			input += c;
 
 			replacement = this.transliterate( input, this.context, altGr );
 
@@ -129,8 +132,9 @@
 
 			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring( this.context.length
-						- this.inputmethod.contextLength );
+				this.context = this.context.substring(
+					this.context.length - this.inputmethod.contextLength
+				);
 			}
 
 			// If replacement equals to input, no replacement is made, because
@@ -149,6 +153,7 @@
 			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
 
 			e.stopPropagation();
+
 			return false;
 		},
 
@@ -441,6 +446,8 @@
 			// IE9+ and all other browsers
 			scrollTop = element.scrollTop;
 
+			// Replace the whole text of the text area:
+			// text before + replacement + text after.
 			// This could be made better if range selection worked on browsers.
 			// But for complex scripts, browsers place cursor in unexpected places
 			// and it's not possible to fix cursor programmatically.
@@ -482,18 +489,24 @@
 			sel = rangy.getSelection();
 
 		function traverseTextNodes( node, range ) {
-			if ( node.nodeType === 3 ) {
+			var i, childNodesCount;
+
+			if ( node.nodeType === Node.TEXT_NODE ) {
 				if ( !foundStart && node === range.startContainer ) {
 					start = charIndex + range.startOffset;
 					foundStart = true;
 				}
+
 				if ( foundStart && node === range.endContainer ) {
 					end = charIndex + range.endOffset;
 					throw stop;
 				}
+
 				charIndex += node.length;
 			} else {
-				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+				childNodesCount = node.childNodes.length;
+
+				for ( i = 0; i < childNodesCount; ++i ) {
 					traverseTextNodes( node.childNodes[i], range );
 				}
 			}
@@ -502,14 +515,14 @@
 		if ( sel.rangeCount ) {
 			try {
 				traverseTextNodes( element, sel.getRangeAt( 0 ) );
-			} catch (ex) {
+			} catch ( ex ) {
 				if ( ex !== stop ) {
 					throw ex;
 				}
 			}
 		}
 
-		return [start, end];
+		return [ start, end ];
 	}
 
 	/**
