@@ -96,9 +96,9 @@
 				altGr = true;
 			}
 
-			// Don't process ASCII control characters (except linefeed),
-			// as well as anything involving
-			// Alt (except for extended keymaps), Ctrl and Meta
+			// Don't process ASCII control characters except linefeed,
+			// as well as anything involving Ctrl, Meta and Alt,
+			// but do process extended keymaps
 			if ( ( e.which < 32 && e.which !== 13 && !altGr ) || e.ctrlKey || e.metaKey ) {
 				// Blank the context
 				this.context = '';
@@ -118,9 +118,11 @@
 			// Get the last few characters before the one the user just typed,
 			// to provide context for the transliteration regexes.
 			// We need to append c because it hasn't been added to $this.val() yet
-			input = this.lastNChars( this.$element.val() || this.$element.text(), startPos,
-					this.inputmethod.maxKeyLength )
-					+ c;
+			input = this.lastNChars(
+				this.$element.val() || this.$element.text(),
+				startPos,
+				this.inputmethod.maxKeyLength
+			) + c;
 
 			replacement = this.transliterate( input, this.context, altGr );
 
@@ -129,8 +131,9 @@
 
 			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring( this.context.length
-						- this.inputmethod.contextLength );
+				this.context = this.context.substring(
+					this.context.length - this.inputmethod.contextLength
+				);
 			}
 
 			// If replacement equals to input, no replacement is made, because
@@ -469,7 +472,7 @@
 		}
 	}
 
-	function arrayKeys ( obj ) {
+	function arrayKeys( obj ) {
 		var rv = [];
 		$.each( obj, function ( key ) {
 			rv.push( key );
