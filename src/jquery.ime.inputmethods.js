@@ -581,7 +581,7 @@
 		},
 		'de': {
 			autonym: 'Deutsch',
-			inputmethods: [ 'de' ]
+			inputmethods: [ 'de-transliteration' ]
 		},
 		'doi': {
 			autonym: 'डोगरी',
