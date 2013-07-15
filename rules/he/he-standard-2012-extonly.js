@@ -43,6 +43,8 @@
 			['5', '°'],           // Degree
 			['6', '֫'],           // Ole
 			['8', '×'],           // Multiplication
+			['9', '\u200e'],      // LRM
+			['0', '\u200f'],      // RLM
 			['\\.', '÷'],         // Division
 
 			['\u05D8', 'װ'],      // Double vav, ט
