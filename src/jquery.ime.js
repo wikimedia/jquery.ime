@@ -118,9 +118,12 @@
 			// Get the last few characters before the one the user just typed,
 			// to provide context for the transliteration regexes.
 			// We need to append c because it hasn't been added to $this.val() yet
-			input = this.lastNChars( this.$element.val() || this.$element.text(), startPos,
-					this.inputmethod.maxKeyLength )
-					+ c;
+			input = this.lastNChars(
+				this.$element.val() || this.$element.text(),
+				startPos,
+				this.inputmethod.maxKeyLength
+			);
+			input += c;
 
 			replacement = this.transliterate( input, this.context, altGr );
 
@@ -129,8 +132,9 @@
 
 			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring( this.context.length
-						- this.inputmethod.contextLength );
+				this.context = this.context.substring(
+					this.context.length - this.inputmethod.contextLength
+				);
 			}
 
 			// If replacement equals to input, no replacement is made, because
@@ -149,6 +153,7 @@
 			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
 
 			e.stopPropagation();
+
 			return false;
 		},
 
@@ -398,29 +403,32 @@
 			selection = document.body.createTextRange();
 			selection.moveToElementText( element );
 		}
+
 		return selection;
 	}
 
 	function replaceText( $element, replacement, start, end ) {
-		var element = $element.get( 0 ),
-			selection,
+		var selection,
 			length,
 			newLines,
 			scrollTop,
 			range,
 			correction,
-			textNode;
+			textNode,
+			element = $element.get( 0 );
 
 		if ( $element.attr( 'contenteditable' ) ) {
 			correction = setCaretPosition( $element, {
 				start: start,
 				end: end
 			} );
+
 			selection = rangy.getSelection();
 			range = selection.getRangeAt( 0 );
 			if ( correction[0] > 0 ) {
 				replacement = selection.toString().substring( 0, correction[0] ) +replacement;
 			}
+
 			textNode = document.createTextNode( replacement );
 			range.deleteContents();
 			range.insertNode( textNode );
@@ -437,12 +445,16 @@
 			// IE9+ and all other browsers
 			scrollTop = element.scrollTop;
 
+			// Replace the whole text of the text area:
+			// text before + replacement + text after.
 			// This could be made better if range selection worked on browsers.
 			// But for complex scripts, browsers place cursor in unexpected places
 			// and it's not possible to fix cursor programmatically.
 			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) + replacement
-					+ element.value.substring( end, element.value.length );
+			element.value = element.value.substring( 0, start ) +
+				replacement +
+				element.value.substring( end, element.value.length );
+
 			// restore scroll
 			element.scrollTop = scrollTop;
 			// set selection
@@ -476,18 +488,24 @@
 			sel = rangy.getSelection();
 
 		function traverseTextNodes( node, range ) {
-			if ( node.nodeType === 3 ) {
+			var i, childNodesCount;
+
+			if ( node.nodeType === Node.TEXT_NODE ) {
 				if ( !foundStart && node === range.startContainer ) {
 					start = charIndex + range.startOffset;
 					foundStart = true;
 				}
+
 				if ( foundStart && node === range.endContainer ) {
 					end = charIndex + range.endOffset;
 					throw stop;
 				}
+
 				charIndex += node.length;
 			} else {
-				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+				childNodesCount = node.childNodes.length;
+
+				for ( i = 0; i < childNodesCount; ++i ) {
 					traverseTextNodes( node.childNodes[i], range );
 				}
 			}
@@ -496,14 +514,14 @@
 		if ( sel.rangeCount ) {
 			try {
 				traverseTextNodes( element, sel.getRangeAt( 0 ) );
-			} catch (ex) {
+			} catch ( ex ) {
 				if ( ex !== stop ) {
 					throw ex;
 				}
 			}
 		}
 
-		return [start, end];
+		return [ start, end ];
 	}
 
 	function setCaretPosition( $element, position ) {
@@ -548,6 +566,7 @@
 	function setDivCaretPosition( element, position ) {
 		var charIndex = 0,
 			nextCharIndex,
+			charIndex = 0,
 			range = rangy.createRange(),
 			foundStart = false,
 			stop = {};
@@ -557,14 +576,18 @@
 		function traverseTextNodes( node ) {
 			if ( node.nodeType === 3 ) {
 				nextCharIndex = charIndex + node.length;
+
 				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
 					range.setStart( node, position.start - charIndex );
 					foundStart = true;
 				}
+
 				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
 					range.setEnd( node, position.end - charIndex );
+
 					throw stop;
 				}
+
 				charIndex = nextCharIndex;
 			} else {
 				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
