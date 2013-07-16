@@ -317,11 +317,11 @@
 			source: 'rules/ks/ks-kbd.js'
 		},
 		'ku-h': {
-			name: 'Kurdî / Kurdkî h',
+			name: 'Ku h',
 			source: 'rules/ku/ku-h.js'
 		},
 		'ku-tr': {
-			name: 'Kurdî / Kurdkî tr',
+			name: 'Ku tr',
 			source: 'rules/ku/ku-tr.js'
 		},
 		'lo-kbd': {
@@ -606,6 +606,10 @@
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
+		},
+		'diq': {
+			autonym: 'Kirdkî',
+			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'doi': {
 			autonym: 'डोगरी',
