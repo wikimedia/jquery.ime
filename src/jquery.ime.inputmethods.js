@@ -700,7 +700,7 @@
 			inputmethods: [ 'ber-tfng' ]
 		},
 		'ku': {
-			autonym: 'Kurdî / Kurdkî',
+			autonym: 'Kurdî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'lbe': {
