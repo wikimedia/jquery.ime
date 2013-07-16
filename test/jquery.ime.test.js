@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME, imeTest, typeChars;
+	var $textarea, textareaIME, imeTest, typeChars, caretTests;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -184,6 +184,36 @@
 		setLanguageResult = textareaIME.setLanguage( 'ru' );
 		assert.strictEqual( setLanguageResult, true, 'Setting a valid language returns true' );
 		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
+	} );
+
+	function caretTest( text, start, end ) {
+		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+			var $ced = $( '<div contenteditable="true">' ),
+				correction,
+				position,
+				ime;
+
+			$( '#qunit-fixture' ).append( $ced );
+			$ced.ime();
+			ime = $ced.data( 'ime' );
+
+			$ced.html( text );
+			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
+			position = ime.getCaretPosition( $ced );
+			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
+		} );
+	}
+
+	caretTests = [
+		['ക്', 0, 0],
+		['ക്', 1, 1],
+		['ന്ത്', 1, 3],
+		['ന്ത്', 1, 4],
+		['ക്ത്ര', 1, 4]
+	];
+
+	$.each( caretTests, function( i, test ) {
+		caretTest( test[0], test[1], test[2] );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {

@@ -236,6 +236,16 @@
 		},
 
 		/**
+		 * Set the caret position in the div.
+		 * @param {Element} element The content editable div element
+		 * @param {number} position an object with start and end properties.
+		 * @return {number} If the cursor could not be placed at given position, how
+		 * many characters had to go back to place the cursor
+		 */
+		setCaretPosition: function ( $element, position ) {
+			return setCaretPosition( $element, position );
+		},
+		/**
 		 * Find the point at which a and b diverge, i.e. the first position
 		 * at which they don't have matching characters.
 		 *
@@ -402,29 +412,24 @@
 			textNode;
 
 		if ( $element.attr( 'contenteditable' ) ) {
-			debug( 'Replacing at start and end: ' + start + ',' + end );
-			correction = setDivCaretPosition( element, {
+			correction = setCaretPosition( $element, {
 				start: start,
 				end: end
 			} );
 			selection = rangy.getSelection();
 			range = selection.getRangeAt( 0 );
-			if ( correction > 0 ) {
-				debug( 'Start Correction: ' + correction );
-				replacement = selection.toString().substring( 0, correction ) +replacement;
+			if ( correction[0] > 0 ) {
+				replacement = selection.toString().substring( 0, correction[0] ) +replacement;
 			}
 			textNode = document.createTextNode( replacement );
 			range.deleteContents();
 			range.insertNode( textNode );
 			range.commonAncestorContainer.normalize();
-			start = end = start + replacement.length - correction;
-			correction = setDivCaretPosition( element, {
+			start = end = start + replacement.length - correction[0];
+			correction = setCaretPosition( $element, {
 				start: start,
-				end: start
+				end: end
 			} );
-			if ( correction > 0 ) {
-				debug( 'still Correction: ' + correction );
-			}
 			return;
 		}
 
@@ -501,6 +506,38 @@
 		return [start, end];
 	}
 
+	function setCaretPosition( $element, position ) {
+		var currentPosition,
+			startCorrection = 0,
+			endCorrection = 0,
+			element = $element[0];
+
+		setDivCaretPosition( element, position );
+		currentPosition = getDivCaretPosition( element );
+		// see Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+		while ( position.start !== currentPosition[0] ) {
+			position.start -= 1; // go back one more position.
+			if ( position.start < 0 ) {
+				// never go beyond 0
+				break;
+			}
+			setDivCaretPosition( element, position );
+			currentPosition = getDivCaretPosition( element );
+			startCorrection += 1;
+		}
+		while ( position.end !== currentPosition[1] ) {
+			position.end += 1; // go forward one more position.
+			setDivCaretPosition( element, position );
+			currentPosition = getDivCaretPosition( element );
+			endCorrection += 1;
+			if ( endCorrection > 10 ) {
+				// XXX avoid rare case of infinite loop here.
+				break;
+			}
+		}
+		return [startCorrection, endCorrection];
+	}
+
 	/**
 	 * Set the caret position in the div.
 	 * @param {Element} element The content editable div element
@@ -508,14 +545,11 @@
 	 * @return {number} If the cursor could not be placed at given position, how
 	 * many characters had to go back to place the cursor
 	 */
-	function setDivCaretPosition( element , position ) {
+	function setDivCaretPosition( element, position ) {
 		var charIndex = 0,
-			i,
-			len,
 			nextCharIndex,
 			range = rangy.createRange(),
 			foundStart = false,
-			correction = 0,
 			stop = {};
 
 		range.collapseToPoint( element, 0 );
@@ -533,7 +567,7 @@
 				}
 				charIndex = nextCharIndex;
 			} else {
-				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
+				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
 					traverseTextNodes( node.childNodes[i] );
 				}
 			}
@@ -548,13 +582,6 @@
 				throw ex;
 			}
 		}
-
-		// see Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-		if ( position.start !== getDivCaretPosition( element )[0] ) {
-			position.start -= 1; // go back one more position.
-			correction = 1 + setDivCaretPosition( element, position );
-		}
-		return correction;
 	}
 
 	/**
