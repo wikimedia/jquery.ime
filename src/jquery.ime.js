@@ -644,10 +644,8 @@
 	}
 
 	function arrayKeys ( obj ) {
-		var rv = [];
-		$.each( obj, function ( key ) {
-			rv.push( key );
+		return 	$.map( obj, function( element, index ) {
+			return index;
 		} );
-		return rv;
 	}
 }( jQuery ) );
