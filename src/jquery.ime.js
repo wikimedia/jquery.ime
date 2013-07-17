@@ -484,6 +484,7 @@
 			start = 0,
 			end = 0,
 			foundStart = false,
+			foundEnd = false,
 			stop = {},
 			sel = rangy.getSelection();
 
@@ -498,7 +499,7 @@
 
 				if ( foundStart && node === range.endContainer ) {
 					end = charIndex + range.endOffset;
-					throw stop;
+					foundEnd = true;
 				}
 
 				charIndex += node.length;
@@ -507,18 +508,15 @@
 
 				for ( i = 0; i < childNodesCount; ++i ) {
 					traverseTextNodes( node.childNodes[i], range );
+					if ( foundEnd ) {
+						break;
+					}
 				}
 			}
 		}
 
 		if ( sel.rangeCount ) {
-			try {
-				traverseTextNodes( element, sel.getRangeAt( 0 ) );
-			} catch ( ex ) {
-				if ( ex !== stop ) {
-					throw ex;
-				}
-			}
+			traverseTextNodes( element, sel.getRangeAt( 0 ) );
 		}
 
 		return [ start, end ];
@@ -560,8 +558,6 @@
 	 * Set the caret position in the div.
 	 * @param {Element} element The content editable div element
 	 * @param {number} position an object with start and end properties.
-	 * @return {number} If the cursor could not be placed at given position, how
-	 * many characters had to go back to place the cursor
 	 */
 	function setDivCaretPosition( element, position ) {
 		var charIndex = 0,
@@ -569,11 +565,14 @@
 			charIndex = 0,
 			range = rangy.createRange(),
 			foundStart = false,
+			foundEnd = false,
 			stop = {};
 
 		range.collapseToPoint( element, 0 );
 
 		function traverseTextNodes( node ) {
+			var i, len;
+
 			if ( node.nodeType === 3 ) {
 				nextCharIndex = charIndex + node.length;
 
@@ -584,27 +583,23 @@
 
 				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
 					range.setEnd( node, position.end - charIndex );
-
-					throw stop;
+					foundEnd = true;
 				}
 
 				charIndex = nextCharIndex;
 			} else {
-				for ( var i = 0, len = node.childNodes.length; i < len; ++i ) {
+				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
 					traverseTextNodes( node.childNodes[i] );
+					if ( foundEnd ) {
+						rangy.getSelection().setSingleRange( range );
+						break;
+					}
 				}
 			}
 		}
 
-		try {
-			traverseTextNodes( element );
-		} catch ( ex ) {
-			if ( ex === stop ) {
-				rangy.getSelection().setSingleRange( range );
-			} else {
-				throw ex;
-			}
-		}
+		traverseTextNodes( element );
+
 	}
 
 	/**
