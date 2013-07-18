@@ -344,7 +344,7 @@
 			newLines,
 			endRange;
 
-		if ( $element.attr( 'contenteditable' ) ) {
+		if ( $element.is( '[contenteditable]' ) ) {
 			return getDivCaretPosition( el );
 		}
 
@@ -417,7 +417,7 @@
 			textNode,
 			element = $element.get( 0 );
 
-		if ( $element.attr( 'contenteditable' ) ) {
+		if ( $element.is( '[contenteditable]' ) ) {
 			correction = setCaretPosition( $element, {
 				start: start,
 				end: end
