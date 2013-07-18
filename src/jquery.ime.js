@@ -425,8 +425,9 @@
 
 			selection = rangy.getSelection();
 			range = selection.getRangeAt( 0 );
+
 			if ( correction[0] > 0 ) {
-				replacement = selection.toString().substring( 0, correction[0] ) +replacement;
+				replacement = selection.toString().substring( 0, correction[0] ) + replacement;
 			}
 
 			textNode = document.createTextNode( replacement );
@@ -434,10 +435,11 @@
 			range.insertNode( textNode );
 			range.commonAncestorContainer.normalize();
 			start = end = start + replacement.length - correction[0];
-			correction = setCaretPosition( $element, {
+			setCaretPosition( $element, {
 				start: start,
 				end: end
 			} );
+
 			return;
 		}
 
@@ -541,6 +543,7 @@
 			currentPosition = getDivCaretPosition( element );
 			startCorrection += 1;
 		}
+
 		while ( position.end !== currentPosition[1] ) {
 			position.end += 1; // go forward one more position.
 			setDivCaretPosition( element, position );
@@ -551,6 +554,7 @@
 				break;
 			}
 		}
+
 		return [startCorrection, endCorrection];
 	}
 
