@@ -302,7 +302,8 @@
 	 * and boolean altKey value
 	 */
 	typeChars = function ( $input, characters ) {
-		var i, character, altKeyValue, code, event, eventResult,
+		var i, character, altKeyValue, code, event, replacementSkipped, textEnd,
+			ime = $input.data( 'ime' ),
 			contentEditable = $input.is( '[contenteditable]' ),
 			len = characters.length;
 
@@ -331,11 +332,16 @@
 				altKey: altKeyValue
 			} );
 
-			eventResult = $input.triggerHandler( event );
+			replacementSkipped = $input.triggerHandler( event );
 
-			if ( eventResult ) {
+			if ( replacementSkipped ) {
 				if ( contentEditable ) {
 					$input.text( $input.text() + character );
+					textEnd = $input.text().length;
+					ime.setCaretPosition( $input, {
+						start: textEnd,
+						end: textEnd
+					} );
 				} else {
 					$input.val( $input.val() + character );
 				}
