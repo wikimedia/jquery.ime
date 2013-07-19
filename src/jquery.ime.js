@@ -208,35 +208,34 @@
 			return this.language;
 		},
 
-		load: function ( name, callback ) {
+		/**
+		 * load an input method by given id
+		 * @param {string} inputmethodId
+		 * @return {jQuery.Promise}
+		 */
+		load: function ( inputmethodId ) {
 			var ime = this,
+				deferred = $.Deferred(),
 				dependency;
 
-			if ( $.ime.inputmethods[name] ) {
-				if ( callback ) {
-					callback.call( ime );
-				}
-
-				return true;
+			if ( $.ime.inputmethods[inputmethodId] ) {
+				return deferred.resolve();
 			}
 
-			dependency = $.ime.sources[name].depends;
+			dependency = $.ime.sources[inputmethodId].depends;
 			if ( dependency ) {
-				this.load( dependency ) ;
+				return $.when( this.load( dependency ), this.load( inputmethodId ) );
 			}
 
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				debug( name + ' loaded' );
-
-				if ( callback ) {
-					callback.call( ime );
-				}
+			deferred = $.getScript(
+				ime.options.imePath + $.ime.sources[inputmethodId].source
+			).done( function () {
+				debug( inputmethodId + ' loaded' );
 			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+				debug( 'Error in loading inputmethod ' + inputmethodId + ' Exception: ' + exception );
 			} );
+
+			return deferred.promise();
 		},
 
 		// Returns an array [start, end] of the beginning
