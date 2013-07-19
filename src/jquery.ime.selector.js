@@ -396,7 +396,7 @@
 				ime.enable();
 				ime.setIM( inputmethodId );
 				imeselector.$imeSetting.find( 'a.ime-name' ).text(
-					imeselector.inputmethod.name
+					$.ime.sources[inputmethodId].name
 				);
 
 				imeselector.position();
