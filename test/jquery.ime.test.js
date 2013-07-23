@@ -59,7 +59,7 @@
 		assert.strictEqual( textareaIME.isActive(), true, 'selector is active after enabling' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
 			selector.selectIM( 'hi-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
@@ -70,7 +70,7 @@
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-transliteration', function () {
+		textareaIME.load( 'ta-transliteration' ).done( function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration',
@@ -79,7 +79,7 @@
 		} );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-bamini', function () {
+		textareaIME.load( 'ta-bamini' ).done( function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-bamini' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
@@ -94,7 +94,7 @@
 			'Default inputmethod for Kannada is system' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
 			textareaIME.enable();
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
@@ -225,7 +225,7 @@
 
 			ime = $input.data( 'ime' );
 
-			ime.load( opt.inputmethod, function () {
+			ime.load( opt.inputmethod ).done( function () {
 				var i;
 
 				ime.setIM( opt.inputmethod );

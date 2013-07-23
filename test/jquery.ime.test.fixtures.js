@@ -208,7 +208,7 @@ var testFixtures = [
 			{ input: '~O', output: 'Ö', description: 'German Ö' },
 			{ input: '~s', output: 'ß', description: 'German ß' }
 		],
-		inputmethod: 'de'
+		inputmethod: 'de-transliteration'
 	},{
 		description: 'Gujarati Transliteration',
 		tests: [

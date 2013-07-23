@@ -2,7 +2,7 @@
 	'use strict';
 
 	/**
-	 * @TODO: document
+	 * IME Class
 	 * @param {Function} [options.helpHandler] Called for each input method row in the selector
 	 * @param {Object} options.helpHandler.imeSelector
 	 * @param {String} options.helpHandler.ime Id of the input method
@@ -23,6 +23,9 @@
 	IME.prototype = {
 		constructor: IME,
 
+		/**
+		 * Listen for events and bind to handlers
+		 */
 		listen: function () {
 			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
 			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
@@ -34,10 +37,10 @@
 		 * Transliterate a given string input based on context and input method definition.
 		 * If there are no matching rules defined, returns the original string.
 		 *
-		 * @param input
-		 * @param context
-		 * @param altGr bool whether altGr key is pressed or not
-		 * @returns String transliterated string
+		 * @param {string} input
+		 * @param {string} context
+		 * @param {boolean} altGr whether altGr key is pressed or not
+		 * @returns {string} transliterated string
 		 */
 		transliterate: function ( input, context, altGr ) {
 			var patterns, regex, rule, replacement, i;
@@ -79,6 +82,11 @@
 			return input;
 		},
 
+		/**
+		 * Keypress handler
+		 * @param {jQuery.Event} e Event
+		 * @returns {Boolean}
+		 */
 		keypress: function ( e ) {
 			var altGr = false,
 				c, startPos, pos, endPos, divergingPos, input, replacement;
@@ -161,37 +169,66 @@
 			return false;
 		},
 
+		/**
+		 * Check whether the input method is active or not
+		 * @returns {Boolean}
+		 */
 		isActive: function () {
 			return this.active;
 		},
 
+		/**
+		 * Disable the input method
+		 */
 		disable: function () {
 			this.active = false;
 			$.ime.preferences.setIM( 'system' );
 		},
 
+		/**
+		 * Enable the input method
+		 */
 		enable: function () {
 			this.active = true;
 		},
 
+		/**
+		 * Toggle the active state of input method
+		 */
 		toggle: function () {
 			this.active = !this.active;
 		},
 
+		/**
+		 * Destroy the binding of ime to the editable element
+		 */
 		destroy: function () {
 			$( 'body' ).off( '.ime' );
 			this.$element.off( '.ime' ).removeData( 'ime' ).removeData( 'imeselector' );
 		},
 
+		/**
+		 * Get the current input method
+		 * @returns {string} Current input method id
+		 */
 		getIM: function () {
 			return this.inputmethod;
 		},
 
+		/**
+		 * Set the current input method
+		 * @param {string} inputmethodId
+		 */
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
 			$.ime.preferences.setIM( inputmethodId );
 		},
 
+		/**
+		 * Set the current Language
+		 * @param {string} languageCode
+		 * @returns {Boolean}
+		 */
 		setLanguage: function ( languageCode ) {
 			if ( !$.ime.languages[languageCode] ) {
 				debug( 'Language ' + languageCode + ' is not known to jquery.ime.' );
@@ -204,43 +241,49 @@
 			return true;
 		},
 
+		/**
+		 * Get current language
+		 * @returns {string}
+		 */
 		getLanguage: function () {
 			return this.language;
 		},
 
-		load: function ( name, callback ) {
+		/**
+		 * load an input method by given id
+		 * @param {string} inputmethodId
+		 * @return {jQuery.Promise}
+		 */
+		load: function ( inputmethodId ) {
 			var ime = this,
+				deferred = $.Deferred(),
 				dependency;
 
-			if ( $.ime.inputmethods[name] ) {
-				if ( callback ) {
-					callback.call( ime );
-				}
-
-				return true;
+			if ( $.ime.inputmethods[inputmethodId] ) {
+				return deferred.resolve();
 			}
 
-			dependency = $.ime.sources[name].depends;
+			dependency = $.ime.sources[inputmethodId].depends;
 			if ( dependency ) {
-				this.load( dependency ) ;
+				return $.when( this.load( dependency ), this.load( inputmethodId ) );
 			}
 
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				debug( name + ' loaded' );
-
-				if ( callback ) {
-					callback.call( ime );
-				}
+			deferred = $.getScript(
+				ime.options.imePath + $.ime.sources[inputmethodId].source
+			).done( function () {
+				debug( inputmethodId + ' loaded' );
 			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+				debug( 'Error in loading inputmethod ' + inputmethodId + ' Exception: ' + exception );
 			} );
+
+			return deferred.promise();
 		},
 
-		// Returns an array [start, end] of the beginning
-		// and the end of the current selection in $element
+		/**
+		 * Returns an array [start, end] of the beginning
+		 * and the end of the current selection in $element
+		 * @returns {Array}
+		 */
 		getCaretPosition: function ( $element ) {
 			return getCaretPosition( $element );
 		},
@@ -271,6 +314,10 @@
 		}
 	};
 
+	/**
+	 * jQuery plugin ime
+	 * @param {Object} option
+	 */
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
 			var data,
@@ -320,15 +367,19 @@
 		helpHandler: null // Called for each ime option in the menu
 	};
 
-	// private function for debugging
+	/**
+	 * private function for debugging
+	 */
 	function debug( $obj ) {
 		if ( window.console && window.console.log ) {
 			window.console.log( $obj );
 		}
 	}
 
-	// Returns an array [start, end] of the beginning
-	// and the end of the current selection in $element
+	/**
+	 * Returns an array [start, end] of the beginning
+	 * and the end of the current selection in $element
+	 */
 	function getCaretPosition( $element ) {
 		var el = $element.get( 0 ),
 			start = 0,

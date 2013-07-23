@@ -390,13 +390,13 @@
 				return;
 			}
 
-			ime.load( inputmethodId, function () {
+			ime.load( inputmethodId ).done( function () {
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
 				imeselector.hide();
 				ime.enable();
 				ime.setIM( inputmethodId );
 				imeselector.$imeSetting.find( 'a.ime-name' ).text(
-					imeselector.inputmethod.name
+					$.ime.sources[inputmethodId].name
 				);
 
 				imeselector.position();
