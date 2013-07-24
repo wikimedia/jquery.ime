@@ -25,7 +25,8 @@ module.exports = function ( grunt ) {
 					'src/jquery.ime.js',
 					'src/jquery.ime.selector.js',
 					'src/jquery.ime.preferences.js',
-					'src/jquery.ime.inputmethods.js'
+					'src/jquery.ime.inputmethods.js',
+					'src/rangy/rangy-core.js'
 				],
 				dest: 'dist/jquery.ime/<%= pkg.name %>.js'
 			}
@@ -40,7 +41,9 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.js',
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
-						'src/jquery.ime.inputmethods.js' ]
+						'src/jquery.ime.inputmethods.js',
+						'src/rangy/rangy-core.js'
+					]
 				}
 			}
 		},
