@@ -194,7 +194,26 @@
 		}
 	} );
 
-	// testFixtures is defined in jquery.ime.test.fixtures.js
+	$.each( $.ime.sources, function( inputmethodId ) {
+		var inputmethod = $.ime.sources[inputmethodId];
+		QUnit.test( 'Input method rules file test for input method ' + inputmethod.name, function() {
+			var ime,
+				$input = $( '<input>' );
+
+			$input.attr( { id: inputmethodId, type: 'text' } );
+			$input.appendTo( '#qunit-fixture' );
+			$input.ime();
+			$input.focus();
+			ime = $input.data( 'ime' );
+			QUnit.expect( 1 );
+			QUnit.stop();
+			ime.load( inputmethodId ).done( function () {
+				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for '+ inputmethodId + ' exist and loaded correctly.' );
+				QUnit.start();
+			} );
+		} );
+	} );
+
 	$.each( $.ime.languages, function( language ) {
 		var language = $.ime.languages[language];
 		QUnit.test( 'Input method rules test for language ' + language.autonym, function() {
