@@ -208,7 +208,7 @@
 		QUnit.test( opt.description, function() {
 			var ime, $input;
 
-			QUnit.expect( opt.tests.length );
+			QUnit.expect( opt.tests.length + 1 );
 
 			if( opt.multiline ) {
 				$input = $( '<textarea>' );
@@ -226,11 +226,15 @@
 			ime = $input.data( 'ime' );
 
 			ime.load( opt.inputmethod ).done( function () {
-				var i;
+				var i, imeSelector, imesettingLabel;
 
-				ime.setIM( opt.inputmethod );
+				imeSelector = $input.data( 'imeselector' );
+				imeSelector.selectIM( opt.inputmethod );
 				ime.enable();
 
+				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
+				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
+					'IME selector shows ' +  $.ime.sources[opt.inputmethod].name );
 				for ( i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
