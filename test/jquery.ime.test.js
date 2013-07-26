@@ -186,6 +186,29 @@
 		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
+	QUnit.module( 'jquery.ime - input method rule files test', {
+		setup: function () {
+		},
+
+		teardown: function () {
+		}
+	} );
+
+	// testFixtures is defined in jquery.ime.test.fixtures.js
+	$.each( $.ime.languages, function( language ) {
+		var language = $.ime.languages[language];
+		QUnit.test( 'Input method rules test for language ' + language.autonym, function() {
+			var i,
+				inputmethod,
+				inputmethods = language.inputmethods;
+			QUnit.expect( inputmethods.length );
+			for ( i = 0 ; i < inputmethods.length; i++ ) {
+				inputmethod = $.ime.sources[inputmethods[i]];
+				QUnit.ok( true, !!inputmethod, 'Definition for '+ inputmethods[i] + ' exist.' );
+			}
+		} );
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 		},
