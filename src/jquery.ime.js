@@ -264,10 +264,17 @@
 			}
 
 			dependency = $.ime.sources[inputmethodId].depends;
-			if ( dependency ) {
-				return $.when( this.load( dependency ), this.load( inputmethodId ) );
+			if ( dependency && !$.ime.inputmethods[dependency] ) {
+				ime.load( dependency ).done( function () {
+					ime.load( inputmethodId ).done( function () {
+						deferred.resolve();
+					} );
+				} );
+
+				return deferred;
 			}
 
+			debug( 'Loading ' + inputmethodId );
 			deferred = $.getScript(
 				ime.options.imePath + $.ime.sources[inputmethodId].source
 			).done( function () {
