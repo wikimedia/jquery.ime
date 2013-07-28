@@ -195,8 +195,15 @@
 	} );
 
 	$.each( $.ime.sources, function( inputmethodId ) {
-		var inputmethod = $.ime.sources[inputmethodId];
-		QUnit.test( 'Input method rules file test for input method ' + inputmethod.name, function() {
+		var testDescription;
+
+		// The internal input method name helps find it in the source,
+		// and since it's always in Latin, it helps isolate RTL names
+		// from the subsequent numbers
+		testDescription = 'Input method rules file test for input method ' +
+			$.ime.sources[inputmethodId].name + ' - ' + inputmethodId;
+
+		QUnit.test( testDescription, function() {
 			var ime,
 				$input = $( '<input>' );
 
