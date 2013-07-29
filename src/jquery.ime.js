@@ -265,8 +265,10 @@
 
 			dependency = $.ime.sources[inputmethodId].depends;
 			if ( dependency && !$.ime.inputmethods[dependency] ) {
-				$.when( ime.load( dependency ), ime.load( inputmethodId ) ).then( function () {
-					deferred.resolve();
+				ime.load( dependency ).done( function () {
+					ime.load( inputmethodId ).done( function () {
+						deferred.resolve();
+					} );
 				} );
 
 				return deferred;
