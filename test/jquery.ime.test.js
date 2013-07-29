@@ -279,7 +279,6 @@
 	imeTest = function ( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
-			multiline: false,
 			inputType: 'input', // input, textarea, or contenteditable
 			tests: [],
 			inputmethod: '' // The input method name.
@@ -290,7 +289,7 @@
 
 			QUnit.expect( opt.tests.length + 1 );
 
-			if ( opt.multiline && opt.inputType  === 'input' ) {
+			if ( opt.inputType  === 'textarea' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
 			} else if ( opt.inputType === 'contenteditable' ) {
@@ -342,9 +341,11 @@
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
-		// Run all tests for content editable divs too
-		fixture.inputType = 'contenteditable';
-		imeTest( fixture );
+		if ( fixture.inputType === undefined ) {
+			// Run tests for content editable divs too
+			fixture.inputType = 'contenteditable';
+			imeTest( fixture );
+		}
 	} );
 
 	/**
