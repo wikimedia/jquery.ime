@@ -59,7 +59,7 @@
 		assert.strictEqual( textareaIME.isActive(), true, 'selector is active after enabling' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
 			selector.selectIM( 'hi-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
@@ -70,7 +70,7 @@
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-transliteration', function () {
+		textareaIME.load( 'ta-transliteration' ).done( function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration',
@@ -79,7 +79,7 @@
 		} );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-bamini', function () {
+		textareaIME.load( 'ta-bamini' ).done( function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-bamini' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
@@ -94,7 +94,7 @@
 			'Default inputmethod for Kannada is system' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
 			textareaIME.enable();
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
@@ -216,6 +216,55 @@
 		caretTest( test[0], test[1], test[2] );
 	} );
 
+	QUnit.module( 'jquery.ime - input method rule files test', {
+		setup: function () {
+		},
+
+		teardown: function () {
+		}
+	} );
+
+	$.each( $.ime.sources, function( inputmethodId ) {
+		var testDescription;
+
+		// The internal input method name helps find it in the source,
+		// and since it's always in Latin, it helps isolate RTL names
+		// from the subsequent numbers
+		testDescription = 'Input method rules file test for input method ' +
+			$.ime.sources[inputmethodId].name + ' - ' + inputmethodId;
+
+		QUnit.test( testDescription, function () {
+			var ime,
+				$input = $( '<input>' );
+
+			$input.attr( { id: inputmethodId, type: 'text' } );
+			$input.appendTo( '#qunit-fixture' );
+			$input.ime();
+			$input.focus();
+			ime = $input.data( 'ime' );
+			QUnit.expect( 1 );
+			QUnit.stop();
+			ime.load( inputmethodId ).done( function () {
+				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for '+ inputmethodId + ' exist and loaded correctly.' );
+				QUnit.start();
+			} );
+		} );
+	} );
+
+	$.each( $.ime.languages, function ( language ) {
+		var language = $.ime.languages[language];
+		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
+			var i,
+				inputmethod,
+				inputmethods = language.inputmethods;
+			QUnit.expect( inputmethods.length );
+			for ( i = 0 ; i < inputmethods.length; i++ ) {
+				inputmethod = $.ime.sources[inputmethods[i]];
+				QUnit.ok( true, !!inputmethod, 'Definition for '+ inputmethods[i] + ' exist.' );
+			}
+		} );
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 		},
@@ -239,7 +288,7 @@
 		QUnit.test( opt.description, function () {
 			var ime, $input;
 
-			QUnit.expect( opt.tests.length );
+			QUnit.expect( opt.tests.length + 1 );
 
 			if ( opt.multiline && opt.inputType  === 'input' ) {
 				$input = $( '<textarea>' );
@@ -259,12 +308,16 @@
 
 			ime = $input.data( 'ime' );
 
-			ime.load( opt.inputmethod, function () {
-				var i;
+			ime.load( opt.inputmethod ).done( function () {
+				var i, imeSelector, imesettingLabel;
 
-				ime.setIM( opt.inputmethod );
+				imeSelector = $input.data( 'imeselector' );
+				imeSelector.selectIM( opt.inputmethod );
 				ime.enable();
 
+				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
+				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
+					'IME selector shows ' +  $.ime.sources[opt.inputmethod].name );
 				for ( i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );

@@ -130,6 +130,14 @@
 				}
 			} );
 
+			// Hide the menu when clicked outside
+			$( 'html' ).click( $.proxy( this.hide, this ) );
+
+			// ... but when clicked on window do not propagate it.
+			this.$menu.on( 'click', function ( event ) {
+				event.stopPropagation();
+			} );
+
 			imeselector.$imeSetting.mouseenter( function () {
 				// We don't want the selector to disappear
 				// while the user is trying to click it
@@ -390,13 +398,13 @@
 				return;
 			}
 
-			ime.load( inputmethodId, function () {
+			ime.load( inputmethodId ).done( function () {
 				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
 				imeselector.hide();
 				ime.enable();
 				ime.setIM( inputmethodId );
 				imeselector.$imeSetting.find( 'a.ime-name' ).text(
-					imeselector.inputmethod.name
+					$.ime.sources[inputmethodId].name
 				);
 
 				imeselector.position();

@@ -55,8 +55,8 @@ var testFixtures = [
 	},{
 		description: 'Belarusian transliteration test',
 		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliateration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliateration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
+			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
+			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
 		inputmethod: 'be-transliteration'
 	},{
@@ -208,7 +208,7 @@ var testFixtures = [
 			{ input: '~O', output: 'Ö', description: 'German Ö' },
 			{ input: '~s', output: 'ß', description: 'German ß' }
 		],
-		inputmethod: 'de'
+		inputmethod: 'de-transliteration'
 	},{
 		description: 'Gujarati Transliteration',
 		tests: [
