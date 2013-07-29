@@ -299,14 +299,15 @@
 
 		/**
 		 * Set the caret position in the div.
-		 * @param {Element} element The content editable div element
-		 * @param {number} position an object with start and end properties.
-		 * @return {number} If the cursor could not be placed at given position, how
+		 * @param {jQuery} element The content editable div element
+		 * @param {Object} position An object with start and end properties.
+		 * @return {Array} If the cursor could not be placed at given position, how
 		 * many characters had to go back to place the cursor
 		 */
 		setCaretPosition: function ( $element, position ) {
 			return setCaretPosition( $element, position );
 		},
+
 		/**
 		 * Find the point at which a and b diverge, i.e. the first position
 		 * at which they don't have matching characters.
@@ -454,7 +455,7 @@
 			}
 		}
 
-		return [ start, end ];
+		return [start, end];
 	}
 
 	/**
@@ -626,7 +627,6 @@
 	/**
 	 * Set the caret position in the div.
 	 * @param {Element} element The content editable div element
-	 * @param {number} position an object with start and end properties.
 	 */
 	function setDivCaretPosition( element, position ) {
 		var nextCharIndex,
@@ -711,7 +711,7 @@
 	}
 
 	function arrayKeys ( obj ) {
-		return 	$.map( obj, function( element, index ) {
+		return $.map( obj, function( element, index ) {
 			return index;
 		} );
 	}
