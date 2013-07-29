@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME, imeTest, typeChars;
+	var $textarea, textareaIME, imeTest, typeChars, caretTests;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -235,6 +235,36 @@
 		} );
 	} );
 
+	function caretTest( text, start, end ) {
+		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+			var $ced = $( '<div contenteditable="true">' ),
+				correction,
+				position,
+				ime;
+
+			$( '#qunit-fixture' ).append( $ced );
+			$ced.ime();
+			ime = $ced.data( 'ime' );
+
+			$ced.html( text );
+			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
+			position = ime.getCaretPosition( $ced );
+			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
+		} );
+	}
+
+	caretTests = [
+		['ക്', 0, 0],
+		['ക്', 1, 1],
+		['ന്ത്', 1, 3],
+		['ന്ത്', 1, 4],
+		['ക്ത്ര', 1, 4]
+	];
+
+	$.each( caretTests, function( i, test ) {
+		caretTest( test[0], test[1], test[2] );
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 		},
@@ -246,10 +276,11 @@
 	/**
 	 * A general framework for testing a keyboard layout.
 	 */
-	imeTest = function( options ) {
+	imeTest = function ( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
-			multiline: false, // <input> or <textarea>
+			multiline: false,
+			inputType: 'input', // input, textarea, or contenteditable
 			tests: [],
 			inputmethod: '' // The input method name.
 		}, options );
@@ -259,8 +290,11 @@
 
 			QUnit.expect( opt.tests.length + 1 );
 
-			if( opt.multiline ) {
+			if ( opt.multiline && opt.inputType  === 'input' ) {
 				$input = $( '<textarea>' );
+				opt.inputType = 'textarea';
+			} else if ( opt.inputType === 'contenteditable' ) {
+				$input = $( '<div contenteditable="true">' );
 			} else {
 				$input = $( '<input>' );
 			}
@@ -287,9 +321,17 @@
 				for ( i = 0 ; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
-					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
+
+					// The actual check
+					QUnit.strictEqual(
+						$input.val() || $input.text(),
+						opt.tests[i].output,
+						opt.tests[i].description + " - " + opt.inputType
+					);
+
 					$input.val( '' );
 					$input.text( '' );
+					$input.html( '' );
 				}
 
 				QUnit.start();
@@ -300,19 +342,31 @@
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
+
+		// Run all tests for content editable divs too
+		fixture.inputType = 'contenteditable';
+		imeTest( fixture );
 	} );
 
-	// Basic sendkey-implementation
-	// $input - the input element
-	// characters - either
-	//            - a string
-	//            - an array of pairs of character and altKey value
-	typeChars = function( $input, characters ) {
-		var i, character, altKeyValue, code, event,
+	/**
+	 * Basic sendkey-implementation. Type some characters into an input.
+	 *
+	 * @param $input jQuery input element.
+	 * @param characters Either a string or an array of pairs of character
+	 * and boolean altKey value
+	 */
+	typeChars = function ( $input, characters ) {
+		var i, character, altKeyValue, code, event, replacementSkipped, textEnd,
+			ime = $input.data( 'ime' ),
+			contentEditable = $input.is( '[contenteditable]' ),
 			len = characters.length;
 
 		for ( i = 0; i < len; i++ ) {
-			// Get the key code
+			// For tests of non-extended keypresses, this is just a string.
+			// for tests of extended keypresses, this is an array of arrays,
+			// where each member is a pair consisting of a character to type
+			// and the boolean value for altKey, saying whether Alt was
+			// depressed or not.
 			if ( typeof( characters ) === 'string' ) {
 				character = characters[i];
 				altKeyValue = false;
@@ -321,6 +375,7 @@
 				altKeyValue = characters[i][1];
 			}
 
+			// Get the key code. Events use codes and not chars.
 			code = character.charCodeAt(0);
 
 			// Trigger event and undo if prevented
@@ -331,8 +386,19 @@
 				altKey: altKeyValue
 			} );
 
-			if ( $input.triggerHandler( event ) ) {
-				$input.val( $input.val() + character ) ;
+			replacementSkipped = $input.triggerHandler( event );
+
+			if ( replacementSkipped ) {
+				if ( contentEditable ) {
+					$input.text( $input.text() + character );
+					textEnd = $input.text().length;
+					ime.setCaretPosition( $input, {
+						start: textEnd,
+						end: textEnd
+					} );
+				} else {
+					$input.val( $input.val() + character );
+				}
 			}
 		}
 	};

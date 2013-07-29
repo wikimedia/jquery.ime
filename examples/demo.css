@@ -13,3 +13,9 @@ textarea {
 	height: 300px;
 	margin-bottom: 20px;
 }
+
+[contenteditable] {
+	border: 1px solid green;
+	height: 300px;
+	width: 500px;
+}
