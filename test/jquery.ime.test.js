@@ -195,8 +195,15 @@
 	} );
 
 	$.each( $.ime.sources, function( inputmethodId ) {
-		var inputmethod = $.ime.sources[inputmethodId];
-		QUnit.test( 'Input method rules file test for input method ' + inputmethod.name, function() {
+		var testDescription;
+
+		// The internal input method name helps find it in the source,
+		// and since it's always in Latin, it helps isolate RTL names
+		// from the subsequent numbers
+		testDescription = 'Input method rules file test for input method ' +
+			$.ime.sources[inputmethodId].name + ' - ' + inputmethodId;
+
+		QUnit.test( testDescription, function () {
 			var ime,
 				$input = $( '<input>' );
 
@@ -214,9 +221,9 @@
 		} );
 	} );
 
-	$.each( $.ime.languages, function( language ) {
+	$.each( $.ime.languages, function ( language ) {
 		var language = $.ime.languages[language];
-		QUnit.test( 'Input method rules test for language ' + language.autonym, function() {
+		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
 			var i,
 				inputmethod,
 				inputmethods = language.inputmethods;
@@ -247,7 +254,7 @@
 			inputmethod: '' // The input method name.
 		}, options );
 
-		QUnit.test( opt.description, function() {
+		QUnit.test( opt.description, function () {
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length + 1 );
@@ -291,7 +298,7 @@
 	};
 
 	// testFixtures is defined in jquery.ime.test.fixtures.js
-	$.each( testFixtures, function( i, fixture ) {
+	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
 	} );
 
