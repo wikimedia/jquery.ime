@@ -196,7 +196,7 @@ var testFixtures = [
 		description: 'Georgian Transliteration test',
 		tests: [
 			{ input: 'vikipedia\\`', output: 'ვიკიპედია`', description: 'Georgian vikipedia with `' },
-			{ input: 'jim morisoni \\~\\~\\~\\~', output: 'ჯიმ მორისონი ~~~~', description: 'Georgian jim morisoni with Wiki Signature' },
+			{ input: '\\~\\~\\~\\~', output: '~~~~', description: 'Wiki Signature test' },
 			{ input: 'abcdefghijklmnopqrstuvwxyz', output: 'აბცდეფგჰიჯკლმნოპქრსტუვწხყზ', description: 'a-z in Georgian' },
 			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
 		],
@@ -255,7 +255,7 @@ var testFixtures = [
 		description: 'Hindi transliteration tests',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' },
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)', inputType: 'textarea' },
 
 			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
 			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
@@ -362,7 +362,7 @@ var testFixtures = [
 			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
 		inputmethod: 'hi-transliteration',
-		multiline: true
+		inputType: 'textarea'
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
@@ -1071,7 +1071,8 @@ var testFixtures = [
 			{
 				input: 'sfpes deta.',
 				output: 'स्पेस देता.',
-				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
+				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).',
+				inputType: 'textarea'
 			},
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
