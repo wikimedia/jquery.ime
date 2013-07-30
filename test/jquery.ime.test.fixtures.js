@@ -252,11 +252,16 @@ var testFixtures = [
 		],
 		inputmethod: 'hi-inscript'
 	},{
-		description: 'Hindi transliteration tests',
+		description: 'Hindi transliteration tests - for textarea',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)', inputType: 'textarea' },
-
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' },
+		],
+		inputmethod: 'hi-transliteration',
+		inputType: 'textarea'
+	},{
+		description: 'Hindi transliteration tests',
+		tests: [
 			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
 			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
 			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
@@ -361,8 +366,7 @@ var testFixtures = [
 			{ input: '9', output: '९', description: '9 for ९ translitration' },
 			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
-		inputmethod: 'hi-transliteration',
-		inputType: 'textarea'
+		inputmethod: 'hi-transliteration'
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
@@ -1071,11 +1075,11 @@ var testFixtures = [
 			{
 				input: 'sfpes deta.',
 				output: 'स्पेस देता.',
-				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).',
-				inputType: 'textarea'
+				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
 			},
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
+		inputType: 'input',
 		inputmethod: 'mr-phonetic'
 	},{
 		description: 'Marathi InScript 2 test',

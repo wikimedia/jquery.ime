@@ -318,7 +318,6 @@
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length + 1 );
-
 			if ( opt.inputType  === 'textarea' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
@@ -371,7 +370,6 @@
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
-
 		if ( fixture.inputType === undefined ) {
 			// Run tests for content editable divs too
 			fixture.inputType = 'contenteditable';
