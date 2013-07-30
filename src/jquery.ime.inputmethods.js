@@ -364,13 +364,17 @@
 			name: 'Traditional',
 			source: 'rules/ne/ne-trad.js'
 		},
-		'no-normforms': {
+		'nb-normforms': {
 			name: 'Normal transliterasjon',
-			source: 'rules/no/no-normforms.js'
+			source: 'rules/nb/nb-normforms.js'
 		},
-		'no-tildeforms': {
+		'nb-tildeforms': {
 			name: 'Tildemerket transliterasjon',
-			source: 'rules/no/no-tildeforms.js'
+			source: 'rules/nb/nb-tildeforms.js'
+		},
+		'nn-tildeforms': {
+			name: 'Tildemerkt transliterasjon',
+			source: 'rules/nb/nb-tildeforms.js'
 		},
 		'or-transliteration': {
 			name: 'ଟ୍ରାନ୍ସଲି ଟରେସନ',
@@ -719,17 +723,13 @@
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
 		},
-		'no': {
-			autonym: 'Norsk',
-			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
-		},
 		'nb': {
 			autonym: 'Norsk (bokmål)',
-			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
+			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
 		'nn': {
 			autonym: 'Norsk (nynorsk)',
-			inputmethods: [ 'no-normforms', 'no-tildeforms' ]
+			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
