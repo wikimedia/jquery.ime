@@ -136,7 +136,8 @@
 				this.$element.val() || this.$element.text(),
 				startPos,
 				this.inputmethod.maxKeyLength
-			) + c;
+			);
+			input += c;
 
 			replacement = this.transliterate( input, this.context, altGr );
 
@@ -166,6 +167,7 @@
 			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
 
 			e.stopPropagation();
+
 			return false;
 		},
 
@@ -264,10 +266,17 @@
 			}
 
 			dependency = $.ime.sources[inputmethodId].depends;
-			if ( dependency ) {
-				return $.when( this.load( dependency ), this.load( inputmethodId ) );
+			if ( dependency && !$.ime.inputmethods[dependency] ) {
+				ime.load( dependency ).done( function () {
+					ime.load( inputmethodId ).done( function () {
+						deferred.resolve();
+					} );
+				} );
+
+				return deferred;
 			}
 
+			debug( 'Loading ' + inputmethodId );
 			deferred = $.getScript(
 				ime.options.imePath + $.ime.sources[inputmethodId].source
 			).done( function () {
@@ -286,6 +295,17 @@
 		 */
 		getCaretPosition: function ( $element ) {
 			return getCaretPosition( $element );
+		},
+
+		/**
+		 * Set the caret position in the div.
+		 * @param {jQuery} element The content editable div element
+		 * @param {Object} position An object with start and end properties.
+		 * @return {Array} If the cursor could not be placed at given position, how
+		 * many characters had to go back to place the cursor
+		 */
+		setCaretPosition: function ( $element, position ) {
+			return setCaretPosition( $element, position );
 		},
 
 		/**
@@ -391,6 +411,10 @@
 			newLines,
 			endRange;
 
+		if ( $element.is( '[contenteditable]' ) ) {
+			return getDivCaretPosition( el );
+		}
+
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
 			end = el.selectionEnd;
@@ -431,40 +455,75 @@
 			}
 		}
 
-		return [ start, end ];
+		return [start, end];
 	}
 
 	/**
 	 * Helper function to get an IE TextRange object for an element
 	 */
-	function rangeForElementIE( e ) {
-		if ( e.nodeName.toLowerCase() === 'input' ) {
-			return e.createTextRange();
-		} else {
-			var sel = document.body.createTextRange();
+	function rangeForElementIE( element ) {
+		var selection;
 
-			sel.moveToElementText( e );
-			return sel;
+		if ( element.nodeName.toLowerCase() === 'input' ) {
+			selection = element.createTextRange();
+		} else {
+			selection = document.body.createTextRange();
+			selection.moveToElementText( element );
 		}
+
+		return selection;
 	}
 
 	function replaceText( $element, replacement, start, end ) {
-		var element = $element.get( 0 ),
-			selection,
+		var selection,
 			length,
 			newLines,
-			scrollTop;
+			scrollTop,
+			range,
+			correction,
+			textNode,
+			element = $element.get( 0 );
+
+		if ( $element.is( '[contenteditable]' ) ) {
+			correction = setCaretPosition( $element, {
+				start: start,
+				end: end
+			} );
+
+			selection = rangy.getSelection();
+			range = selection.getRangeAt( 0 );
+
+			if ( correction[0] > 0 ) {
+				replacement = selection.toString().substring( 0, correction[0] ) + replacement;
+			}
+
+			textNode = document.createTextNode( replacement );
+			range.deleteContents();
+			range.insertNode( textNode );
+			range.commonAncestorContainer.normalize();
+			start = end = start + replacement.length - correction[0];
+			setCaretPosition( $element, {
+				start: start,
+				end: end
+			} );
+
+			return;
+		}
 
 		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
 			// IE9+ and all other browsers
 			scrollTop = element.scrollTop;
 
+			// Replace the whole text of the text area:
+			// text before + replacement + text after.
 			// This could be made better if range selection worked on browsers.
 			// But for complex scripts, browsers place cursor in unexpected places
 			// and it's not possible to fix cursor programmatically.
 			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) + replacement
-					+ element.value.substring( end, element.value.length );
+			element.value = element.value.substring( 0, start ) +
+				replacement +
+				element.value.substring( end, element.value.length );
+
 			// restore scroll
 			element.scrollTop = scrollTop;
 			// set selection
@@ -487,6 +546,127 @@
 			selection.collapse( false );
 			selection.select();
 		}
+	}
+
+	function getDivCaretPosition( element ) {
+		var charIndex = 0,
+			start = 0,
+			end = 0,
+			foundStart = false,
+			foundEnd = false,
+			sel = rangy.getSelection();
+
+		function traverseTextNodes( node, range ) {
+			var i, childNodesCount;
+
+			if ( node.nodeType === Node.TEXT_NODE ) {
+				if ( !foundStart && node === range.startContainer ) {
+					start = charIndex + range.startOffset;
+					foundStart = true;
+				}
+
+				if ( foundStart && node === range.endContainer ) {
+					end = charIndex + range.endOffset;
+					foundEnd = true;
+				}
+
+				charIndex += node.length;
+			} else {
+				childNodesCount = node.childNodes.length;
+
+				for ( i = 0; i < childNodesCount; ++i ) {
+					traverseTextNodes( node.childNodes[i], range );
+					if ( foundEnd ) {
+						break;
+					}
+				}
+			}
+		}
+
+		if ( sel.rangeCount ) {
+			traverseTextNodes( element, sel.getRangeAt( 0 ) );
+		}
+
+		return [ start, end ];
+	}
+
+	function setCaretPosition( $element, position ) {
+		var currentPosition,
+			startCorrection = 0,
+			endCorrection = 0,
+			element = $element[0];
+
+		setDivCaretPosition( element, position );
+		currentPosition = getDivCaretPosition( element );
+		// see Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+		while ( position.start !== currentPosition[0] ) {
+			position.start -= 1; // go back one more position.
+			if ( position.start < 0 ) {
+				// never go beyond 0
+				break;
+			}
+			setDivCaretPosition( element, position );
+			currentPosition = getDivCaretPosition( element );
+			startCorrection += 1;
+		}
+
+		while ( position.end !== currentPosition[1] ) {
+			position.end += 1; // go forward one more position.
+			setDivCaretPosition( element, position );
+			currentPosition = getDivCaretPosition( element );
+			endCorrection += 1;
+			if ( endCorrection > 10 ) {
+				// XXX avoid rare case of infinite loop here.
+				break;
+			}
+		}
+
+		return [startCorrection, endCorrection];
+	}
+
+	/**
+	 * Set the caret position in the div.
+	 * @param {Element} element The content editable div element
+	 */
+	function setDivCaretPosition( element, position ) {
+		var nextCharIndex,
+			charIndex = 0,
+			range = rangy.createRange(),
+			foundStart = false,
+			foundEnd = false;
+
+		range.collapseToPoint( element, 0 );
+
+		function traverseTextNodes( node ) {
+			var i, len;
+
+			if ( node.nodeType === 3 ) {
+				nextCharIndex = charIndex + node.length;
+
+				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
+					range.setStart( node, position.start - charIndex );
+					foundStart = true;
+				}
+
+				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
+					range.setEnd( node, position.end - charIndex );
+					foundEnd = true;
+				}
+
+				charIndex = nextCharIndex;
+			} else {
+				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
+					traverseTextNodes( node.childNodes[i] );
+					if ( foundEnd ) {
+						rangy.getSelection().setSingleRange( range );
+						break;
+					}
+				}
+			}
+		}
+
+		traverseTextNodes( element );
+
 	}
 
 	/**
@@ -530,11 +710,9 @@
 		}
 	}
 
-	function arrayKeys( obj ) {
-		var rv = [];
-		$.each( obj, function ( key ) {
-			rv.push( key );
+	function arrayKeys ( obj ) {
+		return $.map( obj, function( element, index ) {
+			return index;
 		} );
-		return rv;
 	}
 }( jQuery ) );
