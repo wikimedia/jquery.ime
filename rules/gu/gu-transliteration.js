@@ -151,7 +151,6 @@
 			['J', '઼'], // Nukta
 			['(\u200C)*`', '\u200C']] // ZWNJ
 	};
+
 	$.ime.register( guTransliteration );
-
 }( jQuery ) );
-

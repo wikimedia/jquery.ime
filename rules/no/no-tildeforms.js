@@ -32,5 +32,4 @@
 	};
 
 	$.ime.register( defs );
-
 }( jQuery ) );

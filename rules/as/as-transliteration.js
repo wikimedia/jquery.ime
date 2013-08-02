@@ -109,6 +109,6 @@
 			['(\u200C)*_', '\u200C'],
 			['(\u200D)*`', '\u200D']]
 	};
-	$.ime.register( asTransliteration );
 
+	$.ime.register( asTransliteration );
 }( jQuery ) );

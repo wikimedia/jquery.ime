@@ -189,6 +189,6 @@
 			['ঃ`', ':'],
 			['`', '']]
 	};
-	$.ime.register( bnAvro );
 
+	$.ime.register( bnAvro );
 }( jQuery ) );

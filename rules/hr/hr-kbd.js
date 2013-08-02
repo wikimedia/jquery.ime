@@ -57,5 +57,4 @@
 	};
 
 	$.ime.register( hrKbd );
-
 }( jQuery ) );

@@ -118,6 +118,6 @@
 			['\\?', '৻'],
 			['4', '₹']]
 	};
-	$.ime.register( bnInScript );
 
+	$.ime.register( bnInScript );
 }( jQuery ) );

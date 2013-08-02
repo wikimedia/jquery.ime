@@ -117,6 +117,6 @@
 			[ '\\$', '\u20B9' ] ]
 
 	};
-	$.ime.register( hiInScript );
 
+	$.ime.register( hiInScript );
 }( jQuery ) );

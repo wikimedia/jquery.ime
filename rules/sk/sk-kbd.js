@@ -100,7 +100,6 @@
 			['=', '¨']
 		]
 	};
+
 	$.ime.register( skKbd );
-
 }( jQuery ) );
-

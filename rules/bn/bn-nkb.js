@@ -128,6 +128,6 @@
 			['X', 'ঔ'],
 			['C', 'ঐ']]
 	};
-	$.ime.register( bnNkb );
 
+	$.ime.register( bnNkb );
 }( jQuery ) );

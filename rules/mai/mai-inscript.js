@@ -19,5 +19,4 @@
 	};
 
 	$.ime.register( maithiliInScript );
-
 }( jQuery ) );

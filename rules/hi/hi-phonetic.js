@@ -106,6 +106,6 @@
 			['ff', '्‌']
 		]
 	};
-	$.ime.register( hiPhonetic );
 
+	$.ime.register( hiPhonetic );
 }( jQuery ) );

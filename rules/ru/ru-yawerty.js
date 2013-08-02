@@ -104,7 +104,6 @@
 			['N', 'Н'],
 			['M', 'М']]
 	};
+
 	$.ime.register( ruYawerty );
-
 }( jQuery ) );
-

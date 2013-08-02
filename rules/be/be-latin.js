@@ -35,5 +35,4 @@
 	};
 
 	$.ime.register( beLatin );
-
 }( jQuery ) );

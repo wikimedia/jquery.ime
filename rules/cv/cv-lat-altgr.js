@@ -30,5 +30,4 @@
 	};
 
 	$.ime.register( cv );
-
 }( jQuery ) );

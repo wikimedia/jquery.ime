@@ -97,6 +97,6 @@
 			['>', 'ঁ'],
 			['\\\\', '\u200C']]
 	};
-	$.ime.register( bnProbhat );
 
+	$.ime.register( bnProbhat );
 }( jQuery ) );

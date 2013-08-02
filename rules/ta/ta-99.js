@@ -190,5 +190,4 @@
 	};
 
 	$.ime.register( ta99 );
-
 }( jQuery ) );

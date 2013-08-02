@@ -116,5 +116,4 @@
 	};
 
 	$.ime.register( knInscript2 );
-
 }( jQuery ) );

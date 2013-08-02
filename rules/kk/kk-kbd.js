@@ -103,7 +103,6 @@
 			['/', '№']
 		]
 	};
+
 	$.ime.register( kkKbd );
-
 }( jQuery ) );
-

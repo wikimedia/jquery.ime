@@ -148,7 +148,7 @@ var testFixtures = [
 			{ input: '6', output: '—', description: '6 -> — (em dash)' },
 			{ input: '7', output: 'ӗ', description: '7 -> e breve (Cyrillic), lower case' },
 			// For now ? doesn't work. I should have context and know if Shift is pressed.
-                        // It only appears in jcuken scenario instead of E breve you'll get a comma
+			// It only appears in jcuken scenario instead of E breve you'll get a comma
 			// { input: '?', output: 'Ӗ', description: '? (shift + 7) -> E breve (Cyrillic), upper case' },
 			{ input: '8', output: 'ӑ', description: '8 -> a breve (Cyrillic), lower case' },
 			{ input: '*', output: 'Ӑ', description: '* (shift + 8) -> A breve (Cyrillic), upper case' },
