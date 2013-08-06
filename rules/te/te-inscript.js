@@ -119,5 +119,4 @@
 			['\\+', 'ౠ']]
 	};
 	$.ime.register( teInScript );
-
 }( jQuery ) );

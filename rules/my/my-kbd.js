@@ -86,6 +86,6 @@
 			['j', '\u104E'],
 			['k', '\u1024']]
 	};
-	$.ime.register( myKbd );
 
+	$.ime.register( myKbd );
 }( jQuery ) );

@@ -119,6 +119,6 @@
 			['4', '₹']]
 
 	};
-	$.ime.register( asInScript );
 
+	$.ime.register( asInScript );
 }( jQuery ) );

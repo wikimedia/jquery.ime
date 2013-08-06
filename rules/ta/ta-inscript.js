@@ -100,5 +100,4 @@
 			[ '4', '₹' ] ]
 	};
 	$.ime.register( taInScript );
-
 }( jQuery ) );

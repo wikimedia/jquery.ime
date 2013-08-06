@@ -105,6 +105,6 @@
 			['\\^', 'ત્ર'],
 			['\\*', 'શ્ર']]
 	};
-	$.ime.register( guPhonetic );
 
+	$.ime.register( guPhonetic );
 }( jQuery ) );

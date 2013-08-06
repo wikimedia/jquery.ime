@@ -187,7 +187,7 @@
 	} );
 
 	function caretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
@@ -245,7 +245,7 @@
 			QUnit.expect( 1 );
 			QUnit.stop();
 			ime.load( inputmethodId ).done( function () {
-				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for '+ inputmethodId + ' exist and loaded correctly.' );
+				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
 				QUnit.start();
 			} );
 		} );
@@ -258,15 +258,15 @@
 				inputmethod,
 				inputmethods = language.inputmethods;
 			QUnit.expect( inputmethods.length );
-			for ( i = 0 ; i < inputmethods.length; i++ ) {
+			for ( i = 0; i < inputmethods.length; i++ ) {
 				inputmethod = $.ime.sources[inputmethods[i]];
-				QUnit.ok( true, !!inputmethod, 'Definition for '+ inputmethods[i] + ' exist.' );
+				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
 			}
 		} );
 	} );
 
 	function caretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
@@ -318,7 +318,7 @@
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length + 1 );
-			if ( opt.inputType  === 'textarea' ) {
+			if ( opt.inputType === 'textarea' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
 			} else if ( opt.inputType === 'contenteditable' ) {
@@ -345,8 +345,8 @@
 
 				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
 				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
-					'IME selector shows ' +  $.ime.sources[opt.inputmethod].name );
-				for ( i = 0 ; i < opt.tests.length; i++ ) {
+					'IME selector shows ' + $.ime.sources[opt.inputmethod].name );
+				for ( i = 0; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
 

@@ -79,6 +79,6 @@
 			['9', '৯'],
 			['\\`', '\u200C']]
 	};
-	$.ime.register( asBornona );
 
+	$.ime.register( asBornona );
 }( jQuery ) );

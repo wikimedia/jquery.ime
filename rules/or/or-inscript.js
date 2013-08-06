@@ -103,5 +103,4 @@
 	};
 
 	$.ime.register( orInScript );
-
 }( jQuery ) );

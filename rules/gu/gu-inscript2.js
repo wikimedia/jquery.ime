@@ -113,6 +113,6 @@
 			['\\.', 'ઽ']
 		]
 	};
-	$.ime.register( guInScript2 );
 
+	$.ime.register( guInScript2 );
 }( jQuery ) );

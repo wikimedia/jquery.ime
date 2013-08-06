@@ -75,6 +75,4 @@
 		]
 	};
 	$.ime.register( ugKbd );
-
 }( jQuery ) );
-

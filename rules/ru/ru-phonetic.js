@@ -78,7 +78,6 @@
 			['m', 'м'],
 			['M', 'М']]
 	};
+
 	$.ime.register( ruPhonetic );
-
 }( jQuery ) );
-

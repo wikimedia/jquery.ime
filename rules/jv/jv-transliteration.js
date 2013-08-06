@@ -213,5 +213,4 @@
 	};
 
 	$.ime.register( jvTransliteration );
-
 }( jQuery ) );

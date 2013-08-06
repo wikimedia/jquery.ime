@@ -109,5 +109,4 @@
 	};
 
 	$.ime.register( hyKbd );
-
 }( jQuery ) );

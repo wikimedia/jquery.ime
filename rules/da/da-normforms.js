@@ -46,5 +46,4 @@
 	};
 
 	$.ime.register( defs );
-
 }( jQuery ) );

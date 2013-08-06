@@ -160,7 +160,6 @@
 			['//','ऽ'],
 			['\\`','्']]
 	};
+
 	$.ime.register( neTransliteration );
-
 }( jQuery ) );
-

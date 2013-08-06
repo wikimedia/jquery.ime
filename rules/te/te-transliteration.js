@@ -217,6 +217,4 @@
 			['~\\$', '₹']] // rupee
 	};
 	$.ime.register( teTransliteration );
-
 }( jQuery ) );
-

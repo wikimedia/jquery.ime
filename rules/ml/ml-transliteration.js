@@ -1,5 +1,6 @@
 ( function ( $ ) {
 	'use strict';
+
 	var mltransliteration = {
 		id: 'ml-transliteration',
 		name: 'ലിപ്യന്തരണം',
@@ -334,5 +335,4 @@
 	};
 
 	$.ime.register( mltransliteration );
-
 }( jQuery ) );

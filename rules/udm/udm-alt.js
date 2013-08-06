@@ -38,4 +38,3 @@
 	};
 	$.ime.register( udmAlt );
 }( jQuery ) );
-

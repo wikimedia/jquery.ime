@@ -120,4 +120,3 @@
 
 	$.ime.register( loKbd );
 }( jQuery ) );
-

@@ -106,6 +106,6 @@
 			['/', 'ੵ']
 		]
 	};
-	$.ime.register( paInScript2 );
 
+	$.ime.register( paInScript2 );
 }( jQuery ) );

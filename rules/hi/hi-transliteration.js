@@ -193,6 +193,6 @@
 			[ '([क-ह]़?)्(.)', '\\~', '$1्$2' ],
 			[ '([क-ह]़?)्(.)', '$1$2' ] ]
 	};
-	$.ime.register( hiTransliteration );
 
+	$.ime.register( hiTransliteration );
 }( jQuery ) );

@@ -56,5 +56,4 @@
 	};
 
 	$.ime.register( eoHF );
-
 }( jQuery ) );

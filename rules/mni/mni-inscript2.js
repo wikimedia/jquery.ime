@@ -122,5 +122,4 @@
 	};
 
 	$.ime.register( mniInScript2 );
-
 }( jQuery ) );

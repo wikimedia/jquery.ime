@@ -160,7 +160,6 @@
 			['\\`','़'],
 			['(\u200C)*_', '\u200c']]
 	};
+
 	$.ime.register( saTransliteration );
-
 }( jQuery ) );
-

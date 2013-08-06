@@ -112,6 +112,6 @@
 			['\\>', 'ऽ'],
 			['\\.', '॥']]
 	};
-	$.ime.register( brxInScript2 );
 
+	$.ime.register( brxInScript2 );
 }( jQuery ) );
