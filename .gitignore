@@ -3,3 +3,5 @@
 *.kate-swp
 *.bak
 /nbproject/private/
+node_modules/
+dist/
