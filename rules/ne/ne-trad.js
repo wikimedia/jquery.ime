@@ -101,6 +101,6 @@
 			['\\[', 'र्'],
 			['q', 'त्र']]
 	};
-	$.ime.register( neTrad );
 
+	$.ime.register( neTrad );
 }( jQuery ) );

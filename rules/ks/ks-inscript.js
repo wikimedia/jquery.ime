@@ -126,5 +126,4 @@
 	};
 
 	$.ime.register( ksInScript );
-
 }( jQuery ) );

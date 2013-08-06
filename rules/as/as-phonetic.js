@@ -109,5 +109,4 @@
 	};
 
 	$.ime.register( asPhonetic );
-
 }( jQuery ) );

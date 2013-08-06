@@ -57,7 +57,6 @@
 			['\\}', '{']
 		]
 	};
+
 	$.ime.register( kkArabic );
-
 }( jQuery ) );
-

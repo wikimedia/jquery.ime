@@ -115,5 +115,4 @@
 	};
 
 	$.ime.register( mncyrl );
-
 }( jQuery ) );

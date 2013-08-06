@@ -105,6 +105,6 @@
 			['ff', '्‌']
 		]
 	};
-	$.ime.register( mrPhonetic );
 
+	$.ime.register( mrPhonetic );
 }( jQuery ) );

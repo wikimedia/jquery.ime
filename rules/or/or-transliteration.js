@@ -143,5 +143,4 @@
 	};
 
 	$.ime.register( orTransliteration );
-
 }( jQuery ) );

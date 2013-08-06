@@ -103,5 +103,4 @@
 	};
 
 	$.ime.register( neRom );
-
 }( jQuery ) );

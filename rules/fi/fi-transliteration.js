@@ -27,6 +27,6 @@
 			['e', '€']
 		]
 	};
-	$.ime.register( fiTransliteration );
 
+	$.ime.register( fiTransliteration );
 }( jQuery ) );

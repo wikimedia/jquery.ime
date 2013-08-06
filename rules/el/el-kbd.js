@@ -92,5 +92,4 @@
 	};
 
 	$.ime.register( elKbd );
-
 }( jQuery ) );

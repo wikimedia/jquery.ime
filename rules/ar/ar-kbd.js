@@ -112,5 +112,4 @@
 	};
 
 	$.ime.register( arKbd );
-
 }( jQuery ) );

@@ -24,5 +24,4 @@
 	};
 
 	$.ime.register( de );
-
 }( jQuery ) );

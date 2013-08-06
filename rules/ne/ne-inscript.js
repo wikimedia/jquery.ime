@@ -108,6 +108,6 @@
 			['\\@', '','ॅ'],
 			['4', '₹']]
 	};
-	$.ime.register( neInScript );
 
+	$.ime.register( neInScript );
 }( jQuery ) );

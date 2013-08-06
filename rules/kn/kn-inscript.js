@@ -106,6 +106,6 @@
 			['j', '\u0CF2'],
 			['\\$', '\u20B9']]
 	};
-	$.ime.register( knInscript );
 
+	$.ime.register( knInscript );
 }( jQuery ) );

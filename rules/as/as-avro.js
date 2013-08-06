@@ -163,6 +163,6 @@
 			['ঃ`', ':'],
 			['`', '']]
 	};
-	$.ime.register( asAvro );
 
+	$.ime.register( asAvro );
 }( jQuery ) );
