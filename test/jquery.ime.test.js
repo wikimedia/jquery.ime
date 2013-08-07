@@ -370,6 +370,7 @@
 		} );
 	};
 
+	/*global testFixtures */
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );

@@ -53,20 +53,13 @@ var testFixtures = [
 		],
 		inputmethod: 'be-latin'
 	},{
-		description: 'Belarusian transliteration test',
-		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
-		],
-		inputmethod: 'be-transliteration'
-	},{
 		description: 'Bengali Probhat layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
 			{ input: 'ki', output: 'কি', description: 'Bengali Probhat - ki' },
 			{ input: 'k/S', output: 'ক্ষ', description: 'Bengali Probhat - kha' },
 			{ input: 'q<', output: 'দৃ', description: 'Bengali Probhat - drri' },
-			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
+			{ input: 'r`/Z', output: 'র\u200d্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
 			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
 		],
 		inputmethod: 'bn-probhat'
@@ -225,7 +218,7 @@ var testFixtures = [
 			{ input: 'aikya', output: 'ઐક્ય', description: 'Gujarati aikya' },
 			{ input: 'kailaasa', output: 'કૈલાસ', description: 'Gujarati kailaasa' },
 			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
-			{ input: 'sad`bhaava', output: 'સદ્‌ભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
+			{ input: 'sad`bhaava', output: 'સદ્\u200cભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
 			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' },
 			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' }
 		],
@@ -241,9 +234,9 @@ var testFixtures = [
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
-			{ input: [ [ '9', true ] ], output: '‎', description: 'Hebrew Alt-9 -> LRM' },
+			{ input: [ [ '9', true ] ], output: '\u200e', description: 'Hebrew Alt-9 -> LRM' },
 			// The output is the RLM control character
-			{ input: [ [ '0', true ] ], output: '‏', description: 'Hebrew Alt-0 -> RLM' },
+			{ input: [ [ '0', true ] ], output: '\u200f', description: 'Hebrew Alt-0 -> RLM' },
 			// The first case is a regular hyphen-minus ('-'), which is the same
 			// when it is pressed by itself without Alt.
 			// The second case is hyphen-minus with Alt, which produces the Hebrew
@@ -413,7 +406,7 @@ var testFixtures = [
 			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
 			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
 			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
-			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' } // with ZWJ
+			{ input: 'rFfyAMkf', output: 'ರ\u200d್ಯಾಂಕ್', description: 'ZWJ ರ\u200d್ಯಾಂಕ್' } // with ZWJ
 		],
 		inputmethod: 'kn-kgp'
 	},{
@@ -441,7 +434,7 @@ var testFixtures = [
 			{ input: 'mu', output: 'ಮು', description: 'mu for ಮು in Kannada transliteration ' },
 			{ input: 'mU', output: 'ಮೂ', description: 'mU for ಮೂ in Kannada transliteration ' },
 			{ input: 'mo', output: 'ಮೊ', description: 'mo for ಮೊ in Kannada transliteration ' },
-			{ input: 'rAjxkumAr', output: 'ರಾಜ್‍ಕುಮಾರ್', description: 'rAjxkumAr for ರಾಜ್‍ಕುಮಾರ್ in Kannada transliteration ' }, // with ZWJ
+			{ input: 'rAjxkumAr', output: 'ರಾಜ್\u200dಕುಮಾರ್', description: 'rAjxkumAr for ರಾಜ್\u200dಕುಮಾರ್ in Kannada transliteration ' }, // with ZWJ
 			{ input: 'arha', output: 'ಅರ್ಹ', description: 'arha for ಅರ್ಕಾವತ್ತು in ಅರ್ಹ for Kannada transliteration ' },
 			{ input: 'dhvani', output: 'ಧ್ವನಿ', description: 'dhvani for ಧ್ವನಿ for Kannada transliteration ' },
 			{ input: 'marmara', output: 'ಮರ್ಮರ', description: 'marmara for ಮರ್ಮರ for Kannada transliteration ' },
@@ -453,8 +446,8 @@ var testFixtures = [
 			{ input: 'braakeT', output: 'ಬ್ರಾಕೆಟ್', description: 'braakeT for  ಬ್ರ್ಯಾಕೆಟ್ for Kannada transliteration ' },
 			{ input: 'nOTna', output: 'ನೋಟ್ನ', description: 'noTna for ನೋಟ್ನ for Kannada transliteration ' },
 			{ input: 'saMskRta', output: 'ಸಂಸ್ಕೃತ', description: 'saMskRta for ಸಂಸ್ಕೃತ for Kannada transliteration ' },
-			{ input: 'aalTarxnETIv', output: 'ಆಲ್ಟರ್‍ನೇಟೀವ್', description: 'aalTarxnETIv for ಆಲ್ಟರ್‍ನೇಟೀವ್ for Kannada transliteration ' }, // with ZWJ
-			{ input: 'kaarxnalli', output: 'ಕಾರ್‍ನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್‍ನಲ್ಲಿ for Kannada transliteration '}, // with ZWJ
+			{ input: 'aalTarxnETIv', output: 'ಆಲ್ಟರ್\u200dನೇಟೀವ್', description: 'aalTarxnETIv for ಆಲ್ಟರ್\u200dನೇಟೀವ್ for Kannada transliteration ' }, // with ZWJ
+			{ input: 'kaarxnalli', output: 'ಕಾರ್\u200dನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್\u200dನಲ್ಲಿ for Kannada transliteration '}, // with ZWJ
 			{ input: 'a', output: 'ಅ', description: 'a for ಅ in Kannada transliteration' },
 			{ input: 'ka', output: 'ಕ', description: 'ka for ಕ in Kannada transliteration' },
 			{ input: 'Ka', output: 'ಖ', description: 'Ka for ಖ in Kannada transliteration' },
@@ -1406,7 +1399,7 @@ var testFixtures = [
 		description: 'Tamil InScript test',
 		tests: [
 			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
-			{ input: 'lfkd)<fld', output: 'திக்‌ஷித்', description: 'Tamil Inscript திக்‌ஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
+			{ input: 'lfkd)<fld', output: 'திக்\u200cஷித்', description: 'Tamil Inscript திக்\u200cஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
 			{ input: 'lf&fld', output: 'திக்ஷித்', description: 'Tamil Inscript திக்ஷித் conjunct form' },
 			{ input: ';sjVd', output: 'சேரன்', description: 'Tamil Inscript சேரன் Cheran' },
 			{ input: ';aBVd', output: 'சோழன்', description: 'Tamil Inscript சோழன் Chozhan' },
@@ -1414,7 +1407,7 @@ var testFixtures = [
 			{ input: 'heCd\'f/jd', output: 'பாண்டியர்', description: 'Tamil Inscript பாண்டியர் Pandiyar' },
 			{ input: 'Ecrjd', output: 'ஆமீர்', description: 'Tamil Inscript ஆமீர் Aamir' },
 			{ input: 'Duj`Vf', output: 'அஹரொனி', description: 'Tamil Inscript அஹரொனி Aharoni' },
-			{ input: 'md)jrkevdld', output: 'ஸ்‌ரீகாந்த்', description: 'Tamil Inscript ஸ்‌ரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
+			{ input: 'md)jrkevdld', output: 'ஸ்\u200cரீகாந்த்', description: 'Tamil Inscript ஸ்\u200cரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
 			{ input: 'mdjrkevdld', output: 'ஸ்ரீகாந்த்', description: 'Tamil Inscript ஸ்ரீகாந்த் with SHRI = SA+RII' },
 			{ input: 'MdjrjcC', output: 'ஶ்ரீரமண', description: 'Tamil Inscript ஶ்ரீரமண Shriramana with SHRI = SHA+RII' },
 			{ input: 'Dnanfle', output: 'அலோலிதா', description: 'Tamil Inscript அலோலிதா Alolitha' },
@@ -1436,10 +1429,10 @@ var testFixtures = [
 	},{
 		description: 'Tamil Transliteration test',
 		tests: [
-			//(ks|KS)h should give non-conjunct form of ksh க்‌ஷ் (with ZWNJ)
+			//(ks|KS)h should give non-conjunct form of ksh க்\u200cஷ் (with ZWNJ)
 			//(ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
-			{ input: 'thikshith', output: 'திக்‌ஷித்', description: 'thikshith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
-			{ input: 'thikShith', output: 'திக்‌ஷித்', description: 'thikShith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thikshith', output: 'திக்\u200cஷித்', description: 'thikshith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thikShith', output: 'திக்\u200cஷித்', description: 'thikShith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'thiksHith', output: 'திக்ஷித்', description: 'thiksHith in Tamil transliteration for திக்ஷித் conjunct form' },
 			{ input: 'thiKSHith', output: 'திக்ஷித்', description: 'thiKSHith in Tamil transliteration for திக்ஷித் conjunct form' },
 			{ input: 'Sri', output: 'ஸ்ரீ', description: 'Sri in Tamil transliteration for ஸ்ரீ Sri' },
@@ -1507,11 +1500,11 @@ var testFixtures = [
 	},{
 		description: 'Tamil 99 test',
 		tests: [
-			//hfW should give non-conjunct form of ksha க்‌ஷ (with ZWNJ)
+			//hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
 			//T still gives the conjunct form க்ஷ
-			{ input: 'lshfWslf', output: 'திக்‌ஷித்', description: 'lshfWslf in Tamil99 for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'lshfWslf', output: 'திக்\u200cஷித்', description: 'lshfWslf in Tamil99 for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
-			{ input: 'hfWtkakf', output: 'க்‌ஷேமம்', description: 'hfWtkakf in Tamil99 for க்‌ஷேமம் hfW -> க்‌ஷ non conjunct form' }, // (with ZWNJ)
+			{ input: 'hfWtkakf', output: 'க்\u200cஷேமம்', description: 'hfWtkakf in Tamil99 for க்\u200cஷேமம் hfW -> க்\u200cஷ non conjunct form' }, // (with ZWNJ)
 			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
 		],
 		inputmethod: 'ta-99'
