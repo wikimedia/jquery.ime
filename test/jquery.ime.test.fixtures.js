@@ -231,6 +231,12 @@ var testFixtures = [
 		],
 		inputmethod: 'gu-transliteration'
 	},{
+		description: 'Gujarati Phonetic',
+		tests: [
+			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
+		],
+		inputmethod: 'gu-phonetic'
+	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
