@@ -1,7 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME, imeTest, typeChars, caretTests;
+	var $textarea, textareaIME, imeTest, typeChars,
+		caretTests, clusterCaretTests;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -251,13 +252,15 @@
 		} );
 	} );
 
-	$.each( $.ime.languages, function ( language ) {
-		var language = $.ime.languages[language];
+	$.each( $.ime.languages, function ( languageCode ) {
+		var language = $.ime.languages[languageCode];
+
 		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
-			var i,
-				inputmethod,
+			var i, inputmethod,
 				inputmethods = language.inputmethods;
+
 			QUnit.expect( inputmethods.length );
+
 			for ( i = 0; i < inputmethods.length; i++ ) {
 				inputmethod = $.ime.sources[inputmethods[i]];
 				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
@@ -265,7 +268,7 @@
 		} );
 	} );
 
-	function caretTest( text, start, end ) {
+	function clusterCaretTest( text, start, end ) {
 		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
@@ -283,7 +286,7 @@
 		} );
 	}
 
-	caretTests = [
+	clusterCaretTests = [
 		['ക്', 0, 0],
 		['ക്', 1, 1],
 		['ന്ത്', 1, 3],
@@ -292,7 +295,7 @@
 	];
 
 	$.each( caretTests, function( i, test ) {
-		caretTest( test[0], test[1], test[2] );
+		clusterCaretTest( test[0], test[1], test[2] );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
