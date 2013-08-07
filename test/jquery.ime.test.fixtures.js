@@ -234,6 +234,8 @@ var testFixtures = [
 		description: 'Gujarati Phonetic',
 		tests: [
 			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
+			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer'}
+			
 		],
 		inputmethod: 'gu-phonetic'
 	},{
