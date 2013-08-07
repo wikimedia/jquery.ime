@@ -354,7 +354,7 @@
 					QUnit.strictEqual(
 						$input.val() || $input.text(),
 						opt.tests[i].output,
-						opt.tests[i].description + " - " + opt.inputType
+						opt.tests[i].description + ' - ' + opt.inputType
 					);
 
 					$input.val( '' );
