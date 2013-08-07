@@ -231,6 +231,13 @@ var testFixtures = [
 		],
 		inputmethod: 'gu-transliteration'
 	},{
+		description: 'Gujarati Phonetic',
+		tests: [
+			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
+			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer'}
+		],
+		inputmethod: 'gu-phonetic'
+	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
@@ -1570,53 +1577,53 @@ var testFixtures = [
 	},{
 		description: 'Slovak keyboard test',
 		tests: [
-			{ input: '`', output: ';', description: "Slovak ` -> ;" },
-			{ input: '1', output: '+', description: "Slovak 1 -> +" },
-			{ input: '2', output: 'ľ', description: "Slovak 2 -> ľ" },
-			{ input: '3', output: 'š', description: "Slovak 3 -> š" },
-			{ input: '4', output: 'č', description: "Slovak 4 -> č" },
-			{ input: '5', output: 'ť', description: "Slovak 5 -> ť" },
-			{ input: '6', output: 'ž', description: "Slovak 6 -> ž" },
-			{ input: '7', output: 'ý', description: "Slovak 7 -> ý" },
-			{ input: '8', output: 'á', description: "Slovak 8 -> á" },
-			{ input: '9', output: 'í', description: "Slovak 9 -> í" },
-			{ input: '0', output: 'é', description: "Slovak 0 -> é" },
-			{ input: '-', output: '=', description: "Slovak - -> =" },
-			{ input: '=a', output: 'á', description: "Slovak =a -> á" },
-			{ input: '=E', output: 'É', description: "Slovak =E -> É" },
-			{ input: '=l', output: 'ĺ', description: "Slovak =l -> ĺ" },
-			{ input: '=L', output: 'Ĺ', description: "Slovak =L -> Ĺ" },
-			{ input: '=r', output: 'ŕ', description: "Slovak =r -> ŕ" },
-			{ input: '=R', output: 'Ŕ', description: "Slovak =R -> Ŕ" },
+			{ input: '`', output: ';', description: 'Slovak ` -> ;' },
+			{ input: '1', output: '+', description: 'Slovak 1 -> +' },
+			{ input: '2', output: 'ľ', description: 'Slovak 2 -> ľ' },
+			{ input: '3', output: 'š', description: 'Slovak 3 -> š' },
+			{ input: '4', output: 'č', description: 'Slovak 4 -> č' },
+			{ input: '5', output: 'ť', description: 'Slovak 5 -> ť' },
+			{ input: '6', output: 'ž', description: 'Slovak 6 -> ž' },
+			{ input: '7', output: 'ý', description: 'Slovak 7 -> ý' },
+			{ input: '8', output: 'á', description: 'Slovak 8 -> á' },
+			{ input: '9', output: 'í', description: 'Slovak 9 -> í' },
+			{ input: '0', output: 'é', description: 'Slovak 0 -> é' },
+			{ input: '-', output: '=', description: 'Slovak - -> =' },
+			{ input: '=a', output: 'á', description: 'Slovak =a -> á' },
+			{ input: '=E', output: 'É', description: 'Slovak =E -> É' },
+			{ input: '=l', output: 'ĺ', description: 'Slovak =l -> ĺ' },
+			{ input: '=L', output: 'Ĺ', description: 'Slovak =L -> Ĺ' },
+			{ input: '=r', output: 'ŕ', description: 'Slovak =r -> ŕ' },
+			{ input: '=R', output: 'Ŕ', description: 'Slovak =R -> Ŕ' },
 			{
 				input: [ [ '3', true ], [ 'O', false ] ],
 				output: 'Ô',
-				description: "Slovak AltGr-3 + O -> Ô"
+				description: 'Slovak AltGr-3 + O -> Ô'
 			},
 			{
 				input: [ [ '=', true ], [ 'A', false ] ],
 				output: 'Ä',
-				description: "Slovak AltGr-= + A -> Ä"
+				description: 'Slovak AltGr-= + A -> Ä'
 			},
 
-			{ input: '~', output: '°', description: "Slovak ~ -> °" },
-			{ input: '!', output: '1', description: "Slovak ! -> 1" },
-			{ input: '@', output: '2', description: "Slovak @ -> 2" },
-			{ input: '#', output: '3', description: "Slovak # -> 3" },
-			{ input: '$', output: '4', description: "Slovak $ -> 4" },
-			{ input: '%', output: '5', description: "Slovak % -> 5" },
-			{ input: '^', output: '6', description: "Slovak ^ -> 6" },
-			{ input: '&', output: '7', description: "Slovak & -> 7" },
-			{ input: '*', output: '8', description: "Slovak * -> 8" },
-			{ input: '(', output: '9', description: "Slovak ( -> 9" },
-			{ input: ')', output: '0', description: "Slovak ) -> 0" },
-			{ input: '_', output: '%', description: "Slovak _ -> %" },
-			{ input: '+c', output: 'č', description: "Slovak +c -> č" },
-			{ input: '+C', output: 'Č', description: "Slovak +c -> Č" },
-			{ input: '+d', output: 'ď', description: "Slovak +d -> ď" },
-			{ input: '+D', output: 'Ď', description: "Slovak +d -> Ď" },
-			{ input: '+l', output: 'ľ', description: "Slovak +l -> ľ" },
-			{ input: '+L', output: 'Ľ', description: "Slovak +l -> Ľ" },
+			{ input: '~', output: '°', description: 'Slovak ~ -> °' },
+			{ input: '!', output: '1', description: 'Slovak ! -> 1' },
+			{ input: '@', output: '2', description: 'Slovak @ -> 2' },
+			{ input: '#', output: '3', description: 'Slovak # -> 3' },
+			{ input: '$', output: '4', description: 'Slovak $ -> 4' },
+			{ input: '%', output: '5', description: 'Slovak % -> 5' },
+			{ input: '^', output: '6', description: 'Slovak ^ -> 6' },
+			{ input: '&', output: '7', description: 'Slovak & -> 7' },
+			{ input: '*', output: '8', description: 'Slovak * -> 8' },
+			{ input: '(', output: '9', description: 'Slovak ( -> 9' },
+			{ input: ')', output: '0', description: 'Slovak ) -> 0' },
+			{ input: '_', output: '%', description: 'Slovak _ -> %' },
+			{ input: '+c', output: 'č', description: 'Slovak +c -> č' },
+			{ input: '+C', output: 'Č', description: 'Slovak +c -> Č' },
+			{ input: '+d', output: 'ď', description: 'Slovak +d -> ď' },
+			{ input: '+D', output: 'Ď', description: 'Slovak +d -> Ď' },
+			{ input: '+l', output: 'ľ', description: 'Slovak +l -> ľ' },
+			{ input: '+L', output: 'Ľ', description: 'Slovak +l -> Ľ' },
 
 			// QWERTZ
 			{ input: 'y', output: 'z', description: 'Slovak y -> z' },
@@ -1633,8 +1640,9 @@ var testFixtures = [
 
 			{ input: 'l', output: 'l', description: 'Slovak l -> l' },
 			{ input: ';', output: 'ô', description: 'Slovak ; -> ô' },
-			{ input: "'", output: '§', description: "Slovak ' -> §" },
+			{ input: '\'', output: '§', description: 'Slovak \' -> §' },
 			{ input: '\\', output: 'ň', description: 'Slovak \\ -> ň' },
+
 			{ input: 'L', output: 'L', description: 'Slovak L -> L' },
 			{ input: ':', output: '"', description: 'Slovak : -> "' },
 			{ input: '"', output: '!', description: 'Slovak " -> !' },

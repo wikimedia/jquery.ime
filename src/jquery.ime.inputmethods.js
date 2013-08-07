@@ -336,10 +336,6 @@
 			name: 'फोनेटिक',
 			source: 'rules/mr/mr-phonetic.js'
 		},
-		'my-kbd': {
-			name: 'မြန်မာဘာသာ kbd',
-			source: 'rules/my/my-kbd.js'
-		},
 		'my-xkb': {
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
@@ -709,7 +705,7 @@
 		},
 		'my': {
 			autonym: 'မြန်မာ',
-			inputmethods: [ 'my-kbd', 'my-xkb' ]
+			inputmethods: [ 'my-xkb' ]
 		},
 		'ne': {
 			autonym: 'नेपाली',
