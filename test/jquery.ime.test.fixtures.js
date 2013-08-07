@@ -262,7 +262,7 @@ var testFixtures = [
 		description: 'Hindi transliteration tests - for textarea',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' },
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' }
 		],
 		inputmethod: 'hi-transliteration',
 		inputType: 'textarea'
@@ -1641,7 +1641,8 @@ var testFixtures = [
 			{ input: 'l', output: 'l', description: 'Slovak l -> l' },
 			{ input: ';', output: 'ô', description: 'Slovak ; -> ô' },
 			{ input: '\'', output: '§', description: 'Slovak \' -> §' },
-			{ input: '\\', output: 'ň', description: 'Slovak \ -> ň' },
+			{ input: '\\', output: 'ň', description: 'Slovak \\ -> ň' },
+
 			{ input: 'L', output: 'L', description: 'Slovak L -> L' },
 			{ input: ':', output: '"', description: 'Slovak : -> "' },
 			{ input: '"', output: '!', description: 'Slovak " -> !' },
