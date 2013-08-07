@@ -1,6 +1,9 @@
 ( function ( $ ) {
 	'use strict';
 
+	// rangy is defined in the rangy library */
+	/*global rangy */
+
 	/**
 	 * IME Class
 	 * @param {Function} [options.helpHandler] Called for each input method row in the selector
