@@ -53,13 +53,6 @@ var testFixtures = [
 		],
 		inputmethod: 'be-latin'
 	},{
-		description: 'Belarusian transliteration test',
-		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
-		],
-	inputmethod: 'be-transliteration'
-	},{
 		description: 'Bengali Probhat layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
