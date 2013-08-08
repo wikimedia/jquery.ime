@@ -3,7 +3,7 @@
 
 	var knInscript2 = {
 		id: 'kn-inscript2',
-		name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್ ೨',
+		name: 'ಇನ್\u200cಸ್ಕ್ರಿಪ್ಟ್ ೨',
 		description: 'Enhanced InScript keyboard for Kannada script',
 		date: '2013-01-16',
 		author: 'Parag Nemade',
