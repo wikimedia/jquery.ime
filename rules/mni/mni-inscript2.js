@@ -3,7 +3,7 @@
 
 	var mniInScript2 = {
 		id: 'mni-inscript2',
-		name: 'ইন্‌স্ক্ৰিপ্ত ২',
+		name: 'ইনস্ক্ৰিপ্ট ২',
 		description: 'Enhanced InScript keyboard for Manipuri language using Bengali script',
 		date: '2013-02-13',
 		URL: 'http://github.com/wikimedia/jquery.ime',
