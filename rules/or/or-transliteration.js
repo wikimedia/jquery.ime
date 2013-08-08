@@ -3,8 +3,8 @@
 
 	var orTransliteration = {
 		id: 'or-transliteration',
-		// TODO: it's unclear what do these control characters do here
-		name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
+		name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
+
 		description: 'Odia Transliteration',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
