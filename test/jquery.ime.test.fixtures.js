@@ -231,6 +231,13 @@ var testFixtures = [
 		],
 		inputmethod: 'gu-phonetic'
 	},{
+		description: 'Gujarati Inscript 2',
+		tests: [
+			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref'},
+			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha'}
+		],
+		inputmethod: 'gu-inscript2'
+	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
