@@ -292,6 +292,10 @@
 			name: 'KGP/Nudi/KP Rao',
 			source: 'rules/kn/kn-kgp.js'
 		},
+		'ky-cyrl-alt': {
+			name: 'Кыргыз Alt',
+			source: 'rules/ky/ky-cyrl-alt.js'
+		},
 		'gom-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/gom/gom-inscript2.js'
@@ -662,6 +666,10 @@
 		'ks': {
 			autonym: 'कॉशुर / کٲشُر',
 			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
+		},
+		'ky': {
+			autonym: 'Кыргыз',
+			inputmethods: [ 'ky-cyrl-alt' ]
 		},
 		'kab': {
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
