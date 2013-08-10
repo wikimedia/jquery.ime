@@ -195,6 +195,40 @@ var testFixtures = [
 		],
 		inputmethod: 'ka-transliteration'
 	},{
+		description: 'Esperanto x-sistemo test',
+		tests: [
+			{ input: 'cx', output: 'ĉ', description: 'Esperanto cx' },
+			{ input: 'gx', output: 'ĝ', description: 'Esperanto gx' },
+			{ input: 'hx', output: 'ĥ', description: 'Esperanto hx' },
+			{ input: 'jx', output: 'ĵ', description: 'Esperanto jx' },
+			{ input: 'sx', output: 'ŝ', description: 'Esperanto sx' },
+			{ input: 'ux', output: 'ŭ', description: 'Esperanto ux' },
+			{ input: 'cxx', output: 'cx', description: 'Esperanto cxx' },
+			{ input: 'gxx', output: 'gx', description: 'Esperanto gxx' },
+			{ input: 'hxx', output: 'hx', description: 'Esperanto hxx' },
+			{ input: 'jxx', output: 'jx', description: 'Esperanto jxx' },
+			{ input: 'sxx', output: 'sx', description: 'Esperanto sxx' },
+			{ input: 'uxx', output: 'ux', description: 'Esperanto uxx' },
+			{ input: 'CX', output: 'Ĉ', description: 'Esperanto CX' },
+			{ input: 'GX', output: 'Ĝ', description: 'Esperanto GX' },
+			{ input: 'HX', output: 'Ĥ', description: 'Esperanto HX' },
+			{ input: 'JX', output: 'Ĵ', description: 'Esperanto JX' },
+			{ input: 'SX', output: 'Ŝ', description: 'Esperanto SX' },
+			{ input: 'UX', output: 'Ŭ', description: 'Esperanto UX' },
+			{ input: 'CXX', output: 'CX', description: 'Esperanto CXX' },
+			{ input: 'GXX', output: 'GX', description: 'Esperanto GXX' },
+			{ input: 'HXX', output: 'HX', description: 'Esperanto HXX' },
+			{ input: 'JXX', output: 'JX', description: 'Esperanto JXX' },
+			{ input: 'SXX', output: 'SX', description: 'Esperanto SXX' },
+			{ input: 'UXX', output: 'UX', description: 'Esperanto UXX' },
+			{
+				input: 'ehxosxangxo cxiujxauxde',
+				output: 'eĥoŝanĝo ĉiuĵaŭde',
+				description: 'Esperanto eĥoŝanĝo ĉiuĵaŭde'
+			}
+		],
+		inputmethod: 'eo-x'
+	},{
 		description: 'German Transliteration and keybuffer test',
 		tests: [
 			{ input: '~o', output: 'ö', description: 'German ö' },
