@@ -19,11 +19,11 @@
 			source: 'rules/as/as-bornona.js'
 		},
 		'as-inscript': {
-			name: 'ইন্‌স্ক্ৰিপ্ত',
+			name: 'ইনস্ক্ৰিপ্ট',
 			source: 'rules/as/as-inscript.js'
 		},
 		'as-inscript2': {
-			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/as/as-inscript2.js'
 		},
 		'as-phonetic': {
@@ -55,11 +55,11 @@
 			source: 'rules/bn/bn-avro.js'
 		},
 		'bn-inscript': {
-			name: 'ইন্‌স্ক্ৰিপ্ত',
+			name: 'ইনস্ক্ৰিপ্ট',
 			source: 'rules/bn/bn-inscript.js'
 		},
 		'bn-inscript2': {
-			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/bn/bn-inscript2.js'
 		},
 		'bn-nkb': {
@@ -281,7 +281,7 @@
 			source: 'rules/kn/kn-inscript.js'
 		},
 		'kn-inscript2': {
-			name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್ ೨',
+			name: 'ಇನ್\u200cಸ್ಕ್ರಿಪ್ಟ್ ೨',
 			source: 'rules/kn/kn-inscript2.js'
 		},
 		'kn-transliteration': {
@@ -317,7 +317,7 @@
 			source: 'rules/mn/mn-cyrl.js'
 		},
 		'mni-inscript2': {
-			name: 'ইন্‌স্ক্ৰিপ্ত ২',
+			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/mni/mni-inscript2.js'
 		},
 		'mr-inscript': {
@@ -369,7 +369,7 @@
 			source: 'rules/no/no-tildeforms.js'
 		},
 		'or-transliteration': {
-			name: 'ଟ୍ରାନ୍ସଲି ଟରେସନ',
+			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
 		'or-inscript': {
@@ -405,11 +405,11 @@
 			source: 'rules/sr/sr-kbd.js'
 		},
 		'te-inscript': {
-			name: 'ఇన్‍స్క్రిప్ట్',
+			name: 'ఇన్\u200dస్క్రిప్ట్',
 			source: 'rules/te/te-inscript.js'
 		},
 		'te-inscript2': {
-			name: 'ఇన్‍స్క్రిప్ట్ 2',
+			name: 'ఇన్\u200dస్క్రిప్ట్ 2',
 			source: 'rules/te/te-inscript2.js'
 		},
 		'te-transliteration': {
