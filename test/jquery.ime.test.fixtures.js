@@ -1249,6 +1249,23 @@ var testFixtures = [
 		],
 		inputmethod: 'udm-alt'
 	},{
+		description: 'Kyrgyz Cyrillic test',
+		tests: [
+			{ input: [ [ 'н', true ] ], output: 'ң', description: 'Kyrgyz Cyrillic letters, Alt-н' },
+			{ input: [ [ 'Н', true ] ], output: 'Ң', description: 'Kyrgyz Cyrillic letters, Alt-Н' },
+			{ input: [ [ 'о', true ] ], output: 'ө', description: 'Kyrgyz Cyrillic letters, Alt-о' },
+			{ input: [ [ 'О', true ] ], output: 'Ө', description: 'Kyrgyz Cyrillic letters, Alt-О' },
+			{ input: [ [ 'у', true ] ], output: 'ү', description: 'Kyrgyz Cyrillic letters, Alt-у' },
+			{ input: [ [ 'У', true ] ], output: 'Ү', description: 'Kyrgyz Cyrillic letters, Alt-У' },
+			{ input: 'н', output: 'н', description: 'Kyrgyz Cyrillic letters, н does not change' },
+			{ input: 'Н', output: 'Н', description: 'Kyrgyz Cyrillic letters, Н does not change' },
+			{ input: 'о', output: 'о', description: 'Kyrgyz Cyrillic letters, о does not change' },
+			{ input: 'О', output: 'О', description: 'Kyrgyz Cyrillic letters, О does not change' },
+			{ input: 'у', output: 'у', description: 'Kyrgyz Cyrillic letters, у does not change' },
+			{ input: 'У', output: 'У', description: 'Kyrgyz Cyrillic letters, У does not change' }
+		],
+		inputmethod: 'ky-cyrl-alt'
+	},{
 		description: 'Oriya InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
