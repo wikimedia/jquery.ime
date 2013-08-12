@@ -235,6 +235,6 @@
 			['=<', '\u200d'] // Combining Grapheme Joiner
 		]
 	};
-	$.ime.register( ipaSil );
 
+	$.ime.register( ipaSil );
 } ( jQuery ) );

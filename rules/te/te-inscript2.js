@@ -3,7 +3,7 @@
 
 	var teInScript2 = {
 		id: 'te-inscript2',
-		name: 'ఇన్‍స్క్రిప్ట్ 2',
+		name: 'ఇన్\u200dస్క్రిప్ట్ 2',
 		description: 'Enhanced InScript keyboard for Telugu script',
 		date: '2013-01-16',
 		author: 'Parag Nemade',
@@ -103,8 +103,8 @@
 			['4', '₹'],
 			['\\%', '౻'],
 			['\\^', '౾'],
-			['1', '‍'],
-			['2', '‌'],
+			['1', '\u200d'],
+			['2', '\u200c'],
 			['0', '౸'],
 			['\\-', '౿'],
 			['\\+', 'ౠ'],

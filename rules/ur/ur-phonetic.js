@@ -12,7 +12,7 @@
 		patterns: [
 			['!', '!'],
 			['1', '۱'],
-			['\\@', ''],
+			['\\@', ''], // TODO: It's not clear what this control character does here
 			['2', '۲'],
 			['\\#', '/'],
 			['3', '۳'],
@@ -40,7 +40,7 @@
 			['r', 'ر'],
 			['T', 'ٹ'],
 			['t', 'ت'],
-			['Y', '؁'],
+			['Y', '\u0601'],
 			['y', 'ے'],
 			['U', '،'],
 			['u', 'ء'],
@@ -99,8 +99,8 @@
 			['\\>', 'َ'],
 			['\\.', '۔'],
 			['\\?', '؟'],
-			['////', ''],
-			['\\%', ''],
+			['////', ''], // TODO: It's not clear what this control character does here
+			['\\%', ''], // TODO: It's not clear what this control character does here
 			['\\^', 'ۖ'],
 			['\\&', 'ٔ'],
 			['\\*', 'ٌ']]

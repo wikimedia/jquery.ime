@@ -204,6 +204,6 @@
 			['\\\\', '\\'],
 			['\\|', '|']]
 	};
-	$.ime.register( myXkb );
 
+	$.ime.register( myXkb );
 }( jQuery ) );

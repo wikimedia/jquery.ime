@@ -62,5 +62,4 @@
 	};
 
 	$.ime.register( eoVi );
-
 }( jQuery ) );

@@ -103,9 +103,9 @@
 			['\\^', 'ज्ञ'],
 			['X', 'क्ष'],
 			['\\*', 'श्र'],
-			['ff', '्‌']
+			['ff', '्\u200c']
 		]
 	};
-	$.ime.register( hiPhonetic );
 
+	$.ime.register( hiPhonetic );
 }( jQuery ) );

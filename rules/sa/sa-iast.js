@@ -54,6 +54,6 @@
 			['r̥r', 'r̥̄']
 		]
 	};
-	$.ime.register( saIast );
 
+	$.ime.register( saIast );
 }( jQuery ) );

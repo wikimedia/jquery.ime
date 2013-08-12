@@ -4,7 +4,7 @@
 	var mrPhonetic = {
 		id: 'mr-phonetic',
 		name: 'phonetic',
-		description: 'Phonetic keyboard for Marathi langauge',
+		description: 'Phonetic keyboard for Marathi language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
@@ -102,9 +102,9 @@
 			['\\^', 'ज्ञ'],
 			['X', 'क्ष'],
 			['\\*', 'श्र'],
-			['ff', '्‌']
+			['ff', '्\u200c']
 		]
 	};
-	$.ime.register( mrPhonetic );
 
+	$.ime.register( mrPhonetic );
 }( jQuery ) );

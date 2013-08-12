@@ -111,6 +111,6 @@
 			['\\>', 'ऽ'],
 			['\\.', '॥']]
 	};
-	$.ime.register( neInScript2 );
 
+	$.ime.register( neInScript2 );
 }( jQuery ) );

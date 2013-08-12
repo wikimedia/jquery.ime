@@ -63,5 +63,4 @@
 	};
 
 	$.ime.register( heStandardExtOnly );
-
 }( jQuery ) );

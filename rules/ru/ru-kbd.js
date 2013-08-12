@@ -95,6 +95,6 @@
 			['\\?', ',']
 		]
 	};
-	$.ime.register( ruKbd );
 
+	$.ime.register( ruKbd );
 }( jQuery ) );

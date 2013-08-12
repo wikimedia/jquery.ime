@@ -52,5 +52,4 @@
 	};
 
 	$.ime.register( eoQ);
-
 }( jQuery ) );

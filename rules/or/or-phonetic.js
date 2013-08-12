@@ -107,5 +107,4 @@
 	};
 
 	$.ime.register( orPhonetic );
-
 }( jQuery ) );
