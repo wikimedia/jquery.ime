@@ -65,26 +65,8 @@ module.exports = function ( grunt ) {
 			tasks: 'lint qunit'
 		},
 		jshint: {
-			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				boss: true,
-				eqnull: true,
-				browser: true,
-				smarttabs: true,
-				laxbreak: true,
-				white: false,
-				globals: {
-					jQuery: true,
-					QUnit: true
-				}
-			},
+			options: JSON.parse( grunt.file.read( '.jshintrc' )
+				.replace( /\/\*(?:(?!\*\/)[\s\S])*\*\//g, '' ).replace( /\/\/[^\n\r]*/g, '' ) ),
 			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
 		}
 	} );
