@@ -301,7 +301,7 @@ var testFixtures = [
 		inputmethod: 'hi-transliteration',
 		inputType: 'textarea'
 	},{
-		description: 'Hindi Photic Test for ZWNJ',
+		description: 'Hindi Phonetic Test for ZWNJ',
 		tests: [
 			{ input: 'dffB', output: 'द्‌भ', description: 'Hindi Photic ZWNJ character' }
 		],
