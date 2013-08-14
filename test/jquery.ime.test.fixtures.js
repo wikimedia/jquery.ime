@@ -409,6 +409,85 @@ var testFixtures = [
 		],
 		inputmethod: 'hi-transliteration'
 	},{
+		description: 'Armenian phonetic layout with extended keys test',
+		tests: [
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ԷԹՓՁՋ()ՐՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'քոեռտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՌՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդֆգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
+		],
+		inputmethod: 'hy-ephonetic'
+	},{
+		description: 'Armenian typewriter layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ՖՁ֏֊—և՚(ՕԷՂ', description: 'Armenian typewriter digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'ճփբսմուկըթծց', description: 'Armenian typewriter 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՃՓԲՍՄՈՒԿԸԹԾՑ', description: 'Armenian typewriter 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ջվգեանիտհպր»', description: 'Armenian typewriter 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ՋՎԳԵԱՆԻՏՀՊՐ«', description: 'Armenian typewriter 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'ժդչյզլքխշռ', description: 'Armenian typewriter 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԺԴՉՅԶԼՔԽՇՌ', description: 'Armenian typewriter 3rd row With Shift' }
+		],
+		inputmethod: 'hy-typewriter'
+	},{
+		description: 'Armenian alternative phonetic layout with extended keys test',
+		tests: [
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ԷՖՓՁՋ()ՌՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'քոերտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՐՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդթգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴԹԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
+		],
+		inputmethod: 'hy-ephoneticalt'
+	},{
+		description: 'Armenian MS legacy Eastern layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Eastern digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'խւէրտեըիոպչջ', description: 'Armenian MS legacy Eastern 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ԽՒԷՐՏԵԸԻՈՊՉՋ', description: 'Armenian MS legacy Eastern 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդֆքհճկլթփ\'', description: 'Armenian MS legacy Eastern 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖՔՀՃԿԼԹՓ՞', description: 'Armenian MS legacy Eastern 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զցգվբնմշղծ', description: 'Armenian MS legacy Eastern 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՎԲՆՄՇՂԾ', description: 'Armenian MS legacy Eastern 3rd row With Shift' }
+		],
+		inputmethod: 'hy-emslegacy'
+	},{
+		description: 'Armenian MS legacy Westerm layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Westerm digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Westerm digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Westerm 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Westerm 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'աստֆկհճքլթփ\'', description: 'Armenian MS legacy Westerm 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍՏՖԿՀՃՔԼԹՓ՞', description: 'Armenian MS legacy Westerm 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զցգւպնմշղծ', description: 'Armenian MS legacy Westerm 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՒՊՆՄՇՂԾ', description: 'Armenian MS legacy Westerm 3rd row With Shift' }
+		],
+		inputmethod: 'hy-wmslegacy'
+	},{
 		description: 'Javanese transliteration test',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
