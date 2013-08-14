@@ -9,6 +9,7 @@ var palochkaVariants = {
 	digitOne: '1'
 };
 
+/*jshint unused:false */
 var testFixtures = [
 	{
 		description: 'Amharic Transliteration test',

@@ -247,7 +247,7 @@
 		'hy-typewriter': {
 			name: 'Գրամեքենայի դասավորություն',
 			source: 'rules/hy/hy-typewriter.js'
-		},		
+		},
 		'hy-ephoneticalt': {
 			name: 'Հնչյունային դասավորություն (R->Ր, F->Թ)',
 			source: 'rules/hy/hy-ephoneticalt.js'
