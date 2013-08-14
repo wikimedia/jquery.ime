@@ -1139,6 +1139,12 @@ var testFixtures = [
 				output: 'स्पेस देता.',
 				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
 			},
+			{
+				input: 'stfymffSivmffsuMdrmff',
+				output: 'सत्यम्‌शिवम्‌सुंदरम्‌',
+				description: 'Marathi phonetic ZWNJ character'
+			},
+
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
 		inputType: 'input',
