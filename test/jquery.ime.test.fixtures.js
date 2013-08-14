@@ -303,7 +303,7 @@ var testFixtures = [
 	},{
 		description: 'Hindi Phonetic test for ZWNJ',
 		tests: [
-			{ input: 'dffB', output: 'द्‌भ', description: 'Hindi Photic ZWNJ character' }
+			{ input: 'dffB', output: 'द\u200cभ', description: 'Hindi Photic ZWNJ character' }
 		],
 		inputmethod: 'hi-phonetic',
 	},{
