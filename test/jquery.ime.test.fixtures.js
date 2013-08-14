@@ -1141,7 +1141,7 @@ var testFixtures = [
 			},
 			{
 				input: 'stfymffSivmffsuMdrmff',
-				output: 'सत्यम्‌शिवम्‌सुंदरम्‌',
+				output: 'सत्यम्\u200cशिवम्\u200cसुंदरम्\u200c',
 				description: 'Marathi phonetic ZWNJ character'
 			},
 
