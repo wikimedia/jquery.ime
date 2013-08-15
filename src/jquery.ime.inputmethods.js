@@ -249,15 +249,15 @@
 			source: 'rules/hy/hy-typewriter.js'
 		},
 		'hy-ephoneticalt': {
-			name: 'Հնչյունային դասավորություն (R->Ր, F->Թ)',
+			name: 'Հնչյունային նոր (R→Ր, F→Թ)',
 			source: 'rules/hy/hy-ephoneticalt.js'
 		},
 		'hy-emslegacy': {
-			name: 'Մայքրոսոֆթի արևելահայերեն (հնացած)',
+			name: 'Մայքրոսոֆթի հին արևելահայերեն',
 			source: 'rules/hy/hy-emslegacy.js'
 		},
 		'hy-wmslegacy': {
-			name: 'Մայքրոսոֆթի արևմտահայերեն (հնացած)',
+			name: 'Մայքրոսոֆթի հին արևմտահայերեն',
 			source: 'rules/hy/hy-wmslegacy.js'
 		},
 		'gu-inscript': {
