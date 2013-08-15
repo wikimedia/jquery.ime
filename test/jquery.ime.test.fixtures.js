@@ -1730,7 +1730,7 @@ var testFixtures = [
 			{ input: 'EeE', output: 'EE', description: 'EeE -> EE' },
 			{ input: 'IiI', output: 'II', description: 'IiI -> II' },
 			{ input: 'UuU', output: 'UU', description: 'UuU -> UU' },
-		
+
 			{ input: 'ch', output: 'ç', description: 'ch -> ç' },
 			{ input: 'sh', output: 'ş', description: 'sh -> ş' },
 			{ input: 'hh', output: 'ḧ', description: 'hh -> ḧ' },
@@ -1761,7 +1761,7 @@ var testFixtures = [
 			{ input: 'Hhh', output: 'Hh', description: 'Hhh -> Hh' },
 			{ input: 'HHH', output: 'HH', description: 'HHH -> HH' },
 			{ input: 'HhH', output: 'HH', description: 'HhH -> HH' },
-		
+
 			{ input: 'ğ', output: 'ẍ', description: 'ğ -> ẍ' },
 			{ input: 'ı', output: 'i', description: 'ı -> i' },
 			{ input: 'i', output: 'î', description: 'i -> î' },
