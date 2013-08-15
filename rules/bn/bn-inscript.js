@@ -3,7 +3,7 @@
 
 	var bnInScript = {
 		id: 'bn-inscript',
-		name: 'ইন্সক্রিপ্ট',
+		name: 'ইনস্ক্ৰিপ্ট',
 		description: 'Bengali InScript input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -118,6 +118,6 @@
 			['\\?', '৻'],
 			['4', '₹']]
 	};
-	$.ime.register( bnInScript );
 
+	$.ime.register( bnInScript );
 }( jQuery ) );

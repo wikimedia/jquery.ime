@@ -429,5 +429,4 @@
 	};
 
 	$.ime.register( amTransliteration );
-
 }( jQuery ) );

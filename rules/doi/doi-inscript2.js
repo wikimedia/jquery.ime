@@ -114,6 +114,6 @@
 			['\\>', 'ऽ'],
 			['\\.', '॥']]
 	};
+
 	$.ime.register( doiInScript2 );
 }( jQuery ) );
-

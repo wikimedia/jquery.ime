@@ -3,7 +3,7 @@
 
 	var asInScript = {
 		id: 'as-inscript',
-		name: 'ইন্‌স্ক্ৰিপ্ত',
+		name: 'ইনস্ক্ৰিপ্ট',
 		description: 'InScript input method for Assamese according to CDAC\'s Enhanced InScript Keyboard Layout 5.2',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -119,6 +119,6 @@
 			['4', '₹']]
 
 	};
-	$.ime.register( asInScript );
 
+	$.ime.register( asInScript );
 }( jQuery ) );

@@ -12,7 +12,7 @@
 		contextLength: 1,
 		maxKeyLength: 3,
 		patterns: [
-			['्d', '्‌'],
+			['्d', '्\u200c'],
 			['ग_', 'ॻ'],
 			['ज_', 'ॼ'],
 			['ड_', 'ॾ'],
@@ -126,5 +126,4 @@
 	};
 
 	$.ime.register( ksInScript );
-
 }( jQuery ) );

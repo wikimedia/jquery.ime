@@ -94,7 +94,6 @@
 			['H', '੍ਹ'],
 			['W', 'ਾਂ']]
 	};
+
 	$.ime.register( paPhonetic );
-
 }( jQuery ) );
-

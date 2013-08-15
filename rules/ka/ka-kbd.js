@@ -51,7 +51,6 @@
 			['w', 'ჳ'],
 			['f', 'ჶ']]
 	};
+
 	$.ime.register( kaKbd );
-
 }( jQuery ) );
-

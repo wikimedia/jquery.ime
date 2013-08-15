@@ -53,8 +53,6 @@
 			['Z', 'ძ'],
 			['C', 'ჩ']]
 	};
+
 	$.ime.register( kaTransliteration );
-
 }( jQuery ) );
-
-

@@ -9,6 +9,7 @@ var palochkaVariants = {
 	digitOne: '1'
 };
 
+/*jshint unused:false */
 var testFixtures = [
 	{
 		description: 'Amharic Transliteration test',
@@ -53,20 +54,13 @@ var testFixtures = [
 		],
 		inputmethod: 'be-latin'
 	},{
-		description: 'Belarusian transliteration test',
-		tests: [
-			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
-			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
-		],
-		inputmethod: 'be-transliteration'
-	},{
 		description: 'Bengali Probhat layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
 			{ input: 'ki', output: 'কি', description: 'Bengali Probhat - ki' },
 			{ input: 'k/S', output: 'ক্ষ', description: 'Bengali Probhat - kha' },
 			{ input: 'q<', output: 'দৃ', description: 'Bengali Probhat - drri' },
-			{ input: 'r`/Z', output: 'র‍্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
+			{ input: 'r`/Z', output: 'র\u200d্য', description: 'Bengali Probhat - r`/Z - Testing RA-YAPHALA with ZWJ' },
 			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
 		],
 		inputmethod: 'bn-probhat'
@@ -148,7 +142,7 @@ var testFixtures = [
 			{ input: '6', output: '—', description: '6 -> — (em dash)' },
 			{ input: '7', output: 'ӗ', description: '7 -> e breve (Cyrillic), lower case' },
 			// For now ? doesn't work. I should have context and know if Shift is pressed.
-                        // It only appears in jcuken scenario instead of E breve you'll get a comma
+			// It only appears in jcuken scenario instead of E breve you'll get a comma
 			// { input: '?', output: 'Ӗ', description: '? (shift + 7) -> E breve (Cyrillic), upper case' },
 			{ input: '8', output: 'ӑ', description: '8 -> a breve (Cyrillic), lower case' },
 			{ input: '*', output: 'Ӑ', description: '* (shift + 8) -> A breve (Cyrillic), upper case' },
@@ -202,6 +196,40 @@ var testFixtures = [
 		],
 		inputmethod: 'ka-transliteration'
 	},{
+		description: 'Esperanto x-sistemo test',
+		tests: [
+			{ input: 'cx', output: 'ĉ', description: 'Esperanto cx' },
+			{ input: 'gx', output: 'ĝ', description: 'Esperanto gx' },
+			{ input: 'hx', output: 'ĥ', description: 'Esperanto hx' },
+			{ input: 'jx', output: 'ĵ', description: 'Esperanto jx' },
+			{ input: 'sx', output: 'ŝ', description: 'Esperanto sx' },
+			{ input: 'ux', output: 'ŭ', description: 'Esperanto ux' },
+			{ input: 'cxx', output: 'cx', description: 'Esperanto cxx' },
+			{ input: 'gxx', output: 'gx', description: 'Esperanto gxx' },
+			{ input: 'hxx', output: 'hx', description: 'Esperanto hxx' },
+			{ input: 'jxx', output: 'jx', description: 'Esperanto jxx' },
+			{ input: 'sxx', output: 'sx', description: 'Esperanto sxx' },
+			{ input: 'uxx', output: 'ux', description: 'Esperanto uxx' },
+			{ input: 'CX', output: 'Ĉ', description: 'Esperanto CX' },
+			{ input: 'GX', output: 'Ĝ', description: 'Esperanto GX' },
+			{ input: 'HX', output: 'Ĥ', description: 'Esperanto HX' },
+			{ input: 'JX', output: 'Ĵ', description: 'Esperanto JX' },
+			{ input: 'SX', output: 'Ŝ', description: 'Esperanto SX' },
+			{ input: 'UX', output: 'Ŭ', description: 'Esperanto UX' },
+			{ input: 'CXX', output: 'CX', description: 'Esperanto CXX' },
+			{ input: 'GXX', output: 'GX', description: 'Esperanto GXX' },
+			{ input: 'HXX', output: 'HX', description: 'Esperanto HXX' },
+			{ input: 'JXX', output: 'JX', description: 'Esperanto JXX' },
+			{ input: 'SXX', output: 'SX', description: 'Esperanto SXX' },
+			{ input: 'UXX', output: 'UX', description: 'Esperanto UXX' },
+			{
+				input: 'ehxosxangxo cxiujxauxde',
+				output: 'eĥoŝanĝo ĉiuĵaŭde',
+				description: 'Esperanto eĥoŝanĝo ĉiuĵaŭde'
+			}
+		],
+		inputmethod: 'eo-x'
+	},{
 		description: 'German Transliteration and keybuffer test',
 		tests: [
 			{ input: '~o', output: 'ö', description: 'German ö' },
@@ -225,18 +253,32 @@ var testFixtures = [
 			{ input: 'aikya', output: 'ઐક્ય', description: 'Gujarati aikya' },
 			{ input: 'kailaasa', output: 'કૈલાસ', description: 'Gujarati kailaasa' },
 			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
-			{ input: 'sad`bhaava', output: 'સદ્‌ભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
+			{ input: 'sad`bhaava', output: 'સદ્\u200cભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
 			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' },
 			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' }
 		],
 		inputmethod: 'gu-transliteration'
 	},{
+		description: 'Gujarati Phonetic',
+		tests: [
+			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
+			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer'}
+		],
+		inputmethod: 'gu-phonetic'
+	},{
+		description: 'Gujarati Inscript 2',
+		tests: [
+			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref'},
+			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha'}
+		],
+		inputmethod: 'gu-inscript2'
+	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
-			{ input: [ [ '9', true ] ], output: '‎', description: 'Hebrew Alt-9 -> LRM' },
+			{ input: [ [ '9', true ] ], output: '\u200e', description: 'Hebrew Alt-9 -> LRM' },
 			// The output is the RLM control character
-			{ input: [ [ '0', true ] ], output: '‏', description: 'Hebrew Alt-0 -> RLM' },
+			{ input: [ [ '0', true ] ], output: '\u200f', description: 'Hebrew Alt-0 -> RLM' },
 			// The first case is a regular hyphen-minus ('-'), which is the same
 			// when it is pressed by itself without Alt.
 			// The second case is hyphen-minus with Alt, which produces the Hebrew
@@ -252,11 +294,22 @@ var testFixtures = [
 		],
 		inputmethod: 'hi-inscript'
 	},{
-		description: 'Hindi transliteration tests',
+		description: 'Hindi transliteration tests - for textarea',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)', inputType: 'textarea' },
-
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' }
+		],
+		inputmethod: 'hi-transliteration',
+		inputType: 'textarea'
+	},{
+		description: 'Hindi Phonetic test for ZWNJ',
+		tests: [
+			{ input: 'dffB', output: 'द्\u200cभ', description: 'Hindi Phonetic ZWNJ character' }
+		],
+		inputmethod: 'hi-phonetic'
+	},{
+		description: 'Hindi transliteration tests',
+		tests: [
 			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
 			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
 			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
@@ -361,18 +414,117 @@ var testFixtures = [
 			{ input: '9', output: '९', description: '9 for ९ translitration' },
 			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
-		inputmethod: 'hi-transliteration',
-		inputType: 'textarea'
+		inputmethod: 'hi-transliteration'
+	},{
+		description: 'Armenian phonetic layout with extended keys test',
+		tests: [
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ԷԹՓՁՋ()ՐՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'քոեռտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՌՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդֆգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
+		],
+		inputmethod: 'hy-ephonetic'
+	},{
+		description: 'Armenian typewriter layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ՖՁ֏֊—և՚(ՕԷՂ', description: 'Armenian typewriter digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'ճփբսմուկըթծց', description: 'Armenian typewriter 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՃՓԲՍՄՈՒԿԸԹԾՑ', description: 'Armenian typewriter 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ջվգեանիտհպր»', description: 'Armenian typewriter 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ՋՎԳԵԱՆԻՏՀՊՐ«', description: 'Armenian typewriter 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'ժդչյզլքխշռ', description: 'Armenian typewriter 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԺԴՉՅԶԼՔԽՇՌ', description: 'Armenian typewriter 3rd row With Shift' }
+		],
+		inputmethod: 'hy-typewriter'
+	},{
+		description: 'Armenian alternative phonetic layout with extended keys test',
+		tests: [
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜ԷՖՓՁՋ()ՌՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'քոերտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՐՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդթգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴԹԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
+		],
+		inputmethod: 'hy-ephoneticalt'
+	},{
+		description: 'Armenian MS legacy Eastern layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Eastern digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'խւէրտեըիոպչջ', description: 'Armenian MS legacy Eastern 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ԽՒԷՐՏԵԸԻՈՊՉՋ', description: 'Armenian MS legacy Eastern 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'ասդֆքհճկլթփ\'', description: 'Armenian MS legacy Eastern 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖՔՀՃԿԼԹՓ՞', description: 'Armenian MS legacy Eastern 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զցգվբնմշղծ', description: 'Armenian MS legacy Eastern 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՎԲՆՄՇՂԾ', description: 'Armenian MS legacy Eastern 3rd row With Shift' }
+		],
+		inputmethod: 'hy-emslegacy'
+	},{
+		description: 'Armenian MS legacy Westerm layout with extended keys test',
+		tests: [
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Westerm digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Westerm digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Westerm 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Westerm 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'աստֆկհճքլթփ\'', description: 'Armenian MS legacy Westerm 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍՏՖԿՀՃՔԼԹՓ՞', description: 'Armenian MS legacy Westerm 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զցգւպնմշղծ', description: 'Armenian MS legacy Westerm 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՒՊՆՄՇՂԾ', description: 'Armenian MS legacy Westerm 3rd row With Shift' }
+		],
+		inputmethod: 'hy-wmslegacy'
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
-			{ input: '\\~', output: '~', description: 'Javanese transliteration - \\~ -> ~' },
-			{ input: 'A', output: 'ꦄ', description: 'Javanese transliteration - A' },
-			{ input: 'B', output: 'ꦨ', description: 'Javanese transliteration - B' },
-			{ input: 'y', output: 'ꦪ', description: 'Javanese transliteration - y' },
-			{ input: 'z', output: 'ꦗ꦳', description: 'Javanese transliteration - z' },
-			{ input: 'q`', output: '꧀', description: 'Javanese transliteration - q`' }
+			{ input: 'A', output: 'ꦄ', description: 'standalone vocal "A" - for foreign words' },
+			{ input: 'E', output: 'ꦌ', description: 'standalone vocal "E" - for foreign words' },
+			{ input: 'I', output: 'ꦆ', description: 'standalone vocal "I" - for foreign words' },
+			{ input: 'O', output: 'ꦎ', description: 'standalone vocal "O" - for foreign words' },
+			{ input: 'U', output: 'ꦈ', description: 'standalone vocal "U" - for foreign words' },
+			{ input: 'X', output: 'ꦄꦼ', description: 'standalone vocal "Ê" - for foreign words' },
+			{ input: 'h', output: 'ꦲ꧀', description: 'ha with a virama' },
+			{ input: 'ha', output: 'ꦲ', description: 'first letter - ha - also used to write "a", used to write Javanese word' },
+			{ input: 'a', output: 'ꦲ', description: 'first letter - ha - also used to write "a", used to write Javanese word' },
+			{ input: 'e', output: 'ꦲꦺ', description: 'first letter - ha - with a "taling", also used to write "e", used to write Javanese word' },
+			{ input: 'i', output: 'ꦲꦶ', description: 'first letter - ha - with a "wulu", also used to write "i", used to write Javanese word' },
+			{ input: 'o', output: 'ꦲꦺꦴ', description: 'first letter - ha - with a "taling tarung", also used to write "o", used to write Javanese word' },
+			{ input: 'u', output: 'ꦲꦸ', description: 'first letter - ha - with a "suku", also used to write "u", used to write Javanese word' },
+			{ input: 'x', output: 'ꦲꦼ', description: 'first letter - ha - with a "pêpêt", also used to write "ê", used to write Javanese word' },
+			{ input: 'q', output: '꧀', description: 'virama' },
+			{ input: 'lx', output: 'ꦊ', description: 'special letter - "la" with a "pêpêt" - "nga lelet"' },
+			{ input: 'rx', output: 'ꦉ', description: 'special letter - "ra" with a "pêpêt" - "pa cerek"' },
+			{ input: 'ning', output: 'ꦤꦶꦁ', description: '"na" + "cecak" (word ends with "ng")' },
+			{ input: 'cor', output: 'ꦕꦺꦴꦂ', description: '"ca" + "layar" (word ends with "r")' },
+			{ input: 'reh', output: 'ꦫꦺꦃ', description: '"ra" + "wignyan" (word ends with "h")' },
+			{ input: 'kya', output: 'ꦏꦾ', description: '"ka" + "pengkal" (word with "-y-" in the middle)' },
+			{ input: 'dra', output: 'ꦢꦿ', description: '"da" + "cakra" (word with "-r-" in the middle)' },
+			{ input: 'trx', output: 'ꦠꦽ', description: '"ta" + "cakra keret" (word with "-r-" in the middle, and ends with "ê")' },
+			{ input: 'sii', output: 'ꦱꦷ', description: '"sa" + "wulu melik"' },
+			{ input: 'wuu', output: 'ꦮꦹ', description: '"wa" + "suku mendut"' },
+			{ input: 'lai', output: 'ꦭꦻ', description: '"la" + "dirga mure"' },
+			{ input: ')', output: '꧍', description: 'last line test' }
 		],
 		inputmethod: 'jv-transliteration'
 	},{
@@ -402,7 +554,7 @@ var testFixtures = [
 			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
 			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
 			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
-			{ input: 'rFfyAMkf', output: 'ರ‍್ಯಾಂಕ್', description: 'ZWJ ರ‍್ಯಾಂಕ್' } // with ZWJ
+			{ input: 'rFfyAMkf', output: 'ರ\u200d್ಯಾಂಕ್', description: 'ZWJ ರ\u200d್ಯಾಂಕ್' } // with ZWJ
 		],
 		inputmethod: 'kn-kgp'
 	},{
@@ -430,7 +582,7 @@ var testFixtures = [
 			{ input: 'mu', output: 'ಮು', description: 'mu for ಮು in Kannada transliteration ' },
 			{ input: 'mU', output: 'ಮೂ', description: 'mU for ಮೂ in Kannada transliteration ' },
 			{ input: 'mo', output: 'ಮೊ', description: 'mo for ಮೊ in Kannada transliteration ' },
-			{ input: 'rAjxkumAr', output: 'ರಾಜ್‍ಕುಮಾರ್', description: 'rAjxkumAr for ರಾಜ್‍ಕುಮಾರ್ in Kannada transliteration ' }, // with ZWJ
+			{ input: 'rAjxkumAr', output: 'ರಾಜ್\u200dಕುಮಾರ್', description: 'rAjxkumAr for ರಾಜ್\u200dಕುಮಾರ್ in Kannada transliteration ' }, // with ZWJ
 			{ input: 'arha', output: 'ಅರ್ಹ', description: 'arha for ಅರ್ಕಾವತ್ತು in ಅರ್ಹ for Kannada transliteration ' },
 			{ input: 'dhvani', output: 'ಧ್ವನಿ', description: 'dhvani for ಧ್ವನಿ for Kannada transliteration ' },
 			{ input: 'marmara', output: 'ಮರ್ಮರ', description: 'marmara for ಮರ್ಮರ for Kannada transliteration ' },
@@ -442,8 +594,8 @@ var testFixtures = [
 			{ input: 'braakeT', output: 'ಬ್ರಾಕೆಟ್', description: 'braakeT for  ಬ್ರ್ಯಾಕೆಟ್ for Kannada transliteration ' },
 			{ input: 'nOTna', output: 'ನೋಟ್ನ', description: 'noTna for ನೋಟ್ನ for Kannada transliteration ' },
 			{ input: 'saMskRta', output: 'ಸಂಸ್ಕೃತ', description: 'saMskRta for ಸಂಸ್ಕೃತ for Kannada transliteration ' },
-			{ input: 'aalTarxnETIv', output: 'ಆಲ್ಟರ್‍ನೇಟೀವ್', description: 'aalTarxnETIv for ಆಲ್ಟರ್‍ನೇಟೀವ್ for Kannada transliteration ' }, // with ZWJ
-			{ input: 'kaarxnalli', output: 'ಕಾರ್‍ನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್‍ನಲ್ಲಿ for Kannada transliteration '}, // with ZWJ
+			{ input: 'aalTarxnETIv', output: 'ಆಲ್ಟರ್\u200dನೇಟೀವ್', description: 'aalTarxnETIv for ಆಲ್ಟರ್\u200dನೇಟೀವ್ for Kannada transliteration ' }, // with ZWJ
+			{ input: 'kaarxnalli', output: 'ಕಾರ್\u200dನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್\u200dನಲ್ಲಿ for Kannada transliteration '}, // with ZWJ
 			{ input: 'a', output: 'ಅ', description: 'a for ಅ in Kannada transliteration' },
 			{ input: 'ka', output: 'ಕ', description: 'ka for ಕ in Kannada transliteration' },
 			{ input: 'Ka', output: 'ಖ', description: 'Ka for ಖ in Kannada transliteration' },
@@ -1071,11 +1223,17 @@ var testFixtures = [
 			{
 				input: 'sfpes deta.',
 				output: 'स्पेस देता.',
-				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).',
-				inputType: 'textarea'
+				description: 'Marathi phonetic "sfpes deta." -> "स्पेस देता." (bug 51285).'
 			},
+			{
+				input: 'stfymffSivmffsuMdrmff',
+				output: 'सत्यम्\u200cशिवम्\u200cसुंदरम्\u200c',
+				description: 'Marathi phonetic ZWNJ character'
+			},
+
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		],
+		inputType: 'input',
 		inputmethod: 'mr-phonetic'
 	},{
 		description: 'Marathi InScript 2 test',
@@ -1238,6 +1396,23 @@ var testFixtures = [
 		],
 		inputmethod: 'udm-alt'
 	},{
+		description: 'Kyrgyz Cyrillic test',
+		tests: [
+			{ input: [ [ 'н', true ] ], output: 'ң', description: 'Kyrgyz Cyrillic letters, Alt-н' },
+			{ input: [ [ 'Н', true ] ], output: 'Ң', description: 'Kyrgyz Cyrillic letters, Alt-Н' },
+			{ input: [ [ 'о', true ] ], output: 'ө', description: 'Kyrgyz Cyrillic letters, Alt-о' },
+			{ input: [ [ 'О', true ] ], output: 'Ө', description: 'Kyrgyz Cyrillic letters, Alt-О' },
+			{ input: [ [ 'у', true ] ], output: 'ү', description: 'Kyrgyz Cyrillic letters, Alt-у' },
+			{ input: [ [ 'У', true ] ], output: 'Ү', description: 'Kyrgyz Cyrillic letters, Alt-У' },
+			{ input: 'н', output: 'н', description: 'Kyrgyz Cyrillic letters, н does not change' },
+			{ input: 'Н', output: 'Н', description: 'Kyrgyz Cyrillic letters, Н does not change' },
+			{ input: 'о', output: 'о', description: 'Kyrgyz Cyrillic letters, о does not change' },
+			{ input: 'О', output: 'О', description: 'Kyrgyz Cyrillic letters, О does not change' },
+			{ input: 'у', output: 'у', description: 'Kyrgyz Cyrillic letters, у does not change' },
+			{ input: 'У', output: 'У', description: 'Kyrgyz Cyrillic letters, У does not change' }
+		],
+		inputmethod: 'ky-cyrl-alt'
+	},{
 		description: 'Oriya InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
@@ -1395,7 +1570,7 @@ var testFixtures = [
 		description: 'Tamil InScript test',
 		tests: [
 			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
-			{ input: 'lfkd)<fld', output: 'திக்‌ஷித்', description: 'Tamil Inscript திக்‌ஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
+			{ input: 'lfkd)<fld', output: 'திக்\u200cஷித்', description: 'Tamil Inscript திக்\u200cஷித் non conjunct form with ZWNJ in between' }, // (with ZWNJ)
 			{ input: 'lf&fld', output: 'திக்ஷித்', description: 'Tamil Inscript திக்ஷித் conjunct form' },
 			{ input: ';sjVd', output: 'சேரன்', description: 'Tamil Inscript சேரன் Cheran' },
 			{ input: ';aBVd', output: 'சோழன்', description: 'Tamil Inscript சோழன் Chozhan' },
@@ -1403,7 +1578,7 @@ var testFixtures = [
 			{ input: 'heCd\'f/jd', output: 'பாண்டியர்', description: 'Tamil Inscript பாண்டியர் Pandiyar' },
 			{ input: 'Ecrjd', output: 'ஆமீர்', description: 'Tamil Inscript ஆமீர் Aamir' },
 			{ input: 'Duj`Vf', output: 'அஹரொனி', description: 'Tamil Inscript அஹரொனி Aharoni' },
-			{ input: 'md)jrkevdld', output: 'ஸ்‌ரீகாந்த்', description: 'Tamil Inscript ஸ்‌ரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
+			{ input: 'md)jrkevdld', output: 'ஸ்\u200cரீகாந்த்', description: 'Tamil Inscript ஸ்\u200cரீகாந்த் with ZWNJ between ஸ் and ரீ Srikanth' }, // (with ZWNJ)
 			{ input: 'mdjrkevdld', output: 'ஸ்ரீகாந்த்', description: 'Tamil Inscript ஸ்ரீகாந்த் with SHRI = SA+RII' },
 			{ input: 'MdjrjcC', output: 'ஶ்ரீரமண', description: 'Tamil Inscript ஶ்ரீரமண Shriramana with SHRI = SHA+RII' },
 			{ input: 'Dnanfle', output: 'அலோலிதா', description: 'Tamil Inscript அலோலிதா Alolitha' },
@@ -1425,10 +1600,10 @@ var testFixtures = [
 	},{
 		description: 'Tamil Transliteration test',
 		tests: [
-			//(ks|KS)h should give non-conjunct form of ksh க்‌ஷ் (with ZWNJ)
+			//(ks|KS)h should give non-conjunct form of ksh க்\u200cஷ் (with ZWNJ)
 			//(ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
-			{ input: 'thikshith', output: 'திக்‌ஷித்', description: 'thikshith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
-			{ input: 'thikShith', output: 'திக்‌ஷித்', description: 'thikShith in Tamil transliteration for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thikshith', output: 'திக்\u200cஷித்', description: 'thikshith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'thikShith', output: 'திக்\u200cஷித்', description: 'thikShith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'thiksHith', output: 'திக்ஷித்', description: 'thiksHith in Tamil transliteration for திக்ஷித் conjunct form' },
 			{ input: 'thiKSHith', output: 'திக்ஷித்', description: 'thiKSHith in Tamil transliteration for திக்ஷித் conjunct form' },
 			{ input: 'Sri', output: 'ஸ்ரீ', description: 'Sri in Tamil transliteration for ஸ்ரீ Sri' },
@@ -1496,11 +1671,11 @@ var testFixtures = [
 	},{
 		description: 'Tamil 99 test',
 		tests: [
-			//hfW should give non-conjunct form of ksha க்‌ஷ (with ZWNJ)
+			//hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
 			//T still gives the conjunct form க்ஷ
-			{ input: 'lshfWslf', output: 'திக்‌ஷித்', description: 'lshfWslf in Tamil99 for திக்‌ஷித் non conjunct form' }, // (with ZWNJ)
+			{ input: 'lshfWslf', output: 'திக்\u200cஷித்', description: 'lshfWslf in Tamil99 for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
-			{ input: 'hfWtkakf', output: 'க்‌ஷேமம்', description: 'hfWtkakf in Tamil99 for க்‌ஷேமம் hfW -> க்‌ஷ non conjunct form' }, // (with ZWNJ)
+			{ input: 'hfWtkakf', output: 'க்\u200cஷேமம்', description: 'hfWtkakf in Tamil99 for க்\u200cஷேமம் hfW -> க்\u200cஷ non conjunct form' }, // (with ZWNJ)
 			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
 		],
 		inputmethod: 'ta-99'
@@ -1566,53 +1741,53 @@ var testFixtures = [
 	},{
 		description: 'Slovak keyboard test',
 		tests: [
-			{ input: '`', output: ';', description: "Slovak ` -> ;" },
-			{ input: '1', output: '+', description: "Slovak 1 -> +" },
-			{ input: '2', output: 'ľ', description: "Slovak 2 -> ľ" },
-			{ input: '3', output: 'š', description: "Slovak 3 -> š" },
-			{ input: '4', output: 'č', description: "Slovak 4 -> č" },
-			{ input: '5', output: 'ť', description: "Slovak 5 -> ť" },
-			{ input: '6', output: 'ž', description: "Slovak 6 -> ž" },
-			{ input: '7', output: 'ý', description: "Slovak 7 -> ý" },
-			{ input: '8', output: 'á', description: "Slovak 8 -> á" },
-			{ input: '9', output: 'í', description: "Slovak 9 -> í" },
-			{ input: '0', output: 'é', description: "Slovak 0 -> é" },
-			{ input: '-', output: '=', description: "Slovak - -> =" },
-			{ input: '=a', output: 'á', description: "Slovak =a -> á" },
-			{ input: '=E', output: 'É', description: "Slovak =E -> É" },
-			{ input: '=l', output: 'ĺ', description: "Slovak =l -> ĺ" },
-			{ input: '=L', output: 'Ĺ', description: "Slovak =L -> Ĺ" },
-			{ input: '=r', output: 'ŕ', description: "Slovak =r -> ŕ" },
-			{ input: '=R', output: 'Ŕ', description: "Slovak =R -> Ŕ" },
+			{ input: '`', output: ';', description: 'Slovak ` -> ;' },
+			{ input: '1', output: '+', description: 'Slovak 1 -> +' },
+			{ input: '2', output: 'ľ', description: 'Slovak 2 -> ľ' },
+			{ input: '3', output: 'š', description: 'Slovak 3 -> š' },
+			{ input: '4', output: 'č', description: 'Slovak 4 -> č' },
+			{ input: '5', output: 'ť', description: 'Slovak 5 -> ť' },
+			{ input: '6', output: 'ž', description: 'Slovak 6 -> ž' },
+			{ input: '7', output: 'ý', description: 'Slovak 7 -> ý' },
+			{ input: '8', output: 'á', description: 'Slovak 8 -> á' },
+			{ input: '9', output: 'í', description: 'Slovak 9 -> í' },
+			{ input: '0', output: 'é', description: 'Slovak 0 -> é' },
+			{ input: '-', output: '=', description: 'Slovak - -> =' },
+			{ input: '=a', output: 'á', description: 'Slovak =a -> á' },
+			{ input: '=E', output: 'É', description: 'Slovak =E -> É' },
+			{ input: '=l', output: 'ĺ', description: 'Slovak =l -> ĺ' },
+			{ input: '=L', output: 'Ĺ', description: 'Slovak =L -> Ĺ' },
+			{ input: '=r', output: 'ŕ', description: 'Slovak =r -> ŕ' },
+			{ input: '=R', output: 'Ŕ', description: 'Slovak =R -> Ŕ' },
 			{
 				input: [ [ '3', true ], [ 'O', false ] ],
 				output: 'Ô',
-				description: "Slovak AltGr-3 + O -> Ô"
+				description: 'Slovak AltGr-3 + O -> Ô'
 			},
 			{
 				input: [ [ '=', true ], [ 'A', false ] ],
 				output: 'Ä',
-				description: "Slovak AltGr-= + A -> Ä"
+				description: 'Slovak AltGr-= + A -> Ä'
 			},
 
-			{ input: '~', output: '°', description: "Slovak ~ -> °" },
-			{ input: '!', output: '1', description: "Slovak ! -> 1" },
-			{ input: '@', output: '2', description: "Slovak @ -> 2" },
-			{ input: '#', output: '3', description: "Slovak # -> 3" },
-			{ input: '$', output: '4', description: "Slovak $ -> 4" },
-			{ input: '%', output: '5', description: "Slovak % -> 5" },
-			{ input: '^', output: '6', description: "Slovak ^ -> 6" },
-			{ input: '&', output: '7', description: "Slovak & -> 7" },
-			{ input: '*', output: '8', description: "Slovak * -> 8" },
-			{ input: '(', output: '9', description: "Slovak ( -> 9" },
-			{ input: ')', output: '0', description: "Slovak ) -> 0" },
-			{ input: '_', output: '%', description: "Slovak _ -> %" },
-			{ input: '+c', output: 'č', description: "Slovak +c -> č" },
-			{ input: '+C', output: 'Č', description: "Slovak +c -> Č" },
-			{ input: '+d', output: 'ď', description: "Slovak +d -> ď" },
-			{ input: '+D', output: 'Ď', description: "Slovak +d -> Ď" },
-			{ input: '+l', output: 'ľ', description: "Slovak +l -> ľ" },
-			{ input: '+L', output: 'Ľ', description: "Slovak +l -> Ľ" },
+			{ input: '~', output: '°', description: 'Slovak ~ -> °' },
+			{ input: '!', output: '1', description: 'Slovak ! -> 1' },
+			{ input: '@', output: '2', description: 'Slovak @ -> 2' },
+			{ input: '#', output: '3', description: 'Slovak # -> 3' },
+			{ input: '$', output: '4', description: 'Slovak $ -> 4' },
+			{ input: '%', output: '5', description: 'Slovak % -> 5' },
+			{ input: '^', output: '6', description: 'Slovak ^ -> 6' },
+			{ input: '&', output: '7', description: 'Slovak & -> 7' },
+			{ input: '*', output: '8', description: 'Slovak * -> 8' },
+			{ input: '(', output: '9', description: 'Slovak ( -> 9' },
+			{ input: ')', output: '0', description: 'Slovak ) -> 0' },
+			{ input: '_', output: '%', description: 'Slovak _ -> %' },
+			{ input: '+c', output: 'č', description: 'Slovak +c -> č' },
+			{ input: '+C', output: 'Č', description: 'Slovak +c -> Č' },
+			{ input: '+d', output: 'ď', description: 'Slovak +d -> ď' },
+			{ input: '+D', output: 'Ď', description: 'Slovak +d -> Ď' },
+			{ input: '+l', output: 'ľ', description: 'Slovak +l -> ľ' },
+			{ input: '+L', output: 'Ľ', description: 'Slovak +l -> Ľ' },
 
 			// QWERTZ
 			{ input: 'y', output: 'z', description: 'Slovak y -> z' },
@@ -1629,8 +1804,9 @@ var testFixtures = [
 
 			{ input: 'l', output: 'l', description: 'Slovak l -> l' },
 			{ input: ';', output: 'ô', description: 'Slovak ; -> ô' },
-			{ input: "'", output: '§', description: "Slovak ' -> §" },
-			{ input: '\\', output: 'ň', description: 'Slovak \ -> ň' },
+			{ input: '\'', output: '§', description: 'Slovak \' -> §' },
+			{ input: '\\', output: 'ň', description: 'Slovak \\ -> ň' },
+
 			{ input: 'L', output: 'L', description: 'Slovak L -> L' },
 			{ input: ':', output: '"', description: 'Slovak : -> "' },
 			{ input: '"', output: '!', description: 'Slovak " -> !' },

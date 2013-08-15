@@ -122,6 +122,6 @@
 			['\\.', '॥']
 		]
 	};
-	$.ime.register( hiInScript2 );
 
+	$.ime.register( hiInScript2 );
 }( jQuery ) );

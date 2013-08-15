@@ -3,7 +3,7 @@
 
 	var knInscript2 = {
 		id: 'kn-inscript2',
-		name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್ ೨',
+		name: 'ಇನ್\u200cಸ್ಕ್ರಿಪ್ಟ್ ೨',
 		description: 'Enhanced InScript keyboard for Kannada script',
 		date: '2013-01-16',
 		author: 'Parag Nemade',
@@ -98,8 +98,8 @@
 			['\\*', 'ಶ್ರ']
 		],
 		patterns_x: [
-			['1', '‍'],
-			['2', '‌'],
+			['1', '\u200d'],
+			['2', '\u200c'],
 			['4', '₹'],
 			['\\+', 'ೠ'],
 			['\\=', 'ೄ'],
@@ -116,5 +116,4 @@
 	};
 
 	$.ime.register( knInscript2 );
-
 }( jQuery ) );

@@ -22,5 +22,4 @@
 	};
 
 	$.ime.register( maithiliInScript2 );
-
 }( jQuery ) );

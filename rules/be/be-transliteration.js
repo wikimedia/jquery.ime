@@ -81,7 +81,6 @@
 			['\\.', 'ю'],
 			['/', '.'],
 
-
 			['@', '"'], // 2
 			['#', '№'], // 3
 			['\\$', ';'], // 4
@@ -90,6 +89,6 @@
 			['&', '?']] // 7
 			// '*', '(' and ')' are the same    // 8, 9, 0
 	};
-	$.ime.register( beTransliteration );
 
+	$.ime.register( beTransliteration );
 }( jQuery ) );

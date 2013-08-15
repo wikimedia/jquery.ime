@@ -1,7 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME, imeTest, typeChars, caretTests;
+	var $textarea, textareaIME, imeTest, typeChars,
+		caretTests, clusterCaretTests;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -187,7 +188,7 @@
 	} );
 
 	function caretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
@@ -245,28 +246,30 @@
 			QUnit.expect( 1 );
 			QUnit.stop();
 			ime.load( inputmethodId ).done( function () {
-				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for '+ inputmethodId + ' exist and loaded correctly.' );
+				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
 				QUnit.start();
 			} );
 		} );
 	} );
 
-	$.each( $.ime.languages, function ( language ) {
-		var language = $.ime.languages[language];
+	$.each( $.ime.languages, function ( languageCode ) {
+		var language = $.ime.languages[languageCode];
+
 		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
-			var i,
-				inputmethod,
+			var i, inputmethod,
 				inputmethods = language.inputmethods;
+
 			QUnit.expect( inputmethods.length );
-			for ( i = 0 ; i < inputmethods.length; i++ ) {
+
+			for ( i = 0; i < inputmethods.length; i++ ) {
 				inputmethod = $.ime.sources[inputmethods[i]];
-				QUnit.ok( true, !!inputmethod, 'Definition for '+ inputmethods[i] + ' exist.' );
+				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
 			}
 		} );
 	} );
 
-	function caretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -'+text+ '('+ start + ','+ end + ')' , 1, function ( assert ) {
+	function clusterCaretTest( text, start, end ) {
+		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
@@ -283,7 +286,7 @@
 		} );
 	}
 
-	caretTests = [
+	clusterCaretTests = [
 		['ക്', 0, 0],
 		['ക്', 1, 1],
 		['ന്ത്', 1, 3],
@@ -292,7 +295,7 @@
 	];
 
 	$.each( caretTests, function( i, test ) {
-		caretTest( test[0], test[1], test[2] );
+		clusterCaretTest( test[0], test[1], test[2] );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
@@ -318,8 +321,7 @@
 			var ime, $input;
 
 			QUnit.expect( opt.tests.length + 1 );
-
-			if ( opt.inputType  === 'textarea' ) {
+			if ( opt.inputType === 'textarea' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
 			} else if ( opt.inputType === 'contenteditable' ) {
@@ -346,8 +348,8 @@
 
 				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
 				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
-					'IME selector shows ' +  $.ime.sources[opt.inputmethod].name );
-				for ( i = 0 ; i < opt.tests.length; i++ ) {
+					'IME selector shows ' + $.ime.sources[opt.inputmethod].name );
+				for ( i = 0; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
 
@@ -355,7 +357,7 @@
 					QUnit.strictEqual(
 						$input.val() || $input.text(),
 						opt.tests[i].output,
-						opt.tests[i].description + " - " + opt.inputType
+						opt.tests[i].description + ' - ' + opt.inputType
 					);
 
 					$input.val( '' );
@@ -368,10 +370,10 @@
 		} );
 	};
 
+	/*global testFixtures */
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
-
 		if ( fixture.inputType === undefined ) {
 			// Run tests for content editable divs too
 			fixture.inputType = 'contenteditable';

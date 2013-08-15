@@ -26,7 +26,7 @@ module.exports = function ( grunt ) {
 					'src/jquery.ime.selector.js',
 					'src/jquery.ime.preferences.js',
 					'src/jquery.ime.inputmethods.js',
-					'src/rangy/rangy-core.js'
+					'libs/rangy/rangy-core.js'
 				],
 				dest: 'dist/jquery.ime/<%= pkg.name %>.js'
 			}
@@ -42,7 +42,7 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
 						'src/jquery.ime.inputmethods.js',
-						'src/rangy/rangy-core.js'
+						'libs/rangy/rangy-core.js'
 					]
 				}
 			}
@@ -65,26 +65,8 @@ module.exports = function ( grunt ) {
 			tasks: 'lint qunit'
 		},
 		jshint: {
-			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				boss: true,
-				eqnull: true,
-				browser: true,
-				smarttabs: true,
-				laxbreak: true,
-				white: false,
-				globals: {
-					jQuery: true,
-					QUnit: true
-				}
-			},
+			options: JSON.parse( grunt.file.read( '.jshintrc' )
+				.replace( /\/\*(?:(?!\*\/)[\s\S])*\*\//g, '' ).replace( /\/\/[^\n\r]*/g, '' ) ),
 			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
 		}
 	} );

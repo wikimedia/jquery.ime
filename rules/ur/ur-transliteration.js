@@ -94,6 +94,4 @@
 			['\\)', ')']]
 	};
 	$.ime.register( urTransliteration );
-
 }( jQuery ) );
-

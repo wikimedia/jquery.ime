@@ -92,6 +92,6 @@
 			['/', 'ਯ']]
 
 	};
-	$.ime.register( paInScript );
 
+	$.ime.register( paInScript );
 }( jQuery ) );

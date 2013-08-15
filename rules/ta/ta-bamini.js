@@ -87,5 +87,4 @@
 			[ '([ஜஷஸஹ])\\_', '$1ூ' ] ]
 	};
 	$.ime.register( taBamini );
-
 }( jQuery ) );

@@ -114,7 +114,6 @@
 			['।\\.', '॥'], // Double danda, must be before single danda
 			['\\.', '।']] // Danda
 	};
+
 	$.ime.register( paTransliteration );
-
 }( jQuery ) );
-

@@ -87,5 +87,4 @@
 	};
 
 	$.ime.register( inscript );
-
 }( jQuery ) );
