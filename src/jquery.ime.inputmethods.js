@@ -78,6 +78,18 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
 		},
+		'ckb-transliteration-arkbd': {
+			name: 'باشووری',
+			source: 'rules/ckb/ckb-transliteration-arkbd.js'
+		},
+		'ckb-transliteration-fakbd': {
+			name: 'ڕۆژھەڵاتی',
+			source: 'rules/ckb/ckb-transliteration-fakbd.js'
+		},
+		'ckb-transliteration-lakbd': {
+			name: 'لاتینی',
+			source: 'rules/ckb/ckb-transliteration-lakbd.js'
+		},
 		'cv-cyr-altgr': {
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
@@ -323,6 +335,14 @@
 		'ks-kbd': {
 			name: 'Kashmiri Arabic',
 			source: 'rules/ks/ks-kbd.js'
+		},
+		'ku-h': {
+			name: 'Ku h',
+			source: 'rules/ku/ku-h.js'
+		},
+		'ku-tr': {
+			name: 'Ku tr',
+			source: 'rules/ku/ku-tr.js'
 		},
 		'lo-kbd': {
 			name: 'າຶກ',
@@ -587,6 +607,10 @@
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
+		'ckb': {
+			autonym: 'کوردی',
+			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
+		},
 		'ce': {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -602,6 +626,10 @@
 		'de': {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
+		},
+		'diq': {
+			autonym: 'Kirdkî',
+			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'doi': {
 			autonym: 'डोगरी',
@@ -694,6 +722,10 @@
 		'kab': {
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
+		},
+		'ku': {
+			autonym: 'Kurdî',
+			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
 		'lbe': {
 			autonym: 'лакку',
