@@ -306,7 +306,7 @@ var testFixtures = [
 		tests: [
 			{ input: 'dffB', output: 'द्\u200cभ', description: 'Hindi Phonetic ZWNJ character' }
 		],
-		inputmethod: 'hi-phonetic',
+		inputmethod: 'hi-phonetic'
 	},{
 		description: 'Hindi transliteration tests',
 		tests: [
