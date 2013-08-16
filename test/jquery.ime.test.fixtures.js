@@ -255,7 +255,10 @@ var testFixtures = [
 			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
 			{ input: 'sad`bhaava', output: 'સદ્\u200cભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
 			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' },
-			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' }
+			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' },
+			{ input: 'dau', output: 'દઉ', description: 'Gujarati dau - testing small u' },
+			{ input: 'kUmaaxii', output: 'કૌમાક્ષી', description: 'Gujarati kUmaaxii - testing aU' },
+			{ input: 'kuukaDo', output: 'કૂકડો', description: 'Gujarati kuukaDo - testing big u' }
 		],
 		inputmethod: 'gu-transliteration'
 	},{
