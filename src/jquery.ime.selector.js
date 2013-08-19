@@ -219,11 +219,11 @@
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
 					this.disableIM();
-					this.$element.trigget( 'setim.ime', 'system' );
+					this.$element.trigger( 'setim.ime', 'system' );
 				} else {
 					if ( this.inputmethod !== null ) {
 						this.selectIM( this.inputmethod.id );
-						this.$element.trigget( 'setim.ime', this.inputmethod.id );
+						this.$element.trigger( 'setim.ime', this.inputmethod.id );
 					} else {
 						languageCode = this.decideLanguage();
 						this.selectLanguage( languageCode );
@@ -355,7 +355,8 @@
 			ime.setLanguage( languageCode );
 			this.inputmethod = null;
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
-			return  $.ime.preferences.getIM( languageCode );
+
+			return $.ime.preferences.getIM( languageCode );
 		},
 
 		/**
@@ -564,11 +565,11 @@
 	}
 
 	function imeList() {
-		return  $( '<ul>' ).addClass( 'ime-list' );
+		return $( '<ul>' ).addClass( 'ime-list' );
 	}
 
 	function imeListTitle() {
-		return  $( '<h3>' ).addClass( 'ime-list-title' );
+		return $( '<h3>' ).addClass( 'ime-list-title' );
 	}
 
 	function toggleMenuItem() {
