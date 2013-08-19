@@ -216,5 +216,6 @@
 			['//', 'ఽ'], // avagraha
 			['~\\$', '₹']] // rupee
 	};
+
 	$.ime.register( teTransliteration );
 }( jQuery ) );

@@ -1,6 +1,7 @@
 /**
  * This is a phonetic layout for the Armenian language (hy, arm, hye).
- * The layout comes from DOS times, and was later popularised by KDWin and WinKeys keyboard "drivers".
+ * The layout comes from DOS times, and was later popularised by KDWin and
+ * WinKeys keyboard "drivers".
  * While not as efficient and well-thought as the official typewriter layout, it is very popular as
  * it uses similary sounding Latin letters, which is very handy, as keyboards in Armenia
  * don't come engraved with Armenian letters.

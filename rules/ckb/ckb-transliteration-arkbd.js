@@ -98,6 +98,6 @@
 			['\\?', '؟']
 		]
 	};
-	$.ime.register( ckbTransliterationArkbd );
 
+	$.ime.register( ckbTransliterationArkbd );
 }( jQuery ) );
