@@ -1567,6 +1567,13 @@ var testFixtures = [
 		],
 		inputmethod: 'pa-transliteration'
 	},{
+		description: 'Punjabi Gurmukhi Phonetic',
+		tests: [
+			{ input: ')', output: '੦', description: 'Punjabi Phonetic test - Zero' },
+			{ input: '(', output: '੯', description: 'Punjabi Phonetic test - Nine' }
+		],
+		inputmethod: 'pa-phonetic'
+	},{
 		description: 'Tamil InScript test',
 		tests: [
 			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
