@@ -99,6 +99,6 @@
 			['\\?', '؟']
 		]
 	};
-	$.ime.register( ckbTransliterationFakbd );
 
+	$.ime.register( ckbTransliterationFakbd );
 }( jQuery ) );

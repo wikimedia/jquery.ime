@@ -29,5 +29,4 @@
 	};
 
 	$.ime.register( kuTr );
-
 }( jQuery ) );

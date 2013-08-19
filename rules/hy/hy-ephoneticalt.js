@@ -1,6 +1,6 @@
 /**
- * This is alternative phonetic layout for Armenian language (hy, arm, hye). 
- * Based on Armenian phonetic layout, it improves few things, by placing ր under latin r, 
+ * This is alternative phonetic layout for Armenian language (hy, arm, hye).
+ * Based on Armenian phonetic layout, it improves few things, by placing ր under latin r,
  * as ր is much more frequent in Armenian. ռ goes under 8, where ր is in standart phonetic.
  * Another change, which is not yet in xkb, ( as of July 2013), is swapping ֆ and թ: Ֆ is
  * placed under F, where left index finger is, but is the least used letter in Armenian,
@@ -10,7 +10,7 @@
  * mijaket (outside of main Armenian Unicode range) and Dram (AMD) sign.
  * Please, double-check with Unicode before making any changes here.
  *
- * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key, 
+ * Layout supports extended keys, with AltGr (Alt or Alt+Ctrl on some systems) + key,
  * producing digits and punctuation marks from standard US keyboard layout.
  */
 
@@ -168,5 +168,4 @@
 	};
 
 	$.ime.register( hyEphonetic );
-
 }( jQuery ) );
