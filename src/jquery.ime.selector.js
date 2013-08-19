@@ -131,7 +131,9 @@
 			} );
 
 			// Hide the menu when clicked outside
-			$( 'html' ).click( $.proxy( this.hide, this ) );
+			$( 'html' ).click( function () {
+				imeselector.hide();
+			} );
 
 			// ... but when clicked on window do not propagate it.
 			this.$menu.on( 'click', function ( event ) {
