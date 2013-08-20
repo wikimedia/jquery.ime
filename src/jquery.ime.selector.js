@@ -165,6 +165,7 @@
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function () {
 				var im = imeselector.selectLanguage( $( this ).attr( 'lang' ) );
+
 				imeselector.$element.trigger( 'setim.ime', im );
 
 				return false;
@@ -371,7 +372,7 @@
 				return $.ime.preferences.getLanguage();
 			}
 
-			if ( this.$element.attr('lang' ) &&
+			if ( this.$element.attr( 'lang' ) &&
 				$.ime.languages[ this.$element.attr( 'lang' ) ]
 			) {
 				return this.$element.attr( 'lang' );

@@ -4,7 +4,7 @@
 	$.extend( $.ime.preferences, {
 		registry: {
 			isDirty: false,
-			language : null,
+			language: null,
 			previousLanguages: [], // array of previous languages
 			previousInputMethods: [], // array of previous inputmethods
 			imes: {
@@ -76,6 +76,7 @@
 			if ( !this.registry.imes ) {
 				this.registry.imes = {};
 			}
+
 			return this.registry.imes[language] || 'system';
 		},
 
