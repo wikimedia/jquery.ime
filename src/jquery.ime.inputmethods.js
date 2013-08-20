@@ -337,11 +337,11 @@
 			source: 'rules/ks/ks-kbd.js'
 		},
 		'ku-h': {
-			name: 'Ku h',
+			name: 'Kurdî-h',
 			source: 'rules/ku/ku-h.js'
 		},
 		'ku-tr': {
-			name: 'Ku tr',
+			name: 'Kurdî-tr',
 			source: 'rules/ku/ku-tr.js'
 		},
 		'lo-kbd': {

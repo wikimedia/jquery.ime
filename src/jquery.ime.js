@@ -1,8 +1,5 @@
-( function ( $ ) {
+( function ( $, rangy ) {
 	'use strict';
-
-	// rangy is defined in the rangy library
-	/*global rangy */
 
 	/**
 	 * IME Class
@@ -718,4 +715,4 @@
 			return index;
 		} );
 	}
-}( jQuery ) );
+}( jQuery, rangy ) );
