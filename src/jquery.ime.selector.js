@@ -327,15 +327,17 @@
 		 * @return {string|bool} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
-			var ime,
+			var ime = this.$element.data( 'ime' ),
 				imePref = $.ime.preferences.getIM( languageCode ),
 				language = $.ime.languages[languageCode];
 
 			if ( !language ) {
+				if ( $.isFunction( ime.options.getAutonym ) ) {
+					this.setMenuTitle( ime.options.getAutonym( languageCode ) );
+				}
+
 				return false;
 			}
-
-			ime = this.$element.data( 'ime' );
 
 			if ( ime.getLanguage() === languageCode ) {
 				// Nothing to do. It is same as the current language,
@@ -350,7 +352,7 @@
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( '.ime-list-title' ).text( language.autonym );
+			this.setMenuTitle( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.hide();
 			// And select the default inputmethod
@@ -359,6 +361,10 @@
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 
 			return $.ime.preferences.getIM( languageCode );
+		},
+
+		setMenuTitle: function ( title ) {
+			this.$menu.find( '.ime-list-title' ).text( title );
 		},
 
 		/**
