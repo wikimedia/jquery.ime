@@ -332,11 +332,9 @@
 				imePref = $.ime.preferences.getIM( languageCode ),
 				language = $.ime.languages[languageCode];
 
-			if ( !language ) {
-				if ( $.isFunction( ime.options.getAutonym ) ) {
-					this.setMenuTitle( ime.options.getAutonym( languageCode ) );
-				}
+			this.setMenuTitle( this.getAutonym( languageCode ) );
 
+			if ( !language ) {
 				return false;
 			}
 
@@ -362,6 +360,10 @@
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 
 			return $.ime.preferences.getIM( languageCode );
+		},
+
+		getAutonym: function ( languageCode ) {
+			return $.ime.languages[languageCode].autonym;
 		},
 
 		setMenuTitle: function ( title ) {
