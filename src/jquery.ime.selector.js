@@ -131,7 +131,9 @@
 			} );
 
 			// Hide the menu when clicked outside
-			$( 'html' ).click( $.proxy( this.hide, this ) );
+			$( 'html' ).click( function () {
+				imeselector.hide();
+			} );
 
 			// ... but when clicked on window do not propagate it.
 			this.$menu.on( 'click', function ( event ) {
@@ -156,12 +158,15 @@
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-im', function () {
 				imeselector.selectIM( $( this ).data( 'ime-inputmethod' ) );
+				imeselector.$element.trigger( 'setim.ime', $( this ).data( 'ime-inputmethod' ) );
 
 				return false;
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li.ime-lang', function () {
-				imeselector.selectLanguage( $( this ).attr( 'lang' ) );
+				var im = imeselector.selectLanguage( $( this ).attr( 'lang' ) );
+
+				imeselector.$element.trigger( 'setim.ime', im );
 
 				return false;
 			} );
@@ -217,9 +222,11 @@
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
 					this.disableIM();
+					this.$element.trigger( 'setim.ime', 'system' );
 				} else {
 					if ( this.inputmethod !== null ) {
 						this.selectIM( this.inputmethod.id );
+						this.$element.trigger( 'setim.ime', this.inputmethod.id );
 					} else {
 						languageCode = this.decideLanguage();
 						this.selectLanguage( languageCode );
@@ -317,7 +324,8 @@
 		/**
 		 * Select a language
 		 *
-		 * @param languageCode
+		 * @param {string} languageCode
+		 * @return {string|bool} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
 			var ime,
@@ -337,7 +345,7 @@
 					this.selectIM( $.ime.preferences.getIM( languageCode ) );
 				}
 
-				return false;
+				return $.ime.preferences.getIM( languageCode );
 			}
 
 			this.$menu.find( 'li.ime-lang' ).show();
@@ -350,6 +358,8 @@
 			ime.setLanguage( languageCode );
 			this.inputmethod = null;
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
+
+			return $.ime.preferences.getIM( languageCode );
 		},
 
 		/**
@@ -362,7 +372,7 @@
 				return $.ime.preferences.getLanguage();
 			}
 
-			if ( this.$element.attr('lang' ) &&
+			if ( this.$element.attr( 'lang' ) &&
 				$.ime.languages[ this.$element.attr( 'lang' ) ]
 			) {
 				return this.$element.attr( 'lang' );
@@ -558,11 +568,11 @@
 	}
 
 	function imeList() {
-		return  $( '<ul>' ).addClass( 'ime-list' );
+		return $( '<ul>' ).addClass( 'ime-list' );
 	}
 
 	function imeListTitle() {
-		return  $( '<h3>' ).addClass( 'ime-list-title' );
+		return $( '<h3>' ).addClass( 'ime-list-title' );
 	}
 
 	function toggleMenuItem() {

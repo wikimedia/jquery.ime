@@ -95,6 +95,6 @@
 			['\\?', '؟']
 		]
 	};
-	$.ime.register( ckbTransliterationLakbd );
 
+	$.ime.register( ckbTransliterationLakbd );
 }( jQuery ) );
