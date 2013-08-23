@@ -351,7 +351,6 @@
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.setMenuTitle( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.hide();
 			// And select the default inputmethod
@@ -481,7 +480,7 @@
 
 				$languageItem = $( '<a>' )
 					.attr( 'href', '#' )
-					.text( language.autonym )
+					.text( this.getAutonym() )
 					.addClass( 'selectable-row-item' );
 				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
