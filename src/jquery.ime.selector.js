@@ -328,15 +328,15 @@
 		 * @return {string|bool} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
-			var ime,
+			var ime = this.$element.data( 'ime' ),
 				imePref = $.ime.preferences.getIM( languageCode ),
 				language = $.ime.languages[languageCode];
+
+			this.setMenuTitle( this.getAutonym( languageCode ) );
 
 			if ( !language ) {
 				return false;
 			}
-
-			ime = this.$element.data( 'ime' );
 
 			if ( ime.getLanguage() === languageCode ) {
 				// Nothing to do. It is same as the current language,
@@ -351,7 +351,6 @@
 			this.$menu.find( 'li.ime-lang' ).show();
 			this.$menu.find( 'li[lang=' + languageCode + ']' ).hide();
 
-			this.$menu.find( '.ime-list-title' ).text( language.autonym );
 			this.prepareInputMethods( languageCode );
 			this.hide();
 			// And select the default inputmethod
@@ -360,6 +359,14 @@
 			this.selectIM( $.ime.preferences.getIM( languageCode ) );
 
 			return $.ime.preferences.getIM( languageCode );
+		},
+
+		getAutonym: function ( languageCode ) {
+			return $.ime.languages[languageCode].autonym;
+		},
+
+		setMenuTitle: function ( title ) {
+			this.$menu.find( '.ime-list-title' ).text( title );
 		},
 
 		/**
@@ -473,7 +480,7 @@
 
 				$languageItem = $( '<a>' )
 					.attr( 'href', '#' )
-					.text( language.autonym )
+					.text( this.getAutonym() )
 					.addClass( 'selectable-row-item' );
 				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
