@@ -480,7 +480,7 @@
 
 				$languageItem = $( '<a>' )
 					.attr( 'href', '#' )
-					.text( this.getAutonym() )
+					.text( this.getAutonym( languageCode ) )
 					.addClass( 'selectable-row-item' );
 				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
