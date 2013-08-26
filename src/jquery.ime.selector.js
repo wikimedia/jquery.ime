@@ -363,8 +363,9 @@
 
 		/**
 		 * Get the autonym by language code.
-		 * @param languageCode string
-		 * @return string
+		 *
+		 * @param {string} languageCode
+		 * @return {string} The autonym
 		 */
 		getAutonym: function ( languageCode ) {
 			return $.ime.languages[languageCode].autonym;
@@ -372,7 +373,8 @@
 
 		/**
 		 * Set the title of the selector menu.
-		 * @param title string
+		 *
+		 * @param {string} title
 		 */
 		setMenuTitle: function ( title ) {
 			this.$menu.find( '.ime-list-title' ).text( title );
@@ -402,7 +404,7 @@
 		/**
 		 * Select an input method
 		 *
-		 * @param inputmethodId
+		 * @param {string} inputmethodId
 		 */
 		selectIM: function ( inputmethodId ) {
 			var imeselector = this,
@@ -507,7 +509,7 @@
 		/**
 		 * Prepare input methods in menu for the given language code
 		 *
-		 * @param {String} languageCode
+		 * @param {string} languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
 			var language = $.ime.languages[languageCode],
@@ -538,6 +540,10 @@
 			} );
 		},
 
+		/**
+		 * Create a help link element.
+		 * @return {jQuery}
+		 */
 		helpLink: function () {
 			return $( '<div class="ime-help-link selectable-row">' )
 				.append( $( '<a>' ).text( 'Help' )
@@ -616,8 +622,8 @@
 	/**
 	 * Check whether a keypress event corresponds to the shortcut key
 	 *
-	 * @param event Event object
-	 * @return bool
+	 * @param {event} event
+	 * @return {bool} true if the key is a shortcut key
 	 */
 	function isShortcutKey( event ) {
 		// 77 - The letter M, for Ctrl-M
