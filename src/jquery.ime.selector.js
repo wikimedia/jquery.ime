@@ -361,10 +361,19 @@
 			return $.ime.preferences.getIM( languageCode );
 		},
 
+		/**
+		 * Get the autonym by language code.
+		 * @param languageCode string
+		 * @return string
+		 */
 		getAutonym: function ( languageCode ) {
 			return $.ime.languages[languageCode].autonym;
 		},
 
+		/**
+		 * Set the title of the selector menu.
+		 * @param title string
+		 */
 		setMenuTitle: function ( title ) {
 			this.$menu.find( '.ime-list-title' ).text( title );
 		},
