@@ -238,6 +238,9 @@
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
 			$.ime.preferences.setIM( inputmethodId );
+			if ( this.osk ) {
+				this.osk.build();
+			}
 		},
 
 		/**
