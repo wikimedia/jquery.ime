@@ -1,0 +1,145 @@
+.keyboard {
+	background: #7D7D82;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#97979C), to(#67676C));
+	background-image: -webkit-linear-gradient(top, #97979C, #67676C);
+	background-image: -moz-linear-gradient(top, #97979C, #67676C);
+	background-image: -ms-linear-gradient(top, #97979C, #67676C);
+	background-image: -o-linear-gradient(top, #97979C, #67676C);
+	background-image: linear-gradient(top, #97979C, #67676C);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#97979C', EndColorStr='#67676C');
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#97979C', EndColorStr='#67676C');
+	-webkit-box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	-moz-box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
+	padding: 25px 0 0;
+	position: fixed;
+	bottom: 0;
+	width: 680px;
+	display: none;
+}
+
+.keyboard-row {
+	list-style: none;
+	padding: 0 3px;
+	margin: 0 auto;
+	width: 680px;
+}
+
+.keyboard-key {
+	color: #000;
+	cursor: pointer;
+	display: block;
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font: 16px sans-serif;
+	height: 16px;
+	line-height: 16px;
+	margin: 0 3px 6px;
+	width: 16px;
+	padding: 12px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 1;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background: #EEEEF3;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F7F7FC), to(#E7E7EC));
+	background-image: -webkit-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image: -moz-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image: -ms-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image: -o-linear-gradient(top, #F7F7FC, #E7E7EC);
+	background-image: linear-gradient(top, #F7F7FC, #E7E7EC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F7F7FC', EndColorStr='#E7E7EC');
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	-moz-box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	box-shadow: inset 0 1px #FFF, 0 2px 2px #000;
+	text-shadow: 0 1px #FFF;
+}
+
+.keyboard-key:hover, .keyboard-alt-key:hover {
+	color: #2054DA;
+	text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+	z-index: 2;
+}
+
+.keyboard-key:active {
+	background: #E7E7EC;
+	-webkit-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	-moz-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+	top: 1px;
+}
+
+.keyboard-key.down {
+	color: #2054DA;
+	text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+}
+
+
+.keyboard-alt-key {
+	color: #000;
+	cursor: pointer;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+	padding: 12px;
+	text-shadow: 0 1px #FFF;
+}
+
+/* Special keys */
+.keyboard-key-space {
+	width: 430px;
+}
+
+.keyboard-key-tab {
+	width: 32px;
+	text-align: left;
+}
+
+.keyboard-key-capsLock {
+	width: 48px;
+	text-align: left;
+}
+
+.keyboard-key-leftshift {
+	width: 78px;
+	text-align: left;
+}
+
+.keyboard-key-rightshift {
+	width: 78px;
+	text-align: right;
+}
+
+.keyboard-key-backSpace {
+	width: 48px;
+	text-align: right;
+}
+
+.keyboard-key-leftalt {
+	width: 78px;
+	text-align: left;
+}
+
+.keyboard-key-rightalt {
+	width: 78px;
+	text-align: right;
+}
+
+.keyboard-key-return {
+	width: 62px;
+	text-align: right;
+}
+
+.keyboard-key-backslash {
+	width: 32px;
+}

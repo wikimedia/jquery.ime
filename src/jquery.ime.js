@@ -20,6 +20,10 @@
 		this.language = null;
 		this.context = '';
 		this.selector = this.$element.imeselector( this.options );
+		if ( this.options.osk ){
+			$( 'body' ).osk();
+			this.osk = $( 'body' ).data( 'Keyboard' );
+		}
 		this.listen();
 	}
 
@@ -30,10 +34,18 @@
 		 * Listen for events and bind to handlers
 		 */
 		listen: function () {
+			var ime = this;
+
 			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
 			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
 			this.$element.on( 'enable.ime', $.proxy( this.enable, this ) );
 			this.$element.on( 'disable.ime', $.proxy( this.disable, this ) );
+			this.$element.on( 'focus.ime', function () {
+				if ( ime.osk ) {
+					ime.osk.bind( ime.$element );
+					ime.osk.show();
+				}
+			} );
 		},
 
 		/**
@@ -153,7 +165,6 @@
 					this.context.length - this.inputmethod.contextLength
 				);
 			}
-
 			// If replacement equals to input, no replacement is made, because
 			// there's apparently nothing to do. However, there may be something
 			// to do if AltGr was pressed. For example, if a layout is built in
