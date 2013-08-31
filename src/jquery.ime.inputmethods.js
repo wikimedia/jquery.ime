@@ -142,6 +142,10 @@
 			name: 'Esperanto x sistemo',
 			source: 'rules/eo/eo-x.js'
 		},
+		'fa-kbd': {
+			name: 'فارسی',
+			source: 'rules/fa/fa-kbd.js'
+		},
 		'fo-normforms': {
 			name: 'Føroyskt',
 			source: 'rules/fo/fo-normforms.js'
@@ -650,6 +654,10 @@
 		'eo': {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration', 'eo-h', 'eo-h-f', 'eo-plena', 'eo-q', 'eo-vi', 'eo-x' ]
+		},
+		'fa': {
+			autonym: 'فارسی',
+			inputmethods: [ 'fa-kbd' ]
 		},
 		'fo': {
 			autonym: 'Føroyskt',
