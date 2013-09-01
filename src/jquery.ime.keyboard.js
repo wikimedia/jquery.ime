@@ -168,7 +168,7 @@
 		transliterate: function ( text ) {
 			if ( text.length === 1
 				&& this.$input.data( 'ime' ).inputmethod
-				&& this.$input.data( 'ime' ).inputmethod.maxKeyLength <= 1 ) {
+				&& this.$input.data( 'ime' ).inputmethod.maxKeyLength <= 2 ) {
 				return this.$input.data( 'ime' ).transliterate( text );
 			}
 			return text;
