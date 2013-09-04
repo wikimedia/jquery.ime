@@ -261,6 +261,7 @@
 		 */
 		position: function () {
 			var imeSelector = this,
+				dir = this.$element.css( 'direction' ),
 				menutop, position, top, left, room;
 
 			this.focus(); // shows the trigger in case it is hidden
@@ -307,17 +308,11 @@
 				left: left
 			} );
 
-			if ( parseInt( this.$menu.css( 'min-width' ), 10 ) > left ) {
-				// RTL element position fix
-				if ( this.$element.css( 'direction' ) === 'rtl' ) {
-					this.$menu
-					.css( 'left', 0 )
-					.addClass( 'ime-left' );
-				} else {
-					this.$menu
-					.css( 'left', position.left )
-					.addClass( 'ime-right' );
-				}
+			if ( this.$menu.width() > left ) {
+				// not enough space in the left
+				this.$menu
+					.addClass( 'ime-right' )
+					.css( 'left', dir === 'rtl' ? 0 : position.left );
 			}
 		},
 
