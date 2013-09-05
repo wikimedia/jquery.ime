@@ -260,19 +260,21 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			var imeSelector = this,
+			var menuWidth, menuTop, elementPosition,
+				top, left, verticalRoom, overflowsOnRight,
+				imeSelector = this,
 				dir = this.$element.css( 'direction' ),
-				menutop, position, top, left, room;
+				$window = $( window );
 
 			this.focus(); // shows the trigger in case it is hidden
 
-			position = this.$element.offset();
-			top = position.top + this.$element.outerHeight();
-			left = position.left;
+			elementPosition = this.$element.offset();
+			top = elementPosition.top + this.$element.outerHeight();
+			left = elementPosition.left;
 
 			// RTL element position fix
-			if ( this.$element.css( 'direction' ) === 'ltr' ) {
-				left = position.left + this.$element.outerWidth() -
+			if ( dir === 'ltr' ) {
+				left = elementPosition.left + this.$element.outerWidth() -
 					this.$imeSetting.outerWidth();
 			}
 
@@ -280,18 +282,18 @@
 			// take into account the value of scrollTop, to avoid the selector from always
 			// getting placed above the input box since window.height would be less than top
 			// if the page has been scrolled.
-			room = $( window ).height() + $( document ).scrollTop() - top;
+			verticalRoom = $window.height() + $( document ).scrollTop() - top;
 
-			if ( room < this.$imeSetting.outerHeight() ) {
-				top = position.top - this.$imeSetting.outerHeight();
-				menutop = this.$menu.outerHeight() +
+			if ( verticalRoom < this.$imeSetting.outerHeight() ) {
+				top = elementPosition.top - this.$imeSetting.outerHeight();
+				menuTop = this.$menu.outerHeight() +
 					this.$imeSetting.outerHeight();
 
 				// Flip the menu to the top only if it can fit in the space there
-				if ( menutop < top ) {
+				if ( menuTop < top ) {
 					this.$menu
 						.addClass( 'ime-position-top' )
-						.css( 'top', -menutop );
+						.css( 'top', -menuTop );
 				}
 			}
 
@@ -308,11 +310,14 @@
 				left: left
 			} );
 
-			if ( this.$menu.width() > left ) {
-				// not enough space in the left
+			menuWidth = this.$menu.width();
+
+			// Adjust horizontal position if there's
+			// not enough space on the left
+			if ( menuWidth > left ) {
 				this.$menu
 					.addClass( 'ime-right' )
-					.css( 'left', dir === 'rtl' ? 0 : position.left );
+					.css( 'left', dir === 'rtl' ? 0 : elementPosition.left );
 			}
 		},
 
