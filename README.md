@@ -50,6 +50,11 @@ Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like apache or nginx, you already know how to put the code in a
 webserver.
 
+Browser extensions
+------------------
+This input tool is also available as Firefox and Chrome extensions.
+* [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/)
+* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh)
 
 For Developers
 --------------
