@@ -2827,6 +2827,40 @@ var testFixtures = [
 			{ input: '>',  output: '<', description: 'Persian Standard keyboard - > -> <' },
 			{ input: '?',  output: '؟', description: 'Persian Standard keyboard - ? -> ؟' },
 
+			{ input: [ [ '`', true ] ], output: '~', description: 'Persian Standard keyboard - AltGr+` -> ~' },
+			{ input: [ [ '1', true ] ], output: '`', description: 'Persian Standard keyboard - AltGr+1 -> `' },
+			{ input: [ [ '2', true ] ], output: '@', description: 'Persian Standard keyboard - AltGr+2 -> @' },
+			{ input: [ [ '3', true ] ], output: '#', description: 'Persian Standard keyboard - AltGr+3 -> #' },
+			{ input: [ [ '4', true ] ], output: '$', description: 'Persian Standard keyboard - AltGr+4 -> $' },
+			{ input: [ [ '5', true ] ], output: '%', description: 'Persian Standard keyboard - AltGr+5 -> %' },
+			{ input: [ [ '6', true ] ], output: '^', description: 'Persian Standard keyboard - AltGr+6 -> ^' },
+			{ input: [ [ '7', true ] ], output: '&', description: 'Persian Standard keyboard - AltGr+7 -> &' },
+			{ input: [ [ '8', true ] ], output: '•', description: 'Persian Standard keyboard - AltGr+8 -> •' },
+			{ input: [ [ '9', true ] ], output: '\u200e', description: 'Persian Standard keyboard - AltGr+9 -> LRM' },
+			{ input: [ [ '0', true ] ], output: '\u200f', description: 'Persian Standard keyboard - AltGr+0 -> RLM' },
+
+			{ input: [ [ 'q', true ] ], output: '°', description: 'Persian Standard keyboard - AltGr+q -> °' },
+			{ input: [ [ 'e', true ] ], output: '€', description: 'Persian Standard keyboard - AltGr+e -> €' },
+			{ input: [ [ 'i', true ] ], output: '\u202d', description: 'Persian Standard keyboard - AltGr+i -> LRO' },
+			{ input: [ [ 'o', true ] ], output: '\u202e', description: 'Persian Standard keyboard - AltGr+o -> RLO' },
+			{ input: [ [ 'p', true ] ], output: '\u202c', description: 'Persian Standard keyboard - AltGr+p -> POP' },
+			{ input: [ [ '[', true ] ], output: '\u202a', description: 'Persian Standard keyboard - AltGr+[ -> LRE' },
+			{ input: [ [ ']', true ] ], output: '\u202b', description: 'Persian Standard keyboard - AltGr+] -> RLE' },
+
+			{ input: [ [ 'd', true ] ], output: 'ى', description: 'Persian Standard keyboard - AltGr+d -> ى' },
+			{ input: [ [ 'h', true ] ], output: 'ٱ', description: 'Persian Standard keyboard - AltGr+h -> ٱ' },
+			{ input: [ [ 'k', true ] ], output: '﴾', description: 'Persian Standard keyboard - AltGr+k -> ﴾' },
+			{ input: [ [ 'l', true ] ], output: '﴿', description: 'Persian Standard keyboard - AltGr+l -> ﴿' },
+			{ input: [ [ ';', true ] ], output: ';', description: 'Persian Standard keyboard - AltGr+; -> ;' },
+			{ input: [ [ '\'', true ] ], output: '"', description: 'Persian Standard keyboard - AltGr+\' -> "' },
+
+			{ input: [ [ 'b', true ] ], output: '\u200d', description: 'Persian Standard keyboard - AltGr+b -> ZWJ' },
+			{ input: [ [ 'n', true ] ], output: 'ٕ', description: 'Persian Standard keyboard - AltGr+n -> ٕ_' },
+			{ input: [ [ 'm', true ] ], output: '…', description: 'Persian Standard keyboard - AltGr+m -> …' },
+			{ input: [ [ ',', true ] ], output: ',', description: 'Persian Standard keyboard - AltGr+, -> ,' },
+			{ input: [ [ '.', true ] ], output: '\'', description: 'Persian Standard keyboard - AltGr+. -> \'' },
+			{ input: [ [ '/', true ] ], output: '?', description: 'Persian Standard keyboard - AltGr+/ -> ?' },
+
 			{ input: 'thvsd advdk hsj', output: 'فارسی شیرین است', description: 'Persian Standard keyboard - text test' }
 		],
 		inputmethod: 'fa-kbd'
