@@ -263,7 +263,7 @@
 			var menuWidth, menuTop, menuLeft, elementPosition,
 				top, left, verticalRoom, overflowsOnRight,
 				imeSelector = this,
-				dir = this.$element.css( 'direction' ),
+				rtlElement = this.$element.css( 'direction' ) === 'rtl',
 				$window = $( window );
 
 			this.focus(); // shows the trigger in case it is hidden
@@ -273,7 +273,7 @@
 			left = elementPosition.left;
 
 			// RTL element position fix
-			if ( dir === 'ltr' ) {
+			if ( !rtlElement ) {
 				left = elementPosition.left + this.$element.outerWidth() -
 					this.$imeSetting.outerWidth();
 			}
