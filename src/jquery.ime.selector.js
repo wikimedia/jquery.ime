@@ -260,7 +260,7 @@
 		 * Position the im selector relative to the edit area
 		 */
 		position: function () {
-			var menuWidth, menuTop, elementPosition,
+			var menuWidth, menuTop, menuLeft, elementPosition,
 				top, left, verticalRoom, overflowsOnRight,
 				imeSelector = this,
 				dir = this.$element.css( 'direction' ),
@@ -311,13 +311,26 @@
 			} );
 
 			menuWidth = this.$menu.width();
+			overflowsOnRight = ( left + menuWidth ) > $window.width();
 
 			// Adjust horizontal position if there's
-			// not enough space on the left
-			if ( menuWidth > left ) {
-				this.$menu
-					.addClass( 'ime-right' )
-					.css( 'left', dir === 'rtl' ? 0 : elementPosition.left );
+			// not enough space on any side
+			if ( menuWidth > left ||
+				rtlElement && overflowsOnRight
+			) {
+				if ( rtlElement ) {
+					if ( overflowsOnRight ) {
+						this.$menu.addClass( 'ime-right' );
+						menuLeft = this.$imeSetting.outerWidth() - menuWidth;
+					} else {
+						menuLeft = 0;
+					}
+				} else {
+					this.$menu.addClass( 'ime-right' );
+					menuLeft = elementPosition.left;
+				}
+
+				this.$menu.css( 'left', menuLeft );
 			}
 		},
 
