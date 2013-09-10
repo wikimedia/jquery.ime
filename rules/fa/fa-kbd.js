@@ -6,7 +6,7 @@
 		name: 'kbd',
 		description: 'Persian standard (ISIRI 9147) keyboard layout',
 		date: '2013-08-30',
-		URL: 'http://behnam.esfahbod.info/standards/isiri-keyboard-9147.pdf',
+		URL: 'http://www.isiri.org/portal/files/std/9147.pdf',
 		author: 'Ebrahim Byagowi',
 		license: 'GPLv3',
 		version: '1.0',
