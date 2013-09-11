@@ -98,7 +98,8 @@
 
 	templates = {
 		row : '<ul class="keyboard-row"></ul>',
-		key : '<li class="keyboard-key"></li>'
+		key : '<li class="keyboard-key"></li>',
+		closeKey : '<span id="osk-close" class="osk-icon-close"></span>'
 	};
 
 	// cached layouts
@@ -126,6 +127,7 @@
 			var inputmethod;
 			this.layout = this.buildLayout( inputmethod || 'system' );
 			this.buildKeyboard();
+			this.listen();
 		},
 
 		buildLayout: function ( inputmethod ) {
@@ -152,8 +154,8 @@
 					layoutKey = {
 						text: this.transliterate( key.text || key[0] || key ),
 						name: key.name || key[0] || key,
-						caps:  this.transliterate( ( key.text ) ? key.caps || key.text : ( key[0] || key ).toUpperCase() ),
-						shift:  this.transliterate( ( key.text ) ? key.shift || key.text : ( key[1] || key ).toUpperCase() ),
+						caps: this.transliterate( ( key.text ) ? key.caps || key.text : ( key[0] || key ).toUpperCase() ),
+						shift: this.transliterate( ( key.text ) ? key.shift || key.text : ( key[1] || key ).toUpperCase() ),
 						style: key.style
 					};
 					row[columnIndex] = layoutKey;
@@ -185,8 +187,9 @@
 				layout = this.layout,
 				rowsCount = layout.length;
 
-			this.$keyboard  = $( '#ime-osk' );
+			this.$keyboard = $( '#ime-osk' );
 			this.$keyboard.empty();
+			this.$keyboard.append( templates.closeKey );
 			for ( rowIndex = 0; rowIndex < rowsCount; rowIndex += 1 ) {
 				row = layout[rowIndex];
 				$row = $( templates.row );
@@ -207,11 +210,38 @@
 		},
 
 		listen: function () {
+			var osk = this;
+
+			osk.$keyboard.find( '#osk-close' ).on( 'mouseup.osk', function () {
+				osk.toggle();
+			} );
 		},
 
 		show: function () {
 			this.build();
 			this.$keyboard.show();
+		},
+
+		hide: function () {
+			this.$keyboard.hide();
+		},
+
+		toggle: function () {
+			var imeselector = this.$input.data( 'imeselector' ),
+				$oskToggleItem = imeselector.$menu.find( 'div.ime-osk-link' ),
+				$oskToggleLink = $( '<a>' ).addClass( 'selectable-row-item' );
+
+			$oskToggleItem.empty();
+
+			if ( this.$keyboard.is( ':hidden' ) || this.$keyboard.is( ':empty' ) ) {
+				this.show();
+				$oskToggleLink.text( 'Hide keyboard' );
+			} else {
+				this.hide();
+				$oskToggleLink.text( 'Show keyboard' );
+			}
+
+			$oskToggleItem.append( $oskToggleLink );
 		},
 
 		keypress: function( key ) {

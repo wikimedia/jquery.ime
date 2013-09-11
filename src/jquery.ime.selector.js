@@ -37,6 +37,11 @@
 			);
 
 			this.prepareLanguageList();
+			
+			if ( this.options.oskHandler ) {
+				this.$menu.append( this.options.oskHandler );
+			}
+
 			this.$menu.append( this.helpLink() );
 
 			if ( $.i18n ) {
@@ -180,6 +185,11 @@
 			// Just make it work as a regular link
 			imeselector.$menu.on( 'click.ime', '.ime-help-link', function ( e ) {
 				e.stopPropagation();
+			} );
+
+			imeselector.$menu.on( 'click.ime', '.ime-osk-link', function ( e ) {
+				var ime = imeselector.$element.data( 'ime' );
+				ime.osk.toggle();
 			} );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
