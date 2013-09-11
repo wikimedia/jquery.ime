@@ -189,7 +189,9 @@
 
 			imeselector.$menu.on( 'click.ime', '.ime-osk-link', function ( e ) {
 				var ime = imeselector.$element.data( 'ime' );
-				ime.osk.toggle();
+				if ( ime.osk ) {
+					ime.osk.toggle();
+				}
 			} );
 
 			imeselector.$element.on( 'focus.ime', function ( e ) {
