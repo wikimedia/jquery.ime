@@ -428,7 +428,6 @@
 			}
 
 			this.$menu.find( '.ime-checked' ).removeClass( 'ime-checked' );
-			this.$menu.find( 'li.ime-disable' ).removeClass( 'ime-checked' );
 			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
 				.addClass( 'ime-checked' );
 			ime = this.$element.data( 'ime' );
