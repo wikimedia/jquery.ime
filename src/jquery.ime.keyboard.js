@@ -290,6 +290,13 @@
 						this.$input.val( this.$input.val() + key );
 					}
 			}
+		},
+
+		oskHandler: function () {
+			return $( '<div class="ime-osk-link selectable-row">' )
+				.append( $( '<a>' ).text( 'Show keyboard' )
+					.addClass( 'selectable-row-item' )
+				);
 		}
 	};
 

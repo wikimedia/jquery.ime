@@ -25,6 +25,8 @@
 		},
 
 		prepareSelectorMenu: function () {
+			var osk = $( 'body' ).data( 'Keyboard' );
+
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
@@ -38,8 +40,8 @@
 
 			this.prepareLanguageList();
 			
-			if ( this.options.oskHandler ) {
-				this.$menu.append( this.options.oskHandler );
+			if ( osk ) {
+				this.$menu.append( osk.oskHandler );
 			}
 
 			this.$menu.append( this.helpLink() );
@@ -117,7 +119,6 @@
 		 */
 		listen: function () {
 			var imeselector = this;
-
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
 				var t = $( e.target );
 

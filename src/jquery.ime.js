@@ -19,11 +19,11 @@
 		this.inputmethod = null;
 		this.language = null;
 		this.context = '';
-		this.selector = this.$element.imeselector( this.options );
 		if ( this.options.osk ){
 			$( 'body' ).osk();
 			this.osk = $( 'body' ).data( 'Keyboard' );
 		}
+		this.selector = this.$element.imeselector( this.options );
 		this.listen();
 	}
 
