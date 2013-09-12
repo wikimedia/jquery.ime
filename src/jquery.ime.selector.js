@@ -72,7 +72,7 @@
 						imeselector.$imeSetting.css( 'opacity', 1 );
 						imeselector.$imeSetting.css( 'margin-top', 0 );
 					} );
-				}, 2500
+				}, this.options.timeout
 			);
 		},
 
@@ -570,7 +570,8 @@
 	};
 
 	IMESelector.defaults = {
-		defaultLanguage: 'en'
+		defaultLanguage: 'en',
+		timeout: 2500 // Milliseconds after which IME widget hides itself.
 	};
 
 	/*
