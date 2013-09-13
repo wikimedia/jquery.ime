@@ -72,7 +72,7 @@
 						imeselector.$imeSetting.css( 'opacity', 1 );
 						imeselector.$imeSetting.css( 'margin-top', 0 );
 					} );
-				}, 2500
+				}, this.options.timeout
 			);
 		},
 
@@ -428,7 +428,6 @@
 			}
 
 			this.$menu.find( '.ime-checked' ).removeClass( 'ime-checked' );
-			this.$menu.find( 'li.ime-disable' ).removeClass( 'ime-checked' );
 			this.$menu.find( 'li[data-ime-inputmethod=' + inputmethodId + ']' )
 				.addClass( 'ime-checked' );
 			ime = this.$element.data( 'ime' );
@@ -571,7 +570,8 @@
 	};
 
 	IMESelector.defaults = {
-		defaultLanguage: 'en'
+		defaultLanguage: 'en',
+		timeout: 2500 // Milliseconds after which IME widget hides itself.
 	};
 
 	/*
