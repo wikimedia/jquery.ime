@@ -42,6 +42,7 @@ $( document ).ready( function () {
 	$imeSelector.on( 'change', function () {
 		var inputmethod = $imeSelector.find( 'option:selected' ).val();
 		imeselector.selectIM( inputmethod );
+		imeselector.$element.focus();
 	} );
 	$langselector.on( 'change', function () {
 		var language = $langselector.find( 'option:selected' ).val();
