@@ -245,7 +245,11 @@
 		},
 
 		keypress: function( key ) {
-			var code, replacementSkipped;
+			var code,
+				replacementSkipped,
+				pos,
+				ime = this.$input.data( 'ime' ),
+				osk = this;
 
 			switch ( key ) {
 				case 'caps':
@@ -279,16 +283,32 @@
 				default:
 					// Get the key code. Events use codes and not chars.
 					code = key.charCodeAt(0);
-
-					replacementSkipped = this.$input.triggerHandler( new jQuery.Event( 'keypress', {
+					replacementSkipped = this.$input.trigger( new jQuery.Event( 'keypress.ime', {
 						keyCode: code,
 						which: code,
 						charCode: code
 					} ) );
 
-					if ( replacementSkipped ) {
-						this.$input.val( this.$input.val() + key );
-					}
+			}
+		},
+
+		simulateKeypress: function ( e ) {
+
+			// Simulate keypress in osk only when physical keyboard is used.
+			if ( e.originalEvent === undefined ) {
+				return
+			}
+
+			var osk = this,
+				key = String.fromCharCode( e.charCode ),
+				$keyElement;
+
+			$keyElement = osk.$keyboard.find( '.keyboard-key[data-osk-char=' + key + ']' );
+			if ( $keyElement ) {
+				$keyElement.addClass( 'down keyboard-key-simulate-active' );
+				setTimeout( function () {
+					$keyElement.removeClass( 'down keyboard-key-simulate-active' );
+				}, 100 );
 			}
 		},
 
@@ -305,6 +325,8 @@
 			keyText;
 
 		$key.text( key.text );
+
+		$key.attr( 'data-osk-char', key.text );
 
 		if( state.caps ) {
 			$key.text( key.caps );
@@ -343,5 +365,7 @@
 	};
 
 	$.fn.osk.Constructor = Keyboard;
+
+}
 
 }( jQuery ) );

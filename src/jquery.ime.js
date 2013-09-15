@@ -43,7 +43,7 @@
 			this.$element.on( 'focus.ime', function () {
 				if ( ime.osk ) {
 					ime.osk.bind( ime.$element );
-					// ime.osk.show();
+					ime.osk.show();
 				}
 			} );
 		},
@@ -105,6 +105,10 @@
 		keypress: function ( e ) {
 			var altGr = false,
 				c, startPos, pos, endPos, divergingPos, input, replacement;
+
+			if ( this.osk ) {
+				this.osk.simulateKeypress( e );
+			}
 
 			if ( !this.active ) {
 				return true;
