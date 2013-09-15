@@ -7,6 +7,7 @@
 	background-image: linear-gradient(transparent, transparent), url('../images/ime-active.svg');
 	background-color: rgba(255,255,255,0.75);
 	background-position: left 3px center;
+	background-position-x: 3px;
 	height: 15px;
 	font-size: small;
 	padding: 2px 2px 1px 20px;
