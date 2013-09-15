@@ -207,6 +207,15 @@
 
 		bind: function ( $input ) {
 			this.$input = $input;
+
+			// make osk draggable if jQuery.ui draggable widget is available
+			if ( jQuery.ui.draggable !== undefined ) {
+				this.$keyboard.draggable( {
+					drag: function ( event, ui ) {
+						$( this ).addClass( 'bottom-auto' );
+					}
+				} );
+			}
 		},
 
 		listen: function () {
@@ -224,6 +233,16 @@
 
 		hide: function () {
 			this.$keyboard.hide();
+
+			// reset osk position if it has been dragged
+			if ( jQuery.ui.draggable !== undefined ) {
+				this.$keyboard
+					.removeClass( 'bottom-auto' )
+					.css( {
+						top: 'auto',
+						left: 'auto'
+					} );
+			}
 		},
 
 		toggle: function () {
@@ -365,7 +384,5 @@
 	};
 
 	$.fn.osk.Constructor = Keyboard;
-
-}
 
 }( jQuery ) );

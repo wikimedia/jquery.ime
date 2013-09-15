@@ -18,6 +18,10 @@
 	display: none;
 }
 
+.bottom-auto {
+	bottom: auto;
+}
+
 .keyboard-row {
 	list-style: none;
 	padding: 0 3px;
