@@ -302,11 +302,16 @@
 				default:
 					// Get the key code. Events use codes and not chars.
 					code = key.charCodeAt( 0 );
-					replacementSkipped = this.$input.trigger( new jQuery.Event( 'keypress.ime', {
+					replacementSkipped = this.$input.triggerHandler( new jQuery.Event( 'keypress.ime', {
 						keyCode: code,
 						which: code,
 						charCode: code
 					} ) );
+
+					if ( replacementSkipped ) {
+						pos = ime.getCaretPosition( osk.$input );
+						replaceText( osk.$input, key, pos[0], pos[1] );
+					}
 			}
 		},
 
@@ -385,5 +390,52 @@
 	};
 
 	$.fn.osk.Constructor = Keyboard;
+
+	// replicating replaceText method from jquery.ime.js
+	// need a better way rather than duplicating the code
+	function replaceText( $element, replacement, start, end ) {
+		var selection,
+			length,
+			newLines,
+			scrollTop,
+			element = $element.get( 0 );
+
+		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
+			// IE9+ and all other browsers
+			scrollTop = element.scrollTop;
+
+			// Replace the whole text of the text area:
+			// text before + replacement + text after.
+			// This could be made better if range selection worked on browsers.
+			// But for complex scripts, browsers place cursor in unexpected places
+			// and it's not possible to fix cursor programmatically.
+			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+			element.value = element.value.substring( 0, start ) +
+				replacement +
+				element.value.substring( end, element.value.length );
+
+			// restore scroll
+			element.scrollTop = scrollTop;
+			// set selection
+			element.selectionStart = element.selectionEnd = start + replacement.length;
+		} else {
+			// IE8 and lower
+			selection = rangeForElementIE(element);
+			length = element.value.length;
+			// IE doesn't count \n when computing the offset, so we won't either
+			newLines = element.value.match( /\n/g );
+
+			if ( newLines ) {
+				length = length - newLines.length;
+			}
+
+			selection.moveStart( 'character', start );
+			selection.moveEnd( 'character', end - length );
+
+			selection.text = replacement;
+			selection.collapse( false );
+			selection.select();
+		}
+	}
 
 }( jQuery ) );

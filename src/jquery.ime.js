@@ -43,7 +43,7 @@
 			this.$element.on( 'focus.ime', function () {
 				if ( ime.osk ) {
 					ime.osk.bind( ime.$element );
-					ime.osk.show();
+					// ime.osk.show();
 				}
 			} );
 		},
