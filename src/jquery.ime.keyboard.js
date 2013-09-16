@@ -209,7 +209,7 @@
 			this.$input = $input;
 
 			// make osk draggable if jQuery.ui draggable widget is available
-			if ( jQuery.ui !== undefined && jQuery.ui.draggable !== undefined ) {
+			if ( jQuery.ui && jQuery.ui.draggable ) {
 				this.$keyboard.draggable( {
 					drag: function ( event, ui ) {
 						$( this ).addClass( 'bottom-auto' );
@@ -235,7 +235,7 @@
 			this.$keyboard.hide();
 
 			// reset osk position if it has been dragged
-			if ( jQuery.ui !== undefined && jQuery.ui.draggable !== undefined ) {
+			if ( jQuery.ui && jQuery.ui.draggable ) {
 				this.$keyboard
 					.removeClass( 'bottom-auto' )
 					.css( {
