@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery IME example</title>
+	<meta name="author" content="Santhosh Thottingal" />
+	<link href="../../css/jquery.ime.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+	<script src="../../libs/rangy/rangy-core.js"></script>
+	<script src="../../src/jquery.ime.js"></script>
+	<script src="../../src/jquery.ime.selector.js"></script>
+	<script src="../../src/jquery.ime.preferences.js"></script>
+	<script src="../../src/jquery.ime.inputmethods.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div>
+		<header>
+			<h1>jQuery IME example</h1>
+		</header>
+		<div id='container'>
+			<div id="toolbar">
+				<div class='langselector'>
+					<select name="language" id="language">
+					</select>
+				</div>
+				<div class='imeSelector'>
+					<select id="imeSelector"></select>
+				</div>
+				<button id='bold'>B</button>
+				<button id='italic'>I</button>
+				<button id='underline'>U</button>
+			</div>
+			<div contenteditable="true" id="ced"></div>
+		</div>
+	</div>
+</body>
+</html>
