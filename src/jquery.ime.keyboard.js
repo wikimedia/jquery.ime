@@ -301,7 +301,7 @@
 					break;
 				default:
 					// Get the key code. Events use codes and not chars.
-					code = key.charCodeAt(0);
+					code = key.charCodeAt( 0 );
 					replacementSkipped = this.$input.trigger( new jQuery.Event( 'keypress.ime', {
 						keyCode: code,
 						which: code,
@@ -318,15 +318,10 @@
 			}
 
 			var osk = this,
-				key = String.fromCharCode( e.charCode ),
+				keyCode = e.charCode,
 				$keyElement;
 
-			$( '.keyboard-key' ).each( function () {
-				if ( $( this ).text() === key ) {
-					$keyElement = $( this );
-					return false;
-				}
-			} );
+			$keyElement = $( '#osk-key-' + keyCode );
 
 			if ( $keyElement ) {
 				$keyElement.addClass( 'down keyboard-key-simulate-active' );
@@ -346,9 +341,12 @@
 
 	function buildKey ( key, state) {
 		var $key = $( templates.key ),
-			keyText;
+			keyText,
+			keyCode = key.text.charCodeAt( 0 );
 
 		$key.text( key.text );
+
+		$key.attr( 'id', 'osk-key-' + keyCode );
 
 		if( state.caps ) {
 			$key.text( key.caps );
