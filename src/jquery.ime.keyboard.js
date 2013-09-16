@@ -307,7 +307,6 @@
 						which: code,
 						charCode: code
 					} ) );
-
 			}
 		},
 
@@ -322,7 +321,13 @@
 				key = String.fromCharCode( e.charCode ),
 				$keyElement;
 
-			$keyElement = osk.$keyboard.find( '.keyboard-key[data-osk-char=' + key + ']' );
+			$( '.keyboard-key' ).each( function () {
+				if ( $( this ).text() === key ) {
+					$keyElement = $( this );
+					return false;
+				}
+			} );
+
 			if ( $keyElement ) {
 				$keyElement.addClass( 'down keyboard-key-simulate-active' );
 				setTimeout( function () {
@@ -344,8 +349,6 @@
 			keyText;
 
 		$key.text( key.text );
-
-		$key.attr( 'data-osk-char', key.text );
 
 		if( state.caps ) {
 			$key.text( key.caps );
