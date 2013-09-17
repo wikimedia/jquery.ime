@@ -307,19 +307,25 @@
 				case 'shift':
 					if ( this.state.shift ) {
 						this.state.shift = false;
-						this.state.caps = false;
 						this.build();
 						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
 							.removeClass( 'down' );
 					} else {
 						this.state['shift'] = true;
-						this.state.caps = true;
 						this.build();
 						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
 							.addClass( 'down' );
 					}
 					break;
 				default:
+					// release shift key if it is currently pressed
+					if ( this.state.shift ) {
+						this.state.shift = false;
+						this.build();
+						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
+							.removeClass( 'down' );
+					}
+
 					// Get the key code. Events use codes and not chars.
 					code = key.charCodeAt( 0 );
 					replacementSkipped = this.$input.triggerHandler( new jQuery.Event( 'keypress.ime', {
