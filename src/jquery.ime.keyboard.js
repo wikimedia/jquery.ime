@@ -232,9 +232,8 @@
 
 			// Hide osk when escape is pressed
 			$( document ).on( 'keyup.osk', function ( e ) {
-				// keyCode for escape is 27
-				if ( e.keyCode == 27 ) {
-					osk.hide();
+				if ( isEscapeKey( e ) ) {
+					osk.hide();					
 				}
 			} );
 		},
@@ -242,10 +241,12 @@
 		show: function () {
 			this.build();
 			this.$keyboard.show();
+			this.updateOskHandler();
 		},
 
 		hide: function () {
 			this.$keyboard.hide();
+			this.updateOskHandler();
 
 			// reset osk position if it has been dragged
 			if ( jQuery.ui && jQuery.ui.draggable ) {
@@ -258,7 +259,7 @@
 			}
 		},
 
-		toggle: function () {
+		updateOskHandler: function () {
 			var imeselector = this.$input.data( 'imeselector' ),
 				$oskToggleItem = imeselector.$menu.find( 'div.ime-osk-link' ),
 				$oskToggleLink = $( '<a>' ).addClass( 'selectable-row-item' );
@@ -266,14 +267,20 @@
 			$oskToggleItem.empty();
 
 			if ( this.$keyboard.is( ':hidden' ) || this.$keyboard.is( ':empty' ) ) {
-				this.show();
-				$oskToggleLink.text( 'Hide keyboard' );
-			} else {
-				this.hide();
 				$oskToggleLink.text( 'Show keyboard' );
+			} else {
+				$oskToggleLink.text( 'Hide keyboard' );
 			}
 
 			$oskToggleItem.append( $oskToggleLink );
+		},
+
+		toggle: function () {
+			if ( this.$keyboard.is( ':hidden' ) || this.$keyboard.is( ':empty' ) ) {
+				this.show();
+			} else {
+				this.hide();
+			}
 		},
 
 		keypress: function( key ) {
@@ -403,6 +410,17 @@
 	};
 
 	$.fn.osk.Constructor = Keyboard;
+
+	/**
+	 * Check whether a keypress event corresponds to the escape key
+	 *
+	 * @param {event} event
+	 * @return {bool} true if the key is escape key
+	 */
+	function isEscapeKey( event ) {
+		// keyCode for escape is 27
+		return event.keyCode === 27;
+	}
 
 	// replicating replaceText method from jquery.ime.js
 	// need a better way rather than duplicating the code
