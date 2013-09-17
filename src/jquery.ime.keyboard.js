@@ -127,7 +127,6 @@
 			var inputmethod;
 			this.layout = this.buildLayout( inputmethod || 'system' );
 			this.buildKeyboard();
-			this.listen();
 		},
 
 		buildLayout: function ( inputmethod ) {
@@ -183,13 +182,21 @@
 				$row,
 				key,
 				$key,
+				$closeKey,
 				osk = this,
 				layout = this.layout,
 				rowsCount = layout.length;
 
 			this.$keyboard = $( '#ime-osk' );
 			this.$keyboard.empty();
-			this.$keyboard.append( templates.closeKey );
+
+			// append close keyboard icon
+			$closeKey = $( templates.closeKey );
+			this.$keyboard.append( $closeKey );
+			$closeKey.on( 'mouseup.osk', function () {
+				osk.toggle();
+			} );
+
 			for ( rowIndex = 0; rowIndex < rowsCount; rowIndex += 1 ) {
 				row = layout[rowIndex];
 				$row = $( templates.row );
@@ -211,6 +218,8 @@
 			// make osk draggable if jQuery.ui draggable widget is available
 			if ( jQuery.ui && jQuery.ui.draggable ) {
 				this.$keyboard.draggable( {
+					// Dragging the OSK with position: fixed; bottom:0 will stretch the OSK
+					// So we need to assign bottom:auto to OSK to avoid stretching while it is being dragged
 					drag: function ( event, ui ) {
 						$( this ).addClass( 'bottom-auto' );
 					}
@@ -221,8 +230,12 @@
 		listen: function () {
 			var osk = this;
 
-			osk.$keyboard.find( '#osk-close' ).on( 'mouseup.osk', function () {
-				osk.toggle();
+			// Hide osk when escape is pressed
+			$( document ).on( 'keyup.osk', function ( e ) {
+				// keyCode for escape is 27
+				if ( e.keyCode == 27 ) {
+					osk.hide();
+				}
 			} );
 		},
 
