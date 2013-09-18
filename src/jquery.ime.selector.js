@@ -260,6 +260,10 @@
 					}
 				}
 
+				if ( ime.osk ) {
+					ime.osk.build();
+				}
+
 				e.preventDefault();
 				e.stopPropagation();
 

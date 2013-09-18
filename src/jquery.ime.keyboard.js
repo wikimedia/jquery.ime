@@ -97,9 +97,15 @@
 	};
 
 	templates = {
-		row : '<ul class="keyboard-row"></ul>',
-		key : '<li class="keyboard-key"></li>',
-		closeKey : '<span id="osk-close" class="osk-icon-close"></span>'
+		row: '<ul class="keyboard-row"></ul>',
+		key: '<li class="keyboard-key"></li>',
+		titleRow: '\
+			<div class="osk-title-row"> \
+				<span class="osk-title osk-title-lang" ></span> \
+				<span class="osk-title osk-title-hiphen" >-</span> \
+				<span class="osk-title osk-title-im" ></span> \
+				<span id="osk-close" class="osk-icon-close"></span> \
+			</div>'
 	};
 
 	// cached layouts
@@ -168,6 +174,7 @@
 
 		transliterate: function ( text ) {
 			if ( text.length === 1
+				&& this.$input.data( 'ime' ).active
 				&& this.$input.data( 'ime' ).inputmethod
 				&& this.$input.data( 'ime' ).inputmethod.maxKeyLength <= 2 ) {
 				return this.$input.data( 'ime' ).transliterate( text );
@@ -182,7 +189,6 @@
 				$row,
 				key,
 				$key,
-				$closeKey,
 				osk = this,
 				layout = this.layout,
 				rowsCount = layout.length;
@@ -190,12 +196,7 @@
 			this.$keyboard = $( '#ime-osk' );
 			this.$keyboard.empty();
 
-			// append close keyboard icon
-			$closeKey = $( templates.closeKey );
-			this.$keyboard.append( $closeKey );
-			$closeKey.on( 'mouseup.osk', function () {
-				osk.toggle();
-			} );
+			this.$keyboard.append( this.titleRow() );
 
 			for ( rowIndex = 0; rowIndex < rowsCount; rowIndex += 1 ) {
 				row = layout[rowIndex];
@@ -367,6 +368,29 @@
 				.append( $( '<a>' ).text( 'Show keyboard' )
 					.addClass( 'selectable-row-item' )
 				);
+		},
+
+		titleRow: function () {
+			var osk = this,
+				ime = this.$input.data( 'ime' ),
+				imeselector = this.$input.data( 'imeselector' ),
+				$titleRow;
+
+			$titleRow = $( templates.titleRow );
+
+			$titleRow.find( '#osk-close' ).on( 'mouseup.osk', function () {
+				osk.toggle();
+			} );
+
+			if ( !ime.active ) {
+				$titleRow.find( '.osk-title-lang' ).text( 'English' );
+				$titleRow.find( '.osk-title-im' ).text( 'Default keyboard' );
+			} else {
+				$titleRow.find( '.osk-title-lang' ).text( imeselector.getAutonym( ime.language ) );
+				$titleRow.find( '.osk-title-im' ).text( ime.inputmethod.name );
+			}
+
+			return $titleRow;
 		}
 	};
 
