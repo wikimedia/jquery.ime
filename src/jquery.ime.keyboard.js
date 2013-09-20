@@ -71,7 +71,7 @@
 		},
 		rightshift: {
 			text : 'shift',
-			name : 'leftShift',
+			name : 'rightShift',
 			style: 'keyboard-key-rightshift'
 		},
 		alt: {
@@ -173,11 +173,16 @@
 		},
 
 		transliterate: function ( text ) {
+			var ime = this.$input.data( 'ime' );
 			if ( text.length === 1
 				&& this.$input.data( 'ime' ).active
 				&& this.$input.data( 'ime' ).inputmethod
 				&& this.$input.data( 'ime' ).inputmethod.maxKeyLength <= 2 ) {
-				return this.$input.data( 'ime' ).transliterate( text );
+				if ( this.state.alt ) {
+					return this.$input.data( 'ime' ).transliterate( text, ime.context, true );
+				} else {
+					return this.$input.data( 'ime' ).transliterate( text );
+				}
 			}
 			return text;
 		},
@@ -205,7 +210,7 @@
 					key = row[columnIndex];
 					$key = buildKey( key, this.state );
 					$key.on( 'mouseup.osk', function () {
-						osk.keypress( $( this ).text() );
+						osk.keypress( $( this ) );
 					} );
 					$row.append( $key );
 				}
@@ -291,7 +296,7 @@
 				ime = this.$input.data( 'ime' ),
 				osk = this;
 
-			switch ( key ) {
+			switch ( key.text() ) {
 				case 'caps':
 					if ( this.state.caps ) {
 						this.state.caps = false;
@@ -304,6 +309,7 @@
 						this.$keyboard.find( '.keyboard-key-capsLock' )
 							.addClass( 'down' );
 					}
+					osk.$input.focus();
 					break;
 				case 'shift':
 					if ( this.state.shift ) {
@@ -317,6 +323,24 @@
 						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
 							.addClass( 'down' );
 					}
+					osk.$input.focus();
+					break;
+				case 'alt':
+					if ( key.hasClass( 'keyboard-key-leftalt' ) ) {
+						break;
+					}
+					if ( this.state.alt ) {
+						this.state.alt = false;
+						this.build();
+						this.$keyboard.find( '.keyboard-key-rightalt' )
+							.removeClass( 'down' );
+					} else {
+						this.state['alt'] = true;
+						this.build();
+						this.$keyboard.find( '.keyboard-key-rightalt' )
+							.addClass( 'down' );
+					}
+					osk.$input.focus();
 					break;
 				default:
 					// release shift key if it is currently pressed
@@ -328,7 +352,7 @@
 					}
 
 					// Get the key code. Events use codes and not chars.
-					code = key.charCodeAt( 0 );
+					code = key.text().charCodeAt( 0 );
 					replacementSkipped = this.$input.triggerHandler( new jQuery.Event( 'keypress.ime', {
 						keyCode: code,
 						which: code,
@@ -337,7 +361,7 @@
 
 					if ( replacementSkipped ) {
 						pos = ime.getCaretPosition( osk.$input );
-						replaceText( osk.$input, key, pos[0], pos[1] );
+						replaceText( osk.$input, key.text(), pos[0], pos[1] );
 					}
 			}
 		},
@@ -394,7 +418,7 @@
 		}
 	};
 
-	function buildKey ( key, state) {
+	function buildKey ( key, state ) {
 		var $key = $( templates.key ),
 			keyText,
 			keyCode = key.text.charCodeAt( 0 );
@@ -405,11 +429,24 @@
 
 		if( state.caps ) {
 			$key.text( key.caps );
+			if ( key.name === 'capsLock' ) {
+				$key.addClass( 'down' );
+			}
 		}
 
 		if( state.shift ) {
 			$key.text( key.shift );
+			if ( key.name === 'leftShift' || key.name === 'rightShift' ) {
+				$key.addClass( 'down' );
+			}
 		}
+
+		if ( state.alt ) {
+			if ( key.name === 'altgr' ) {
+				$key.addClass( 'down' );
+			}
+		}
+
 		if ( key.style ) {
 			$key.addClass( key.style );
 		}
