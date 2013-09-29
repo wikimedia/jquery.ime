@@ -302,9 +302,11 @@ var testFixtures = [
 		inputmethod: 'hi-transliteration',
 		inputType: 'textarea'
 	},{
-		description: 'Hindi Phonetic test for ZWNJ',
+		description: 'Hindi Phonetic tests',
 		tests: [
-			{ input: 'dffB', output: 'द्\u200cभ', description: 'Hindi Phonetic ZWNJ character' }
+			{ input: 'dffB', output: 'द्\u200cभ', description: 'Hindi Phonetic ZWNJ character' },
+			{ input: 'p$wr', output: 'पॉटर', description: 'Hindi Phonetic Poter' },
+			{ input: 'k`k', output: 'कॆक', description: 'Hindi Phonetic Cake' }
 		],
 		inputmethod: 'hi-phonetic'
 	},{
