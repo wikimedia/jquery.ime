@@ -13,7 +13,7 @@
 	box-shadow: inset 0 1px #C7C7CC, 0 -1px rgba(0,0,0,.6);
 	position: fixed;
 	bottom: 0;
-	width: 680px;
+	width: 600px;
 	display: none;
 }
 
@@ -24,9 +24,9 @@
 
 .keyboard-row {
 	list-style: none;
-	padding: 0 3px;
 	margin: 0 auto;
-	width: 680px;
+	padding: 0;
+	width: 100%;
 }
 
 .keyboard-key {
@@ -37,12 +37,11 @@
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	font: 16px sans-serif;
-	height: 16px;
-	line-height: 16px;
-	margin: 0 3px 6px;
-	width: 16px;
-	padding: 12px;
+	font: 1em sans-serif;
+	line-height: 10%;
+	margin: 0 3px 5px;
+	width: 2%;
+	padding: 2%;
 	position: relative;
 	text-align: center;
 	vertical-align: middle;
@@ -94,64 +93,54 @@
 	cursor: pointer;
 	height: 16px;
 	line-height: 16px;
-	width: 16px;
-	padding: 12px;
+	width: 10%;
+	padding: 1%;
 	text-shadow: 0 1px #FFF;
 }
 
 /* Special keys */
 .keyboard-key-space {
-	width: 430px;
+	width: 65%;
 }
 
 .keyboard-key-tab {
-	width: 32px;
+	width: 4%;
 	text-align: left;
 }
 
 .keyboard-key-capsLock {
-	width: 48px;
+	width: 6%;
 	text-align: left;
 }
 
 .keyboard-key-leftshift {
-	width: 78px;
+	width: 10%;
 	text-align: left;
 }
 
 .keyboard-key-rightshift {
-	width: 78px;
+	width: 10%;
 	text-align: right;
 }
 
 .keyboard-key-backSpace {
-	width: 48px;
+	width: 4%;
 	text-align: right;
 }
 
 .keyboard-key-leftalt {
-	width: 78px;
+	width: 10%;
 	text-align: left;
 }
 
 .keyboard-key-rightalt {
-	width: 78px;
+	width: 10%;
 	text-align: right;
 }
 
 .keyboard-key-return {
-	width: 62px;
+	width: 7%;
 	text-align: right;
-}
-
-.keyboard-key-backslash {
-	width: 32px;
-}
-
-.osk-title-row {
-	position: relative;
-	margin: 10px 0 10px 3px;
-	padding-left: 3px;
 }
 
 .osk-title {
