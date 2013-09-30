@@ -17,8 +17,9 @@
 	display: none;
 }
 
-.bottom-auto {
+.draggable {
 	bottom: auto;
+	cursor: move;
 }
 
 .keyboard-row {

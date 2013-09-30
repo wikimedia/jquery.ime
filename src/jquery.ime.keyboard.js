@@ -215,17 +215,6 @@
 
 		bind: function ( $input ) {
 			this.$input = $input;
-
-			// make osk draggable if jQuery.ui draggable widget is available
-			if ( jQuery.ui && jQuery.ui.draggable ) {
-				this.$keyboard.draggable( {
-					// Dragging the OSK with position: fixed; bottom:0 will stretch the OSK
-					// So we need to assign bottom:auto to OSK to avoid stretching while it is being dragged
-					drag: function () {
-						$( this ).addClass( 'bottom-auto' );
-					}
-				} );
-			}
 		},
 
 		listen: function () {
@@ -241,6 +230,18 @@
 			this.$keyboard.on( 'mouseup.osk', '.keyboard-key', function () {
 				osk.keypress( $( this ) );
 			} );
+
+			// make osk draggable if jQuery.ui draggable widget is available
+			if ( $.ui && $.ui.draggable ) {
+				osk.$keyboard.draggable( {
+					// Dragging the OSK with position: fixed; bottom:0
+					// will stretch the OSK. So we need to assign bottom:auto
+					// to OSK to avoid stretching while it is being dragged
+					drag: function () {
+						$( this ).addClass( 'draggable' );
+					}
+				} );
+			}
 		},
 
 		show: function () {
