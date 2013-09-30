@@ -99,17 +99,16 @@
 	templates = {
 		row: '<ul class="keyboard-row"></ul>',
 		key: '<li class="keyboard-key"></li>',
-		titleRow: '\
-			<div class="osk-title-row"> \
-				<span class="osk-title osk-title-lang" ></span> \
-				<span class="osk-title osk-title-hiphen" >-</span> \
-				<span class="osk-title osk-title-im" ></span> \
-				<span id="osk-close" class="osk-icon-close"></span> \
-			</div>'
+		titleRow: '<div class="osk-title-row">' +
+				'<span class="osk-title osk-title-lang" ></span>' +
+				'<span class="osk-title osk-title-hiphen" >-</span> ' +
+				'<span class="osk-title osk-title-im" ></span>' +
+				'<span id="osk-close" class="osk-icon-close"></span>' +
+			'</div>'
 	};
 
 	// cached layouts
-	layouts = {}
+	layouts = {};
 
 	function Keyboard( element, options ) {
 		this.options = $.extend( {}, Keyboard.defaults, options );
@@ -226,7 +225,7 @@
 				this.$keyboard.draggable( {
 					// Dragging the OSK with position: fixed; bottom:0 will stretch the OSK
 					// So we need to assign bottom:auto to OSK to avoid stretching while it is being dragged
-					drag: function ( event, ui ) {
+					drag: function () {
 						$( this ).addClass( 'bottom-auto' );
 					}
 				} );
@@ -239,7 +238,7 @@
 			// Hide osk when escape is pressed
 			$( document ).on( 'keyup.osk', function ( e ) {
 				if ( isEscapeKey( e ) ) {
-					osk.hide();					
+					osk.hide();
 				}
 			} );
 		},
@@ -304,7 +303,7 @@
 						this.$keyboard.find( '.keyboard-key-capsLock' )
 							.removeClass( 'down' );
 					} else {
-						this.state['caps'] = true;
+						this.state.caps = true;
 						this.build();
 						this.$keyboard.find( '.keyboard-key-capsLock' )
 							.addClass( 'down' );
@@ -318,7 +317,7 @@
 						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
 							.removeClass( 'down' );
 					} else {
-						this.state['shift'] = true;
+						this.state.shift = true;
 						this.build();
 						this.$keyboard.find( '.keyboard-key-leftshift, .keyboard-key-rightshift' )
 							.addClass( 'down' );
@@ -335,7 +334,7 @@
 						this.$keyboard.find( '.keyboard-key-rightalt' )
 							.removeClass( 'down' );
 					} else {
-						this.state['alt'] = true;
+						this.state.alt = true;
 						this.build();
 						this.$keyboard.find( '.keyboard-key-rightalt' )
 							.addClass( 'down' );
@@ -370,11 +369,10 @@
 
 			// Simulate keypress in osk only when physical keyboard is used.
 			if ( e.originalEvent === undefined ) {
-				return
+				return;
 			}
 
-			var osk = this,
-				keyCode = e.charCode,
+			var keyCode = e.charCode,
 				$keyElement;
 
 			$keyElement = $( '#osk-key-' + keyCode );
@@ -420,7 +418,6 @@
 
 	function buildKey ( key, state ) {
 		var $key = $( templates.key ),
-			keyText,
 			keyCode = key.text.charCodeAt( 0 );
 
 		$key.text( key.text );
@@ -518,7 +515,7 @@
 			element.selectionStart = element.selectionEnd = start + replacement.length;
 		} else {
 			// IE8 and lower
-			selection = rangeForElementIE(element);
+			selection = rangeForElementIE( element );
 			length = element.value.length;
 			// IE doesn't count \n when computing the offset, so we won't either
 			newLines = element.value.match( /\n/g );

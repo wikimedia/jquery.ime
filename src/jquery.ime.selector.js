@@ -39,7 +39,7 @@
 			);
 
 			this.prepareLanguageList();
-			
+
 			if ( osk ) {
 				this.$menu.append( osk.oskHandler );
 			}
@@ -188,7 +188,7 @@
 				e.stopPropagation();
 			} );
 
-			imeselector.$menu.on( 'click.ime', '.ime-osk-link', function ( e ) {
+			imeselector.$menu.on( 'click.ime', '.ime-osk-link', function () {
 				var ime = imeselector.$element.data( 'ime' );
 				if ( ime.osk ) {
 					ime.osk.toggle();
