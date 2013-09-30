@@ -193,7 +193,6 @@
 				$row,
 				key,
 				$key,
-				osk = this,
 				layout = this.layout,
 				rowsCount = layout.length;
 
@@ -208,9 +207,6 @@
 				for ( columnIndex = 0; columnIndex < row.length; columnIndex += 1 ) {
 					key = row[columnIndex];
 					$key = buildKey( key, this.state );
-					$key.on( 'mouseup.osk', function () {
-						osk.keypress( $( this ) );
-					} );
 					$row.append( $key );
 				}
 				this.$keyboard.append( $row );
@@ -240,6 +236,10 @@
 				if ( isEscapeKey( e ) ) {
 					osk.hide();
 				}
+			} );
+
+			this.$keyboard.on( 'mouseup.osk', '.keyboard-key', function () {
+				osk.keypress( $( this ) );
 			} );
 		},
 
