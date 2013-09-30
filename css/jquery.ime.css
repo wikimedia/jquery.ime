@@ -178,12 +178,24 @@ span.ime-disable-shortcut {
 	background-color: #f0f0f0;
 	border-radius: 0 0 5px 5px;
 	border-top: 1px solid #ddd;
-	margin-top: 6px;
 	padding: 2px 0;
 	color: #444;
 }
 
 .imeselector-menu .ime-help-link > a:hover {
+	background-color: #f0f0f0;
+	color: #000;
+}
+
+.imeselector-menu .ime-osk-link {
+	background-color: #f0f0f0;
+	border-top: 1px solid #ddd;
+	margin-top: 6px;
+	padding: 2px 0;
+	color: #444;
+}
+
+.imeselector-menu .ime-osk-link > a:hover {
 	background-color: #f0f0f0;
 	color: #000;
 }

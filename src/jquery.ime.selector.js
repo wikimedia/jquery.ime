@@ -25,6 +25,8 @@
 		},
 
 		prepareSelectorMenu: function () {
+			var osk = $( 'body' ).data( 'Keyboard' );
+
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
@@ -37,6 +39,11 @@
 			);
 
 			this.prepareLanguageList();
+			
+			if ( osk ) {
+				this.$menu.append( osk.oskHandler );
+			}
+
 			this.$menu.append( this.helpLink() );
 
 			if ( $.i18n ) {
@@ -112,7 +119,6 @@
 		 */
 		listen: function () {
 			var imeselector = this;
-
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
 				var t = $( e.target );
 
@@ -182,6 +188,13 @@
 				e.stopPropagation();
 			} );
 
+			imeselector.$menu.on( 'click.ime', '.ime-osk-link', function ( e ) {
+				var ime = imeselector.$element.data( 'ime' );
+				if ( ime.osk ) {
+					ime.osk.toggle();
+				}
+			} );
+
 			imeselector.$element.on( 'focus.ime', function ( e ) {
 				imeselector.selectLanguage( imeselector.decideLanguage() );
 				imeselector.focus();
@@ -245,6 +258,10 @@
 							}
 						}
 					}
+				}
+
+				if ( ime.osk ) {
+					ime.osk.build();
 				}
 
 				e.preventDefault();
