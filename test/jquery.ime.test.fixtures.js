@@ -290,7 +290,8 @@ var testFixtures = [
 	},{
 		description: 'Hindi InScript layout test',
 		tests: [
-			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
+			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' },
+			{ input: '""d"e', output: 'ठठ्ठा', description: 'Hindi Inscript Thathaa' }
 		],
 		inputmethod: 'hi-inscript'
 	},{
