@@ -34,7 +34,8 @@ var testFixtures = [
 			{ input: '60', output: '፷', description: 'Amharic 60 -> ፷' },
 			{ input: '3005', output: '፫፻፭', description: 'Amharic 3005 -> ፫፻፭' },
 			{ input: 'aa.m.', output: 'ዓ.ም.', description: 'Amharic aa.m. -> ዓ.ም.' },
-			{ input: 'ea', output: 'ኧ', description: 'Amharic ea -> ኧ' }
+			{ input: 'ea', output: 'ኧ', description: 'Amharic ea -> ኧ' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ን\\', description: 'Amharic backslash deadkey' }
 		],
 		inputmethod: 'am-transliteration'
 	},{
@@ -192,7 +193,8 @@ var testFixtures = [
 			{ input: 'vikipedia\\`', output: 'ვიკიპედია`', description: 'Georgian vikipedia with `' },
 			{ input: '\\~\\~\\~\\~', output: '~~~~', description: 'Wiki Signature test' },
 			{ input: 'abcdefghijklmnopqrstuvwxyz', output: 'აბცდეფგჰიჯკლმნოპქრსტუვწხყზ', description: 'a-z in Georgian' },
-			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
+			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ნ\\', description: 'backslash deadkey in Georgian' }
 		],
 		inputmethod: 'ka-transliteration'
 	},{
@@ -255,7 +257,8 @@ var testFixtures = [
 			{ input: 'EMjiiniyara', output: 'ઍંજીનિયર', description: 'Gujarati EMjiiniyara - testing candra e' },
 			{ input: 'sad`bhaava', output: 'સદ્\u200cભાવ', description: 'Gujarati sad`bhaava - testing ZWNJ' }, // (with ZWNJ)
 			{ input: 'caDJaavo', output: 'ચડ઼ાવો', description: 'Gujarati caDJaavo - testing nukta' },
-			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' }
+			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ન્\\', description: 'Gujarati - testing backslash deadkey' }
 		],
 		inputmethod: 'gu-transliteration'
 	},{
@@ -297,7 +300,8 @@ var testFixtures = [
 		description: 'Hindi transliteration tests - for textarea',
 		tests: [
 			// The regex returns \n for \r.
-			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' }
+			{ input: 'raam\r', output: 'राम\n', description: 'Hindi transliteration - raam<line-break> (\\r)' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\न\\', description: 'Hindi transliteration - backslash deadkey' }
 		],
 		inputmethod: 'hi-transliteration',
 		inputType: 'textarea'
@@ -524,7 +528,8 @@ var testFixtures = [
 			{ input: 'sii', output: 'ꦱꦷ', description: '"sa" + "wulu melik"' },
 			{ input: 'wuu', output: 'ꦮꦹ', description: '"wa" + "suku mendut"' },
 			{ input: 'lai', output: 'ꦭꦻ', description: '"la" + "dirga mure"' },
-			{ input: ')', output: '꧍', description: 'last line test' }
+			{ input: ')', output: '꧍', description: 'last line test' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ꦤ꧀\\', description: 'backslash deadkey test' }
 		],
 		inputmethod: 'jv-transliteration'
 	},{
@@ -1187,7 +1192,8 @@ var testFixtures = [
 			{ input: 'h', output: 'ಹ್', description: 'h for ಹ್ in Kannada transliteration' },
 			{ input: 'L', output: 'ಳ್', description: 'L for ಳ್ in Kannada transliteration' },
 			{ input: 'Q', output: 'ೞ್', description: 'Q for ೞ್ in Kannada transliteration' },
-			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
+			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ನ್\\', description: 'backslash deadkey in Kannada transliteration' }
 		],
 		inputmethod: 'kn-transliteration'
 	},{
@@ -1336,7 +1342,9 @@ var testFixtures = [
 			{ input: 'shiShya', output: 'शिष्य', description: 'shiShya for शिष्य translitration' },
 			{ input: 'bramha', output: 'ब्रम्ह', description: 'bramha for ब्रम्ह translitration' },
 			{ input: 'dvitIya', output: 'द्वितीय', description: 'dvitIya for द्वितीय translitration' },
-			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' }
+			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' },
+			{ input: '\\.', output: '।', description: 'danda' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\न्\\', description: 'backslash deadkey' }
 		],
 		inputmethod: 'mr-transliteration'
 	},{
@@ -1367,7 +1375,8 @@ var testFixtures = [
 			{ input: 'nta', output: 'ന്റ', description: 'Malayalam nta' },
 			{ input: 'r#', output: 'ൎ', description: 'Malayalam dot repha' },
 			{ input: 'ar#ththham', output: 'അൎത്ഥം', description: 'Malayalam word with dot repha' },
-			{ input: '//', output: 'ഽ', description: 'Malayalam sign Avagraha' }
+			{ input: '//', output: 'ഽ', description: 'Malayalam sign Avagraha' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ൻ\\', description: 'Malayalam transliteration backslash deadkey' }
 		],
 		inputmethod: 'ml-transliteration'
 	},{
@@ -1523,7 +1532,8 @@ var testFixtures = [
 			{ input: 'Sa', output: 'ଶ', description: 'Odia transliteration Sa -> ଶ' },
 			{ input: 'sa', output: 'ସ', description: 'Odia transliteration sa -> ସ' },
 			{ input: 'sha', output: 'ଷ', description: 'Odia transliteration sha -> ଷ' },
-			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
+			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ନ୍\\', description: 'Odia transliteration backslash deadkey' }
 		],
 		inputmethod: 'or-transliteration'
 	},{
@@ -1563,7 +1573,8 @@ var testFixtures = [
 			{ input: 'hai.', output: 'ਹੈ।', description: 'Punjabi Gurmukhi hai. (testing danda)' },
 			{ input: 'phaaga..', output: 'ਫਾਗ॥', description: 'Punjabi Gurmukhi phaaga.. (testing double danda)' },
 			{ input: 'iiTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi iiTaanagara' },
-			{ input: 'eeTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi eeTaanagara' }
+			{ input: 'eeTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi eeTaanagara' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\ਨ੍\\', description: 'Punjabi Gurmukhi backslash deadkey' }
 		],
 		inputmethod: 'pa-transliteration'
 	},{
@@ -1832,7 +1843,8 @@ var testFixtures = [
 	},{
 		description: 'Sanskrit transliteration test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' }
+			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' },
+			{ input: '\\\\\\n\\\\n\\\\', output: '\\n\\न्\\', description: 'Sanskrit transliteration backslash deadkey' }
 		],
 		inputmethod: 'sa-transliteration'
 	},{
