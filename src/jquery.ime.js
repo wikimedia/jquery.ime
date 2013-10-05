@@ -43,10 +43,11 @@
 		 * @param {string} input
 		 * @param {string} context
 		 * @param {boolean} altGr whether altGr key is pressed or not
-		 * @returns {string} transliterated string
+		 * @returns {string} replacement transliterated string
+		 * @returns {boolean} deadkey whether the keypress sequence started with a dead key
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement, i;
+			var patterns, regex, rule, replacement, i, replace, deadkey;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
@@ -55,9 +56,14 @@
 			}
 
 			if ( $.isFunction( patterns ) ) {
-				return patterns.call( this, input, context );
+				return {
+					replacement: patterns.call( this, input, context ),
+					deadkey: false
+				};
 			}
-
+			
+			replace = false;
+			deadkey = false;
 			for ( i = 0; i < patterns.length; i++ ) {
 				rule = patterns[i];
 				regex = new RegExp( rule[0] + '$' );
@@ -70,19 +76,35 @@
 				// Input string match test
 				if ( regex.test( input ) ) {
 					// Context test required?
-					if ( rule.length === 3 ) {
+					if ( rule.length > 2 ) {
 						if ( new RegExp( rule[1] + '$' ).test( context ) ) {
-							return input.replace( regex, replacement );
+							replace = true;
+							if(rule.length > 3) {
+								deadkey = rule[2];
+							}
 						}
 					} else {
 						// No context test required. Just replace.
-						return input.replace( regex, replacement );
+						replace = true;
+					}
+					if(replace === true) {
+						break;
 					}
 				}
 			}
-
-			// No matches, return the input
-			return input;
+			
+			if(replace) {
+				return {
+					replacement: input.replace( regex, replacement ),
+					deadkey: deadkey
+				};
+			} else {
+				// No matches, return the input
+				return {
+					replacement: input,
+					deadkey: false
+				};
+			}
 		},
 
 		/**
@@ -92,7 +114,7 @@
 		 */
 		keypress: function ( e ) {
 			var altGr = false,
-				c, startPos, pos, endPos, divergingPos, input, replacement;
+				c, startPos, pos, endPos, divergingPos, input, transliterationResult, replacement, deadkey;
 
 			if ( !this.active ) {
 				return true;
@@ -142,16 +164,23 @@
 			);
 			input += c;
 
-			replacement = this.transliterate( input, this.context, altGr );
+			transliterationResult = this.transliterate( input, this.context, altGr );
+			replacement = transliterationResult.replacement;
+			deadkey = transliterationResult.deadkey;
 
 			// Update the context
-			this.context += c;
+			if(deadkey === true) {
+				// after a deadkey sequence, the context should be blanked
+				this.context = '';
+			} else {
+				this.context += c;
 
-			if ( this.context.length > this.inputmethod.contextLength ) {
-				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring(
-					this.context.length - this.inputmethod.contextLength
-				);
+				if ( this.context.length > this.inputmethod.contextLength ) {
+					// The buffer is longer than needed, truncate it at the front
+					this.context = this.context.substring(
+						this.context.length - this.inputmethod.contextLength
+					);
+				}
 			}
 
 			// If replacement equals to input, no replacement is made, because

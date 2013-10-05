@@ -13,7 +13,7 @@
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
-			[ '\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1' ],
+			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
 			['ꦝ꧀q', '','ꦞ꧀'], // Dha murda
 			['ꦚ꧀q', '','ꦘ꧀'], // Nya murda
 			['ꦧ꧀q', '','ꦨ꧀'], // Ba murda

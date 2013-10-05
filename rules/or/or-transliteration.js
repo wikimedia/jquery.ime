@@ -13,7 +13,7 @@
 		contextLength: 4,
 		maxKeyLength: 2,
 		patterns: [
-			[ '\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1' ],
+			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
 
 			[ 'ଞ୍ଜ୍h', 'ଞ୍ଝ୍' ], // njh
 			[ 'ଙ୍ଗ୍h', 'ଙ୍ଘ୍' ], // ngh

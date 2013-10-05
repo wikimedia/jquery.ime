@@ -13,7 +13,7 @@
 		contextLength: 3,
 		maxKeyLength: 1,
 		patterns: [
-			['\\\\([A-Za-z|\\~|\\`])', '\\\\', '$1'],
+			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
 			['`', '„'],
 			['~', '“'],
 			['q', 'ქ'],

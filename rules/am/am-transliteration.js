@@ -13,7 +13,7 @@
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
-			[ '\\\\([A-Za-z\\>\\<_~ ])', '\\\\', '$1' ], // include space also
+			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
 
 			[ '፼0', '፲፼' ], // 10000 and 0 becomes 10 10000
 			[ '፲፻0', '፼' ], // 10x100 and 0 becomes 10000

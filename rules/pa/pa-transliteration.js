@@ -18,7 +18,7 @@
 		 */
 		patterns: [
 			['ਕ੍h', 'c', 'ਚ੍'],
-			['\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1'],
+			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
 
 			// ਕ-ਹ is the main range of Indic letters.
 			// ੜ is an additional unique Gurmukhi letter.
