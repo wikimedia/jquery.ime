@@ -14,7 +14,7 @@
 		maxKeyLength: 4,
 		patterns: [
 			['ક્h', 'c', 'ચ'],
-			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
+			['\\\\([\\u0021-\\u007E])', '\\\\', true, '$1'], // print ASCII characters using \
 
 			['([ક-હ]઼?)્a', '$1'],
 			['([ક-હ]઼?)્A', '$1ા'],

@@ -14,7 +14,7 @@
 		maxKeyLength: 3,
 		patterns: [
 			['ಕ್h','c','ಚ್'],
-			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
+			['\\\\([\\u0021-\\u007E])', '\\\\', true, '$1'], // print ASCII characters using \
 			// For users accustomed to Baraha
 			['ಜ್್j', 'ಜ್ಞ್'],
 			['([ಕ-ಹೞ]಼?)್a', '$1'],

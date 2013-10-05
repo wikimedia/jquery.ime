@@ -16,7 +16,7 @@
 			['च्h', 'ch', 'छ्'], // chh
 
 			['\\\\\\.', '\\\\', true, '।'], // Danda
-			["\\\\([\\u0021-\\u007E])", "\\\\", true, "$1"], // print ASCII characters using \
+			['\\\\([\\u0021-\\u007E])', '\\\\', true, '$1'], // print ASCII characters using \
 
 			['([क-ह]़?)्a', '$1'],
 			['([क-ह]़?)्A', '$1ा'],
