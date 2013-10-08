@@ -155,9 +155,13 @@
 				startPos,
 				this.inputmethod.maxKeyLength
 			);
-			input += c;
 
-			replacement = this.transliterate( input, this.context, altGr );
+			if ( this.inputmethod.shift_space && this.shifted && c === ' ' ) {
+				replacement = this.inputmethod.shift_space;
+			} else {
+				input += c;
+				replacement = this.transliterate( input, this.context, altGr );
+			}
 
 			// Update the context
 			this.context += c;
