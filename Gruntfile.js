@@ -11,10 +11,10 @@ module.exports = function ( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
 			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+'
-					+ '<%= grunt.template.today("yyyymmdd") %>\n'
-					+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
-					+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-					+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
+				+ '<%= grunt.template.today("yyyymmdd") %>\n'
+				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
+				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
+				+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
 		},
 		concat: {
 			options: {
@@ -73,5 +73,4 @@ module.exports = function ( grunt ) {
 	// Default task.
 	grunt.registerTask( 'default', ['jshint', 'qunit', 'concat', 'uglify', 'copy', 'csslint'] );
 	grunt.registerTask( 'test', ['jshint', 'qunit'] );
-
 };
