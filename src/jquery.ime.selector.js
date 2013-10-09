@@ -11,6 +11,10 @@
 		this.$menu = null;
 		this.inputmethod = null;
 		this.timer = null;
+		this.elementDimensions = {
+			height: this.$element.outerHeight(),
+			width: this.$element.outerWidth()
+		};
 		this.init();
 		this.listen();
 	}
@@ -197,12 +201,23 @@
 			// Possible resize of textarea
 			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
 			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
+			imeselector.$element.on( 'keyup.ime', $.proxy( this.keyup, this ) );
 
 			// Update IM selector position when the window is resized
 			// or the browser window is zoomed in or zoomed out
 			$( window ).resize( function () {
 				imeselector.position();
 			} );
+		},
+
+		/**
+		 * Keyup event handler. Handles imeselector repositioning when the
+		 * input element starts small and grows as you type into it.
+		 *
+		 * @context {HTMLElement}
+		 */
+		keyup: function () {
+			this.checkInputResize();
 		},
 
 		/**
@@ -264,7 +279,11 @@
 				top, left, verticalRoom, overflowsOnRight,
 				imeSelector = this,
 				rtlElement = this.$element.css( 'direction' ) === 'rtl',
-				$window = $( window );
+				$window = $( window ),
+				elementDimensions = {
+					height: this.$element.outerHeight(),
+					width: this.$element.outerWidth()
+				};
 
 			this.focus(); // shows the trigger in case it is hidden
 
@@ -331,6 +350,21 @@
 				}
 
 				this.$menu.css( 'left', menuLeft );
+			}
+
+			this.elementDimensions = elementDimensions;
+		},
+
+		/**
+		 * Check if the input element has grown in size after
+		 * the user started typing into it and reposition
+		 * imeselector if necessary.
+		 */
+		checkInputResize: function () {
+			if ( this.$element.outerHeight() !== this.elementDimensions.height ||
+				this.$element.outerWidth() !== this.elementDimensions.width
+			) {
+				this.position();
 			}
 		},
 
