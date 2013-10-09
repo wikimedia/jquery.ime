@@ -24,7 +24,7 @@ $( document ).ready( function () {
 	$langselector = $( 'select#language' );
 
 	function listinputmethods ( language ) {
-		var inputmethods  = $.ime.languages[language].inputmethods;
+		var inputmethods = $.ime.languages[language].inputmethods;
 		$imeSelector.empty();
 		$.each( inputmethods, function ( index, inputmethodId ) {
 			var inputmethod = $.ime.sources[inputmethodId];
