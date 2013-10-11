@@ -2864,6 +2864,8 @@ var testFixtures = [
 			{ input: [ [ '.', true ] ], output: '\'', description: 'Persian Standard keyboard - AltGr+. -> \'' },
 			{ input: [ [ '/', true ] ], output: '?', description: 'Persian Standard keyboard - AltGr+/ -> ?' },
 
+			{ input: [ [ ' ', true ] ], output: '\xa0', description: 'Persian Standard keyboard - AltGr+Space -> NBSP' },
+
 			{ input: 'thvsd advdk hsj', output: 'فارسی شیرین است', description: 'Persian Standard keyboard - text test' }
 		],
 		inputmethod: 'fa-kbd'
