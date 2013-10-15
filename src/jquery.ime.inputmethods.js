@@ -70,6 +70,10 @@
 			name: 'প্রভাত',
 			source: 'rules/bn/bn-probhat.js'
 		},
+		'bn-sanetype': {
+			name: 'সেনটাইপ',
+			source: 'rules/bn/bn-sanetype.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -169,6 +173,10 @@
 		'hi-phonetic': {
 			name: 'फोनेटिक',
 			source: 'rules/hi/hi-phonetic.js'
+		},
+		'hi-sanetype': {
+			name: 'सेनटाइप',
+			source: 'rules/hi/hi-sanetype.js'
 		},
 		'is-normforms': {
 			name: 'Venjuleg eyðublöð',
@@ -573,7 +581,7 @@
 		},
 		'ahr': {
 			autonym: 'अहिराणी',
-			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript', 'hi-sanetype' ]
 		},
 		'am': {
 			autonym: 'አማርኛ',
@@ -585,7 +593,7 @@
 		},
 		'as': {
 			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2', 'bn-sanetype' ]
 		},
 		'av': {
 			autonym: 'авар',
@@ -601,19 +609,19 @@
 		},
 		'bh': {
 			autonym: 'भोजपुरी',
-			inputmethods: [ 'hi-transliteration' ]
+			inputmethods: [ 'hi-transliteration', 'hi-sanetype' ]
 		},
 		'bho': {
 			autonym: 'भोजपुरी',
-			inputmethods: [ 'hi-transliteration' ]
+			inputmethods: [ 'hi-transliteration', 'hi-sanetype' ]
 		},
 		'bn': {
 			autonym: 'বাংলা',
-			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
+			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2', 'bn-sanetype' ]
 		},
 		'brx': {
 			autonym: 'बोड़ो',
-			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
+			inputmethods: [ 'brx-inscript', 'brx-inscript2', 'hi-sanetype' ]
 		},
 		'ckb': {
 			autonym: 'کوردی',
@@ -641,7 +649,7 @@
 		},
 		'doi': {
 			autonym: 'डोगरी',
-			inputmethods: [ 'doi-inscript2' ]
+			inputmethods: [ 'doi-inscript2', 'hi-sanetype' ]
 		},
 		'en': {
 			autonym: 'English',
@@ -669,7 +677,7 @@
 		},
 		'gom': {
 			autonym: 'कोंकणी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2', 'hi-sanetype' ]
 		},
 		'gu': {
 			autonym: 'ગુજરાતી',
@@ -681,7 +689,7 @@
 		},
 		'hi': {
 			autonym: 'हिन्दी',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2', 'hi-sanetype' ]
 		},
 		'hr': {
 			autonym: 'Hrvatski',
@@ -693,7 +701,7 @@
 		},
 		'hne': {
 			autonym: 'छत्तीसगढ़ी',
-			inputmethods: [ 'hi-transliteration' ]
+			inputmethods: [ 'hi-transliteration', 'hi-sanetype' ]
 		},
 		'is': {
 			autonym: 'Íslenska',
@@ -725,7 +733,7 @@
 		},
 		'ks': {
 			autonym: 'कॉशुर / کٲشُر',
-			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
+			inputmethods: [ 'ks-inscript', 'ks-kbd', 'hi-sanetype' ]
 		},
 		'ky': {
 			autonym: 'Кыргыз',
@@ -753,7 +761,7 @@
 		},
 		'mai': {
 			autonym: 'मैथिली',
-			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+			inputmethods: [ 'mai-inscript', 'mai-inscript2', 'hi-sanetype' ]
 		},
 		'mh': {
 			autonym: 'Kajin M̧ajeļ',
@@ -773,7 +781,7 @@
 		},
 		'mr': {
 			autonym: 'मराठी',
-			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
+			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic', 'hi-sanetype' ]
 		},
 		'my': {
 			autonym: 'မြန်မာ',
@@ -781,11 +789,11 @@
 		},
 		'ne': {
 			autonym: 'नेपाली',
-			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad' ]
+			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad', 'hi-sanetype' ]
 		},
 		'new': {
 			autonym: 'नेपाल भाषा',
-			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-sanetype' ]
 		},
 		'nb': {
 			autonym: 'Norsk (bokmål)',
@@ -817,15 +825,15 @@
 		},
 		'sa': {
 			autonym: 'संस्कृत',
-			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript', 'sa-iast' ]
+			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript', 'sa-iast', 'hi-sanetype' ]
 		},
 		'sat': {
 			autonym: 'संताली',
-			inputmethods: [ 'sat-inscript2']
+			inputmethods: [ 'sat-inscript2', 'hi-sanetype' ]
 		},
 		'sd': {
 			autonym: 'सिंधी',
-			inputmethods: [ 'sd-inscript2' ]
+			inputmethods: [ 'sd-inscript2', 'hi-sanetype' ]
 		},
 		'se': {
 			autonym: 'Davvisámegiella',
