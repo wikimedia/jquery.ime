@@ -1,21 +1,21 @@
 ( function ( $ ) {
 	'use strict';
 	var dontIgnore = '[^Q]|^$'; // if last character was Q, surrounding text is ignored
-	
+
 	var bengaliSanetype = {
 		id: 'bn-sanetype',
 		name: 'সেনটাইপ',
 		author: 'Anubhav Chattoraj',
 		URL: 'http://anubhav-chattoraj.github.io/sanetype/bengali/',
 		license: 'Apache 2.0',
-		maxKeyLength: 2, 
+		maxKeyLength: 2,
 		contextLength: 1,
 		patterns: [
 			['\\\\([\\u0021-\\u007E])', '\\\\', true, '$1'], // escape ASCII characters and clear context
 			['Q', ''], // used to ignore surrounding letters & context
 			['`', '\u200D'], // ZWJ
 			['~', '\u200C'], // zWNJ
-			[',M', dontIgnore, 'ওঁ'], 
+			[',M', dontIgnore, 'ওঁ'],
 			[',S', dontIgnore, '৺'],
 			['অa', dontIgnore, 'আ'], ['াa', dontIgnore, 'া'],
 			['অi', dontIgnore, 'ঐ'], ['াi', dontIgnore, 'ৈ'],
@@ -31,33 +31,33 @@
 			['ঌl', dontIgnore, 'ৡ'], ['ৄl', dontIgnore, 'ৣ'],
 			['E', 'এ'], ['e', 'ে'],
 			['O', 'ও'], ['o', 'ো'],
-			['k', 'ক'], 
-			['কh', dontIgnore, 'খ'], 
-			['g', 'গ'], 
-			['গh', dontIgnore, 'ঘ'], 
+			['k', 'ক'],
+			['কh', dontIgnore, 'খ'],
+			['g', 'গ'],
+			['গh', dontIgnore, 'ঘ'],
 			['x', dontIgnore, 'ঙ'],
-			['c', 'চ'], 
-			['চh', dontIgnore, 'ছ'], 
-			['j', 'জ'], 
-			['জh', dontIgnore, 'ঝ'], 
+			['c', 'চ'],
+			['চh', dontIgnore, 'ছ'],
+			['j', 'জ'],
+			['জh', dontIgnore, 'ঝ'],
 			['X', dontIgnore, 'ঞ'],
-			['T', 'ট'], 
-			['টh', dontIgnore, 'ঠ'], 
-			['D', 'ড'], ['R', 'ড়'], 
+			['T', 'ট'],
+			['টh', dontIgnore, 'ঠ'],
+			['D', 'ড'], ['R', 'ড়'],
 			['ডh', dontIgnore, 'ঢ'], ['ড়h', dontIgnore, 'ঢ়'],
-			['N', 'ণ'], 
-			['t', 'ত'], ['f', 'ৎ'], 
-			['তh', dontIgnore, 'থ'], 
-			['d', 'দ'], 
-			['দh', dontIgnore, 'ধ'], 
+			['N', 'ণ'],
+			['t', 'ত'], ['f', 'ৎ'],
+			['তh', dontIgnore, 'থ'],
+			['d', 'দ'],
+			['দh', dontIgnore, 'ধ'],
 			['n', 'ন'],
-			['p', 'প'], 
-			['পh', dontIgnore, 'ফ'], 
-			['b', 'ব'], 
-			['বh', dontIgnore, 'ভ'], 
-			['m', 'ম'], 
+			['p', 'প'],
+			['পh', dontIgnore, 'ফ'],
+			['b', 'ব'],
+			['বh', dontIgnore, 'ভ'],
+			['m', 'ম'],
 			['J', 'য'], ['y', 'য়'],
-			['r', 'র'], 
+			['r', 'র'],
 			['l', 'ল'],
 			['সh', dontIgnore, 'শ'],
 			['S', 'ষ'], ['ষh', dontIgnore, 'ষ'],
@@ -66,9 +66,9 @@
 			['v', 'ৱ'], ['z', 'ৰ'],
 			['K', 'ক্ষ'],
 			['G', 'জ্ঞ'],
-			['Y', '্য'], 
+			['Y', '্য'],
 			['w', '্র'],
-			['W', 'র্'], 
+			['W', 'র্'],
 			['h', '্হ'],
 			['।>', dontIgnore, '॥'],
 			['>', '।'],
@@ -78,9 +78,9 @@
 			['M', 'ং'],
 			['C', 'ঁ'],
 			['\'', 'ʼ'],
-			['\\$', '₹'], 
-			['\\^', '৳'], 
-			['@', 'ঽ'], 
+			['\\$', '₹'],
+			['\\^', '৳'],
+			['@', 'ঽ'],
 			['1', '১'],
 			['2', '২'],
 			['3', '৩'],
@@ -93,6 +93,6 @@
 			['0', '০'],
 		]
 	};
-	
+
 	$.ime.register( bengaliSanetype );
 }) (jQuery); 
