@@ -1,8 +1,9 @@
 ( function ( $ ) {
 	'use strict';
-	var dontIgnore = '[^Q]|^$'; // if last character was Q, surrounding text is ignored
-
-	var devanagariSanetype = {
+	var dontIgnore, devanagariSanetype;
+	
+	dontIgnore = '[^Q]|^$'; // if last character was Q, surrounding text is ignored
+	devanagariSanetype = {
 		id: 'hi-sanetype',
 		name: 'सेनटाइप',
 		author: 'Anubhav Chattoraj',

@@ -1,8 +1,9 @@
 ( function ( $ ) {
 	'use strict';
-	var dontIgnore = '[^Q]|^$'; // if last character was Q, surrounding text is ignored
-
-	var bengaliSanetype = {
+	var dontIgnore, bengaliSanetype;
+  
+	dontIgnore = '[^Q]|^$'; // if last character was Q, surrounding text is ignored
+	bengaliSanetype = {
 		id: 'bn-sanetype',
 		name: 'সেনটাইপ',
 		author: 'Anubhav Chattoraj',
