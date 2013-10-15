@@ -194,12 +194,12 @@ var testFixtures = [
 				input: '@,M,S^> >>$`~',
 				output: 'ঽওঁ৺৳। ॥₹\u200D\u200C',
 				description: 'other symbols',
-			}, { 
-				input: 'AQi', 
-				output: 'অি', 
-				description: 'Q ignores surrounding letters' 
+			}, {
+				input: 'AQi',
+				output: 'অি',
+				description: 'Q ignores surrounding letters'
 			},
-		], 
+		],
 		inputmethod: 'bn-sanetype'
 	},{
 		description: 'Cyrillic with palochka transliteration test',
@@ -255,13 +255,13 @@ var testFixtures = [
 				input: 'KJvhkwWk<y',
 				output: 'क्षज्ञव्हक्रर्कऱ्य',
 				description: 'conjuncts and half-consonants'
-			}, { 
-				input: 'kqkMkCk:k\'k*', 
-				output: 'क़कंकँकःकʼकॱ', 
-				description: 'diacritics' 
-			}, { 
-				input: 'd;md;y', 
-				output: 'द्मद्य', 
+			}, {
+				input: 'kqkMkCk:k\'k*',
+				output: 'क़कंकँकःकʼकॱ',
+				description: 'diacritics'
+			}, {
+				input: 'd;md;y',
+				output: 'द्मद्य',
 				description: 'halant'
 			}, {
 				input: '@,M,,> >>$`~',
@@ -269,14 +269,14 @@ var testFixtures = [
 				description: 'other symbols'
 			}, {
 				input: '0123456789',
-				output: '०१२३४५६७८९', 
+				output: '०१२३४५६७८९',
 				description: 'digits'
-			}, { 
-				input: 'AQi', 
-				output: 'अि', 
-				description: 'Q ignores surrounding letters' 
+			}, {
+				input: 'AQi',
+				output: 'अि',
+				description: 'Q ignores surrounding letters'
 			},
-		], 
+		],
 		inputmethod: 'hi-sanetype'
 	},{
 		description: 'Georgian Transliteration test',

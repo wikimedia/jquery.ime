@@ -108,4 +108,4 @@
 	};
 
 	$.ime.register( devanagariSanetype );
-}) (jQuery); 
+}) (jQuery);

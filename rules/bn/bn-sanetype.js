@@ -95,4 +95,4 @@
 	};
 
 	$.ime.register( bengaliSanetype );
-}) (jQuery); 
+}) (jQuery);
