@@ -53,6 +53,8 @@
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
+			} else if ( this.shifted ) {
+				patterns = this.inputmethod.patterns_shift || [];
 			} else {
 				patterns = this.inputmethod.patterns || [];
 			}
