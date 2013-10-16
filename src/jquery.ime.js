@@ -16,6 +16,7 @@
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
 		this.active = false;
+		this.shifted = false;
 		this.inputmethod = null;
 		this.language = null;
 		this.context = '';
@@ -31,6 +32,8 @@
 		 */
 		listen: function () {
 			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
+			this.$element.on( 'keyup.ime', $.proxy( this.keyup, this ) );
+			this.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
 			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
 			this.$element.on( 'enable.ime', $.proxy( this.enable, this ) );
 			this.$element.on( 'disable.ime', $.proxy( this.disable, this ) );
@@ -50,6 +53,8 @@
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
+			} else if ( this.shifted ) {
+				patterns = this.inputmethod.patterns_shift || [];
 			} else {
 				patterns = this.inputmethod.patterns || [];
 			}
@@ -83,6 +88,18 @@
 
 			// No matches, return the input
 			return input;
+		},
+
+		keyup: function ( e ) {
+			if ( e.which === 16 ) { // shift key
+				this.shifted = false;
+			}
+		},
+
+		keydown: function ( e ) {
+			if ( e.which === 16 ) { // shift key
+				this.shifted = true;
+			}
 		},
 
 		/**
