@@ -188,7 +188,7 @@
 	} );
 
 	function caretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
+		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
@@ -269,7 +269,7 @@
 	} );
 
 	function clusterCaretTest( text, start, end ) {
-		QUnit.test( 'Curser positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
+		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
 				correction,
 				position,
