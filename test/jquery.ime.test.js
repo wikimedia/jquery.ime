@@ -389,7 +389,7 @@
 	 * and boolean altKey value
 	 */
 	typeChars = function ( $input, characters ) {
-		var i, character, altKeyValue, code, event, replacementSkipped, textEnd,
+		var i, character, altKeyValue, shiftKeyValue, code, event, replacementSkipped, textEnd,
 			ime = $input.data( 'ime' ),
 			contentEditable = $input.is( '[contenteditable]' ),
 			len = characters.length;
@@ -405,12 +405,15 @@
 				altKeyValue = false;
 			} else {
 				character = characters[i][0];
-				altKeyValue = characters[i][1];
+				altKeyValue = characters[i][1] || false;
+				shiftKeyValue = characters[i][2] || false;
 			}
 
 			// Get the key code. Events use codes and not chars.
 			code = character.charCodeAt(0);
-
+			if ( shiftKeyValue ) {
+				ime.shifted = true;
+			}
 			// Trigger event and undo if prevented
 			event = new jQuery.Event( 'keypress', {
 				keyCode: code,
@@ -420,6 +423,10 @@
 			} );
 
 			replacementSkipped = $input.triggerHandler( event );
+
+			if ( shiftKeyValue ) {
+				ime.shifted = false;
+			}
 
 			if ( replacementSkipped ) {
 				if ( contentEditable ) {
