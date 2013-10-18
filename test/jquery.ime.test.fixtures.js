@@ -179,8 +179,8 @@ var testFixtures = [
 				output: 'ড\u09BCঢ\u09BCয\u09BC',
 				description: 'consonants with nuqta',
 			}, {
-				input: 'KGkYkwWkmhf',
-				output: 'ক্ষজ্ঞক্যক্রর্কম্হৎ',
+				input: 'KGkYrYzYkwWkmhf',
+				output: 'ক্ষজ্ঞক্যর‍্যৰ‍্যক্রর্কম্হৎ',
 				description: 'conjuncts and half-consonants',
 			}, {
 				input: 'kqkMkCk:k\'',
