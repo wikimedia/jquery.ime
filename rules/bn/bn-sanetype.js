@@ -87,8 +87,8 @@
 			['z', 'ৰ'],
 			['K', 'ক্ষ'],
 			['G', 'জ্ঞ'],
-			['রY', dontIgnore, 'র‍্য'], // ja-phalaa after ra needs extra ZWJ
-			['ৰY', dontIgnore, 'ৰ‍্য'], // same for Assamese ra
+			['রY', dontIgnore, 'র\u200D্য'], // ja-phalaa after ra needs extra ZWJ
+			['ৰY', dontIgnore, 'ৰ\u200D্য'], // same for Assamese ra
 			['Y', '্য'],
 			['w', '্র'],
 			['W', 'র্'],

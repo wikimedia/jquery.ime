@@ -180,7 +180,7 @@ var testFixtures = [
 				description: 'consonants with nuqta',
 			}, {
 				input: 'KGkYrYzYkwWkmhf',
-				output: 'ক্ষজ্ঞক্যর‍্যৰ‍্যক্রর্কম্হৎ',
+				output: 'ক্ষজ্ঞক্যর\u200D্যৰ\u200D্যক্রর্কম্হৎ',
 				description: 'conjuncts and half-consonants',
 			}, {
 				input: 'kqkMkCk:k\'',
