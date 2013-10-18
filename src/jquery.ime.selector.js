@@ -341,9 +341,14 @@
 		 * @return {string|bool} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
-			var ime = this.$element.data( 'ime' ),
-				imePref = $.ime.preferences.getIM( languageCode ),
-				language = $.ime.languages[languageCode];
+			var ime, imePref, language;
+
+			// consider language codes case insensitive
+			languageCode = languageCode && languageCode.toLowerCase();
+
+			ime = this.$element.data( 'ime' );
+			imePref = $.ime.preferences.getIM( languageCode );
+			language = $.ime.languages[languageCode];
 
 			this.setMenuTitle( this.getAutonym( languageCode ) );
 
