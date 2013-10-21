@@ -53,10 +53,16 @@
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
-			} else if ( this.shifted ) {
-				patterns = this.inputmethod.patterns_shift || [];
 			} else {
 				patterns = this.inputmethod.patterns || [];
+			}
+
+			if ( this.shifted ) {
+				// if shift is pressed give priority for the patterns_shift
+				// if exists.
+				// Example: Shift+space where shift does not alter the keycode
+				patterns = ( this.inputmethod.patterns_shift || [] )
+					.concat( patterns );
 			}
 
 			if ( $.isFunction( patterns ) ) {

@@ -2829,6 +2829,7 @@ var testFixtures = [
 			{ input: '<',  output: '>', description: 'Persian Standard keyboard - < -> >' },
 			{ input: '>',  output: '<', description: 'Persian Standard keyboard - > -> <' },
 			{ input: '?',  output: '؟', description: 'Persian Standard keyboard - ? -> ؟' },
+			{ input: [ [ '?', false, true ] ], output: '؟', description: 'Persian Standard keyboard with shift key pressed - ? -> ؟' },
 
 			{ input: [ [ '`', true ] ], output: '~', description: 'Persian Standard keyboard - AltGr+` -> ~' },
 			{ input: [ [ '1', true ] ], output: '`', description: 'Persian Standard keyboard - AltGr+1 -> `' },
