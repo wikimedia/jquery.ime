@@ -509,7 +509,7 @@
 				$languageItem = $( '<a>' )
 					.attr( 'href', '#' )
 					.text( this.getAutonym( languageCode ) )
-					.addClass( 'selectable-row-item' );
+					.addClass( 'selectable-row-item autonym' );
 				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
@@ -612,7 +612,7 @@
 	}
 
 	function imeListTitle() {
-		return $( '<h3>' ).addClass( 'ime-list-title' );
+		return $( '<h3>' ).addClass( 'ime-list-title autonym' );
 	}
 
 	function toggleMenuItem() {
