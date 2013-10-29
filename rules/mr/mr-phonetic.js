@@ -3,7 +3,7 @@
 
 	var mrPhonetic = {
 		id: 'mr-phonetic',
-		name: 'phonetic',
+		name: 'फोनेटिक',
 		description: 'Phonetic keyboard for Marathi language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
