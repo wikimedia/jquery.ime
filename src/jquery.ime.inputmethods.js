@@ -237,7 +237,7 @@
 			source: 'rules/th/th-pattachote.js'
 		},
 		'de-transliteration': {
-			name: 'Deutsch',
+			name: 'Deutsch Tilde',
 			source: 'rules/de/de-transliteration.js'
 		},
 		'el-kbd': {
