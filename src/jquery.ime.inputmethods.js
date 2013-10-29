@@ -365,11 +365,11 @@
 			source: 'rules/mni/mni-inscript2.js'
 		},
 		'mr-inscript': {
-			name: 'इनस्क्रिप्ट',
+			name: 'मराठी लिपी',
 			source: 'rules/mr/mr-inscript.js'
 		},
 		'mr-inscript2': {
-			name: 'इनस्क्रिप्ट २',
+			name: 'मराठी इनस्क्रिप्ट २',
 			source: 'rules/mr/mr-inscript2.js'
 		},
 		'mr-transliteration': {

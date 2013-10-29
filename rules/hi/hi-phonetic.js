@@ -3,7 +3,7 @@
 
 	var hiPhonetic = {
 		id: 'hi-phonetic',
-		name: 'phonetic',
+		name: 'फोनेटिक',
 		description: 'Phonetic keyboard for Hindi language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
