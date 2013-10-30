@@ -3,7 +3,7 @@
 
 	var hiInScript2 = {
 		id: 'hi-inscript2',
-		name: 'हिन्दी इनस्क्रिप्ट २',
+		name: 'इनस्क्रिप्ट २',
 		description: 'Enhanced InScript keyboard for Hindi language',
 		date: '2013-20-13',
 		author: 'Parag Nemade',
