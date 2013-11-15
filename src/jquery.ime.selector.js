@@ -536,8 +536,13 @@
 			$imeList.empty();
 
 			$.each( language.inputmethods, function ( index, inputmethod ) {
-				var $imeItem, $inputMethod,
-					name = $.ime.sources[inputmethod].name;
+				var $imeItem, $inputMethod, source, name;
+
+				source = $.ime.sources[inputmethod];
+				if ( !source ) {
+					return;
+				}
+				name = source.name;
 
 				$imeItem = $( '<a>' )
 					.attr( 'href', '#' )
