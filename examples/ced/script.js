@@ -1,5 +1,7 @@
 $( document ).ready( function () {
-	var ime, inputmethods, languages, $imeSelector, $langselector;
+	'use strict';
+
+	var ime, inputmethods, imeselector, languages, $imeSelector, $langselector;
 
 	$( '#ced' ).ime({ imePath: '../../' });
 
@@ -28,14 +30,14 @@ $( document ).ready( function () {
 		$imeSelector.empty();
 		$.each( inputmethods, function ( index, inputmethodId ) {
 			var inputmethod = $.ime.sources[inputmethodId];
-			$imeSelector.append( $( "<option></option>" )
-				.attr( "value", inputmethodId ).text( inputmethod.name ) );
+			$imeSelector.append( $( '<option></option>' )
+				.attr( 'value', inputmethodId ).text( inputmethod.name ) );
 		} );
 		$imeSelector.trigger( 'change' );
 	}
 
 	$.each( languages, function ( lang, language ) {
-		$langselector.append( $( "<option></option>" )
+		$langselector.append( $( '<option></option>' )
 			.attr( 'value', lang )
 			.text( language.autonym ) );
 	} );
@@ -49,4 +51,4 @@ $( document ).ready( function () {
 		imeselector.selectLanguage( language );
 		listinputmethods( language );
 	} );
-} )
+} );
