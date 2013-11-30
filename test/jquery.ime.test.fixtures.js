@@ -2869,5 +2869,24 @@ var testFixtures = [
 			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' },
 		],
 		inputmethod: 'fa-kbd'
-	}
+	},{     
+	        description: 'Venetian vec-GVU input method test'
+		tests: [
+			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
+			{ input: 'lh', output: 'ƚ', description: 'Venetian ƚ' },
+			{ input: 'òò', output: 'ó', description: 'Venetian ó' },
+			{ input: 'zh', output: 'ẑ', description: 'Venetian ẑ' },
+			{ input: 'đh', output: 'dh', description: 'Venetian dh' },
+			{ input: 'ƚh', output: 'lh', description: 'Venetian lh' },
+			{ input: 'ẑh', output: 'zh', description: 'Venetian zh' },
+			{ input: 'Dh', output: 'Đ', description: 'Venetian Đ' },
+			{ input: 'Lh', output: 'Ƚ', description: 'Venetian Ƚ' },
+			{ input: 'Òò', output: 'Ó', description: 'Venetian Ó' },
+			{ input: 'Zh', output: 'Ẑ', description: 'Venetian Ẑ' },
+			{ input: 'Đh', output: 'Dh', description: 'Venetian Dh' },
+			{ input: 'Ƚh', output: 'Lh', description: 'Venetian Lh' },
+			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' },
+		]
+		inputmethod: 'vec-GVU'
+	}	
 ];
