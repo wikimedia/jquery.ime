@@ -2886,7 +2886,7 @@ var testFixtures = [
 			{ input: 'Đh', output: 'Dh', description: 'Venetian Dh' },
 			{ input: 'Ƚh', output: 'Lh', description: 'Venetian Lh' },
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' },
-		]
+		],
 		inputmethod: 'vec-GVU'
-	}	
+	}
 ];
