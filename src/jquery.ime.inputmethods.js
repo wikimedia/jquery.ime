@@ -565,9 +565,9 @@
 			source: 'rules/uz/uz-kbd.js'
 		}
 		'vec-GVU': {
-		        name: 'Venetian'
+			name: 'Venetian',
 			source: 'rules/vec/vec-GVU.js
-		}	
+		}
 	} );
 
 	$.extend( $.ime.languages, {
@@ -900,9 +900,9 @@
 			inputmethods: [ 'uz-kbd' ]
 		}
 		'vec': {
-		        autonym: 'Venetian'
+			autonym: 'Venetian',
 			inputmethods: [ 'vec-GVU' ]
-		}	
+		}
 	} );
 
 }( jQuery ) );

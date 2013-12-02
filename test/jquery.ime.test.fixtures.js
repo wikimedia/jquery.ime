@@ -2866,11 +2866,11 @@ var testFixtures = [
 			{ input: 'thvsd advdk hsj', output: 'فارسی شیرین است', description: 'Persian Standard keyboard - text test' },
 
 			{ input: [ [ ' ', true ] ], output: '\xa0', description: 'Persian Standard keyboard - AltGr+Space -> NBSP' },
-			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' },
+			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' }
 		],
 		inputmethod: 'fa-kbd'
 	},{     
-	        description: 'Venetian vec-GVU input method test'
+		description: 'Venetian vec-GVU input method test',
 		tests: [
 			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
 			{ input: 'lh', output: 'ƚ', description: 'Venetian ƚ' },
@@ -2885,7 +2885,7 @@ var testFixtures = [
 			{ input: 'Zh', output: 'Ẑ', description: 'Venetian Ẑ' },
 			{ input: 'Đh', output: 'Dh', description: 'Venetian Dh' },
 			{ input: 'Ƚh', output: 'Lh', description: 'Venetian Lh' },
-			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' },
+			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		],
 		inputmethod: 'vec-GVU'
 	}
