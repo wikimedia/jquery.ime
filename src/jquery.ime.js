@@ -334,7 +334,7 @@
 
 		/**
 		 * Set the caret position in the div.
-		 * @param {jQuery} element The content editable div element
+		 * @param {jQuery} $element The content editable div element
 		 * @param {Object} position An object with start and end properties.
 		 * @return {Array} If the cursor could not be placed at given position, how
 		 * many characters had to go back to place the cursor
@@ -662,6 +662,7 @@
 	/**
 	 * Set the caret position in the div.
 	 * @param {Element} element The content editable div element
+	 * @param position
 	 */
 	function setDivCaretPosition( element, position ) {
 		var nextCharIndex,

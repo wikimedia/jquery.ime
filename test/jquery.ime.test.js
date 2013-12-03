@@ -286,6 +286,7 @@
 		} );
 	}
 
+	// @todo FIXME: Unused.
 	clusterCaretTests = [
 		['ക്', 0, 0],
 		['ക്', 1, 1],
