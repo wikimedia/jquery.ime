@@ -1,7 +1,7 @@
 $( document ).ready( function () {
 	'use strict';
 
-	var ime, inputmethods, imeselector, languages, $imeSelector, $langselector;
+	var imeselector, languages, $imeSelector, $langselector;
 
 	$( '#ced' ).ime({ imePath: '../../' });
 
