@@ -11,6 +11,8 @@ been contributed by Red Hat.
 This project is a Wikimedia foundation initiative to provide language technology
 tools to a wider audience outside the Wikimedia universe.
 
+This input tool is widely deployed in all Wikimedia projects(eg: wikipedia).
+
 
 Quick start
 -----------
