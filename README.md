@@ -52,6 +52,15 @@ Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like apache or nginx, you already know how to put the code in a
 webserver.
 
+Plugin Options
+--------------
+
+| Option  | Description |
+|---------|---------------------|
+| imePath | Relative/Absolute path for the rules folder of jquery.ime. Default value: '../' |
+| languages| Languages to be used- by default all languages. Default value:  []. Eg: ['hi', 'ml']. It can also be a function returning an array.|
+| helpHandler| Called for each ime option in the menu, default value: null|
+
 Browser extensions
 ------------------
 This input tool is also available as Firefox and Chrome extensions.
