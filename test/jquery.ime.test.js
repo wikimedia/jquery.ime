@@ -47,7 +47,7 @@
 		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
 	} );
 
-	QUnit.test( 'Selector tests', 13, function ( assert ) {
+	QUnit.test( 'Selector tests', 14, function ( assert ) {
 		var selector = textareaIME.selector.data( 'imeselector' ),
 			nonBrokenImeName, brokenImeName, saveBrokenImeSource;
 
@@ -103,6 +103,13 @@
 			selector.selectLanguage( 'ta' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
 				'inputmethod for Tamil is Tamil Bamini' );
+			QUnit.start();
+		} );
+
+		QUnit.stop();
+		textareaIME.load( 'invalid-ime-id' ).fail( function () {
+			assert.strictEqual( textareaIME.getIM(), null,
+				'inputmethod loading failed.' );
 			QUnit.start();
 		} );
 
