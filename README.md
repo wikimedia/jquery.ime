@@ -11,6 +11,8 @@ been contributed by Red Hat.
 This project is a Wikimedia foundation initiative to provide language technology
 tools to a wider audience outside the Wikimedia universe.
 
+This input tool is widely deployed in all Wikimedia projects(eg: wikipedia).
+
 
 Quick start
 -----------
@@ -49,6 +51,15 @@ python3 -m http.server
 Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like apache or nginx, you already know how to put the code in a
 webserver.
+
+Plugin Options
+--------------
+
+| Option  | Description |
+|---------|---------------------|
+| imePath | Relative/Absolute path for the rules folder of jquery.ime. Default value: '../' |
+| languages| Languages to be used- by default all languages. Default value:  []. Eg: ['hi', 'ml']. It can also be a function returning an array.|
+| helpHandler| Called for each ime option in the menu, default value: null|
 
 Browser extensions
 ------------------
