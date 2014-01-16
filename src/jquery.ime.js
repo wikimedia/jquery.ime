@@ -300,6 +300,11 @@
 				return deferred.resolve();
 			}
 
+			// Validate the input method id.
+			if ( !$.ime.sources[inputmethodId] ) {
+				return deferred.reject();
+			}
+
 			dependency = $.ime.sources[inputmethodId].depends;
 			if ( dependency && !$.ime.inputmethods[dependency] ) {
 				ime.load( dependency ).done( function () {
