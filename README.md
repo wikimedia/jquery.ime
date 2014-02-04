@@ -47,9 +47,13 @@ or, In case you have python3
 ```bash
 python3 -m http.server
 ```
-or. with PHP
+or, with PHP
 ```bash
 php -S localhost:8000
+```
+and, you can access examples from
+```bash
+http://localhost:8000/examples/index.html
 ```
 Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like apache or nginx, you already know how to put the code in a
