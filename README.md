@@ -11,7 +11,7 @@ been contributed by Red Hat.
 This project is a Wikimedia foundation initiative to provide language technology
 tools to a wider audience outside the Wikimedia universe.
 
-This input tool is widely deployed in all Wikimedia projects(eg: wikipedia).
+This input tool is widely deployed in all Wikimedia projects (eg: wikipedia).
 
 
 Quick start
@@ -56,7 +56,7 @@ and, you can access examples from
 http://localhost:8000/examples/index.html
 ```
 Alternatively you can use tools like webfsd. If you know how to use advanced
-web servers like apache or nginx, you already know how to put the code in a
+web servers like Apache or Nginx, you already know how to put the code in a
 webserver.
 
 Plugin Options
