@@ -105,7 +105,6 @@
 			['p', 'ප්'],
 			['L', 'ළ්']]
 	};
+
 	$.ime.register( siSinglish );
-
 }( jQuery ) );
-

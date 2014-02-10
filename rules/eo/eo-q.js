@@ -10,7 +10,7 @@
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
-		patterns: [ 
+		patterns: [
 			['ĉq', 'cq'],
 			['ĝq', 'gq'],
 			['ĥq', 'hq'],
@@ -52,5 +52,4 @@
 	};
 
 	$.ime.register( eoQ);
-
 }( jQuery ) );

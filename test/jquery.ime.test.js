@@ -1,7 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME;
+	var $textarea, textareaIME, imeTest, typeChars,
+		caretTests, clusterCaretTests;
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -46,7 +47,7 @@
 		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
 	} );
 
-	QUnit.test( 'Selector tests', 13, function ( assert ) {
+	QUnit.test( 'Selector tests', 14, function ( assert ) {
 		var selector = textareaIME.selector.data( 'imeselector' ),
 			nonBrokenImeName, brokenImeName, saveBrokenImeSource;
 
@@ -59,9 +60,9 @@
 		assert.strictEqual( textareaIME.isActive(), true, 'selector is active after enabling' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
-
+			selector.selectIM( 'hi-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
 				'Hindi inputmethod is Hindi Transliteration' );
 			QUnit.start();
@@ -70,15 +71,16 @@
 		assert.strictEqual( textareaIME.isActive(), false, 'selector is not active' );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-transliteration', function () {
+		textareaIME.load( 'ta-transliteration' ).done( function () {
 			selector.selectLanguage( 'ta' );
+			selector.selectIM( 'ta-transliteration' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-transliteration',
 				'Tamil inputmethod is defaulted to Tamil Transliteration' );
 			QUnit.start();
 		} );
 
 		QUnit.stop();
-		textareaIME.load( 'ta-bamini', function () {
+		textareaIME.load( 'ta-bamini' ).done( function () {
 			selector.selectLanguage( 'ta' );
 			selector.selectIM( 'ta-bamini' );
 			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
@@ -88,17 +90,12 @@
 
 		selector.disableIM();
 		assert.strictEqual( textareaIME.isActive(), false, 'Selector is not active' );
-		QUnit.stop();
-		textareaIME.load( 'kn-transliteration', function () {
-			selector.selectLanguage( 'kn' );
-
-			assert.strictEqual( textareaIME.getIM().id, 'kn-transliteration',
-				'Default inputmethod for Kannada is Kannada Transliteration' );
-			QUnit.start();
-		} );
+		selector.selectLanguage( 'kn' );
+		assert.strictEqual( textareaIME.getIM(), null,
+			'Default inputmethod for Kannada is system' );
 
 		QUnit.stop();
-		textareaIME.load( 'hi-transliteration', function () {
+		textareaIME.load( 'hi-transliteration' ).done( function () {
 			selector.selectLanguage( 'hi' );
 			textareaIME.enable();
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
@@ -109,8 +106,15 @@
 			QUnit.start();
 		} );
 
+		QUnit.stop();
+		textareaIME.load( 'invalid-ime-id' ).fail( function () {
+			assert.strictEqual( textareaIME.getIM(), null,
+				'inputmethod loading failed.' );
+			QUnit.start();
+		} );
+
 		// Negative test: trying to load an IME with a broken URL
-		nonBrokenImeName = 'ml-transliteration';
+		nonBrokenImeName = 'system';
 		brokenImeName = 'ml-inscript';
 		saveBrokenImeSource = $.ime.sources[brokenImeName].source;
 		$.ime.sources[brokenImeName].source = 'This source is wrong';
@@ -120,6 +124,36 @@
 		assert.strictEqual( $.ime.preferences.getIM( 'ml' ), nonBrokenImeName,
 							'Trying to load an IME with a broken URL does not change the current IME' );
 		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
+	} );
+
+	QUnit.test( 'Selector decideLanguage tests', 4, function ( assert ) {
+		var selector = textareaIME.selector.data( 'imeselector' ), originalLang;
+		originalLang = $.ime.preferences.registry.language;
+
+		$.ime.preferences.registry.language = null;
+		assert.strictEqual( selector.decideLanguage(), 'en',
+			'Selects the default lang from preference when no lang attr is set' );
+
+		$textarea.attr( 'lang', 'hi' );
+		$.ime.preferences.registry.language = null;
+		selector.$element.focus();
+		assert.strictEqual( selector.decideLanguage(), 'hi',
+			'Selects the language that has been set as an attribute' );
+
+		$textarea.attr( 'lang', 'hi' );
+		$.ime.preferences.registry.language = 'ta';
+		selector.$element.focus();
+		assert.strictEqual( selector.decideLanguage(), 'ta',
+			'Overrides the lang attr and uses user preference' );
+
+		$textarea.attr( 'lang', 'sdas' );
+		$.ime.preferences.registry.language = null;
+		selector.$element.focus();
+		assert.strictEqual( selector.decideLanguage(), 'en',
+			'Selects default lang when lang attr is wrong or IM doesnt exist' );
+
+		$.ime.preferences.registry.language = originalLang;
+
 	} );
 
 	QUnit.test( 'Preferences tests', 5, function ( assert ) {
@@ -165,6 +199,119 @@
 		assert.strictEqual( $.ime.preferences.getIM( 'es' ), 'system', 'Use native keyboard is selected by default' );
 	} );
 
+	function caretTest( text, start, end ) {
+		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
+			var $ced = $( '<div contenteditable="true">' ),
+				correction,
+				position,
+				ime;
+
+			$( '#qunit-fixture' ).append( $ced );
+			$ced.ime();
+			ime = $ced.data( 'ime' );
+
+			$ced.html( text );
+			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
+			position = ime.getCaretPosition( $ced );
+			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
+		} );
+	}
+
+	caretTests = [
+		['ക്', 0, 0],
+		['ക്', 1, 1],
+		['ന്ത്', 1, 3],
+		['ന്ത്', 1, 4],
+		['ക്ത്ര', 1, 4]
+	];
+
+	$.each( caretTests, function( i, test ) {
+		caretTest( test[0], test[1], test[2] );
+	} );
+
+	QUnit.module( 'jquery.ime - input method rule files test', {
+		setup: function () {
+		},
+
+		teardown: function () {
+		}
+	} );
+
+	$.each( $.ime.sources, function( inputmethodId ) {
+		var testDescription;
+
+		// The internal input method name helps find it in the source,
+		// and since it's always in Latin, it helps isolate RTL names
+		// from the subsequent numbers
+		testDescription = 'Input method rules file test for input method ' +
+			$.ime.sources[inputmethodId].name + ' - ' + inputmethodId;
+
+		QUnit.test( testDescription, function () {
+			var ime,
+				$input = $( '<input>' );
+
+			$input.attr( { id: inputmethodId, type: 'text' } );
+			$input.appendTo( '#qunit-fixture' );
+			$input.ime();
+			$input.focus();
+			ime = $input.data( 'ime' );
+			QUnit.expect( 1 );
+			QUnit.stop();
+			ime.load( inputmethodId ).done( function () {
+				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
+				QUnit.start();
+			} );
+		} );
+	} );
+
+	$.each( $.ime.languages, function ( languageCode ) {
+		var language = $.ime.languages[languageCode];
+
+		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
+			var i, inputmethod,
+				inputmethods = language.inputmethods;
+
+			QUnit.expect( inputmethods.length );
+
+			for ( i = 0; i < inputmethods.length; i++ ) {
+				inputmethod = $.ime.sources[inputmethods[i]];
+				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
+			}
+		} );
+	} );
+
+	function clusterCaretTest( text, start, end ) {
+		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
+			var $ced = $( '<div contenteditable="true">' ),
+				correction,
+				position,
+				ime;
+
+			$( '#qunit-fixture' ).append( $ced );
+			$ced.ime();
+			ime = $ced.data( 'ime' );
+
+			$ced.html( text );
+			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
+			position = ime.getCaretPosition( $ced );
+			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
+		} );
+	}
+
+	// @todo FIXME: Unused.
+	clusterCaretTests = [
+		['ക്', 0, 0],
+		['ക്', 1, 1],
+		['ന്ത്', 1, 3],
+		['ന്ത്', 1, 4],
+		['ക്ത്ര', 1, 4]
+	];
+
+	$.each( caretTests, function( i, test ) {
+		clusterCaretTest( test[0], test[1], test[2] );
+>>>>>>> upstream/master
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 		},
@@ -176,21 +323,23 @@
 	/**
 	 * A general framework for testing a keyboard layout.
 	 */
-	var imeTest = function( options ) {
+	imeTest = function ( options ) {
 		var opt = $.extend( {
 			description: '', // Test description
-			multiline: false, // <input> or <textarea>
+			inputType: 'input', // input, textarea, or contenteditable
 			tests: [],
 			inputmethod: '' // The input method name.
 		}, options );
 
-		QUnit.test( opt.description, function() {
+		QUnit.test( opt.description, function () {
 			var ime, $input;
 
-			QUnit.expect( opt.tests.length );
-
-			if( opt.multiline ) {
+			QUnit.expect( opt.tests.length + 1 );
+			if ( opt.inputType === 'textarea' ) {
 				$input = $( '<textarea>' );
+				opt.inputType = 'textarea';
+			} else if ( opt.inputType === 'contenteditable' ) {
+				$input = $( '<div contenteditable="true">' );
 			} else {
 				$input = $( '<input>' );
 			}
@@ -204,18 +353,30 @@
 
 			ime = $input.data( 'ime' );
 
-			ime.load( opt.inputmethod, function () {
-				var i;
+			ime.load( opt.inputmethod ).done( function () {
+				var i, imeSelector, imesettingLabel;
 
-				ime.setIM( opt.inputmethod );
+				imeSelector = $input.data( 'imeselector' );
+				imeSelector.selectIM( opt.inputmethod );
 				ime.enable();
 
-				for ( i = 0 ; i < opt.tests.length; i++ ) {
+				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
+				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
+					'IME selector shows ' + $.ime.sources[opt.inputmethod].name );
+				for ( i = 0; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[i].input );
-					QUnit.strictEqual( $input.val() || $input.text(), opt.tests[i].output, opt.tests[i].description );
+
+					// The actual check
+					QUnit.strictEqual(
+						$input.val() || $input.text(),
+						opt.tests[i].output,
+						opt.tests[i].description + ' - ' + opt.inputType
+					);
+
 					$input.val( '' );
 					$input.text( '' );
+					$input.html( '' );
 				}
 
 				QUnit.start();
@@ -223,32 +384,50 @@
 		} );
 	};
 
+	/*global testFixtures */
 	// testFixtures is defined in jquery.ime.test.fixtures.js
-	$.each( testFixtures, function( i, fixture ) {
+	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );
+		if ( fixture.inputType === undefined ) {
+			// Run tests for content editable divs too
+			fixture.inputType = 'contenteditable';
+			imeTest( fixture );
+		}
 	} );
 
-	// Basic sendkey-implementation
-	// $input - the input element
-	// characters - either
-	//            - a string
-	//            - an array of pairs of character and altKey value
-	var typeChars = function( $input, characters ) {
-		var i, character, altKeyValue, code, event,
+	/**
+	 * Basic sendkey-implementation. Type some characters into an input.
+	 *
+	 * @param $input jQuery input element.
+	 * @param characters Either a string or an array of pairs of character
+	 * and boolean altKey value
+	 */
+	typeChars = function ( $input, characters ) {
+		var i, character, altKeyValue, shiftKeyValue, code, event, replacementSkipped, textEnd,
+			ime = $input.data( 'ime' ),
+			contentEditable = $input.is( '[contenteditable]' ),
 			len = characters.length;
 
 		for ( i = 0; i < len; i++ ) {
-			// Get the key code
+			// For tests of non-extended keypresses, this is just a string.
+			// for tests of extended keypresses, this is an array of arrays,
+			// where each member is a pair consisting of a character to type
+			// and the boolean value for altKey, saying whether Alt was
+			// depressed or not.
 			if ( typeof( characters ) === 'string' ) {
 				character = characters[i];
 				altKeyValue = false;
 			} else {
 				character = characters[i][0];
-				altKeyValue = characters[i][1];
+				altKeyValue = characters[i][1] || false;
+				shiftKeyValue = characters[i][2] || false;
 			}
 
+			// Get the key code. Events use codes and not chars.
 			code = character.charCodeAt(0);
-
+			if ( shiftKeyValue ) {
+				ime.shifted = true;
+			}
 			// Trigger event and undo if prevented
 			event = new jQuery.Event( 'keypress', {
 				keyCode: code,
@@ -257,8 +436,23 @@
 				altKey: altKeyValue
 			} );
 
-			if ( $input.triggerHandler( event ) ) {
-				$input.val( $input.val() + character ) ;
+			replacementSkipped = $input.triggerHandler( event );
+
+			if ( shiftKeyValue ) {
+				ime.shifted = false;
+			}
+
+			if ( replacementSkipped ) {
+				if ( contentEditable ) {
+					$input.text( $input.text() + character );
+					textEnd = $input.text().length;
+					ime.setCaretPosition( $input, {
+						start: textEnd,
+						end: textEnd
+					} );
+				} else {
+					$input.val( $input.val() + character );
+				}
 			}
 		}
 	};

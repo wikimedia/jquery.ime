@@ -2,7 +2,7 @@
 	'use strict';
 
 	function prepareRules () {
-		var rules= [], chars;
+		var rules = [], chars;
 
 		chars = {
 			C: 'Ĉ',

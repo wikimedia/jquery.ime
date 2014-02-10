@@ -2,8 +2,8 @@
 	'use strict';
 
 	var de = {
-		id: 'de',
-		name: 'Deutsch',
+		id: 'de-transliteration',
+		name: 'Deutsch Tilde',
 		description: 'German input method',
 		date: '2012-11-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -24,5 +24,4 @@
 	};
 
 	$.ime.register( de );
-
 }( jQuery ) );

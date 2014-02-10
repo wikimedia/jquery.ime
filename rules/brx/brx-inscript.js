@@ -107,6 +107,6 @@
 			[',', '\u0970'],
 			['\\$', '\u20B9']]
 	};
-	$.ime.register( brxInscript );
 
+	$.ime.register( brxInscript );
 }( jQuery ) );

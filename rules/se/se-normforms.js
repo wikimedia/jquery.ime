@@ -14,8 +14,8 @@
 		maxKeyLength: 3,
 		patterns: [
 			// Uses "~" as "approximatly similar to"
-			[ "'a", 'á' ], // The simple ~a does not work as there is a "ã"
-			[ "'A", 'Á' ], // The simple ~A does not work as there is a "Ã"
+			[ '\'a', 'á' ], // The simple ~a does not work as there is a "ã"
+			[ '\'A', 'Á' ], // The simple ~A does not work as there is a "Ã"
 			[ '~c', 'č' ],
 			[ '~C', 'Č' ],
 			[ '~d', 'đ' ],
@@ -35,5 +35,4 @@
 	};
 
 	$.ime.register( defs );
-
 }( jQuery ) );

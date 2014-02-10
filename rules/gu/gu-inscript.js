@@ -108,6 +108,6 @@
 			['$', '\u20B9'] ]
 
 	};
-	$.ime.register( guInscript );
 
+	$.ime.register( guInscript );
 }( jQuery ) );

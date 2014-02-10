@@ -2,8 +2,8 @@
 	'use strict';
 
 	var defs = {
-		id: 'no-tildeforms',
-		name: 'Norsk',
+		id: 'nb-tildeforms',
+		name: 'Norsk tildemerket transliterasjon',
 		description: 'Norwegian input method with initial tilde triggering transliteration',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
@@ -32,5 +32,4 @@
 	};
 
 	$.ime.register( defs );
-
 }( jQuery ) );

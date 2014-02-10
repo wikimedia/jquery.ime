@@ -3,8 +3,8 @@
 
 	var orInScript = {
 		id: 'or-inscript',
-		name: 'Odiya InScript',
-		description: 'InScript keyboard for Odiya script',
+		name: 'ଇନସ୍କ୍ରିପ୍ଟ',
+		description: 'InScript keyboard for Odia script',
 		date: '2012-10-14',
 		author: 'Junaid P V',
 		license: 'GPLv3',
@@ -103,5 +103,4 @@
 	};
 
 	$.ime.register( orInScript );
-
 }( jQuery ) );

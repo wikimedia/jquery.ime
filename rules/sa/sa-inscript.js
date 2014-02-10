@@ -108,6 +108,6 @@
 			['4', '₹']]
 
 	};
-	$.ime.register( saInScript );
 
+	$.ime.register( saInScript );
 }( jQuery ) );

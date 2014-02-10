@@ -1,14 +1,21 @@
-JQuery IME
-==========================
+jQuery.IME
+==========
 
-jQuery Input method editor library supporting 50+ input methods across several languages.
-This is the jQuery version of the input method tool used in Wikimedia projects, a.k.a. Narayam.
-These input methods are well tested and contributed by large Wikimedia community.
-This project is a Wikimedia foundation initiative to provide language technology tools to wider audience outside the Wikimedia universe.
+jQuery.IME is a jQuery based input method editor library supporting more than
+135 input methods across more than 62 languages.
+
+These input methods are well tested. Initially the input methods were
+contributed by the Wikimedia community. By now many input methods have also
+been contributed by Red Hat.
+
+This project is a Wikimedia foundation initiative to provide language technology
+tools to a wider audience outside the Wikimedia universe.
+
+This input tool is widely deployed in all Wikimedia projects (eg: wikipedia).
 
 
 Quick start
-----------
+-----------
 
 ```bash
 git clone https://github.com/wikimedia/jquery.ime.git
@@ -20,22 +27,68 @@ To add input method support to the editable fields of a web page:
 $( 'textarea' ).ime();
 ```
 
-jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method support for any editable elements in a page.
+jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method
+support for any editable elements in a page.
 
 
-See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page where jquery.ime in action
+Example
+-------
+See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page
+where jquery.ime in action.
 
+To try the example locally, after checking out the code, start a local webserver
+to serve the files. This is very easy.
+
+If you have python installed, run
+```bash
+python -m SimpleHTTPServer
+```
+or, In case you have python3
+```bash
+python3 -m http.server
+```
+or, with PHP
+```bash
+php -S localhost:8000
+```
+and, you can access examples from
+```bash
+http://localhost:8000/examples/index.html
+```
+Alternatively you can use tools like webfsd. If you know how to use advanced
+web servers like Apache or Nginx, you already know how to put the code in a
+webserver.
+
+Plugin Options
+--------------
+
+| Option  | Description |
+|---------|---------------------|
+| imePath | Relative/Absolute path for the rules folder of jquery.ime. Default value: '../' |
+| languages| Languages to be used- by default all languages. Default value:  []. Eg: ['hi', 'ml']. It can also be a function returning an array.|
+| helpHandler| Called for each ime option in the menu, default value: null|
+
+Browser extensions
+------------------
+This input tool is also available as Firefox and Chrome extensions.
+* [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/)
+* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh)
 
 For Developers
 --------------
-Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules) to learn how to write an input method for language.
 
-Read [test/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test) to learn how to write and run tests for an input method.
+Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules)
+to learn how to write an input method for a language.
 
-Read the technical specification of project from [wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification)
+Read [test/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test)
+to learn how to write and run tests for an input method.
 
-Code walkthrough by Chris Forno: http://www.youtube.com/watch?v=LPec-KIBVeI
+Read the technical specification of the project from
+[wiki](https://github.com/wikimedia/jquery.ime/wiki/Technical-Specification).
+
+Do watch the code walkthrough by Chris Forno: http://www.youtube.com/watch?v=LPec-KIBVeI
 
 License
 -------
-This project is dual licensed with GPLv2+ and MIT license. See the license files in the source code for more details.
+This project is dual licensed with GPLv2+ and MIT license. See the license
+files in the source code for more details.

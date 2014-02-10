@@ -101,7 +101,7 @@
 			*/
 
 			// zwnj
-			['(్)\\^', '$1\u200d'],
+			['(్)\\^', '$1\u200c'],
 
 			// sunna ending
 			['మ్(\\s|\\.|\\, |\\))', 'ం$1'],
@@ -216,7 +216,6 @@
 			['//', 'ఽ'], // avagraha
 			['~\\$', '₹']] // rupee
 	};
+
 	$.ime.register( teTransliteration );
-
 }( jQuery ) );
-

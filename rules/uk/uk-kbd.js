@@ -1,9 +1,9 @@
 ( function ( $ ) {
 	'use strict';
 
-	var uaKbd = {
-		id: 'ua-kbd',
-		name: 'Ukrarian kbd',
+	var ukKbd = {
+		id: 'uk-kbd',
+		name: 'Українська',
 		description: 'Ukrainian kbd keyboard layout',
 		date: '2013-02-12',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -22,8 +22,8 @@
 			['i', 'ш'],
 			['o', 'щ'],
 			['p', 'з'],
-			['[', 'х'],
-			[']', 'ї'],
+			['\\[', 'х'],
+			['\\]', 'ї'],
 			['a', 'ф'],
 			['s', 'і'],
 			['d', 'в'],
@@ -44,10 +44,10 @@
 			['n', 'т'],
 			['m', 'ь'],
 			[',', 'б'],
-			['.', 'ю'],
+			['\\.', 'ю'],
 			['/', '.'],
 			['\\!', '!'],
-			['\\@', '"']
+			['\\@', '"'],
 			['\\#', '№'],
 			['\\$', ';'],
 			['\\%', '%'],
@@ -96,7 +96,6 @@
 		]
 
 	};
-	$.ime.register( uaKbd );
+	$.ime.register( ukKbd );
 
 }( jQuery ) );
-

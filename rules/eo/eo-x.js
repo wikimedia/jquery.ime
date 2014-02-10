@@ -50,5 +50,4 @@
 	};
 
 	$.ime.register( eoX );
-
 }( jQuery ) );

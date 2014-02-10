@@ -3,7 +3,7 @@
 
 	var asInScript2 = {
 		id: 'as-inscript2',
-		name: 'ইন্‌স্ক্ৰিপ্ত ২',
+		name: 'ইনস্ক্ৰিপ্ট ২',
 		description: 'Enhanced InScript keyboard for Assamese language',
 		date: '2013-02-09',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -95,12 +95,12 @@
 			['x', 'ং'],
 			['y', 'ব'],
 			['z', 'ʼ']
- 		],
+		],
 		patterns_x: [
 			['\\!', '৴'],
-			['1', '‍'],
+			['1', '\u200d'],
 			['\\@', '৵'],
-			['2', '‌'],
+			['2', '\u200c'],
 			['\\#', '৶'],
 			['\\$', '৷'],
 			['4', '₹'],
@@ -120,9 +120,9 @@
 			['f', 'ৢ'],
 			['l', 'ৎ'],
 			['r', 'ৣ'],
-			['x', '৺']]
+			['x', '৺']
+		]
 	};
 
 	$.ime.register( asInScript2 );
-
 }( jQuery ) );

@@ -98,7 +98,6 @@
 			['9', ';'], // 9
 			['0', ':']] // 0
 	};
+
 	$.ime.register( sahTransliteration );
-
 }( jQuery ) );
-
