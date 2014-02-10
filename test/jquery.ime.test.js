@@ -160,6 +160,11 @@
 		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
+	Qunit.test( 'Default input method test', 1, function ( assert ) {
+		$.ime.preferences.setLanguage( 'es' );
+		assert.strictEqual( $.ime.preferences.getIM( 'es' ), 'system', 'Use native keyboard is selected by default' );
+	} );
+
 	QUnit.module( 'jquery.ime - input method rules tests', {
 		setup: function () {
 		},
