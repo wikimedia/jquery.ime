@@ -563,6 +563,10 @@
 		'uz-kbd': {
 			name: 'Uzbek kbd',
 			source: 'rules/uz/uz-kbd.js'
+		},
+		'vec-GVU': {
+			name: 'Venetian',
+			source: 'rules/vec/vec-GVU.js'
 		}
 	} );
 
@@ -894,6 +898,10 @@
 		'uz': {
 			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
+		},
+		'vec': {
+			autonym: 'Venetian',
+			inputmethods: [ 'vec-GVU' ]
 		}
 	} );
 
