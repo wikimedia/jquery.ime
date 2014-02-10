@@ -194,6 +194,11 @@
 		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
+	Qunit.test( 'Default input method test', 1, function ( assert ) {
+		$.ime.preferences.setLanguage( 'es' );
+		assert.strictEqual( $.ime.preferences.getIM( 'es' ), 'system', 'Use native keyboard is selected by default' );
+	} );
+
 	function caretTest( text, start, end ) {
 		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
@@ -304,6 +309,7 @@
 
 	$.each( caretTests, function( i, test ) {
 		clusterCaretTest( test[0], test[1], test[2] );
+>>>>>>> upstream/master
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {

@@ -627,11 +627,12 @@
 					'class': 'ime-disable-link',
 					'data-i18n': 'jquery-ime-disable-text'
 				} )
-				.text( 'System input method' ),
-			$( '<span>' )
+				.addClass( 'ime-checked' )
+				.text( 'System input method' )
+			).append( $( '<span>' )
 				.addClass( 'ime-disable-shortcut' )
 				.text( 'CTRL+M' )
-		);
+			);
 	}
 
 	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
