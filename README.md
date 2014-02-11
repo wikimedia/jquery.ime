@@ -77,7 +77,7 @@ This input tool is also available as Firefox and Chrome extensions.
 For Developers
 --------------
 
-Read [rules/README](https://github.com/wikimedia/jquery.ime/tree/master/rules)
+Read [rules/README.md](https://github.com/wikimedia/jquery.ime/tree/master/rules)
 to learn how to write an input method for a language.
 
 Read [test/README.md](https://github.com/wikimedia/jquery.ime/tree/master/test)
