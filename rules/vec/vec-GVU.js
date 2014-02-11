@@ -25,7 +25,7 @@
 			['Đh', 'Dh'],
 			['Ƚh', 'Lh'],
 			['Ẑh', 'Zh']
-			]
+		]
 	};
 
 	$.ime.register( vec );

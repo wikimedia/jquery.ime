@@ -627,6 +627,7 @@
 					'class': 'ime-disable-link',
 					'data-i18n': 'jquery-ime-disable-text'
 				} )
+				.addClass( 'ime-checked' )
 				.text( 'System input method' ),
 			$( '<span>' )
 				.addClass( 'ime-disable-shortcut' )
