@@ -2869,7 +2869,7 @@ var testFixtures = [
 			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' }
 		],
 		inputmethod: 'fa-kbd'
-	},{     
+	},{
 		description: 'Venetian vec-GVU input method test',
 		tests: [
 			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
