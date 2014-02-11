@@ -194,6 +194,11 @@
 		assert.strictEqual( textareaIME.getLanguage(), 'ru', 'Language changed after setting a valid value' );
 	} );
 
+	QUnit.test( 'Default input method for language without input methods test', 1, function ( assert ) {
+		$.ime.preferences.setLanguage( 'es' );
+		assert.strictEqual( $.ime.preferences.getIM(), 'system', 'Use native keyboard is selected by default' );
+	} );
+
 	function caretTest( text, start, end ) {
 		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
 			var $ced = $( '<div contenteditable="true">' ),
