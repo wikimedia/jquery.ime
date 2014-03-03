@@ -317,9 +317,11 @@
 			}
 
 			debug( 'Loading ' + inputmethodId );
-			deferred = $.getScript(
-				ime.options.imePath + $.ime.sources[inputmethodId].source
-			).done( function () {
+			deferred = $.ajax( {
+				url: ime.options.imePath + $.ime.sources[inputmethodId].source,
+				dataType: 'script',
+				cache: true
+			} ).done( function () {
 				debug( inputmethodId + ' loaded' );
 			} ).fail( function ( jqxhr, settings, exception ) {
 				debug( 'Error in loading inputmethod ' + inputmethodId + ' Exception: ' + exception );
