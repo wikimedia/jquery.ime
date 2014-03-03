@@ -46,10 +46,12 @@
 		 * @param {string} input
 		 * @param {string} context
 		 * @param {boolean} altGr whether altGr key is pressed or not
-		 * @returns {string} transliterated string
+		 * @returns {object} transliteration object
+		 * @returns {bool} return.noop Whether to consider input processed or passed through.
+		 * @returns {string} return.output the transliterated input or input unmodified.
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement, i;
+			var patterns, regex, rule, replacement, i, retval;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
@@ -66,7 +68,15 @@
 			}
 
 			if ( $.isFunction( patterns ) ) {
-				return patterns.call( this, input, context );
+				// For backwards compatibility, allow the rule functions to return plain
+				// string. Determine noop by checking whether input is different from
+				// output. If the rule function returns object, just return it as-is.
+				retval = patterns.call( this, input, context );
+				if ( typeof retval === 'string' ) {
+					return { noop: input === retval, output: retval };
+				}
+
+				return retval;
 			}
 
 			for ( i = 0; i < patterns.length; i++ ) {
@@ -83,17 +93,16 @@
 					// Context test required?
 					if ( rule.length === 3 ) {
 						if ( new RegExp( rule[1] + '$' ).test( context ) ) {
-							return input.replace( regex, replacement );
+							return { noop: false, output: input.replace( regex, replacement ) };
 						}
 					} else {
-						// No context test required. Just replace.
-						return input.replace( regex, replacement );
+						return { noop: false, output: input.replace( regex, replacement ) };
 					}
 				}
 			}
 
 			// No matches, return the input
-			return input;
+			return { noop: true, output: input };
 		},
 
 		keyup: function ( e ) {
@@ -177,20 +186,20 @@
 				);
 			}
 
-			// If replacement equals to input, no replacement is made, because
-			// there's apparently nothing to do. However, there may be something
-			// to do if AltGr was pressed. For example, if a layout is built in
-			// a way that allows typing the original character instead of
-			// the replacement by pressing it with AltGr.
-			if ( !altGr && replacement === input ) {
+			// Allow rules to explicitly define whether we match something.
+			// Otherwise we cannot distinguish between no matching rule and
+			// rule that provides identical output but consumes the event
+			// to prevent normal behavior. See Udmurt layout which uses
+			// altgr rules to allow typing the original character.
+			if ( replacement.noop ) {
 				return true;
 			}
 
 			// Drop a common prefix, if any
-			divergingPos = this.firstDivergence( input, replacement );
+			divergingPos = this.firstDivergence( input, replacement.output );
 			input = input.substring( divergingPos );
-			replacement = replacement.substring( divergingPos );
-			replaceText( this.$element, replacement, startPos - input.length + 1, endPos );
+			replacement.output = replacement.output.substring( divergingPos );
+			replaceText( this.$element, replacement.output, startPos - input.length + 1, endPos );
 
 			e.stopPropagation();
 

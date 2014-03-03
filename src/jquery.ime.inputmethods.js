@@ -484,6 +484,10 @@
 			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
+		'roa-tara': {
+			name: 'Tarandine',
+			source: 'rules/roa-tara/roa-tara.js'
+		},
 		'ru-jcuken': {
 			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
@@ -563,6 +567,10 @@
 		'uz-kbd': {
 			name: 'Uzbek kbd',
 			source: 'rules/uz/uz-kbd.js'
+		},
+		'vec-GVU': {
+			name: 'Venetian',
+			source: 'rules/vec/vec-GVU.js'
 		}
 	} );
 
@@ -807,6 +815,10 @@
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
+		'roa-tara': {
+			autonym: 'Tarandine',
+			inputmethods: [ 'roa-tara' ]
+		},
 		'ru': {
 			autonym: 'русский',
 			inputmethods: [ 'ru-jcuken', 'ru-kbd', 'ru-phonetic', 'ru-yawerty' ]
@@ -894,6 +906,10 @@
 		'uz': {
 			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
+		},
+		'vec': {
+			autonym: 'Venetian',
+			inputmethods: [ 'vec-GVU' ]
 		}
 	} );
 
