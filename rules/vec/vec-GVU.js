@@ -3,7 +3,7 @@
 
 	var vec = {
 		id: 'vec-GVU',
-		name: 'Venetian GVU',
+		name: 'Vèneto GVU',
 		description: 'Venetian input method.',
 		date: '2013-08-06',
 		URL: 'http://github.com/wikimedia/jquery.ime',
