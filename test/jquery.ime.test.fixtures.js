@@ -2279,6 +2279,29 @@ var palochkaVariants = {
 		],
 		inputmethod: 'roa-tara-GVU'
 	},{
+		description: 'Piemontèis input method test',
+		tests: [
+			{ input: ':e', output: 'ë', description: 'Piemontèis ë' },
+			{ input: ',o', output: 'ó', description: 'Piemontèis ó' },
+			{ input: '\A', output: 'À', description: 'Piemontèis À' },
+			{ input: '\E', output: 'È', description: 'Piemontèis È' },
+			{ input: '\I', output: 'Ì', description: 'Piemontèis Ì' },
+			{ input: '\O', output: 'Ò', description: 'Piemontèis Ò' },
+			{ input: '\U', output: 'Ù', description: 'Piemontèis Ù' },
+			{ input: ',E', output: 'É', description: 'Piemontèis É' },
+			{ input: ':E', output: 'Ë', description: 'Piemontèis Ë' },
+			{ input: ',O', output: 'Ó', description: 'Piemontèis Ó' },
+			{ input: '^g', output: 'ĝ', description: 'Piemontèis (local) ĝ' },
+			{ input: '^l', output: 'l̂', description: 'Piemontèis (local) l̂̂' },
+			{ input: '^r', output: 'r̂', description: 'Piemontèis (local) r̂' },
+			{ input: ':a', output: 'ä', description: 'Piemontèis (local) ä' },
+			{ input: '^G', output: 'Ĝ', description: 'Piemontèis (local) Ĝ' },
+			{ input: '^L', output: 'L̂', description: 'Piemontèis (local) L̂' },
+			{ input: '^R', output: 'R̂', description: 'Piemontèis (local) R̂' },
+			{ input: ':A', output: 'Ä', description: 'Piemontèis (local) Ä' }
+		],
+		inputmethod: 'pms'
+	},{
 		description: 'Russian kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }

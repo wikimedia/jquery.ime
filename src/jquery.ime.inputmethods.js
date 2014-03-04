@@ -561,7 +561,11 @@
 		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
-			source: 'rules/roa-tara/roa-tara.js'
+			source: 'rules/roa-tara/roa-tara.js',
+		},
+		'pms': {
+			name: 'Piemontèis',
+			source: 'rules/pms/pms.js'
 		},
 		'ru-jcuken': {
 			name: 'ЙЦУКЕН',
@@ -660,7 +664,7 @@
 			source: 'rules/uz/uz-kbd.js'
 		},
 		'vec-GVU': {
-			name: 'Venetian',
+			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
 		},
 		'wo-alt': {
@@ -965,6 +969,10 @@
 		pa: {
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
+		},
+		pms: {
+			autonym: 'Piemontèis',
+			inputmethods: [ 'pms' ]
 		},
 		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
