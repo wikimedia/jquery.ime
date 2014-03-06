@@ -7,7 +7,7 @@
 		description: 'Odia Modular input method',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
-		author: 'Manoj Sahukarlekha and Subhashish Panigrahi',
+		author: 'Manoj Sahukar and Subhashish Panigrahi',
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 4,
