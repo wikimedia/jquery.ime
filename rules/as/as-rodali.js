@@ -6,7 +6,7 @@
 		name: 'rodali',
 		description: 'Rodali Phonetic keyboard for Assamese script',
 		date: '2013-02-09',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'http://www.sltdassam.com/rodali.html',
 		author: 'Gunadeep Chetia, Subhashish Panigrahi',
 		license: 'GPLv3',
 		version: '1.0',
