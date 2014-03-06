@@ -1434,7 +1434,7 @@ var testFixtures = [
 			{ input: 'r',  output: 'ର', description: 'Odia phonetic r -> ର୍' },
 			{ input: 'R',  output: 'ଋ', description: 'Odia phonetic R -> ଋ' },
 			{ input: 'e',  output: 'ଏ', description: 'Odia phonetic e -> ଏ' },
-			{ input: 'ai', output: 'ଐ', description: 'Odia phonetic ai -> ଐ' },
+			{ input: 'E', output: 'ଐ', description: 'Odia phonetic ai -> ଐ' },
 			{ input: 'o',  output: 'ଓ', description: 'Odia phonetic o -> ଓ' },
 			{ input: 'O',  output: 'ଔ', description: 'Odia phonetic O -> ଔ' },
 			{ input: 'k',  output: 'କ', description: 'Odia phonetic k -> କ' },
@@ -1472,6 +1472,7 @@ var testFixtures = [
 			{ input: 'sh', output: 'ଷ', description: 'Odia phonetic sh -> ଷ' },
 			{ input: 'h', output: 'ହ', description: 'Odia phonetic h -> ହ' },
 			{ input: '.',  output: '।', description: 'Odia phonetic . -> । ' },
+			{ input: 'sainath',  output: 'ସାଇନାଥ', description: 'Odia phonetic sainath -> ସାଇନାଥ ' },
 			{ input: 'dxiNeSwr',  output: 'ଦକ୍ଷିଣେଶ୍ୱର', description: 'Odia phonetic dxiNeSwr -> ଦକ୍ଷିଣେଶ୍ୱର ' },
 			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ'}
 		],
