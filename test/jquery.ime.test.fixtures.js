@@ -273,6 +273,12 @@ var testFixtures = [
 		],
 		inputmethod: 'gu-inscript2'
 	},{
+		description: 'Gujarati Inscript',
+		tests: [
+			{ input: '""da}', output: '', description: 'Gujarati Inscript test' }
+		],
+		inputmethod: 'gu-inscript'
+	},{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
