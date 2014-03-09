@@ -386,7 +386,8 @@
 		 * @return {string} The autonym
 		 */
 		getAutonym: function ( languageCode ) {
-			return $.ime.languages[languageCode].autonym;
+			return $.ime.languages[languageCode]
+				&& $.ime.languages[languageCode].autonym;
 		},
 
 		/**
