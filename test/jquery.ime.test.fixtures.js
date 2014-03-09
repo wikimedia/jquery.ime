@@ -275,7 +275,7 @@ var testFixtures = [
 	},{
 		description: 'Gujarati Inscript',
 		tests: [
-			{ input: '""da}', output: '', description: 'Gujarati Inscript test' }
+			{ input: '""da}', output: 'ઠઠ્ઠો', description: 'Gujarati Inscript test' }
 		],
 		inputmethod: 'gu-inscript'
 	},{
