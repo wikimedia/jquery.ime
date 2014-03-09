@@ -23,7 +23,8 @@ Format should be: yyyy-mm-dd
 author: An optional string containing the authors name. Can contain email
 address as well. eg: "Santhosh Thottingal, <santhosh.thottingal@gmail.com>"
 
-URL: An optional string containing URL for the original input method definition.
+URL: A mandatory string containing URL for source where keyboard is defined,
+information about trademark restrictions if any, layout and help.
 
 license: An optional string containing licence information. Eg: "CC-BY-SA" or
 "GPLv3".
