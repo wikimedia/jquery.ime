@@ -207,6 +207,10 @@
 			name: 'Inscript',
 			source: 'rules/or/or-inscript.js'
 		},
+		'or-modular': {
+			name: 'ମୋଡୁଲାର',
+			source: 'rules/or/or-modular.js'
+		},
 		'or-lekhani': {
 			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
@@ -440,7 +444,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript' ]
+			inputmethods: [ 'or-transliteration', 'or-lekhani', 'or-inscript', 'or-modular' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
