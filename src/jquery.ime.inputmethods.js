@@ -436,6 +436,10 @@
 			name: 'ଫୋନେଟିକ',
 			source: 'rules/or/or-phonetic.js'
 		},
+		'or-modular': {
+			name: 'ମୋଡୁଲାର',
+			source: 'rules/or/or-modular.js'
+		},
 		'sd-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/sd/sd-inscript2.js'
@@ -801,7 +805,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
+			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-modular' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
