@@ -147,5 +147,5 @@
 		]
 	};
 
-	$.ime.register( asPhonetic );
+	$.ime.register( asRodali );
 }( jQuery ) );
