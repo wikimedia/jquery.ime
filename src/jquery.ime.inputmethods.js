@@ -412,6 +412,10 @@
 			name: 'لۊری شومالی',
 			source: 'rules/lrc/lrc-kbd.js'
 		},
+		'lut-tulalip': {
+			name: 'Lushootseed Tulalip',
+			source: 'rules/lut/lut-tulalip.js'
+		},
 		mh: {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
@@ -909,6 +913,10 @@
 		lo: {
 			autonym: 'ລາວ',
 			inputmethods: [ 'lo-kbd' ]
+		},
+		lut: {
+			autonym: 'dxʷləšucid',
+			inputmethods: [ 'lut-tulalip' ]
 		},
 		mai: {
 			autonym: 'मैथिली',
