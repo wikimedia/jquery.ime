@@ -575,6 +575,10 @@
 	} );
 
 	$.extend( $.ime.languages, {
+		'or': {
+			autonym: 'ଓଡ଼ିଆ',
+			inputmethods: [ 'or-modular', 'or-lekhani', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
+		},
 		'ady': {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -802,10 +806,6 @@
 		'nn': {
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
-		},
-		'or': {
-			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-modular' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
