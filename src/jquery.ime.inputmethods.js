@@ -14,6 +14,10 @@
 			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
 		},
+		'as-rodali': {
+			name: 'rodali',
+			source: 'rules/as/as-rodali.js'
+		},
 		'as-bornona': {
 			name: 'বৰ্ণনা',
 			source: 'rules/as/as-bornona.js'
@@ -579,6 +583,10 @@
 			autonym: 'ଓଡ଼ିଆ',
 			inputmethods: [ 'or-modular', 'or-lekhani', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
 		},
+		'as': {
+			autonym: 'অসমীয়া',
+			inputmethods: [ 'as-rodali','as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
+		},
 		'ady': {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -594,10 +602,6 @@
 		'ar': {
 			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ]
-		},
-		'as': {
-			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
 		},
 		'av': {
 			autonym: 'авар',
