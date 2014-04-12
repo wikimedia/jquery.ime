@@ -420,6 +420,10 @@
 			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
+		'or-modular': {
+			name: 'ମୋଡୁଲାର',
+			source: 'rules/or/or-modular.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -435,10 +439,6 @@
 		'or-phonetic': {
 			name: 'ଫୋନେଟିକ',
 			source: 'rules/or/or-phonetic.js'
-		},
-		'or-modular': {
-			name: 'ମୋଡୁଲାର',
-			source: 'rules/or/or-modular.js'
 		},
 		'sd-inscript2': {
 			name: 'इनस्क्रिप्ट २',
@@ -582,10 +582,6 @@
 		'ahr': {
 			autonym: 'अहिराणी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
-		},
-		'as': {
-			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
 		},
 		'am': {
 			autonym: 'አማርኛ',
@@ -803,13 +799,13 @@
 			autonym: 'Norsk (bokmål)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
-		'or': {
-			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-lekhani', 'or-modular', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
-		},
 		'nn': {
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
+		},
+		'or': {
+			autonym: 'ଓଡ଼ିଆ',
+			inputmethods: [ 'or-lekhani', 'or-modular', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
