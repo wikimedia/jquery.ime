@@ -595,6 +595,10 @@
 			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ]
 		},
+		'as': {
+			autonym: 'অসমীয়া',
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
+		},
 		'av': {
 			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
