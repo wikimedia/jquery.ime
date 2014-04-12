@@ -14,10 +14,6 @@
 			name: 'অভ্ৰ',
 			source: 'rules/as/as-avro.js'
 		},
-		'as-rodali': {
-			name: 'rodali',
-			source: 'rules/as/as-rodali.js'
-		},
 		'as-bornona': {
 			name: 'বৰ্ণনা',
 			source: 'rules/as/as-bornona.js'
@@ -579,14 +575,6 @@
 	} );
 
 	$.extend( $.ime.languages, {
-		'or': {
-			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-modular', 'or-lekhani', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
-		},
-		'as': {
-			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-rodali','as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
-		},
 		'ady': {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -594,6 +582,10 @@
 		'ahr': {
 			autonym: 'अहिराणी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+		},
+		'as': {
+			autonym: 'অসমীয়া',
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
 		},
 		'am': {
 			autonym: 'አማርኛ',
@@ -806,6 +798,10 @@
 		'nb': {
 			autonym: 'Norsk (bokmål)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
+		},
+		'or': {
+			autonym: 'ଓଡ଼ିଆ',
+			inputmethods: [ 'or-lekhani', 'or-modular', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
 		},
 		'nn': {
 			autonym: 'Norsk (nynorsk)',
