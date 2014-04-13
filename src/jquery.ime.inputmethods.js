@@ -420,6 +420,10 @@
 			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
+		'or-modular': {
+			name: 'ମୋଡୁଲାର',
+			source: 'rules/or/or-modular.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -801,7 +805,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
+			inputmethods: [ 'or-lekhani', 'or-modular', 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
