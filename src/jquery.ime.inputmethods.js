@@ -34,6 +34,10 @@
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
+		'batak-qwerty': {
+			name: 'Batak QWERTY',
+			source: 'rules/bbc/batak-qwerty.js'
+		},
 		'be-kbd': {
 			name: 'Стандартная',
 			source: 'rules/be/be-kbd.js'
@@ -594,6 +598,10 @@
 		'av': {
 			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'bbc': {
+			autonym: 'Batak',
+			inputmethods: [ 'batak-qwerty' ]
 		},
 		'be': {
 			autonym: 'беларуская',

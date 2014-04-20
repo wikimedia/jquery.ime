@@ -503,6 +503,85 @@ var testFixtures = [
 		],
 		inputmethod: 'hy-wmslegacy'
 	},{
+		description: 'Batak QWERTY test',
+		tests: [
+			{ input: 'q', output: 'ᯥ', description: 'Batak QWERTY - q - u' },
+			{ input: 'w', output: 'ᯋ', description: 'Batak QWERTY - w' },
+			{ input: 'e', output: 'ᯧ', description: 'Batak QWERTY - e' },
+			{ input: 'r', output: 'ᯒ', description: 'Batak QWERTY - r' },
+			{ input: 't', output: 'ᯖ', description: 'Batak QWERTY - t' },
+			{ input: 'y', output: 'ᯛ', description: 'Batak QWERTY - y' },
+			{ input: 'u', output: 'ᯮ', description: 'Batak QWERTY - u' },
+			{ input: 'i', output: 'ᯪ', description: 'Batak QWERTY - i' },
+			{ input: 'o', output: 'ᯬ', description: 'Batak QWERTY - o' },
+			{ input: 'p', output: 'ᯇ', description: 'Batak QWERTY - p' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Batak QWERTY - a' },
+			{ input: 's', output: 'ᯘ', description: 'Batak QWERTY - s' },
+			{ input: 'd', output: 'ᯑ', description: 'Batak QWERTY - d' },
+			{ input: 'f', output: '᯲', description: 'Batak QWERTY - f - pangolat/virama' },
+			{ input: 'g', output: 'ᯎ', description: 'Batak QWERTY - g' },
+			{ input: 'h', output: 'ᯂ', description: 'Batak QWERTY - h' },
+			{ input: 'j', output: 'ᯐ', description: 'Batak QWERTY - j' },
+			{ input: 'k', output: 'ᯤ', description: 'Batak QWERTY - k - i' },
+			{ input: 'l', output: 'ᯞ', description: 'Batak QWERTY - l' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Batak QWERTY - z - nga' },
+			{ input: 'x', output: 'ᯢ', description: 'Batak QWERTY - x - nda' },
+			{ input: 'c', output: 'ᯡ', description: 'Batak QWERTY - c' },
+			{ input: 'v', output: 'ᯣ', description: 'Batak QWERTY - v - mba' },
+			{ input: 'b', output: 'ᯅ', description: 'Batak QWERTY - b' },
+			{ input: 'n', output: 'ᯉ', description: 'Batak QWERTY - n' },
+			{ input: 'm', output: 'ᯔ', description: 'Batak QWERTY - m' },
+
+			{ input: 'Q', output: 'ᯍ', description: 'Batak QWERTY - Q - pakpak wa' },
+			{ input: 'W', output: 'ᯌ', description: 'Batak QWERTY - W - simalungun wa' },
+			{ input: 'E', output: 'ᯨ', description: 'Batak QWERTY - E - pakpak e' },
+			{ input: 'R', output: 'ᯓ', description: 'Batak QWERTY - R - simalungun ra' },
+			{ input: 'T', output: 'ᯗ', description: 'Batak QWERTY - T - northern ta' },
+			{ input: 'Y', output: 'ᯜ', description: 'Batak QWERTY - Y - simalungun ya' },
+			{ input: 'U', output: 'ᯯ', description: 'Batak QWERTY - U - u for simalungun sa' },
+			{ input: 'I', output: 'ᯫ', description: 'Batak QWERTY - I - karo i' },
+			{ input: 'O', output: 'ᯭ', description: 'Batak QWERTY - O - karo o' },
+			{ input: 'P', output: 'ᯈ', description: 'Batak QWERTY - P - simalungun p' },
+
+			{ input: 'A', output: 'ᯁ', description: 'Batak QWERTY - A - simalungun a' },
+			{ input: 'S', output: 'ᯙ', description: 'Batak QWERTY - S - simalungun sa' },
+
+			{ input: 'F', output: '᯳', description: 'Batak QWERTY - F - virama' },
+			{ input: 'G', output: 'ᯏ', description: 'Batak QWERTY - G - simalungun ga' },
+			{ input: 'H', output: 'ᯃ', description: 'Batak QWERTY - H - simalungun ha' },
+			{ input: 'J', output: 'ᯄ', description: 'Batak QWERTY - J - mandailing ha' },
+
+			{ input: 'L', output: 'ᯟ', description: 'Batak QWERTY - L - simalungun la' },
+
+			{ input: 'Z', output: 'ᯚ', description: 'Batak QWERTY - Z - mandailing sa' },
+
+			{ input: 'B', output: 'ᯆ', description: 'Batak QWERTY - B - karo ba' },
+			{ input: 'N', output: 'ᯊ', description: 'Batak QWERTY - N - mandailing na' },
+			{ input: 'M', output: 'ᯕ', description: 'Batak QWERTY - M - simalungun ma' },
+
+			{ input: '`', output: 'ᯠ', description: 'Batak QWERTY - ` - nya' },
+			{ input: '=', output: 'ᯱ', description: 'Batak QWERTY - = - consonant sign h' },
+			{ input: '+', output: '᯦', description: 'Batak QWERTY - + - tompi' },
+			{ input: '-', output: '', description: 'Batak QWERTY - ng - amisara' },
+			{ input: '_', output: 'ᯩ', description: 'Batak QWERTY - _ - talinga' },
+			{ input: '', output: '', description: 'Batak QWERTY - ' },
+
+			{ input: 'B', output: 'ᯆ', description: 'Batak QWERTY - B - karo ba' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Batak QWERTY - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Batak QWERTY - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Batak QWERTY - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Batak QWERTY - alt-7 - bindu pangolat' },
+
+			{ input: [ [ 'w', true ] ], output: 'ᯍ', description: 'Batak QWERTY - alt-w' },
+			{ input: [ [ '`', true ] ], output: '`', description: 'Batak QWERTY - alt-`' }
+		],
+		inputmethod: 'batak-qwerty'
+
+
+	},{
 		description: 'Javanese transliteration test',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
