@@ -164,24 +164,17 @@ var testFixtures = [
 		tests: [
 			// Sanity test - palochka should produce itself
 			{ input: palochkaVariants.palochka, output: palochkaVariants.palochka, description: 'Palochka itself is unchanged' },
-
 			{ input: 'L', output: 'L', description: 'Latin capital L is unchanged' },
 			{ input: palochkaVariants.latinSmallL, output: palochkaVariants.palochka, description: 'Latin small l becomes palochka' },
-
 			{ input: palochkaVariants.latinCapitalI, output: palochkaVariants.palochka, description: 'Latin capital I becomes palochka' },
 			{ input: 'i', output: 'i', description: 'Latin small i becomes palochka' },
-
 			{ input: palochkaVariants.ukrainianCapitalI, output: palochkaVariants.palochka, description: 'Ukrainian capital І becomes palochka' },
-
 			{ input: palochkaVariants.digitOne, output: palochkaVariants.digitOne, description: 'Digit one (1) is unchanged' },
 			{ input: [ [ palochkaVariants.digitOne, true ] ], output: palochkaVariants.palochka, description: 'Extended digit one (1) becomes palochka' },
-
 			{ input: 'д', output: 'д', description: 'Cyrillic small д is is unchanged' },
 			{ input: [ [ 'д', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic д becomes palochka' },
-
 			{ input: 'ш', output: 'ш', description: 'Cyrillic small ш is is unchanged' },
 			{ input: [ [ 'ш', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic small ш becomes palochka' },
-
 			{ input: 'Ш', output: 'Ш', description: 'Cyrillic capital Ш is is unchanged' },
 			{ input: [ [ 'Ш', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic capital Ш becomes palochka' }
 		],
@@ -321,7 +314,6 @@ var testFixtures = [
 			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
 			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
 			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
-
 			{ input: 'namaH', output: 'नमः', description: 'Hindi transliteration - namaH (visarga)' },
 			{ input: 'madhumaChiyoM', output: 'मधुमक्खियों', description: 'Hindi transliteration - madhumaChiyoM (anusvara)' },
 			{ input: '//', output: 'ऽ', description: 'Hindi transliteration - // (avagraha)' },
@@ -355,7 +347,6 @@ var testFixtures = [
 			{ input: 'bauThate', output: 'बौठते', description: 'Hindi transliteration - bauThate' },
 			{ input: '.', output: '।', description: 'Hindi transliteration - . (danda)' },
 			{ input: '..', output: '॥', description: 'Hindi transliteration - .. (double danda)' },
-
 			// bug 38238
 			{ input: 'AUMkaara', output: 'ॐकार', description: 'Hindi transliteration - auMkaara' },
 			{ input: 'auMsa', output: 'औंस', description: 'Hindi transliteration - auMsa (ounce)' },
@@ -515,7 +506,6 @@ var testFixtures = [
 			{ input: 'i', output: 'ᯪ', description: 'Batak QWERTY - i' },
 			{ input: 'o', output: 'ᯬ', description: 'Batak QWERTY - o' },
 			{ input: 'p', output: 'ᯇ', description: 'Batak QWERTY - p' },
-
 			{ input: 'a', output: 'ᯀ', description: 'Batak QWERTY - a' },
 			{ input: 's', output: 'ᯘ', description: 'Batak QWERTY - s' },
 			{ input: 'd', output: 'ᯑ', description: 'Batak QWERTY - d' },
@@ -525,7 +515,6 @@ var testFixtures = [
 			{ input: 'j', output: 'ᯐ', description: 'Batak QWERTY - j' },
 			{ input: 'k', output: 'ᯤ', description: 'Batak QWERTY - k - i' },
 			{ input: 'l', output: 'ᯞ', description: 'Batak QWERTY - l' },
-
 			{ input: 'z', output: 'ᯝ', description: 'Batak QWERTY - z - nga' },
 			{ input: 'x', output: 'ᯢ', description: 'Batak QWERTY - x - nda' },
 			{ input: 'c', output: 'ᯡ', description: 'Batak QWERTY - c' },
@@ -533,7 +522,6 @@ var testFixtures = [
 			{ input: 'b', output: 'ᯅ', description: 'Batak QWERTY - b' },
 			{ input: 'n', output: 'ᯉ', description: 'Batak QWERTY - n' },
 			{ input: 'm', output: 'ᯔ', description: 'Batak QWERTY - m' },
-
 			{ input: 'Q', output: 'ᯍ', description: 'Batak QWERTY - Q - pakpak wa' },
 			{ input: 'W', output: 'ᯌ', description: 'Batak QWERTY - W - simalungun wa' },
 			{ input: 'E', output: 'ᯨ', description: 'Batak QWERTY - E - pakpak e' },
@@ -544,43 +532,32 @@ var testFixtures = [
 			{ input: 'I', output: 'ᯫ', description: 'Batak QWERTY - I - karo i' },
 			{ input: 'O', output: 'ᯭ', description: 'Batak QWERTY - O - karo o' },
 			{ input: 'P', output: 'ᯈ', description: 'Batak QWERTY - P - simalungun p' },
-
 			{ input: 'A', output: 'ᯁ', description: 'Batak QWERTY - A - simalungun a' },
 			{ input: 'S', output: 'ᯙ', description: 'Batak QWERTY - S - simalungun sa' },
-
 			{ input: 'F', output: '᯳', description: 'Batak QWERTY - F - virama' },
 			{ input: 'G', output: 'ᯏ', description: 'Batak QWERTY - G - simalungun ga' },
 			{ input: 'H', output: 'ᯃ', description: 'Batak QWERTY - H - simalungun ha' },
 			{ input: 'J', output: 'ᯄ', description: 'Batak QWERTY - J - mandailing ha' },
-
 			{ input: 'L', output: 'ᯟ', description: 'Batak QWERTY - L - simalungun la' },
-
 			{ input: 'Z', output: 'ᯚ', description: 'Batak QWERTY - Z - mandailing sa' },
-
 			{ input: 'B', output: 'ᯆ', description: 'Batak QWERTY - B - karo ba' },
 			{ input: 'N', output: 'ᯊ', description: 'Batak QWERTY - N - mandailing na' },
 			{ input: 'M', output: 'ᯕ', description: 'Batak QWERTY - M - simalungun ma' },
-
 			{ input: '`', output: 'ᯠ', description: 'Batak QWERTY - ` - nya' },
 			{ input: '=', output: 'ᯱ', description: 'Batak QWERTY - = - consonant sign h' },
 			{ input: '+', output: '᯦', description: 'Batak QWERTY - + - tompi' },
 			{ input: '-', output: '', description: 'Batak QWERTY - ng - amisara' },
 			{ input: '_', output: 'ᯩ', description: 'Batak QWERTY - _ - talinga' },
 			{ input: '', output: '', description: 'Batak QWERTY - ' },
-
 			{ input: 'B', output: 'ᯆ', description: 'Batak QWERTY - B - karo ba' },
-
 			{ input: [ [ '4', true ] ], output: '᯼', description: 'Batak QWERTY - alt-4 - bindu na metek' },
 			{ input: [ [ '5', true ] ], output: '᯽', description: 'Batak QWERTY - alt-5 - bindu pinarboras' },
 			{ input: [ [ '6', true ] ], output: '᯾', description: 'Batak QWERTY - alt-6 - bindu judul' },
 			{ input: [ [ '7', true ] ], output: '᯿', description: 'Batak QWERTY - alt-7 - bindu pangolat' },
-
 			{ input: [ [ 'w', true ] ], output: 'ᯍ', description: 'Batak QWERTY - alt-w' },
 			{ input: [ [ '`', true ] ], output: '`', description: 'Batak QWERTY - alt-`' }
 		],
 		inputmethod: 'batak-qwerty'
-
-
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
@@ -1566,22 +1543,22 @@ var testFixtures = [
 		description: 'Oriya transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
-			{ input: 'a',  output: 'ଅ', description: 'Odia transliteration a -> ଅ ' },
+			{ input: 'a', output: 'ଅ', description: 'Odia transliteration a -> ଅ ' },
 			{ input: 'aa', output: 'ଆ', description: 'Odia transliteration aa -> ଆ' },
-			{ input: 'A',  output: 'ଆ', description: 'Odia transliteration A -> ଆ' },
-			{ input: 'i',  output: 'ଇ', description: 'Odia transliteration i -> ଇ' },
-			{ input: 'I',  output: 'ଈ', description: 'Odia transliteration I -> ଈ' },
-			{ input: 'u',  output: 'ଉ', description: 'Odia transliteration u -> ଉ' },
-			{ input: 'U',  output: 'ଊ', description: 'Odia transliteration U -> ଊ' },
-			{ input: 'r',  output: 'ର୍', description: 'Odia transliteration r -> ର୍' },
-			{ input: 'R',  output: 'ଋ', description: 'Odia transliteration R -> ଋ' },
-			{ input: 'e',  output: 'ଏ', description: 'Odia transliteration e -> ଏ' },
+			{ input: 'A', output: 'ଆ', description: 'Odia transliteration A -> ଆ' },
+			{ input: 'i', output: 'ଇ', description: 'Odia transliteration i -> ଇ' },
+			{ input: 'I', output: 'ଈ', description: 'Odia transliteration I -> ଈ' },
+			{ input: 'u', output: 'ଉ', description: 'Odia transliteration u -> ଉ' },
+			{ input: 'U', output: 'ଊ', description: 'Odia transliteration U -> ଊ' },
+			{ input: 'r', output: 'ର୍', description: 'Odia transliteration r -> ର୍' },
+			{ input: 'R', output: 'ଋ', description: 'Odia transliteration R -> ଋ' },
+			{ input: 'e', output: 'ଏ', description: 'Odia transliteration e -> ଏ' },
 			{ input: 'ai', output: 'ଐ', description: 'Odia transliteration ai -> ଐ' },
-			{ input: 'o',  output: 'ଓ', description: 'Odia transliteration o -> ଓ' },
-			{ input: 'O',  output: 'ଔ', description: 'Odia transliteration O -> ଔ' },
-			{ input: 'k',  output: 'କ୍', description: 'Odia transliteration k -> କ୍' },
+			{ input: 'o', output: 'ଓ', description: 'Odia transliteration o -> ଓ' },
+			{ input: 'O', output: 'ଔ', description: 'Odia transliteration O -> ଔ' },
+			{ input: 'k', output: 'କ୍', description: 'Odia transliteration k -> କ୍' },
 			{ input: 'kh', output: 'ଖ୍', description: 'Odia transliteration kh -> ଖ୍' },
-			{ input: 'g',  output: 'ଗ୍', description: 'Odia transliteration g -> ଗ୍' },
+			{ input: 'g', output: 'ଗ୍', description: 'Odia transliteration g -> ଗ୍' },
 			{ input: 'gh', output: 'ଘ୍', description: 'Odia transliteration gh -> ଘ୍' },
 			{ input: 'NGa', output: 'ଙ', description: 'Odia transliteration NGa -> ଙ' },
 			{ input: 'ca', output: 'ଚ', description: 'Odia transliteration ca -> ଚ' },
@@ -1864,7 +1841,6 @@ var testFixtures = [
 				output: 'Ä',
 				description: 'Slovak AltGr-= + A -> Ä'
 			},
-
 			{ input: '~', output: '°', description: 'Slovak ~ -> °' },
 			{ input: '!', output: '1', description: 'Slovak ! -> 1' },
 			{ input: '@', output: '2', description: 'Slovak @ -> 2' },
@@ -1883,30 +1859,25 @@ var testFixtures = [
 			{ input: '+D', output: 'Ď', description: 'Slovak +d -> Ď' },
 			{ input: '+l', output: 'ľ', description: 'Slovak +l -> ľ' },
 			{ input: '+L', output: 'Ľ', description: 'Slovak +l -> Ľ' },
-
 			// QWERTZ
 			{ input: 'y', output: 'z', description: 'Slovak y -> z' },
 			{ input: 'z', output: 'y', description: 'Slovak z -> y' },
 			{ input: 'Y', output: 'Z', description: 'Slovak Y -> Y' },
 			{ input: 'Z', output: 'Y', description: 'Slovak Z -> Z' },
-
 			{ input: 'p', output: 'p', description: 'Slovak p -> p' },
 			{ input: '[', output: 'ú', description: 'Slovak [ -> ú' },
 			{ input: ']', output: 'ä', description: 'Slovak ] -> ä' },
 			{ input: 'P', output: 'P', description: 'Slovak P -> P' },
 			{ input: '{', output: '/', description: 'Slovak { -> /' },
 			{ input: '}', output: '(', description: 'Slovak } -> (' },
-
 			{ input: 'l', output: 'l', description: 'Slovak l -> l' },
 			{ input: ';', output: 'ô', description: 'Slovak ; -> ô' },
 			{ input: '\'', output: '§', description: 'Slovak \' -> §' },
 			{ input: '\\', output: 'ň', description: 'Slovak \\ -> ň' },
-
 			{ input: 'L', output: 'L', description: 'Slovak L -> L' },
 			{ input: ':', output: '"', description: 'Slovak : -> "' },
 			{ input: '"', output: '!', description: 'Slovak " -> !' },
 			{ input: '|', output: ')', description: 'Slovak | -> )' },
-
 			{ input: 'm', output: 'm', description: 'Slovak m -> m' },
 			{ input: ',', output: ',', description: 'Slovak , -> ,' },
 			{ input: '.', output: '.', description: 'Slovak . -> .' },
@@ -1928,38 +1899,28 @@ var testFixtures = [
 		tests: [
 			// A consonant is entered with a single key.
 			{ input: 'l', output: 'ක', description: 'Sinhala Wijesekara - l -> ක (KA)' },
-
 			// A vowel is entered with 1 or 2 keys.
 			{ input: 'w', output: 'අ', description: 'Sinhala Wijesekara - w -> අ (A)' },
 			{ input: 'wd', output: 'ආ', description: 'Sinhala Wijesekara - wd -> ආ (AA)' },
 			{ input: 'we', output: 'ඇ', description: 'Sinhala Wijesekara - wd -> ඇ (AE)' },
 			{ input: 'wE', output: 'ඈ', description: 'Sinhala Wijesekara - wd -> ඈ (AAE)' },
-
 			{ input: 'b', output: 'ඉ', description: 'Sinhala Wijesekara - b -> ඉ (I)' },
 			{ input: 'B', output: 'ඊ', description: 'Sinhala Wijesekara - B -> ඊ (II)' },
-
 			{ input: 'W', output: 'උ', description: 'Sinhala Wijesekara - W -> උ (U)' },
 			{ input: 'WA', output: 'ඌ', description: 'Sinhala Wijesekara - WA -> ඌ (UU)' },
-
 			{ input: 'R', output: 'ඍ', description: 'Sinhala Wijesekara - R -> ඍ (R)' },
 			{ input: 'RD', output: 'ඎ', description: 'Sinhala Wijesekara - RD -> ඎ (RR)' },
-
 			{ input: [ [ ',', true ] ], output: 'ඏ', description: 'Sinhala Wijesekara - Alt-, -> ඏ (L)' },
 			{ input: [ [ ',', true ], [ 'A', false ] ], output: 'ඐ', description: 'Sinhala Wijesekara - Alt-,+A -> ඐ (LL)' },
-
 			{ input: 't', output: 'එ', description: 'Sinhala Wijesekara - t -> එ (E)' },
 			{ input: 'ta', output: 'ඒ', description: 'Sinhala Wijesekara - ta -> ඒ (EE)' },
 			{ input: 'ft', output: 'ඓ', description: 'Sinhala Wijesekara - ft -> ඓ (AI)' },
-
 			{ input: 'T', output: 'ඔ', description: 'Sinhala Wijesekara - T -> ඔ (O)' },
 			{ input: 'Ta', output: 'ඕ', description: 'Sinhala Wijesekara - Ta -> ඕ (OO)' },
 			{ input: 'TA', output: 'ඖ', description: 'Sinhala Wijesekara - TA -> ඖ (AU)' },
-
 			// A pure consonant is entered with 2 keys: cons + al-lakuna.
 			{ input: 'la', output: 'ක්', description: 'Sinhala Wijesekara - la -> ක් (K)' },
-
 			// Vowel signs
-
 			// After the consonant
 			{ input: 'ld', output: 'කා', description: 'Sinhala Wijesekara - ld -> කා (KAA)' },
 			{ input: '.e', output: 'ගැ', description: 'Sinhala Wijesekara - .e -> ගැ (GAE)' },
@@ -2001,7 +1962,6 @@ var testFixtures = [
 			{ input: 'EeE', output: 'EE', description: 'EeE -> EE' },
 			{ input: 'IiI', output: 'II', description: 'IiI -> II' },
 			{ input: 'UuU', output: 'UU', description: 'UuU -> UU' },
-
 			{ input: 'ch', output: 'ç', description: 'ch -> ç' },
 			{ input: 'sh', output: 'ş', description: 'sh -> ş' },
 			{ input: 'hh', output: 'ḧ', description: 'hh -> ḧ' },
@@ -2032,7 +1992,6 @@ var testFixtures = [
 			{ input: 'Hhh', output: 'Hh', description: 'Hhh -> Hh' },
 			{ input: 'HHH', output: 'HH', description: 'HHH -> HH' },
 			{ input: 'HhH', output: 'HH', description: 'HhH -> HH' },
-
 			{ input: 'ğ', output: 'ẍ', description: 'ğ -> ẍ' },
 			{ input: 'ı', output: 'i', description: 'ı -> i' },
 			{ input: 'i', output: 'î', description: 'i -> î' },
@@ -2050,269 +2009,248 @@ var testFixtures = [
 	},{
 		description: 'Central Kurdish keyboard based on Arabic keyboard test',
 		tests: [
-			{ input: '`',  output: 'ژ', description: 'Central Kurdish keyboard based on Arabic: ` -> ژ' },
-			{ input: '1',  output: '١', description: 'Central Kurdish keyboard based on Arabic: 1 -> ١' },
-			{ input: '2',  output: '٢', description: 'Central Kurdish keyboard based on Arabic: 2 -> ٢' },
-			{ input: '3',  output: '٣', description: 'Central Kurdish keyboard based on Arabic: 3 -> ٣' },
-			{ input: '4',  output: '٤', description: 'Central Kurdish keyboard based on Arabic: 4 -> ٤' },
-			{ input: '5',  output: '٥', description: 'Central Kurdish keyboard based on Arabic: 5 -> ٥' },
-			{ input: '6',  output: '٦', description: 'Central Kurdish keyboard based on Arabic: 6 -> ٦' },
-			{ input: '7',  output: '٧', description: 'Central Kurdish keyboard based on Arabic: 7 -> ٧' },
-			{ input: '8',  output: '٨', description: 'Central Kurdish keyboard based on Arabic: 8 -> ٨' },
-			{ input: '9',  output: '٩', description: 'Central Kurdish keyboard based on Arabic: 9 -> ٩' },
-			{ input: '0',  output: '٠', description: 'Central Kurdish keyboard based on Arabic: 0 -> ٠' },
-
-			{ input: 'q',  output: 'چ', description: 'Central Kurdish keyboard based on Arabic: q -> چ' },
-			{ input: 'w',  output: 'ص', description: 'Central Kurdish keyboard based on Arabic: w -> ص' },
-			{ input: 'e',  output: 'پ', description: 'Central Kurdish keyboard based on Arabic: e -> پ' },
-			{ input: 'r',  output: 'ق', description: 'Central Kurdish keyboard based on Arabic: r -> ق' },
-			{ input: 't',  output: 'ف', description: 'Central Kurdish keyboard based on Arabic: t -> ف' },
-			{ input: 'y',  output: 'غ', description: 'Central Kurdish keyboard based on Arabic: y -> غ' },
-			{ input: 'u',  output: 'ع', description: 'Central Kurdish keyboard based on Arabic: u -> ع' },
-			{ input: 'i',  output: 'ھ', description: 'Central Kurdish keyboard based on Arabic: i -> ھ' },
-			{ input: 'o',  output: 'خ', description: 'Central Kurdish keyboard based on Arabic: o -> خ' },
-			{ input: 'p',  output: 'ح', description: 'Central Kurdish keyboard based on Arabic: p -> ح' },
-			{ input: '[',  output: 'ج', description: 'Central Kurdish keyboard based on Arabic: [ -> ج' },
-			{ input: ']',  output: 'د', description: 'Central Kurdish keyboard based on Arabic: ] -> د' },
-
-			{ input: 'a',  output: 'ش', description: 'Central Kurdish keyboard based on Arabic: a -> ش' },
-			{ input: 's',  output: 'س', description: 'Central Kurdish keyboard based on Arabic: s -> س' },
-			{ input: 'd',  output: 'ی', description: 'Central Kurdish keyboard based on Arabic: d -> ی' },
-			{ input: 'f',  output: 'ب', description: 'Central Kurdish keyboard based on Arabic: f -> ب' },
-			{ input: 'g',  output: 'ل', description: 'Central Kurdish keyboard based on Arabic: g -> ل' },
-			{ input: 'h',  output: 'ا', description: 'Central Kurdish keyboard based on Arabic: h -> ا' },
-			{ input: 'j',  output: 'ت', description: 'Central Kurdish keyboard based on Arabic: j -> ت' },
-			{ input: 'k',  output: 'ن', description: 'Central Kurdish keyboard based on Arabic: k -> ن' },
-			{ input: 'l',  output: 'م', description: 'Central Kurdish keyboard based on Arabic: l -> م' },
-			{ input: ';',  output: 'ک', description: 'Central Kurdish keyboard based on Arabic: ; -> ک' },
-			{ input: '\'',  output: 'گ', description: 'Central Kurdish keyboard based on Arabic: \' -> گ' },
-
-			{ input: 'z',  output: 'ئ', description: 'Central Kurdish keyboard based on Arabic: z -> ئ' },
-			{ input: 'x',  output: 'ء', description: 'Central Kurdish keyboard based on Arabic: x -> ء' },
-			{ input: 'c',  output: 'ۆ', description: 'Central Kurdish keyboard based on Arabic: c -> ۆ' },
-			{ input: 'v',  output: 'ر', description: 'Central Kurdish keyboard based on Arabic: v -> ر' },
-			{ input: 'b',  output: 'لا', description: 'Central Kurdish keyboard based on Arabic: b -> لا' },
-			{ input: 'n',  output: 'ى', description: 'Central Kurdish keyboard based on Arabic: n -> ى' },
-			{ input: 'm',  output: 'ە', description: 'Central Kurdish keyboard based on Arabic: m -> ە' },
-			{ input: ',',  output: 'و', description: 'Central Kurdish keyboard based on Arabic: , -> و' },
-			{ input: '.',  output: 'ز', description: 'Central Kurdish keyboard based on Arabic: . -> ز' },
-
-			{ input: '%',  output: '٪', description: 'Central Kurdish keyboard based on Arabic: % -> ٪' },
-			{ input: '(',  output: ')', description: 'Central Kurdish keyboard based on Arabic: ( -> )' },
-			{ input: ')',  output: '(', description: 'Central Kurdish keyboard based on Arabic: ) -> (' },
-
-			{ input: 'Q',  output: 'ض', description: 'Central Kurdish keyboard based on Arabic: Q -> ض' },
-			{ input: 'W',  output: '}', description: 'Central Kurdish keyboard based on Arabic: W -> }' },
-			{ input: 'E',  output: 'ث', description: 'Central Kurdish keyboard based on Arabic: E -> ث' },
-			{ input: 'R',  output: '{', description: 'Central Kurdish keyboard based on Arabic: R -> {' },
-			{ input: 'T',  output: 'ڤ', description: 'Central Kurdish keyboard based on Arabic: T -> ڤ' },
-			{ input: 'Y',  output: 'إ', description: 'Central Kurdish keyboard based on Arabic: Y -> إ' },
-			{ input: 'U',  output: 'ۊ', description: 'Central Kurdish keyboard based on Arabic: U -> ۊ' },
-			{ input: 'I',  output: '\'', description: 'Central Kurdish keyboard based on Arabic: I -> \'' },
-			{ input: 'O',  output: '"', description: 'Central Kurdish keyboard based on Arabic: O -> "' },
-			{ input: 'P',  output: '؛', description: 'Central Kurdish keyboard based on Arabic: P -> ؛' },
-			{ input: '{',  output: '>', description: 'Central Kurdish keyboard based on Arabic: { -> >' },
-			{ input: '}',  output: '<', description: 'Central Kurdish keyboard based on Arabic: } -> <' },
-
-			{ input: 'A',  output: '[', description: 'Central Kurdish keyboard based on Arabic: A -> [' },
-			{ input: 'S',  output: ']', description: 'Central Kurdish keyboard based on Arabic: S -> ]' },
-			{ input: 'D',  output: 'ێ', description: 'Central Kurdish keyboard based on Arabic: D -> ێ' },
-			{ input: 'F',  output: '', description: 'Central Kurdish keyboard based on Arabic: F -> ' },
-			{ input: 'G',  output: 'ڵ', description: 'Central Kurdish keyboard based on Arabic: G -> ڵ' },
-			{ input: 'H',  output: 'أ', description: 'Central Kurdish keyboard based on Arabic: H -> أ' },
-			{ input: 'J',  output: 'ـ', description: 'Central Kurdish keyboard based on Arabic: J -> ـ' },
-			{ input: 'K',  output: '،', description: 'Central Kurdish keyboard based on Arabic: K -> ،' },
-			{ input: 'L',  output: '\\', description: 'Central Kurdish keyboard based on Arabic: L -> \\' },
-			{ input: '"',  output: 'ط', description: 'Central Kurdish keyboard based on Arabic: " -> ط' },
-
-			{ input: 'Z',  output: 'ڎ', description: 'Central Kurdish keyboard based on Arabic: Z -> ڎ' },
-			{ input: 'X',  output: 'وو', description: 'Central Kurdish keyboard based on Arabic: X -> وو' },
-			{ input: 'C',  output: 'ؤ', description: 'Central Kurdish keyboard based on Arabic: C -> ؤ' },
-			{ input: 'V',  output: 'ڕ', description: 'Central Kurdish keyboard based on Arabic: V -> ڕ' },
-			{ input: 'B',  output: 'ڵا', description: 'Central Kurdish keyboard based on Arabic: B -> ڵا' },
-			{ input: 'N',  output: 'آ', description: 'Central Kurdish keyboard based on Arabic: N -> آ' },
-			{ input: 'M',  output: 'ة', description: 'Central Kurdish keyboard based on Arabic: M -> ة' },
-			{ input: '<',  output: '٫', description: 'Central Kurdish keyboard based on Arabic: < -> ٫' },
-			{ input: '>',  output: '.', description: 'Central Kurdish keyboard based on Arabic: > -> .' },
-			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Arabic: ? -> ؟' }
+			{ input: '`', output: 'ژ', description: 'Central Kurdish keyboard based on Arabic: ` -> ژ' },
+			{ input: '1', output: '١', description: 'Central Kurdish keyboard based on Arabic: 1 -> ١' },
+			{ input: '2', output: '٢', description: 'Central Kurdish keyboard based on Arabic: 2 -> ٢' },
+			{ input: '3', output: '٣', description: 'Central Kurdish keyboard based on Arabic: 3 -> ٣' },
+			{ input: '4', output: '٤', description: 'Central Kurdish keyboard based on Arabic: 4 -> ٤' },
+			{ input: '5', output: '٥', description: 'Central Kurdish keyboard based on Arabic: 5 -> ٥' },
+			{ input: '6', output: '٦', description: 'Central Kurdish keyboard based on Arabic: 6 -> ٦' },
+			{ input: '7', output: '٧', description: 'Central Kurdish keyboard based on Arabic: 7 -> ٧' },
+			{ input: '8', output: '٨', description: 'Central Kurdish keyboard based on Arabic: 8 -> ٨' },
+			{ input: '9', output: '٩', description: 'Central Kurdish keyboard based on Arabic: 9 -> ٩' },
+			{ input: '0', output: '٠', description: 'Central Kurdish keyboard based on Arabic: 0 -> ٠' },
+			{ input: 'q', output: 'چ', description: 'Central Kurdish keyboard based on Arabic: q -> چ' },
+			{ input: 'w', output: 'ص', description: 'Central Kurdish keyboard based on Arabic: w -> ص' },
+			{ input: 'e', output: 'پ', description: 'Central Kurdish keyboard based on Arabic: e -> پ' },
+			{ input: 'r', output: 'ق', description: 'Central Kurdish keyboard based on Arabic: r -> ق' },
+			{ input: 't', output: 'ف', description: 'Central Kurdish keyboard based on Arabic: t -> ف' },
+			{ input: 'y', output: 'غ', description: 'Central Kurdish keyboard based on Arabic: y -> غ' },
+			{ input: 'u', output: 'ع', description: 'Central Kurdish keyboard based on Arabic: u -> ع' },
+			{ input: 'i', output: 'ھ', description: 'Central Kurdish keyboard based on Arabic: i -> ھ' },
+			{ input: 'o', output: 'خ', description: 'Central Kurdish keyboard based on Arabic: o -> خ' },
+			{ input: 'p', output: 'ح', description: 'Central Kurdish keyboard based on Arabic: p -> ح' },
+			{ input: '[', output: 'ج', description: 'Central Kurdish keyboard based on Arabic: [ -> ج' },
+			{ input: ']', output: 'د', description: 'Central Kurdish keyboard based on Arabic: ] -> د' },
+			{ input: 'a', output: 'ش', description: 'Central Kurdish keyboard based on Arabic: a -> ش' },
+			{ input: 's', output: 'س', description: 'Central Kurdish keyboard based on Arabic: s -> س' },
+			{ input: 'd', output: 'ی', description: 'Central Kurdish keyboard based on Arabic: d -> ی' },
+			{ input: 'f', output: 'ب', description: 'Central Kurdish keyboard based on Arabic: f -> ب' },
+			{ input: 'g', output: 'ل', description: 'Central Kurdish keyboard based on Arabic: g -> ل' },
+			{ input: 'h', output: 'ا', description: 'Central Kurdish keyboard based on Arabic: h -> ا' },
+			{ input: 'j', output: 'ت', description: 'Central Kurdish keyboard based on Arabic: j -> ت' },
+			{ input: 'k', output: 'ن', description: 'Central Kurdish keyboard based on Arabic: k -> ن' },
+			{ input: 'l', output: 'م', description: 'Central Kurdish keyboard based on Arabic: l -> م' },
+			{ input: ';', output: 'ک', description: 'Central Kurdish keyboard based on Arabic: ; -> ک' },
+			{ input: '\'', output: 'گ', description: 'Central Kurdish keyboard based on Arabic: \' -> گ' },
+			{ input: 'z', output: 'ئ', description: 'Central Kurdish keyboard based on Arabic: z -> ئ' },
+			{ input: 'x', output: 'ء', description: 'Central Kurdish keyboard based on Arabic: x -> ء' },
+			{ input: 'c', output: 'ۆ', description: 'Central Kurdish keyboard based on Arabic: c -> ۆ' },
+			{ input: 'v', output: 'ر', description: 'Central Kurdish keyboard based on Arabic: v -> ر' },
+			{ input: 'b', output: 'لا', description: 'Central Kurdish keyboard based on Arabic: b -> لا' },
+			{ input: 'n', output: 'ى', description: 'Central Kurdish keyboard based on Arabic: n -> ى' },
+			{ input: 'm', output: 'ە', description: 'Central Kurdish keyboard based on Arabic: m -> ە' },
+			{ input: ',', output: 'و', description: 'Central Kurdish keyboard based on Arabic: , -> و' },
+			{ input: '.', output: 'ز', description: 'Central Kurdish keyboard based on Arabic: . -> ز' },
+			{ input: '%', output: '٪', description: 'Central Kurdish keyboard based on Arabic: % -> ٪' },
+			{ input: '(', output: ')', description: 'Central Kurdish keyboard based on Arabic: ( -> )' },
+			{ input: ')', output: '(', description: 'Central Kurdish keyboard based on Arabic: ) -> (' },
+			{ input: 'Q', output: 'ض', description: 'Central Kurdish keyboard based on Arabic: Q -> ض' },
+			{ input: 'W', output: '}', description: 'Central Kurdish keyboard based on Arabic: W -> }' },
+			{ input: 'E', output: 'ث', description: 'Central Kurdish keyboard based on Arabic: E -> ث' },
+			{ input: 'R', output: '{', description: 'Central Kurdish keyboard based on Arabic: R -> {' },
+			{ input: 'T', output: 'ڤ', description: 'Central Kurdish keyboard based on Arabic: T -> ڤ' },
+			{ input: 'Y', output: 'إ', description: 'Central Kurdish keyboard based on Arabic: Y -> إ' },
+			{ input: 'U', output: 'ۊ', description: 'Central Kurdish keyboard based on Arabic: U -> ۊ' },
+			{ input: 'I', output: '\'', description: 'Central Kurdish keyboard based on Arabic: I -> \'' },
+			{ input: 'O', output: '"', description: 'Central Kurdish keyboard based on Arabic: O -> "' },
+			{ input: 'P', output: '؛', description: 'Central Kurdish keyboard based on Arabic: P -> ؛' },
+			{ input: '{', output: '>', description: 'Central Kurdish keyboard based on Arabic: { -> >' },
+			{ input: '}', output: '<', description: 'Central Kurdish keyboard based on Arabic: } -> <' },
+			{ input: 'A', output: '[', description: 'Central Kurdish keyboard based on Arabic: A -> [' },
+			{ input: 'S', output: ']', description: 'Central Kurdish keyboard based on Arabic: S -> ]' },
+			{ input: 'D', output: 'ێ', description: 'Central Kurdish keyboard based on Arabic: D -> ێ' },
+			{ input: 'F', output: '', description: 'Central Kurdish keyboard based on Arabic: F -> ' },
+			{ input: 'G', output: 'ڵ', description: 'Central Kurdish keyboard based on Arabic: G -> ڵ' },
+			{ input: 'H', output: 'أ', description: 'Central Kurdish keyboard based on Arabic: H -> أ' },
+			{ input: 'J', output: 'ـ', description: 'Central Kurdish keyboard based on Arabic: J -> ـ' },
+			{ input: 'K', output: '،', description: 'Central Kurdish keyboard based on Arabic: K -> ،' },
+			{ input: 'L', output: '\\', description: 'Central Kurdish keyboard based on Arabic: L -> \\' },
+			{ input: '"', output: 'ط', description: 'Central Kurdish keyboard based on Arabic: " -> ط' },
+			{ input: 'Z', output: 'ڎ', description: 'Central Kurdish keyboard based on Arabic: Z -> ڎ' },
+			{ input: 'X', output: 'وو', description: 'Central Kurdish keyboard based on Arabic: X -> وو' },
+			{ input: 'C', output: 'ؤ', description: 'Central Kurdish keyboard based on Arabic: C -> ؤ' },
+			{ input: 'V', output: 'ڕ', description: 'Central Kurdish keyboard based on Arabic: V -> ڕ' },
+			{ input: 'B', output: 'ڵا', description: 'Central Kurdish keyboard based on Arabic: B -> ڵا' },
+			{ input: 'N', output: 'آ', description: 'Central Kurdish keyboard based on Arabic: N -> آ' },
+			{ input: 'M', output: 'ة', description: 'Central Kurdish keyboard based on Arabic: M -> ة' },
+			{ input: '<', output: '٫', description: 'Central Kurdish keyboard based on Arabic: < -> ٫' },
+			{ input: '>', output: '.', description: 'Central Kurdish keyboard based on Arabic: > -> .' },
+			{ input: '?', output: '؟', description: 'Central Kurdish keyboard based on Arabic: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-arkbd'
 	},{
 		description: 'Central Kurdish keyboard based on Persian keyboard test',
 		tests: [
-			{ input: '`',  output: 'پ', description: 'Central Kurdish keyboard based on Persian: ` -> پ' },
-			{ input: '1',  output: '١', description: 'Central Kurdish keyboard based on Persian: 1 -> ١' },
-			{ input: '2',  output: '٢', description: 'Central Kurdish keyboard based on Persian: 2 -> ٢' },
-			{ input: '3',  output: '٣', description: 'Central Kurdish keyboard based on Persian: 3 -> ٣' },
-			{ input: '4',  output: '٤', description: 'Central Kurdish keyboard based on Persian: 4 -> ٤' },
-			{ input: '5',  output: '٥', description: 'Central Kurdish keyboard based on Persian: 5 -> ٥' },
-			{ input: '6',  output: '٦', description: 'Central Kurdish keyboard based on Persian: 6 -> ٦' },
-			{ input: '7',  output: '٧', description: 'Central Kurdish keyboard based on Persian: 7 -> ٧' },
-			{ input: '8',  output: '٨', description: 'Central Kurdish keyboard based on Persian: 8 -> ٨' },
-			{ input: '9',  output: '٩', description: 'Central Kurdish keyboard based on Persian: 9 -> ٩' },
-			{ input: '0',  output: '٠', description: 'Central Kurdish keyboard based on Persian: 0 -> ٠' },
-
-			{ input: 'q',  output: 'ڵ', description: 'Central Kurdish keyboard based on Persian: q -> ڵ' },
-			{ input: 'w',  output: 'ۆ', description: 'Central Kurdish keyboard based on Persian: w -> ۆ' },
-			{ input: 'e',  output: 'ێ', description: 'Central Kurdish keyboard based on Persian: e -> ێ' },
-			{ input: 'r',  output: 'ق', description: 'Central Kurdish keyboard based on Persian: r -> ق' },
-			{ input: 't',  output: 'ف', description: 'Central Kurdish keyboard based on Persian: t -> ف' },
-			{ input: 'y',  output: 'غ', description: 'Central Kurdish keyboard based on Persian: y -> غ' },
-			{ input: 'u',  output: 'ع', description: 'Central Kurdish keyboard based on Persian: u -> ع' },
-			{ input: 'i',  output: 'ە', description: 'Central Kurdish keyboard based on Persian: i -> ە' },
-			{ input: 'o',  output: 'خ', description: 'Central Kurdish keyboard based on Persian: o -> خ' },
-			{ input: 'p',  output: 'ح', description: 'Central Kurdish keyboard based on Persian: p -> ح' },
-			{ input: '[',  output: 'ج', description: 'Central Kurdish keyboard based on Persian: [ -> ج' },
-			{ input: ']',  output: 'چ', description: 'Central Kurdish keyboard based on Persian: ] -> چ' },
-			{ input: '\\',  output: 'ژ', description: 'Central Kurdish keyboard based on Persian: \\ -> ژ' },
-
-			{ input: 'a',  output: 'ش', description: 'Central Kurdish keyboard based on Persian: a -> ش' },
-			{ input: 's',  output: 'س', description: 'Central Kurdish keyboard based on Persian: s -> س' },
-			{ input: 'd',  output: 'ی', description: 'Central Kurdish keyboard based on Persian: d -> ی' },
-			{ input: 'f',  output: 'ب', description: 'Central Kurdish keyboard based on Persian: f -> ب' },
-			{ input: 'g',  output: 'ل', description: 'Central Kurdish keyboard based on Persian: g -> ل' },
-			{ input: 'h',  output: 'ا', description: 'Central Kurdish keyboard based on Persian: h -> ا' },
-			{ input: 'j',  output: 'ت', description: 'Central Kurdish keyboard based on Persian: j -> ت' },
-			{ input: 'k',  output: 'ن', description: 'Central Kurdish keyboard based on Persian: k -> ن' },
-			{ input: 'l',  output: 'م', description: 'Central Kurdish keyboard based on Persian: l -> م' },
-			{ input: ';',  output: 'ک', description: 'Central Kurdish keyboard based on Persian: ; -> ک' },
-			{ input: '\'',  output: 'گ', description: 'Central Kurdish keyboard based on Persian: \' -> گ' },
-
-			{ input: 'z',  output: 'ڤ', description: 'Central Kurdish keyboard based on Persian: z -> ڤ' },
-			{ input: 'x',  output: 'ھ', description: 'Central Kurdish keyboard based on Persian: x -> ھ' },
-			{ input: 'c',  output: 'ز', description: 'Central Kurdish keyboard based on Persian: c -> ز' },
-			{ input: 'v',  output: 'ر', description: 'Central Kurdish keyboard based on Persian: v -> ر' },
-			{ input: 'b',  output: 'ڕ', description: 'Central Kurdish keyboard based on Persian: b -> ڕ' },
-			{ input: 'n',  output: 'د', description: 'Central Kurdish keyboard based on Persian: n -> د' },
-			{ input: 'm',  output: 'ئ', description: 'Central Kurdish keyboard based on Persian: m -> ئ' },
-			{ input: ',',  output: 'و', description: 'Central Kurdish keyboard based on Persian: , -> و' },
-			{ input: '.',  output: '.', description: 'Central Kurdish keyboard based on Persian: . -> .' },
-			{ input: '/',  output: '/', description: 'Central Kurdish keyboard based on Persian: / -> /' },
-
-			{ input: '%',  output: '٪', description: 'Central Kurdish keyboard based on Persian: % -> ٪' },
-			{ input: '(',  output: ')', description: 'Central Kurdish keyboard based on Persian: ( -> )' },
-			{ input: ')',  output: '(', description: 'Central Kurdish keyboard based on Persian: ) -> (' },
-
-			{ input: 'Q',  output: 'ض', description: 'Central Kurdish keyboard based on Persian: Q -> ض' },
-			{ input: 'W',  output: 'ص', description: 'Central Kurdish keyboard based on Persian: W -> ص' },
-			{ input: 'E',  output: 'ث', description: 'Central Kurdish keyboard based on Persian: E -> ث' },
-			{ input: 'R',  output: 'ك', description: 'Central Kurdish keyboard based on Persian: R -> ك' },
-			{ input: 'T',  output: '،', description: 'Central Kurdish keyboard based on Persian: T -> ،' },
-			{ input: 'Y',  output: '؛', description: 'Central Kurdish keyboard based on Persian: Y -> ؛' },
-			{ input: 'U',  output: '\\', description: 'Central Kurdish keyboard based on Persian: U -> \\' },
-			{ input: 'I',  output: ']', description: 'Central Kurdish keyboard based on Persian: I -> ]' },
-			{ input: 'O',  output: '[', description: 'Central Kurdish keyboard based on Persian: O -> [' },
-			{ input: 'P',  output: '\'', description: 'Central Kurdish keyboard based on Persian: P -> \'' },
-			{ input: '{',  output: '}', description: 'Central Kurdish keyboard based on Persian: { -> }' },
-			{ input: '}',  output: '{', description: 'Central Kurdish keyboard based on Persian: } -> {' },
-
-			{ input: 'A',  output: 'ڎ', description: 'Central Kurdish keyboard based on Persian: A -> ڎ' },
-			{ input: 'S',  output: 'إ', description: 'Central Kurdish keyboard based on Persian: S -> إ' },
-			{ input: 'D',  output: 'ي', description: 'Central Kurdish keyboard based on Persian: D -> ي' },
-			{ input: 'F',  output: 'ة', description: 'Central Kurdish keyboard based on Persian: F -> ة' },
-			{ input: 'G',  output: 'ۀ', description: 'Central Kurdish keyboard based on Persian: G -> ۀ' },
-			{ input: 'H',  output: 'آ', description: 'Central Kurdish keyboard based on Persian: H -> آ' },
-			{ input: 'J',  output: 'ـ', description: 'Central Kurdish keyboard based on Persian: J -> ـ' },
-			{ input: 'K',  output: '»', description: 'Central Kurdish keyboard based on Persian: K -> »' },
-			{ input: 'L',  output: '«', description: 'Central Kurdish keyboard based on Persian: L -> «' },
-
-			{ input: 'Z',  output: 'ظ', description: 'Central Kurdish keyboard based on Persian: Z -> ظ' },
-			{ input: 'X',  output: 'ط', description: 'Central Kurdish keyboard based on Persian: X -> ط' },
-			{ input: 'C',  output: 'ژ', description: 'Central Kurdish keyboard based on Persian: C -> ژ' },
-			{ input: 'V',  output: 'ؤ', description: 'Central Kurdish keyboard based on Persian: V -> ؤ' },
-			{ input: 'B',  output: 'ذ', description: 'Central Kurdish keyboard based on Persian: B -> ذ' },
-			{ input: 'N',  output: '\u200cأ', description: 'Central Kurdish keyboard based on Persian: N -> \u200cأ' },
-			{ input: 'M',  output: 'ء', description: 'Central Kurdish keyboard based on Persian: M -> ء' },
-			{ input: '<',  output: '>', description: 'Central Kurdish keyboard based on Persian: < -> >' },
-			{ input: '>',  output: '<', description: 'Central Kurdish keyboard based on Persian: > -> <' },
-			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Persian: ? -> ؟' }
+			{ input: '`', output: 'پ', description: 'Central Kurdish keyboard based on Persian: ` -> پ' },
+			{ input: '1', output: '١', description: 'Central Kurdish keyboard based on Persian: 1 -> ١' },
+			{ input: '2', output: '٢', description: 'Central Kurdish keyboard based on Persian: 2 -> ٢' },
+			{ input: '3', output: '٣', description: 'Central Kurdish keyboard based on Persian: 3 -> ٣' },
+			{ input: '4', output: '٤', description: 'Central Kurdish keyboard based on Persian: 4 -> ٤' },
+			{ input: '5', output: '٥', description: 'Central Kurdish keyboard based on Persian: 5 -> ٥' },
+			{ input: '6', output: '٦', description: 'Central Kurdish keyboard based on Persian: 6 -> ٦' },
+			{ input: '7', output: '٧', description: 'Central Kurdish keyboard based on Persian: 7 -> ٧' },
+			{ input: '8', output: '٨', description: 'Central Kurdish keyboard based on Persian: 8 -> ٨' },
+			{ input: '9', output: '٩', description: 'Central Kurdish keyboard based on Persian: 9 -> ٩' },
+			{ input: '0', output: '٠', description: 'Central Kurdish keyboard based on Persian: 0 -> ٠' },
+			{ input: 'q', output: 'ڵ', description: 'Central Kurdish keyboard based on Persian: q -> ڵ' },
+			{ input: 'w', output: 'ۆ', description: 'Central Kurdish keyboard based on Persian: w -> ۆ' },
+			{ input: 'e', output: 'ێ', description: 'Central Kurdish keyboard based on Persian: e -> ێ' },
+			{ input: 'r', output: 'ق', description: 'Central Kurdish keyboard based on Persian: r -> ق' },
+			{ input: 't', output: 'ف', description: 'Central Kurdish keyboard based on Persian: t -> ف' },
+			{ input: 'y', output: 'غ', description: 'Central Kurdish keyboard based on Persian: y -> غ' },
+			{ input: 'u', output: 'ع', description: 'Central Kurdish keyboard based on Persian: u -> ع' },
+			{ input: 'i', output: 'ە', description: 'Central Kurdish keyboard based on Persian: i -> ە' },
+			{ input: 'o', output: 'خ', description: 'Central Kurdish keyboard based on Persian: o -> خ' },
+			{ input: 'p', output: 'ح', description: 'Central Kurdish keyboard based on Persian: p -> ح' },
+			{ input: '[', output: 'ج', description: 'Central Kurdish keyboard based on Persian: [ -> ج' },
+			{ input: ']', output: 'چ', description: 'Central Kurdish keyboard based on Persian: ] -> چ' },
+			{ input: '\\', output: 'ژ', description: 'Central Kurdish keyboard based on Persian: \\ -> ژ' },
+			{ input: 'a', output: 'ش', description: 'Central Kurdish keyboard based on Persian: a -> ش' },
+			{ input: 's', output: 'س', description: 'Central Kurdish keyboard based on Persian: s -> س' },
+			{ input: 'd', output: 'ی', description: 'Central Kurdish keyboard based on Persian: d -> ی' },
+			{ input: 'f', output: 'ب', description: 'Central Kurdish keyboard based on Persian: f -> ب' },
+			{ input: 'g', output: 'ل', description: 'Central Kurdish keyboard based on Persian: g -> ل' },
+			{ input: 'h', output: 'ا', description: 'Central Kurdish keyboard based on Persian: h -> ا' },
+			{ input: 'j', output: 'ت', description: 'Central Kurdish keyboard based on Persian: j -> ت' },
+			{ input: 'k', output: 'ن', description: 'Central Kurdish keyboard based on Persian: k -> ن' },
+			{ input: 'l', output: 'م', description: 'Central Kurdish keyboard based on Persian: l -> م' },
+			{ input: ';', output: 'ک', description: 'Central Kurdish keyboard based on Persian: ; -> ک' },
+			{ input: '\'', output: 'گ', description: 'Central Kurdish keyboard based on Persian: \' -> گ' },
+			{ input: 'z', output: 'ڤ', description: 'Central Kurdish keyboard based on Persian: z -> ڤ' },
+			{ input: 'x', output: 'ھ', description: 'Central Kurdish keyboard based on Persian: x -> ھ' },
+			{ input: 'c', output: 'ز', description: 'Central Kurdish keyboard based on Persian: c -> ز' },
+			{ input: 'v', output: 'ر', description: 'Central Kurdish keyboard based on Persian: v -> ر' },
+			{ input: 'b', output: 'ڕ', description: 'Central Kurdish keyboard based on Persian: b -> ڕ' },
+			{ input: 'n', output: 'د', description: 'Central Kurdish keyboard based on Persian: n -> د' },
+			{ input: 'm', output: 'ئ', description: 'Central Kurdish keyboard based on Persian: m -> ئ' },
+			{ input: ',', output: 'و', description: 'Central Kurdish keyboard based on Persian: , -> و' },
+			{ input: '.', output: '.', description: 'Central Kurdish keyboard based on Persian: . -> .' },
+			{ input: '/', output: '/', description: 'Central Kurdish keyboard based on Persian: / -> /' },
+			{ input: '%', output: '٪', description: 'Central Kurdish keyboard based on Persian: % -> ٪' },
+			{ input: '(', output: ')', description: 'Central Kurdish keyboard based on Persian: ( -> )' },
+			{ input: ')', output: '(', description: 'Central Kurdish keyboard based on Persian: ) -> (' },
+			{ input: 'Q', output: 'ض', description: 'Central Kurdish keyboard based on Persian: Q -> ض' },
+			{ input: 'W', output: 'ص', description: 'Central Kurdish keyboard based on Persian: W -> ص' },
+			{ input: 'E', output: 'ث', description: 'Central Kurdish keyboard based on Persian: E -> ث' },
+			{ input: 'R', output: 'ك', description: 'Central Kurdish keyboard based on Persian: R -> ك' },
+			{ input: 'T', output: '،', description: 'Central Kurdish keyboard based on Persian: T -> ،' },
+			{ input: 'Y', output: '؛', description: 'Central Kurdish keyboard based on Persian: Y -> ؛' },
+			{ input: 'U', output: '\\', description: 'Central Kurdish keyboard based on Persian: U -> \\' },
+			{ input: 'I', output: ']', description: 'Central Kurdish keyboard based on Persian: I -> ]' },
+			{ input: 'O', output: '[', description: 'Central Kurdish keyboard based on Persian: O -> [' },
+			{ input: 'P', output: '\'', description: 'Central Kurdish keyboard based on Persian: P -> \'' },
+			{ input: '{', output: '}', description: 'Central Kurdish keyboard based on Persian: { -> }' },
+			{ input: '}', output: '{', description: 'Central Kurdish keyboard based on Persian: } -> {' },
+			{ input: 'A', output: 'ڎ', description: 'Central Kurdish keyboard based on Persian: A -> ڎ' },
+			{ input: 'S', output: 'إ', description: 'Central Kurdish keyboard based on Persian: S -> إ' },
+			{ input: 'D', output: 'ي', description: 'Central Kurdish keyboard based on Persian: D -> ي' },
+			{ input: 'F', output: 'ة', description: 'Central Kurdish keyboard based on Persian: F -> ة' },
+			{ input: 'G', output: 'ۀ', description: 'Central Kurdish keyboard based on Persian: G -> ۀ' },
+			{ input: 'H', output: 'آ', description: 'Central Kurdish keyboard based on Persian: H -> آ' },
+			{ input: 'J', output: 'ـ', description: 'Central Kurdish keyboard based on Persian: J -> ـ' },
+			{ input: 'K', output: '»', description: 'Central Kurdish keyboard based on Persian: K -> »' },
+			{ input: 'L', output: '«', description: 'Central Kurdish keyboard based on Persian: L -> «' },
+			{ input: 'Z', output: 'ظ', description: 'Central Kurdish keyboard based on Persian: Z -> ظ' },
+			{ input: 'X', output: 'ط', description: 'Central Kurdish keyboard based on Persian: X -> ط' },
+			{ input: 'C', output: 'ژ', description: 'Central Kurdish keyboard based on Persian: C -> ژ' },
+			{ input: 'V', output: 'ؤ', description: 'Central Kurdish keyboard based on Persian: V -> ؤ' },
+			{ input: 'B', output: 'ذ', description: 'Central Kurdish keyboard based on Persian: B -> ذ' },
+			{ input: 'N', output: '\u200cأ', description: 'Central Kurdish keyboard based on Persian: N -> \u200cأ' },
+			{ input: 'M', output: 'ء', description: 'Central Kurdish keyboard based on Persian: M -> ء' },
+			{ input: '<', output: '>', description: 'Central Kurdish keyboard based on Persian: < -> >' },
+			{ input: '>', output: '<', description: 'Central Kurdish keyboard based on Persian: > -> <' },
+			{ input: '?', output: '؟', description: 'Central Kurdish keyboard based on Persian: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-fakbd'
 	},{
 		description: 'Central Kurdish keyboard based on Latin keyboard test',
 		tests: [
-			{ input: '1',  output: '١', description: 'Central Kurdish keyboard based on Latin: 1 -> ١' },
-			{ input: '2',  output: '٢', description: 'Central Kurdish keyboard based on Latin: 2 -> ٢' },
-			{ input: '3',  output: '٣', description: 'Central Kurdish keyboard based on Latin: 3 -> ٣' },
-			{ input: '4',  output: '٤', description: 'Central Kurdish keyboard based on Latin: 4 -> ٤' },
-			{ input: '5',  output: '٥', description: 'Central Kurdish keyboard based on Latin: 5 -> ٥' },
-			{ input: '6',  output: '٦', description: 'Central Kurdish keyboard based on Latin: 6 -> ٦' },
-			{ input: '7',  output: '٧', description: 'Central Kurdish keyboard based on Latin: 7 -> ٧' },
-			{ input: '8',  output: '٨', description: 'Central Kurdish keyboard based on Latin: 8 -> ٨' },
-			{ input: '9',  output: '٩', description: 'Central Kurdish keyboard based on Latin: 9 -> ٩' },
-			{ input: '0',  output: '٠', description: 'Central Kurdish keyboard based on Latin: 0 -> ٠' },
-
-			{ input: 'q',  output: 'ق', description: 'Central Kurdish keyboard based on Latin: q -> ق' },
-			{ input: 'w',  output: 'و', description: 'Central Kurdish keyboard based on Latin: w -> و' },
-			{ input: 'e',  output: 'ە', description: 'Central Kurdish keyboard based on Latin: e -> ە' },
-			{ input: 'r',  output: 'ر', description: 'Central Kurdish keyboard based on Latin: r -> ر' },
-			{ input: 't',  output: 'ت', description: 'Central Kurdish keyboard based on Latin: t -> ت' },
-			{ input: 'y',  output: 'ی', description: 'Central Kurdish keyboard based on Latin: y -> ی' },
-			{ input: 'u',  output: 'ئ', description: 'Central Kurdish keyboard based on Latin: u -> ئ' },
-			{ input: 'i',  output: 'ح', description: 'Central Kurdish keyboard based on Latin: i -> ح' },
-			{ input: 'o',  output: 'ۆ', description: 'Central Kurdish keyboard based on Latin: o -> ۆ' },
-			{ input: 'p',  output: 'پ', description: 'Central Kurdish keyboard based on Latin: p -> پ' },
-			{ input: '[',  output: ']', description: 'Central Kurdish keyboard based on Latin: [ -> ]' },
-			{ input: ']',  output: '[', description: 'Central Kurdish keyboard based on Latin: ] -> [' },
-
-			{ input: 'a',  output: 'ا', description: 'Central Kurdish keyboard based on Latin: a -> ا' },
-			{ input: 's',  output: 'س', description: 'Central Kurdish keyboard based on Latin: s -> س' },
-			{ input: 'd',  output: 'د', description: 'Central Kurdish keyboard based on Latin: d -> د' },
-			{ input: 'f',  output: 'ف', description: 'Central Kurdish keyboard based on Latin: f -> ف' },
-			{ input: 'g',  output: 'گ', description: 'Central Kurdish keyboard based on Latin: g -> گ' },
-			{ input: 'h',  output: 'ھ', description: 'Central Kurdish keyboard based on Latin: h -> ھ' },
-			{ input: 'j',  output: 'ژ', description: 'Central Kurdish keyboard based on Latin: j -> ژ' },
-			{ input: 'k',  output: 'ک', description: 'Central Kurdish keyboard based on Latin: k -> ک' },
-			{ input: 'l',  output: 'ل', description: 'Central Kurdish keyboard based on Latin: l -> ل' },
-			{ input: ';',  output: '؛', description: 'Central Kurdish keyboard based on Latin: ; -> ؛' },
-
-			{ input: 'z',  output: 'ز', description: 'Central Kurdish keyboard based on Latin: z -> ز' },
-			{ input: 'x',  output: 'خ', description: 'Central Kurdish keyboard based on Latin: x -> خ' },
-			{ input: 'c',  output: 'ج', description: 'Central Kurdish keyboard based on Latin: c -> ج' },
-			{ input: 'v',  output: 'ڤ', description: 'Central Kurdish keyboard based on Latin: v -> ڤ' },
-			{ input: 'b',  output: 'ب', description: 'Central Kurdish keyboard based on Latin: b -> ب' },
-			{ input: 'n',  output: 'ن', description: 'Central Kurdish keyboard based on Latin: n -> ن' },
-			{ input: 'm',  output: 'م', description: 'Central Kurdish keyboard based on Latin: m -> م' },
-			{ input: ',',  output: '،', description: 'Central Kurdish keyboard based on Latin: , -> ،' },
-			{ input: '.',  output: '.', description: 'Central Kurdish keyboard based on Latin: . -> .' },
-
-			{ input: '%',  output: '٪', description: 'Central Kurdish keyboard based on Latin: % -> ٪' },
-			{ input: '(',  output: ')', description: 'Central Kurdish keyboard based on Latin: ( -> )' },
-			{ input: ')',  output: '(', description: 'Central Kurdish keyboard based on Latin: ) -> (' },
-
-			{ input: 'Q',  output: 'ڎ', description: 'Central Kurdish keyboard based on Latin: Q -> ڎ' },
-			{ input: 'W',  output: 'وو', description: 'Central Kurdish keyboard based on Latin: W -> وو' },
-			{ input: 'E',  output: 'ێ', description: 'Central Kurdish keyboard based on Latin: E -> ێ' },
-			{ input: 'R',  output: 'ڕ', description: 'Central Kurdish keyboard based on Latin: R -> ڕ' },
-			{ input: 'T',  output: 'ط', description: 'Central Kurdish keyboard based on Latin: T -> ط' },
-			{ input: 'Y',  output: 'ي', description: 'Central Kurdish keyboard based on Latin: Y -> ي' },
-			{ input: 'U',  output: 'ء', description: 'Central Kurdish keyboard based on Latin: U -> ء' },
-			{ input: 'I',  output: 'ع', description: 'Central Kurdish keyboard based on Latin: I -> ع' },
-			{ input: 'O',  output: 'ؤ', description: 'Central Kurdish keyboard based on Latin: O -> ؤ' },
-			{ input: 'P',  output: 'ث', description: 'Central Kurdish keyboard based on Latin: P -> ث' },
-			{ input: '{',  output: '}', description: 'Central Kurdish keyboard based on Latin: { -> }' },
-			{ input: '}',  output: '{', description: 'Central Kurdish keyboard based on Latin: } -> {' },
-
-			{ input: 'A',  output: 'آ', description: 'Central Kurdish keyboard based on Latin: A -> آ' },
-			{ input: 'S',  output: 'ش', description: 'Central Kurdish keyboard based on Latin: S -> ش' },
-			{ input: 'D',  output: 'ذ', description: 'Central Kurdish keyboard based on Latin: D -> ذ' },
-			{ input: 'F',  output: 'إ', description: 'Central Kurdish keyboard based on Latin: F -> إ' },
-			{ input: 'G',  output: 'غ', description: 'Central Kurdish keyboard based on Latin: G -> غ' },
-			{ input: 'H',  output: 'ه', description: 'Central Kurdish keyboard based on Latin: H -> ه' },
-			{ input: 'J',  output: 'أ', description: 'Central Kurdish keyboard based on Latin: J -> أ' },
-			{ input: 'K',  output: 'ك', description: 'Central Kurdish keyboard based on Latin: K -> ك' },
-			{ input: 'L',  output: 'ڵ', description: 'Central Kurdish keyboard based on Latin: L -> ڵ' },
-
-			{ input: 'Z',  output: 'ض', description: 'Central Kurdish keyboard based on Latin: Z -> ض' },
-			{ input: 'X',  output: 'ص', description: 'Central Kurdish keyboard based on Latin: X -> ص' },
-			{ input: 'C',  output: 'چ', description: 'Central Kurdish keyboard based on Latin: C -> چ' },
-			{ input: 'V',  output: 'ظ', description: 'Central Kurdish keyboard based on Latin: V -> ظ' },
-			{ input: 'B',  output: 'ى', description: 'Central Kurdish keyboard based on Latin: B -> ى' },
-			{ input: 'N',  output: 'ة', description: 'Central Kurdish keyboard based on Latin: N -> ة' },
-			{ input: 'M',  output: 'ـ', description: 'Central Kurdish keyboard based on Latin: M -> ـ' },
-			{ input: '<',  output: '>', description: 'Central Kurdish keyboard based on Latin: < -> >' },
-			{ input: '>',  output: '<', description: 'Central Kurdish keyboard based on Latin: > -> <' },
-			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Latin: ? -> ؟' }
+			{ input: '1', output: '١', description: 'Central Kurdish keyboard based on Latin: 1 -> ١' },
+			{ input: '2', output: '٢', description: 'Central Kurdish keyboard based on Latin: 2 -> ٢' },
+			{ input: '3', output: '٣', description: 'Central Kurdish keyboard based on Latin: 3 -> ٣' },
+			{ input: '4', output: '٤', description: 'Central Kurdish keyboard based on Latin: 4 -> ٤' },
+			{ input: '5', output: '٥', description: 'Central Kurdish keyboard based on Latin: 5 -> ٥' },
+			{ input: '6', output: '٦', description: 'Central Kurdish keyboard based on Latin: 6 -> ٦' },
+			{ input: '7', output: '٧', description: 'Central Kurdish keyboard based on Latin: 7 -> ٧' },
+			{ input: '8', output: '٨', description: 'Central Kurdish keyboard based on Latin: 8 -> ٨' },
+			{ input: '9', output: '٩', description: 'Central Kurdish keyboard based on Latin: 9 -> ٩' },
+			{ input: '0', output: '٠', description: 'Central Kurdish keyboard based on Latin: 0 -> ٠' },
+			{ input: 'q', output: 'ق', description: 'Central Kurdish keyboard based on Latin: q -> ق' },
+			{ input: 'w', output: 'و', description: 'Central Kurdish keyboard based on Latin: w -> و' },
+			{ input: 'e', output: 'ە', description: 'Central Kurdish keyboard based on Latin: e -> ە' },
+			{ input: 'r', output: 'ر', description: 'Central Kurdish keyboard based on Latin: r -> ر' },
+			{ input: 't', output: 'ت', description: 'Central Kurdish keyboard based on Latin: t -> ت' },
+			{ input: 'y', output: 'ی', description: 'Central Kurdish keyboard based on Latin: y -> ی' },
+			{ input: 'u', output: 'ئ', description: 'Central Kurdish keyboard based on Latin: u -> ئ' },
+			{ input: 'i', output: 'ح', description: 'Central Kurdish keyboard based on Latin: i -> ح' },
+			{ input: 'o', output: 'ۆ', description: 'Central Kurdish keyboard based on Latin: o -> ۆ' },
+			{ input: 'p', output: 'پ', description: 'Central Kurdish keyboard based on Latin: p -> پ' },
+			{ input: '[', output: ']', description: 'Central Kurdish keyboard based on Latin: [ -> ]' },
+			{ input: ']', output: '[', description: 'Central Kurdish keyboard based on Latin: ] -> [' },
+			{ input: 'a', output: 'ا', description: 'Central Kurdish keyboard based on Latin: a -> ا' },
+			{ input: 's', output: 'س', description: 'Central Kurdish keyboard based on Latin: s -> س' },
+			{ input: 'd', output: 'د', description: 'Central Kurdish keyboard based on Latin: d -> د' },
+			{ input: 'f', output: 'ف', description: 'Central Kurdish keyboard based on Latin: f -> ف' },
+			{ input: 'g', output: 'گ', description: 'Central Kurdish keyboard based on Latin: g -> گ' },
+			{ input: 'h', output: 'ھ', description: 'Central Kurdish keyboard based on Latin: h -> ھ' },
+			{ input: 'j', output: 'ژ', description: 'Central Kurdish keyboard based on Latin: j -> ژ' },
+			{ input: 'k', output: 'ک', description: 'Central Kurdish keyboard based on Latin: k -> ک' },
+			{ input: 'l', output: 'ل', description: 'Central Kurdish keyboard based on Latin: l -> ل' },
+			{ input: ';', output: '؛', description: 'Central Kurdish keyboard based on Latin: ; -> ؛' },
+			{ input: 'z', output: 'ز', description: 'Central Kurdish keyboard based on Latin: z -> ز' },
+			{ input: 'x', output: 'خ', description: 'Central Kurdish keyboard based on Latin: x -> خ' },
+			{ input: 'c', output: 'ج', description: 'Central Kurdish keyboard based on Latin: c -> ج' },
+			{ input: 'v', output: 'ڤ', description: 'Central Kurdish keyboard based on Latin: v -> ڤ' },
+			{ input: 'b', output: 'ب', description: 'Central Kurdish keyboard based on Latin: b -> ب' },
+			{ input: 'n', output: 'ن', description: 'Central Kurdish keyboard based on Latin: n -> ن' },
+			{ input: 'm', output: 'م', description: 'Central Kurdish keyboard based on Latin: m -> م' },
+			{ input: ',', output: '،', description: 'Central Kurdish keyboard based on Latin: , -> ،' },
+			{ input: '.', output: '.', description: 'Central Kurdish keyboard based on Latin: . -> .' },
+			{ input: '%', output: '٪', description: 'Central Kurdish keyboard based on Latin: % -> ٪' },
+			{ input: '(', output: ')', description: 'Central Kurdish keyboard based on Latin: ( -> )' },
+			{ input: ')', output: '(', description: 'Central Kurdish keyboard based on Latin: ) -> (' },
+			{ input: 'Q', output: 'ڎ', description: 'Central Kurdish keyboard based on Latin: Q -> ڎ' },
+			{ input: 'W', output: 'وو', description: 'Central Kurdish keyboard based on Latin: W -> وو' },
+			{ input: 'E', output: 'ێ', description: 'Central Kurdish keyboard based on Latin: E -> ێ' },
+			{ input: 'R', output: 'ڕ', description: 'Central Kurdish keyboard based on Latin: R -> ڕ' },
+			{ input: 'T', output: 'ط', description: 'Central Kurdish keyboard based on Latin: T -> ط' },
+			{ input: 'Y', output: 'ي', description: 'Central Kurdish keyboard based on Latin: Y -> ي' },
+			{ input: 'U', output: 'ء', description: 'Central Kurdish keyboard based on Latin: U -> ء' },
+			{ input: 'I', output: 'ع', description: 'Central Kurdish keyboard based on Latin: I -> ع' },
+			{ input: 'O', output: 'ؤ', description: 'Central Kurdish keyboard based on Latin: O -> ؤ' },
+			{ input: 'P', output: 'ث', description: 'Central Kurdish keyboard based on Latin: P -> ث' },
+			{ input: '{', output: '}', description: 'Central Kurdish keyboard based on Latin: { -> }' },
+			{ input: '}', output: '{', description: 'Central Kurdish keyboard based on Latin: } -> {' },
+			{ input: 'A', output: 'آ', description: 'Central Kurdish keyboard based on Latin: A -> آ' },
+			{ input: 'S', output: 'ش', description: 'Central Kurdish keyboard based on Latin: S -> ش' },
+			{ input: 'D', output: 'ذ', description: 'Central Kurdish keyboard based on Latin: D -> ذ' },
+			{ input: 'F', output: 'إ', description: 'Central Kurdish keyboard based on Latin: F -> إ' },
+			{ input: 'G', output: 'غ', description: 'Central Kurdish keyboard based on Latin: G -> غ' },
+			{ input: 'H', output: 'ه', description: 'Central Kurdish keyboard based on Latin: H -> ه' },
+			{ input: 'J', output: 'أ', description: 'Central Kurdish keyboard based on Latin: J -> أ' },
+			{ input: 'K', output: 'ك', description: 'Central Kurdish keyboard based on Latin: K -> ك' },
+			{ input: 'L', output: 'ڵ', description: 'Central Kurdish keyboard based on Latin: L -> ڵ' },
+			{ input: 'Z', output: 'ض', description: 'Central Kurdish keyboard based on Latin: Z -> ض' },
+			{ input: 'X', output: 'ص', description: 'Central Kurdish keyboard based on Latin: X -> ص' },
+			{ input: 'C', output: 'چ', description: 'Central Kurdish keyboard based on Latin: C -> چ' },
+			{ input: 'V', output: 'ظ', description: 'Central Kurdish keyboard based on Latin: V -> ظ' },
+			{ input: 'B', output: 'ى', description: 'Central Kurdish keyboard based on Latin: B -> ى' },
+			{ input: 'N', output: 'ة', description: 'Central Kurdish keyboard based on Latin: N -> ة' },
+			{ input: 'M', output: 'ـ', description: 'Central Kurdish keyboard based on Latin: M -> ـ' },
+			{ input: '<', output: '>', description: 'Central Kurdish keyboard based on Latin: < -> >' },
+			{ input: '>', output: '<', description: 'Central Kurdish keyboard based on Latin: > -> <' },
+			{ input: '?', output: '؟', description: 'Central Kurdish keyboard based on Latin: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-lakbd'
 	},{
@@ -2321,26 +2259,22 @@ var testFixtures = [
 			// This test suite follows the layout description document of
 			// of SIL's IPA keyboard, including plaing characters like '.' and 'v'.
 			// The test names are mostly based on IPA character descriptions.
-
 			// Bilabial consonants
-			{ input: 'p',      output: 'p',   description: 'Voiceless bilabial stop' },
+			{ input: 'p',      output: 'p', description: 'Voiceless bilabial stop' },
 			{ input: 'b',      output: 'b',   description: 'Voiced bilabial stop' },
 			{ input: 'm',      output: 'm',   description: 'Bilabial nasal' },
 			{ input: 'B=',     output: 'ʙ',   description: 'Voiced bilabial trill' },
 			{ input: 'f=',     output: 'ɸ',   description: 'Voiceless bilabial fricative' },
 			{ input: 'b=',     output: 'β',   description: 'Voiced bilabial fricative' },
-
 			// Labiodental consonants
 			{ input: 'm>',     output: 'ɱ',   description: 'Labiodental nasal' },
 			{ input: 'v<',     output: 'ⱱ',   description: 'Labiodental flap' },
 			{ input: 'f',      output: 'f',   description: 'Voiceless abiodental fricative' },
 			{ input: 'v',      output: 'v',   description: 'Voiced labiodental fricative' },
 			{ input: 'v=',     output: 'ʋ',   description: 'Labiodental approximant' },
-
 			// Dental consonants
 			{ input: 't=',     output: 'θ',   description: 'Voiceless dental fricative' },
 			{ input: 'd=',     output: 'ð',   description: 'Voiced dental fricative' },
-
 			// Alveolar consonants
 			{ input: 't',      output: 't',   description: 'Voiceless alveolar stop' },
 			{ input: 'd',      output: 'd',   description: 'Voiced alveolar stop' },
@@ -2353,11 +2287,9 @@ var testFixtures = [
 			{ input: 'l>',     output: 'ɮ',   description: 'Voiced alveolar lateral fricative' },
 			{ input: 'r=',     output: 'ɹ',   description: 'Alveolar approximant' },
 			{ input: 'l',      output: 'l',   description: 'Alveolar lateral approximant' },
-
 			// Postalveolar consonants
 			{ input: 's=',     output: 'ʃ',   description: 'Voiceless postalveolar fricative' },
 			{ input: 'z=',     output: 'ʒ',   description: 'Voiced postalveolar fricative' },
-
 			// Retroflex consonants
 			{ input: 't<',     output: 'ʈ',   description: 'Voiceless retroflex stop' },
 			{ input: 'd<',     output: 'ɖ',   description: 'Voiced retroflex stop' },
@@ -2367,7 +2299,6 @@ var testFixtures = [
 			{ input: 'z<',     output: 'ʐ',   description: 'Voiced retroflex fricative' },
 			{ input: 'R<',     output: 'ɻ',   description: 'Retroflex approximant' },
 			{ input: 'l<',     output: 'ɭ',   description: 'Retroflex lateral approximant' },
-
 			// Palatal consonants
 			{ input: 'c',      output: 'c',   description: 'Voiceless palatal stop' },
 			{ input: 'j=',     output: 'ɟ',   description: 'Voiced palatal stop' },
@@ -2376,7 +2307,6 @@ var testFixtures = [
 			{ input: 'j<',     output: 'ʝ',   description: 'Voiced palatal fricative' },
 			{ input: 'j',      output: 'j',   description: 'Palatal approximant' },
 			{ input: 'L<',     output: 'ʎ',   description: 'Palatal lateral approximant' },
-
 			// Velar consonants
 			{ input: 'k',      output: 'k',   description: 'Voiceless velar stop' },
 			{ input: 'g<',     output: 'ɡ',   description: 'Voiced velar stop' },
@@ -2385,7 +2315,6 @@ var testFixtures = [
 			{ input: 'g=',     output: 'ɣ',   description: 'Voiced velar fricative' },
 			{ input: 'w>',     output: 'ɰ',   description: 'Velar approximant' },
 			{ input: 'L=',     output: 'ʟ',   description: 'Velar lateral approximant' },
-
 			// Uvular consonants
 			{ input: 'q',      output: 'q',   description: 'Voiceless uvular stop' },
 			{ input: 'G=',     output: 'ɢ',   description: 'Voiced uvular stop' },
@@ -2393,30 +2322,25 @@ var testFixtures = [
 			{ input: 'R=',     output: 'ʀ',   description: 'Uvular trill' },
 			{ input: 'x=',     output: 'χ',   description: 'Voiceless uvular fricative' },
 			{ input: 'R>',     output: 'ʁ',   description: 'Voiced uvular fricative' },
-
 			// Pharyngeal consonants
 			{ input: 'h>',     output: 'ħ',   description: 'Voiceless pharyngeal fricative' },
 			{ input: '?<',     output: 'ʕ',   description: 'Voiced pharyngeal fricative' },
-
 			// Glottal consonants
 			{ input: '?=',     output: 'ʔ',   description: 'Glottal stop' },
 			{ input: 'h',      output: 'h',   description: 'Voiceless glottal fricative' },
 			{ input: 'h<',     output: 'ɦ',   description: 'Voiced glottal fricative' },
-
 			// Clicks
 			{ input: 'p=',     output: 'ʘ',   description: 'Bilabial click' },
 			{ input: '!<',     output: 'ǀ',   description: 'Dental click' },
 			{ input: '!',      output: 'ǃ',   description: 'Postalveolar click (retroflex click character)' },
 			{ input: '!=',     output: 'ǂ',   description: 'Palatoalveolar click' },
 			{ input: '!>',     output: 'ǁ',   description: 'Alveolar lateral click' },
-
 			// Implosive
 			{ input: 'b>',     output: 'ɓ',   description: 'Bilabial voiced implosive' },
 			{ input: 'd>',     output: 'ɗ',   description: 'Dental/alveolar voiced implosive' },
 			{ input: 'j>',     output: 'ʄ',   description: 'Palatal voiced implosive' },
 			{ input: 'g>',     output: 'ɠ',   description: 'Velar voiced implosive' },
 			{ input: 'G>',     output: 'ʛ',   description: 'Uvular voiced implosive' },
-
 			// Other symbols
 			{ input: 'w=',     output: 'ʍ',   description: 'Voiceless labial-velar fricative' },
 			{ input: 'w',      output: 'w',   description: 'Voiced labial-velar approximant' },
@@ -2426,12 +2350,10 @@ var testFixtures = [
 			{ input: 'H=',     output: 'ʜ',   description: 'Voiceless epiglottal fricative' },
 			{ input: 'Q<',     output: 'ʢ',   description: 'Voiced epiglottal fricative' },
 			{ input: 'Q=',     output: 'ʡ',   description: 'Voiced epiglottal stop' },
-
 			{ input: 'c<',     output: 'ɕ',   description: 'Voiceless alveolo-palatal fricative' },
 			{ input: 'z>',     output: 'ʑ',   description: 'Voiced alveolo-palatal fricative' },
 			{ input: 'L>',     output: 'ɺ',   description: 'Voiced alveolar lateral flap' },
 			{ input: 'H<',     output: 'ɧ',   description: 'Simultaneous ʃ and x' },
-
 			// Front unrounded vowels
 			{ input: 'i',      output: 'i',   description: 'Close front unrounded vowel' },
 			{ input: 'i=',     output: 'ɪ',   description: 'Near-close near-front unrounded vowel' },
@@ -2439,14 +2361,12 @@ var testFixtures = [
 			{ input: 'e<',     output: 'ɛ',   description: 'Open-mid front unrounded vowel' },
 			{ input: 'a<',     output: 'æ',   description: 'Near-open front unrounded vowel' },
 			{ input: 'a',      output: 'a',   description: 'Open front unrounded vowel' },
-
 			// Front rounded vowels
 			{ input: 'y',      output: 'y',   description: 'Close front rounded vowel' },
 			{ input: 'y=',     output: 'ʏ',   description: 'Near-close near-front rounded vowel' },
 			{ input: 'o>',     output: 'ø',   description: 'Close-mid front rounded vowel' },
 			{ input: 'E<',     output: 'œ',   description: 'Open-mid front rounded vowel' },
 			{ input: 'E>',     output: 'ɶ',   description: 'Open front rounded vowel' },
-
 			// Central vowels
 			{ input: 'I=',     output: 'ɨ',   description: 'Close central unrounded vowel' },
 			{ input: 'E=',     output: 'ɘ',   description: 'Close-mid central unrounded vowel' },
@@ -2456,7 +2376,6 @@ var testFixtures = [
 			{ input: 'U=',     output: 'ʉ',   description: 'Close central rounded vowel' },
 			{ input: 'O=',     output: 'ɵ',   description: 'Close-mid central rounded vowel' },
 			{ input: 'O<',     output: 'ɞ',   description: 'Open-mid central rounded vowel' },
-
 			// Back vowels
 			{ input: 'u=',     output: 'ɯ',   description: 'Close back unrounded vowel' },
 			{ input: 'O>',     output: 'ɤ',   description: 'Close-mid back unrounded vowel' },
@@ -2467,7 +2386,6 @@ var testFixtures = [
 			{ input: 'o',      output: 'o',   description: 'Close-mid back rounded vowel' },
 			{ input: 'o<',     output: 'ɔ',   description: 'Open-mid back rounded vowel' },
 			{ input: 'o=',     output: 'ɒ',   description: 'Open back rounded vowel' },
-
 			// Suprasegmentals
 			{ input: '}',      output: 'ˈ',   description: 'Primary stress' },
 			{ input: '}}',     output: 'ˌ',   description: 'Secondary stress' }, // }}
@@ -2479,7 +2397,6 @@ var testFixtures = [
 			{ input: '.=',     output: '‖',   description: 'Major (intonation) group' },
 			{ input: '.',      output: '.',   description: 'Syllable break' },
 			{ input: '#=',     output: '‿',   description: 'Linking (absence of a break)' },
-
 			// Tones
 			{ input: '#4',     output: '˥',   description: 'Extra-high tone bar' },
 			{ input: '#3',     output: '˦',   description: 'High tone bar' },
@@ -2491,7 +2408,6 @@ var testFixtures = [
 			{ input: 'e@2',    output: 'ē',   description: 'Mid tone diacritic' },
 			{ input: 'e@1',    output: 'è',   description: 'Low tone diacritic' },
 			{ input: 'e@0',    output: 'ȅ',   description: 'Extra-low tone diacritic' },
-
 			// Tone combinations
 			// The following tone bar tests are taken from the layout description.
 			// Any combination of three tones is possible.
@@ -2500,7 +2416,6 @@ var testFixtures = [
 			{ input: '#24',    output: '˧˥',  description: 'High rising tone bar (24)' },
 			{ input: '#12',    output: '˨˧',  description: 'Low rising tone bar (12)' },
 			{ input: '#141',   output: '˨˥˨', description: 'Rising-falling tone bar (141)' },
-
 			{ input: 'e@13',   output: 'ě',   description: 'Rising tone diacritic' },
 			{ input: 'e@31',   output: 'ê',   description: 'Falling tone diacritic' },
 			{ input: 'e@23',   output: 'e᷄',   description: 'High rising tone diacritic' },
@@ -2509,12 +2424,10 @@ var testFixtures = [
 			{ input: 'e@21',   output: 'e᷆',   description: 'Low falling tone diacritic' }, // Not IPA sanctioned
 			{ input: 'e@32',   output: 'e᷇',   description: 'High falling tone diacritic' }, // Not IPA sanctioned
 			{ input: 'e@313',  output: 'e᷉',   description: 'Falling-rising tone diacritic' }, // Not IPA sanctioned
-
 			{ input: '#<',     output: 'ꜜ',   description: 'Downstep' },
 			{ input: '#>',     output: 'ꜛ',   description: 'Upstep' },
 			{ input: '#>>',    output: '↗',   description: 'Global rise' },
 			{ input: '#<<',    output: '↘',   description: 'Global fall' },
-
 			// Tone numbers (non-IPA)
 			{ input: '^0',     output: '⁰',   description: 'Tone number 0' }, // Not IPA sanctioned
 			{ input: '^1',     output: '¹',   description: 'Tone number 1' }, // Not IPA sanctioned
@@ -2527,7 +2440,6 @@ var testFixtures = [
 			{ input: '^8',     output: '⁸',   description: 'Tone number 8' }, // Not IPA sanctioned
 			{ input: '^9',     output: '⁹',   description: 'Tone number 9' }, // Not IPA sanctioned
 			{ input: '^-',     output: '⁻',   description: 'Superscript hyphen' }, // Not IPA sanctioned
-
 			// Diacritics and suprasegmentals
 			{ input: 'h^',     output: 'ʰ',   description: 'Aspirated' },
 			{ input: 'w^',     output: 'ʷ',   description: 'Labialised' },
@@ -2536,9 +2448,7 @@ var testFixtures = [
 			{ input: '?<^',    output: 'ˤ',   description: 'Pharyngealised' },
 			{ input: 'n^',     output: 'ⁿ',   description: 'Nasal release' }, // "Pre/post nasalised" in the layout document
 			{ input: 'l^',     output: 'ˡ',   description: 'Lateral release' },
-
 			// TODO non-IPA superscripts
-
 			{ input: '[[',     output: 'ʽ',   description: 'Light aspiration' }, // Not IPA sanctioned
 			{ input: 'e[[[',   output: 'e˞',  description: 'Rhoticity' },
 			{ input: 'p]]',    output: 'pʼ',  description: 'Ejective' },
@@ -2547,15 +2457,11 @@ var testFixtures = [
 			{ input: 'n$',     output: 'n̩',   description: 'Syllabic' },
 			{ input: 'e$$',    output: 'e̯',   description: 'Non-syllabic' },
 			{ input: 'a$$$',   output: 'a̰',   description: 'Creaky voiced' },
-
 			// TODO non-IPA retroflex hooks
-
 			{ input: 'n%',     output: 'n̥',   description: 'Voiceless' },
 			{ input: 's%%',    output: 's̬',   description: 'Voiced' },
 			{ input: 'b%%%',   output: 'b̤',   description: 'Breathy voiced' },
-
 			// TODO non-IPA palatal hooks
-
 			{ input: 'n>@',    output: 'ŋ̊',   description: 'Voiceless with diacritic above' },
 			{ input: 't{',     output: 't̪',   description: 'Dental' },
 			{ input: 't{{',    output: 't̺',   description: 'Apical' },
@@ -2569,10 +2475,8 @@ var testFixtures = [
 			{ input: 'e***',   output: 'ĕ',   description: 'Extra short' },
 			{ input: 'e****',  output: 'ė',   description: 'Palatalization/Centralization' }, // TODO Find out how standard this is
 			// TODO Find out what the m with the five asterisks is.
-
 			{ input: 'k#&p',   output: 'k͡p',  description: 'Double articulation above' },
 			{ input: 't@&s',   output: 't͜s',  description: 'Double articulation below' },
-
 			{ input: 'u+',     output: 'u̟',   description: 'Advanced' },
 			{ input: 'i_',     output: 'i̠',   description: 'Retracted' },
 			{ input: 'e++',    output: 'e̝',   description: 'Raised' },
@@ -2581,14 +2485,11 @@ var testFixtures = [
 			{ input: 'e___',   output: 'e̙',   description: 'Retracted tongue root' },
 			{ input: 'e++++',  output: 'e̹',   description: 'More rounded' },
 			{ input: 'e____',  output: 'e̜',   description: 'Less rounded' },
-
 			// TODO Non-IPA open vowel, fortis and lenis
-
 			// Addition non-IPA characters
 			{ input: '=>',     output: '→',   description: 'Is realized as (arrow)' },       // Not IPA sanctioned
 			{ input: 's>',     output: 'σ',   description: 'Syllable (sigma)' },             // Not IPA sanctioned
 			{ input: '=<',     output: '\u200d', description: 'Combining Grapheme Joiner' }, // Not IPA sanctioned
-
 			{ input: '[}e:i=ja}}fjatl%a}}jE<:ky=tl%]', output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]', description: 'Eyjafjallajökull' }
 		],
 		inputmethod: 'ipa-sil'
@@ -2602,7 +2503,6 @@ var testFixtures = [
 			{ input: 'B\\',    output: 'ʙ',   description: 'Voiced bilabial trill' },
 			{ input: 'p\\',    output: 'ɸ',   description: 'Voiceless bilabial fricative' },
 			{ input: 'B',      output: 'β',   description: 'Voiced bilabial fricative' },
-
 			// Labiodental consonants
 			{ input: 'F',      output: 'ɱ',   description: 'Labiodental nasal' },
 			// { input: '*',   output: 'ⱱ',   description: 'Labiodental flap' }, // not in X-SAMPA
@@ -2611,11 +2511,9 @@ var testFixtures = [
 			// Two variants
 			{ input: 'P',      output: 'ʋ',   description: 'Labiodental approximant (P)' },
 			{ input: 'v\\',    output: 'ʋ',   description: 'Labiodental approximant (v\\)' },
-
 			// Dental consonants
 			{ input: 'T',      output: 'θ',   description: 'Voiceless dental fricative' },
 			{ input: 'D',      output: 'ð',   description: 'Voiced dental fricative' },
-
 			// Alveolar consonants
 			{ input: 't',      output: 't',   description: 'Voiceless alveolar stop' },
 			{ input: 'd',      output: 'd',   description: 'Voiced alveolar stop' },
@@ -2628,11 +2526,9 @@ var testFixtures = [
 			{ input: 'K\\',    output: 'ɮ',   description: 'Voiced alveolar lateral fricative' },
 			{ input: 'r\\',    output: 'ɹ',   description: 'Alveolar approximant' },
 			{ input: 'l',      output: 'l',   description: 'Alveolar lateral approximant' },
-
 			// Postalveolar consonants
 			{ input: 'S',      output: 'ʃ',   description: 'Voiceless postalveolar fricative' },
 			{ input: 'Z',      output: 'ʒ',   description: 'Voiced postalveolar fricative' },
-
 			// Retroflex consonants
 			{ input: 't`',     output: 'ʈ',   description: 'Voiceless retroflex stop' },
 			{ input: 'd`',     output: 'ɖ',   description: 'Voiced retroflex stop' },
@@ -2642,7 +2538,6 @@ var testFixtures = [
 			{ input: 'z`',     output: 'ʐ',   description: 'Voiced retroflex fricative' },
 			{ input: 'r\\`',   output: 'ɻ',   description: 'Retroflex approximant' },
 			{ input: 'l`',     output: 'ɭ',   description: 'Retroflex lateral approximant' },
-
 			// Palatal consonants
 			{ input: 'c',      output: 'c',   description: 'Voiceless palatal stop' },
 			{ input: 'J\\',    output: 'ɟ',   description: 'Voiced palatal stop' },
@@ -2651,7 +2546,6 @@ var testFixtures = [
 			{ input: 'j\\',    output: 'ʝ',   description: 'Voiced palatal fricative' },
 			{ input: 'j',      output: 'j',   description: 'Palatal approximant' },
 			{ input: 'L',      output: 'ʎ',   description: 'Palatal lateral approximant' },
-
 			// Velar consonants
 			{ input: 'k',      output: 'k',   description: 'Voiceless velar stop' },
 			{ input: 'g',      output: 'ɡ',   description: 'Voiced velar stop' },
@@ -2660,7 +2554,6 @@ var testFixtures = [
 			{ input: 'G',      output: 'ɣ',   description: 'Voiced velar fricative' },
 			{ input: 'M\\',    output: 'ɰ',   description: 'Velar approximant' },
 			{ input: 'L\\',    output: 'ʟ',   description: 'Velar lateral approximant' },
-
 			// Uvular consonants
 			{ input: 'q',      output: 'q',   description: 'Voiceless uvular stop' },
 			{ input: 'G\\',    output: 'ɢ',   description: 'Voiced uvular stop' },
@@ -2668,30 +2561,25 @@ var testFixtures = [
 			{ input: 'R\\',    output: 'ʀ',   description: 'Uvular trill' },
 			{ input: 'X',      output: 'χ',   description: 'Voiceless uvular fricative' },
 			{ input: 'R',      output: 'ʁ',   description: 'Voiced uvular fricative' },
-
 			// Pharyngeal consonants
 			{ input: 'X\\',    output: 'ħ',   description: 'Voiceless pharyngeal fricative' },
 			{ input: '?\\',    output: 'ʕ',   description: 'Voiced pharyngeal fricative' },
-
 			// Glottal consonants
 			{ input: '?',      output: 'ʔ',   description: 'Glottal stop' },
 			{ input: 'h',      output: 'h',   description: 'Voiceless glottal fricative' },
 			{ input: 'h\\',    output: 'ɦ',   description: 'Voiced glottal fricative' },
-
 			// Clicks
 			{ input: 'O\\',    output: 'ʘ',   description: 'Bilabial click' },
 			{ input: '|\\',    output: 'ǀ',   description: 'Dental click' },
 			{ input: '!\\',    output: 'ǃ',   description: 'Postalveolar click (retroflex click character)' },
 			{ input: '=\\',    output: 'ǂ',   description: 'Palatoalveolar click' },
 			{ input: '|\\|\\', output: 'ǁ',   description: 'Alveolar lateral click' },
-
 			// Implosive
 			{ input: 'b_<',    output: 'ɓ',   description: 'Bilabial voiced implosive' },
 			{ input: 'd_<',    output: 'ɗ',   description: 'Dental/alveolar voiced implosive' },
 			{ input: 'J\\_<',  output: 'ʄ',   description: 'Palatal voiced implosive' },
 			{ input: 'g_<',    output: 'ɠ',   description: 'Velar voiced implosive' },
 			{ input: 'G\\_<',  output: 'ʛ',   description: 'Uvular voiced implosive' },
-
 			// Other symbols
 			{ input: 'W',      output: 'ʍ',   description: 'Voiceless labial-velar fricative' },
 			{ input: 'w',      output: 'w',   description: 'Voiced labial-velar approximant' },
@@ -2699,12 +2587,10 @@ var testFixtures = [
 			{ input: 'H\\',    output: 'ʜ',   description: 'Voiceless epiglottal fricative' },
 			{ input: '<\\',    output: 'ʢ',   description: 'Voiced epiglottal fricative' },
 			{ input: '>\\',    output: 'ʡ',   description: 'Voiced epiglottal stop' },
-
 			{ input: 's\\',    output: 'ɕ',   description: 'Voiceless alveolo-palatal fricative' },
 			{ input: 'z\\',    output: 'ʑ',   description: 'Voiced alveolo-palatal fricative' },
 			{ input: 'l\\',    output: 'ɺ',   description: 'Voiced alveolar lateral flap' },
 			{ input: 'x\\',    output: 'ɧ',   description: 'Simultaneous ʃ and x' },
-
 			// Front unrounded vowels
 			{ input: 'i',      output: 'i',   description: 'Close front unrounded vowel' },
 			{ input: 'I',      output: 'ɪ',   description: 'Near-close near-front unrounded vowel' },
@@ -2712,14 +2598,12 @@ var testFixtures = [
 			{ input: 'E',      output: 'ɛ',   description: 'Open-mid front unrounded vowel' },
 			{ input: '{',      output: 'æ',   description: 'Near-open front unrounded vowel' },
 			{ input: 'a',      output: 'a',   description: 'Open front unrounded vowel' },
-
 			// Front rounded vowels
 			{ input: 'y',      output: 'y',   description: 'Close front rounded vowel' },
 			{ input: 'Y',      output: 'ʏ',   description: 'Near-close near-front rounded vowel' },
 			{ input: '2',      output: 'ø',   description: 'Close-mid front rounded vowel' },
 			{ input: '9',      output: 'œ',   description: 'Open-mid front rounded vowel' },
 			{ input: '&',      output: 'ɶ',   description: 'Open front rounded vowel' },
-
 			// Central vowels
 			{ input: '1',      output: 'ɨ',   description: 'Close central unrounded vowel' },
 			{ input: '@\\',    output: 'ɘ',   description: 'Close-mid central unrounded vowel' },
@@ -2729,7 +2613,6 @@ var testFixtures = [
 			{ input: '}',      output: 'ʉ',   description: 'Close central rounded vowel' },
 			{ input: '8',      output: 'ɵ',   description: 'Close-mid central rounded vowel' },
 			{ input: '3\\',    output: 'ɞ',   description: 'Open-mid central rounded vowel' },
-
 			// Back vowels
 			{ input: 'M',      output: 'ɯ',   description: 'Close back unrounded vowel' },
 			{ input: '7',      output: 'ɤ',   description: 'Close-mid back unrounded vowel' },
@@ -2740,7 +2623,6 @@ var testFixtures = [
 			{ input: 'o',      output: 'o',   description: 'Close-mid back rounded vowel' },
 			{ input: 'O',      output: 'ɔ',   description: 'Open-mid back rounded vowel' },
 			{ input: 'Q',      output: 'ɒ',   description: 'Open back rounded vowel' },
-
 			// Suprasegmentals
 			{ input: '"',      output: 'ˈ',   description: 'Primary stress' },
 			{ input: '%',      output: 'ˌ',   description: 'Secondary stress' }, // }}
@@ -2750,20 +2632,16 @@ var testFixtures = [
 			{ input: '||',     output: '‖',   description: 'Major (intonation) group' },
 			{ input: '.',      output: '.',   description: 'Syllable break' },
 			{ input: '-\\',    output: '‿',   description: 'Linking (absence of a break)' },
-
 			// No full-width tones in X-SAMPA
-
 			{ input: 'e_/',    output: 'ě',   description: 'Rising tone diacritic' },
 			{ input: 'e_\\',   output: 'ê',   description: 'Falling tone diacritic' },
 			{ input: 'e_H_T',  output: 'e᷄',   description: 'High rising tone diacritic' },
 			{ input: 'e_B_L',  output: 'e᷅',   description: 'Low rising tone diacritic' },
 			{ input: 'e_R_F',  output: 'e᷈',   description: 'Rising-falling tone diacritic' },
-
 			{ input: '!',      output: 'ꜜ',   description: 'Downstep' },
 			{ input: '^',      output: 'ꜛ',   description: 'Upstep' },
 			{ input: '<R>',    output: '↗',   description: 'Global rise' },
 			{ input: '<F>',    output: '↘',   description: 'Global fall' },
-
 			// Diacritics and suprasegmentals
 			{ input: '_h',     output: 'ʰ',   description: 'Aspirated' },
 			{ input: '_w',     output: 'ʷ',   description: 'Labialised' },
@@ -2772,7 +2650,6 @@ var testFixtures = [
 			{ input: '_?\\',   output: 'ˤ',   description: 'Pharyngealised' },
 			{ input: '_n',     output: 'ⁿ',   description: 'Nasal release' },
 			{ input: '_l',     output: 'ˡ',   description: 'Lateral release' },
-
 			{ input: 'e`',     output: 'e˞',  description: 'Rhoticity' },
 			{ input: 'p_>',    output: 'pʼ',  description: 'Ejective' },
 			{ input: 'd_}',    output: 'd̚',   description: 'No audible release' },
@@ -2781,12 +2658,10 @@ var testFixtures = [
 			{ input: 'n_=',    output: 'n̩',   description: 'Syllabic _=' },
 			{ input: 'e_^',    output: 'e̯',   description: 'Non-syllabic' },
 			{ input: 'a_k',    output: 'a̰',   description: 'Creaky voiced' },
-
 			{ input: 'n_0',    output: 'n̥',   description: 'Voiceless' },
 			{ input: 'N_0',    output: 'ŋ̊',   description: 'Voiceless with diacritic above' },
 			{ input: 's_v',    output: 's̬',   description: 'Voiced' },
 			{ input: 'b_t',    output: 'b̤',   description: 'Breathy voiced' },
-
 			{ input: 't_d',    output: 't̪',   description: 'Dental' },
 			{ input: 't_a',    output: 't̺',   description: 'Apical' },
 			{ input: 't_m',    output: 't̻',   description: 'Laminal' },
@@ -2798,7 +2673,6 @@ var testFixtures = [
 			{ input: 'e_"',    output: 'ë',   description: 'Centralised' },
 			{ input: 'e_x',    output: 'e̽',   description: 'Mid centralised' },
 			{ input: 'e_X',    output: 'ĕ',   description: 'Extra short' },
-
 			{ input: 'u_+',    output: 'u̟',   description: 'Advanced' },
 			{ input: 'i_-',    output: 'i̠',   description: 'Retracted' },
 			{ input: 'e_r',    output: 'e̝',   description: 'Raised' },
@@ -2807,7 +2681,6 @@ var testFixtures = [
 			{ input: 'e_q',    output: 'e̙',   description: 'Retracted tongue root' },
 			{ input: 'e_O',    output: 'e̹',   description: 'More rounded' },
 			{ input: 'e_c',    output: 'e̜',   description: 'Less rounded' },
-
 			{
 				input: '["e:Ija%fjatl_0a%j9:kYtl_0]',
 				output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]',
@@ -2829,7 +2702,6 @@ var testFixtures = [
 			{ input: '8',  output: '۸', description: 'Persian Standard keyboard - 8 -> ۸' },
 			{ input: '9',  output: '۹', description: 'Persian Standard keyboard - 9 -> ۹' },
 			{ input: '0',  output: '۰', description: 'Persian Standard keyboard - 0 -> ۰' },
-
 			{ input: 'q',  output: 'ض', description: 'Persian Standard keyboard - q -> ض' },
 			{ input: 'w',  output: 'ص', description: 'Persian Standard keyboard - w -> ص' },
 			{ input: 'e',  output: 'ث', description: 'Persian Standard keyboard - e -> ث' },
@@ -2842,7 +2714,6 @@ var testFixtures = [
 			{ input: 'p',  output: 'ح', description: 'Persian Standard keyboard - p -> ح' },
 			{ input: '[',  output: 'ج', description: 'Persian Standard keyboard - [ -> ج' },
 			{ input: ']',  output: 'چ', description: 'Persian Standard keyboard - ] -> چ' },
-
 			{ input: 'a',  output: 'ش', description: 'Persian Standard keyboard - a -> ش' },
 			{ input: 's',  output: 'س', description: 'Persian Standard keyboard - s -> س' },
 			{ input: 'd',  output: 'ی', description: 'Persian Standard keyboard - d -> ی' },
@@ -2854,7 +2725,6 @@ var testFixtures = [
 			{ input: 'l',  output: 'م', description: 'Persian Standard keyboard - l -> م' },
 			{ input: ';',  output: 'ک', description: 'Persian Standard keyboard - ; -> ک' },
 			{ input: '\'',  output: 'گ', description: 'Persian Standard keyboard - \' -> گ' },
-
 			{ input: 'z',  output: 'ظ', description: 'Persian Standard keyboard - z -> ظ' },
 			{ input: 'x',  output: 'ط', description: 'Persian Standard keyboard - x -> ط' },
 			{ input: 'c',  output: 'ز', description: 'Persian Standard keyboard - c -> ز' },
@@ -2865,7 +2735,6 @@ var testFixtures = [
 			{ input: ',',  output: 'و', description: 'Persian Standard keyboard - , -> و' },
 			{ input: '.',  output: '.', description: 'Persian Standard keyboard - . -> .' },
 			{ input: '/',  output: '/', description: 'Persian Standard keyboard - / -> /' },
-
 			{ input: '~',  output: '÷', description: 'Persian Standard keyboard - ~ -> ÷' },
 			{ input: '!',  output: '!', description: 'Persian Standard keyboard - ! -> !' },
 			{ input: '@',  output: '٬', description: 'Persian Standard keyboard - @ -> ٬' },
@@ -2878,7 +2747,6 @@ var testFixtures = [
 			{ input: '(',  output: ')', description: 'Persian Standard keyboard - ( -> )' },
 			{ input: ')',  output: '(', description: 'Persian Standard keyboard - ) -> (' },
 			{ input: '_',  output: 'ـ', description: 'Persian Standard keyboard - _ -> ـ' },
-
 			{ input: 'Q',  output: 'ْ', description: 'Persian Standard keyboard - Q -> ْ_' },
 			{ input: 'W',  output: 'ٌ', description: 'Persian Standard keyboard - W -> ٌ_' },
 			{ input: 'E',  output: 'ٍ', description: 'Persian Standard keyboard - E -> ٍ_' },
@@ -2891,7 +2759,6 @@ var testFixtures = [
 			{ input: 'P',  output: '[', description: 'Persian Standard keyboard - P -> [' },
 			{ input: '{',  output: '}', description: 'Persian Standard keyboard - { -> }' },
 			{ input: '}',  output: '{', description: 'Persian Standard keyboard - } -> {' },
-
 			{ input: 'A',  output: 'ؤ', description: 'Persian Standard keyboard - A -> ؤ' },
 			{ input: 'S',  output: 'ئ', description: 'Persian Standard keyboard - S -> ئ' },
 			{ input: 'D',  output: 'ي', description: 'Persian Standard keyboard - D -> ي' },
@@ -2903,7 +2770,6 @@ var testFixtures = [
 			{ input: 'L',  output: '«', description: 'Persian Standard keyboard - L -> «' },
 			{ input: ':',  output: ':', description: 'Persian Standard keyboard - : -> :' },
 			{ input: '"',  output: '؛', description: 'Persian Standard keyboard - " -> ؛' },
-
 			{ input: 'Z',  output: 'ك', description: 'Persian Standard keyboard - Z -> ك' },
 			{ input: 'X',  output: 'ٓ', description: 'Persian Standard keyboard - X -> ٓ_' },
 			{ input: 'C',  output: 'ژ', description: 'Persian Standard keyboard - C -> ژ' },
@@ -2915,7 +2781,6 @@ var testFixtures = [
 			{ input: '>',  output: '<', description: 'Persian Standard keyboard - > -> <' },
 			{ input: '?',  output: '؟', description: 'Persian Standard keyboard - ? -> ؟' },
 			{ input: [ [ '?', false, true ] ], output: '؟', description: 'Persian Standard keyboard with shift key pressed - ? -> ؟' },
-
 			{ input: [ [ '`', true ] ], output: '~', description: 'Persian Standard keyboard - AltGr+` -> ~' },
 			{ input: [ [ '1', true ] ], output: '`', description: 'Persian Standard keyboard - AltGr+1 -> `' },
 			{ input: [ [ '2', true ] ], output: '@', description: 'Persian Standard keyboard - AltGr+2 -> @' },
@@ -2927,7 +2792,6 @@ var testFixtures = [
 			{ input: [ [ '8', true ] ], output: '•', description: 'Persian Standard keyboard - AltGr+8 -> •' },
 			{ input: [ [ '9', true ] ], output: '\u200e', description: 'Persian Standard keyboard - AltGr+9 -> LRM' },
 			{ input: [ [ '0', true ] ], output: '\u200f', description: 'Persian Standard keyboard - AltGr+0 -> RLM' },
-
 			{ input: [ [ 'q', true ] ], output: '°', description: 'Persian Standard keyboard - AltGr+q -> °' },
 			{ input: [ [ 'e', true ] ], output: '€', description: 'Persian Standard keyboard - AltGr+e -> €' },
 			{ input: [ [ 'i', true ] ], output: '\u202d', description: 'Persian Standard keyboard - AltGr+i -> LRO' },
@@ -2935,14 +2799,12 @@ var testFixtures = [
 			{ input: [ [ 'p', true ] ], output: '\u202c', description: 'Persian Standard keyboard - AltGr+p -> POP' },
 			{ input: [ [ '[', true ] ], output: '\u202a', description: 'Persian Standard keyboard - AltGr+[ -> LRE' },
 			{ input: [ [ ']', true ] ], output: '\u202b', description: 'Persian Standard keyboard - AltGr+] -> RLE' },
-
 			{ input: [ [ 'd', true ] ], output: 'ى', description: 'Persian Standard keyboard - AltGr+d -> ى' },
 			{ input: [ [ 'h', true ] ], output: 'ٱ', description: 'Persian Standard keyboard - AltGr+h -> ٱ' },
 			{ input: [ [ 'k', true ] ], output: '﴾', description: 'Persian Standard keyboard - AltGr+k -> ﴾' },
 			{ input: [ [ 'l', true ] ], output: '﴿', description: 'Persian Standard keyboard - AltGr+l -> ﴿' },
 			{ input: [ [ ';', true ] ], output: ';', description: 'Persian Standard keyboard - AltGr+; -> ;' },
 			{ input: [ [ '\'', true ] ], output: '"', description: 'Persian Standard keyboard - AltGr+\' -> "' },
-
 			{ input: [ [ 'b', true ] ], output: '\u200d', description: 'Persian Standard keyboard - AltGr+b -> ZWJ' },
 			{ input: [ [ 'n', true ] ], output: 'ٕ', description: 'Persian Standard keyboard - AltGr+n -> ٕ_' },
 			{ input: [ [ 'm', true ] ], output: '…', description: 'Persian Standard keyboard - AltGr+m -> …' },
@@ -2950,7 +2812,6 @@ var testFixtures = [
 			{ input: [ [ '.', true ] ], output: '\'', description: 'Persian Standard keyboard - AltGr+. -> \'' },
 			{ input: [ [ '/', true ] ], output: '?', description: 'Persian Standard keyboard - AltGr+/ -> ?' },
 			{ input: 'thvsd advdk hsj', output: 'فارسی شیرین است', description: 'Persian Standard keyboard - text test' },
-
 			{ input: [ [ ' ', true ] ], output: '\xa0', description: 'Persian Standard keyboard - AltGr+Space -> NBSP' },
 			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' }
 		],
