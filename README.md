@@ -43,18 +43,10 @@ If you have python installed, run
 ```bash
 python -m SimpleHTTPServer
 ```
-or, In case you have python3
-```bash
-python3 -m http.server
-```
-or, with PHP
-```bash
-php -S localhost:8000
-```
-or, with Ruby
-```bash
-ruby -run -e httpd . -p 8000
-```
+
+Alternatively, many programming languages provide one liner commands to start a simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255).
+
+
 and, you can access examples from
 ```bash
 http://localhost:8000/examples/index.html
