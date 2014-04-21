@@ -8,7 +8,6 @@
 		date: '2014-04-20',
 		URL: 'http://evertype.com/fonts/batak/',
 		author: 'design by Michael Everson, implementation by Amir E. Aharoni',
-		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
 			[ 'q', 'ᯥ' ],

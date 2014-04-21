@@ -579,8 +579,6 @@ var testFixtures = [
 			{ input: [ [ '`', true ] ], output: '`', description: 'Batak QWERTY - alt-`' }
 		],
 		inputmethod: 'batak-qwerty'
-
-
 	},{
 		description: 'Javanese transliteration test',
 		tests: [
