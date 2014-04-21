@@ -51,6 +51,10 @@ or, with PHP
 ```bash
 php -S localhost:8000
 ```
+or, with Ruby
+```bash
+ruby -run -e httpd . -p 8000
+```
 and, you can access examples from
 ```bash
 http://localhost:8000/examples/index.html
