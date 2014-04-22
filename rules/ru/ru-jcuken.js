@@ -91,6 +91,6 @@
 			['&', '?']] // 7
 			// '*', '(' and ')' are the same    // 8, 9, 0
 	};
-	$.ime.register( ruJcuken );
 
+	$.ime.register( ruJcuken );
 }( jQuery ) );

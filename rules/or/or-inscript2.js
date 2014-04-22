@@ -3,7 +3,7 @@
 
 	var orInScript2 = {
 		id: 'or-inscript2',
-		name: 'InScript2',
+		name: 'ଇନସ୍କ୍ରିପ୍ଟ2',
 		description: 'Enhanced InScript keyboard for Odia language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
@@ -95,8 +95,8 @@
 			['\\*', 'ଶ୍ର']
 		],
 		patterns_x: [
-			['1', '‍'],
-			['2', '‌'],
+			['1', '\u200d'],
+			['2', '\u200c'],
 			['4', '₹'],
 			['\\+', 'ୠ'],
 			['\\=', 'ୄ'],
@@ -113,5 +113,4 @@
 	};
 
 	$.ime.register( orInScript2 );
-
 }( jQuery ) );

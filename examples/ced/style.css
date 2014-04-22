@@ -1,0 +1,44 @@
+div#toolbar {
+	background-color: #F9F9F9;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px 4px 0 0;
+	overflow: hidden;
+	padding: 2px;
+	position: relative;
+}
+
+div#ced {
+	border: 1px solid #CCCCCC;
+	border-radius: 0 0 4px 4px;
+	height: 250px;
+	line-height: 1.5em;
+	overflow: auto;
+	padding: 10px 5px;
+	text-align: left;
+	font-size: 16px;
+}
+
+select {
+	width: 200px;
+	height: 25px;
+}
+
+.langselector,.imeSelector {
+	float: left;
+	display: block;
+	padding-right:5px;
+}
+
+#bold {
+	font-weight: bold;
+}
+
+#italic {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#underline {
+	text-decoration: underline;
+	font-weight: bold;
+}

@@ -3,7 +3,7 @@
 
 	var orInScript = {
 		id: 'or-inscript',
-		name: 'Odia InScript',
+		name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 		description: 'InScript keyboard for Odia script',
 		date: '2012-10-14',
 		author: 'Junaid P V',
@@ -34,8 +34,8 @@
 			['p', '\u0B1C'],
 			['P', '\u0B1D'],
 			['\\}', '\u0B1E'],
-			['`', '\u0B1F'],
-			['~', '\u0B20'],
+			['\'', '\u0B1F'],
+			['"', '\u0B20'],
 			['\\[', '\u0B21'],
 			['\\{', '\u0B22'],
 			['C', '\u0B23'],
@@ -103,5 +103,4 @@
 	};
 
 	$.ime.register( orInScript );
-
 }( jQuery ) );

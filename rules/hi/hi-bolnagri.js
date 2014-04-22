@@ -105,5 +105,4 @@
 	};
 
 	$.ime.register( hiBolNagri );
-
 }( jQuery ) );

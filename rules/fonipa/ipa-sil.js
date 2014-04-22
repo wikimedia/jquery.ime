@@ -185,8 +185,8 @@
 			['ʽ\\[',          '˞'],      // [[[
 			['\\[\\[',        'ʽ'],      // [[ // Not IPA sanctioned
 			['(?:\u031a)\\]', '‘'],      // ]]]] // Not IPA sanctioned
-			['’\\]',          '\u031a'], // ]]]  // Combining left angle above
-			['\\]\\]',        '’'],      // ]]
+			['ʼ\\]',          '\u031a'], // ]]]  // Combining left angle above
+			['\\]\\]',        'ʼ'],      // ]]
 
 			['(?:\u032f)\\$', '\u0330'], // $$$ // Combining tilde below
 			['(?:\u0329)\\$', '\u032f'], // $$  // Combining inverted breve below
@@ -206,7 +206,7 @@
 			['(?:\u033b)\\{',   '\u033c'], // {{{{  // Combining seagull below
 			['(?:\u033a)\\{',   '\u033b'], // {{{   // Combining square below
 			['(?:\u032a)\\{',   '\u033a'], // {{    // Combining inverted bridge below
-			['\\{', '\u032a'],             // {     // Combining  bridge below
+			['\\{', '\u032a'],             // {     // Combining bridge below
 
 			['(?:\u0303)~',   '\u0334'], // ~~    // Combining tilde overlay
 			['~',             '\u0303'], // ~     // Combining tilde
@@ -235,6 +235,6 @@
 			['=<', '\u200d'] // Combining Grapheme Joiner
 		]
 	};
-	$.ime.register( ipaSil );
 
+	$.ime.register( ipaSil );
 } ( jQuery ) );

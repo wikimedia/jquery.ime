@@ -100,7 +100,6 @@
 			['x', 'ඦ'],
 			[',', 'ඏ']]
 	};
+
 	$.ime.register( siWijesekara );
-
 }( jQuery ) );
-

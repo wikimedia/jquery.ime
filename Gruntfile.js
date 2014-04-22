@@ -1,6 +1,7 @@
 /* jshint node: true */
 module.exports = function ( grunt ) {
-	grunt.loadNpmTasks('grunt-css');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-qunit');
@@ -10,11 +11,11 @@ module.exports = function ( grunt ) {
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
-			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - '
-					+ '<%= grunt.template.today("yyyy-mm-dd") %>\n'
-					+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
-					+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-					+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
+			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+'
+				+ '<%= grunt.template.today("yyyymmdd") %>\n'
+				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
+				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
+				+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
 		},
 		concat: {
 			options: {
@@ -40,7 +41,9 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.js',
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
-						'src/jquery.ime.inputmethods.js' ]
+						'src/jquery.ime.inputmethods.js',
+						'libs/rangy/rangy-core.js'
+					]
 				}
 			}
 		},
@@ -62,26 +65,8 @@ module.exports = function ( grunt ) {
 			tasks: 'lint qunit'
 		},
 		jshint: {
-			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				boss: true,
-				eqnull: true,
-				browser: true,
-				smarttabs: true,
-				laxbreak: true,
-				white: false,
-				globals: {
-					jQuery: true,
-					QUnit: true
-				}
-			},
+			options: JSON.parse( grunt.file.read( '.jshintrc' )
+				.replace( /\/\*(?:(?!\*\/)[\s\S])*\*\//g, '' ).replace( /\/\/[^\n\r]*/g, '' ) ),
 			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
 		}
 	} );
@@ -89,5 +74,4 @@ module.exports = function ( grunt ) {
 	// Default task.
 	grunt.registerTask( 'default', ['jshint', 'qunit', 'concat', 'uglify', 'copy', 'csslint'] );
 	grunt.registerTask( 'test', ['jshint', 'qunit'] );
-
 };

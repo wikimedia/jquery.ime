@@ -18,7 +18,6 @@
 	// so it's better to give them names to avoid confusion.
 	var cyrlPalochka;
 
-
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
 		name: 'Cyrillic Palochka',

@@ -51,5 +51,4 @@
 	};
 
 	$.ime.register( eoH );
-
 }( jQuery ) );

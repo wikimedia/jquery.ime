@@ -74,7 +74,6 @@
 			['\\_', '\u2014']
 		]
 	};
+
 	$.ime.register( ugKbd );
-
 }( jQuery ) );
-

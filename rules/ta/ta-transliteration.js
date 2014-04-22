@@ -117,5 +117,4 @@
 	};
 
 	$.ime.register( taTransliteration );
-
 }( jQuery ) );

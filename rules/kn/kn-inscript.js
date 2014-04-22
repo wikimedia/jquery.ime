@@ -3,7 +3,7 @@
 
 	var knInscript = {
 		id: 'kn-inscript',
-		name: 'ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್',
+		name: 'ಇನ್\u200cಸ್ಕ್ರಿಪ್ಟ್',
 		description: 'Inscript keyboard for Kannada script',
 		date: '2012-10-14',
 		author: 'Junaid P V',
@@ -36,7 +36,7 @@
 			['P', '\u0C9D'],
 			['\\}', '\u0C9E'],
 			['\'', '', '\u0C9F'],
-			['\"', '\u0CA0'],
+			['"', '\u0CA0'],
 			['\\[', '\u0CA1'],
 			['\\{', '\u0CA2'],
 			['C', '\u0CA3'],
@@ -106,6 +106,6 @@
 			['j', '\u0CF2'],
 			['\\$', '\u20B9']]
 	};
-	$.ime.register( knInscript );
 
+	$.ime.register( knInscript );
 }( jQuery ) );

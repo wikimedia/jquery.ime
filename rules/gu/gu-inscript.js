@@ -37,7 +37,7 @@
 			['P', '\u0A9D'],
 			['\\}', '\u0A9E'],
 			['\'', '\u0A9F'],
-			['\"', '\u0AA0'],
+			['"', '\u0AA0'],
 			['\\[', '\u0AA1'],
 			['\\{', '\u0AA2'],
 			['C', '\u0AA3'],
@@ -108,6 +108,6 @@
 			['$', '\u20B9'] ]
 
 	};
-	$.ime.register( guInscript );
 
+	$.ime.register( guInscript );
 }( jQuery ) );

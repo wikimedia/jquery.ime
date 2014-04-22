@@ -3,13 +3,14 @@
 
 	var mrPhonetic = {
 		id: 'mr-phonetic',
-		name: 'phonetic',
-		description: 'Phonetic keyboard for Marathi langauge',
+		name: 'फोनेटिक',
+		description: 'Phonetic keyboard for Marathi language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
+			['्f', '्\u200c'],
 			['~', 'ऎ'],
 			['`', 'ॆ'],
 			['!', 'ऍ'],
@@ -97,14 +98,13 @@
 			['\\<', 'ऩ'],
 			[',', ','],
 			['\\>', '़'],
-			['.', '।'],
 			['\\?', 'ऐ'],
 			['/', 'ए'],
 			['\\^', 'ज्ञ'],
 			['X', 'क्ष'],
-			['\\*', 'श्र'],
-			['ff', '्‌']]
+			['\\*', 'श्र']
+		]
 	};
-	$.ime.register( mrPhonetic );
 
+	$.ime.register( mrPhonetic );
 }( jQuery ) );

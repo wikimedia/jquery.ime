@@ -3,22 +3,23 @@
 
 	var hiPhonetic = {
 		id: 'hi-phonetic',
-		name: 'phonetic',
+		name: 'फोनेटिक',
 		description: 'Phonetic keyboard for Hindi language',
 		date: '2013-02-09',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
+			['्f', '्\u200c'],
 			['\\~', 'ऎ'],
-			['\\`","ॆ'],
+			['\\`','ॆ'],
 			['\\!', 'ऍ'],
 			['1', '१'],
 			['\\@', 'ॅ'],
 			['2', '२'],
 			['\\#', 'ऑ'],
 			['3', '३'],
-			['\\$","ॉ'],
+			['\\$','ॉ'],
 			['4', '४'],
 			['\\%', 'ञ'],
 			['5', '५'],
@@ -102,10 +103,9 @@
 			['/', 'ए'],
 			['\\^', 'ज्ञ'],
 			['X', 'क्ष'],
-			['\\*', 'श्र'],
-			['ff', '्‌']
+			['\\*', 'श्र']
 		]
 	};
-	$.ime.register( hiPhonetic );
 
+	$.ime.register( hiPhonetic );
 }( jQuery ) );
