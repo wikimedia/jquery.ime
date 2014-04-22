@@ -808,7 +808,7 @@
 			inputmethods: [ 'ml-transliteration', 'ml-inscript', 'ml-inscript2' ]
 		},
 		'mn': {
-			autonym: 'Mongolian',
+			autonym: 'Монгол',
 			inputmethods: [ 'mn-cyrl', 'mn-tm', 'mn-mt', 'mn-tma', 'mn-mta', 'ph-kbd' ]
 		},
 		'mnc': {
