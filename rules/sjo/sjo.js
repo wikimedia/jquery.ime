@@ -1,9 +1,3 @@
-/**
- * This is my work based on Git, which is an input method for the Traditional
- * Mongolian script. If the program has any errors, please understand that and
- * contact me. I will change the errors in a few days.
- */
-
 ( function ( $ ) {
 	'use strict';
 
