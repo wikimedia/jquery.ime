@@ -428,6 +428,34 @@
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
 		},
+		'mn-trad': {
+			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
+			source: 'rules/mn/mn-trad.js'
+		},
+		'mn-todo': {
+			name: 'ᡐᡆᡑᡆ ᡋᡅᡔᡅᡎ᠌',
+			source: 'rules/mn/mn-todo.js'
+		},
+		'mn-tradali': {
+      name: 'Traditional Mongolian Ali-gali',
+      source: 'rules/mn/mn-tradali.js'
+    },
+    'mn-todoali': {
+      name: 'Todo Mongolian Ali-gali',
+      source: 'rules/mn/mn-todoali.js'
+    },
+    'phagspa': {
+      name: 'PhagsPa',
+      source: 'rules/mn/phagspa.js'
+    },
+    'mnc': {
+      name: 'ᠮᠠᠨᠵᡠ',
+      source: 'rules/mnc/mnc.js'
+    },
+    'mnc-ali': {
+      name: 'Manchu Ali-gali',
+      source: 'rules/mnc/mnc-ali.js'
+    },
 		'mni-inscript2': {
 			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/mni/mni-inscript2.js'
@@ -642,6 +670,10 @@
 		'tig-geezim': {
 			name: 'ትግረ',
 			source: 'rules/tig/tig-geezim.js'
+		},
+		'sjo': {
+			name: 'ᠰᡞᠪᡝ',
+			source: 'rules/sjo/sjo.js'
 		},
 		'ur-phonetic': {
 			name: 'صوتی',
@@ -948,7 +980,11 @@
 		},
 		mn: {
 			autonym: 'Монгол',
-			inputmethods: [ 'mn-cyrl' ]
+			inputmethods: [ 'mn-cyrl', 'mn-trad', 'mn-todo', 'mn-tradali', 'mn-todoali', 'phagspa' ]
+		},
+		mnc: {
+			autonym: 'ᠮᠠᠨᠵᡠ',
+			inputmethods: [ 'mnc', 'mnc-ali' ]
 		},
 		mni: {
 			autonym: 'Manipuri',
@@ -1033,6 +1069,10 @@
 		si: {
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
+		},
+		sjo: {
+			autonym: 'ᠰᡞᠪᡝ',
+	  		inputmethods: [ 'sjo' ]
 		},
 		sk: {
 			autonym: 'Slovenčina',
