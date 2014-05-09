@@ -1431,9 +1431,10 @@ var testFixtures = [
 		tests: [
 			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia Modular j} -> ର‍୍ୟ'},
 			{ input: 'O}', output: 'ଡ୍ୟ', description: 'Odia Modular O} -> ଡ୍ୟ'},
-			{ input: 's~', output: 'କଃ', description: 'Odia Modular j~ -> କଃ'},
+			{ input: 's~', output: 'କଃ', description: 'Odia Modular s~ -> କଃ'},
 			{ input: 's&', output: 'ର୍କ', description: 'Odia Modular s& -> ର୍କ'},
 			{ input: 'e@', output: 'ନ୍ତ୍ର', description: 'Odia Modular e@ -> ନ୍ତ୍ର'},
+			{ input: '#', output: 'ୱ', description: 'Odia Modular # -> ୱ'}
 		],
 		inputmethod: 'or-modular'
 	},{
