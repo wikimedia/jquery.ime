@@ -4,7 +4,7 @@
 	var asPhonetic = {
 		id: 'as-rodali',
 		name: 'rodali',
-		description: 'Rodali phonetic keyboard layout for Assamese script',
+		description: 'Rodali Phonetic keyboard for Assamese script',
 		date: '2013-02-09',
 		URL: 'http://www.sltdassam.com/rodalionline.html',
 		author: 'Gunadeep Chetia, Subhashish Panigrahi',
@@ -147,5 +147,5 @@
 		]
 	};
 
-	$.ime.register( asRodali );
+	$.ime.register( asPhonetic );
 }( jQuery ) );
