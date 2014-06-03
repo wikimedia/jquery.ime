@@ -695,7 +695,7 @@
 			} );
 		} else if ( isDOMAttrModifiedSupported() ) {
 			return this.on( 'DOMAttrModified', function ( e ) {
-				callback.call( this, e.attrName );
+				callback.call( this, e.originalEvent.attrName );
 			} );
 		} else if ( 'onpropertychange' in document.body ) {
 			return this.on( 'propertychange', function () {
