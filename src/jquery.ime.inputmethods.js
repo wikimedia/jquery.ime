@@ -158,6 +158,10 @@
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
 		},
+		'lud-transliteration': {
+			name: 'lud',
+			source: 'rules/lud/lud-transliteration.js'
+		},
 		'hi-transliteration': {
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
@@ -678,6 +682,10 @@
 		'fi': {
 			autonym: 'Suomi',
 			inputmethods: [ 'fi-transliteration' ]
+		},
+		'lud': {
+			autonym: 'lüüdi',
+			inputmethods: [ 'lud-transliteration' ]
 		},
 		'gom': {
 			autonym: 'कोंकणी',
