@@ -74,6 +74,10 @@
 			name: 'প্রভাত',
 			source: 'rules/bn/bn-probhat.js'
 		},
+		'bo-ewts': {
+			name: 'Tibetan EWTS',
+			source: 'rules/bo/bo-ewts.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -626,6 +630,10 @@
 		'bn': {
 			autonym: 'বাংলা',
 			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
+		},
+		'bo': {
+			autonym: 'བོད་ཡིག།',
+			inputmethods: [ 'bo-ewts' ]
 		},
 		'brx': {
 			autonym: 'बोड़ो',
