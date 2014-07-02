@@ -65,6 +65,18 @@ var testFixtures = [
 		],
 		inputmethod: 'bn-probhat'
 	},{
+		description: 'Tibetan EWTS test',
+		tests: [
+			{ input: 'brgyud', output: 'བརྒྱུད', description: 'Tibetan EWTS - brgyud' },
+			{ input: 'blng', output: 'བལྔ', description: 'Tibetan EWTS - blng' },
+			{ input: 'r-I', output: 'ཨྲཱྀ', description: 'Tibetan EWTS - r-I' },
+			{ input: 'br-I', output: 'བྲཱྀ', description: 'Tibetan EWTS - br-I' },
+			{ input: 'g.yak', output: 'གཡཀ', description: 'Tibetan EWTS - g.yak' },
+			{ input: 'pad+ma', output: 'པདྨ', description: 'Tibetan EWTS - pad+ma' },
+			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' },
+		],
+		inputmethod: 'bo-ewts'
+	},{
 		description: 'Chuvash (AltGr) with jcuken',
 		tests: [
 			{ input: [ [ 'а', true ] ], output: 'ӑ', description: 'Alt + a (Cyrillic) -> a breve (Cyrillic), lower case' },
