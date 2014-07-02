@@ -57,7 +57,8 @@
       ['མྲn', 'r', 'མརྣ '],
       ['མྲb', 'r', 'མརྦ'],
       ['མྲm', 'r', 'མརྨ'],
-      //  Standard Tibetan Stacks listed at <http://www.thlib.org/reference/transliteration/tibstacks.php>
+      // Standard Tibetan Stacks listed at <http://www.thlib.org/reference/transliteration/tibstacks.php>
+      // some are handled magically and don't need to appear here. 
       ['རྐy', 'k', 'རྐྱ'],
       ['རྒy', 'g', 'རྒྱ'],
       ['རྨy', 'm', 'རྨྱ'],
@@ -79,19 +80,14 @@
       ['ཕྱw', 'y', 'ཕྱྭ'],
       ['རk', 'r', 'རྐ'],
       ['རg', 'r', 'རྒ'],
-      //['rng', 'n', 'རྔ'],
       ['རj', 'r', 'རྗ'],
-      //['rny', 'n', 'རྙ'],
       ['རt', 'r', 'རྟ'],
       ['རd', 'r', 'རྡ'],
       ['རn', 'r', 'རྣ '],
       ['རb', 'r', 'རྦ'],
       ['རm', 'r', 'རྨ'],
-      //['rts', 't', 'རྩ'],
-      //['rdz', 'd', 'རྫ'],
       ['ལk', 'l', 'ལྐ'],
       ['ལg', 'l', 'ལྒ'],
-      //['lng', 'n', 'ལྔ'],
       ['ལc', 'l', 'ལྕ'],
       ['ལj', 'l', 'ལྗ'],
       ['ལt', 'l', 'ལྟ'],
@@ -101,8 +97,6 @@
       ['ལh', 'l', 'ལྷ'],
       ['སk', 's', 'སྐ'],
       ['སg', 's', 'སྒ'],
-//      ['sng', 'n', 'སྔ'],
-//      ['sny', 'n', 'སྙ'],
       ['སt', 's', 'སྟ'],
       ['སd', 's', 'སྡ'],
       ['སn', 's', 'སྣ'],
@@ -315,7 +309,7 @@
 		license: 'GPLv3',
 		version: '0.9',
 		contextLength: 2,
-		maxKeyLength: 8,
+		maxKeyLength: 5,
 		patterns: patterns
 	};
 
