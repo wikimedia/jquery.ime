@@ -1,4 +1,4 @@
-(function ( $ ) {
+( function ( $ ) {
    'use strict';
    var patterns = [
       // ambiguous cases with b as prefix
@@ -58,7 +58,7 @@
       ['མྲb', 'r', 'མརྦ'],
       ['མྲm', 'r', 'མརྨ'],
       // Standard Tibetan Stacks listed at <http://www.thlib.org/reference/transliteration/tibstacks.php>
-      // some are handled magically and don't need to appear here. 
+      // some are handled magically and don't need to appear here.
       ['རྐy', 'k', 'རྐྱ'],
       ['རྒy', 'g', 'རྒྱ'],
       ['རྨy', 'm', 'རྨྱ'],
@@ -185,12 +185,12 @@
       ['h', '\\+S', 'ྵ'],
       ['s', '\\+', 'ྶ'],
       ['h', '\\+', 'ྷ'],
-      ['v', '\\+', "ྦ༹"],
-      ['f', '\\+', "ྥ༹"],
-      ['W', '\\+', "ྺ"],
-      ['Y', '\\+', "ྻ"],
-      ['R', '\\+', "ྼ"],
-      ['Z', '\\+', "༹"],
+      ['v', '\\+', 'ྦ༹'],
+      ['f', '\\+', 'ྥ༹'],
+      ['W', '\\+', 'ྺ'],
+      ['Y', '\\+', 'ྻ'],
+      ['R', '\\+', 'ྼ'],
+      ['Z', '\\+', '༹'],
       // consonants
       ['k', 'ཀ'],
       ['ཀh', 'k', 'ཁ'],
@@ -242,7 +242,7 @@
       ['([ཀ-ྼ])i', '$1ི'],
       ['([ཀ-ྼ])u', '$1ུ'],
       ['([ཀ-ྼ])e', '$1ེ'],
-      ['([ཀ-ྼ])o', "$1ོ"],
+      ['([ཀ-ྼ])o', '$1ོ'],
       ['([ཀ-ྼ])A', '$1ཱ'],
       ['([ཀ-ྼ])I', '$1ཱི'],
       ['([ཀ-ྼ])U', '$1ཱུ'],
@@ -269,11 +269,11 @@
       ['8', '༨'],
       ['9', '༩'],
       // sanskrit marks
-      ['H', "ཿ"],
-      ['M', "ཾ"],
-      ['~M', "ྃ"],
-      ['~M`', "ྂ"],
-      ['\\?', "྄"],
+      ['H', 'ཿ'],
+      ['M', 'ཾ'],
+      ['~M', 'ྃ'],
+      ['~M`', 'ྂ'],
+      ['\\?', '྄'],
       ['&', '྅'],
       // punctuation
       [' ', '་'],
@@ -294,17 +294,17 @@
       ['>', '༻'],
       ['\\(', '༼'],
       ['\\)', '༽'],
-      ['~X', "༵"],
-      ['X', "༷"],
-      ['\\^', "༹"]
+      ['~X', '༵'],
+      ['X', '༷'],
+      ['\\^', '༹']
       ];
 
 	var boEWTS = {
 		id: 'bo-ewts',
 		name: 'Tibetan EWTS transliteration',
-		description: 'Tibetan Extended Wylie Transliteration, based on <a href="http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts">the work of thdl</a>.',
+		description: 'Tibetan Extended Wylie Transliteration, based on the work of thdl.',
 		date: '2014-07-02',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts',
 		author: 'Elie Roux <elie.roux@telecom-bretagne.eu>',
 		license: 'GPLv3',
 		version: '0.9',
