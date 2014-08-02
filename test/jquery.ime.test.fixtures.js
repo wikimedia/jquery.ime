@@ -71,6 +71,8 @@ var testFixtures = [
 			{ input: 'brlab', output: 'བརླབ', description: 'Tibetan EWTS - brlab' },
 			{ input: 'r-I', output: 'ཨྲཱྀ', description: 'Tibetan EWTS - r-I' },
 			{ input: 'br-I', output: 'བྲཱྀ', description: 'Tibetan EWTS - br-I' },
+			{ input: 'b+k+Sha', output: 'བྐྵ', description: 'Tibetan EWTS - b+k+Sha' },
+			{ input: 'br-i', output: 'བྲྀ', description: 'Tibetan EWTS - br-i' },
 			{ input: 'g.yak', output: 'གཡཀ', description: 'Tibetan EWTS - g.yak' },
 			{ input: 'pad+ma', output: 'པདྨ', description: 'Tibetan EWTS - pad+ma' },
 			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' },
