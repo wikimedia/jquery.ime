@@ -4,7 +4,7 @@
 	var bnProbhat = {
 		id: 'bn-probhat',
 		name: 'Bengali Probhat',
-		description: 'Bengali Probhat input method for Assamese',
+		description: 'Bengali Probhat input method for Bengali',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Nasir Khan Saikat',
