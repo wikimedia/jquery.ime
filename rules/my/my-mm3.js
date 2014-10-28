@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var myXkb = {
+	var mymm3 = {
 		id: 'my-mm3',
 		name: 'မြန်မာ၃ လက်ကွက်',
 		description: 'Myanmar3 keyboard layout',
@@ -151,5 +151,5 @@
 			['9', '','၉']]
 	};
 
-	$.ime.register( myXkb );
+	$.ime.register( mymm3 );
 }( jQuery ) );
