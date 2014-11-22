@@ -261,7 +261,7 @@
 		 */
 		position: function () {
 			var menuWidth, menuTop, menuLeft, elementPosition,
-				top, left, verticalRoom, overflowsOnRight,
+				top, left, cssTop, cssLeft, verticalRoom, overflowsOnRight,
 				imeSelector = this,
 				rtlElement = this.$element.css( 'direction' ) === 'rtl',
 				$window = $( window );
@@ -297,21 +297,24 @@
 				}
 			}
 
+			cssTop = top;
+			cssLeft = left;
 			this.$element.parents().each( function() {
 				if ( $( this ).css( 'position' ) === 'fixed' ) {
 					imeSelector.$imeSetting.css( 'position', 'fixed' );
-
+					cssTop -= $( document ).scrollTop();
+					cssLeft -= $( document ).scrollLeft();
 					return false;
 				}
 			} );
 
 			this.$imeSetting.css( {
-				top: top,
-				left: left
+				top: cssTop,
+				left: cssLeft
 			} );
 
 			menuWidth = this.$menu.width();
-			overflowsOnRight = ( left + menuWidth ) > $window.width();
+			overflowsOnRight = ( left - $( document ).scrollLeft() + menuWidth ) > $window.width();
 
 			// Adjust horizontal position if there's
 			// not enough space on any side
