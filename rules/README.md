@@ -105,3 +105,4 @@ Examples
 
 For complete examples, please refer the existing input method definitions.
 
+Documentation of input methods are available at https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods
