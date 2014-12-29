@@ -6,6 +6,7 @@
 		name: 'Gothic QWERTY',
 		description: 'QWERTY-based Gothic keyboard',
 		date: '2014-12-09',
+		e-mail: roel11112@live.nl
 		author: 'implementation by Roel (Gothicspeaker)',
 		version: '1.0',
 		patterns: [ 
