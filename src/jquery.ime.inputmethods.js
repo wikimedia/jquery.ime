@@ -477,11 +477,11 @@
 			source: 'rules/te/te-transliteration.js'
 		},
 		'pa-inscript': {
-			name: 'ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ',
+			name: 'ਇਨਸਕ੍ਰਿਪਟ',
 			source: 'rules/pa/pa-inscript.js'
 		},
 		'pa-inscript2': {
-			name: 'ਇਨਸ੍ਕ੍ਰਿਪ੍ਟ2',
+			name: 'ਇਨਸਕ੍ਰਿਪਟ2',
 			source: 'rules/pa/pa-inscript2.js'
 		},
 		'pa-jhelum': {
@@ -489,7 +489,7 @@
 			source: 'rules/pa/pa-jhelum.js'
 		},
 		'pa-transliteration': {
-			name: 'ਤ੍ਰਾਨ੍ਸ੍ਲਿਤੇਰਾਤਿਓਂ',
+			name: 'ਲਿਪੀਆਂਤਰਨ',
 			source: 'rules/pa/pa-transliteration.js'
 		},
 		'pa-phonetic': {
