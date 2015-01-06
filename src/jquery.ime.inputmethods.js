@@ -489,7 +489,7 @@
 			source: 'rules/pa/pa-jhelum.js'
 		},
 		'pa-transliteration': {
-			name: 'ਲਿਪੀਆਂਤਰਨ',
+			name: 'ਲਿਪਾਂਤਰਨ',
 			source: 'rules/pa/pa-transliteration.js'
 		},
 		'pa-phonetic': {
