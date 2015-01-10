@@ -2986,5 +2986,17 @@ var testFixtures = [
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		],
 		inputmethod: 'vec-GVU'
+	},
+	,{
+		description: 'Gothic QWERTY keyboard',
+		tests: [
+			{ input: 'th', output: '𐌸', description: 'Gothic 𐌸' },
+			{ input: 'hv', output: '𐍈', description: 'Gothic 𐍈' },
+                        { input: 'l', output: '𐌻', description: 'Gothic 𐌻' },
+                        { input: 'v', output: '𐌸', description: 'Gothic 𐌸' },
+                        { input: 'hw', output: '𐍈', description: 'Gothic 𐍈' }
+
+		],
+		inputmethod: 'gothic-qwerty'
 	}
 ];
