@@ -1806,6 +1806,35 @@ var testFixtures = [
 		],
 		inputmethod: 'te-inscript'
 	},{
+		description: 'Telugu Apple test',
+		tests: [
+			{ input: 'k', output: 'ర', description: 'Telugu ra' },
+			{ input: 's', output: 'త', description: 'Telugu tha' },
+			{ input: 'zu', output: 'టె', description: 'Telugu te' },
+			{ input: 'jW', output: 'కృ', description: 'Telugu kru' },
+			{ input: ';i', output: 'పు', description: 'Telugu pu' },
+			{ input: 'd$', output: 'ద్పు', description: 'Telugu dpu' },
+			{ input: 'Z', output: 'ఠ', description: 'Telugu Ttha' },
+			{ input: 'M', output: 'ఛ', description: 'Telugu Ccha' },
+			{ input: 'l]', output: 'నౌ', description: 'Telugu now' },
+			{ input: 'kiSZWlwjbdys];ze', output: 'రుథఠృనీకమదోతౌపటా', description: 'some paragraph' }
+
+		],
+		inputmethod: 'te-apple'
+	},{
+		description: 'Telugu Modular test',
+		tests: [
+			{ input: 'H', output: 'ధ', description: 'Telugu dha' },
+			{ input: 'e', output: 'క', description: 'Telugu ka' },
+			{ input: 'S', output: 'ఇ', description: 'Telugu yi' },
+			{ input: 'i', output: 'ల', description: 'Telugu la' },
+			{ input: 'fa', output: 'యా', description: 'Telugu yaa' },
+			{ input: 'Jd', output: 'భ్', description: 'Telugu Bh' },
+			{ input: 'jzgdf', output: 'నృత్య', description: 'word Nruthyam' }
+
+		],
+		inputmethod: 'te-modular'
+	},{
 		description: 'Telugu Transliteration test',
 		tests: [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },

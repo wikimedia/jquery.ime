@@ -472,6 +472,13 @@
 			name: 'ఇన్\u200dస్క్రిప్ట్ 2',
 			source: 'rules/te/te-inscript2.js'
 		},
+		'te-apple': {
+			name: 'ఆపిల్',
+			source: 'rules/te/te-apple.js'
+		},'te-modular': {
+			name: 'మాడ్యులర్',
+			source: 'rules/te/te-modular.js'
+		},
 		'te-transliteration': {
 			name: 'లిప్యంతరీకరణ',
 			source: 'rules/te/te-transliteration.js'
@@ -889,7 +896,7 @@
 		},
 		'te': {
 			autonym: 'తెలుగు',
-			inputmethods: [ 'te-transliteration', 'te-inscript', 'te-inscript2' ]
+			inputmethods: [ 'te-transliteration', 'te-inscript', 'te-inscript2', 'te-apple', 'te-modular' ]
 		},
 		'th': {
 			autonym: 'ไทย',
