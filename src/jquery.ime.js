@@ -532,6 +532,7 @@
 				end: end
 			} );
 
+			rangy.init();
 			selection = rangy.getSelection();
 			range = selection.getRangeAt( 0 );
 
@@ -596,7 +597,10 @@
 			end = 0,
 			foundStart = false,
 			foundEnd = false,
-			sel = rangy.getSelection();
+			sel;
+
+		rangy.init();
+		sel = rangy.getSelection();
 
 		function traverseTextNodes( node, range ) {
 			var i, childNodesCount;
