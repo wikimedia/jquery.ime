@@ -54,6 +54,10 @@
 			name: 'Tifinagh',
 			source: 'rules/ber/ber-tfng.js'
 		},
+		'bgn-arab': {
+			name: 'عربی',
+			source: 'rules/bgn/bgn-arab.js'
+		},
 		'bn-avro': {
 			name: 'অভ্র',
 			source: 'rules/bn/bn-avro.js'
@@ -629,6 +633,10 @@
 		'bh': {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
+		},
+		'bgn': {
+			autonym: 'بلوچی رخشانی',
+			inputmethods: [ 'bgn-arab' ]
 		},
 		'bho': {
 			autonym: 'भोजपुरी',
