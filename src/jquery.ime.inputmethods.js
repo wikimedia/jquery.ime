@@ -34,6 +34,10 @@
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
 		},
+		'azb-kbd': {
+			name: 'تورکجه',
+			source: 'rules/azb/azb-kbd.js'
+		},
 		'batak-qwerty': {
 			name: 'Batak QWERTY',
 			source: 'rules/bbc/batak-qwerty.js'
@@ -617,6 +621,10 @@
 		'av': {
 			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		'azb': {
+			autonym: 'تورکجه',
+			inputmethods: [ 'azb-kbd' ]
 		},
 		'bbc': {
 			autonym: 'Batak',
