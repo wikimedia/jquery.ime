@@ -460,6 +460,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/sd/sd-inscript2.js'
 		},
+		'sdh-kbd': {
+			name: 'کوردی خوارگ',
+			source: 'rules/sdh/sdh-kbd.js'
+		},
 		'se-normforms': {
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
@@ -877,6 +881,10 @@
 		'sd': {
 			autonym: 'सिंधी',
 			inputmethods: [ 'sd-inscript2' ]
+		},
+		'sdh': {
+			autonym: 'کوردی خوارگ',
+			inputmethods: [ 'sdh-kbd' ]
 		},
 		'se': {
 			autonym: 'Davvisámegiella',
