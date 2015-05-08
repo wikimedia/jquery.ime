@@ -3,7 +3,7 @@
 
 	var azb_kbd = {
 		id: 'azb-kbd',
-		name: 'تورکجه',
+		name: 'تۆرکجه',
 		description: 'South Azerbaijani Keyboard Layout',
 		date: '2015-05-02',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -91,10 +91,10 @@
 			['L', '«'],
 			['"', '؛'],
 
-			['Z', '|'],
-			['X', 'ك'],
-			['C', 'ط'],
-			['V', 'ژ'],
+			['Z', 'ك'],
+			['X', 'ط'],
+			['C', 'ژ'],
+			['V', 'ٰ'],
 			['B', 'ڭ'],
 			['N', 'ٔ'],
 			['M', 'ء'],
