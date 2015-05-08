@@ -35,7 +35,7 @@
 			source: 'rules/as/as-transliteration.js'
 		},
 		'azb-kbd': {
-			name: 'تورکجه',
+			name: 'تۆرکجه',
 			source: 'rules/azb/azb-kbd.js'
 		},
 		'batak-qwerty': {
@@ -627,7 +627,7 @@
 			inputmethods: [ 'cyrl-palochka' ]
 		},
 		'azb': {
-			autonym: 'تورکجه',
+			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
 		},
 		'bbc': {
