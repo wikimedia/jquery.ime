@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var bgn_arab = {
-		id: 'bgn-arab',
-		name: 'عربی',
-		description: 'Western Baluchi Keyboard Layout With Arabic Script',
+	var bgn_kbd = {
+		id: 'bgn-kbd',
+		name: 'بلوچی رخشانی',
+		description: 'Western Baluchi Keyboard Layout',
 		date: '2015-03-11',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Mjbmr',
@@ -104,5 +104,5 @@
 		]
 	};
 
-	$.ime.register( bgn_arab );
+	$.ime.register( bgn_kbd );
 }( jQuery ) );
