@@ -372,6 +372,10 @@
 			name: 'າຶກ',
 			source: 'rules/lo/lo-kbd.js'
 		},
+		'lrc-kbd': {
+			name: 'لوری مینجایی',
+			source: 'rules/lrc/lrc-kbd.js'
+		},
 		'mh': {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
@@ -717,6 +721,10 @@
 		'fi': {
 			autonym: 'Suomi',
 			inputmethods: [ 'fi-transliteration' ]
+		},
+		'lrc': {
+			autonym: 'لوری مینجایی',
+			inputmethods: [ 'lrc-kbd' ]
 		},
 		'lud': {
 			autonym: 'lüüdi',
