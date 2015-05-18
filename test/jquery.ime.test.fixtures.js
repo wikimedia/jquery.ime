@@ -162,7 +162,7 @@ var testFixtures = [
 			{ input: 't',  output: 'ف', description: 'Western Baluchi Keyboard Layout: t -> ف' },
 			{ input: 'y',  output: 'غ', description: 'Western Baluchi Keyboard Layout: y -> غ' },
 			{ input: 'u',  output: 'ع', description: 'Western Baluchi Keyboard Layout: u -> ع' },
-			{ input: 'i',  output: 'ھ', description: 'Western Baluchi Keyboard Layout: i -> ھ' },
+			{ input: 'i',  output: 'ه', description: 'Western Baluchi Keyboard Layout: i -> ه' },
 			{ input: 'o',  output: 'خ', description: 'Western Baluchi Keyboard Layout: o -> خ' },
 			{ input: 'p',  output: 'ح', description: 'Western Baluchi Keyboard Layout: p -> ح' },
 			{ input: '[',  output: 'ج', description: 'Western Baluchi Keyboard Layout: [ -> ج' },
@@ -224,7 +224,7 @@ var testFixtures = [
 			{ input: '"',  output: '؛', description: 'Western Baluchi Keyboard Layout: " -> ؛' },
 
 			{ input: 'Z',  output: 'ێ', description: 'Western Baluchi Keyboard Layout: Z -> ێ' },
-			{ input: 'X',  output: 'ه', description: 'Western Baluchi Keyboard Layout: X -> ه' },
+			{ input: 'X',  output: 'ط', description: 'Western Baluchi Keyboard Layout: X -> ط' },
 			{ input: 'C',  output: 'ژ', description: 'Western Baluchi Keyboard Layout: C -> ژ' },
 			{ input: 'V',  output: 'ڑ', description: 'Western Baluchi Keyboard Layout: V -> ڑ' },
 			{ input: 'B',  output: 'ۆ', description: 'Western Baluchi Keyboard Layout: B -> ۆ' },
