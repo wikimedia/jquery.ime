@@ -1809,7 +1809,9 @@ var testFixtures = [
 		description: 'Telugu Transliteration test',
 		tests: [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },
-			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
+			{ input: 'ch', output: 'చ్', description: 'Telugu ch' },
+			{ input: 'j~nu', output: 'జ్ఞు', description: Telugu j~nu -> జ్ఞు' },
+			{ input: 'j~nE', output: 'జ్ఞే', description: Telugu j~nE -> జ్ఞే' }
 		],
 		inputmethod: 'te-transliteration'
 	},{
@@ -2986,13 +2988,5 @@ var testFixtures = [
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		],
 		inputmethod: 'vec-GVU'
-	},
-	{
-		description: 'Telugu Transliteration test',
-		tests: [
-			{ input: 'j~nu', output: 'జ్ఞు', description: Telugu j~nu -> జ్ఞు' },
-			{ input: 'j~nE', output: 'జ్ఞే', description: Telugu j~nE -> జ్ఞే' },
-			],
-		inputmethod: 'te-transliteration'
 	}
 ];
