@@ -1762,6 +1762,7 @@ var testFixtures = [
 			{ input: 'sh', output: 'ଷ', description: 'Odia phonetic sh -> ଷ' },
 			{ input: 'h', output: 'ହ', description: 'Odia phonetic h -> ହ' },
 			{ input: '.',  output: '।', description: 'Odia phonetic . -> । ' },
+			{ input: 'shT',  output: 'ଷ୍ଟ', description: 'Odia phonetic shT -> ଷ୍ଟ' },
 			{ input: 'sainath',  output: 'ସାଇନାଥ', description: 'Odia phonetic sainath -> ସାଇନାଥ ' },
 			{ input: 'dxiNeSwr',  output: 'ଦକ୍ଷିଣେଶ୍ୱର', description: 'Odia phonetic dxiNeSwr -> ଦକ୍ଷିଣେଶ୍ୱର ' },
 			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ'}
