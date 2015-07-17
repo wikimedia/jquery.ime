@@ -675,7 +675,7 @@
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
 		'ckb': {
-			autonym: 'کوردی',
+			autonym: 'کوردیی ناوەندی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
 		},
 		'ce': {
