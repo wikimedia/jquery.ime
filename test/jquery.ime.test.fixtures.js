@@ -1694,13 +1694,13 @@ var testFixtures = [
 		],
 		inputmethod: 'ky-cyrl-alt'
 	},{
-		description: 'Oriya InScript test',
+		description: 'Odia InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
 		],
 		inputmethod: 'or-inscript'
 	},{
-		description: 'Oriya Modular test',
+		description: 'Odia Modular test',
 		tests: [
 			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia Modular j} -> ର‍୍ୟ'},
 			{ input: 'O}', output: 'ଡ୍ୟ', description: 'Odia Modular O} -> ଡ୍ୟ'},
@@ -1711,9 +1711,9 @@ var testFixtures = [
 		],
 		inputmethod: 'or-modular'
 	},{
-		description: 'Oriya phonetic test',
+		description: 'Odia phonetic test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Oriya phonetic - \\~ -> ~' },
+			{ input: '\\~', output: '~', description: 'Odia phonetic - \\~ -> ~' },
 			{ input: 'a',  output: 'ଅ', description: 'Odia phonetic a -> ଅ ' },
 			{ input: 'aa', output: 'ଆ', description: 'Odia phonetic aa -> ଆ' },
 			{ input: 'A',  output: 'ଆ', description: 'Odia phonetic A -> ଆ' },
@@ -1768,9 +1768,9 @@ var testFixtures = [
 		],
 		inputmethod: 'or-lekhani'
 	},{
-		description: 'Oriya transliteration test',
+		description: 'Odia transliteration test',
 		tests: [
-			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
+			{ input: '\\~', output: '~', description: 'Odia transliteration - \\~ -> ~' },
 			{ input: 'a',  output: 'ଅ', description: 'Odia transliteration a -> ଅ ' },
 			{ input: 'aa', output: 'ଆ', description: 'Odia transliteration aa -> ଆ' },
 			{ input: 'A',  output: 'ଆ', description: 'Odia transliteration A -> ଆ' },
