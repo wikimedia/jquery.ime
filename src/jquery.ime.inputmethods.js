@@ -444,6 +444,10 @@
 			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
 		},
+		'or-OdiScript': {
+			name: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ',
+			source: 'rules/or/or-OdiScript.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -860,7 +864,7 @@
 		},
 		'or': {
 			autonym: 'ଓଡ଼ିଆ',
-			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani' ]
+			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-OdiScript' ]
 		},
 		'pa': {
 			autonym: 'ਪੰਜਾਬੀ',
