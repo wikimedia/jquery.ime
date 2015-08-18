@@ -3,7 +3,7 @@
 
 	var bgn_kbd = {
 		id: 'bgn-kbd',
-		name: 'بلوچی رخشانی',
+		name: 'روچ کپتین بلوچی',
 		description: 'Western Baluchi Keyboard Layout',
 		date: '2015-03-11',
 		URL: 'http://github.com/wikimedia/jquery.ime',
