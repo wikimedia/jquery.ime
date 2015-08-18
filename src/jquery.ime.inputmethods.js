@@ -59,7 +59,7 @@
 			source: 'rules/ber/ber-tfng.js'
 		},
 		'bgn-kbd': {
-			name: 'بلوچی رخشانی',
+			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
 		},
 		'bn-avro': {
@@ -373,7 +373,7 @@
 			source: 'rules/lo/lo-kbd.js'
 		},
 		'lrc-kbd': {
-			name: 'لوری مینجایی',
+			name: 'لۊری شومالی',
 			source: 'rules/lrc/lrc-kbd.js'
 		},
 		'mh': {
@@ -651,7 +651,7 @@
 			inputmethods: [ 'hi-transliteration' ]
 		},
 		'bgn': {
-			autonym: 'بلوچی رخشانی',
+			autonym: 'روچ کپتین بلوچی',
 			inputmethods: [ 'bgn-kbd' ]
 		},
 		'bho': {
@@ -723,7 +723,7 @@
 			inputmethods: [ 'fi-transliteration' ]
 		},
 		'lrc': {
-			autonym: 'لوری مینجایی',
+			autonym: 'لۊری شومالی',
 			inputmethods: [ 'lrc-kbd' ]
 		},
 		'lud': {
