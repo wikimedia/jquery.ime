@@ -257,9 +257,19 @@ var testFixtures = [
 			{ input: 'br-i', output: 'བྲྀ', description: 'Tibetan EWTS - br-i' },
 			{ input: 'g.yak', output: 'གཡཀ', description: 'Tibetan EWTS - g.yak' },
 			{ input: 'pad+ma', output: 'པདྨ', description: 'Tibetan EWTS - pad+ma' },
-			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' },
+			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' }
 		],
 		inputmethod: 'bo-ewts'
+	},{
+		description: 'Tibetan Sambhota Keyboard test',
+		tests: [
+			{ input: 'bfrgyud', output: 'བརྒྱུད', description: 'Tibetan Sambhota - brgyud' },
+			{ input: 'fAr\'I', output: 'ཨྲཱྀ', description: 'Tibetan Sambhota - fAr\'I' },
+			{ input: 'fbkSa', output: 'བྐྵ', description: 'Tibetan Sambhota - fbkSa' },
+			{ input: 'gyak', output: 'གཡཀ', description: 'Tibetan Sambhota - gyak' },
+			{ input: 'pafdma', output: 'པདྨ', description: 'Tibetan Sambhota - pafdma' }
+		],
+		inputmethod: 'bo-sambhota'
 	},{
 		description: 'Chuvash (AltGr) with jcuken',
 		tests: [
