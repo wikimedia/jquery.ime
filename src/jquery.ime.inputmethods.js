@@ -98,6 +98,10 @@
 			name: 'Tibetan EWTS',
 			source: 'rules/bo/bo-ewts.js'
 		},
+		'bo-sambhota': {
+			name: 'Tibetan Sambhota',
+			source: 'rules/bo/bo-sambhota.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -740,7 +744,7 @@
 		},
 		bo: {
 			autonym: 'བོད་ཡིག།',
-			inputmethods: [ 'bo-ewts' ]
+			inputmethods: [ 'bo-ewts', 'bo-sambhota' ]
 		},
 		brx: {
 			autonym: 'बोड़ो',

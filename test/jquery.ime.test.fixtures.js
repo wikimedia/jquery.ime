@@ -378,6 +378,16 @@ var palochkaVariants = {
 		],
 		inputmethod: 'bo-ewts'
 	},{
+		description: 'Tibetan Sambhota Keyboard test',
+		tests: [
+			{ input: 'bfrgyud', output: 'བརྒྱུད', description: 'Tibetan Sambhota - brgyud' },
+			{ input: 'fAr\'I', output: 'ཨྲཱྀ', description: 'Tibetan Sambhota - fAr\'I' },
+			{ input: 'fbkBa', output: 'བྐྵ', description: 'Tibetan Sambhota - fbkBa' },
+			{ input: 'gyak', output: 'གཡཀ', description: 'Tibetan Sambhota - gyak' },
+			{ input: 'pafdma', output: 'པདྨ', description: 'Tibetan Sambhota - pafdma' }
+		],
+		inputmethod: 'bo-sambhota'
+	},{
 		description: 'Chuvash (AltGr) with jcuken',
 		tests: [
 			{ input: [ [ 'а', true ] ], output: 'ӑ', description: 'Alt + a (Cyrillic) -> a breve (Cyrillic), lower case' },
