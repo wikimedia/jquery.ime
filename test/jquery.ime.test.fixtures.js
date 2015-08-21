@@ -265,7 +265,7 @@ var testFixtures = [
 		tests: [
 			{ input: 'bfrgyud', output: 'བརྒྱུད', description: 'Tibetan Sambhota - brgyud' },
 			{ input: 'fAr\'I', output: 'ཨྲཱྀ', description: 'Tibetan Sambhota - fAr\'I' },
-			{ input: 'fbkSa', output: 'བྐྵ', description: 'Tibetan Sambhota - fbkSa' },
+			{ input: 'fbkBa', output: 'བྐྵ', description: 'Tibetan Sambhota - fbkBa' },
 			{ input: 'gyak', output: 'གཡཀ', description: 'Tibetan Sambhota - gyak' },
 			{ input: 'pafdma', output: 'པདྨ', description: 'Tibetan Sambhota - pafdma' }
 		],

@@ -16,7 +16,8 @@
 <link href="demo.css" rel="stylesheet" />
 <script>
 	$( document ).ready( function () {
-		$( 'input, textarea, [contenteditable]' ).ime();
+	  $.ime.preferences.getDefaultLanguage = function () {return 'bo';};
+		$( 'input, textarea, [contenteditable]' ).ime({languages: ['bo']});
 	} );
 </script>
 </head>
