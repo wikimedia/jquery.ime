@@ -18,14 +18,15 @@
 		switch (stackingState) {
 			case 0:
 				return normal;
-				break;
 			case 1:
-				if (!isOneChar)
+				if (!isOneChar) {
 					changeStackingState(2);
+				}
 				return normal;
 			case 2:
-				if (!isOneChar)
+				if (!isOneChar) {
 					changeStackingState(3);
+				}
 				return sub;
 			default:
 				if (alwaysStacked) {
