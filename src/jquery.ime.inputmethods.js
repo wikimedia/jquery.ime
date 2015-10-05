@@ -309,7 +309,7 @@
 			source: 'rules/gu/gu-phonetic.js'
 		},
 		'gu-transliteration': {
-			name: 'લિપ્યાંતરણ',
+			name: 'લિપ્યંતરણ',
 			source: 'rules/gu/gu-transliteration.js'
 		},
 		'ka-transliteration': {
