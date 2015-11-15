@@ -602,6 +602,10 @@
 		'vec-GVU': {
 			name: 'Venetian',
 			source: 'rules/vec/vec-GVU.js'
+		},
+		'yo-alt': {
+			name: 'Yorùbá Alt',
+			source: 'rules/yo/yo-alt.js'
 		}
 	} );
 
@@ -965,6 +969,10 @@
 		'vec': {
 			autonym: 'Venetian',
 			inputmethods: [ 'vec-GVU' ]
+		},
+		'yo': {
+			autonym: 'Yorùbá',
+			inputmethods: [ 'yo-alt' ]
 		}
 	} );
 
