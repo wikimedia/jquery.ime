@@ -3371,5 +3371,118 @@ var testFixtures = [
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		],
 		inputmethod: 'vec-GVU'
+	},{
+		description: 'Yoruba yo-alt input method test',
+		tests: [
+			{
+				input: [
+					[ 'a', false ],
+					[ '\\', true ]
+				], output: 'à', description: 'Yoruba à'
+				
+			},
+			{
+				input: [
+					[ 'a', false ],
+					[ '/', true ]
+				], output: 'á', description: 'Yoruba á'
+				
+			},
+			{
+				input: [
+					[ 'e', false ],
+					[ '\\', true ]
+				], output: 'è', description: 'Yoruba è'
+				
+			},
+			{
+				input: [
+					[ 'e', false ],
+					[ '/', true ]
+				], output: 'é', description: 'Yoruba é'
+			},
+			{
+				input: [
+					[ 'e', false ],
+					[ '.', true ]
+				], output: 'ẹ', description: 'Yoruba ẹ'
+			},
+			{
+				input: [
+					[ 'e', false ],
+					[ '.', true ],
+					[ '\\', true ]
+				], output: 'ẹ̀', description: 'Yoruba ẹ̀'
+			},
+			{
+				input: [
+					[ 'e', false ],
+					[ '.', true ],
+					[ '/', true ]
+				], output: 'ẹ́', description: 'Yoruba ẹ́'
+			},
+			{
+				input: [
+					[ 'i', false ],
+					[ '\\', true ]
+				], output: 'ì', description: 'Yoruba ì'
+				
+			},
+			{
+				input: [
+					[ 'i', false ],
+					[ '/', true ]
+				], output: 'í', description: 'Yoruba í'
+				
+			},
+			{
+				input: [
+					[ 'o', false ],
+					[ '\\', true ]
+				], output: 'ò', description: 'Yoruba ò'
+				
+			},
+			{
+				input: [
+					[ 'o', false ],
+					[ '/', true ]
+				], output: 'ó', description: 'Yoruba ó'
+			},
+			{
+				input: [
+					[ 'o', false ],
+					[ '.', true ]
+				], output: 'ọ', description: 'Yoruba ọ'
+			},
+			{
+				input: [
+					[ 'o', false ],
+					[ '.', true ],
+					[ '\\', true ]
+				], output: 'ọ̀', description: 'Yoruba ọ̀'
+			},
+			{
+				input: [
+					[ 'o', false ],
+					[ '.', true ],
+					[ '/', true ]
+				], output: 'ọ́', description: 'Yoruba ọ́'
+			},
+			{
+				input: [
+					[ 'u', false ],
+					[ '\\', true ]
+				], output: 'ù', description: 'Yoruba ù'
+				
+			},
+			{
+				input: [
+					[ 'u', false ],
+					[ '/', true ]
+				], output: 'ú', description: 'Yoruba ú'
+				
+			}
+		],
+		inputmethod: 'yo-alt'
 	}
 ];
