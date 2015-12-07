@@ -30,6 +30,10 @@
 			name: 'ফনেটিক',
 			source: 'rules/as/as-phonetic.js'
 		},
+		'as-rodali': {
+			name: 'ৰ\'দালি',
+			source: 'rules/as/as-rodali.js'
+		},
 		'as-transliteration': {
 			name: 'প্ৰতিৰূপান্তৰণ',
 			source: 'rules/as/as-transliteration.js'
