@@ -16,7 +16,7 @@
 			// Combining grave tone mark
 			['\\\\', '\u0340'],
 			// Combining acute tone mark
-			["/", '\u0341']
+			['/', '\u0341']
 		]
 	};
 
