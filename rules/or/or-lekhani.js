@@ -7,7 +7,7 @@
 		description: 'Odia Lekhani phonetic input method',
 		date: '2012-10-14',
 		URL: 'http://github.com/wikimedia/jquery.ime',
-		author: 'Junaid P V and Subhashish Panigrahi',
+		author: 'Junaid P V, Subhashish Panigrahi and Jnanaranjan Sahu',
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 4,
