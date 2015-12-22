@@ -221,6 +221,35 @@
 			return false;
 		},
 
+		getTextPrecedingSelection: function ( maxLength ) {
+			var pos, startPos, endPos;
+			// Get the current caret position. The user may have selected text to overwrite,
+			// so get both the start and end position of the selection. If there is no selection,
+			// startPos and endPos will be equal.
+			pos = this.getCaretPosition( this.$element );
+			startPos = pos[0];
+			endPos = pos[1];
+			// Return the last few characters before the selection. But don't include
+			// anything before an element boundary (denoted by '\uFFFE').
+			return this.lastNChars(
+				this.$element.val() || getTextRepresentation( this.$element[ 0 ] ),
+				startPos,
+				maxLength
+			).replace( /.*\uFFFE/, '' );
+		},
+
+		replaceSelection: function ( oldText, newText ) {
+			var divergingPos, input, pos, startPos, endPos;
+			// Drop a common prefix, if any
+			pos = this.getCaretPosition( this.$element );
+			startPos = pos[0];
+			endPos = pos[1];
+			//divergingPos = this.firstDivergence( oldText, newText );
+			//oldText = oldText.substring( divergingPos );
+			//newText = newText.substring( divergingPos );
+			replaceText( this.$element, newText, startPos - oldText.length + 1, endPos );
+		},
+
 		/**
 		 * Check whether the input method is active or not
 		 * @returns {Boolean}
