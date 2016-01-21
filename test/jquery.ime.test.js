@@ -1,8 +1,16 @@
 ( function ( $ ) {
 	'use strict';
 
-	var $textarea, textareaIME, imeTest, typeChars,
-		caretTests, clusterCaretTests;
+	var $textarea, textareaIME, imeTest, typeChars;
+
+	function setCollapsedSelection( node, offset ) {
+		var sel = window.getSelection(),
+			range = document.createRange();
+
+		range.setStart( node, offset );
+		sel.removeAllRanges();
+		sel.addRange( range );
+	}
 
 	QUnit.module( 'jquery.ime - $.fn.ime tests', {
 		setup: function () {
@@ -173,17 +181,8 @@
 		assert.strictEqual( $.ime.preferences.getIM( 'kn' ), 'kn-inscript', 'Kannada Inscript is the preferred IM for Kannada' );
 	} );
 
-	QUnit.test( 'Utility functions tests', 12, function ( assert ) {
+	QUnit.test( 'Utility functions tests', 5, function ( assert ) {
 		var setLanguageResult;
-
-		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 5, 2 ), 'ba', 'lastNChars works with short buffer.' );
-		assert.strictEqual( textareaIME.lastNChars( 'foobarbaz', 2, 5 ), 'fo', 'lastNChars works with long buffer.' );
-
-		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abc' ), -1, 'firstDivergence - equal strings' );
-		assert.strictEqual( textareaIME.firstDivergence( 'a', 'b' ), 0, 'firstDivergence - different one-letter strings' );
-		assert.strictEqual( textareaIME.firstDivergence( 'a', 'bb' ), 0, 'firstDivergence - different strings, different lengths' );
-		assert.strictEqual( textareaIME.firstDivergence( 'abc', 'abd' ), 2, 'firstDivergence - different strings with equal beginnings' );
-		assert.strictEqual( textareaIME.firstDivergence( 'abcd', 'abd' ), 2, 'firstDivergence - different strings, equal beginnings, different lengths' );
 
 		assert.strictEqual( textareaIME.getLanguage(), null, 'ime language is initially null' );
 		setLanguageResult = textareaIME.setLanguage( 'noSuchLanguage' );
@@ -197,36 +196,6 @@
 	QUnit.test( 'Default input method for language without input methods test', 1, function ( assert ) {
 		$.ime.preferences.setLanguage( 'es' );
 		assert.strictEqual( $.ime.preferences.getIM(), 'system', 'Use native keyboard is selected by default' );
-	} );
-
-	function caretTest( text, start, end ) {
-		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
-			var $ced = $( '<div contenteditable="true">' ),
-				correction,
-				position,
-				ime;
-
-			$( '#qunit-fixture' ).append( $ced );
-			$ced.ime();
-			ime = $ced.data( 'ime' );
-
-			$ced.html( text );
-			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
-			position = ime.getCaretPosition( $ced );
-			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
-		} );
-	}
-
-	caretTests = [
-		['ക്', 0, 0],
-		['ക്', 1, 1],
-		['ന്ത്', 1, 3],
-		['ന്ത്', 1, 4],
-		['ക്ത്ര', 1, 4]
-	];
-
-	$.each( caretTests, function( i, test ) {
-		caretTest( test[0], test[1], test[2] );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rule files test', {
@@ -278,37 +247,6 @@
 				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
 			}
 		} );
-	} );
-
-	function clusterCaretTest( text, start, end ) {
-		QUnit.test( 'Cursor positioning tests -' + text + '(' + start + ',' + end + ')' , 1, function ( assert ) {
-			var $ced = $( '<div contenteditable="true">' ),
-				correction,
-				position,
-				ime;
-
-			$( '#qunit-fixture' ).append( $ced );
-			$ced.ime();
-			ime = $ced.data( 'ime' );
-
-			$ced.html( text );
-			correction = ime.setCaretPosition( $ced, { start: start, end: end } );
-			position = ime.getCaretPosition( $ced );
-			assert.deepEqual( position, [start - correction[0], end + correction[1] ], 'Caret is at ' + ( start - correction[0] ) + ', ' + ( end + correction[1] ) );
-		} );
-	}
-
-	// @todo FIXME: Unused.
-	clusterCaretTests = [
-		['ക്', 0, 0],
-		['ക്', 1, 1],
-		['ന്ത്', 1, 3],
-		['ന്ത്', 1, 4],
-		['ക്ത്ര', 1, 4]
-	];
-
-	$.each( caretTests, function( i, test ) {
-		clusterCaretTest( test[0], test[1], test[2] );
 	} );
 
 	QUnit.module( 'jquery.ime - input method rules tests', {
@@ -402,7 +340,7 @@
 	 * and boolean altKey value
 	 */
 	typeChars = function ( $input, characters ) {
-		var i, character, altKeyValue, shiftKeyValue, code, event, replacementSkipped, textEnd,
+		var i, character, altKeyValue, shiftKeyValue, code, event, replacementSkipped, textNode,
 			ime = $input.data( 'ime' ),
 			contentEditable = $input.is( '[contenteditable]' ),
 			len = characters.length;
@@ -444,11 +382,8 @@
 			if ( replacementSkipped ) {
 				if ( contentEditable ) {
 					$input.text( $input.text() + character );
-					textEnd = $input.text().length;
-					ime.setCaretPosition( $input, {
-						start: textEnd,
-						end: textEnd
-					} );
+					textNode = $input[ 0 ].firstChild;
+					setCollapsedSelection( textNode, textNode.nodeValue.length );
 				} else {
 					$input.val( $input.val() + character );
 				}
