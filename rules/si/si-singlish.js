@@ -11,7 +11,7 @@
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 5,
-		maxKeyLength: 2,
+		maxKeyLength: 5,
 		patterns: [
 			//['ඬ්හ්a', 'ඳ'],	// nndha
 			['ඬ්h', 'ඳ්'], // nndh
