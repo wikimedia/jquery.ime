@@ -144,9 +144,9 @@ var testFixtures = [
 		description: 'Western Baluchi Keyboard test',
 		tests: [
 			{ input: '`',  output: '\u200c', description: 'Western Baluchi Keyboard Layout: ` -> \\u200c' },
-			{ input: '1',  output: '١', description: 'Western Baluchi Keyboard Layout: 1 -> ١' },
-			{ input: '2',  output: '٢', description: 'Western Baluchi Keyboard Layout: 2 -> ٢' },
-			{ input: '3',  output: '٣', description: 'Western Baluchi Keyboard Layout: 3 -> ٣' },
+			{ input: '1',  output: '۱', description: 'Western Baluchi Keyboard Layout: 1 -> ١' },
+			{ input: '2',  output: '۲', description: 'Western Baluchi Keyboard Layout: 2 -> ٢' },
+			{ input: '3',  output: '۳', description: 'Western Baluchi Keyboard Layout: 3 -> ٣' },
 			{ input: '4',  output: '۴', description: 'Western Baluchi Keyboard Layout: 4 -> ۴' },
 			{ input: '5',  output: '۵', description: 'Western Baluchi Keyboard Layout: 5 -> ۵' },
 			{ input: '6',  output: '۶', description: 'Western Baluchi Keyboard Layout: 6 -> ۶' },
