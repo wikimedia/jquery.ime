@@ -1,17 +1,50 @@
 ( function ( $ ) {
 	'use strict';
+	var TextEntryFactory, TextEntry, FormWidgetEntry, ContentEditableEntry,
+		defaultInputMethod;
 
 	// rangy is defined in the rangy library
 	/*global rangy */
 
 	/**
+	 * Just initializes an empty static object.
+	 * Similar to initClass in https://www.mediawiki.org/wiki/OOjs
+	 *
+	 * @param {Function} fn
+	 */
+	function initClass( fn ) {
+		fn.static = fn.static || {};
+	}
+
+	/**
+	 * Inheritance. Uses pattern similar to OOjs (https://www.mediawiki.org/wiki/OOjs).
+	 * Extend prototype and static methods and properties of child constructor from
+	 * a parent constructor.
+	 *
+	 * @param {Function} targetFn
+	 * @param {Function} originFn
+	 */
+	function inheritClass( targetFn, originFn ) {
+		targetFn.parent = originFn;
+		targetFn.prototype = $.extend( {}, originFn.prototype );
+		targetFn.prototype.constructor = originFn.constructor;
+		targetFn.static = $.extend( {}, originFn.static );
+	}
+
+	/**
 	 * IME Class
+	 * @class
+	 *
+	 * @constructor
+	 * @param {HTMLElement} element Element on which to listen for events
+	 * @param {TextEntry} textEntry Text entry object to use to get/set text
 	 * @param {Function} [options.helpHandler] Called for each input method row in the selector
 	 * @param {Object} options.helpHandler.imeSelector
 	 * @param {String} options.helpHandler.ime Id of the input method
 	 */
-	function IME( element, options ) {
+	function IME( element, textEntry, options ) {
 		this.$element = $( element );
+		this.textEntry = textEntry;
 		// This needs to be delayed here since extending language list happens at DOM ready
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
@@ -124,7 +157,7 @@
 		 */
 		keypress: function ( e ) {
 			var altGr = false,
-				c, startPos, pos, endPos, divergingPos, input, replacement;
+				c, input, replacement;
 
 			if ( !this.active ) {
 				return true;
@@ -157,24 +190,10 @@
 
 			c = String.fromCharCode( e.which );
 
-			// Get the current caret position. The user may have selected text to overwrite,
-			// so get both the start and end position of the selection. If there is no selection,
-			// startPos and endPos will be equal.
-			pos = this.getCaretPosition( this.$element );
-			startPos = pos[0];
-			endPos = pos[1];
-
-			// Get the last few characters before the one the user just typed,
+			// Append the character being typed to the preceding few characters,
 			// to provide context for the transliteration regexes.
-			// We need to append c because it hasn't been added to $this.val() yet
-			input = this.lastNChars(
-				this.$element.val() || this.$element.text(),
-				startPos,
-				this.inputmethod.maxKeyLength
-			);
-			input += c;
-
-			replacement = this.transliterate( input, this.context, altGr );
+			input = this.textEntry.getTextBeforeSelection( this.inputmethod.maxKeyLength );
+			replacement = this.transliterate( input + c, this.context, altGr );
 
 			// Update the context
 			this.context += c;
@@ -195,11 +214,7 @@
 				return true;
 			}
 
-			// Drop a common prefix, if any
-			divergingPos = this.firstDivergence( input, replacement.output );
-			input = input.substring( divergingPos );
-			replacement.output = replacement.output.substring( divergingPos );
-			replaceText( this.$element, replacement.output, startPos - input.length + 1, endPos );
+			this.textEntry.replaceTextAtSelection( input.length, replacement.output );
 
 			e.stopPropagation();
 
@@ -329,121 +344,200 @@
 
 			return deferred.promise();
 		},
+	};
 
-		/**
-		 * Returns an array [start, end] of the beginning
-		 * and the end of the current selection in $element
-		 * @returns {Array}
-		 */
-		getCaretPosition: function ( $element ) {
-			return getCaretPosition( $element );
-		},
+	/**
+	 * TextEntry factory
+	 * @class
+	 *
+	 * @constructor
+	 */
+	TextEntryFactory = function IMETextEntryFactory() {
+		this.TextEntryClasses = [];
+	};
 
-		/**
-		 * Set the caret position in the div.
-		 * @param {jQuery} $element The content editable div element
-		 * @param {Object} position An object with start and end properties.
-		 * @return {Array} If the cursor could not be placed at given position, how
-		 * many characters had to go back to place the cursor
-		 */
-		setCaretPosition: function ( $element, position ) {
-			return setCaretPosition( $element, position );
-		},
+	/* Inheritance */
 
-		/**
-		 * Find the point at which a and b diverge, i.e. the first position
-		 * at which they don't have matching characters.
-		 *
-		 * @param a String
-		 * @param b String
-		 * @return Position at which a and b diverge, or -1 if a === b
-		 */
-		firstDivergence: function ( a, b ) {
-			return firstDivergence( a, b );
-		},
+	initClass( TextEntryFactory );
 
-		/**
-		 * Get the n characters in str that immediately precede pos
-		 * Example: lastNChars( 'foobarbaz', 5, 2 ) === 'ba'
-		 *
-		 * @param str String to search in
-		 * @param pos Position in str
-		 * @param n Number of characters to go back from pos
-		 * @return Substring of str, at most n characters long, immediately preceding pos
-		 */
-		lastNChars: function ( str, pos, n ) {
-			return lastNChars( str, pos, n );
+	/* Methods */
+
+	/**
+	 * Register a TextEntry class, with priority over previous registrations
+	 *
+	 * @param {TextEntry} Class to register
+	 */
+	TextEntryFactory.prototype.register = function ( TextEntryClass ) {
+		this.TextEntryClasses.unshift( TextEntryClass );
+	};
+
+	/**
+	 * Wrap an editable element with the appropriate TextEntry class
+	 *
+	 * @param {jQuery} $element The element to wrap
+	 * @return {TextEntry|undefined} A TextEntry, or undefined if no match
+	 */
+	TextEntryFactory.prototype.wrap = function ( $element ) {
+		var i, len, TextEntryClass;
+		for ( i = 0, len = this.TextEntryClasses.length; i < len; i++ ) {
+			TextEntryClass = this.TextEntryClasses[ i ];
+			if ( TextEntryClass.static.canWrap( $element ) ) {
+				return new TextEntryClass( $element );
+			}
+		}
+		return undefined;
+	};
+
+	/* Initialization */
+
+	TextEntryFactory.static.singleton = new TextEntryFactory();
+
+	/**
+	 * Generic text entry
+	 * @class
+	 *
+	 * @abstract
+	 */
+	TextEntry = function IMETextEntry() {
+	};
+
+	/* Inheritance */
+
+	initClass( TextEntry );
+
+	/* Static methods */
+
+	/**
+	 * Test whether can wrap this type of element
+	 *
+	 * @param {jQuery} $element The element to wrap
+	 * @return {boolean} Whether the element can be wrapped
+	 */
+	TextEntry.static.canWrap = function () {
+		return false;
+	};
+
+	/* Abstract methods */
+
+	/**
+	 * Get text immediately before the current selection start.
+	 *
+	 * This SHOULD return the empty string for non-collapsed selections.
+	 *
+	 * @param {number} maxLength Maximum number of chars (code units) to return
+	 * @return {String} Up to maxLength of text
+	 */
+	TextEntry.prototype.getTextBeforeSelection = null;
+
+	/**
+	 * Replace the currently selected text and/or text before the selection
+	 *
+	 * @param {number} precedingCharCount Number of chars before selection to replace
+	 * @param {String} newText Replacement text
+	 */
+	TextEntry.prototype.replaceTextAtSelection = null;
+
+	/**
+	 * TextEntry class for input/textarea widgets
+	 * @class
+	 *
+	 * @constructor
+	 * @param {jQuery} $element The element to wrap
+	 */
+	FormWidgetEntry = function IMEFormWidgetEntry( $element ) {
+		this.$element = $element;
+	};
+
+	/* Inheritance */
+
+	inheritClass( FormWidgetEntry, TextEntry );
+
+	/* Static methods */
+
+	/**
+	 * @inheritdoc TextEntry
+	 */
+	FormWidgetEntry.static.canWrap = function ( $element ) {
+		return $element.is( 'input:not([type]), input[type=text], input[type=search], textarea' ) &&
+			!$element.prop( 'readonly' ) &&
+			!$element.prop( 'disabled' ) &&
+			!$element.hasClass( 'noime' );
+	};
+
+	/* Instance methods */
+
+	/**
+	 * @inheritdoc TextEntry
+	 */
+	FormWidgetEntry.prototype.getTextBeforeSelection = function ( maxLength ) {
+		var pos = this.getCaretPosition();
+		return this.$element.val().substring(
+			Math.max( 0, pos.start - maxLength ),
+			pos.start
+		);
+	};
+
+	/**
+	 * @inheritdoc TextEntry
+	 */
+	FormWidgetEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
+		var selection,
+			length,
+			newLines,
+			start,
+			scrollTop,
+			pos,
+			element = this.$element.get( 0 );
+
+		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
+			// IE9+ and all other browsers
+			start = element.selectionStart;
+			scrollTop = element.scrollTop;
+
+			// Replace the whole text of the text area:
+			// text before + newText + text after.
+			// This could be made better if range selection worked on browsers.
+			// But for complex scripts, browsers place cursor in unexpected places
+			// and it's not possible to fix cursor programmatically.
+			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+			element.value = element.value.substring( 0, start - precedingCharCount ) +
+				newText +
+				element.value.substring( element.selectionEnd, element.value.length );
+
+			// restore scroll
+			element.scrollTop = scrollTop;
+			// set selection
+			element.selectionStart = element.selectionEnd = start - precedingCharCount + newText.length;
+		} else {
+			// IE8 and lower
+			pos = this.getCaretPosition();
+			selection = element.createTextRange();
+			length = element.value.length;
+			// IE doesn't count \n when computing the offset, so we won't either
+			newLines = element.value.match( /\n/g );
+
+			if ( newLines ) {
+				length = length - newLines.length;
+			}
+
+			selection.moveStart( 'character', pos.start - precedingCharCount );
+			selection.moveEnd( 'character', pos.end - length );
+
+			selection.text = newText;
+			selection.collapse( false );
+			selection.select();
 		}
 	};
 
 	/**
-	 * jQuery plugin ime
-	 * @param {Object} option
+	 * Get the current selection offsets inside the widget
+	 *
+	 * @return {Object} Offsets in chars (0 means first offset *or* no selection in widget)
+	 * @return.start {number} Selection start
+	 * @return.end {number} Selection end
 	 */
-	$.fn.ime = function ( option ) {
-		return this.each( function () {
-			var data,
-				$this = $( this ),
-				options = typeof option === 'object' && option;
-
-			// Some exclusions: IME shouldn't be applied to textareas with
-			// these properties.
-			if ( $this.prop( 'readonly' ) ||
-				$this.prop( 'disabled' ) ||
-				$this.hasClass( 'noime' ) ) {
-				return;
-			}
-
-			data = $this.data( 'ime' );
-
-			if ( !data ) {
-				data = new IME( this, options );
-				$this.data( 'ime', data );
-			}
-
-			if ( typeof option === 'string' ) {
-				data[option]();
-			}
-		} );
-	};
-
-	$.ime = {};
-	$.ime.inputmethods = {};
-	$.ime.sources = {};
-	$.ime.preferences = {};
-	$.ime.languages = {};
-
-	var defaultInputMethod = {
-		contextLength: 0,
-		maxKeyLength: 1
-	};
-
-	$.ime.register = function ( inputMethod ) {
-		$.ime.inputmethods[inputMethod.id] = $.extend( {}, defaultInputMethod, inputMethod );
-	};
-
-	// default options
-	$.ime.defaults = {
-		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
-		languages: [], // Languages to be used- by default all languages
-		helpHandler: null // Called for each ime option in the menu
-	};
-
-	/**
-	 * private function for debugging
-	 */
-	function debug( $obj ) {
-		if ( window.console && window.console.log ) {
-			window.console.log( $obj );
-		}
-	}
-
-	/**
-	 * Returns an array [start, end] of the beginning
-	 * and the end of the current selection in $element
-	 */
-	function getCaretPosition( $element ) {
-		var el = $element.get( 0 ),
+	FormWidgetEntry.prototype.getCaretPosition = function () {
+		var el = this.$element.get( 0 ),
 			start = 0,
 			end = 0,
 			normalizedValue,
@@ -452,10 +546,6 @@
 			len,
 			newLines,
 			endRange;
-
-		if ( $element.is( '[contenteditable]' ) ) {
-			return getDivCaretPosition( el );
-		}
 
 		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
 			start = el.selectionStart;
@@ -496,264 +586,189 @@
 				}
 			}
 		}
+		return { start: start, end: end };
+	};
 
-		return [start, end];
-	}
+	TextEntryFactory.static.singleton.register( FormWidgetEntry );
 
 	/**
-	 * Helper function to get an IE TextRange object for an element
+	 * TextEntry class for ContentEditable
+	 * @class
+	 *
+	 * @constructor
+	 * @param {jQuery} $element The element to wrap
 	 */
-	function rangeForElementIE( element ) {
-		var selection;
+	ContentEditableEntry = function IMEContentEditableEntry( $element ) {
+		this.$element = $element;
+	};
 
-		if ( element.nodeName.toLowerCase() === 'input' ) {
-			selection = element.createTextRange();
-		} else {
-			selection = document.body.createTextRange();
-			selection.moveToElementText( element );
+	/* Inheritance */
+
+	inheritClass( ContentEditableEntry, TextEntry );
+
+	/* Static methods */
+
+	/**
+	 * @inheritdoc TextEntry
+	 */
+	ContentEditableEntry.static.canWrap = function ( $element ) {
+		return $element.is( '[contenteditable]' ) && !$element.hasClass( 'noime' );
+	};
+
+	/* Instance methods */
+
+	/**
+	 * @inheritdoc TextEntry
+	 */
+	ContentEditableEntry.prototype.getTextBeforeSelection = function ( maxLength ) {
+		var range = this.getSelectedRange();
+		if ( !range || !range.collapsed || range.startContainer.nodeType !== Node.TEXT_NODE ) {
+			return '';
 		}
+		return range.startContainer.nodeValue.substring(
+			Math.max( 0, range.startOffset - maxLength ),
+			range.startOffset
+		);
+	};
 
-		return selection;
-	}
+	/**
+	 * @inheritdoc SelectionWrapper
+	 */
+	ContentEditableEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
+		var range, textNode, textOffset, newOffset, newRange;
 
-	function replaceText( $element, replacement, start, end ) {
-		var selection,
-			length,
-			newLines,
-			scrollTop,
-			range,
-			correction,
-			textNode,
-			element = $element.get( 0 );
-
-		if ( $element.is( '[contenteditable]' ) ) {
-			correction = setCaretPosition( $element, {
-				start: start,
-				end: end
-			} );
-
-			rangy.init();
-			selection = rangy.getSelection();
-			range = selection.getRangeAt( 0 );
-
-			if ( correction[0] > 0 ) {
-				replacement = selection.toString().substring( 0, correction[0] ) + replacement;
-			}
-
-			textNode = document.createTextNode( replacement );
-			range.deleteContents();
-			range.insertNode( textNode );
-			range.commonAncestorContainer.normalize();
-			start = end = start + replacement.length - correction[0];
-			setCaretPosition( $element, {
-				start: start,
-				end: end
-			} );
-
+		if ( !this.getSelectedRange() ) {
 			return;
 		}
 
-		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
-			// IE9+ and all other browsers
-			scrollTop = element.scrollTop;
+		// Trigger any externally registered jQuery compositionstart event listeners.
+		// TODO: Try node.dispatchEvent( new CompositionEvent(...) ) so listeners not
+		// registered using jQuery will also get triggered, then fallback gracefully for
+		// browsers that do not support it.
+		this.$element.trigger( 'compositionstart' );
 
-			// Replace the whole text of the text area:
-			// text before + replacement + text after.
-			// This could be made better if range selection worked on browsers.
-			// But for complex scripts, browsers place cursor in unexpected places
-			// and it's not possible to fix cursor programmatically.
-			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start ) +
-				replacement +
-				element.value.substring( end, element.value.length );
+		range = this.getSelectedRange();
 
-			// restore scroll
-			element.scrollTop = scrollTop;
-			// set selection
-			element.selectionStart = element.selectionEnd = start + replacement.length;
-		} else {
-			// IE8 and lower
-			selection = rangeForElementIE(element);
-			length = element.value.length;
-			// IE doesn't count \n when computing the offset, so we won't either
-			newLines = element.value.match( /\n/g );
-
-			if ( newLines ) {
-				length = length - newLines.length;
-			}
-
-			selection.moveStart( 'character', start );
-			selection.moveEnd( 'character', end - length );
-
-			selection.text = replacement;
-			selection.collapse( false );
-			selection.select();
+		if ( !range.collapsed ) {
+			range.deleteContents();
 		}
-	}
 
-	function getDivCaretPosition( element ) {
-		var charIndex = 0,
-			start = 0,
-			end = 0,
-			foundStart = false,
-			foundEnd = false,
-			sel;
+		if ( range.startContainer.nodeType === Node.TEXT_NODE ) {
+			// Alter this text node's content and move the cursor
+			textNode = range.startContainer;
+			textOffset = range.startOffset;
+			textNode.nodeValue =
+				textNode.nodeValue.substr( 0, textOffset - precedingCharCount ) +
+				newText +
+				textNode.nodeValue.substr( textOffset );
+			newOffset = textOffset - precedingCharCount + newText.length;
+			newRange = rangy.createRange();
+			newRange.setStart( range.startContainer, newOffset );
+			newRange.setEnd( range.startContainer, newOffset );
+			rangy.getSelection().setSingleRange( newRange );
+		} else {
+			// XXX assert precedingCharCount === 0
+			// Insert a new text node with the new text
+			textNode = document.createTextNode( newText );
+			range.startContainer.insertBefore(
+				textNode,
+				range.startContainer.childNodes[ range.startOffset ]
+			);
+			newRange = rangy.createRange();
+			newRange.setStart( textNode, textNode.length );
+			newRange.setEnd( textNode, textNode.length );
+			rangy.getSelection().setSingleRange( newRange );
+		}
 
+		// Trigger any externally registered jQuery compositionend / input event listeners.
+		// TODO: Try node.dispatchEvent( new CompositionEvent(...) ) so listeners not
+		// registered using jQuery will also get triggered, then fallback gracefully for
+		// browsers that do not support it.
+		this.$element.trigger( 'compositionend' );
+		this.$element.trigger( 'input' );
+	};
+
+	/**
+	 * Get the selection range inside the wrapped element, or null
+	 *
+	 * @return {Range|null} The selection range
+	 */
+	ContentEditableEntry.prototype.getSelectedRange = function () {
+		var sel, range;
 		rangy.init();
 		sel = rangy.getSelection();
-
-		function traverseTextNodes( node, range ) {
-			var i, childNodesCount;
-
-			if ( node.nodeType === Node.TEXT_NODE ) {
-				if ( !foundStart && node === range.startContainer ) {
-					start = charIndex + range.startOffset;
-					foundStart = true;
-				}
-
-				if ( foundStart && node === range.endContainer ) {
-					end = charIndex + range.endOffset;
-					foundEnd = true;
-				}
-
-				charIndex += node.length;
-			} else {
-				childNodesCount = node.childNodes.length;
-
-				for ( i = 0; i < childNodesCount; ++i ) {
-					traverseTextNodes( node.childNodes[i], range );
-					if ( foundEnd ) {
-						break;
-					}
-				}
-			}
+		if ( sel.rangeCount === 0 ) {
+			return null;
 		}
-
-		if ( sel.rangeCount ) {
-			traverseTextNodes( element, sel.getRangeAt( 0 ) );
+		range = sel.getRangeAt( 0 );
+		if ( !this.$element[ 0 ].contains( range.commonAncestorContainer ) ) {
+			return null;
 		}
+		return range;
+	};
 
-		return [ start, end ];
-	}
+	TextEntryFactory.static.singleton.register( ContentEditableEntry );
 
-	function setCaretPosition( $element, position ) {
-		var currentPosition,
-			startCorrection = 0,
-			endCorrection = 0,
-			element = $element[0];
-
-		setDivCaretPosition( element, position );
-		currentPosition = getDivCaretPosition( element );
-		// see Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-		while ( position.start !== currentPosition[0] ) {
-			position.start -= 1; // go back one more position.
-			if ( position.start < 0 ) {
-				// never go beyond 0
-				break;
-			}
-			setDivCaretPosition( element, position );
-			currentPosition = getDivCaretPosition( element );
-			startCorrection += 1;
-		}
-
-		while ( position.end !== currentPosition[1] ) {
-			position.end += 1; // go forward one more position.
-			setDivCaretPosition( element, position );
-			currentPosition = getDivCaretPosition( element );
-			endCorrection += 1;
-			if ( endCorrection > 10 ) {
-				// XXX avoid rare case of infinite loop here.
-				break;
-			}
-		}
-
-		return [startCorrection, endCorrection];
-	}
+	/* Exports */
 
 	/**
-	 * Set the caret position in the div.
-	 * @param {Element} element The content editable div element
-	 * @param position
+	 * jQuery plugin ime
+	 * @param {Object} option
 	 */
-	function setDivCaretPosition( element, position ) {
-		var nextCharIndex,
-			charIndex = 0,
-			range = rangy.createRange(),
-			foundStart = false,
-			foundEnd = false;
+	$.fn.ime = function ( option ) {
+		return this.each( function () {
+			var data, textEntry,
+				$this = $( this ),
+				options = typeof option === 'object' && option;
 
-		range.collapseToPoint( element, 0 );
-
-		function traverseTextNodes( node ) {
-			var i, len;
-
-			if ( node.nodeType === 3 ) {
-				nextCharIndex = charIndex + node.length;
-
-				if ( !foundStart && position.start >= charIndex && position.start <= nextCharIndex ) {
-					range.setStart( node, position.start - charIndex );
-					foundStart = true;
+			data = $this.data( 'ime' );
+			if ( !data ) {
+				textEntry = TextEntryFactory.static.singleton.wrap( $this );
+				if ( textEntry === undefined ) {
+					return;
 				}
-
-				if ( foundStart && position.end >= charIndex && position.end <= nextCharIndex ) {
-					range.setEnd( node, position.end - charIndex );
-					foundEnd = true;
-				}
-
-				charIndex = nextCharIndex;
-			} else {
-				for ( i = 0, len = node.childNodes.length; i < len; ++i ) {
-					traverseTextNodes( node.childNodes[i] );
-					if ( foundEnd ) {
-						rangy.getSelection().setSingleRange( range );
-						break;
-					}
-				}
+				data = new IME( this, textEntry, options );
+				$this.data( 'ime', data );
 			}
-		}
 
-		traverseTextNodes( element );
+			if ( typeof option === 'string' ) {
+				data[option]();
+			}
+		} );
+	};
 
-	}
+	$.ime = {};
+	$.ime.inputmethods = {};
+	$.ime.sources = {};
+	$.ime.preferences = {};
+	$.ime.languages = {};
+
+	$.ime.textEntryFactory = TextEntryFactory.static.singleton;
+	$.ime.TextEntry = TextEntry;
+	$.ime.inheritClass = inheritClass;
+
+	defaultInputMethod = {
+		contextLength: 0,
+		maxKeyLength: 1
+	};
+
+	$.ime.register = function ( inputMethod ) {
+		$.ime.inputmethods[inputMethod.id] = $.extend( {}, defaultInputMethod, inputMethod );
+	};
+
+	// default options
+	$.ime.defaults = {
+		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
+		languages: [], // Languages to be used- by default all languages
+		helpHandler: null // Called for each ime option in the menu
+	};
 
 	/**
-	 * Find the point at which a and b diverge, i.e. the first position
-	 * at which they don't have matching characters.
-	 *
-	 * @param a String
-	 * @param b String
-	 * @return Position at which a and b diverge, or -1 if a === b
+	 * private function for debugging
 	 */
-	function firstDivergence( a, b ) {
-		var minLength, i;
-
-		minLength = a.length < b.length ? a.length : b.length;
-
-		for ( i = 0; i < minLength; i++ ) {
-			if ( a.charCodeAt( i ) !== b.charCodeAt( i ) ) {
-				return i;
-			}
-		}
-
-		return -1;
-	}
-
-	/**
-	 * Get the n characters in str that immediately precede pos
-	 * Example: lastNChars( 'foobarbaz', 5, 2 ) === 'ba'
-	 *
-	 * @param str String to search in
-	 * @param pos Position in str
-	 * @param n Number of characters to go back from pos
-	 * @return Substring of str, at most n characters long, immediately preceding pos
-	 */
-	function lastNChars( str, pos, n ) {
-		if ( n === 0 ) {
-			return '';
-		} else if ( pos <= n ) {
-			return str.substr( 0, pos );
-		} else {
-			return str.substr( pos - n, n );
+	function debug( $obj ) {
+		if ( window.console && window.console.log ) {
+			window.console.log( $obj );
 		}
 	}
 
