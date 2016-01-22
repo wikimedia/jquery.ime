@@ -3414,21 +3414,18 @@ var testFixtures = [
 					[ 'a', false ],
 					[ '\\', true ]
 				], output: 'à', description: 'Yoruba à'
-				
 			},
 			{
 				input: [
 					[ 'a', false ],
 					[ '/', true ]
 				], output: 'á', description: 'Yoruba á'
-				
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '\\', true ]
 				], output: 'è', description: 'Yoruba è'
-				
 			},
 			{
 				input: [
@@ -3461,21 +3458,18 @@ var testFixtures = [
 					[ 'i', false ],
 					[ '\\', true ]
 				], output: 'ì', description: 'Yoruba ì'
-				
 			},
 			{
 				input: [
 					[ 'i', false ],
 					[ '/', true ]
 				], output: 'í', description: 'Yoruba í'
-				
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '\\', true ]
 				], output: 'ò', description: 'Yoruba ò'
-				
 			},
 			{
 				input: [
@@ -3508,14 +3502,12 @@ var testFixtures = [
 					[ 'u', false ],
 					[ '\\', true ]
 				], output: 'ù', description: 'Yoruba ù'
-				
 			},
 			{
 				input: [
 					[ 'u', false ],
 					[ '/', true ]
 				], output: 'ú', description: 'Yoruba ú'
-				
 			}
 		],
 		inputmethod: 'yo-alt'
