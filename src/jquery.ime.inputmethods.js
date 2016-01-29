@@ -636,7 +636,7 @@
 		},
 		'as': {
 			autonym: 'অসমীয়া',
-			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2' ]
+			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2', 'as-rodali' ]
 		},
 		'av': {
 			autonym: 'авар',
