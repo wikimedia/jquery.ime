@@ -1,9 +1,15 @@
 $( document ).ready( function () {
 	'use strict';
 
-	var imeselector, languages, $imeSelector, $langselector;
+	var $ced, ime, $imeSelector, $langSelector;
 
-	$( '#ced' ).ime({ imePath: '../../' });
+	$.ime.setPath( '../../' );
+	$ced = $( '#ced' );
+	// Initialise IME on this element
+	$ced.ime( { showSelector: false } );
+	// Get the IME object
+	ime = $ced.data( 'ime' );
+	ime.enable();
 
 	$( '#bold' ).click( function () {
 		document.execCommand( 'bold', false, null );
@@ -17,38 +23,42 @@ $( document ).ready( function () {
 		document.execCommand( 'underline', false, null );
 	} );
 
-	// get an instance of inputmethods
-	imeselector = $( '#ced' ).data( 'imeselector' );
-	imeselector.$imeSetting = $([]);
-	languages = $.ime.languages;
-	// Also test system inputmethods.
+	// language and input method list box widgets
+	$langSelector = $( 'select#language' );
 	$imeSelector = $( 'select#imeSelector' );
-	$langselector = $( 'select#language' );
 
-	function listinputmethods ( language ) {
-		var inputmethods = $.ime.languages[language].inputmethods;
+	ime.getLanguageCodes().forEach( function ( lang ) {
+		$langSelector.append(
+			$( '<option></option>' )
+				.attr( 'value', lang )
+				.text( ime.getAutonym( lang ) )
+		);
+	} );
+	$langSelector.on( 'change', function () {
+		var lang = $langSelector.find( 'option:selected' ).val() || null;
+		ime.setLanguage( lang );
+	} );
+	$ced.on( 'imeLanguageChange', function () {
+		listInputMethods( ime.getLanguage() );
+	} );
+
+	function listInputMethods( lang ) {
 		$imeSelector.empty();
-		$.each( inputmethods, function ( index, inputmethodId ) {
-			var inputmethod = $.ime.sources[inputmethodId];
-			$imeSelector.append( $( '<option></option>' )
-				.attr( 'value', inputmethodId ).text( inputmethod.name ) );
+		ime.getInputMethods( lang ).forEach( function ( inputMethod ) {
+			$imeSelector.append(
+				$( '<option></option>' )
+					.attr( 'value', inputMethod.id )
+					.text( inputMethod.name )
+			);
 		} );
 		$imeSelector.trigger( 'change' );
 	}
 
-	$.each( languages, function ( lang, language ) {
-		$langselector.append( $( '<option></option>' )
-			.attr( 'value', lang )
-			.text( language.autonym ) );
-	} );
 	$imeSelector.on( 'change', function () {
-		var inputmethod = $imeSelector.find( 'option:selected' ).val();
-		imeselector.selectIM( inputmethod );
-		imeselector.$element.focus();
-	} );
-	$langselector.on( 'change', function () {
-		var language = $langselector.find( 'option:selected' ).val();
-		imeselector.selectLanguage( language );
-		listinputmethods( language );
+		var inputMethodId = $imeSelector.find( 'option:selected' ).val();
+		ime.load( inputMethodId ).done( function () {
+			debugger;
+			ime.setIM( inputMethodId );
+		} );
 	} );
 } );

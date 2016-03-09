@@ -23,7 +23,7 @@ select {
 	height: 25px;
 }
 
-.langselector,.imeSelector {
+.langSelector,.imeSelector {
 	float: left;
 	display: block;
 	padding-right:5px;

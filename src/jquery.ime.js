@@ -48,12 +48,20 @@
 		// This needs to be delayed here since extending language list happens at DOM ready
 		$.ime.defaults.languages = arrayKeys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
+		if ( this.options.imePath ) {
+			// Set the global IME path from the one specified to the instance
+			// TODO: remove this functionality and force clients to set the global
+			// IME path
+			$.ime.path = this.options.imePath;
+		}
 		this.active = false;
 		this.shifted = false;
 		this.inputmethod = null;
 		this.language = null;
 		this.context = '';
-		this.selector = this.$element.imeselector( this.options );
+		if ( this.options.showSelector ) {
+			this.selector = this.$element.imeselector( this.options );
+		}
 		this.listen();
 	}
 
@@ -70,6 +78,61 @@
 			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
 			this.$element.on( 'enable.ime', $.proxy( this.enable, this ) );
 			this.$element.on( 'disable.ime', $.proxy( this.disable, this ) );
+		},
+
+		/**
+		 * Return a list of available language codes
+		 *
+		 * @return {string[]} Available language codes
+		 */
+		getLanguageCodes: function () {
+			return $.ime.defaults.languages;
+		},
+
+		/**
+		 * Return the autonym for an available language code
+		 *
+		 * @param {string} languageCode The language code
+		 * @return {string} The autonym
+		 */
+		getAutonym: function ( languageCode ) {
+			return $.ime.languages[ languageCode ].autonym;
+		},
+
+		/**
+		 * Return a list of available input method ids for a language
+		 *
+		 * @param {string} languageCode An available language code
+		 * @return {string[]} Available input method ids for that language
+		 */
+		getInputMethodIds: function ( languageCode ) {
+			return $.ime.languages[ languageCode ].inputmethods;
+		},
+
+		/**
+		 * Return the name of an input method
+		 *
+		 * @param {string} inputMethodId The id of an input method
+		 * @return {string} The input method's name
+		 * @see IME#load
+		 */
+		getInputMethodName: function ( inputMethodId ) {
+			return $.ime.sources[ inputMethodId ].name;
+		},
+
+		/**
+		 * Return a list of input method info { id: ..., name: ... } for a language.
+		 *
+		 * @param {string} languageCode An available language code
+		 * @return {Object[]} Info object for each available input method
+		 */
+		getInputMethods: function ( languageCode ) {
+			return this.getInputMethodIds( languageCode ).map( function ( inputMethodId ) {
+				return {
+					id: inputMethodId,
+					name: $.ime.sources[ inputMethodId ].name
+				};
+			} );
 		},
 
 		/**
@@ -270,15 +333,18 @@
 		/**
 		 * Set the current input method
 		 * @param {string} inputmethodId
+		 * @fires imeLanguageChange
 		 */
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[inputmethodId];
 			$.ime.preferences.setIM( inputmethodId );
+			this.$element.trigger( 'imeMethodChange' );
 		},
 
 		/**
 		 * Set the current Language
 		 * @param {string} languageCode
+		 * @fires imeLanguageChange
 		 * @returns {Boolean}
 		 */
 		setLanguage: function ( languageCode ) {
@@ -290,6 +356,7 @@
 
 			this.language = languageCode;
 			$.ime.preferences.setLanguage( languageCode );
+			this.$element.trigger( 'imeLanguageChange' );
 			return true;
 		},
 
@@ -307,43 +374,8 @@
 		 * @return {jQuery.Promise}
 		 */
 		load: function ( inputmethodId ) {
-			var ime = this,
-				deferred = $.Deferred(),
-				dependency;
-
-			if ( $.ime.inputmethods[inputmethodId] ) {
-				return deferred.resolve();
-			}
-
-			// Validate the input method id.
-			if ( !$.ime.sources[inputmethodId] ) {
-				return deferred.reject();
-			}
-
-			dependency = $.ime.sources[inputmethodId].depends;
-			if ( dependency && !$.ime.inputmethods[dependency] ) {
-				ime.load( dependency ).done( function () {
-					ime.load( inputmethodId ).done( function () {
-						deferred.resolve();
-					} );
-				} );
-
-				return deferred;
-			}
-
-			debug( 'Loading ' + inputmethodId );
-			deferred = $.ajax( {
-				url: ime.options.imePath + $.ime.sources[inputmethodId].source,
-				dataType: 'script',
-				cache: true
-			} ).done( function () {
-				debug( inputmethodId + ' loaded' );
-			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + inputmethodId + ' Exception: ' + exception );
-			} );
-
-			return deferred.promise();
-		},
+			return $.ime.load( inputmethodId );
+		}
 	};
 
 	/**
@@ -743,24 +775,81 @@
 	$.ime.preferences = {};
 	$.ime.languages = {};
 
+	/**
+	 * @property {string} Relative/absolute path for the rules folder of jquery.ime
+	 */
+	$.ime.path = '../';
 	$.ime.textEntryFactory = TextEntryFactory.static.singleton;
 	$.ime.TextEntry = TextEntry;
 	$.ime.inheritClass = inheritClass;
 
 	defaultInputMethod = {
 		contextLength: 0,
-		maxKeyLength: 1
+		maxKeyLength: 1,
+		showSelector: true
+	};
+
+	/**
+	 * load an input method by given id
+	 * @param {string} inputmethodId
+	 * @return {jQuery.Promise}
+	 */
+	$.ime.load = function ( inputmethodId ) {
+		var dependency,
+			deferred = $.Deferred();
+
+		if ( $.ime.inputmethods[inputmethodId] ) {
+			return deferred.resolve();
+		}
+
+		// Validate the input method id.
+		if ( !$.ime.sources[inputmethodId] ) {
+			return deferred.reject();
+		}
+
+		dependency = $.ime.sources[inputmethodId].depends;
+		if ( dependency && !$.ime.inputmethods[dependency] ) {
+			$.ime.load( dependency ).done( function () {
+				$.ime.load( inputmethodId ).done( function () {
+					deferred.resolve();
+				} );
+			} );
+
+			return deferred;
+		}
+
+		debug( 'Loading ' + inputmethodId );
+		deferred = $.ajax( {
+			url: $.ime.path + $.ime.sources[inputmethodId].source,
+			dataType: 'script',
+			cache: true
+		} ).done( function () {
+			debug( inputmethodId + ' loaded' );
+		} ).fail( function ( jqxhr, settings, exception ) {
+			debug( 'Error in loading inputmethod ' + inputmethodId + ' Exception: ' + exception );
+		} );
+
+		return deferred.promise();
 	};
 
 	$.ime.register = function ( inputMethod ) {
 		$.ime.inputmethods[inputMethod.id] = $.extend( {}, defaultInputMethod, inputMethod );
 	};
 
+	/**
+	 * Set the relative/absolute path to rules/ (for loading input methods)
+	 *
+	 * @param {string} path The relative/absolute path in which rules/ lies
+	 */
+	$.ime.setPath = function ( path ) {
+		$.ime.path = path;
+	};
+
 	// default options
 	$.ime.defaults = {
-		imePath: '../', // Relative/Absolute path for the rules folder of jquery.ime
 		languages: [], // Languages to be used- by default all languages
-		helpHandler: null // Called for each ime option in the menu
+		helpHandler: null, // Called for each ime option in the menu
+		showSelector: true
 	};
 
 	/**
