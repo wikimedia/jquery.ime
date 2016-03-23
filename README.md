@@ -38,7 +38,7 @@ Instead of using the default language selector, you can roll your own:
 ```javascript
 $myDiv= $( '.foo' );
 $myDiv.ime( { showSelector: false } );
-ime = $myDiv.ime;
+ime = $myDiv.data( 'ime' );
 $elements.on( 'imeLanguageChange', function () { ... } );
 $elements.on( 'imeMethodChange', function () { ... } );
 
@@ -78,6 +78,7 @@ Plugin Options
 | imePath | Relative/Absolute path for the rules folder of jquery.ime. Default value: '../' |
 | languages| Languages to be used- by default all languages. Default value:  []. Eg: ['hi', 'ml']. It can also be a function returning an array.|
 | helpHandler| Called for each ime option in the menu, default value: null|
+| showSelector | Whether the input method selector to be used or not. Default value is true |
 
 Browser extensions
 ------------------
