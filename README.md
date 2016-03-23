@@ -21,28 +21,43 @@ Quick start
 git clone https://github.com/wikimedia/jquery.ime.git
 ```
 
-To add input method support to the editable fields of a web page:
+To add input method support to all editable elements:
 
 ```javascript
-$( 'textarea' ).ime();
+$( 'textarea, [contenteditable], input[type=text], input[type=search], input:not([type])' ).ime();
 ```
 
 jquery.ime provides a jquery plugin function `$.fn.ime()` to add input method
 support for any editable elements in a page.
 
+Language selection API
+----------------------
 
-Example
--------
-See [an example](http://thottingal.in/projects/js/jquery.ime/examples/) page
-where jquery.ime in action.
+Instead of using the default language selector, you can roll your own:
 
-To try the example locally, after checking out the code, start a local webserver
-to serve the files. This is very easy.
+```javascript
+$myDiv= $( '.foo' );
+$myDiv.ime( { showSelector: false } );
+ime = $myDiv.ime;
+$elements.on( 'imeLanguageChange', function () { ... } );
+$elements.on( 'imeMethodChange', function () { ... } );
 
-If you have python installed, run
-```bash
-python -m SimpleHTTPServer
+currentLanguageCode = ime.getLanguage();
+currentLanguageName = ime.getAutonym( currentLanguageCode );
+allLanguageCodes = ime.getLanguageCodes();
+inputMethods = ime.getInputMethods( currentLanguageCode );
+ime.setIM( inputMethods[ 0 ].id );
 ```
+
+See examples/ced/ced.html for a more complete example.
+
+Running
+-------
+
+-If you have python installed, run
+-```bash
+ python -m SimpleHTTPServer
+-```
 
 Alternatively, many programming languages provide one liner commands to start a simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255).
 

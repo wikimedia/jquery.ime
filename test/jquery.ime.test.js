@@ -22,7 +22,7 @@
 		}
 	} );
 
-	QUnit.test( 'Initialization tests', 11, function ( assert ) {
+	QUnit.test( 'Initialization tests', 10, function ( assert ) {
 		var inputIME,
 			$readonlyTextarea = $( '<textarea readonly>' ),
 			$disabledTextarea = $( '<textarea disabled>' ),
@@ -40,12 +40,11 @@
 		assert.strictEqual( inputIME.isActive(), false, 'ime is initially inactive' );
 		assert.strictEqual( inputIME.context, '', 'context is initially empty' );
 		assert.strictEqual( inputIME.getIM(), null, 'inputmethod is initially null' );
-		assert.strictEqual( inputIME.options.imePath, '../', 'imePath is "../" by default' );
 
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
 							'imePath is defined correctly using options in the constructor' );
-
+		$.ime.setPath( '../' );
 		$readonlyTextarea.ime();
 		$disabledTextarea.ime();
 		$noimeTextarea.ime();
@@ -53,6 +52,23 @@
 		assert.strictEqual( $readonlyTextarea.data( 'ime' ), undefined, 'ime is not defined for a readonly <textarea>' );
 		assert.strictEqual( $disabledTextarea.data( 'ime' ), undefined, 'ime is not defined for a disabled <textarea>' );
 		assert.strictEqual( $noimeTextarea.data( 'ime' ), undefined, 'ime is not defined for a <textarea> with class "noime"' );
+	} );
+
+	QUnit.test( 'Custom event tests', 2, function ( assert ) {
+		var seen = { language: false, method: false };
+		$textarea.on( 'imeLanguageChange.test', function () { seen.language = true; } );
+		$textarea.on( 'imeMethodChange.test', function () { seen.method = true; } );
+		textareaIME.setLanguage( 'hi' );
+		assert.ok( seen.language, 'imeLanguageChange fires' );
+		$textarea.off( 'imeLanguageChange.test' );
+
+		QUnit.stop();
+		textareaIME.load( 'hi-transliteration' ).then( function () {
+			textareaIME.setIM( 'hi-transliteration' );
+			assert.ok( seen.method, 'imeMethodChange fires' );
+			$textarea.off( 'imeMethodChange.test' );
+			QUnit.start();
+		} );
 	} );
 
 	QUnit.test( 'Selector tests', 14, function ( assert ) {
