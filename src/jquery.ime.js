@@ -785,8 +785,7 @@
 
 	defaultInputMethod = {
 		contextLength: 0,
-		maxKeyLength: 1,
-		showSelector: true
+		maxKeyLength: 1
 	};
 
 	/**
