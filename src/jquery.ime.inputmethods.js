@@ -527,6 +527,10 @@
 			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
+		'pms': {
+			name: 'Piemontèis',
+			source: 'rules/pms/pms.js'
+		},
 		'ru-jcuken': {
 			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
@@ -608,7 +612,7 @@
 			source: 'rules/uz/uz-kbd.js'
 		},
 		'vec-GVU': {
-			name: 'Venetian',
+			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
 		},
 		'yo-alt': {
@@ -878,6 +882,10 @@
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
 		},
+		'pms': {
+			autonym: 'Piemontèis',
+			inputmethods: [ 'pms' ]
+		},
 		'rif': {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
@@ -975,7 +983,7 @@
 			inputmethods: [ 'uz-kbd' ]
 		},
 		'vec': {
-			autonym: 'Venetian',
+			autonym: 'Vèneto',
 			inputmethods: [ 'vec-GVU' ]
 		},
 		'yo': {
