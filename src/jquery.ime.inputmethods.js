@@ -380,7 +380,7 @@
 			name: 'لۊری شومالی',
 			source: 'rules/lrc/lrc-kbd.js'
 		},
-		'mh': {
+		mh: {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
 		},
@@ -618,39 +618,39 @@
 	} );
 
 	$.extend( $.ime.languages, {
-		'ady': {
+		ady: {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'ahr': {
+		ahr: {
 			autonym: 'अहिराणी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
 		},
-		'am': {
+		am: {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
 		},
-		'ar': {
+		ar: {
 			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ]
 		},
-		'as': {
+		as: {
 			autonym: 'অসমীয়া',
 			inputmethods: [ 'as-transliteration', 'as-avro', 'as-bornona', 'as-inscript', 'as-phonetic', 'as-inscript2', 'as-rodali' ]
 		},
-		'av': {
+		av: {
 			autonym: 'авар',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'azb': {
+		azb: {
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
 		},
-		'bbc': {
+		bbc: {
 			autonym: 'Batak',
 			inputmethods: [ 'batak-qwerty' ]
 		},
-		'be': {
+		be: {
 			autonym: 'беларуская',
 			inputmethods: [ 'be-transliteration', 'be-latin', 'be-kbd' ]
 		},
@@ -658,203 +658,203 @@
 			autonym: 'беларуская (тарашкевіца)',
 			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
-		'bh': {
+		bh: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
 		},
-		'bgn': {
+		bgn: {
 			autonym: 'روچ کپتین بلوچی',
 			inputmethods: [ 'bgn-kbd' ]
 		},
-		'bho': {
+		bho: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
 		},
-		'bn': {
+		bn: {
 			autonym: 'বাংলা',
 			inputmethods: [ 'bn-avro', 'bn-inscript', 'bn-nkb', 'bn-probhat', 'bn-inscript2' ]
 		},
-		'bo': {
+		bo: {
 			autonym: 'བོད་ཡིག།',
 			inputmethods: [ 'bo-ewts' ]
 		},
-		'brx': {
+		brx: {
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
-		'ckb': {
+		ckb: {
 			autonym: 'کوردیی ناوەندی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
 		},
-		'ce': {
+		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'cv': {
+		cv: {
 			autonym: 'Чăвашла',
 			inputmethods: [ 'cv-cyr-altgr', 'cv-lat-altgr', 'cv-cyr-numbers' ]
 		},
-		'da': {
+		da: {
 			autonym: 'Dansk',
 			inputmethods: [ 'da-normforms' ]
 		},
-		'de': {
+		de: {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
 		},
-		'diq': {
+		diq: {
 			autonym: 'Kirdkî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
-		'doi': {
+		doi: {
 			autonym: 'डोगरी',
 			inputmethods: [ 'doi-inscript2' ]
 		},
-		'en': {
+		en: {
 			autonym: 'English',
 			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
-		'el': {
+		el: {
 			autonym: 'Ελληνικά',
 			inputmethods: [ 'el-kbd' ]
 		},
-		'eo': {
+		eo: {
 			autonym: 'Esperanto',
 			inputmethods: [ 'eo-transliteration', 'eo-h', 'eo-h-f', 'eo-plena', 'eo-q', 'eo-vi', 'eo-x' ]
 		},
-		'fa': {
+		fa: {
 			autonym: 'فارسی',
 			inputmethods: [ 'fa-kbd' ]
 		},
-		'fo': {
+		fo: {
 			autonym: 'Føroyskt',
 			inputmethods: [ 'fo-normforms' ]
 		},
-		'fi': {
+		fi: {
 			autonym: 'Suomi',
 			inputmethods: [ 'fi-transliteration' ]
 		},
-		'lrc': {
+		lrc: {
 			autonym: 'لۊری شومالی',
 			inputmethods: [ 'lrc-kbd' ]
 		},
-		'lud': {
+		lud: {
 			autonym: 'lüüdi',
 			inputmethods: [ 'lud-transliteration' ]
 		},
-		'gom': {
+		gom: {
 			autonym: 'गोवा कोंकणी / Gova Konknni',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
 		},
-		'gu': {
+		gu: {
 			autonym: 'ગુજરાતી',
 			inputmethods: [ 'gu-transliteration', 'gu-inscript', 'gu-inscript2', 'gu-phonetic' ]
 		},
-		'he': {
+		he: {
 			autonym: 'עברית',
 			inputmethods: [ 'he-standard-2012-extonly', 'he-standard-2012' ]
 		},
-		'hi': {
+		hi: {
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
-		'hr': {
+		hr: {
 			autonym: 'Hrvatski',
 			inputmethods: [ 'hr-kbd' ]
 		},
-		'hy': {
+		hy: {
 			autonym: 'հայերեն',
 			inputmethods: [ 'hy-ephonetic', 'hy-typewriter', 'hy-ephoneticalt', 'hy-emslegacy', 'hy-wmslegacy' ]
 		},
-		'hne': {
+		hne: {
 			autonym: 'छत्तीसगढ़ी',
 			inputmethods: [ 'hi-transliteration' ]
 		},
-		'is': {
+		is: {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
 		},
-		'fonipa': {
+		fonipa: {
 			autonym: 'International Phonetic Alphabet',
 			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
-		'jv': {
+		jv: {
 			autonym: 'ꦧꦱꦗꦮ',
 			inputmethods: [ 'jv-transliteration' ]
 		},
-		'ka': {
+		ka: {
 			autonym: 'ქართული ენა',
 			inputmethods: [ 'ka-transliteration', 'ka-kbd' ]
 		},
-		'kbd': {
+		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'kk': {
+		kk: {
 			autonym: 'Қазақша',
 			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
 		},
-		'kn': {
+		kn: {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
-		'ks': {
+		ks: {
 			autonym: 'कॉशुर / کٲشُر',
 			inputmethods: [ 'ks-inscript', 'ks-kbd' ]
 		},
-		'ky': {
+		ky: {
 			autonym: 'Кыргыз',
 			inputmethods: [ 'ky-cyrl-alt' ]
 		},
-		'kab': {
+		kab: {
 			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
-		'ku': {
+		ku: {
 			autonym: 'Kurdî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
 		},
-		'lbe': {
+		lbe: {
 			autonym: 'лакку',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'lez': {
+		lez: {
 			autonym: 'лезги',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'lo': {
+		lo: {
 			autonym: 'ລາວ',
 			inputmethods: [ 'lo-kbd' ]
 		},
-		'mai': {
+		mai: {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
 		},
-		'mh': {
+		mh: {
 			autonym: 'Kajin M̧ajeļ',
 			inputmethods: [ 'mh' ]
 		},
-		'ml': {
+		ml: {
 			autonym: 'മലയാളം',
 			inputmethods: [ 'ml-transliteration', 'ml-inscript', 'ml-inscript2' ]
 		},
-		'mn': {
+		mn: {
 			autonym: 'Монгол',
 			inputmethods: [ 'mn-cyrl' ]
 		},
-		'mni': {
+		mni: {
 			autonym: 'Manipuri',
 			inputmethods: [ 'mni-inscript2' ]
 		},
-		'mr': {
+		mr: {
 			autonym: 'मराठी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript2', 'mr-inscript', 'mr-phonetic' ]
 		},
-		'my': {
+		my: {
 			autonym: 'မြန်မာ',
 			inputmethods: [ 'my-xkb' ]
 		},
-		'ne': {
+		ne: {
 			autonym: 'नेपाली',
 			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad' ]
 		},
@@ -862,123 +862,123 @@
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
 		},
-		'nb': {
+		nb: {
 			autonym: 'Norsk (bokmål)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
-		'nn': {
+		nn: {
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
 		},
-		'or': {
+		or: {
 			autonym: 'ଓଡ଼ିଆ',
 			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-OdiScript' ]
 		},
-		'pa': {
+		pa: {
 			autonym: 'ਪੰਜਾਬੀ',
 			inputmethods: [ 'pa-transliteration', 'pa-inscript', 'pa-phonetic', 'pa-inscript2', 'pa-jhelum' ]
 		},
-		'rif': {
+		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
-		'ru': {
+		ru: {
 			autonym: 'русский',
 			inputmethods: [ 'ru-jcuken', 'ru-kbd', 'ru-phonetic', 'ru-yawerty' ]
 		},
-		'sah': {
+		sah: {
 			autonym: 'саха тыла',
 			inputmethods: [ 'sah-transliteration' ]
 		},
-		'sa': {
+		sa: {
 			autonym: 'संस्कृत',
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript', 'sa-iast' ]
 		},
-		'sat': {
+		sat: {
 			autonym: 'संताली',
-			inputmethods: [ 'sat-inscript2']
+			inputmethods: [ 'sat-inscript2' ]
 		},
-		'sd': {
+		sd: {
 			autonym: 'सिंधी',
 			inputmethods: [ 'sd-inscript2' ]
 		},
-		'sdh': {
+		sdh: {
 			autonym: 'کوردی خوارگ',
 			inputmethods: [ 'sdh-kbd' ]
 		},
-		'se': {
+		se: {
 			autonym: 'Davvisámegiella',
 			inputmethods: [ 'se-normforms' ]
 		},
-		'shi': {
+		shi: {
 			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
-		'si': {
+		si: {
 			autonym: 'සිංහල',
 			inputmethods: [ 'si-singlish', 'si-wijesekara' ]
 		},
-		'sk': {
+		sk: {
 			autonym: 'Slovenčina',
 			inputmethods: [ 'sk-kbd' ]
 		},
-		'sr': {
+		sr: {
 			autonym: 'Српски / srpski',
 			inputmethods: [ 'sr-kbd' ]
 		},
-		'sv': {
+		sv: {
 			autonym: 'Svenska',
 			inputmethods: [ 'sv-normforms' ]
 		},
-		'ta': {
+		ta: {
 			autonym: 'தமிழ்',
 			inputmethods: [ 'ta-transliteration', 'ta-99', 'ta-inscript', 'ta-bamini', 'ta-inscript2' ]
 		},
-		'tcy': {
+		tcy: {
 			autonym: 'ತುಳು',
 			inputmethods: [ 'kn-transliteration' ]
 		},
-		'te': {
+		te: {
 			autonym: 'తెలుగు',
 			inputmethods: [ 'te-transliteration', 'te-inscript', 'te-inscript2', 'te-apple', 'te-modular' ]
 		},
-		'th': {
+		th: {
 			autonym: 'ไทย',
 			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
 		},
-		'tkr': {
+		tkr: {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
-		'tzm': {
+		tzm: {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
 			inputmethods: [ 'ber-tfng' ]
 		},
-		'udm': {
+		udm: {
 			autonym: 'удмурт',
 			inputmethods: [ 'udm-alt' ]
 		},
-		'uk': {
+		uk: {
 			autonym: 'Українська',
 			inputmethods: [ 'uk-kbd' ]
 		},
-		'ug': {
+		ug: {
 			autonym: 'ئۇيغۇرچە / Uyghurche',
 			inputmethods: [ 'ug-kbd' ]
 		},
-		'ur': {
+		ur: {
 			autonym: 'اردو',
 			inputmethods: [ 'ur-transliteration', 'ur-phonetic' ]
 		},
-		'uz': {
+		uz: {
 			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
 		},
-		'vec': {
+		vec: {
 			autonym: 'Venetian',
 			inputmethods: [ 'vec-GVU' ]
 		},
-		'yo': {
+		yo: {
 			autonym: 'Yorùbá',
 			inputmethods: [ 'yo-alt' ]
 		}

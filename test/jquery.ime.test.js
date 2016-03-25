@@ -140,18 +140,19 @@
 		// Negative test: trying to load an IME with a broken URL
 		nonBrokenImeName = 'system';
 		brokenImeName = 'ml-inscript';
-		saveBrokenImeSource = $.ime.sources[brokenImeName].source;
-		$.ime.sources[brokenImeName].source = 'This source is wrong';
+		saveBrokenImeSource = $.ime.sources[ brokenImeName ].source;
+		$.ime.sources[ brokenImeName ].source = 'This source is wrong';
 		QUnit.stop();
 		selector.selectIM( brokenImeName );
 		QUnit.start();
 		assert.strictEqual( $.ime.preferences.getIM( 'ml' ), nonBrokenImeName,
 							'Trying to load an IME with a broken URL does not change the current IME' );
-		$.ime.sources[brokenImeName].source = saveBrokenImeSource;
+		$.ime.sources[ brokenImeName ].source = saveBrokenImeSource;
 	} );
 
 	QUnit.test( 'Selector decideLanguage tests', 4, function ( assert ) {
-		var selector = textareaIME.selector.data( 'imeselector' ), originalLang;
+		var selector = textareaIME.selector.data( 'imeselector' ),
+			originalLang;
 		originalLang = $.ime.preferences.registry.language;
 
 		$.ime.preferences.registry.language = null;
@@ -222,14 +223,14 @@
 		}
 	} );
 
-	$.each( $.ime.sources, function( inputmethodId ) {
+	$.each( $.ime.sources, function ( inputmethodId ) {
 		var testDescription;
 
 		// The internal input method name helps find it in the source,
 		// and since it's always in Latin, it helps isolate RTL names
 		// from the subsequent numbers
 		testDescription = 'Input method rules file test for input method ' +
-			$.ime.sources[inputmethodId].name + ' - ' + inputmethodId;
+			$.ime.sources[ inputmethodId ].name + ' - ' + inputmethodId;
 
 		QUnit.test( testDescription, function () {
 			var ime,
@@ -243,14 +244,14 @@
 			QUnit.expect( 1 );
 			QUnit.stop();
 			ime.load( inputmethodId ).done( function () {
-				QUnit.ok( true, !!$.ime.inputmethods[inputmethodId], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
+				QUnit.ok( true, !!$.ime.inputmethods[ inputmethodId ], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
 				QUnit.start();
 			} );
 		} );
 	} );
 
 	$.each( $.ime.languages, function ( languageCode ) {
-		var language = $.ime.languages[languageCode];
+		var language = $.ime.languages[ languageCode ];
 
 		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
 			var i, inputmethod,
@@ -259,8 +260,8 @@
 			QUnit.expect( inputmethods.length );
 
 			for ( i = 0; i < inputmethods.length; i++ ) {
-				inputmethod = $.ime.sources[inputmethods[i]];
-				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[i] + ' exist.' );
+				inputmethod = $.ime.sources[ inputmethods[ i ] ];
+				QUnit.ok( true, !!inputmethod, 'Definition for ' + inputmethods[ i ] + ' exist.' );
 			}
 		} );
 	} );
@@ -314,17 +315,17 @@
 				ime.enable();
 
 				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
-				QUnit.strictEqual( imesettingLabel, $.ime.sources[opt.inputmethod].name,
-					'IME selector shows ' + $.ime.sources[opt.inputmethod].name );
+				QUnit.strictEqual( imesettingLabel, $.ime.sources[ opt.inputmethod ].name,
+					'IME selector shows ' + $.ime.sources[ opt.inputmethod ].name );
 				for ( i = 0; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
-					typeChars( $input, opt.tests[i].input );
+					typeChars( $input, opt.tests[ i ].input );
 
 					// The actual check
 					QUnit.strictEqual(
 						$input.val() || $input.text(),
-						opt.tests[i].output,
-						opt.tests[i].description + ' - ' + opt.inputType
+						opt.tests[ i ].output,
+						opt.tests[ i ].description + ' - ' + opt.inputType
 					);
 
 					$input.val( '' );
@@ -351,8 +352,8 @@
 	/**
 	 * Basic sendkey-implementation. Type some characters into an input.
 	 *
-	 * @param $input jQuery input element.
-	 * @param characters Either a string or an array of pairs of character
+	 * @param {jQuery} $input jQuery input element.
+	 * @param {string|Array} characters Either a string or an array of pairs of character
 	 * and boolean altKey value
 	 */
 	typeChars = function ( $input, characters ) {
@@ -367,17 +368,17 @@
 			// where each member is a pair consisting of a character to type
 			// and the boolean value for altKey, saying whether Alt was
 			// depressed or not.
-			if ( typeof( characters ) === 'string' ) {
-				character = characters[i];
+			if ( typeof ( characters ) === 'string' ) {
+				character = characters[ i ];
 				altKeyValue = false;
 			} else {
-				character = characters[i][0];
-				altKeyValue = characters[i][1] || false;
-				shiftKeyValue = characters[i][2] || false;
+				character = characters[ i ][ 0 ];
+				altKeyValue = characters[ i ][ 1 ] || false;
+				shiftKeyValue = characters[ i ][ 2 ] || false;
 			}
 
 			// Get the key code. Events use codes and not chars.
-			code = character.charCodeAt(0);
+			code = character.charCodeAt( 0 );
 			if ( shiftKeyValue ) {
 				ime.shifted = true;
 			}

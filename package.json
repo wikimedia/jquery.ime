@@ -29,7 +29,9 @@
     "grunt-contrib-qunit": "1.1.0",
     "grunt-contrib-concat": "1.0.0",
     "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
     "grunt-cli": "1.1.0",
+    "grunt-jscs": "2.8.0",
     "jquery": "1.11.3",
     "qunitjs": "1.22.0"
   },

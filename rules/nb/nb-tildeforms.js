@@ -7,11 +7,11 @@
 		description: 'Norwegian input method with initial tilde triggering transliteration',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
-		//URL: 'http://www.evertype.com/alphabets/nynorsk-norwegian.pdf',
+		// URL: 'http://www.evertype.com/alphabets/nynorsk-norwegian.pdf',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',
-		//contextLength: 1,
+		// contextLength: 1,
 		maxKeyLength: 3,
 		patterns: [
 			// Uses "~" as "approximatly similar to"

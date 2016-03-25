@@ -8,7 +8,7 @@
 			previousLanguages: [], // array of previous languages
 			previousInputMethods: [], // array of previous inputmethods
 			imes: {
-				'en': 'system'
+				en: 'system'
 			}
 		},
 
@@ -54,11 +54,11 @@
 			}
 
 			// Do nothing if there's no actual change
-			if ( inputMethod === this.registry.imes[this.registry.language] ) {
+			if ( inputMethod === this.registry.imes[ this.registry.language ] ) {
 				return;
 			}
 
-			this.registry.imes[this.getLanguage()] = inputMethod;
+			this.registry.imes[ this.getLanguage() ] = inputMethod;
 			this.registry.isDirty = true;
 			if ( !this.registry.previousInputMethods ) {
 				this.registry.previousInputMethods = [];
@@ -77,7 +77,7 @@
 				this.registry.imes = {};
 			}
 
-			return this.registry.imes[language] || 'system';
+			return this.registry.imes[ language ] || 'system';
 		},
 
 		save: function () {

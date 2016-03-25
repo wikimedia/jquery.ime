@@ -1,12 +1,16 @@
+'use strict';
+
 /* jshint node: true */
 module.exports = function ( grunt ) {
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-csslint');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-qunit');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
+	grunt.loadNpmTasks( 'grunt-contrib-csslint' );
+	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-jscs' );
 	// Project configuration.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -50,28 +54,57 @@ module.exports = function ( grunt ) {
 		copy: {
 			dist: {
 				files: {
-					'dist/jquery.ime/': ['rules/**', 'images/**', 'css/**']
+					'dist/jquery.ime/': [
+						'rules/**',
+						'images/**',
+						'css/**'
+					]
 				}
 			}
 		},
 		qunit: {
 			files: [ 'test/index.html' ]
 		},
-		csslint : {
-			file: [ 'css/**/*.css' ]
+		jshint: {
+			options: {
+				jshintrc: true
+			},
+			all: [
+				'*.js',
+				'src/*.js',
+				'rules/**/*.js',
+				'test/**/*.js'
+			]
+		},
+		jscs: {
+			fix: {
+				options: {
+					fix: true
+				},
+				src: '<%= jshint.all %>'
+			},
+			main: {
+				src: '<%= jshint.all %>'
+			}
+		},
+		csslint: {
+			all: [
+				'css/**/*.css'
+			]
 		},
 		watch: {
-			files: '<config:lint.files>',
-			tasks: 'lint qunit'
-		},
-		jshint: {
-			options: JSON.parse( grunt.file.read( '.jshintrc' )
-				.replace( /\/\*(?:(?!\*\/)[\s\S])*\*\//g, '' ).replace( /\/\/[^\n\r]*/g, '' ) ),
-			files: [ 'src/**/*.js', 'rules/**/*.js', 'test/**/*.js' ]
+			files: [
+				'.{csslintrc,jscsrc,jshintignore,jshintrc}',
+				'<%= jshint.all %>',
+				'<%= csslint.all %>'
+			],
+			tasks: 'lint'
 		}
 	} );
 
 	// Default task.
-	grunt.registerTask( 'default', ['jshint', 'qunit', 'concat', 'uglify', 'copy', 'csslint'] );
-	grunt.registerTask( 'test', ['jshint', 'qunit'] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main', 'csslint' ] );
+	grunt.registerTask( 'build', [ 'concat', 'uglify', 'copy' ] );
+	grunt.registerTask( 'test', [ 'build', 'qunit' ] );
+	grunt.registerTask( 'default', [ 'lint', 'test' ] );
 };
