@@ -64,8 +64,8 @@
 			this.timer = setTimeout(
 				function () {
 					imeselector.$imeSetting.animate( {
-						'opacity': 0,
-						'marginTop': '-20px'
+						opacity: 0,
+						marginTop: '-20px'
 					}, 500, function () {
 						imeselector.$imeSetting.hide();
 						// Restore properties for the next time it becomes visible:
@@ -150,7 +150,7 @@
 				imeselector.$imeSetting.removeClass( 'ime-onfocus' );
 			} );
 
-			imeselector.$menu.on( 'click.ime', 'li', function() {
+			imeselector.$menu.on( 'click.ime', 'li', function () {
 				imeselector.$element.focus();
 
 				return false;
@@ -231,16 +231,16 @@
 						languageCode = this.decideLanguage();
 						this.selectLanguage( languageCode );
 
-						if ( !ime.isActive() && $.ime.languages[languageCode] ) {
+						if ( !ime.isActive() && $.ime.languages[ languageCode ] ) {
 							// Even after pressing toggle shortcut again, it is still disabled
 							// Check if there is a previously used input method.
 							previousInputMethods = $.ime.preferences.getPreviousInputMethods();
 
-							if ( previousInputMethods[0] ) {
-								this.selectIM( previousInputMethods[0] );
+							if ( previousInputMethods[ 0 ] ) {
+								this.selectIM( previousInputMethods[ 0 ] );
 							} else {
 								// Provide the default input method in this case.
-								firstInputmethod = $.ime.languages[languageCode].inputmethods[0];
+								firstInputmethod = $.ime.languages[ languageCode ].inputmethods[ 0 ];
 								this.selectIM( firstInputmethod );
 							}
 						}
@@ -299,7 +299,7 @@
 
 			cssTop = top;
 			cssLeft = left;
-			this.$element.parents().each( function() {
+			this.$element.parents().each( function () {
 				if ( $( this ).css( 'position' ) === 'fixed' ) {
 					imeSelector.$imeSetting.css( 'position', 'fixed' );
 					cssTop -= $( document ).scrollTop();
@@ -351,7 +351,7 @@
 
 			ime = this.$element.data( 'ime' );
 			imePref = $.ime.preferences.getIM( languageCode );
-			language = $.ime.languages[languageCode];
+			language = $.ime.languages[ languageCode ];
 
 			this.setMenuTitle( this.getAutonym( languageCode ) );
 
@@ -389,8 +389,8 @@
 		 * @return {string} The autonym
 		 */
 		getAutonym: function ( languageCode ) {
-			return $.ime.languages[languageCode]
-				&& $.ime.languages[languageCode].autonym;
+			return $.ime.languages[ languageCode ]
+				&& $.ime.languages[ languageCode ].autonym;
 		},
 
 		/**
@@ -448,12 +448,12 @@
 			}
 
 			ime.load( inputmethodId ).done( function () {
-				imeselector.inputmethod = $.ime.inputmethods[inputmethodId];
+				imeselector.inputmethod = $.ime.inputmethods[ inputmethodId ];
 				imeselector.hide();
 				ime.enable();
 				ime.setIM( inputmethodId );
 				imeselector.$imeSetting.find( 'a.ime-name' ).text(
-					$.ime.sources[inputmethodId].name
+					$.ime.sources[ inputmethodId ].name
 				);
 
 				imeselector.position();
@@ -503,8 +503,8 @@
 			}
 
 			for ( languageCodeIndex in languageList ) {
-				languageCode = languageList[languageCodeIndex];
-				language = $.ime.languages[languageCode];
+				languageCode = languageList[ languageCodeIndex ];
+				language = $.ime.languages[ languageCode ];
 
 				if ( !language ) {
 					continue;
@@ -533,7 +533,7 @@
 		 * @param {string} languageCode
 		 */
 		prepareInputMethods: function ( languageCode ) {
-			var language = $.ime.languages[languageCode],
+			var language = $.ime.languages[ languageCode ],
 				$imeList = this.$menu.find( '.ime-list' ),
 				imeSelector = this;
 
@@ -542,7 +542,7 @@
 			$.each( language.inputmethods, function ( index, inputmethod ) {
 				var $imeItem, $inputMethod, source, name;
 
-				source = $.ime.sources[inputmethod];
+				source = $.ime.sources[ inputmethod ];
 				if ( !source ) {
 					return;
 				}
@@ -568,6 +568,7 @@
 
 		/**
 		 * Create a help link element.
+		 *
 		 * @return {jQuery}
 		 */
 		helpLink: function () {
@@ -575,8 +576,8 @@
 				.append( $( '<a>' ).text( 'Help' )
 					.addClass( 'selectable-row-item' )
 					.attr( {
-						'href': 'http://github.com/wikimedia/jquery.ime',
-						'target': '_blank',
+						href: 'http://github.com/wikimedia/jquery.ime',
+						target: '_blank',
 						'data-i18n': 'jquery-ime-help'
 					} )
 				);
@@ -602,7 +603,7 @@
 			}
 
 			if ( typeof options === 'string' ) {
-				data[options].call( $this );
+				data[ options ].call( $this );
 			}
 		} );
 	};
@@ -651,7 +652,7 @@
 	 * Check whether a keypress event corresponds to the shortcut key
 	 *
 	 * @param {event} event
-	 * @return {bool} true if the key is a shortcut key
+	 * @return {boolean} true if the key is a shortcut key
 	 */
 	function isShortcutKey( event ) {
 		// 77 - The letter M, for Ctrl-M
@@ -681,9 +682,9 @@
 	}
 
 	$.fn.attrchange = function ( callback ) {
-		if ( MutationObserver ) {
-			var observer;
+		var observer;
 
+		if ( MutationObserver ) {
 			observer = new MutationObserver( function ( mutations ) {
 				mutations.forEach( function ( e ) {
 					callback.call( e.target, e.attributeName );

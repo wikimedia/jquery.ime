@@ -2,15 +2,14 @@
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 var palochkaVariants = {
-	palochka: 'Ӏ',
-	latinSmallL: 'l',
-	latinCapitalI: 'I',
-	ukrainianCapitalI: 'І',
-	digitOne: '1'
-};
-
-/*jshint unused:false */
-var testFixtures = [
+		palochka: 'Ӏ',
+		latinSmallL: 'l',
+		latinCapitalI: 'I',
+		ukrainianCapitalI: 'І',
+		digitOne: '1'
+	},
+	/*jshint unused:false */
+	testFixtures = [
 	{
 		description: 'Amharic Transliteration test',
 		tests: [
@@ -37,7 +36,8 @@ var testFixtures = [
 			{ input: 'ea', output: 'ኧ', description: 'Amharic ea -> ኧ' }
 		],
 		inputmethod: 'am-transliteration'
-	},{
+	},
+	{
 		description: 'South Azerbaijani Keyboard test',
 		tests: [
 			{ input: '`',  output: '\u200d', description: 'South Azerbaijani Keyboard Layout: ` -> \u200d' },
@@ -257,7 +257,7 @@ var testFixtures = [
 			{ input: 'br-i', output: 'བྲྀ', description: 'Tibetan EWTS - br-i' },
 			{ input: 'g.yak', output: 'གཡཀ', description: 'Tibetan EWTS - g.yak' },
 			{ input: 'pad+ma', output: 'པདྨ', description: 'Tibetan EWTS - pad+ma' },
-			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' },
+			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' }
 		],
 		inputmethod: 'bo-ewts'
 	},{
@@ -458,14 +458,14 @@ var testFixtures = [
 		description: 'Gujarati Phonetic',
 		tests: [
 			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
-			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer'}
+			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer' }
 		],
 		inputmethod: 'gu-phonetic'
 	},{
 		description: 'Gujarati Inscript 2',
 		tests: [
-			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref'},
-			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha'}
+			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref' },
+			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha' }
 		],
 		inputmethod: 'gu-inscript2'
 	},{
@@ -514,9 +514,9 @@ var testFixtures = [
 	},{
 		description: 'Hindi transliteration tests',
 		tests: [
-			{input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
-			{input: 'agar ',output: 'अगर ', description:'Hindi transliteration - virama autoremoval on space'}, //bug 35990
-			{input: 'agar~ ',output: 'अगर् ', description:'Hindi transliteration - virama retention'}, //bug 35990
+			{ input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
+			{ input: 'agar ',output: 'अगर ', description: 'Hindi transliteration - virama autoremoval on space' }, // bug 35990
+			{ input: 'agar~ ',output: 'अगर् ', description: 'Hindi transliteration - virama retention' }, // bug 35990
 
 			{ input: 'namaH', output: 'नमः', description: 'Hindi transliteration - namaH (visarga)' },
 			{ input: 'madhumaChiyoM', output: 'मधुमक्खियों', description: 'Hindi transliteration - madhumaChiyoM (anusvara)' },
@@ -876,7 +876,7 @@ var testFixtures = [
 			{ input: 'nOTna', output: 'ನೋಟ್ನ', description: 'noTna for ನೋಟ್ನ for Kannada transliteration ' },
 			{ input: 'saMskRta', output: 'ಸಂಸ್ಕೃತ', description: 'saMskRta for ಸಂಸ್ಕೃತ for Kannada transliteration ' },
 			{ input: 'aalTarxnETIv', output: 'ಆಲ್ಟರ್\u200dನೇಟೀವ್', description: 'aalTarxnETIv for ಆಲ್ಟರ್\u200dನೇಟೀವ್ for Kannada transliteration ' }, // with ZWJ
-			{ input: 'kaarxnalli', output: 'ಕಾರ್\u200dನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್\u200dನಲ್ಲಿ for Kannada transliteration '}, // with ZWJ
+			{ input: 'kaarxnalli', output: 'ಕಾರ್\u200dನಲ್ಲಿ', description: 'kaarxnalli for ಕಾರ್\u200dನಲ್ಲಿ for Kannada transliteration ' }, // with ZWJ
 			{ input: 'a', output: 'ಅ', description: 'a for ಅ in Kannada transliteration' },
 			{ input: 'ka', output: 'ಕ', description: 'ka for ಕ in Kannada transliteration' },
 			{ input: 'Ka', output: 'ಖ', description: 'Ka for ಖ in Kannada transliteration' },
@@ -1696,46 +1696,46 @@ var testFixtures = [
 	},{
 		description: 'Oriya InScript test',
 		tests: [
-			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ'}
+			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ' }
 		],
 		inputmethod: 'or-inscript'
 	},{
 		description: 'Oriya OdiScript test',
 		tests: [
-			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia OdiScript j} -> ର‍୍ୟ'},
-			{ input: 'O}', output: 'ଡ୍ୟ', description: 'Odia OdiScript O} -> ଡ୍ୟ'},
-			{ input: 's~', output: 'କଃ', description: 'Odia OdiScript j~ -> କଃ'},
-			{ input: 's@@', output: 'ର୍କ', description: 'Odia OdiScript s@@ -> ର୍କ'},
-			{ input: 'SQ', output: 'ଖି', description: 'Odia OdiScript SQ -> ଖି'},
-			{ input: 'W', output: 'ଫ', description: 'Odia OdiScript W -> ଫ'},
-			{ input: 'E', output: 'ଡ଼', description: 'Odia OdiScript E -> ଡ଼'},
-			{ input: 'R', output: 'ଧ', description: 'Odia OdiScript R -> ଧ'},
-			{ input: 'T', output: 'ଓ', description: 'Odia OdiScript T -> ଓ'},
-			{ input: 'Y', output: 'ଔ', description: 'Odia OdiScript Y -> ଔ'},
-			{ input: 'U', output: 'ଟ', description: 'Odia OdiScript U -> ଟ'},
-			{ input: 'I', output: 'ଠ', description: 'Odia OdiScript I -> ଠ'},
-			{ input: 'O', output: 'ଡ', description: 'Odia OdiScript O -> ଡ'},
-			{ input: 'P', output: 'ଢ', description: 'Odia OdiScript P -> ଢ'},
-			{ input: 'A', output: 'ଢ଼', description: 'Odia OdiScript A -> ଢ଼'},
-			{ input: 'S', output: 'ଖ', description: 'Odia OdiScript S -> ଖ'},
-			{ input: 'D', output: '‌', description: 'Odia OdiScript D ZWNJ  -> ‌'},
-			{ input: 'F', output: 'ଥ', description: 'Odia OdiScript F -> ଥ'},
-			{ input: 'G', output: 'ଇ', description: 'Odia OdiScript G -> ଇ'},
-			{ input: 'H', output: 'ଈ', description: 'Odia OdiScript H -> ଈ'},
-			{ input: 'J', output: 'ଣ', description: 'Odia OdiScript J -> ଣ'},
-			{ input: 'K', output: 'ଶ', description: 'Odia OdiScript K -> ଶ'},
-			{ input: 'L', output: 'ଷ', description: 'Odia OdiScript L -> ଷ'},
-			{ input: 'Z', output: 'ଙ', description: 'Odia OdiScript Z -> ଙ'},
-			{ input: 'X', output: 'ଘ', description: 'Odia OdiScript X -> ଘ'},
-			{ input: 'C', output: 'ଝ', description: 'Odia OdiScript C -> ଝ'},
-			{ input: 'V', output: 'ଛ', description: 'Odia OdiScript V -> ଛ'},
-			{ input: 'B', output: 'ଉ', description: 'Odia OdiScript B -> ଉ'},
-			{ input: 'N', output: 'ଊ', description: 'Odia OdiScript N -> ଊ'},
-			{ input: 'M', output: 'ଲ', description: 'Odia OdiScript M -> ଲ'},
-			{ input: 'TEgtds]gwdU', output: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ', description: 'Odia OdiScript TEgtds]gwdU-> ଓଡ଼ିସ୍କ୍ରିପ୍ଟ'},
+			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia OdiScript j} -> ର‍୍ୟ' },
+			{ input: 'O}', output: 'ଡ୍ୟ', description: 'Odia OdiScript O} -> ଡ୍ୟ' },
+			{ input: 's~', output: 'କଃ', description: 'Odia OdiScript j~ -> କଃ' },
+			{ input: 's@@', output: 'ର୍କ', description: 'Odia OdiScript s@@ -> ର୍କ' },
+			{ input: 'SQ', output: 'ଖି', description: 'Odia OdiScript SQ -> ଖି' },
+			{ input: 'W', output: 'ଫ', description: 'Odia OdiScript W -> ଫ' },
+			{ input: 'E', output: 'ଡ଼', description: 'Odia OdiScript E -> ଡ଼' },
+			{ input: 'R', output: 'ଧ', description: 'Odia OdiScript R -> ଧ' },
+			{ input: 'T', output: 'ଓ', description: 'Odia OdiScript T -> ଓ' },
+			{ input: 'Y', output: 'ଔ', description: 'Odia OdiScript Y -> ଔ' },
+			{ input: 'U', output: 'ଟ', description: 'Odia OdiScript U -> ଟ' },
+			{ input: 'I', output: 'ଠ', description: 'Odia OdiScript I -> ଠ' },
+			{ input: 'O', output: 'ଡ', description: 'Odia OdiScript O -> ଡ' },
+			{ input: 'P', output: 'ଢ', description: 'Odia OdiScript P -> ଢ' },
+			{ input: 'A', output: 'ଢ଼', description: 'Odia OdiScript A -> ଢ଼' },
+			{ input: 'S', output: 'ଖ', description: 'Odia OdiScript S -> ଖ' },
+			{ input: 'D', output: '‌', description: 'Odia OdiScript D ZWNJ  -> ‌' },
+			{ input: 'F', output: 'ଥ', description: 'Odia OdiScript F -> ଥ' },
+			{ input: 'G', output: 'ଇ', description: 'Odia OdiScript G -> ଇ' },
+			{ input: 'H', output: 'ଈ', description: 'Odia OdiScript H -> ଈ' },
+			{ input: 'J', output: 'ଣ', description: 'Odia OdiScript J -> ଣ' },
+			{ input: 'K', output: 'ଶ', description: 'Odia OdiScript K -> ଶ' },
+			{ input: 'L', output: 'ଷ', description: 'Odia OdiScript L -> ଷ' },
+			{ input: 'Z', output: 'ଙ', description: 'Odia OdiScript Z -> ଙ' },
+			{ input: 'X', output: 'ଘ', description: 'Odia OdiScript X -> ଘ' },
+			{ input: 'C', output: 'ଝ', description: 'Odia OdiScript C -> ଝ' },
+			{ input: 'V', output: 'ଛ', description: 'Odia OdiScript V -> ଛ' },
+			{ input: 'B', output: 'ଉ', description: 'Odia OdiScript B -> ଉ' },
+			{ input: 'N', output: 'ଊ', description: 'Odia OdiScript N -> ଊ' },
+			{ input: 'M', output: 'ଲ', description: 'Odia OdiScript M -> ଲ' },
+			{ input: 'TEgtds]gwdU', output: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ', description: 'Odia OdiScript TEgtds]gwdU-> ଓଡ଼ିସ୍କ୍ରିପ୍ଟ' }
 		],
 		inputmethod: 'or-OdiScript'
-	},{		description: 'Oriya phonetic test',
+	},{ description: 'Oriya phonetic test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Oriya phonetic - \\~ -> ~' },
 			{ input: 'a',  output: 'ଅ', description: 'Odia phonetic a -> ଅ ' },
@@ -1788,7 +1788,7 @@ var testFixtures = [
 			{ input: '.',  output: '।', description: 'Odia phonetic . -> । ' },
 			{ input: 'sainath',  output: 'ସାଇନାଥ', description: 'Odia phonetic sainath -> ସାଇନାଥ ' },
 			{ input: 'dxiNeSwr',  output: 'ଦକ୍ଷିଣେଶ୍ୱର', description: 'Odia phonetic dxiNeSwr -> ଦକ୍ଷିଣେଶ୍ୱର ' },
-			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ'}
+			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ' }
 		],
 		inputmethod: 'or-lekhani'
 	},{
@@ -1924,8 +1924,8 @@ var testFixtures = [
 	},{
 		description: 'Tamil Transliteration test',
 		tests: [
-			//(ks|KS)h should give non-conjunct form of ksh க்\u200cஷ் (with ZWNJ)
-			//(ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
+			// (ks|KS)h should give non-conjunct form of ksh க்\u200cஷ் (with ZWNJ)
+			// (ks|KS)H should give the conjunct form க்ஷ் (with ZWNJ)
 			{ input: 'thikshith', output: 'திக்\u200cஷித்', description: 'thikshith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'thikShith', output: 'திக்\u200cஷித்', description: 'thikShith in Tamil transliteration for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'thiksHith', output: 'திக்ஷித்', description: 'thiksHith in Tamil transliteration for திக்ஷித் conjunct form' },
@@ -1995,8 +1995,8 @@ var testFixtures = [
 	},{
 		description: 'Tamil 99 test',
 		tests: [
-			//hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
-			//T still gives the conjunct form க்ஷ
+			// hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
+			// T still gives the conjunct form க்ஷ
 			{ input: 'lshfWslf', output: 'திக்\u200cஷித்', description: 'lshfWslf in Tamil99 for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
 			{ input: 'hfWtkakf', output: 'க்\u200cஷேமம்', description: 'hfWtkakf in Tamil99 for க்\u200cஷேமம் hfW -> க்\u200cஷ non conjunct form' }, // (with ZWNJ)
@@ -2015,11 +2015,11 @@ var testFixtures = [
 			{ input: 'kX', output: 'కఁ', description: 'Telugu kX (ka@m, candrabindu)' },
 			{ input: 'hx', output: 'పం', description: 'Telugu hx (paM, anusvara)' },
 			{ input: '>', output: '।', description: 'Telugu > (danda)' },
-			{ input: [ [ ';', true ] ], output: 'ౘ', description: 'Telugu Alt ; (tsa)'},
-			{ input: [ [ 'p', true ] ], output: 'ౙ', description: 'Telugu Alt p (dza)'},
-			{ input: [ [ '4', true ] ], output: '₹', description: 'Alt 4; (rupee sign)'},
-			{ input: [ [ '=', true ] ], output: 'ౄ', description: 'Telugu Alt = (RRuu, vowel)'},
-			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)'}
+			{ input: [ [ ';', true ] ], output: 'ౘ', description: 'Telugu Alt ; (tsa)' },
+			{ input: [ [ 'p', true ] ], output: 'ౙ', description: 'Telugu Alt p (dza)' },
+			{ input: [ [ '4', true ] ], output: '₹', description: 'Alt 4; (rupee sign)' },
+			{ input: [ [ '=', true ] ], output: 'ౄ', description: 'Telugu Alt = (RRuu, vowel)' },
+			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)' }
 		],
 		inputmethod: 'te-inscript'
 	},{

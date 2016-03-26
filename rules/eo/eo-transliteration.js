@@ -1,8 +1,9 @@
 ( function ( $ ) {
 	'use strict';
 
-	function prepareRules () {
-		var rules = [], chars;
+	function prepareRules() {
+		var rules = [],
+			chars;
 
 		chars = {
 			C: 'Ĉ',

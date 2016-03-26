@@ -33,14 +33,15 @@
 
 	/**
 	 * IME Class
-	 * @class
 	 *
+	 * @class
 	 * @constructor
 	 * @param {HTMLElement} element Element on which to listen for events
 	 * @param {TextEntry} textEntry Text entry object to use to get/set text
+	 * @param {Object} [options]
 	 * @param {Function} [options.helpHandler] Called for each input method row in the selector
-	 * @param {Object} options.helpHandler.imeSelector
-	 * @param {String} options.helpHandler.ime Id of the input method
+	 * @param {Object} [options.helpHandler.imeSelector]
+	 * @param {string} [options.helpHandler.ime] Id of the input method
 	 */
 	function IME( element, textEntry, options ) {
 		this.$element = $( element );
@@ -142,9 +143,9 @@
 		 * @param {string} input
 		 * @param {string} context
 		 * @param {boolean} altGr whether altGr key is pressed or not
-		 * @returns {object} transliteration object
-		 * @returns {bool} return.noop Whether to consider input processed or passed through.
-		 * @returns {string} return.output the transliterated input or input unmodified.
+		 * @return {Object} Transliteration object
+		 * @return {boolean} return.noop Whether to consider input processed or passed through.
+		 * @return {string} return.output The transliterated input or input unmodified.
 		 */
 		transliterate: function ( input, context, altGr ) {
 			var patterns, regex, rule, replacement, i, retval;
@@ -176,19 +177,19 @@
 			}
 
 			for ( i = 0; i < patterns.length; i++ ) {
-				rule = patterns[i];
-				regex = new RegExp( rule[0] + '$' );
+				rule = patterns[ i ];
+				regex = new RegExp( rule[ 0 ] + '$' );
 
 				// Last item in the rules.
 				// It can also be a function, because the replace
 				// method can have a function as the second argument.
-				replacement = rule.slice( -1 )[0];
+				replacement = rule.slice( -1 )[ 0 ];
 
 				// Input string match test
 				if ( regex.test( input ) ) {
 					// Context test required?
 					if ( rule.length === 3 ) {
-						if ( new RegExp( rule[1] + '$' ).test( context ) ) {
+						if ( new RegExp( rule[ 1 ] + '$' ).test( context ) ) {
 							return { noop: false, output: input.replace( regex, replacement ) };
 						}
 					} else {
@@ -215,8 +216,9 @@
 
 		/**
 		 * Keypress handler
+		 *
 		 * @param {jQuery.Event} e Event
-		 * @returns {Boolean}
+		 * @return {boolean}
 		 */
 		keypress: function ( e ) {
 			var altGr = false,
@@ -286,7 +288,8 @@
 
 		/**
 		 * Check whether the input method is active or not
-		 * @returns {Boolean}
+		 *
+		 * @return {boolean}
 		 */
 		isActive: function () {
 			return this.active;
@@ -324,7 +327,8 @@
 
 		/**
 		 * Get the current input method
-		 * @returns {string} Current input method id
+		 *
+		 * @return {string} Current input method id
 		 */
 		getIM: function () {
 			return this.inputmethod;
@@ -332,23 +336,25 @@
 
 		/**
 		 * Set the current input method
+		 *
 		 * @param {string} inputmethodId
 		 * @fires imeLanguageChange
 		 */
 		setIM: function ( inputmethodId ) {
-			this.inputmethod = $.ime.inputmethods[inputmethodId];
+			this.inputmethod = $.ime.inputmethods[ inputmethodId ];
 			$.ime.preferences.setIM( inputmethodId );
 			this.$element.trigger( 'imeMethodChange' );
 		},
 
 		/**
 		 * Set the current Language
+		 *
 		 * @param {string} languageCode
 		 * @fires imeLanguageChange
-		 * @returns {Boolean}
+		 * @return {boolean}
 		 */
 		setLanguage: function ( languageCode ) {
-			if ( !$.ime.languages[languageCode] ) {
+			if ( !$.ime.languages[ languageCode ] ) {
 				debug( 'Language ' + languageCode + ' is not known to jquery.ime.' );
 
 				return false;
@@ -362,7 +368,8 @@
 
 		/**
 		 * Get current language
-		 * @returns {string}
+		 *
+		 * @return {string}
 		 */
 		getLanguage: function () {
 			return this.language;
@@ -370,6 +377,7 @@
 
 		/**
 		 * load an input method by given id
+		 *
 		 * @param {string} inputmethodId
 		 * @return {jQuery.Promise}
 		 */
@@ -380,8 +388,8 @@
 
 	/**
 	 * TextEntry factory
-	 * @class
 	 *
+	 * @class
 	 * @constructor
 	 */
 	TextEntryFactory = function IMETextEntryFactory() {
@@ -397,7 +405,7 @@
 	/**
 	 * Register a TextEntry class, with priority over previous registrations
 	 *
-	 * @param {TextEntry} Class to register
+	 * @param {TextEntry} TextEntryClass Class to register
 	 */
 	TextEntryFactory.prototype.register = function ( TextEntryClass ) {
 		this.TextEntryClasses.unshift( TextEntryClass );
@@ -426,8 +434,8 @@
 
 	/**
 	 * Generic text entry
-	 * @class
 	 *
+	 * @class
 	 * @abstract
 	 */
 	TextEntry = function IMETextEntry() {
@@ -457,7 +465,7 @@
 	 * This SHOULD return the empty string for non-collapsed selections.
 	 *
 	 * @param {number} maxLength Maximum number of chars (code units) to return
-	 * @return {String} Up to maxLength of text
+	 * @return {string} Up to maxLength of text
 	 */
 	TextEntry.prototype.getTextBeforeSelection = null;
 
@@ -465,14 +473,14 @@
 	 * Replace the currently selected text and/or text before the selection
 	 *
 	 * @param {number} precedingCharCount Number of chars before selection to replace
-	 * @param {String} newText Replacement text
+	 * @param {string} newText Replacement text
 	 */
 	TextEntry.prototype.replaceTextAtSelection = null;
 
 	/**
 	 * TextEntry class for input/textarea widgets
-	 * @class
 	 *
+	 * @class
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
@@ -564,9 +572,9 @@
 	/**
 	 * Get the current selection offsets inside the widget
 	 *
-	 * @return {Object} Offsets in chars (0 means first offset *or* no selection in widget)
-	 * @return.start {number} Selection start
-	 * @return.end {number} Selection end
+	 * @return {Object} return Offsets in chars (0 means first offset *or* no selection in widget)
+	 * @return {number} return.start Selection start
+	 * @return {number} return.end Selection end
 	 */
 	FormWidgetEntry.prototype.getCaretPosition = function () {
 		var el = this.$element.get( 0 ),
@@ -625,8 +633,8 @@
 
 	/**
 	 * TextEntry class for ContentEditable
-	 * @class
 	 *
+	 * @class
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
@@ -745,6 +753,7 @@
 
 	/**
 	 * jQuery plugin ime
+	 *
 	 * @param {Object} option
 	 */
 	$.fn.ime = function ( option ) {
@@ -764,7 +773,7 @@
 			}
 
 			if ( typeof option === 'string' ) {
-				data[option]();
+				data[ option ]();
 			}
 		} );
 	};
@@ -790,6 +799,7 @@
 
 	/**
 	 * load an input method by given id
+	 *
 	 * @param {string} inputmethodId
 	 * @return {jQuery.Promise}
 	 */
@@ -797,17 +807,17 @@
 		var dependency,
 			deferred = $.Deferred();
 
-		if ( $.ime.inputmethods[inputmethodId] ) {
+		if ( $.ime.inputmethods[ inputmethodId ] ) {
 			return deferred.resolve();
 		}
 
 		// Validate the input method id.
-		if ( !$.ime.sources[inputmethodId] ) {
+		if ( !$.ime.sources[ inputmethodId ] ) {
 			return deferred.reject();
 		}
 
-		dependency = $.ime.sources[inputmethodId].depends;
-		if ( dependency && !$.ime.inputmethods[dependency] ) {
+		dependency = $.ime.sources[ inputmethodId ].depends;
+		if ( dependency && !$.ime.inputmethods[ dependency ] ) {
 			$.ime.load( dependency ).done( function () {
 				$.ime.load( inputmethodId ).done( function () {
 					deferred.resolve();
@@ -819,7 +829,7 @@
 
 		debug( 'Loading ' + inputmethodId );
 		deferred = $.ajax( {
-			url: $.ime.path + $.ime.sources[inputmethodId].source,
+			url: $.ime.path + $.ime.sources[ inputmethodId ].source,
 			dataType: 'script',
 			cache: true
 		} ).done( function () {
@@ -832,7 +842,7 @@
 	};
 
 	$.ime.register = function ( inputMethod ) {
-		$.ime.inputmethods[inputMethod.id] = $.extend( {}, defaultInputMethod, inputMethod );
+		$.ime.inputmethods[ inputMethod.id ] = $.extend( {}, defaultInputMethod, inputMethod );
 	};
 
 	/**
@@ -860,8 +870,8 @@
 		}
 	}
 
-	function arrayKeys ( obj ) {
-		return $.map( obj, function( element, index ) {
+	function arrayKeys( obj ) {
+		return $.map( obj, function ( element, index ) {
 			return index;
 		} );
 	}

@@ -7,7 +7,7 @@
 		description: 'Norwegian input method with most common form transliterated',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
-		//URL: 'http://www.evertype.com/alphabets/nynorsk-norwegian.pdf',
+		// URL: 'http://www.evertype.com/alphabets/nynorsk-norwegian.pdf',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',

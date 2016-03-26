@@ -12,11 +12,11 @@
 		version: '1.0',
 		patterns_x: [
 			// Combining dot below
-			['\\.', '\u0323'],
+			[ '\\.', '\u0323' ],
 			// Combining grave tone mark
-			['\\\\', '\u0340'],
+			[ '\\\\', '\u0340' ],
 			// Combining acute tone mark
-			['/', '\u0341']
+			[ '/', '\u0341' ]
 		]
 	};
 

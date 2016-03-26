@@ -10,7 +10,7 @@
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',
-		//contextLength: 1,
+		// contextLength: 1,
 		maxKeyLength: 3,
 		patterns: [
 			// Uses "~" as "approximatly similar to"
@@ -20,8 +20,8 @@
 			[ '~C', 'Č' ],
 			[ '~d', 'đ' ],
 			[ '~D', 'Đ' ],
-			//[ '~ng', 'ŋ' ], // The simple ~n does not work as there is a "ñ"
-			//[ '~NG', 'Ŋ' ], // The simple ~N does not work as there is a "Ñ"
+			// [ '~ng', 'ŋ' ], // The simple ~n does not work as there is a "ñ"
+			// [ '~NG', 'Ŋ' ], // The simple ~N does not work as there is a "Ñ"
 			[ '~g', 'ŋ' ],
 			[ '~G', 'Ŋ' ],
 			[ '~s', 'š' ],
