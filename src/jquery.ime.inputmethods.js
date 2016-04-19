@@ -564,7 +564,7 @@
 			source: 'rules/sah/sah-transliteration.js'
 		},
 		'sat-inscript2': {
-			name: 'inskript2',
+			name: 'inscript2',
 			source: 'rules/sat/sat-inscript2.js'
 		},
 		'sat-sarjom-baha': {

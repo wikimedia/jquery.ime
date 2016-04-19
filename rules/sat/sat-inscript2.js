@@ -3,9 +3,9 @@
 
 	var satInScript2 = {
 		id: 'sat-inscript2',
-		name: 'inskript2',
+		name: 'inscript2',
 		description: 'Enhanced InScript keyboard for Santali language',
-		date: '3-29-2016',
+		date: '2016-03-29',
 		author: 'Jnanaranjan Sahu',
 		license: 'GPLv3',
 		version: '1.0',
@@ -56,7 +56,7 @@
 			[ 'm', 'ᱥ' ],
 			[ '\\,', '᱿' ],
 			[ '\\.', '᱾' ],
-			[ '\\/', 'ᱭ' ],
+			[ '\\/', 'ᱭ' ]
 		]
 	};
 	$.ime.register( satInScript2 );
