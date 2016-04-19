@@ -45,16 +45,7 @@
   "engine": {
     "node": ">=0.6.x"
   },
-  "licenses": [
-    {
-      "type": "GPL",
-      "url": "https://github.com/wikimedia/jquery.ime/blob/master/GPL-LICENSE"
-    },
-    {
-      "type": "MIT",
-      "url": "https://github.com/wikimedia/jquery.ime/blob/master/MIT-LICENSE"
-    }
-  ],
+  "license": "(GPL-2.0+ OR MIT)",
   "scripts": {
      "test": "grunt test --verbose"
   }
