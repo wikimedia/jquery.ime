@@ -564,7 +564,7 @@
 			source: 'rules/sah/sah-transliteration.js'
 		},
 		'sat-inscript2': {
-			name: 'inscript2',
+			name: 'इनस्क्रिप्ट २',
 			source: 'rules/sat/sat-inscript2.js'
 		},
 		'sat-inscript2-ol-chiki': {
