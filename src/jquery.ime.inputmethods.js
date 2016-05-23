@@ -556,7 +556,7 @@
 			source: 'rules/sa/sa-inscript2.js'
 		},
 		'sa-transliteration': {
-			name: 'ट्रन्स्लितेरतिओन्',
+			name: 'लिप्यन्तरणम्',
 			source: 'rules/sa/sa-transliteration.js'
 		},
 		'sah-transliteration': {
