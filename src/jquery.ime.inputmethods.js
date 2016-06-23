@@ -8,7 +8,7 @@
 		},
 		'ak-qx': {
 			name: 'Akan - QX replacement',
-			source: 'rules/ak/ak-qx.js'
+			source: 'rules/ga/gaa-cqx.js'
 		},
 		'ar-kbd': {
 			name: 'أرابيك',
@@ -177,6 +177,10 @@
 		'fi-transliteration': {
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
+		},
+		'gaa-cqx': {
+			name: 'Ga - CQX replacement',
+			source: 'rules/gaa/gaa-cqx.js'
 		},
 		'lud-transliteration': {
 			name: 'lud',
@@ -749,6 +753,10 @@
 		fi: {
 			autonym: 'Suomi',
 			inputmethods: [ 'fi-transliteration' ]
+		},
+		gaa: {
+			autonym: 'Ga',
+			inputmethods: [ 'gaa-cqx' ]
 		},
 		lrc: {
 			autonym: 'لۊری شومالی',
