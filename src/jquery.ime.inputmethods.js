@@ -6,6 +6,10 @@
 			name: 'ትራንስልተራትዖን',
 			source: 'rules/am/am-transliteration.js'
 		},
+		'ak-qx': {
+			name: 'Akan - QX replacement',
+			source: 'rules/ak/ak-qx.js'
+		},
 		'ar-kbd': {
 			name: 'أرابيك',
 			source: 'rules/ar/ar-kbd.js'
@@ -633,6 +637,10 @@
 		ahr: {
 			autonym: 'अहिराणी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+		},
+		ak: {
+			autonym: 'Akan',
+			inputmethods: [ 'ak-qx' ]
 		},
 		am: {
 			autonym: 'አማርኛ',
