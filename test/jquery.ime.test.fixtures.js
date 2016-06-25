@@ -1886,6 +1886,9 @@ var palochkaVariants = {
 	},{
 		description: 'Punjabi Gurmukhi Phonetic',
 		tests: [
+			{ input: 'st.', output: 'ਸਟ।', description: 'Punjabi Phonetic test - "st."' },
+			{ input: 'mu~K', output: 'ਮੁੱਖ', description: 'Punjabi Phonetic test - "mu~K"' },
+			{ input: 'p`rIqI', output: 'ਪ੍ਰੀਤੀ', description: 'Punjabi Phonetic test - "p`rIqI (Priti)"' },
 			{ input: ')', output: '੦', description: 'Punjabi Phonetic test - Zero' },
 			{ input: '(', output: '੯', description: 'Punjabi Phonetic test - Nine' }
 		],
