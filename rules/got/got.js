@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var got = {
+	var got-standard = {
 		id: 'got',
-		name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
-		description: 'Gothic keyboard lay-out',
+		name: '𐌲𐌿𐍄𐌹𐍃𐌺',
+		description: 'Gothic keyboard layout',
 		date: '2016-27-06',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author:  'Bokareis',
