@@ -3,7 +3,7 @@
 
 	var got-standard = {
 		id: 'got',
-		name: '𐌲𐌿𐍄𐌹𐍃𐌺',
+		name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
 		description: 'Gothic keyboard layout',
 		date: '2016-27-06',
 		URL: 'http://github.com/wikimedia/jquery.ime',
