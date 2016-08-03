@@ -336,6 +336,10 @@
 			name: 'Кирил',
 			source: 'rules/kk/kk-kbd.js'
 		},
+		'km-nidakyk': {
+			name: 'ក្តារ​ចុច​យូនីកូដ​ខ្មែរ (NiDA)',
+			source: 'rules/km/km-nidakyk.js'
+		},
 		'kn-inscript': {
 			name: 'ಇನ್ಸ್ಕ್ರಿಪ್ಟ್',
 			source: 'rules/kn/kn-inscript.js'
@@ -809,6 +813,10 @@
 		kk: {
 			autonym: 'Қазақша',
 			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
+		},
+		km: {
+			autonym: 'ភាសា​ខ្មែរ',
+			inputmethods: [ 'km-nidakyk' ]
 		},
 		kn: {
 			autonym: 'ಕನ್ನಡ',
