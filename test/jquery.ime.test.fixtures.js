@@ -462,6 +462,21 @@ var palochkaVariants = {
 		],
 		inputmethod: 'gu-phonetic'
 	},{
+		description: 'Urdu Phonetics',
+		tests: [
+			{ input: '1',  output: '1', description: 'Urdu Numeral 1 -> 1' },
+			{ input: '2',  output: '2', description: 'Urdu Numeral 2 -> 2' },
+			{ input: '3',  output: '3', description: 'Urdu Numeral 3 -> 3' },
+			{ input: '4',  output: '4', description: 'Urdu Numeral 4 -> 4' },
+			{ input: '5',  output: '5', description: 'Urdu Numeral 5 -> 5' },
+			{ input: '6',  output: '6', description: 'Urdu Numeral 6 -> 6' },
+			{ input: '7',  output: '7', description: 'Urdu Numeral 7 -> 7' },
+			{ input: '8',  output: '8', description: 'Urdu Numeral 8 -> 8' },
+			{ input: '9',  output: '9', description: 'Urdu Numeral 9 -> 9' },
+			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' },
+		],
+		inputmethod: 'ur-phonetic'
+	},{
 		description: 'Gujarati Inscript 2',
 		tests: [
 			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref' },
