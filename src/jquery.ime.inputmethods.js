@@ -782,6 +782,10 @@
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
+                hoc: {
+			autonym: '𑢹𑣉𑣉/Ho',
+			inputmethods: [ 'hoc-transliteration' ]
+		},
 		hr: {
 			autonym: 'Hrvatski',
 			inputmethods: [ 'hr-kbd' ]
