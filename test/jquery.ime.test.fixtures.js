@@ -824,6 +824,36 @@ var palochkaVariants = {
 		],
 		inputmethod: 'jv-transliteration'
 	},{
+		description: 'Ho transliteration test',
+		tests: [
+			{ input: 'th', output: '𑣕', description: 'Ho th' },
+			{ input: 'dh', output: '𑣔', description: 'Ho dh' },
+			{ input: 'rr', output: '𑣛', description: 'Ho rr' },
+			{ input: 'nj', output: '𑣍', description: 'Ho nj' },
+			{ input: 'ng', output: '𑣊', description: 'Ho ng' },
+			{ input: 'nn', output: '𑣐', description: 'Ho nn' },
+			{ input: 'Th', output: '𑢵', description: 'Ho Th' },
+			{ input: 'Dh', output: '𑢴', description: 'Ho Dh' },
+			{ input: 'Rr', output: '𑢻', description: 'Ho Rr' },
+			{ input: 'Nj', output: '𑢭', description: 'Ho Nj' },
+			{ input: 'Ng', output: '𑢪', description: 'Ho Ng' },
+			{ input: 'Nn', output: '𑢰', description: 'Ho Nn' },
+			{ input: '*', output: '𑣀', description: 'Ho *' },
+			{ input: '#', output: '𑢠', description: 'Ho #' },
+			{ input: '\@', output: '𑣿', description: 'Ho \@' },
+			{ input: 'imin', output: '𑣆𑣖𑣂𑣓', description: 'Ho imin' },
+			{ input: 'urub', output: '𑣇𑣜𑣃𑣗', description: 'Ho urub' },
+			{ input: '0123456789', output: '𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩', description: 'Ho 0123456789' },
+			{ input: 'jomsrq', output: '𑣎𑣉𑣖𑣞𑣜𑣄', description: 'Ho jomsrq' },	
+                        { input: 'Gai', output: '𑢫𑣆', description: 'Ho Gai' },
+			{ input: 'Wrng Cithi', output: '𑢿𑣜𑣊 𑢯𑣂𑣕𑣂', description: 'Ho Wrng Cithi' },
+			{ input: 'ra*sa', output: '𑣜𑣁𑣀𑣞𑣁', description: 'Ho ra*sa' },
+			{ input: 'Ipilsinggi', output: '𑢦𑣘𑣂𑣚𑣞𑣂𑣊𑣋𑣂', description: 'Ho Ipilsinggi' },
+			{ input: 'Horro', output: '𑢹𑣉𑣛𑣉', description: 'Ho Horro'},
+                        { input: '\0\1\2\3\4\5\6\7\8\9', output: '0123456789', description: 'Ho \0\1\2\3\4\5\6\7\8\9'}
+		],
+		inputmethod: 'hoc-transliteration'
+	},{
 		description: 'Kannada KGP test',
 		tests: [
 			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
