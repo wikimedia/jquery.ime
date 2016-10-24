@@ -198,6 +198,10 @@
 			name: 'फोनेटिक',
 			source: 'rules/hi/hi-phonetic.js'
 		},
+		'hoc': {
+			name: '𑢹𑣉𑣉/Ho',
+			source: 'rules/hoc/hoc-transliteration.js'
+		},
 		'is-normforms': {
 			name: 'Venjuleg eyðublöð',
 			source: 'rules/is/is-normforms.js'
