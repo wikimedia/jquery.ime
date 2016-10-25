@@ -200,7 +200,7 @@
 		},
 		'hoc': {
 			name: '𑢹𑣉𑣉/Ho',
-			source: 'rules/hoc/hoc-transliteration.js'
+			source: 'rules/hoc.js'
 		},
 		'is-normforms': {
 			name: 'Venjuleg eyðublöð',
