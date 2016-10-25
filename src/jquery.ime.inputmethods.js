@@ -199,7 +199,7 @@
 			source: 'rules/hi/hi-phonetic.js'
 		},
 		'hoc': {
-			name: '𑢹𑣉𑣉/Ho',
+			name: 'Ho transliteration',
 			source: 'rules/hoc-transliteration.js'
 		},
 		'is-normforms': {
