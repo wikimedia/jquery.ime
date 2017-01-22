@@ -591,6 +591,10 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'ti-geezim': {
+			name: 'ትግርኛ',
+			source: 'rules/ti/ti-geezim.js'
+		},
 		'ur-phonetic': {
 			name: 'صوتی',
 			source: 'rules/ur/ur-phonetic.js'
@@ -969,6 +973,10 @@
 		th: {
 			autonym: 'ไทย',
 			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
+		},
+		ti: {
+			autonym: 'ትግርኛ',
+			inputmethods: [ 'ti-geezim' ]
 		},
 		tkr: {
 			autonym: 'цӀаӀхна миз',
