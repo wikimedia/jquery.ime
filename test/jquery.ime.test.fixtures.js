@@ -11,6 +11,26 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Tigrinya GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Amharic k -> ክ' },
+			{ input: 'lie', output: 'ሌ', description: 'Amharic N -> ኝ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Amharic neNu -> ነኙ' },
+			{ input: 'mie', output: 'ሜ', description: 'Amharic Nu -> ኙ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Amharic cika -> ቺካ' },
+			{ input: 'gua', output: 'ጓ', description: 'Amharic << -> «' },
+			{ input: 'gue', output: 'ጐ', description: 'Amharic << -> «' },
+			{ input: 'gui', output: 'ጒ', description: 'Amharic vee -> ቬ' },
+			{ input: 'guie', output: 'ጔ', description: 'Amharic vE -> ቬ' },
+			{ input: 'gW', output: 'ቬ', description: 'Amharic Vee -> ቬ' },
+			{ input: '.', output: '።', description: 'Amharic VE:: -> ቬ።' },
+			{ input: '..', output: '.', description: 'Amharic to -> ቶ' },
+			{ input: '.-', output: '፨', description: 'Amharic dW -> ዷ' },
+			{ input: ';;', output: '።', description: 'Amharic ss -> ሥ' },
+		],
+		inputmethod: 'ti-geezim'
+	},
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
