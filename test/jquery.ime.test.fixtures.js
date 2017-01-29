@@ -711,7 +711,7 @@ var palochkaVariants = {
 			{ input: '7',  output: '7', description: 'Urdu Numeral 7 -> 7' },
 			{ input: '8',  output: '8', description: 'Urdu Numeral 8 -> 8' },
 			{ input: '9',  output: '9', description: 'Urdu Numeral 9 -> 9' },
-			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' }
+			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' },
 		],
 		inputmethod: 'ur-phonetic'
 	},{
@@ -3769,27 +3769,27 @@ var palochkaVariants = {
 		inputmethod: 'yo-alt'
 	},
 	{
-		description: 'Santali Inscript2 test',
-		tests: [
-			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
-			{ input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
-			{ input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
-			{ input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
-			{ input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
-			{ input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
-			{ input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
-		],
-		inputmethod: 'sat-inscript2-ol-chiki'
+    description: 'Santali Inscript2 test',
+	    tests: [
+	        { input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
+	        { input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
+	        { input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
+	        { input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
+	        { input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
+	        { input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
+	        { input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
+	    ],
+	    inputmethod: 'sat-inscript2-ol-chiki'
 	},
 	{
-		description: 'Santali Sarjom Baha test',
-		tests: [
-			{ input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
-			{ input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
-			{ input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
-			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
-		],
-		inputmethod: 'sat-sarjom-baha'
+    description: 'Santali Sarjom Baha test',
+	    tests: [
+	        { input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
+	        { input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
+	        { input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
+	        { input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
+	    ],
+	    inputmethod: 'sat-sarjom-baha'
 	},
 	{
 		description: 'Khmer NiDA standard Unicode keyboard test',
