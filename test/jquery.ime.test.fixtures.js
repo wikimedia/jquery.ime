@@ -11,6 +11,56 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Norwegian Transliteration test',
+		tests: [
+			// Superscripts
+			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
+			{ input: '^1', output: '¹', description: 'Norwegian superscript 1 -> ¹' },
+			{ input: '^2', output: '²', description: 'Norwegian superscript 2 -> ²' },
+			{ input: '^3', output: '³', description: 'Norwegian superscript 3 -> ³' },
+			{ input: '^4', output: '⁴', description: 'Norwegian superscript 4 -> ⁴' },
+			{ input: '^5', output: '⁵', description: 'Norwegian superscript 5 -> ⁵' },
+			{ input: '^6', output: '⁶', description: 'Norwegian superscript 6 -> ⁶' },
+			{ input: '^7', output: '⁷', description: 'Norwegian superscript 7 -> ⁷' },
+			{ input: '^8', output: '⁸', description: 'Norwegian superscript 8 -> ⁸' },
+			{ input: '^9', output: '⁹', description: 'Norwegian superscript 9 -> ⁹' },
+			// Subscripts
+			{ input: '_0', output: '₀', description: 'Norwegian superscript 0 -> ₀' },
+			{ input: '_1', output: '₁', description: 'Norwegian superscript 1 -> ₁' },
+			{ input: '_2', output: '₂', description: 'Norwegian superscript 2 -> ₂' },
+			{ input: '_3', output: '₃', description: 'Norwegian superscript 3 -> ₃' },
+			{ input: '_4', output: '₄', description: 'Norwegian superscript 4 -> ₄' },
+			{ input: '_5', output: '₅', description: 'Norwegian superscript 5 -> ₅' },
+			{ input: '_6', output: '₆', description: 'Norwegian superscript 6 -> ₆' },
+			{ input: '_7', output: '₇', description: 'Norwegian superscript 7 -> ₇' },
+			{ input: '_8', output: '₈', description: 'Norwegian superscript 8 -> ₈' },
+			{ input: '_9', output: '₉', description: 'Norwegian superscript 9 -> ₉' },
+			// Exceptions
+			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
+			{ input: '#2ae', output: '#2ae', description: 'Exception on color defs #2ae -> #2ae' },
+			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
+			{ input: '#2AE', output: '#2AE', description: 'Exception on color defs #2AE -> #2AE' },
+			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
+			{ input: '#2aa', output: '#2aa', description: 'Exception on color defs #2aa -> #2aa' },
+			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
+			{ input: '#2AA', output: '#2AA', description: 'Exception on color defs #2AA -> #2AA' },
+			// Ligatures
+			{ input: 'ae', output: 'æ', description: 'Norwegian old ae -> æ' },
+			{ input: 'aE', output: 'Æ', description: 'Norwegian old aE -> Æ' },
+			{ input: 'Ae', output: 'Æ', description: 'Norwegian old Ae -> Æ' },
+			{ input: 'AE', output: 'Æ', description: 'Norwegian old AE -> Æ' },
+			{ input: 'oe', output: 'ø', description: 'Norwegian old oe -> ø' },
+			{ input: 'oE', output: 'Ø', description: 'Norwegian old oE -> Ø' },
+			{ input: 'Oe', output: 'Ø', description: 'Norwegian old Oe -> Ø' },
+			{ input: 'OE', output: 'Ø', description: 'Norwegian old OE -> Ø' },
+			{ input: 'aa', output: 'å', description: 'Norwegian old aa -> å' },
+			{ input: 'aA', output: 'Å', description: 'Norwegian old aA -> Å' },
+			{ input: 'Aa', output: 'Å', description: 'Norwegian old Aa -> Å' },
+			{ input: 'AA', output: 'Å', description: 'Norwegian old AA -> Å' }
+		],
+		inputmethod: 'nb-normforms'
+	},
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
