@@ -763,7 +763,7 @@
 			inputmethods: [ 'lud-transliteration' ]
 		},
 		gom: {
-			autonym: 'गोवा कोंकणी / Gova Konknni',
+			autonym: 'गोंयची कोंकणी / Gõychi Konknni',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
 		},
 		gu: {
