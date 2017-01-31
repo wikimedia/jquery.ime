@@ -35,6 +35,9 @@
 			[ '»(\\S)', '"', '"$1' ],					// failed closing
 			[ '[«»]"', '"', '""' ],						// revert
 
+			// horizontal ellipsis
+			[ '\\.\\.\\.', '…' ],
+
 			// Superscript for numbers
 			[ '\\^0', '⁰' ],
 			[ '\\^1', '¹' ],
