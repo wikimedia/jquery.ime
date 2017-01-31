@@ -34,16 +34,28 @@ var palochkaVariants = {
 
 			// horizontal ellipsis
 			{ input: '...', output: '…', description: 'Norwegian punctuation ... -> …' },
+			{ input: '....', output: '....', description: 'Norwegian punctuation .... -> ....' },
 
-			// hyphen-minus
-			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
-			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
-            // @todo following tests fails, but manualchecking makes it clear it works as it should
-            // this can be due to diverging behavior in the different editable elements
-			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
-			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
-			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
-			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' },
+			// Exceptions for hex codes
+			{ input: '0xae', output: '0xae', description: 'Exception on hex num 0xae -> 0xae' },
+			{ input: '0x112233ae', output: '0x112233ae', description: 'Exception on hex num 0x112233ae -> 0x112233ae' },
+			{ input: '0xAE', output: '0xAE', description: 'Exception on hex num 0xAE -> 0xAE' },
+			{ input: '0x112233AE', output: '0x112233AE', description: 'Exception on hex num 0x112233AE -> 0x112233AE' },
+
+			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
+			{ input: '#1122ae', output: '#1122ae', description: 'Exception on color defs #1122ae -> #1122ae' },
+			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
+			{ input: '#1122AE', output: '#1122AE', description: 'Exception on color defs #1122AE -> #1122AE' },
+
+			{ input: '0xaa', output: '0xaa', description: 'Exception on hex num 0xaa -> 0xaa' },
+			{ input: '0x112233aa', output: '0x112233aa', description: 'Exception on hex num 0x112233aa -> 0x112233aa' },
+			{ input: '0xAA', output: '0xAA', description: 'Exception on hex num 0xAA -> 0xAA' },
+			{ input: '0x112233AA', output: '0x112233AA', description: 'Exception on hex num 0x112233AA -> 0x112233AA' },
+
+			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
+			{ input: '#1122aa', output: '#1122aa', description: 'Exception on color defs #1122aa -> #1122aa' },
+			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
+			{ input: '#1122AA', output: '#1122AA', description: 'Exception on color defs #1122AA -> #1122AA' },
 
 			// Superscript for numbers
 			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
@@ -98,26 +110,20 @@ var palochkaVariants = {
 			{ input: '_s', output: 'ₛ', description: 'Norwegian subscript s -> ₛ' },
 			{ input: '_t', output: 'ₜ', description: 'Norwegian subscript t -> ₜ' },
 
-			// Exceptions for hex codes
-			{ input: '0xae', output: '0xae', description: 'Exception on hex num 0xae -> 0xae' },
-			{ input: '0x112233ae', output: '0x112233ae', description: 'Exception on hex num 0x112233ae -> 0x112233ae' },
-			{ input: '0xAE', output: '0xAE', description: 'Exception on hex num 0xAE -> 0xAE' },
-			{ input: '0x112233AE', output: '0x112233AE', description: 'Exception on hex num 0x112233AE -> 0x112233AE' },
+			// Superscripts in units
+			{ input: 'm2', output: 'm²', description: 'Norwegian superscript (m2) -> (m²)' },
+			{ input: 'km2', output: 'km²', description: 'Norwegian superscript (km2) -> (km²)' },
+			{ input: 'm-2kg-1s4A2', output: 'm⁻²kg⁻¹s⁴A²', description: 'Norwegian def of Farad (m-2kg-1s4A2) -> (m⁻²kg⁻¹s⁴A²)' },
 
-			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
-			{ input: '#1122ae', output: '#1122ae', description: 'Exception on color defs #1122ae -> #1122ae' },
-			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
-			{ input: '#1122AE', output: '#1122AE', description: 'Exception on color defs #1122AE -> #1122AE' },
-
-			{ input: '0xaa', output: '0xaa', description: 'Exception on hex num 0xaa -> 0xaa' },
-			{ input: '0x112233aa', output: '0x112233aa', description: 'Exception on hex num 0x112233aa -> 0x112233aa' },
-			{ input: '0xAA', output: '0xAA', description: 'Exception on hex num 0xAA -> 0xAA' },
-			{ input: '0x112233AA', output: '0x112233AA', description: 'Exception on hex num 0x112233AA -> 0x112233AA' },
-
-			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
-			{ input: '#1122aa', output: '#1122aa', description: 'Exception on color defs #1122aa -> #1122aa' },
-			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
-			{ input: '#1122AA', output: '#1122AA', description: 'Exception on color defs #1122AA -> #1122AA' },
+			// hyphen-minus
+			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
+			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
+            // @todo following tests fails, but manualchecking makes it clear it works as it should
+            // this can be due to diverging behavior in the different editable elements
+			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
+			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
+			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
+			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' },
 
 			// Test ligature æ
 			{ input: 'ae', output: 'æ', description: 'Norwegian old ae -> æ' },
