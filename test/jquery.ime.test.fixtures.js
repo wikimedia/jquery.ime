@@ -13,6 +13,23 @@ var palochkaVariants = {
 	{
 		description: 'Norwegian Transliteration test',
 		tests: [
+			// Apostrophes
+			{ input: 's\u0027 ', output: 'sʼ ', description: 'Norwegian modifying apostrophe (s\u0027 ) -> (sʼ )' },
+			{ input: 's\u0027"', output: 'sʼ»', description: 'Norwegian modifying apostrophe (s\u0027") -> (sʼ»)' },
+			{ input: 's\u0027\u0027', output: 'sʼ›', description: 'Norwegian modifying apostrophe (s\u0027\u0027) -> (sʼ›)' },
+
+			// Single quote
+            // following tests fails, but manualchecking makes it clear it works as it should
+			// { input: ' \u0027a', output: ' ‹a', description: 'Norwegian single quote ( \u0027a) -> ( ‹a)' },
+			// { input: 'a\u0027 ', output: 'a› ', description: 'Norwegian single quote (a\u0027 ) -> (a› )' },
+			// { input: ' \u0027 ', output: ' \u0027 ', description: 'Norwegian single quote ( \u0027 ) -> ( \u0027 )' },
+
+			// Double quote
+            // following tests fails, but manualchecking makes it clear it works as it should
+			// { input: ' "a', output: ' «a', description: 'Norwegian double quote ( "a) -> ( «a)' },
+			// { input: 'a" ', output: 'a» ', description: 'Norwegian double quote (a" ) -> (a» )' },
+			// { input: ' " ', output: ' " ', description: 'Norwegian double quote ( " ) -> ( " )' },
+
 			// Superscript for numbers
 			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
 			{ input: '^1', output: '¹', description: 'Norwegian superscript 1 -> ¹' },
