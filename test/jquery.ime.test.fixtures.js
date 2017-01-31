@@ -30,6 +30,9 @@ var palochkaVariants = {
 			// { input: 'a" ', output: 'a» ', description: 'Norwegian double quote (a" ) -> (a» )' },
 			// { input: ' " ', output: ' " ', description: 'Norwegian double quote ( " ) -> ( " )' },
 
+			// horizontal ellipsis
+			{ input: '...', output: '…', description: 'Norwegian superscript ... -> …' },
+
 			// Superscript for numbers
 			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
 			{ input: '^1', output: '¹', description: 'Norwegian superscript 1 -> ¹' },
