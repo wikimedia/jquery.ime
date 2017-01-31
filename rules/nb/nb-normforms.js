@@ -42,8 +42,8 @@
 			[ '-(\\d)', '−$1' ],						// in front of numbers -> minus
 			[ '-(\\w)', '‐$1' ],						// in front of words -> hyphen
 			[ '(\\w)-([\\n\\r])', '$1\u00AD' ],			// on last word on line -> soft-hyphen
-			[ '([\\n\\r]\\t*)-', '$1–' ],					// with space padding -> endash
-			[ '(\\w)-(\\ )', '$1–$2' ],						// after word before space -> endash
+			[ '([\\n\\r]\\t*)-', '$1–' ],				// with space padding -> endash
+			[ '(\\w)-(\\ )', '$1–$2' ],					// after word before space -> endash
 			[ '(\\ )-(\\ )', '$1–$2' ],					// with space padding -> endash
 
 			// Superscript for numbers
