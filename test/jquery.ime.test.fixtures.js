@@ -19,19 +19,31 @@ var palochkaVariants = {
 			{ input: 's\u0027\u0027', output: 'sʼ›', description: 'Norwegian modifying apostrophe (s\u0027\u0027) -> (sʼ›)' },
 
 			// Single quote
-            // following tests fails, but manualchecking makes it clear it works as it should
+            // @todo following tests fails, but manualchecking makes it clear it works as it should
+            // this can be due to diverging behavior in the different editable elements
 			// { input: ' \u0027a', output: ' ‹a', description: 'Norwegian single quote ( \u0027a) -> ( ‹a)' },
 			// { input: 'a\u0027 ', output: 'a› ', description: 'Norwegian single quote (a\u0027 ) -> (a› )' },
 			// { input: ' \u0027 ', output: ' \u0027 ', description: 'Norwegian single quote ( \u0027 ) -> ( \u0027 )' },
 
 			// Double quote
-            // following tests fails, but manualchecking makes it clear it works as it should
+            // @todo following tests fails, but manualchecking makes it clear it works as it should
+            // this can be due to diverging behavior in the different editable elements
 			// { input: ' "a', output: ' «a', description: 'Norwegian double quote ( "a) -> ( «a)' },
 			// { input: 'a" ', output: 'a» ', description: 'Norwegian double quote (a" ) -> (a» )' },
 			// { input: ' " ', output: ' " ', description: 'Norwegian double quote ( " ) -> ( " )' },
 
 			// horizontal ellipsis
-			{ input: '...', output: '…', description: 'Norwegian superscript ... -> …' },
+			{ input: '...', output: '…', description: 'Norwegian punctuation ... -> …' },
+
+			// hyphen-minus
+			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
+			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
+            // @todo following tests fails, but manualchecking makes it clear it works as it should
+            // this can be due to diverging behavior in the different editable elements
+			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
+			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
+			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
+			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' },
 
 			// Superscript for numbers
 			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
@@ -44,6 +56,7 @@ var palochkaVariants = {
 			{ input: '^7', output: '⁷', description: 'Norwegian superscript 7 -> ⁷' },
 			{ input: '^8', output: '⁸', description: 'Norwegian superscript 8 -> ⁸' },
 			{ input: '^9', output: '⁹', description: 'Norwegian superscript 9 -> ⁹' },
+
 			// Subscripts for numbers
 			{ input: '_0', output: '₀', description: 'Norwegian subscript 0 -> ₀' },
 			{ input: '_1', output: '₁', description: 'Norwegian subscript 1 -> ₁' },
@@ -176,7 +189,8 @@ var palochkaVariants = {
 			{ input: 'AAA', output: 'AA', description: 'Norwegian old AAA -> AA' }
 
 		],
-		inputmethod: 'nb-normforms'
+		inputmethod: 'nb-normforms',
+		multiline: true
 	},
 	{
 		description: 'Amharic Transliteration test',
