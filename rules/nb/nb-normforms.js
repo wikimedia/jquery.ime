@@ -14,6 +14,27 @@
 		maxKeyLength: 9,
 		patterns: [
 
+			// apostrophes
+			[ '([sxzSXZ])›(\\s)', '\u0027', '$1ʼ$2' ],	// whitespace
+			[ '([sxzSXZ])›(")', '\u0027', '$1ʼ»' ],	// double guillemet
+			[ '([sxzSXZ])›(\u0027)', '\u0027', '$1ʼ›' ],// single guillemet
+
+			// single quote as guillemet
+			[ '(^|\\s|«)\u0027', '$1‹' ],				// opening
+			[ '([^\\s\u0027‹›])\u0027', '$1›' ],		// closing
+			// rollback
+			[ '‹(\\s)', '\u0027', '\u0027$1' ],			// failed opening
+			[ '›(\\S)', '\u0027', '\u0027$1' ],			// failed closing
+			[ '[‹›]\u0027', '\u0027', '\u0027\u0027' ],	// revert
+
+			// double quote as guillemet
+			[ '(^|\\s|‹)"', '$1«' ],					// opening
+			[ '([^\\s"«»])"', '$1»' ],					// closing
+			// rollback
+			[ '«(\\s)', '"', '"$1' ],					// failed opening
+			[ '»(\\S)', '"', '"$1' ],					// failed closing
+			[ '[«»]"', '"', '""' ],						// revert
+
 			// Superscript for numbers
 			[ '\\^0', '⁰' ],
 			[ '\\^1', '¹' ],
