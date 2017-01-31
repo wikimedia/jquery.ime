@@ -1,5 +1,15 @@
+// jscs:disable requireMultipleVarDecl
 ( function ( $ ) {
 	'use strict';
+
+	var prefixes = 'E|P|T|G|M|k|h|da|d|c|m|u|μ|n|p|f|a',
+	baseSIUnits = 'm|g|s|A|K|mol|[cC]d',
+	derivedSIUnits = 'rad|sr|[hH]z|N|[pP]a|J|W|C|V|F|Ω|S|[wW]b|T|H|°C|[lL]m|[lL]x|[bB]q|[gG]|[sS]v|kat',
+	// var superscripts = '[⁰¹²³⁴⁵⁶⁷⁸⁹]';
+	sups = { 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' },
+	signs = {};
+	signs[ '+' ] = '⁺';
+	signs[ '-' ] = '⁻';
 
 	var defs = {
 		id: 'nb-normforms',
@@ -37,14 +47,11 @@
 
 			// horizontal ellipsis
 			[ '\\.\\.\\.', '…' ],
+			[ '…\\.', '.', '....' ],
 
-			// hyphen-minus
-			[ '-(\\d)', '−$1' ],						// in front of numbers -> minus
-			[ '-(\\w)', '‐$1' ],						// in front of words -> hyphen
-			[ '(\\w)-([\\n\\r])', '$1\u00AD' ],			// on last word on line -> soft-hyphen
-			[ '([\\n\\r]\\t*)-', '$1–' ],				// with space padding -> endash
-			[ '(\\w)-(\\ )', '$1–$2' ],					// after word before space -> endash
-			[ '(\\ )-(\\ )', '$1–$2' ],					// with space padding -> endash
+			// early capture of hex
+			[ '((0x|#)[0-9a-fA-F]*[aA][aA])', '$1' ],
+			[ '((0x|#)[0-9a-fA-F]*[aA][eE])', '$1' ],
 
 			// Superscript for numbers
 			[ '\\^0', '⁰' ],
@@ -57,6 +64,10 @@
 			[ '\\^7', '⁷' ],
 			[ '\\^8', '⁸' ],
 			[ '\\^9', '⁹' ],
+			[
+				'(' + prefixes + '|)(' + baseSIUnits + '|' + derivedSIUnits + ')([-+]?)([0-9])',
+                function ( $0, $1, $2, $3, $4 ) { return $1 + $2 + (signs[ $3 ] !== undefined ? signs[ $3 ] : '') + sups[ $4 ]; }
+			],
 
 			// Subscript for numbers
 			[ '_0', '₀' ],
@@ -99,11 +110,15 @@
 			[ '_s', 'ₛ' ],
 			[ '_t', 'ₜ' ],
 
-			// early capture of hex
-			[ '((0x|#)[0-9a-fA-F]*[aA][aA])', '$1' ],
-			[ '((0x|#)[0-9a-fA-F]*[aA][eE])', '$1' ],
+			// hyphen-minus
+			[ '(\\w)-([\\n\\r])', '$1\u00AD' ],			// on last word on line -> soft-hyphen
+			[ '([\\n\\r]\\t*)-', '$1–' ],				// with space padding -> endash
+			[ '(\\w)-(\\ )', '$1–$2' ],					// after word before space -> endash
+			[ '(\\ )-(\\ )', '$1–$2' ],					// with space padding -> endash
+			[ '-(\\d)', '−$1' ],						// in front of numbers -> minus
+			[ '-(\\w)', '‐$1' ],						// in front of words -> hyphen
 
-            // collect ligature æ
+			// collect ligature æ
 			[ 'ae', 'æ' ],
 			[ '(AE|Ae|aE)', 'Æ' ],
 			// rollback
@@ -118,7 +133,7 @@
 			[ 'æ([eE])', '[eE]', 'a$1' ],
 			[ 'Æ([eE])', '[eE]', 'A$1' ],
 
-            // collect ligature ø
+			// collect ligature ø
 			[ 'oe', 'ø' ],
 			[ '([oO][eE])', 'Ø' ],
 			// rollback
@@ -141,7 +156,7 @@
 			[ 'ø([eE])', '[eE]', 'o$1' ],
 			[ 'Ø([eE])', '[eE]', 'O$1' ],
 
-            // collect ligature å
+			// collect ligature å
 			[ 'aa', 'å' ],
 			[ '(AA|Aa|aA)', 'Å' ],
 			// rollback
