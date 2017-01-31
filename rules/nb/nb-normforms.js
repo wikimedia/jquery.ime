@@ -11,9 +11,10 @@
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 1,
-		maxKeyLength: 3,
+		maxKeyLength: 9,
 		patterns: [
 
+			// Superscript for numbers
 			[ '\\^0', '⁰' ],
 			[ '\\^1', '¹' ],
 			[ '\\^2', '²' ],
@@ -25,6 +26,7 @@
 			[ '\\^8', '⁸' ],
 			[ '\\^9', '⁹' ],
 
+			// Subscript for numbers
 			[ '_0', '₀' ],
 			[ '_1', '₁' ],
 			[ '_2', '₂' ],
@@ -36,42 +38,92 @@
 			[ '_8', '₈' ],
 			[ '_9', '₉' ],
 
-            // forward å
-			[ '(#[0-9a-fA-F]*[aA][aA])', '$1' ],
-			[ 'aa', 'å' ],
-			[ '(AA|Aa|aA)', 'Å' ],
+			// Superscript for additional chars
+			[ '\\^i', 'ⁱ' ],
+			[ '\\^\\+', '⁺' ],
+			[ '\\^-', '⁻' ],
+			[ '\\^=', '⁼' ],
+			[ '\\^\\(', '⁽' ],
+			[ '\\^\\)', '⁾' ],
+			[ '\\^n', 'ⁿ' ],
 
-            // forward æ
-			[ '(#[0-9a-fA-F]*[aA][eE])', '$1' ],
+			// Subscript for additional chars
+			[ '_\\+', '₊' ],
+			[ '_-', '₋' ],
+			[ '_=', '₌' ],
+			[ '_\\(', '₍' ],
+			[ '_\\)', '₎' ],
+			[ '_a', 'ₐ' ],
+			[ '_e', 'ₑ' ],
+			[ '_o', 'ₒ' ],
+			[ '_x', 'ₓ' ],
+			[ '_Ə', 'ₔ' ], // no idea how this will be typed
+			[ '_h', 'ₕ' ],
+			[ '_k', 'ₖ' ],
+			[ '_l', 'ₗ' ],
+			[ '_m', 'ₘ' ],
+			[ '_n', 'ₙ' ],
+			[ '_p', 'ₚ' ],
+			[ '_s', 'ₛ' ],
+			[ '_t', 'ₜ' ],
+
+			// early capture of hex
+			[ '((0x|#)[0-9a-fA-F]*[aA][aA])', '$1' ],
+			[ '((0x|#)[0-9a-fA-F]*[aA][eE])', '$1' ],
+
+            // collect ligature æ
 			[ 'ae', 'æ' ],
 			[ '(AE|Ae|aE)', 'Æ' ],
-
-            // forward ø
-			[ 'oe', 'ø' ],
-			[ '(OE|Oe|oE)', 'Ø' ],
-
-			// [ '([#0-9a-fA-F])å([0-9a-fA-F])', '[aA]', '$1aa$2' ],
-			// [ '([#0-9a-fA-F])Å([0-9a-fA-F])', '[aA]', '$1AA$2' ],
-			[ 'å([aA])', '[aA]', 'a$1' ],
-			[ 'Å([aA])', '[aA]', 'A$1' ],
-
-			// [ '([#0-9a-fA-F])æ([0-9a-fA-F])', '[eE]', '$1ae$2' ],
-			// [ '([#0-9a-fA-F])Æ([0-9a-fA-F])', '[eE]', '$1AE$2' ],
+			// rollback
+			[ '([iI][mM])æ([fFkKnN])', '[eE]', '$1ae$2' ],
+			[ '([iI][mM])Æ([fFkKnN])', '[eE]', '$1AE$2' ],
+			[ '([rR])æ([lL])', '[eE]', '$1ae$2' ],
+			[ '([rR])Æ([lL])', '[eE]', '$1AE$2' ],
+			[ '([sS])æ([kKpP])', '[eE]', '$1ae$2' ],
+			[ '([sS])Æ([kKpP])', '[eE]', '$1AE$2' ],
+			[ '([tT])æ([kK])', '[eE]', '$1ae$2' ],
+			[ '([tT])Æ([kK])', '[eE]', '$1AE$2' ],
 			[ 'æ([eE])', '[eE]', 'a$1' ],
 			[ 'Æ([eE])', '[eE]', 'A$1' ],
 
-			[ '([bBdDeEgGiIkKlLmMnNpPrRsStTuUvV])ø([nNrR\\s\\W])', '[eE]', '$1oe$2' ],
-			[ '([bBdDeEgGiIkKlLmMnNpPrRsStTuUvV])Ø([nNrR\\s\\W])', '[eE]', '$1OE$2' ],
-			[ '([rR])ø([kK\s\W])', '[eE]', '$1oe$2' ],
-			[ '([rR])Ø([kK\s\W])', '[eE]', '$1OE$2' ],
+            // collect ligature ø
+			[ 'oe', 'ø' ],
+			[ '([oO][eE])', 'Ø' ],
+			// rollback
+			[ '([dD])ø([uU])', '[eE]', '$1oe$2' ],
+			[ '([dD])Ø([uU])', '[eE]', '$1OE$2' ],
+			[ '([gG])ø([sS])', '[eE]', '$1oe$2' ],
+			[ '([gG])Ø([sS])', '[eE]', '$1OE$2' ],
+			[ '([iI])ø([tT])', '[eE]', '$1oe$2' ],
+			[ '([iI])Ø([tT])', '[eE]', '$1OE$2' ],
+			[ '([kK])ø([fF])', '[eE]', '$1oe$2' ],
+			[ '([kK])Ø([fF])', '[eE]', '$1OE$2' ],
+			[ '([nN])ø([nN\\s\\W])', '[eE]', '$1oe$2' ],
+			[ '([nN])Ø([nN\\s\\W])', '[eE]', '$1OE$2' ],
+			[ '(([iI][eE]|[aA][mM]|[bB][eE])[bB])ø([rR])', '[eE]', '$1oe$2' ],
+			[ '(([iI][eE]|[aA][mM]|[bB][eE])[bB])Ø([rR])', '[eE]', '$1OE$2' ],
+			[ '([pP])ø([nN])', '[eE]', '$1oe$2' ],
+			[ '([pP])Ø([nN])', '[eE]', '$1OE$2' ],
+			[ '([^tT][bBtT][rR])ø([nNrR])', '[eE]', '$1oe$2' ],
+			[ '([^tT][bBtT][rR])Ø([nNrR])', '[eE]', '$1OE$2' ],
 			[ 'ø([eE])', '[eE]', 'o$1' ],
-			[ 'Ø([eE])', '[eE]', 'O$1' ]
-			// historically similar forms
-			// "Å" is sometimes written as "Aa", and "å" as "aa", but in names
-			// it is not generally acceptable to use this transliteration. To
-			// handle those situations we need some oposite forms.
-			// There is a similar character "Å" for the length unit Angstrom,
-			// but this is not the upper case letter Å.
+			[ 'Ø([eE])', '[eE]', 'O$1' ],
+
+            // collect ligature å
+			[ 'aa', 'å' ],
+			[ '(AA|Aa|aA)', 'Å' ],
+			// rollback
+			[ '([lL][jJ])å([kKnNtT])', '[aA]', '$1aa$2' ],
+			[ '([lL][jJ])Å([kKnNtT])', '[aA]', '$1AA$2' ],
+			[ '([iI][kK])å([^lL])', '[aA]', '$1aa$2' ],
+			[ '([iI][kK])Å([^lL])', '[aA]', '$1AA$2' ],
+			[ '([iI][mM])å([nNrRvV])', '[aA]', '$1aa$2' ],
+			[ '([iI][mM])Å([nNrRvV])', '[aA]', '$1AA$2' ],
+			[ '([tT])å([nN])', '[aA]', '$1aa$2' ],
+			[ '([tT])Å([nN])', '[aA]', '$1AA$2' ],
+			[ 'å([aA])', '[aA]', 'a$1' ],
+			[ 'Å([aA])', '[aA]', 'A$1' ]
+
 		]
 	};
 
