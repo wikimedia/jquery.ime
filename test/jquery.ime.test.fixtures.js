@@ -11,6 +11,30 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Norwegian Transliteration test for tilde forms',
+		tests: [
+            // Test ligature æ
+			{ input: [ [ 'ª', false ], [ '€', false ] ], output: 'æ', description: 'Norwegian regular ª€ -> æ' },
+            { input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
+            { input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
+            { input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
+
+            // Test ligature ø
+			{ input: [ [ 'œ', false ], [ '€', false ] ], output: 'ø', description: 'Norwegian regular œ€ -> ø' },
+            { input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
+            { input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
+            { input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
+
+            // Test ligature å
+			{ input: [ [ 'ª', false ], [ 'ª', false ] ], output: 'å', description: 'Norwegian regular ªª -> å' },
+            { input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
+            { input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
+            { input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
+		],
+		inputmethod: 'nb-extforms',
+		multiline: true
+	},
+	{
 		description: 'Norwegian Transliteration test for normal forms',
 		tests: [
 			// Apostrophes
