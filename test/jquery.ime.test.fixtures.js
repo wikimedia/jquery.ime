@@ -11,7 +11,7 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
-		description: 'Norwegian Transliteration test',
+		description: 'Norwegian Transliteration test for normal forms',
 		tests: [
 			// Apostrophes
 			{ input: 's\u0027 ', output: 'sʼ ', description: 'Norwegian modifying apostrophe (s\u0027 ) -> (sʼ )' },
@@ -201,6 +201,21 @@ var palochkaVariants = {
 
 		],
 		inputmethod: 'nb-normforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for tilde forms',
+		tests: [
+			{ input: '°a', output: 'å', description: 'Norwegian °a -> å' },
+			{ input: '°A', output: 'Å', description: 'Norwegian °A -> Å' },
+			{ input: '~ae', output: 'æ', description: 'Norwegian ~ae -> æ' },
+			{ input: '~AE', output: 'Æ', description: 'Norwegian ~AE -> Æ' },
+			{ input: '~oe', output: 'ø', description: 'Norwegian ~oe -> ø' },
+			{ input: '~OE', output: 'Ø', description: 'Norwegian ~OE -> Ø' },
+			{ input: '~aa', output: 'å', description: 'Norwegian ~aa -> å' },
+			{ input: '~AA', output: 'Å', description: 'Norwegian ~AA -> Å' }
+		],
+		inputmethod: 'nb-tildeforms',
 		multiline: true
 	},
 	{
