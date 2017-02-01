@@ -73,6 +73,15 @@ patterns: [ [ '[a-z]', function ( $1 ) {
 
 This rule replace all key strokes to its upper case character.
 
+patterns_x: Defined the same way as ordinary patterns, but active while holding down the alt key or
+alt graph key. When active the normal patterns will be excluded. These two modifier keys can be
+handled differently on various hardware. It might be necessary to define ordinary patterns in
+addition to patterns_x to catch all cases.
+
+patterns_shift: Defined the same way as ordinary patterns, but active while holding down the shift
+key. When active the normal patterns will still be run, but only after the rules listed in
+patterns_shift is run.
+
 contextLength: Length of the context to remember. jquery.ime can replace the
 text based on the previously typed characters. eg:
 
@@ -93,7 +102,7 @@ strokes by default.
 
 maxKeyLength: While trying to find possible matches, we need to know how many
 characters from the current typing location(cursor) should be used before
-giving up.
+giving up. 
 
 maxKeyLength defines it. Normally it is the length of largest regex sequence in
 the patterns.
