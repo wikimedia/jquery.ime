@@ -13,7 +13,7 @@
 
 	var defs = {
 		id: 'nb-normforms',
-		name: 'Norsk normal transliterasjon',
+		name: 'Norsk transliterasjon av ligaturer',
 		description: 'Norwegian input method with most common form transliterated',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
