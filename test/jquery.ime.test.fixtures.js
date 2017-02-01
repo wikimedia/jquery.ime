@@ -115,6 +115,11 @@ var palochkaVariants = {
 			{ input: 'km2', output: 'km²', description: 'Norwegian superscript (km2) -> (km²)' },
 			{ input: 'm-2kg-1s4A2', output: 'm⁻²kg⁻¹s⁴A²', description: 'Norwegian def of Farad (m-2kg-1s4A2) -> (m⁻²kg⁻¹s⁴A²)' },
 
+			// Spaces for numerals
+			{ input: '123 ', output: '123\u2007', description: 'Norwegian space for numerals (123 ) -> (123\u2007)' },
+			{ input: '123 k', output: '123 k', description: 'Norwegian space for numerals (123 k) -> (123 k)' },
+			{ input: '123 km2.', output: '123\u2007km².', description: 'Norwegian space for numerals (123 km2.) -> (123\u2007km².)' },
+
 			// hyphen-minus
 			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
 			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
