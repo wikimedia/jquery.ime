@@ -4,7 +4,7 @@
 	var defs = {
 		id: 'nb-extforms',
 		name: 'Norwegian extended ligatures',
-		description: 'Ligatures will only be transliterated if they are typed while holding down the extended key.',
+		description: 'Ligatures will be transliterated if they are typed while holding down the extended key.',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
 		author: 'John Erling Blad',
