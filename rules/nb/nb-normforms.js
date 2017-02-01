@@ -66,7 +66,7 @@
 			[ '\\^9', '⁹' ],
 			[
 				'(' + prefixes + '|)(' + baseSIUnits + '|' + derivedSIUnits + ')([-+]?)([0-9])',
-                function ( $0, $1, $2, $3, $4 ) { return $1 + $2 + (signs[ $3 ] !== undefined ? signs[ $3 ] : '') + sups[ $4 ]; }
+                function ( $0, $1, $2, $3, $4 ) { return $1 + $2 + ( signs[ $3 ] !== undefined ? signs[ $3 ] : '' ) + sups[ $4 ]; }
 			],
 
 			// Subscript for numbers
