@@ -448,6 +448,10 @@
 			name: 'Tildemerket transliterasjon',
 			source: 'rules/nb/nb-tildeforms.js'
 		},
+		'nb-extforms': {
+			name: 'Extended transliterasjon',
+			source: 'rules/nb/nb-extforms.js'
+		},
 		'nn-tildeforms': {
 			name: 'Tildemerkt transliterasjon',
 			source: 'rules/nb/nb-tildeforms.js'
@@ -888,7 +892,7 @@
 		},
 		nb: {
 			autonym: 'Norsk (bokmål)',
-			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
+			inputmethods: [ 'nb-extforms', 'nb-normforms', 'nb-tildeforms' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
