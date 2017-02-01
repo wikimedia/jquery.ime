@@ -5,7 +5,7 @@
 	var prefixes = 'E|P|T|G|M|k|h|da|d|c|m|u|μ|n|p|f|a',
 	baseSIUnits = 'm|g|s|A|K|mol|[cC]d',
 	derivedSIUnits = 'rad|sr|[hH]z|N|[pP]a|J|W|C|V|F|Ω|S|[wW]b|T|H|°C|[lL]m|[lL]x|[bB]q|[gG]|[sS]v|kat',
-	// var superscripts = '[⁰¹²³⁴⁵⁶⁷⁸⁹]';
+	supers = '[⁺⁻⁰¹²³⁴⁵⁶⁷⁸⁹]',
 	sups = { 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' },
 	signs = {};
 	signs[ '+' ] = '⁺';
@@ -109,6 +109,14 @@
 			[ '_p', 'ₚ' ],
 			[ '_s', 'ₛ' ],
 			[ '_t', 'ₜ' ],
+
+			// Spaces for numerals
+			[ '(\\d)\u0020', '$1\u2007' ],				// figure space
+			[ '(\\d)\u2007(\\D)', '\u0020', '$1 $2' ],	// revert to normal space
+			[
+				'(\\d)([\u0020\u2007])(' + prefixes + '|)(' + baseSIUnits + '|' + derivedSIUnits + ')(' + supers + '*)(\\W)',
+				'$1\u2007$3$4$5$6'
+			],
 
 			// hyphen-minus
 			[ '(\\w)-([\\n\\r])', '$1\u00AD' ],			// on last word on line -> soft-hyphen
