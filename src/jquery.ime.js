@@ -856,7 +856,24 @@
 	};
 
 	$.ime.register = function ( inputMethod ) {
-		$.ime.inputmethods[ inputMethod.id ] = $.extend( {}, defaultInputMethod, inputMethod );
+		var i, len, im, extended = $.extend( {}, defaultInputMethod, inputMethod );
+
+		for ( i = 1, len = arguments.length; i < len; i++ ) {
+			im =  $.ime.inputmethods[ arguments[ i ] ];
+			if ( im ) {
+				if ( im.patterns ) {
+					extended.patterns = ( extended.patterns || [] ).concat( im.patterns );
+				}
+				if ( im.patterns_x ) {
+					extended.patterns_x = ( extended.patterns_x || [] ).concat( im.patterns_x );
+				}
+				if ( im.patterns_shift ) {
+					extended.patterns_shift = ( extended.patterns_shift || [] ).concat( im.patterns_shift );
+				}
+			}
+		}
+
+		$.ime.inputmethods[ inputMethod.id ] = extended;
 	};
 
 	/**
