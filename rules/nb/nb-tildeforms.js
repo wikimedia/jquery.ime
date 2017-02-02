@@ -3,15 +3,15 @@
 
 	var defs = {
 		id: 'nb-tildeforms',
-		name: 'Norwegian marked ligatures',
+		name: 'Norwegian tildemarked ligatures',
 		description: 'Ligatures will only be transliterated if they are preceeded with a tilde.',
 		date: '2012-12-04',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',
-		// contextLength: 1,
-		maxKeyLength: 3,
+		contextLength: 1,
+		maxKeyLength: 9,
 		patterns: [
 			// Use "°" together with "A" for "Å"
 			[ '°a', 'å' ],
@@ -31,5 +31,5 @@
 		]
 	};
 
-	$.ime.register( defs );
+	$.ime.register( defs, 'nb-baseforms' );
 }( jQuery ) );

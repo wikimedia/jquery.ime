@@ -11,31 +11,7 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
-		description: 'Norwegian Transliteration test for tilde forms',
-		tests: [
-            // Test ligature æ
-			{ input: [ [ 'ª', false ], [ '€', false ] ], output: 'æ', description: 'Norwegian regular ª€ -> æ' },
-            { input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
-            { input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
-            { input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
-
-            // Test ligature ø
-			{ input: [ [ 'œ', false ], [ '€', false ] ], output: 'ø', description: 'Norwegian regular œ€ -> ø' },
-            { input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
-            { input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
-            { input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
-
-            // Test ligature å
-			{ input: [ [ 'ª', false ], [ 'ª', false ] ], output: 'å', description: 'Norwegian regular ªª -> å' },
-            { input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
-            { input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
-            { input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
-		],
-		inputmethod: 'nb-extforms',
-		multiline: true
-	},
-	{
-		description: 'Norwegian Transliteration test for normal forms',
+		description: 'Norwegian Transliteration test for base forms',
 		tests: [
 			// Apostrophes
 			{ input: 's\u0027 ', output: 'sʼ ', description: 'Norwegian modifying apostrophe (s\u0027 ) -> (sʼ )' },
@@ -59,27 +35,6 @@ var palochkaVariants = {
 			// horizontal ellipsis
 			{ input: '...', output: '…', description: 'Norwegian punctuation ... -> …' },
 			{ input: '....', output: '....', description: 'Norwegian punctuation .... -> ....' },
-
-			// Exceptions for hex codes
-			{ input: '0xae', output: '0xae', description: 'Exception on hex num 0xae -> 0xae' },
-			{ input: '0x112233ae', output: '0x112233ae', description: 'Exception on hex num 0x112233ae -> 0x112233ae' },
-			{ input: '0xAE', output: '0xAE', description: 'Exception on hex num 0xAE -> 0xAE' },
-			{ input: '0x112233AE', output: '0x112233AE', description: 'Exception on hex num 0x112233AE -> 0x112233AE' },
-
-			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
-			{ input: '#1122ae', output: '#1122ae', description: 'Exception on color defs #1122ae -> #1122ae' },
-			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
-			{ input: '#1122AE', output: '#1122AE', description: 'Exception on color defs #1122AE -> #1122AE' },
-
-			{ input: '0xaa', output: '0xaa', description: 'Exception on hex num 0xaa -> 0xaa' },
-			{ input: '0x112233aa', output: '0x112233aa', description: 'Exception on hex num 0x112233aa -> 0x112233aa' },
-			{ input: '0xAA', output: '0xAA', description: 'Exception on hex num 0xAA -> 0xAA' },
-			{ input: '0x112233AA', output: '0x112233AA', description: 'Exception on hex num 0x112233AA -> 0x112233AA' },
-
-			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
-			{ input: '#1122aa', output: '#1122aa', description: 'Exception on color defs #1122aa -> #1122aa' },
-			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
-			{ input: '#1122AA', output: '#1122AA', description: 'Exception on color defs #1122AA -> #1122AA' },
 
 			// Superscript for numbers
 			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
@@ -152,7 +107,58 @@ var palochkaVariants = {
 			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
 			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
 			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
-			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' },
+			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' }
+		],
+		inputmethod: 'nb-baseforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for extended forms',
+		tests: [
+            // Test ligature æ
+			{ input: [ [ 'ª', false ], [ '€', false ] ], output: 'æ', description: 'Norwegian regular ª€ -> æ' },
+            { input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
+            { input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
+            { input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
+
+            // Test ligature ø
+			{ input: [ [ 'œ', false ], [ '€', false ] ], output: 'ø', description: 'Norwegian regular œ€ -> ø' },
+            { input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
+            { input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
+            { input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
+
+            // Test ligature å
+			{ input: [ [ 'ª', false ], [ 'ª', false ] ], output: 'å', description: 'Norwegian regular ªª -> å' },
+            { input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
+            { input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
+            { input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
+		],
+		inputmethod: 'nb-extforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for normal forms',
+		tests: [
+			// Exceptions for hex codes
+			{ input: '0xae', output: '0xae', description: 'Exception on hex num 0xae -> 0xae' },
+			{ input: '0x112233ae', output: '0x112233ae', description: 'Exception on hex num 0x112233ae -> 0x112233ae' },
+			{ input: '0xAE', output: '0xAE', description: 'Exception on hex num 0xAE -> 0xAE' },
+			{ input: '0x112233AE', output: '0x112233AE', description: 'Exception on hex num 0x112233AE -> 0x112233AE' },
+
+			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
+			{ input: '#1122ae', output: '#1122ae', description: 'Exception on color defs #1122ae -> #1122ae' },
+			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
+			{ input: '#1122AE', output: '#1122AE', description: 'Exception on color defs #1122AE -> #1122AE' },
+
+			{ input: '0xaa', output: '0xaa', description: 'Exception on hex num 0xaa -> 0xaa' },
+			{ input: '0x112233aa', output: '0x112233aa', description: 'Exception on hex num 0x112233aa -> 0x112233aa' },
+			{ input: '0xAA', output: '0xAA', description: 'Exception on hex num 0xAA -> 0xAA' },
+			{ input: '0x112233AA', output: '0x112233AA', description: 'Exception on hex num 0x112233AA -> 0x112233AA' },
+
+			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
+			{ input: '#1122aa', output: '#1122aa', description: 'Exception on color defs #1122aa -> #1122aa' },
+			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
+			{ input: '#1122AA', output: '#1122AA', description: 'Exception on color defs #1122AA -> #1122AA' },
 
 			// Test ligature æ
 			{ input: 'ae', output: 'æ', description: 'Norwegian old ae -> æ' },

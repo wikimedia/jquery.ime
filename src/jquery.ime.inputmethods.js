@@ -440,6 +440,10 @@
 			name: 'Traditional',
 			source: 'rules/ne/ne-trad.js'
 		},
+		'nb-baseforms': {
+			name: 'Base transliterasjon',
+			source: 'rules/nb/nb-baseforms.js'
+		},
 		'nb-normforms': {
 			name: 'Normal transliterasjon',
 			source: 'rules/nb/nb-normforms.js'
@@ -892,7 +896,7 @@
 		},
 		nb: {
 			autonym: 'Norsk (bokmål)',
-			inputmethods: [ 'nb-extforms', 'nb-normforms', 'nb-tildeforms' ]
+			inputmethods: [ 'nb-baseforms', 'nb-normforms', 'nb-tildeforms', 'nb-extforms' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',

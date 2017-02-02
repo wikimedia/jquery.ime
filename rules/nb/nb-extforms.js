@@ -10,8 +10,8 @@
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',
-		// contextLength: 1,
-		maxKeyLength: 3,
+		contextLength: 1,
+		maxKeyLength: 9,
 		patterns: [
 
 			// Use ligature "AE" for "Æ"
@@ -44,5 +44,5 @@
         ]
 	};
 
-	$.ime.register( defs );
+	$.ime.register( defs, 'nb-baseforms' );
 }( jQuery ) );
