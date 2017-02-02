@@ -861,6 +861,12 @@
 		for ( i = 1, len = arguments.length; i < len; i++ ) {
 			im =  $.ime.inputmethods[ arguments[ i ] ];
 			if ( im ) {
+				if ( extended.contextLength < im.contextLength ) {
+					extended.contextLength = im.contextLength;
+				}
+				if ( extended.maxKeyLength < im.maxKeyLength ) {
+					extended.maxKeyLength = im.maxKeyLength;
+				}
 				if ( im.patterns ) {
 					extended.patterns = ( extended.patterns || [] ).concat( im.patterns );
 				}

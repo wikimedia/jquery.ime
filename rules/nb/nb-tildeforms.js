@@ -10,8 +10,8 @@
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 1,
-		maxKeyLength: 9,
+		contextLength: 0,
+		maxKeyLength: 3,
 		patterns: [
 			// Use "°" together with "A" for "Å"
 			[ '°a', 'å' ],
