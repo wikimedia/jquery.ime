@@ -150,10 +150,14 @@
 		transliterate: function ( input, context, altGr ) {
 			var patterns, regex, rule, replacement, i, retval;
 
+			patterns = this.inputmethod.patterns || [];
+
 			if ( altGr ) {
-				patterns = this.inputmethod.patterns_x || [];
-			} else {
-				patterns = this.inputmethod.patterns || [];
+				// if an alt key is pressed give priority for the patterns_x
+				// if exists.
+				// Example: AltGr+A where alt alter the keycode
+				patterns = ( this.inputmethod.patterns_x || [] )
+					.concat( patterns );
 			}
 
 			if ( this.shifted ) {
@@ -206,11 +210,21 @@
 			if ( e.which === 16 ) { // shift key
 				this.shifted = false;
 			}
+			if ( e.which === 225 /* alt graphics key */
+				// || e.which === 224 /* alt key */
+				) {
+				this.altered = false;
+			}
 		},
 
 		keydown: function ( e ) {
 			if ( e.which === 16 ) { // shift key
 				this.shifted = true;
+			}
+			if ( e.which === 225 /* alt graphics key */
+				// || e.which === 224 /* alt key */
+				) {
+				this.altered = true;
 			}
 		},
 
@@ -221,7 +235,7 @@
 		 * @return {boolean}
 		 */
 		keypress: function ( e ) {
-			var altGr = false,
+			var altGr = this.altered,
 				c, input, replacement;
 
 			if ( !this.active ) {
