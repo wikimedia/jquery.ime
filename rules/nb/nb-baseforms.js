@@ -22,7 +22,7 @@
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 1,
-		maxKeyLength: 9,
+		maxKeyLength: 9, // due to spaces for numerals
 		patterns: [
 
 			// apostrophes
