@@ -14,9 +14,9 @@
 
 	var defs = {
 		id: 'nb-baseforms',
-		name: 'Norwegian transliteration of signs',
-		description: 'Norwegian input method with base forms transliterated',
-		date: '2012-12-04',
+		name: 'Norwegian basic transliteration',
+		description: 'A few basic forms transliterated. There are no ligatures in this set.',
+		date: '2012-12-04, 2017-02-02',
 		URL: 'http://www.evertype.com/alphabets/bokmaal-norwegian.pdf',
 		author: 'John Erling Blad',
 		license: 'GPLv3',

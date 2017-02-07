@@ -841,7 +841,6 @@
 			return deferred;
 		}
 
-		debug( 'Loading ' + inputmethodId );
 		deferred = $.ajax( {
 			url: $.ime.path + $.ime.sources[ inputmethodId ].source,
 			dataType: 'script',
@@ -856,30 +855,7 @@
 	};
 
 	$.ime.register = function ( inputMethod ) {
-		var i, len, im, extended = $.extend( {}, defaultInputMethod, inputMethod );
-
-		for ( i = 1, len = arguments.length; i < len; i++ ) {
-			im =  $.ime.inputmethods[ arguments[ i ] ];
-			if ( im ) {
-				if ( extended.contextLength < im.contextLength ) {
-					extended.contextLength = im.contextLength;
-				}
-				if ( extended.maxKeyLength < im.maxKeyLength ) {
-					extended.maxKeyLength = im.maxKeyLength;
-				}
-				if ( im.patterns ) {
-					extended.patterns = ( extended.patterns || [] ).concat( im.patterns );
-				}
-				if ( im.patterns_x ) {
-					extended.patterns_x = ( extended.patterns_x || [] ).concat( im.patterns_x );
-				}
-				if ( im.patterns_shift ) {
-					extended.patterns_shift = ( extended.patterns_shift || [] ).concat( im.patterns_shift );
-				}
-			}
-		}
-
-		$.ime.inputmethods[ inputMethod.id ] = extended;
+		$.ime.inputmethods[ inputMethod.id ] = $.extend( {}, defaultInputMethod, inputMethod );
 	};
 
 	/**
