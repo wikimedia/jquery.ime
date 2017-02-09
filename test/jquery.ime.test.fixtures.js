@@ -3544,14 +3544,14 @@ var palochkaVariants = {
 	    inputmethod: 'sat-inscript2-ol-chiki'
 	},
 	{
-    description: 'Santali Sarjom Baha test',
-	    tests: [
-	        { input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
-	        { input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
-	        { input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
-	        { input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
-	    ],
-	    inputmethod: 'sat-sarjom-baha'
+		description: 'Santali Sarjom Baha test',
+		tests: [
+			{ input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
+			{ input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
+			{ input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
+			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
+		],
+		inputmethod: 'sat-sarjom-baha'
 	},
 	{
 		description: 'Khmer NiDA standard Unicode keyboard test',
