@@ -153,16 +153,14 @@
 			patterns = this.inputmethod.patterns || [];
 
 			if ( altGr ) {
-				// if an alt key is pressed give priority for the patterns_x
-				// if exists.
+				// if an alt key is pressed then give priority to patterns_x
 				// Example: AltGr+A where alt alter the keycode
 				patterns = ( this.inputmethod.patterns_x || [] )
 					.concat( patterns );
 			}
 
 			if ( this.shifted ) {
-				// if shift is pressed give priority for the patterns_shift
-				// if exists.
+				// if shift is pressed then give priority to patterns_shift
 				// Example: Shift+space where shift does not alter the keycode
 				patterns = ( this.inputmethod.patterns_shift || [] )
 					.concat( patterns );
