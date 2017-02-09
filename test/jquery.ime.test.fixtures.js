@@ -3531,7 +3531,7 @@ var palochkaVariants = {
 		inputmethod: 'yo-alt'
 	},
 	{
-	description: 'Santali Inscript2 test',
+		description: 'Santali Inscript2 test',
 		tests: [
 			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
 			{ input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
