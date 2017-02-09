@@ -19,15 +19,15 @@ var palochkaVariants = {
 			{ input: 's\u0027\u0027', output: 'sʼ›', description: 'Norwegian modifying apostrophe (s\u0027\u0027) -> (sʼ›)' },
 
 			// Single quote
-            // @todo following tests fails, but manualchecking makes it clear it works as it should
-            // this can be due to diverging behavior in the different editable elements
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
 			// { input: ' \u0027a', output: ' ‹a', description: 'Norwegian single quote ( \u0027a) -> ( ‹a)' },
 			// { input: 'a\u0027 ', output: 'a› ', description: 'Norwegian single quote (a\u0027 ) -> (a› )' },
 			// { input: ' \u0027 ', output: ' \u0027 ', description: 'Norwegian single quote ( \u0027 ) -> ( \u0027 )' },
 
 			// Double quote
-            // @todo following tests fails, but manualchecking makes it clear it works as it should
-            // this can be due to diverging behavior in the different editable elements
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
 			// { input: ' "a', output: ' «a', description: 'Norwegian double quote ( "a) -> ( «a)' },
 			// { input: 'a" ', output: 'a» ', description: 'Norwegian double quote (a" ) -> (a» )' },
 			// { input: ' " ', output: ' " ', description: 'Norwegian double quote ( " ) -> ( " )' },
@@ -102,8 +102,8 @@ var palochkaVariants = {
 			// hyphen-minus
 			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
 			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
-            // @todo following tests fails, but manualchecking makes it clear it works as it should
-            // this can be due to diverging behavior in the different editable elements
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
 			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
 			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
 			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
@@ -115,23 +115,23 @@ var palochkaVariants = {
 	{
 		description: 'Norwegian Transliteration test for extended forms',
 		tests: [
-            // Test ligature æ
+			// Test ligature æ
 			{ input: [ [ 'ª', false ], [ '€', false ] ], output: 'æ', description: 'Norwegian regular ª€ -> æ' },
-            { input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
-            { input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
-            { input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
+			{ input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
+			{ input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
+			{ input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
 
-            // Test ligature ø
+			// Test ligature ø
 			{ input: [ [ 'œ', false ], [ '€', false ] ], output: 'ø', description: 'Norwegian regular œ€ -> ø' },
-            { input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
-            { input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
-            { input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
+			{ input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
+			{ input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
+			{ input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
 
-            // Test ligature å
+			// Test ligature å
 			{ input: [ [ 'ª', false ], [ 'ª', false ] ], output: 'å', description: 'Norwegian regular ªª -> å' },
-            { input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
-            { input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
-            { input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
+			{ input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
+			{ input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
+			{ input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
 		],
 		inputmethod: 'nb-extforms',
 		multiline: true
