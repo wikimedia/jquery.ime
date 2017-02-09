@@ -473,7 +473,7 @@ var palochkaVariants = {
 			{ input: '7',  output: '7', description: 'Urdu Numeral 7 -> 7' },
 			{ input: '8',  output: '8', description: 'Urdu Numeral 8 -> 8' },
 			{ input: '9',  output: '9', description: 'Urdu Numeral 9 -> 9' },
-			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' },
+			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' }
 		],
 		inputmethod: 'ur-phonetic'
 	},{
