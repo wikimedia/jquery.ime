@@ -2,9 +2,15 @@ jQuery.ime Input method specification
 =====================================
 
 Input methods are defined in javascript files. An input method is a javascript
-object and it is passed to $.ime.register() method to register with jquery.ime
+object and it is passed to `$.ime.register()` method to register with `jquery.ime`
 
-eg: $.ime.register( hebrewStandardKeyboard );
+eg: `$.ime.register( hebrewStandardKeyboard );`
+
+Input methods can be built by reusing parts of other methods, this is especially
+interesting for complex patterns. If rules are reused then the methods must be
+loaded first. This is done through configurations in `jquery.ime.inputmethods.js`.
+
+For examples on reuse, see 'nb-normforms' or 'hi-inscript'.
 
 Metadata fields
 ---------------
@@ -38,6 +44,7 @@ patterns: A regular expression table that maps the original inputs to the
 target language.
 
 eg:
+```
 patterns: [
 		[ 'q', '/' ],
 		[ 'w', '\'' ],
@@ -56,27 +63,39 @@ patterns: [
 		[ '\\[', ']' ],
 		[ '\\]', '[' ]
 	]
+```
 
 Any valid regular expression is possible as first element of each array item.
-More examples
-	[ '([ക-ഹ])a', '$1ാ' ]
-	[ '(([ൺ-ൿം])\u200c+)?I', '$2ഐ' ]
+
+ex: `[ '([ക-ഹ])a', '$1ാ' ]`
+ex: `[ '(([ൺ-ൿം])\u200c+)?I', '$2ഐ' ]`
 
 In the above example, $1, $1 etc are according to the normal regular expression
 replace syntax.
 
 The second member of pattern can be a function as well. For eg:
-
+```
 patterns: [ [ '[a-z]', function ( $1 ) {
 			return $1.toUpperCase();
 		} ] ]
+```
 
 This rule replace all key strokes to its upper case character.
 
+patterns_x: Defined the same way as ordinary patterns, but active while holding down the alt key or
+alt graph key. When active the normal patterns will be excluded. These two modifier keys can be
+handled differently on various hardware. It might be necessary to define ordinary patterns in
+addition to patterns_x to catch all cases.
+
+patterns_shift: Defined the same way as ordinary patterns, but active while holding down the shift
+key. When active the normal patterns will still be run, but only after the rules listed in
+patterns_shift is run.
+
 contextLength: Length of the context to remember. jquery.ime can replace the
 text based on the previously typed characters. eg:
-
+```
 	[ 'ൿh', 'c', 'ച്' ]
+```
 
 Note that this pattern definition has 3 members, the middle one is the context.
 This rule is interpreted as 
@@ -93,7 +112,7 @@ strokes by default.
 
 maxKeyLength: While trying to find possible matches, we need to know how many
 characters from the current typing location(cursor) should be used before
-giving up.
+giving up. 
 
 maxKeyLength defines it. Normally it is the length of largest regex sequence in
 the patterns.
