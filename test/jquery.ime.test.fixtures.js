@@ -3531,17 +3531,17 @@ var palochkaVariants = {
 		inputmethod: 'yo-alt'
 	},
 	{
-    description: 'Santali Inscript2 test',
-	    tests: [
-	        { input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
-	        { input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
-	        { input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
-	        { input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
-	        { input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
-	        { input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
-	        { input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
-	    ],
-	    inputmethod: 'sat-inscript2-ol-chiki'
+		description: 'Santali Inscript2 test',
+		tests: [
+			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
+			{ input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
+			{ input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
+			{ input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
+			{ input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
+			{ input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
+			{ input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
+		],
+		inputmethod: 'sat-inscript2-ol-chiki'
 	},
 	{
     description: 'Santali Sarjom Baha test',
