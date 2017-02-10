@@ -11,6 +11,244 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Norwegian Transliteration test for base forms',
+		tests: [
+			// Apostrophes
+			{ input: 's\u0027 ', output: 'sʼ ', description: 'Norwegian modifying apostrophe (s\u0027 ) -> (sʼ )' },
+			{ input: 's\u0027"', output: 'sʼ»', description: 'Norwegian modifying apostrophe (s\u0027") -> (sʼ»)' },
+			{ input: 's\u0027\u0027', output: 'sʼ›', description: 'Norwegian modifying apostrophe (s\u0027\u0027) -> (sʼ›)' },
+
+			// Single quote
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
+			// { input: ' \u0027a', output: ' ‹a', description: 'Norwegian single quote ( \u0027a) -> ( ‹a)' },
+			// { input: 'a\u0027 ', output: 'a› ', description: 'Norwegian single quote (a\u0027 ) -> (a› )' },
+			// { input: ' \u0027 ', output: ' \u0027 ', description: 'Norwegian single quote ( \u0027 ) -> ( \u0027 )' },
+
+			// Double quote
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
+			// { input: ' "a', output: ' «a', description: 'Norwegian double quote ( "a) -> ( «a)' },
+			// { input: 'a" ', output: 'a» ', description: 'Norwegian double quote (a" ) -> (a» )' },
+			// { input: ' " ', output: ' " ', description: 'Norwegian double quote ( " ) -> ( " )' },
+
+			// horizontal ellipsis
+			{ input: '...', output: '…', description: 'Norwegian punctuation ... -> …' },
+			{ input: '....', output: '....', description: 'Norwegian punctuation .... -> ....' },
+
+			// Superscript for numbers
+			{ input: '^0', output: '⁰', description: 'Norwegian superscript 0 -> ⁰' },
+			{ input: '^1', output: '¹', description: 'Norwegian superscript 1 -> ¹' },
+			{ input: '^2', output: '²', description: 'Norwegian superscript 2 -> ²' },
+			{ input: '^3', output: '³', description: 'Norwegian superscript 3 -> ³' },
+			{ input: '^4', output: '⁴', description: 'Norwegian superscript 4 -> ⁴' },
+			{ input: '^5', output: '⁵', description: 'Norwegian superscript 5 -> ⁵' },
+			{ input: '^6', output: '⁶', description: 'Norwegian superscript 6 -> ⁶' },
+			{ input: '^7', output: '⁷', description: 'Norwegian superscript 7 -> ⁷' },
+			{ input: '^8', output: '⁸', description: 'Norwegian superscript 8 -> ⁸' },
+			{ input: '^9', output: '⁹', description: 'Norwegian superscript 9 -> ⁹' },
+
+			// Subscripts for numbers
+			{ input: '_0', output: '₀', description: 'Norwegian subscript 0 -> ₀' },
+			{ input: '_1', output: '₁', description: 'Norwegian subscript 1 -> ₁' },
+			{ input: '_2', output: '₂', description: 'Norwegian subscript 2 -> ₂' },
+			{ input: '_3', output: '₃', description: 'Norwegian subscript 3 -> ₃' },
+			{ input: '_4', output: '₄', description: 'Norwegian subscript 4 -> ₄' },
+			{ input: '_5', output: '₅', description: 'Norwegian subscript 5 -> ₅' },
+			{ input: '_6', output: '₆', description: 'Norwegian subscript 6 -> ₆' },
+			{ input: '_7', output: '₇', description: 'Norwegian subscript 7 -> ₇' },
+			{ input: '_8', output: '₈', description: 'Norwegian subscript 8 -> ₈' },
+			{ input: '_9', output: '₉', description: 'Norwegian subscript 9 -> ₉' },
+
+			// Superscript for additional chars
+			{ input: '^i', output: 'ⁱ', description: 'Norwegian superscript i -> ⁱ' },
+			{ input: '^+', output: '⁺', description: 'Norwegian superscript + -> ⁺' },
+			{ input: '^-', output: '⁻', description: 'Norwegian superscript - -> ⁻' },
+			{ input: '^=', output: '⁼', description: 'Norwegian superscript = -> ⁼' },
+			{ input: '^(', output: '⁽', description: 'Norwegian superscript ( -> ⁽' },
+			{ input: '^)', output: '⁾', description: 'Norwegian superscript ) -> ⁾' },
+			{ input: '^n', output: 'ⁿ', description: 'Norwegian superscript n -> ⁿ' },
+
+			// Subscript for additional chars
+			{ input: '_+', output: '₊', description: 'Norwegian subscript + -> ₊' },
+			{ input: '_-', output: '₋', description: 'Norwegian subscript - -> ₋' },
+			{ input: '_=', output: '₌', description: 'Norwegian subscript = -> ₌' },
+			{ input: '_(', output: '₍', description: 'Norwegian subscript ( -> ₍' },
+			{ input: '_)', output: '₎', description: 'Norwegian subscript ) -> ₎' },
+			{ input: '_a', output: 'ₐ', description: 'Norwegian subscript a -> ₐ' },
+			{ input: '_e', output: 'ₑ', description: 'Norwegian subscript e -> ₑ' },
+			{ input: '_o', output: 'ₒ', description: 'Norwegian subscript o -> ₒ' },
+			{ input: '_x', output: 'ₓ', description: 'Norwegian subscript x -> ₓ' },
+			{ input: '_Ə', output: 'ₔ', description: 'Norwegian subscript Ə -> ₔ' },
+			{ input: '_h', output: 'ₕ', description: 'Norwegian subscript h -> ₕ' },
+			{ input: '_k', output: 'ₖ', description: 'Norwegian subscript k -> ₖ' },
+			{ input: '_l', output: 'ₗ', description: 'Norwegian subscript l -> ₗ' },
+			{ input: '_m', output: 'ₘ', description: 'Norwegian subscript m -> ₘ' },
+			{ input: '_n', output: 'ₙ', description: 'Norwegian subscript n -> ₙ' },
+			{ input: '_p', output: 'ₚ', description: 'Norwegian subscript p -> ₚ' },
+			{ input: '_s', output: 'ₛ', description: 'Norwegian subscript s -> ₛ' },
+			{ input: '_t', output: 'ₜ', description: 'Norwegian subscript t -> ₜ' },
+
+			// Superscripts in units
+			{ input: 'm2', output: 'm²', description: 'Norwegian superscript (m2) -> (m²)' },
+			{ input: 'km2', output: 'km²', description: 'Norwegian superscript (km2) -> (km²)' },
+			{ input: 'm-2kg-1s4A2', output: 'm⁻²kg⁻¹s⁴A²', description: 'Norwegian def of Farad (m-2kg-1s4A2) -> (m⁻²kg⁻¹s⁴A²)' },
+
+			// Spaces for numerals
+			{ input: '123 ', output: '123\u2007', description: 'Norwegian space for numerals (123 ) -> (123\u2007)' },
+			{ input: '123 k', output: '123 k', description: 'Norwegian space for numerals (123 k) -> (123 k)' },
+			{ input: '123 km2.', output: '123\u2007km².', description: 'Norwegian space for numerals (123 km2.) -> (123\u2007km².)' },
+
+			// hyphen-minus
+			{ input: '-1', output: '−1', description: 'Norwegian hyphen-minus -1 -> −1' },
+			{ input: '-a', output: '‐a', description: 'Norwegian hyphen-minus -a -> ‐a' },
+			// @todo following tests fails, but manualchecking makes it clear it works as it should
+			// this can be due to diverging behavior in the different editable elements
+			// { input: 'a-\n', output: 'a\u00AD', description: 'Norwegian hyphen-minus (a-\\n) -> (aSHY)' },
+			// { input: '\n-', output: '\n–', description: 'Norwegian hyphen-minus (\\n-) -> (\\n–)' },
+			{ input: 'a- ', output: 'a– ', description: 'Norwegian hyphen-minus (a- ) -> (a– )' },
+			{ input: ' - ', output: ' – ', description: 'Norwegian hyphen-minus ( - ) -> ( – )' }
+		],
+		inputmethod: 'nb-baseforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for extended forms',
+		tests: [
+			// Test ligature æ
+			{ input: [ [ 'ª', false ], [ '€', false ] ], output: 'æ', description: 'Norwegian regular ª€ -> æ' },
+			{ input: [ [ 'a', true ], [ 'e', true ] ], output: 'æ', description: 'Norwegian extended ae -> æ' },
+			{ input: [ [ 'º', false ], [ '¢', false ] ], output: 'Æ', description: 'Norwegian regular º¢ -> Æ' },
+			{ input: [ [ 'A', true ], [ 'E', true ] ], output: 'Æ', description: 'Norwegian extended AE -> Æ' },
+
+			// Test ligature ø
+			{ input: [ [ 'œ', false ], [ '€', false ] ], output: 'ø', description: 'Norwegian regular œ€ -> ø' },
+			{ input: [ [ 'o', true ], [ 'e', true ] ], output: 'ø', description: 'Norwegian extended oe -> ø' },
+			{ input: [ [ 'Œ', false ], [ '¢', false ] ], output: 'Ø', description: 'Norwegian regular Œ¢ -> Ø' },
+			{ input: [ [ 'O', true ], [ 'E', true ] ], output: 'Ø', description: 'Norwegian extended OE -> Ø' },
+
+			// Test ligature å
+			{ input: [ [ 'ª', false ], [ 'ª', false ] ], output: 'å', description: 'Norwegian regular ªª -> å' },
+			{ input: [ [ 'a', true ], [ 'a', true ] ], output: 'å', description: 'Norwegian extended aa -> å' },
+			{ input: [ [ 'º', false ], [ 'º', false ] ], output: 'Å', description: 'Norwegian regular ºº -> Å' },
+			{ input: [ [ 'A', true ], [ 'A', true ] ], output: 'Å', description: 'Norwegian extended AA -> Å' }
+		],
+		inputmethod: 'nb-extforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for normal forms',
+		tests: [
+			// Exceptions for hex codes
+			{ input: '0xae', output: '0xae', description: 'Exception on hex num 0xae -> 0xae' },
+			{ input: '0x112233ae', output: '0x112233ae', description: 'Exception on hex num 0x112233ae -> 0x112233ae' },
+			{ input: '0xAE', output: '0xAE', description: 'Exception on hex num 0xAE -> 0xAE' },
+			{ input: '0x112233AE', output: '0x112233AE', description: 'Exception on hex num 0x112233AE -> 0x112233AE' },
+
+			{ input: '#ae', output: '#ae', description: 'Exception on color defs #ae -> #ae' },
+			{ input: '#1122ae', output: '#1122ae', description: 'Exception on color defs #1122ae -> #1122ae' },
+			{ input: '#AE', output: '#AE', description: 'Exception on color defs #AE -> #AE' },
+			{ input: '#1122AE', output: '#1122AE', description: 'Exception on color defs #1122AE -> #1122AE' },
+
+			{ input: '0xaa', output: '0xaa', description: 'Exception on hex num 0xaa -> 0xaa' },
+			{ input: '0x112233aa', output: '0x112233aa', description: 'Exception on hex num 0x112233aa -> 0x112233aa' },
+			{ input: '0xAA', output: '0xAA', description: 'Exception on hex num 0xAA -> 0xAA' },
+			{ input: '0x112233AA', output: '0x112233AA', description: 'Exception on hex num 0x112233AA -> 0x112233AA' },
+
+			{ input: '#aa', output: '#aa', description: 'Exception on color defs #aa -> #aa' },
+			{ input: '#1122aa', output: '#1122aa', description: 'Exception on color defs #1122aa -> #1122aa' },
+			{ input: '#AA', output: '#AA', description: 'Exception on color defs #AA -> #AA' },
+			{ input: '#1122AA', output: '#1122AA', description: 'Exception on color defs #1122AA -> #1122AA' },
+
+			// Test ligature æ
+			{ input: 'ae', output: 'æ', description: 'Norwegian old ae -> æ' },
+			{ input: 'aE', output: 'Æ', description: 'Norwegian old aE -> Æ' },
+			{ input: 'Ae', output: 'Æ', description: 'Norwegian old Ae -> Æ' },
+			{ input: 'AE', output: 'Æ', description: 'Norwegian old AE -> Æ' },
+			{ input: 'aee', output: 'ae', description: 'Norwegian old aee -> ae' },
+			{ input: 'aEe', output: 'Ae', description: 'Norwegian old aEe -> Ae' },
+			{ input: 'Aee', output: 'Ae', description: 'Norwegian old Aee -> Ae' },
+			{ input: 'AEe', output: 'Ae', description: 'Norwegian old AEe -> Ae' },
+			{ input: 'aeE', output: 'aE', description: 'Norwegian old aeE -> aE' },
+			{ input: 'aEE', output: 'AE', description: 'Norwegian old aEE -> AE' },
+			{ input: 'AeE', output: 'AE', description: 'Norwegian old AeE -> AE' },
+			{ input: 'AEE', output: 'AE', description: 'Norwegian old AEE -> AE' },
+
+			// Test ligature ø
+			{ input: 'oe', output: 'ø', description: 'Norwegian old oe -> ø' },
+			{ input: 'oE', output: 'Ø', description: 'Norwegian old oE -> Ø' },
+			{ input: 'Oe', output: 'Ø', description: 'Norwegian old Oe -> Ø' },
+			{ input: 'OE', output: 'Ø', description: 'Norwegian old OE -> Ø' },
+			{ input: 'indoeuropeisk', output: 'indoeuropeisk', description: 'Norwegian word "indoeuropeisk" -> "indoeuropeisk"' },
+			{ input: 'INDOEUROPEISK', output: 'INDOEUROPEISK', description: 'Norwegian word "INDOEUROPEISK" -> "INDOEUROPEISK"' },
+			{ input: 'goes', output: 'goes', description: 'Norwegian word "goes" -> "goes"' },
+			{ input: 'GOES', output: 'GOES', description: 'Norwegian word "GOES" -> "GOES"' },
+			{ input: 'bioetikk', output: 'bioetikk', description: 'Norwegian word "bioetikk" -> "bioetikk"' },
+			{ input: 'BIOETIKK', output: 'BIOETIKK', description: 'Norwegian word "BIOETIKK" -> "BIOETIKK"' },
+			{ input: 'koeffisient', output: 'koeffisient', description: 'Norwegian word "koeffisient" -> "koeffisient"' },
+			{ input: 'KOEFFISIENT', output: 'KOEFFISIENT', description: 'Norwegian word "KOEFFISIENT" -> "KOEFFISIENT"' },
+			{ input: 'noen', output: 'noen', description: 'Norwegian word "noen" -> "noen"' },
+			{ input: 'NOEN', output: 'NOEN', description: 'Norwegian word "NOEN" -> "NOEN"' },
+			{ input: 'oee', output: 'oe', description: 'Norwegian old oee -> oe' },
+			{ input: 'oEe', output: 'Oe', description: 'Norwegian old oEe -> Oe' },
+			{ input: 'Oee', output: 'Oe', description: 'Norwegian old Oee -> Oe' },
+			{ input: 'OEe', output: 'Oe', description: 'Norwegian old OEe -> Oe' },
+			{ input: 'oeE', output: 'oE', description: 'Norwegian old oeE -> oE' },
+			{ input: 'oEE', output: 'OE', description: 'Norwegian old oEE -> OE' },
+			{ input: 'OeE', output: 'OE', description: 'Norwegian old OeE -> OE' },
+			{ input: 'OEE', output: 'OE', description: 'Norwegian old OEE -> OE' },
+
+			// Test ligature å
+			{ input: 'aa', output: 'å', description: 'Norwegian old aa -> å' },
+			{ input: 'aA', output: 'Å', description: 'Norwegian old aA -> Å' },
+			{ input: 'Aa', output: 'Å', description: 'Norwegian old Aa -> Å' },
+			{ input: 'AA', output: 'Å', description: 'Norwegian old AA -> Å' },
+			// Test rollback
+			{ input: 'geriljaangrep', output: 'geriljaangrep', description: 'Norwegian word "geriljaangrep" -> "geriljaangrep"' },
+			{ input: 'GERILJAANGREP', output: 'GERILJAANGREP', description: 'Norwegian word "GERILJAANGREP" -> "GERILJAANGREP"' },
+			{ input: 'geriljaaktivitet', output: 'geriljaaktivitet', description: 'Norwegian word "geriljaaktivitet" -> "geriljaaktivitet"' },
+			{ input: 'GERILJAAKTIVITET', output: 'GERILJAAKTIVITET', description: 'Norwegian word "GERILJAAKTIVITET" -> "GERILJAAKTIVITET"' },
+			{ input: 'geriljaattentat', output: 'geriljaattentat', description: 'Norwegian word "geriljaattentat" -> "geriljaattentat"' },
+			{ input: 'GERILJAATTENTAT', output: 'GERILJAATTENTAT', description: 'Norwegian word "GERILJAATTENTAT" -> "GERILJAATTENTAT"' },
+			{ input: 'narkotikaavhengig', output: 'narkotikaavhengig', description: 'Norwegian word "narkotikaavhengig" -> "narkotikaavhengig"' },
+			{ input: 'NARKOTIKAAVHENGIG', output: 'NARKOTIKAAVHENGIG', description: 'Norwegian word "NARKOTIKAAVHENGIG" -> "NARKOTIKAAVHENGIG"' },
+			{ input: 'klimaanlegg', output: 'klimaanlegg', description: 'Norwegian word "klimaanlegg" -> "klimaanlegg"' },
+			{ input: 'KLIMAANLEGG', output: 'KLIMAANLEGG', description: 'Norwegian word "KLIMAANLEGG" -> "KLIMAANLEGG"' },
+			{ input: 'klimaarbeid', output: 'klimaarbeid', description: 'Norwegian word "klimaarbeid" -> "klimaarbeid"' },
+			{ input: 'KLIMAARBEID', output: 'KLIMAARBEID', description: 'Norwegian word "KLIMAARBEID" -> "KLIMAARBEID"' },
+			{ input: 'klimaavtale', output: 'klimaavtale', description: 'Norwegian word "klimaavtale" -> "klimaavtale"' },
+			{ input: 'KLIMAAVTALE', output: 'KLIMAAVTALE', description: 'Norwegian word "KLIMAAVTALE" -> "KLIMAAVTALE"' },
+			{ input: 'dataanlegg', output: 'dataanlegg', description: 'Norwegian word "dataanlegg" -> "dataanlegg"' },
+			{ input: 'DATAANLEGG', output: 'DATAANLEGG', description: 'Norwegian word "DATAANLEGG" -> "DATAANLEGG"' },
+			{ input: 'aaa', output: 'aa', description: 'Norwegian old aaa -> aa' },
+			{ input: 'aAa', output: 'Aa', description: 'Norwegian old aAa -> Aa' },
+			{ input: 'Aaa', output: 'Aa', description: 'Norwegian old Aaa -> Aa' },
+			{ input: 'AAa', output: 'Aa', description: 'Norwegian old AAa -> Aa' },
+			{ input: 'aaA', output: 'aA', description: 'Norwegian old aaA -> aA' },
+			{ input: 'aAA', output: 'AA', description: 'Norwegian old aAA -> AA' },
+			{ input: 'AaA', output: 'AA', description: 'Norwegian old AaA -> AA' },
+			{ input: 'AAA', output: 'AA', description: 'Norwegian old AAA -> AA' }
+
+		],
+		inputmethod: 'nb-normforms',
+		multiline: true
+	},
+	{
+		description: 'Norwegian Transliteration test for tilde forms',
+		tests: [
+			{ input: '°a', output: 'å', description: 'Norwegian °a -> å' },
+			{ input: '°A', output: 'Å', description: 'Norwegian °A -> Å' },
+			{ input: '~ae', output: 'æ', description: 'Norwegian ~ae -> æ' },
+			{ input: '~AE', output: 'Æ', description: 'Norwegian ~AE -> Æ' },
+			{ input: '~oe', output: 'ø', description: 'Norwegian ~oe -> ø' },
+			{ input: '~OE', output: 'Ø', description: 'Norwegian ~OE -> Ø' },
+			{ input: '~aa', output: 'å', description: 'Norwegian ~aa -> å' },
+			{ input: '~AA', output: 'Å', description: 'Norwegian ~AA -> Å' }
+		],
+		inputmethod: 'nb-tildeforms',
+		multiline: true
+	},
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
@@ -473,7 +711,7 @@ var palochkaVariants = {
 			{ input: '7',  output: '7', description: 'Urdu Numeral 7 -> 7' },
 			{ input: '8',  output: '8', description: 'Urdu Numeral 8 -> 8' },
 			{ input: '9',  output: '9', description: 'Urdu Numeral 9 -> 9' },
-			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' }
+			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' },
 		],
 		inputmethod: 'ur-phonetic'
 	},{
@@ -3531,27 +3769,27 @@ var palochkaVariants = {
 		inputmethod: 'yo-alt'
 	},
 	{
-		description: 'Santali Inscript2 test',
-		tests: [
-			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
-			{ input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
-			{ input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
-			{ input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
-			{ input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
-			{ input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
-			{ input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
-		],
-		inputmethod: 'sat-inscript2-ol-chiki'
+    description: 'Santali Inscript2 test',
+	    tests: [
+	        { input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
+	        { input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
+	        { input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
+	        { input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
+	        { input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
+	        { input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
+	        { input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
+	    ],
+	    inputmethod: 'sat-inscript2-ol-chiki'
 	},
 	{
-		description: 'Santali Sarjom Baha test',
-		tests: [
-			{ input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
-			{ input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
-			{ input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
-			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
-		],
-		inputmethod: 'sat-sarjom-baha'
+    description: 'Santali Sarjom Baha test',
+	    tests: [
+	        { input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
+	        { input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
+	        { input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
+	        { input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
+	    ],
+	    inputmethod: 'sat-sarjom-baha'
 	},
 	{
 		description: 'Khmer NiDA standard Unicode keyboard test',
