@@ -21,6 +21,8 @@ eg: `"hindi-inscript"`
 
 name: A mandatory short name for the input method. eg: `"Hindi InScript"`
 
+Note that the names used in the menu comes from src/jquery.ime.inputmethods.js
+
 description: An optional short description about the input method.
 eg: `"keyboard layout as per inscript standard"`
 
@@ -75,7 +77,7 @@ ex: `[ '(([ൺ-ൿം])\u200c+)?I', '$2ഐ' ]`
 In the above example, $1, $1 etc are according to the normal regular expression
 replace syntax.
 
-The second member of pattern can be a function as well.
+The second member of the pattern can be a function as well.
 
 eg:
 
@@ -106,7 +108,7 @@ eg:
 ```
 
 Note that this pattern definition has 3 members, the middle one is the context.
-This rule is interpreted as [todo]
+This rule is interpreted as as an override to pattern definitions with 2 members.
 
 The current key is h, previous key is c. For the previous key press c, we have
 a transliteration ൿ. But if it is followed by h and ൿ is indeed from key press
