@@ -440,18 +440,48 @@
 			name: 'Traditional',
 			source: 'rules/ne/ne-trad.js'
 		},
+		'nb-baseforms': {
+			name: 'Grunnleggende tegnsett',
+			source: 'rules/nb/nb-baseforms.js'
+		},
 		'nb-normforms': {
-			name: 'Normal transliterasjon',
-			source: 'rules/nb/nb-normforms.js'
+			name: 'Ligaturer uten merking',
+			source: 'rules/nb/nb-normforms.js',
+			depends: 'nb-baseforms'
 		},
 		'nb-tildeforms': {
-			name: 'Tildemerket transliterasjon',
-			source: 'rules/nb/nb-tildeforms.js'
+			name: 'Ligaturer merket med tilde',
+			source: 'rules/nb/nb-tildeforms.js',
+			depends: 'nb-baseforms'
 		},
+		'nb-extforms': {
+			name: 'Ligaturer som utvidet tegn',
+			source: 'rules/nb/nb-extforms.js',
+			depends: 'nb-baseforms'
+		},
+		/*
+		'nn-baseforms': {
+			name: 'Grunnleggande teiknsett',
+			source: 'rules/nb/nb-baseforms.js'
+		},
+		'nn-normforms': {
+			name: 'Ligaturer utan merking',
+			source: 'rules/nb/nb-normforms.js',
+			depends: 'nb-baseforms'
+		},
+		*/
 		'nn-tildeforms': {
-			name: 'Tildemerkt transliterasjon',
-			source: 'rules/nb/nb-tildeforms.js'
+			name: 'Ligaturer merkte med tilde',
+			source: 'rules/nb/nb-tildeforms.js',
+			depends: 'nb-baseforms'
 		},
+		/*
+		'nn-extforms': {
+			name: 'Ligaturer som utvida teikn',
+			source: 'rules/nb/nb-extforms.js',
+			depends: 'nb-baseforms'
+		},
+		*/
 		'or-transliteration': {
 			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
