@@ -21,7 +21,7 @@ eg: `"hindi-inscript"`
 
 name: A mandatory short name for the input method. eg: `"Hindi InScript"`
 
-Note that the names used in the menu comes from src/jquery.ime.inputmethods.js
+Note that the names used in the menu comes from [jquery.ime.inputmethods.js](../src/jquery.ime.inputmethods.js)
 
 description: An optional short description about the input method.
 eg: `"keyboard layout as per inscript standard"`
