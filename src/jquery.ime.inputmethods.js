@@ -459,7 +459,6 @@
 			source: 'rules/nb/nb-extforms.js',
 			depends: 'nb-baseforms'
 		},
-		/*
 		'nn-baseforms': {
 			name: 'Grunnleggande teiknsett',
 			source: 'rules/nb/nb-baseforms.js'
@@ -469,19 +468,16 @@
 			source: 'rules/nb/nb-normforms.js',
 			depends: 'nb-baseforms'
 		},
-		*/
 		'nn-tildeforms': {
 			name: 'Ligaturer merkte med tilde',
 			source: 'rules/nb/nb-tildeforms.js',
 			depends: 'nb-baseforms'
 		},
-		/*
 		'nn-extforms': {
 			name: 'Ligaturer som utvida teikn',
 			source: 'rules/nb/nb-extforms.js',
 			depends: 'nb-baseforms'
 		},
-		*/
 		'or-transliteration': {
 			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 			source: 'rules/or/or-transliteration.js'
@@ -918,11 +914,11 @@
 		},
 		nb: {
 			autonym: 'Norsk (bokmål)',
-			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
+			inputmethods: [ 'nb-baseforms', 'nb-normforms', 'nb-tildeforms', 'nb-extforms' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
-			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
+			inputmethods: [ 'nn-baseforms', 'nn-normforms', 'nn-tildeforms', 'nn-extforms' ]
 		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',
