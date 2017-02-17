@@ -102,6 +102,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
 		},
+		'byn-geezim': {
+			name: 'ብሊን',
+			source: 'rules/byn/byn-geezim.js'
+		},
 		'ckb-transliteration-arkbd': {
 			name: 'باشووری',
 			source: 'rules/ckb/ckb-transliteration-arkbd.js'
@@ -591,6 +595,14 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'ti-geezim': {
+			name: 'ትግርኛ',
+			source: 'rules/ti/ti-geezim.js'
+		},
+		'tig-geezim': {
+			name: 'ትግረ',
+			source: 'rules/tig/tig-geezim.js'
+		},
 		'ur-phonetic': {
 			name: 'صوتی',
 			source: 'rules/ur/ur-phonetic.js'
@@ -701,6 +713,10 @@
 		brx: {
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
+		},
+		byn: {
+			autonym: 'ብሊን',
+			inputmethods: [ 'byn-geezim' ]
 		},
 		ckb: {
 			autonym: 'کوردیی ناوەندی',
@@ -969,6 +985,14 @@
 		th: {
 			autonym: 'ไทย',
 			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
+		},
+		ti: {
+			autonym: 'ትግርኛ',
+			inputmethods: [ 'ti-geezim' ]
+		},
+		tig: {
+			autonym: 'ትግረ',
+			inputmethods: [ 'tig-geezim' ]
 		},
 		tkr: {
 			autonym: 'цӀаӀхна миз',

@@ -11,6 +11,68 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Blin GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Blin hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Blin lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Blin Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Blin Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Blin arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Blin gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Blin gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Blin gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Blin guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Blin gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Blin . -> ።' },
+			{ input: '..', output: '.', description: 'Blin .. -> .' },
+			{ input: '.-', output: '፨', description: 'Blin .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Blin ;; -> ።' },
+			{ input: 'Ge', output: 'ጘ', description: 'Blin Ge -> ጘ' },
+			{ input: 'Gi', output: 'ጚ', description: 'Blin Gi -> ጚ' }
+		],
+		inputmethod: 'byn-geezim'
+	},
+	{
+		description: 'Tigre GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Tigre hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Tigre lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Tigre Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Tigre Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Tigre arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Tigre gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Tigre gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Tigre gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Tigre guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Tigre gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Tigre . -> ።' },
+			{ input: '..', output: '.', description: 'Tigre .. -> .' },
+			{ input: '.-', output: '፨', description: 'Tigre .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Tigre ;; -> ።' }
+		],
+		inputmethod: 'tig-geezim'
+	},
+	{
+		description: 'Tigrinya GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Tigrinya hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Tigrinya lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Tigrinya Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Tigrinya Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Tigrinya arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Tigrinya gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Tigrinya gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Tigrinya gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Tigrinya guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Tigrinya gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Tigrinya . -> ።' },
+			{ input: '..', output: '.', description: 'Tigrinya .. -> .' },
+			{ input: '.-', output: '፨', description: 'Tigrinya .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Tigrinya ;; -> ።' }
+		],
+		inputmethod: 'ti-geezim'
+	},
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
