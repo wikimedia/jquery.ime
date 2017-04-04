@@ -7,7 +7,7 @@
 			source: 'rules/am/am-transliteration.js'
 		},
 		'ak-qx': {
-			name: 'Akan - QX replacement',
+			name: 'QX replacement',
 			source: 'rules/ak/ak-qx.js'
 		},
 		'ar-kbd': {
@@ -997,6 +997,10 @@
 		tkr: {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		tw: {
+			autonym: 'Twi',
+			inputmethods: [ 'ak-qx' ]
 		},
 		tzm: {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
