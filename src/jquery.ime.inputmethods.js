@@ -182,6 +182,10 @@
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
 		},
+                'got-standard': {
+			name:  '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
+			source: 'rules/got/got-standard.js'
+                },
 		'lud-transliteration': {
 			name: 'lud',
 			source: 'rules/lud/lud-transliteration.js'
