@@ -11,6 +11,68 @@ var palochkaVariants = {
 	/*jshint unused:false */
 	testFixtures = [
 	{
+		description: 'Blin GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Blin hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Blin lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Blin Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Blin Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Blin arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Blin gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Blin gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Blin gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Blin guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Blin gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Blin . -> ።' },
+			{ input: '..', output: '.', description: 'Blin .. -> .' },
+			{ input: '.-', output: '፨', description: 'Blin .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Blin ;; -> ።' },
+			{ input: 'Ge', output: 'ጘ', description: 'Blin Ge -> ጘ' },
+			{ input: 'Gi', output: 'ጚ', description: 'Blin Gi -> ጚ' }
+		],
+		inputmethod: 'byn-geezim'
+	},
+	{
+		description: 'Tigre GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Tigre hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Tigre lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Tigre Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Tigre Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Tigre arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Tigre gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Tigre gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Tigre gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Tigre guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Tigre gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Tigre . -> ።' },
+			{ input: '..', output: '.', description: 'Tigre .. -> .' },
+			{ input: '.-', output: '፨', description: 'Tigre .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Tigre ;; -> ።' }
+		],
+		inputmethod: 'tig-geezim'
+	},
+	{
+		description: 'Tigrinya GeezIM test',
+		tests: [
+			{ input: 'hie', output: 'ሄ', description: 'Tigrinya hie -> ሄ' },
+			{ input: 'lie', output: 'ሌ', description: 'Tigrinya lie -> ሌ' },
+			{ input: 'Hie', output: 'ሔ', description: 'Tigrinya Hie -> ሔ' },
+			{ input: 'mie', output: 'ሜ', description: 'Tigrinya Hie -> ሜ' },
+			{ input: 'arAaya', output: 'ኣርኣያ', description: 'Tigrinya arAaya -> ኣርኣያ' },
+			{ input: 'gua', output: 'ጓ', description: 'Tigrinya gua -> ጓ' },
+			{ input: 'gue', output: 'ጐ', description: 'Tigrinya gue -> ጐ' },
+			{ input: 'gui', output: 'ጒ', description: 'Tigrinya gui -> ጒ' },
+			{ input: 'guie', output: 'ጔ', description: 'Tigrinya guie -> ጔ' },
+			{ input: 'gW', output: 'ጕ', description: 'Tigrinya gW -> ጕ' },
+			{ input: '.', output: '።', description: 'Tigrinya . -> ።' },
+			{ input: '..', output: '.', description: 'Tigrinya .. -> .' },
+			{ input: '.-', output: '፨', description: 'Tigrinya .- -> ፨' },
+			{ input: ';;', output: '።', description: 'Tigrinya ;; -> ።' }
+		],
+		inputmethod: 'ti-geezim'
+	},
+	{
 		description: 'Amharic Transliteration test',
 		tests: [
 			{ input: 'k', output: 'ክ', description: 'Amharic k -> ክ' },
@@ -461,6 +523,21 @@ var palochkaVariants = {
 			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer' }
 		],
 		inputmethod: 'gu-phonetic'
+	},{
+		description: 'Urdu Phonetics',
+		tests: [
+			{ input: '1',  output: '1', description: 'Urdu Numeral 1 -> 1' },
+			{ input: '2',  output: '2', description: 'Urdu Numeral 2 -> 2' },
+			{ input: '3',  output: '3', description: 'Urdu Numeral 3 -> 3' },
+			{ input: '4',  output: '4', description: 'Urdu Numeral 4 -> 4' },
+			{ input: '5',  output: '5', description: 'Urdu Numeral 5 -> 5' },
+			{ input: '6',  output: '6', description: 'Urdu Numeral 6 -> 6' },
+			{ input: '7',  output: '7', description: 'Urdu Numeral 7 -> 7' },
+			{ input: '8',  output: '8', description: 'Urdu Numeral 8 -> 8' },
+			{ input: '9',  output: '9', description: 'Urdu Numeral 9 -> 9' },
+			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' }
+		],
+		inputmethod: 'ur-phonetic'
 	},{
 		description: 'Gujarati Inscript 2',
 		tests: [
@@ -1886,6 +1963,9 @@ var palochkaVariants = {
 	},{
 		description: 'Punjabi Gurmukhi Phonetic',
 		tests: [
+			{ input: 'st.', output: 'ਸਟ।', description: 'Punjabi Phonetic test - "st."' },
+			{ input: 'mu~K', output: 'ਮੁੱਖ', description: 'Punjabi Phonetic test - "mu~K"' },
+			{ input: 'p`rIqI', output: 'ਪ੍ਰੀਤੀ', description: 'Punjabi Phonetic test - "p`rIqI (Priti)"' },
 			{ input: ')', output: '੦', description: 'Punjabi Phonetic test - Zero' },
 			{ input: '(', output: '੯', description: 'Punjabi Phonetic test - Nine' }
 		],
@@ -3513,26 +3593,208 @@ var palochkaVariants = {
 		inputmethod: 'yo-alt'
 	},
 	{
-    description: 'Santali Inscript2 test',
-	    tests: [
-	        { input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
-	        { input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
-	        { input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
-	        { input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
-	        { input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
-	        { input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
-	        { input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
-	    ],
-	    inputmethod: 'sat-inscript2-ol-chiki'
+		description: 'Santali Inscript2 test',
+		tests: [
+			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
+			{ input: 'y', output: 'ᱵ', description: 'Santali y -> ᱵ' },
+			{ input: 'U', output: 'ᱝ', description: 'Santali U -> ᱝ' },
+			{ input: 'u', output: 'ᱦ', description: 'Santali u -> ᱦ' },
+			{ input: 'C', output: 'ᱬ', description: 'Santali C -> ᱬ' },
+			{ input: 'c', output: 'ᱢ', description: 'Santali c -> ᱢ' },
+			{ input: 'B', output: 'ᱶ', description: 'Santali B -> ᱶ' }
+		],
+		inputmethod: 'sat-inscript2-ol-chiki'
 	},
 	{
-    description: 'Santali Sarjom Baha test',
-	    tests: [
-	        { input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
-	        { input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
-	        { input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
-	        { input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
-	    ],
-	    inputmethod: 'sat-sarjom-baha'
+		description: 'Santali Sarjom Baha test',
+		tests: [
+			{ input: 'a', output: 'ᱟ', description: 'Santali a -> ᱟ' },
+			{ input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
+			{ input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
+			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
+		],
+		inputmethod: 'sat-sarjom-baha'
+	},
+	{
+		description: 'Khmer NiDA standard Unicode keyboard test',
+		inputmethod: 'km-nidakyk',
+		tests: [
+			{ input: 'xjmEr', output: 'ខ្មែរ', description: 'Khmer: xjmEr -> ខ្មែរ' },
+			{ input: 'q', output: 'ឆ', description: 'Consonant: q -> ឆ' },
+			{ input: 'JjG', output: 'ញ្អ', description: 'Consonant subscript: JjG -> ញ្អ' },
+
+			// test common combinations
+			{ input: 'GA', output: 'អាំ', description: 'combination (A): GA -> អាំ' },
+			{ input: 'GaM', output: 'អាំ', description: 'combination (am as A): GaM -> អាំ' },
+			{ input: 'GMa', output: 'អាំ', description: 'normalization (Ma to aM): GMa -> អាំ' },
+			{ input: 'GV', output: 'អេះ', description: 'combination (V): GV -> អេះ' },
+			{ input: 'GeH', output: 'អេះ', description: 'combination (eH as V): GeH -> អេះ' },
+			{ input: 'GHe', output: 'អេះ', description: 'normalization (He to eH): GHe -> អេះ' },
+			{ input: 'G,', output: 'អុំ', description: 'combination (,): G, -> អុំ' },
+			{ input: 'GuM', output: 'អុំ', description: 'combination (uH as ,): GeH -> អុំ' },
+			{ input: 'GMu', output: 'អុំ', description: 'normalization (Mu to uM): GMu -> អុំ' },
+			{ input: 'G:', output: 'អោះ', description: 'combination (:): G: -> អោះ' },
+			{ input: 'GoH', output: 'អោះ', description: 'combination (oH as :): GoH -> អោះ' },
+			{ input: 'GHo', output: 'អោះ', description: 'normalization (Ho to oH): GHo -> អោះ' },
+			{ input: 'G<', output: 'អុះ', description: 'combination (<): G< -> អុះ' },
+			{ input: 'GuH', output: 'អុះ', description: 'combination (uH as <): GeH -> អុះ' },
+			{ input: 'GHu', output: 'អុះ', description: 'normalization (Hu to uH): GHu -> អុះ' },
+
+			// test normalization for consonant shifters
+			// { input: 'Gjn/', output: 'អ៊្ន', description: 'normalization (consonant shifter): Gjn/ -> អ៊្ន' },
+			// { input: 'Gjrjn/', output: 'អ៊្រ្ន', description: 'normalization (consonant shifter): Gjrjn/ -> អ៊្រ្ន' },
+
+			// test corrections
+			{ input: 'Gea', output: 'អោ', description: 'correction (ea to o): Gea -> អោ' },
+			{ input: 'Gae', output: 'អោ', description: 'correction (ae to o): Gae -> អោ' },
+			{ input: 'GeI', output: 'អើ', description: 'correction (eI to :): GeI -> អើ' },
+			{ input: 'GIe', output: 'អើ', description: 'correction (Ie to :): GIe -> អើ' },
+
+			// test AltGr
+			{ input: [ [ 'e', true/*AltGr*/ ] ], output: 'ឯ', description: 'AltGr: AltGr-e -> ឯ' },
+			{ input: [ [ '2', true ] ], output: '@', description: 'AltGr: AltGr-2 -> @' },
+			{ input: [ 'G', [ '3', true ] ], output: 'អ៑', description: 'AltGr: G AltGr-3 -> អ៑' },
+			{ input: [ [ 'Q', true ] ], output: '᧠', description: 'AltGr-Shift: AltGr-Shift-q -> ᧠' },
+			{ input: [ [ '%', true ] ], output: '៵', description: 'AltGr-Shift: AltGr-Shift-5 -> ៵' },
+			{ input: [ [ '>', true ] ], output: '᧿', description: 'AltGr-Shift: AltGr-Shift-. -> ᧿' },
+
+			// test special characters
+			// !
+			{ input: '!', output: '!', description: 'special: ! -> !' },
+			{ input: [ [ '!', true ] ], output: '៱', description: 'special: AltGr-! -> ៱' },
+			// $
+			{ input: '$', output: '៛', description: 'special: $ -> ៛' },
+			{ input: [ [ '$', true ] ], output: '៴', description: 'special: AltGr-$ -> ៴' },
+			// ^
+			{ input: 'G^', output: 'អ៍', description: 'special: G^ -> អ៍' },
+			{ input: [ [ '^', true ] ], output: '៶', description: 'special: AltGr-^ -> ៶' },
+			// &
+			{ input: 'G&', output: 'អ័', description: 'special: G& -> អ័' },
+			{ input: [ [ '&', true ] ], output: '៷', description: 'special: AltGr-& -> ៷' },
+			// *
+			{ input: 'G*', output: 'អ៏', description: 'special: G* -> អ៏' },
+			{ input: [ [ '*', true ] ], output: '៸', description: 'special: AltGr-* -> ៸' },
+			// (
+			{ input: '(', output: '(', description: 'special: ( -> (' },
+			{ input: [ [ '(', true ] ], output: '៹', description: 'special: AltGr-( -> ៹' },
+			// )
+			{ input: ')', output: ')', description: 'special: ) -> )' },
+			{ input: [ [ ')', true ] ], output: '៰', description: 'special: AltGr-) -> ៰' },
+			// -
+			{ input: '-', output: 'ឥ', description: 'special: - -> ឥ' },
+			{ input: [ [ '-', true ] ], output: 'x', description: 'special: AltGr-- -> x' },
+			// =
+			{ input: '=', output: 'ឲ', description: 'special: = -> ឲ' },
+			{ input: [ 'G', [ '=', true ] ], output: 'អ៎', description: 'special: G AltGr-= H -> អ៎' },
+			// +
+			{ input: '+', output: '=', description: 'special: + -> =' },
+			// backslash
+			{ input: '\\', output: 'ឮ', description: 'special: \\ -> ឮ' },
+			{ input: [ [ '\\', true ] ], output: '\\', description: 'special: AltGr-\\ -> \\' },
+			// |
+			{ input: '|', output: 'ឭ', description: 'special: | -> ឭ' },
+			// [
+			{ input: 'G[', output: 'អៀ', description: 'special: G[ -> អៀ' },
+			{ input: [ [ '[ ', true ] ], output: 'ឩ', description: 'special: AltGr-[ -> ឩ' },
+			// {
+			{ input: 'G{', output: 'អឿ', description: 'special: G{ -> អឿ' },
+			{ input: [ [ '{', true ] ], output: '᧪', description: 'special: AltGr-{ -> ᧪' },
+			// ]
+			{ input: ']', output: 'ឪ', description: 'special: ] -> ឪ' },
+			{ input: [ [ ']', true ] ], output: 'ឳ', description: 'special: AltGr-] -> ឳ' },
+			// }
+			{ input: '}', output: 'ឧ', description: 'special: } -> ឧ' },
+			{ input: [ [ '}', true ] ], output: '᧫', description: 'special: AltGr-} -> ᧫' },
+			// ;
+			{ input: 'G;', output: 'អើ', description: 'special: G; -> អើ' },
+			{ input: [ [ ';', true ] ], output: '៖', description: 'special: AltGr-; -> ៖' },
+			// :
+			{ input: 'G:', output: 'អោះ', description: 'special: G: -> អោះ' },
+			{ input: [ [ ':', true ] ], output: '᧵', description: 'special: AltGr-: -> ᧵' },
+			// '
+			{ input: 'G\'', output: 'អ់', description: 'special: G\' -> អ់' },
+			{ input: [ 'G', [ '\'', true ] ], output: 'អៈ', description: 'special: G AltGr-: -> អៈ' },
+			// "
+			{ input: 'G\"', output: 'អ៉', description: 'special: G\" -> អ៉' },
+			{ input: [ [ '\"', true ] ], output: '᧶', description: 'special: AltGr-\" -> ᧶' },
+			// ,
+			{ input: 'G,', output: 'អុំ', description: 'special: G, -> អុំ' },
+			{ input: [ [ ',', true ] ], output: ',', description: 'special: AltGr-, -> ,' },
+			// <
+			{ input: 'G<', output: 'អុះ', description: 'special: G< -> អុះ' },
+			{ input: [ [ '<', true ] ], output: '᧾', description: 'special: AltGr-< -> ᧾' },
+			// .
+			{ input: '.', output: '។', description: 'special: . -> ។' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'special: AltGr-. -> .' },
+			// >
+			{ input: '>', output: '៕', description: 'special: > -> ៕' },
+			{ input: [ [ '>', true ] ], output: '᧿', description: 'special: AltGr-> -> ᧿' },
+			// /
+			{ input: 'G/', output: 'អ៊', description: 'special: G/ -> អ៊' },
+			{ input: [ [ '/', true ] ], output: '/', description: 'special: AltGr-/ -> /' },
+			// ?
+			{ input: '?', output: '?', description: 'special: ? -> ?' },
+
+			// tests from How_to_type_Khmer_Unicode_ver1_1km.pdf (NiDA)
+			{ input: 'li', output: 'លិ', description: 'NiDA: li -> លិ' },
+			{ input: 'Ke', output: 'គេ', description: 'NiDA: li -> គេ' },
+			{ input: 'nO', output: 'នៅ', description: 'NiDA: nO -> នៅ' },
+			{ input: 'l;', output: 'លើ', description: 'NiDA: l; -> លើ' },
+			{ input: 'ctjt', output: 'ចត្ត', description: 'NiDA: ctjt -> ចត្ត' },
+			{ input: 'sjrI', output: 'ស្រី', description: 'NiDA: sjrI -> ស្រី' },
+			{ input: 'sjrE', output: 'ស្រែ', description: 'NiDA: sjrE -> ស្រែ' },
+			{ input: 'sjtjrI', output: 'ស្ត្រី', description: 'NiDA: sjtjrI -> ស្ត្រី' },
+			{ input: 'TaJ', output: 'ទាញ', description: 'NiDA: TaJ -> ទាញ' },
+			{ input: 'sJjJa', output: 'សញ្ញា', description: 'NiDA: sJjJa -> សញ្ញា' },
+			{ input: 'xjJ,', output: 'ខ្ញុំ', description: 'NiDA: xjJ, -> ខ្ញុំ' },
+			{ input: 'bJjceJ', output: 'បញ្ចេញ', description: 'NiDA: bJjceJ -> បញ្ចេញ' },
+			{ input: 'kEH', output: 'កែះ', description: 'NiDA: kEH -> កែះ' },
+			{ input: 'y"ak', output: 'យ៉ាក', description: 'NiDA: y"ak -> យ៉ាក' },
+			{ input: 'b"egb":', output: 'ប៉េងប៉ោះ', description: 'NiDA: b"egb": -> ប៉េងប៉ោះ' },
+			{ input: 'kjrumh/un', output: 'ក្រុមហ៊ុន', description: 'NiDA: kjrumh/un -> ក្រុមហ៊ុន' },
+			{ input: 'b/ut', output: 'ប៊ុត', description: 'NiDA: b/ut -> ប៊ុត' },
+			{ input: 'sjr/ub', output: 'ស្រ៊ុប', description: 'NiDA: sjr/ub -> ស្រ៊ុប' },
+			// { input: 's/jrub', output: 'ស៊្រុប', description: 'NiDA (Unicode 3.0 -> 4.0): s/jrub -> ស៊្រុប' },
+			{ input: 's/jrub', output: 'ស៊្រុប', description: 'NiDA (Unicode 4.0): s/jrub -> ស៊្រុប' },
+			{ input: 'mjh/Et', output: 'ម្ហ៊ែត', description: 'NiDA: mjh/Et -> ម្ហ៊ែត' },
+			// { input: 'mjh/Et', output: 'ម៊្ហែត', description: 'NiDA (Unicode 3.0 -> 4.0): mjh/Et -> ម៊្ហែត' },
+			{ input: 'm/jhEt', output: 'ម៊្ហែត', description: 'NiDA (Unicode 4.0): m/jhEt -> ម៊្ហែត' },
+			{ input: 's/', output: 'ស៊', description: 'NiDA: s/ -> ស៊' },
+			{ input: 's/I', output: 'ស៊ី', description: 'NiDA: s/I -> ស៊ី' },
+			{ input: 'b"I', output: 'ប៉ី', description: 'NiDA: b"I -> ប៉ី' },
+			{ input: 'bnjs/I', output: 'បន្ស៊ី', description: 'NiDA: bnjs/I -> បន្ស៊ី' },
+			// { input: 'bnjs/I', output: 'បន៊្សី', description: 'NiDA (Unicode 3.0 -> 4.0): bnjs/I -> បន៊្សី' },
+			{ input: 'bn/jsI', output: 'បន៊្សី', description: 'NiDA (Unicode 4.0): bn/js/I -> បន៊្សី' },
+			{ input: 'G/M', output: 'អ៊ំ', description: 'NiDA: G/M -> អ៊ំ' },
+			{ input: 'b/ik', output: 'ប៊ិក', description: 'NiDA: b/ik -> ប៊ិក' },
+
+			// with some fonts it may looks like អ្ហុិះ (GjhuiH) instead
+			{ input: 'Gjh/iH', output: 'អ្ហ៊ិះ', description: 'NiDA: Gjh/iH -> អ្ហ៊ិះ' },
+			// { input: 'Gjh/iH', output: 'អ៊្ហិះ', description: 'NiDA (Unicode 3.0 -> 4.0): Gjh/iH -> អ៊្ហិះ' },
+			{ input: 'G/jhiH', output: 'អ៊្ហិះ', description: 'NiDA (Unicode 4.0): G/jhiH -> អ៊្ហិះ' },
+
+			{ input: 'BN_', output: 'ពណ៌', description: 'NiDA: BN_ -> ពណ៌' },
+			{ input: [ 's', 'K', '_', [ '\'', true ] ], output: 'សគ៌ៈ', description: 'NiDA: sK_ AltGr-\' -> សគ៌ៈ' },
+			{ input: 'kb_Ur', output: 'កប៌ូរ', description: 'NiDA: kb_Ur -> កប៌ូរ' },
+			{ input: 'kab_as', output: 'កាប៌ាស', description: 'NiDA: kab_as -> កាប៌ាស' },
+			{ input: 'sB_eCjJ', output: 'សព៌េជ្ញ', description: 'NiDA: sB_eCjJ -> សព៌េជ្ញ' },
+			{ input: 'lk\'', output: 'លក់', description: 'NiDA: lk\' -> លក់' },
+			{ input: 'TMB&r', output: 'ទំព័រ', description: 'NiDA: TMB&r -> ទំព័រ' },
+			{ input: [ 'N', [ '=', true ], 'H' ], output: 'ណ៎ះ', description: 'NiDA: N AltGr-= H -> ណ៎ះ' },
+			{ input: [ 'n', 'u', [ '=', true ], 'H' ], output: 'នុ៎ះ', description: 'NiDA: nu AltGr-= H -> នុ៎ះ' },
+			{ input: [ 'G', 'I', [ '=', true ], 'H' ], output: 'អី៎ះ', description: 'NiDA: GI AltGr-= H -> អី៎ះ' },
+			{ input: 'kEH', output: 'កែះ', description: 'NiDA: kEH -> កែះ' },
+
+			{ input: ' ', output: '\u200b', description: 'NiDA: SP -> ZWSP' },
+			{ input: [ [ ' ', false/*AltGr*/, true/*Shift*/ ] ], output: ' ', description: 'NiDA: Shift-SP -> SP' },
+			{ input: [ [ ' ', true ] ], output: '\u00a0', description: 'NiDA: AltGr-SP -> NBSP' },
+
+			// test (non-)joiners, from Unicode 8.0 chapter 16
+			{ input: [ 'b', [ '1', true ], '/', 'I', 'y', 'E', 'r' ], output: 'ប‌៊ីយែរ', description: 'ZWNJ (beer): b AltGr-1 /IyEr -> ប‌៊ីយែរ' },
+			{ input: [ 'b', 'j', 'r', 't', 'W', 'g', 'G', [ '1', true ], '/', 'w', 'H' ], output: 'ប្រតឺងអ‌៊ឹះ', description: 'ZWNJ (urgent, too busy): bjrtWgG AltGr-1 /wH -> ប្រតឺងអ‌៊ឹះ' },
+			// these two should looks different with a Moul font
+			{ input: [ 'v', [ '1', true ], 'i', 'T', 'U' ], output: 'វ‌ិទូ', description: 'ZWNJ (savant): v AltGr-1 iTU -> វ‌ិទូ' },
+			{ input: [ 'v', [ '`', true ], 'i', 'T', 'U' ], output: 'វ‍ិទូ', description: 'ZWJ (savant): v AltGr-` iTU -> វ‍ិទូ' }
+		]
 	}
 ];

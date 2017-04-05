@@ -3,7 +3,7 @@
 
 	var defs = {
 		id: 'ak-qx',
-		name: 'Akan - QX replacement',
+		name: 'QX replacement',
 		description: 'Akan input method with Q and X replaced by Ɛ and Ɔ',
 		date: '2016-06-23',
 		URL: 'http://www.kasahorow.org/node/260',

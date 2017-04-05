@@ -7,8 +7,8 @@
 			source: 'rules/am/am-transliteration.js'
 		},
 		'ak-qx': {
-			name: 'Akan - QX replacement',
-			source: 'rules/ga/gaa-cqx.js'
+			name: 'QX replacement',
+			source: 'rules/ak/ak-qx.js'
 		},
 		'ar-kbd': {
 			name: 'أرابيك',
@@ -101,6 +101,10 @@
 		'brx-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
+		},
+		'byn-geezim': {
+			name: 'ብሊን',
+			source: 'rules/byn/byn-geezim.js'
 		},
 		'ckb-transliteration-arkbd': {
 			name: 'باشووری',
@@ -339,6 +343,10 @@
 		'kk-kbd': {
 			name: 'Кирил',
 			source: 'rules/kk/kk-kbd.js'
+		},
+		'km-nidakyk': {
+			name: 'ក្តារ​ចុច​យូនីកូដ​ខ្មែរ (NiDA)',
+			source: 'rules/km/km-nidakyk.js'
 		},
 		'kn-inscript': {
 			name: 'ಇನ್ಸ್ಕ್ರಿಪ್ಟ್',
@@ -591,6 +599,14 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
+		'ti-geezim': {
+			name: 'ትግርኛ',
+			source: 'rules/ti/ti-geezim.js'
+		},
+		'tig-geezim': {
+			name: 'ትግረ',
+			source: 'rules/tig/tig-geezim.js'
+		},
 		'ur-phonetic': {
 			name: 'صوتی',
 			source: 'rules/ur/ur-phonetic.js'
@@ -702,6 +718,10 @@
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
+		byn: {
+			autonym: 'ብሊን',
+			inputmethods: [ 'byn-geezim' ]
+		},
 		ckb: {
 			autonym: 'کوردیی ناوەندی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
@@ -767,7 +787,7 @@
 			inputmethods: [ 'lud-transliteration' ]
 		},
 		gom: {
-			autonym: 'गोवा कोंकणी / Gova Konknni',
+			autonym: 'गोंयची कोंकणी / Gõychi Konknni',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
 		},
 		gu: {
@@ -817,6 +837,10 @@
 		kk: {
 			autonym: 'Қазақша',
 			inputmethods: [ 'kk-kbd', 'kk-arabic' ]
+		},
+		km: {
+			autonym: 'ភាសា​ខ្មែរ',
+			inputmethods: [ 'km-nidakyk' ]
 		},
 		kn: {
 			autonym: 'ಕನ್ನಡ',
@@ -970,9 +994,21 @@
 			autonym: 'ไทย',
 			inputmethods: [ 'th-kedmanee', 'th-pattachote' ]
 		},
+		ti: {
+			autonym: 'ትግርኛ',
+			inputmethods: [ 'ti-geezim' ]
+		},
+		tig: {
+			autonym: 'ትግረ',
+			inputmethods: [ 'tig-geezim' ]
+		},
 		tkr: {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		tw: {
+			autonym: 'Twi',
+			inputmethods: [ 'ak-qx' ]
 		},
 		tzm: {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',
