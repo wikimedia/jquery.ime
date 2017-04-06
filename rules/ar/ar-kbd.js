@@ -4,7 +4,7 @@
 	var arKbd = {
 		id: 'ar-kbd',
 		name: 'kbd',
-		description: 'Arabic keyboard layout',
+		description: 'PC Arabic keyboard layout',
 		date: '2013-02-09',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Parag Nemade',
