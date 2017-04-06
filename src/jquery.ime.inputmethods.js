@@ -11,7 +11,7 @@
 			source: 'rules/ak/ak-qx.js'
 		},
 		'ar-kbd': {
-			name: 'أرابيك',
+			name: 'لوحة المفاتيح العربية',
 			source: 'rules/ar/ar-kbd.js'
 		},
 		'as-avro': {
