@@ -182,6 +182,10 @@
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
 		},
+		'gaa-cqx': {
+			name: 'Ga - CQX replacement',
+			source: 'rules/gaa/gaa-cqx.js'
+		},
 		'lud-transliteration': {
 			name: 'lud',
 			source: 'rules/lud/lud-transliteration.js'
@@ -769,6 +773,10 @@
 		fi: {
 			autonym: 'Suomi',
 			inputmethods: [ 'fi-transliteration' ]
+		},
+		gaa: {
+			autonym: 'Ga',
+			inputmethods: [ 'gaa-cqx' ]
 		},
 		lrc: {
 			autonym: 'لۊری شومالی',
