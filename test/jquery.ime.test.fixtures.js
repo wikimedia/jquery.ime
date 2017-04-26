@@ -761,6 +761,31 @@ var palochkaVariants = {
 		],
 		inputmethod: 'hy-emslegacy'
 	},{
+		description: 'Dinka din-fqsx input method test',
+		tests: [
+			{ input: 'ufu', output: 'uɣu', description: 'Dinka uɣu' },
+			{ input: 'aqa', output: 'aŋa', description: 'Dinka aŋa' },
+			{ input: 'ese', output: 'eɛe', description: 'Dinka eɛe' },
+			{ input: 'oxo', output: 'oɔo', description: 'Dinka oɔo' },
+			{ input: 'UFU', output: 'UƔU', description: 'Dinka UƔU' },
+			{ input: 'AQA', output: 'AŊA', description: 'Dinka AŊA' },
+			{ input: 'ESE', output: 'EƐE', description: 'Dinka EƐE' },
+			{ input: 'OXO', output: 'OƆO', description: 'Dinka OƆO' },
+			{ input: 'ka;k', output: 'käk', description: 'Dinka käk' },
+			{ input: 'pe;p', output: 'pëp', description: 'Dinka pëp' },
+			{ input: 'ds;d', output: 'dɛ̈d', description: 'Dinka dɛ̈d' },
+			{ input: 'ki;k', output: 'kïk', description: 'Dinka kïk' },
+			{ input: 'to;t', output: 'töt', description: 'Dinka töt' },
+			{ input: 'rx;r', output: 'rɔ̈r', description: 'Dinka rɔ̈r' },
+			{ input: 'code\\;', output: 'code;', description: 'Dinka code;' },
+			{ input: 'C:\\\\File\\s', output: 'C:\\Files', description: 'Dinka C:\\Files' },
+			{ input: '\\Fa\\f', output: 'Faf', description: 'Dinka Faf' },
+			{ input: '\\Qu\\q', output: 'Quq', description: 'Dinka Quq' },
+			{ input: '\\So\\s', output: 'Sos', description: 'Dinka Sos' },
+			{ input: '\\Xi\\x', output: 'Xix', description: 'Dinka Xix' }
+		],
+		inputmethod: 'din-fqsx'
+	},{
 		description: 'Armenian MS legacy Westerm layout with extended keys test',
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
