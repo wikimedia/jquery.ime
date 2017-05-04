@@ -8,7 +8,6 @@
 	background-image: linear-gradient(transparent, transparent), url('../images/ime-active.svg');
 	background-color: rgba(255,255,255,0.75);
 	background-position: left 3px center;
-	background-position-x: 3px;
 	height: 15px;
 	font-size: small;
 	padding: 2px 2px 1px 20px;
@@ -168,13 +167,11 @@ span.ime-disable-shortcut {
 
 .imeselector-menu .ime-checked {
 	/* @embed */
-	background: url(../images/tick.png) no-repeat left center;
+	background: url(../images/tick.png) no-repeat left 4px center;
 	/* @embed */
 	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/tick.svg');
 	/* @embed */
 	background-image: linear-gradient(transparent, transparent), url('../images/tick.svg');
-	background-position: left 4px center;
-	background-position-x: 4px;
 }
 
 .imeselector-menu .ime-help-link {
