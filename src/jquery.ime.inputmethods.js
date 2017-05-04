@@ -138,6 +138,10 @@
 			name: 'normalformer',
 			source: 'rules/da/da-normforms.js'
 		},
+		'din-fqsx': {
+			name: 'Dinka FQSX',
+			source: 'rules/din/din-fqsx.js'
+		},
 		'doi-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/doi/doi-inscript2.js'
@@ -741,6 +745,10 @@
 		de: {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
+		},
+		din: {
+			autonym: 'Thuɔŋjäŋ',
+			inputmethods: [ 'din-fqsx' ]
 		},
 		diq: {
 			autonym: 'Kirdkî',
