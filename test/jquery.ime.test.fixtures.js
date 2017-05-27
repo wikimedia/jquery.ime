@@ -418,6 +418,39 @@ var palochkaVariants = {
 		],
 		inputmethod: 'bn-avro'
 	},{
+		description: 'Dagbani Alt layout test',
+		tests: [
+			{
+				input: [
+					[ 'K', false ],
+					[ 'p', false ],
+					[ 'a', false ],
+					[ 'g', true ],
+					[ 'u', false ],
+					[ 'z', true ],
+					[ 'i', false ],
+					[ 'e', true ],
+					[ 'g', true ],
+					[ 'u', false ],
+					[ ' ', false ],
+					[ 'z', true ],
+					[ 'i', false ],
+					[ ' ', false ],
+					[ 'n', true ],
+					[ 'o', true ],
+					[ ' ', false ],
+					[ 'n', false ],
+					[ 'y', false ],
+					[ 'e', true ],
+					[ 'l', false ],
+					[ 'a', false ]
+				],
+				output: 'Kpaɣuʒiɛɣu ʒi ŋɔ nyɛla',
+				description: 'Dagbani Alt - Kpaɣuʒiɛɣu ʒi ŋɔ nyɛla'
+			},
+		],
+		inputmethod: 'dag-alt'
+	},{
 		description: 'Cyrillic with palochka transliteration test',
 		tests: [
 			// Sanity test - palochka should produce itself

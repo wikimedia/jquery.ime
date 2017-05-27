@@ -138,6 +138,10 @@
 			name: 'normalformer',
 			source: 'rules/da/da-normforms.js'
 		},
+		'dag-alt': {
+			name: 'Dagbani Alt',
+			source: 'rules/dag/dag-alt.js'
+		},
 		'din-fqsx': {
 			name: 'Dinka FQSX',
 			source: 'rules/din/din-fqsx.js'
@@ -741,6 +745,10 @@
 		da: {
 			autonym: 'Dansk',
 			inputmethods: [ 'da-normforms' ]
+		},
+		dag: {
+			autonym: 'Dagbani',
+			inputmethods: [ 'dag-alt' ]
 		},
 		de: {
 			autonym: 'Deutsch',
