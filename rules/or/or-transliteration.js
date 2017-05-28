@@ -15,8 +15,8 @@
 		patterns: [
 			[ '\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1' ],
 
-			[ 'ଞ୍ଜ୍h', 'ଞ୍ଝ୍' ], // njh
-			[ 'ଙ୍ଗ୍h', 'ଙ୍ଘ୍' ], // ngh
+			[ 'ଞ୍ଜ୍h', 'ଞ୍ଝ୍' ], // "njha" with halanta
+			[ 'ଙ୍ଗ୍h', 'ଙ୍ଘ୍' ], // "ngh" with halanta
 
 			[ '([କ-ହୟ])୍a', '$1' ],
 			[ '([କ-ହୟ])(a|୍A)', '$1ା' ],
@@ -42,24 +42,24 @@
 			[ 'ଌl', 'ୡ' ],
 			[ 'ଞ୍ଚ୍h', 'ଞ୍ଛ୍' ], // nch
 
-			[ 'ଣ୍G', 'ଙ୍' ], // NG
-			[ 'ଣ୍g', 'ଞ୍' ], // Ng
-			[ 'କ୍h', 'ଖ୍' ],
-			[ 'ଗ୍h', 'ଘ୍' ],
-			[ 'ନ୍c', 'ଞ୍ଚ୍' ], // nc
-			[ 'ନ୍g', 'ଙ୍ଗ୍' ], // ng
-			[ 'ଚ୍h', 'ଛ୍' ],
-			[ 'ଜ୍h', 'ଝ୍' ],
-			[ 'ନ୍j', 'ଞ୍ଜ୍' ], // nj
-			[ 'ନ୍k', 'ଙ୍କ୍' ], // nk
-			[ 'ଟ୍h', 'ଠ୍' ],
-			[ 'ଡ୍h', 'ଢ୍' ],
-			[ 'ତ୍h', 'ଥ୍' ],
-			[ 'ଦ୍h', 'ଧ୍' ],
-			[ 'ପ୍h', 'ଫ୍' ],
-			[ 'ବ୍h', 'ଭ୍' ],
-			[ 'ସ୍h', 'ଷ୍' ],
-			[ '।Z', '॥' ],
+			[ 'ଣ୍G', 'ଙ୍' ], // "uon" with halanta
+			[ 'ଣ୍g', 'ଞ୍' ], // "nya" with halanta
+			[ 'କ୍h', 'ଖ୍' ], // "kha" with halanta
+			[ 'ଗ୍h', 'ଘ୍' ], // "gha" with halanta
+			[ 'ନ୍c', 'ଞ୍ଚ୍' ], // "nca" with halanta
+			[ 'ନ୍g', 'ଙ୍ଗ୍' ], // "nga" with halanta
+			[ 'ଚ୍h', 'ଛ୍' ], // "cha" with halanta
+			[ 'ଜ୍h', 'ଝ୍' ], // "jha" with halanta
+			[ 'ନ୍j', 'ଞ୍ଜ୍' ], // "nj" with halanta
+			[ 'ନ୍k', 'ଙ୍କ୍' ], // "nk" with halanta
+			[ 'ଟ୍h', 'ଠ୍' ], // "Tha" with halanta
+			[ 'ଡ୍h', 'ଢ୍' ], // "Dha" with halanta
+			[ 'ତ୍h', 'ଥ୍' ], // "tha" with halanta
+			[ 'ଦ୍h', 'ଧ୍' ], // "dha" with halanta
+			[ 'ପ୍h', 'ଫ୍' ], // "pha" with halanta
+			[ 'ବ୍h', 'ଭ୍' ], // "bha" with halanta
+			[ 'ସ୍h', 'ଷ୍' ], // "murdhanya sa" with halanta
+			[ '।Z', '॥' ], 
 
 			[ 'ଆ\\\\', '\u0B3E' ], // aa sign
 			[ 'ଇ\\\\', '\u0B3F' ], // i sign
@@ -75,71 +75,71 @@
 			[ 'ଓ\\\\', '\u0B4B' ], // o sign
 			[ 'ଔ\\\\', '\u0B4C' ], // au sign
 
-			[ '\u200c?a', 'ଅ' ],
-			[ 'b', 'ବ୍' ],
-			[ 'c', '', 'ଚ୍' ],
-			[ 'd', 'ଦ୍' ],
-			[ '\u200c?e', 'ଏ' ],
-			[ 'f', 'ଫ୍' ],
-			[ 'g', 'ଗ୍' ],
-			[ 'h', 'ହ୍' ],
-			[ '\u200c?i', 'ଇ' ],
-			[ 'j', 'ଜ୍' ],
-			[ 'k', 'କ୍' ],
-			[ 'l', 'ଲ୍' ],
-			[ 'm', 'ମ୍' ],
-			[ 'n', 'ନ୍' ],
-			[ '\u200c?o', 'ଓ' ],
-			[ 'p', 'ପ୍' ],
-			[ 'q', 'ଜ୍ଞ୍' ],
-			[ 'r', 'ର୍' ],
-			[ 's', 'ସ୍' ],
-			[ 't', 'ତ୍' ],
-			[ '\u200c?u', 'ଉ' ],
-			[ 'v', 'ୱ୍' ],
-			[ 'w', 'ଵ୍' ],
-			[ 'x', 'କ୍ଷ୍' ],
-			[ 'y', 'ୟ୍' ],
+			[ '\u200c?a', 'ଅ' ], // "a"
+			[ 'b', 'ବ୍' ], // "ba" with halanta
+			[ 'c', '', 'ଚ୍' ], // "ca" with halanta
+			[ 'd', 'ଦ୍' ], // "da" with halanta
+			[ '\u200c?e', 'ଏ' ], // "e"
+			[ 'f', 'ଫ୍' ], // "pha" with halanta
+			[ 'g', 'ଗ୍' ], // "ga" with halanta
+			[ 'h', 'ହ୍' ], // "ha" with halanta
+			[ '\u200c?i', 'ଇ' ], // "i"
+			[ 'j', 'ଜ୍' ], // "ja" with halanta
+			[ 'k', 'କ୍' ], // "ka" with halanta
+			[ 'l', 'ଲ୍' ], // "la" with halanta
+			[ 'm', 'ମ୍' ], // "ma" with halanta
+			[ 'n', 'ନ୍' ], // "na" with halanta
+			[ '\u200c?o', 'ଓ' ], // "o"
+			[ 'p', 'ପ୍' ], // "pa" with halanta
+			[ 'q', 'ଜ୍ଞ୍' ], // "jna"
+			[ 'r', 'ର୍' ], // "ra" with halanta
+			[ 's', 'ସ୍' ], // "sa" with halanta
+			[ 't', 'ତ୍' ], // "ta" with halanta
+			[ '\u200c?u', 'ଉ' ], // "u" with halanta
+			[ 'v', 'ୱ୍' ], // "wa" with halanta
+			[ 'w', 'ଵ୍' ], // "va" with halanta (obselete character, legacy)
+			[ 'x', 'କ୍ଷ୍' ], // "khya" with halanta
+			[ 'y', 'ୟ୍' ], // "ya" with halanta
 			[ 'z', '\u0B3C' ],
-			[ '\u200c?A', 'ଆ' ],
-			[ 'B', 'ବ୍' ],
-			[ 'C', 'ଛ୍' ],
-			[ 'D', 'ଡ୍' ],
-			[ '\u200c?E', 'ଐ' ],
-			[ 'F', 'ଫ୍' ],
-			[ 'G', 'ଗ୍' ],
-			[ 'H', '', 'ଃ' ],
-			[ '\u200c?I', 'ଈ' ],
-			[ 'J', 'ଝ୍' ],
-			[ 'K', 'କ୍' ],
-			[ 'L', 'ଳ୍' ],
-			[ 'M', '', 'ଂ' ],
-			[ 'N', 'ଣ୍' ],
-			[ '\u200c?O', 'ଔ' ],
-			[ 'P', 'ଫ୍' ],
-			[ 'Q', 'ଜ୍ଞ୍' ],
-			[ 'R', 'ଋ' ],
-			[ 'S', 'ଶ୍' ],
-			[ 'T', 'ଟ୍' ],
-			[ '\u200c?U', 'ଊ' ],
-			[ 'V', 'ଵ୍' ],
-			[ 'W', 'ଵ୍ଵ୍' ],
-			[ 'X', 'ଁ' ],
-			[ 'Y', 'ଯ୍' ],
-			[ 'Z', '।' ],
-			[ '\\~', '', '୍' ],
-			[ '//', 'ଽ' ],
-			[ '_', '\u200c' ],
-			[ '0', '୦' ],
-			[ '1', '୧' ],
-			[ '2', '୨' ],
-			[ '3', '୩' ],
-			[ '4', '୪' ],
-			[ '5', '୫' ],
-			[ '6', '୬' ],
-			[ '7', '୭' ],
-			[ '8', '୮' ],
-			[ '9', '୯' ] ]
+			[ '\u200c?A', 'ଆ' ], // "a"
+			[ 'B', 'ବ୍' ], // "ba" with halanta
+			[ 'C', 'ଛ୍' ], // "cha" with halanta
+			[ 'D', 'ଡ୍' ], // "Da" with halanta
+			[ '\u200c?E', 'ଐ' ], // "ai"
+			[ 'F', 'ଫ୍' ], // "pha" with halanta
+			[ 'G', 'ଗ୍' ], // "g" with halanta
+			[ 'H', '', 'ଃ' ], // "bisarga"
+			[ '\u200c?I', 'ଈ' ], // "I" 
+			[ 'J', 'ଝ୍' ], // "jha" with halanta
+			[ 'K', 'କ୍' ], // "ka" with halanta
+			[ 'L', 'ଳ୍' ], // "Lla" with halanta
+			[ 'M', '', 'ଂ' ], // "anuswara"
+			[ 'N', 'ଣ୍' ], // "Na" with halanta
+			[ '\u200c?O', 'ଔ' ], // "ou"
+			[ 'P', 'ଫ୍' ], // "pha" with halanta
+			[ 'Q', 'ଜ୍ଞ୍' ], // "Jna" with halanta
+			[ 'R', 'ଋ' ], // "Ru"
+			[ 'S', 'ଶ୍' ], // Talabya "Sa" with halanta
+			[ 'T', 'ଟ୍' ], // "Ta" with halanta
+			[ '\u200c?U', 'ଊ' ], // "u" (dirgha)
+			[ 'V', 'ଵ୍' ], // "va"" with halanta (legacy)
+			[ 'W', 'ଵ୍ଵ୍' ], // "vwa" with halanta (legacy)
+			[ 'X', 'ଁ' ], // "chandrabindu"
+			[ 'Y', 'ଯ୍' ], // antastha "ja" with halanta
+			[ 'Z', 'ଜ୍ଞ' ], // "Jna"
+			[ 'z', '', '୍' ], // "halanta"
+			[ '//', 'ଽ' ], // Sanskrit character
+			[ '_', '\u200c' ], // "ZWNJ"
+			[ '0', '୦' ], // Odia numeral 0
+			[ '1', '୧' ], // Odia numeral 1
+			[ '2', '୨' ], // Odia numeral 2
+			[ '3', '୩' ], // Odia numeral 3
+			[ '4', '୪' ], // Odia numeral 4
+			[ '5', '୫' ], // Odia numeral 5
+			[ '6', '୬' ], // Odia numeral 6
+			[ '7', '୭' ], // Odia numeral 7
+			[ '8', '୮' ], // Odia numeral 8
+			[ '9', '୯' ] ] // Odia numeral 
 	};
 
 	$.ime.register( orTransliteration );
