@@ -298,6 +298,61 @@ var palochkaVariants = {
 		],
 		inputmethod: 'bgn-kbd'
 	},{
+		description: 'Bamanankan Alt layout test',
+		tests: [
+			{
+				input: [
+					[ 'N', true ],
+					[ 'a', false ],
+					[ 'h', true ],
+					[ 'l', true ],
+					[ 'a', false ],
+					[ ' ', false ],
+					[ 'a', true ],
+					[ 'b', true ],
+					[ ' ', true ],
+					[ 't', false ],
+					[ 'o', true ],
+					[ 'h', true ],
+					[ 'g', false ],
+					[ 'o', true ],
+					[ ' ', false ],
+					[ 'N', false ],
+					[ 'g', false ],
+					[ 'a', false ],
+					[ 'h', true ],
+					[ 'l', false ],
+					[ 'a', false ],
+					[ ' ', false ],
+					[ 'n', false ],
+					[ 'i', false ],
+					[ 'h', true ],
+					[ ' ', false ],
+					[ 't', false ],
+					[ 'i', false ],
+					[ 'b', true ],
+					[ 'j', true ],
+					[ 'e', false ]
+				],
+				output: 'Ŋála à tɔ́gɔ Ngála ní tìɲe',
+				description: 'Bamanankan Alt - Ŋála à tɔ́gɔ Ngála ní tìɲe'
+			},
+			{
+				input: [
+					[ 'J', true ],
+					[ 'h', true ],
+					[ 'E', true ],
+					[ 'H', true ],
+					[ 'O', true ],
+					[ 'B', true ]
+
+				],
+				output: 'Ɲ́Ɛ̂Ɔ̌',
+				description: 'Bamanankan Alt - Ɲ́Ɛ̂Ɔ̌'
+			}
+		],
+		inputmethod: 'bm-alt'
+	},{
 		description: 'Bengali Probhat layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },

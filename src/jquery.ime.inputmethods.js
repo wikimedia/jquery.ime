@@ -70,6 +70,10 @@
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
 		},
+		'bm-alt': {
+			name: 'Bamanankan Alt',
+			source: 'rules/bm/bm-alt.js'
+		},
 		'bn-avro': {
 			name: 'অভ্র',
 			source: 'rules/bn/bn-avro.js'
@@ -709,6 +713,10 @@
 		bho: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
+		},
+		bm: {
+			autonym: 'Bamanankan',
+			inputmethods: [ 'bm-alt' ]
 		},
 		bn: {
 			autonym: 'বাংলা',
