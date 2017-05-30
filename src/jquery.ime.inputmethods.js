@@ -186,6 +186,10 @@
 			name: 'فارسی',
 			source: 'rules/fa/fa-kbd.js'
 		},
+		'ff-alt': {
+			name: 'Fulfulde',
+			source: 'rules/ff/ff-alt.js'
+		},
 		'fo-normforms': {
 			name: 'Føroyskt',
 			source: 'rules/fo/fo-normforms.js'
@@ -789,6 +793,10 @@
 		fa: {
 			autonym: 'فارسی',
 			inputmethods: [ 'fa-kbd' ]
+		},
+		ff: {
+			autonym: 'Fulfulde',
+			inputmethods: [ 'ff-alt' ]
 		},
 		fo: {
 			autonym: 'Føroyskt',

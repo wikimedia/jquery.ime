@@ -3581,6 +3581,39 @@ var palochkaVariants = {
 		],
 		inputmethod: 'fa-kbd'
 	},{
+		description: 'Fula Alt input method test',
+		tests: [
+			{ input: [ [ 'b', true ] ], output: 'ɓ', description: 'Fula ɓ' },
+			{ input: [ [ 'B', true ] ], output: 'Ɓ', description: 'Fula Ɓ' },
+			{ input: [ [ 'd', true ] ], output: 'ɗ', description: 'Fula ɗ' },
+			{ input: [ [ 'D', true ] ], output: 'Ɗ', description: 'Fula Ɗ' },
+			{ input: [ [ 'g', true ] ], output: 'ɠ', description: 'Fula ɠ' },
+			{ input: [ [ 'G', true ] ], output: 'Ɠ', description: 'Fula Ɠ' },
+			{ input: [ [ 'j', true ] ], output: 'ɲ', description: 'Fula ɲ' },
+			{ input: [ [ 'J', true ] ], output: 'Ɲ', description: 'Fula Ɲ' },
+			{ input: [ [ 'n', true ] ], output: 'ŋ', description: 'Fula ŋ' },
+			{ input: [ [ 'N', true ] ], output: 'Ŋ', description: 'Fula Ŋ' },
+			{ input: [ [ 'y', true ] ], output: 'ƴ', description: 'Fula ƴ' },
+			{ input: [ [ 'Y', true ] ], output: 'Ƴ', description: 'Fula Ƴ' },
+			{ input: 'b', output: 'b', description: 'Fula b' },
+			{ input: 'B', output: 'B', description: 'Fula B' },
+			{ input: 'd', output: 'd', description: 'Fula d' },
+			{ input: 'D', output: 'D', description: 'Fula D' },
+			{ input: 'g', output: 'g', description: 'Fula g' },
+			{ input: 'G', output: 'G', description: 'Fula G' },
+			{ input: 'n', output: 'n', description: 'Fula n' },
+			{ input: 'N', output: 'N', description: 'Fula N' },
+			{ input: 'j', output: 'j', description: 'Fula j' },
+			{ input: 'J', output: 'J', description: 'Fula J' },
+			{ input: 'y', output: 'y', description: 'Fula y' },
+			{ input: 'Y', output: 'Y', description: 'Fula Y' },
+			{ input: 'N~', output: 'Ñ', description: 'Fula Ñ' },
+			{ input: 'n~', output: 'ñ', description: 'Fula ñ' },
+			{ input: 'N~~', output: 'N~', description: 'Fula N~' },
+			{ input: 'n~~', output: 'n~', description: 'Fula n~' }
+		],
+		inputmethod: 'ff-alt'
+	},{
 		description: 'Venetian vec-GVU input method test',
 		tests: [
 			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
