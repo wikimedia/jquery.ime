@@ -655,6 +655,10 @@
 			name: 'Venetian',
 			source: 'rules/vec/vec-GVU.js'
 		},
+		'wo-alt': {
+			name: 'Wolof Alt',
+			source: 'rules/wo/wo-alt.js'
+		},
 		'yo-alt': {
 			name: 'Yorùbá Alt',
 			source: 'rules/yo/yo-alt.js'
@@ -1061,6 +1065,10 @@
 		vec: {
 			autonym: 'Venetian',
 			inputmethods: [ 'vec-GVU' ]
+		},
+		wo: {
+			autonym: 'Wolof',
+			inputmethods: [ 'wo-alt' ]
 		},
 		yo: {
 			autonym: 'Yorùbá',

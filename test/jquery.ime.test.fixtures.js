@@ -3600,6 +3600,39 @@ var palochkaVariants = {
 		],
 		inputmethod: 'vec-GVU'
 	},{
+		description: 'Wolof Alt input method test',
+		tests: [
+			{
+				input: [
+					[ 'A', false ],
+					[ '\\', true ]
+				],
+				output: 'À',
+				description: 'Wolof À'
+			},
+			{
+				input: [
+					[ 'a', false ],
+					[ '/', true ]
+				],
+				output: 'á',
+				description: 'Wolof á'
+			},
+			{ input: [ [ 'e', true ] ], output: 'ë', description: 'Wolof ë' },
+			{ input: [ [ 'E', true ] ], output: 'Ë', description: 'Wolof Ë' },
+			{ input: [ [ 'n', true ] ], output: 'ŋ', description: 'Wolof ŋ' },
+			{ input: [ [ 'N', true ] ], output: 'Ŋ', description: 'Wolof Ŋ' },
+			{ input: 'e', output: 'e', description: 'Wolof e' },
+			{ input: 'E', output: 'E', description: 'Wolof E' },
+			{ input: 'n', output: 'n', description: 'Wolof n' },
+			{ input: 'N', output: 'N', description: 'Wolof N' },
+			{ input: 'N~', output: 'Ñ', description: 'Wolof Ñ' },
+			{ input: 'n~', output: 'ñ', description: 'Wolof ñ' },
+			{ input: 'N~~', output: 'N~', description: 'Wolof N~' },
+			{ input: 'n~~', output: 'n~', description: 'Wolof n~' }
+		],
+		inputmethod: 'wo-alt'
+	},{
 		description: 'Yoruba yo-alt input method test',
 		tests: [
 			{
