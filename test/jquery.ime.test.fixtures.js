@@ -2696,15 +2696,15 @@ var palochkaVariants = {
 			{ input: 'G', output: 'gʷ', description: 'Lushootseed Tulalip gʷ' },
 			{ input: 'J', output: 'k̓ʷ', description: 'Lushootseed Tulalip k̓ʷ' },
 			{ input: 'K', output: 'k̓', description: 'Lushootseed Tulalip k̓' },
-			{ input: 'L', output: 'l̕', description: 'Lushootseed Tulalip ' },
+			{ input: 'L', output: 'l̕', description: 'Lushootseed Tulalip l̕' },
 			{ input: ':', output: 'ƛ̕', description: 'Lushootseed Tulalip ƛ̕' },
-			{ input: 'Z', output: 'x̌ʷ', description: 'Lushootseed Tulalip ' },
-			{ input: 'X', output: 'xʷ', description: 'Lushootseed Tulalip ' },
-			{ input: 'C', output: 'c̓', description: 'Lushootseed Tulalip ' },
-			{ input: 'V', output: 'č̓', description: 'Lushootseed Tulalip ' },
-			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip ' },
-			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip ' },
-			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip ' }
+			{ input: 'Z', output: 'x̌ʷ', description: 'Lushootseed Tulalip x̌ʷ' },
+			{ input: 'X', output: 'xʷ', description: 'Lushootseed Tulalip xʷ' },
+			{ input: 'C', output: 'c̓', description: 'Lushootseed Tulalip c̓' },
+			{ input: 'V', output: 'č̓', description: 'Lushootseed Tulalip č̓' },
+			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip b̓' },
+			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip n̓' },
+			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
 		],
 		inputmethod: 'lut-tulalip'
 	},{
