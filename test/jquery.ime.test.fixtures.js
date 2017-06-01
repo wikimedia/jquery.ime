@@ -2197,6 +2197,37 @@ var palochkaVariants = {
 		],
 		inputmethod: 'ta-99'
 	},{
+		description: 'Tulu KGP test',
+		tests: [
+			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
+			{ input: 'kKgGZ', output: 'ಕಖಗಘಙ', description: 'Consonants ಕಖಗಘಙ' },
+			{ input: 'cCjJz', output: 'ಚಛಜಝಞ', description: 'Consonants ಚಛಜಝಞ' },
+			{ input: 'qQwWN', output: 'ಟಠಡಢಣ', description: 'Consonants ಟಠಡಢಣ' },
+			{ input: 'tTdDn', output: 'ತಥದಧನ', description: 'Consonants ತಥದಧನ' },
+			{ input: 'pPbBm', output: 'ಪಫಬಭಮ', description: 'Consonants ಪಫಬಭಮ' },
+			{ input: 'yrrXlvSxshLLX', output: 'ಯರಱಲವಶಷಸಹಳೞ', description: 'Consonants ಯರಲವಶಷಸಹಳ' },
+			{ input: 'kf', output: 'ಕ್', description: 'kf => ಕ್' },
+			{ input: 'kA', output: 'ಕಾ', description: 'kA => ಕಾ' },
+			{ input: 'ki', output: 'ಕಿ', description: 'ki => ಕಿ' },
+			{ input: 'kI', output: 'ಕೀ', description: 'kI => ಕೀ' },
+			{ input: 'ku', output: 'ಕು', description: 'ku => ಕು' },
+			{ input: 'kU', output: 'ಕೂ', description: 'kU => ಕೂ' },
+			{ input: 'kR', output: 'ಕೃ', description: 'kR => ಕೃ' },
+			{ input: 'kRX', output: 'ಕೄ', description: 'kRX => ಕೄ' },
+			{ input: 'ke', output: 'ಕೆ', description: 'ke => ಕೆ' },
+			{ input: 'kE', output: 'ಕೇ', description: 'kE => ಕೇ' },
+			{ input: 'kY', output: 'ಕೈ', description: 'kY => ಕೈ' },
+			{ input: 'ko', output: 'ಕೊ', description: 'ko => ಕೊ' },
+			{ input: 'kO', output: 'ಕೋ', description: 'kO => ಕೋ' },
+			{ input: 'kV', output: 'ಕೌ', description: 'kV => ಕೌ' },
+			{ input: 'kM', output: 'ಕಂ', description: 'kM => ಕಂ' },
+			{ input: 'kH', output: 'ಕಃ', description: 'kH => ಕಃ' },
+			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
+			{ input: 'rFfyAMkf', output: 'ರ\u200d್ಯಾಂಕ್', description: 'ZWJ ರ\u200d್ಯಾಂಕ್' } // with ZWJ
+			],
+		inputmethod: 'tcy-kgp'	
+	}
+	{
 		description: 'Telugu InScript test',
 		tests: [
 			{ input: 'k-', output: 'కః', description: 'Telugu k- (visarga)' },
