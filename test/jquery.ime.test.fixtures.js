@@ -2277,7 +2277,7 @@ var palochkaVariants = {
 			{ input: 'A§', output: 'Á', description: 'Tarandine Á' },
 			{ input: 'O§', output: 'Ó', description: 'Tarandine Ó' }
 		],
-		inputmethod: 'roa-tara'
+		inputmethod: 'roa-tara-GVU'
 	},{
 		description: 'Russian kbd keyboard test',
 		tests: [

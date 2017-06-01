@@ -559,7 +559,7 @@
 			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
-		'roa-tara': {
+		'roa-tara-GVU': {
 			name: 'Tarandine',
 			source: 'rules/roa-tara/roa-tara.js'
 		},
@@ -972,7 +972,7 @@
 		},
 		'roa-tara': {
 			autonym: 'Tarandine',
-			inputmethods: [ 'roa-tara' ]
+			inputmethods: [ 'roa-tara-GVU' ]
 		},
 		ru: {
 			autonym: 'русский',
