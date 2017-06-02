@@ -559,6 +559,10 @@
 			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
+		'roa-tara-GVU': {
+			name: 'Tarandine',
+			source: 'rules/roa-tara/roa-tara.js'
+		},
 		'ru-jcuken': {
 			name: 'ЙЦУКЕН',
 			source: 'rules/ru/ru-jcuken.js'
@@ -965,6 +969,10 @@
 		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
+		},
+		'roa-tara': {
+			autonym: 'Tarandine',
+			inputmethods: [ 'roa-tara-GVU' ]
 		},
 		ru: {
 			autonym: 'русский',

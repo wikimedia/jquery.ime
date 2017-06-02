@@ -2270,6 +2270,15 @@ var palochkaVariants = {
 		],
 		inputmethod: 'uk-kbd'
 	},{
+		description: 'Tarandine input method test',
+		tests: [
+			{ input: 'a§', output: 'á', description: 'Tarandine á' },
+			{ input: 'o§', output: 'ó', description: 'Tarandine ó' },
+			{ input: 'A§', output: 'Á', description: 'Tarandine Á' },
+			{ input: 'O§', output: 'Ó', description: 'Tarandine Ó' }
+		],
+		inputmethod: 'roa-tara-GVU'
+	},{
 		description: 'Russian kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }
