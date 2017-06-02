@@ -1020,7 +1020,7 @@
 		},
 		tcy: {
 			autonym: 'ತುಳು',
-			inputmethods: [ 'kn-transliteration' ]
+			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
 		te: {
 			autonym: 'తెలుగు',
