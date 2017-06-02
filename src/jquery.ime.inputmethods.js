@@ -1071,7 +1071,7 @@
 			inputmethods: [ 'uz-kbd' ]
 		},
 		vec: {
-			autonym: 'Venetian',
+			autonym: 'Vèneto',
 			inputmethods: [ 'vec-GVU' ]
 		},
 		wo: {
