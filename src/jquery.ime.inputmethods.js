@@ -440,6 +440,10 @@
 			name: 'फोनेटिक',
 			source: 'rules/mr/mr-phonetic.js'
 		},
+		'my-mm3': {
+			name: 'မြန်မာ၃ လက်ကွက်',
+			source: 'rules/my/my-mm3.js'
+		},
 		'my-xkb': {
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
@@ -940,7 +944,7 @@
 		},
 		my: {
 			autonym: 'မြန်မာ',
-			inputmethods: [ 'my-xkb' ]
+			inputmethods: [ 'my-mm3', 'my-xkb' ]
 		},
 		ne: {
 			autonym: 'नेपाली',
