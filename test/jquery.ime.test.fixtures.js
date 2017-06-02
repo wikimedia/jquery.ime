@@ -1689,6 +1689,12 @@ var palochkaVariants = {
 		],
 		inputmethod: 'mh'
 	},{
+		description: 'Myanmar mm3 test',
+		tests: [
+			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
+		],
+		inputmethod: 'my-mm3'
+	},{
 		description: 'Marathi Phonetic test',
 		tests: [
 			{
