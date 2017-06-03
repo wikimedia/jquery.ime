@@ -2692,6 +2692,41 @@ var palochkaVariants = {
 		],
 		inputmethod: 'lrc-kbd'
 	},{
+		description: 'Lushootseed Tulalip keyboard test',
+		tests: [
+			{ input: 'e', output: 'ə', description: 'Lushootseed Tulalip ə' },
+			{ input: 'r', output: 'š', description: 'Lushootseed Tulalip š' },
+			{ input: 'o', output: 'ʷ', description: 'Lushootseed Tulalip ʷ' },
+			{ input: 'f', output: 'ʔ', description: 'Lushootseed Tulalip ʔ' },
+			{ input: 'j', output: 'ǰ', description: 'Lushootseed Tulalip ǰ' },
+			{ input: ';', output: 'ɬ', description: 'Lushootseed Tulalip ɬ' },
+			{ input: 'z', output: 'x̌', description: 'Lushootseed Tulalip x̌' },
+			{ input: 'v', output: 'č', description: 'Lushootseed Tulalip č' },
+			{ input: 'Q', output: 'q̓', description: 'Lushootseed Tulalip q̓' },
+			{ input: 'W', output: 'w̓', description: 'Lushootseed Tulalip w̓' },
+			{ input: 'E', output: 'q̓ʷ', description: 'Lushootseed Tulalip q̓ʷ' },
+			{ input: 'R', output: '√', description: 'Lushootseed Tulalip √' },
+			{ input: 'T', output: 't̕', description: 'Lushootseed Tulalip t̕' },
+			{ input: 'Y', output: 'y̓', description: 'Lushootseed Tulalip y̓' },
+			{ input: 'I', output: 'kʷ', description: 'Lushootseed Tulalip kʷ' },
+			{ input: 'P', output: 'p̓', description: 'Lushootseed Tulalip p̓' },
+			{ input: 'A', output: 'qʷ', description: 'Lushootseed Tulalip qʷ' },
+			{ input: 'D', output: 'dᶻ', description: 'Lushootseed Tulalip dᶻ' },
+			{ input: 'G', output: 'gʷ', description: 'Lushootseed Tulalip gʷ' },
+			{ input: 'J', output: 'k̓ʷ', description: 'Lushootseed Tulalip k̓ʷ' },
+			{ input: 'K', output: 'k̓', description: 'Lushootseed Tulalip k̓' },
+			{ input: 'L', output: 'l̕', description: 'Lushootseed Tulalip l̕' },
+			{ input: ':', output: 'ƛ̕', description: 'Lushootseed Tulalip ƛ̕' },
+			{ input: 'Z', output: 'x̌ʷ', description: 'Lushootseed Tulalip x̌ʷ' },
+			{ input: 'X', output: 'xʷ', description: 'Lushootseed Tulalip xʷ' },
+			{ input: 'C', output: 'c̓', description: 'Lushootseed Tulalip c̓' },
+			{ input: 'V', output: 'č̓', description: 'Lushootseed Tulalip č̓' },
+			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip b̓' },
+			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip n̓' },
+			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
+		],
+		inputmethod: 'lut-tulalip'
+	},{
 		description: 'Central Kurdish keyboard based on Arabic keyboard test',
 		tests: [
 			{ input: '`',  output: 'ژ', description: 'Central Kurdish keyboard based on Arabic: ` -> ژ' },
