@@ -437,25 +437,25 @@
 			source: 'rules/mn/mn-todo.js'
 		},
 		'mn-tradali': {
-      name: 'Traditional Mongolian Ali-gali',
-      source: 'rules/mn/mn-tradali.js'
-    },
-    'mn-todoali': {
-      name: 'Todo Mongolian Ali-gali',
-      source: 'rules/mn/mn-todoali.js'
-    },
-    'phagspa': {
-      name: 'PhagsPa',
-      source: 'rules/mn/phagspa.js'
-    },
-    'mnc': {
-      name: 'ᠮᠠᠨᠵᡠ',
-      source: 'rules/mnc/mnc.js'
-    },
-    'mnc-ali': {
-      name: 'Manchu Ali-gali',
-      source: 'rules/mnc/mnc-ali.js'
-    },
+			name: 'Traditional Mongolian Ali-gali',
+			source: 'rules/mn/mn-tradali.js'
+		},
+		'mn-todoali': {
+			name: 'Todo Mongolian Ali-gali',
+			source: 'rules/mn/mn-todoali.js'
+		},
+		'phagspa': {
+			name: 'PhagsPa',
+			source: 'rules/mn/phagspa.js'
+		},
+		'mnc': {
+			name: 'ᠮᠠᠨᠵᡠ',
+			source: 'rules/mnc/mnc.js'
+		},
+		'mnc-ali': {
+			name: 'Manchu Ali-gali',
+			source: 'rules/mnc/mnc-ali.js'
+		},
 		'mni-inscript2': {
 			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/mni/mni-inscript2.js'
@@ -1072,7 +1072,7 @@
 		},
 		sjo: {
 			autonym: 'ᠰᡞᠪᡝ',
-	  		inputmethods: [ 'sjo' ]
+			inputmethods: [ 'sjo' ]
 		},
 		sk: {
 			autonym: 'Slovenčina',
