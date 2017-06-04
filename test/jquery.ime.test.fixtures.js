@@ -1699,6 +1699,54 @@ var palochkaVariants = {
 		],
 		inputmethod: 'mh'
 	},{
+		description: 'Mongolian mn-trad test',
+		tests: [
+			{ input: '{QWE}', output: '〈᠅ᠸᠧ〉', description: 'Mongolian mn-trad' }
+		],
+		inputmethod: 'mn-trad'
+	},{
+		description: 'Mongolian mn-todo test',
+		tests: [
+			{ input: '<GHJ>', output: '《ᡘᡙᠴ》', description: 'Mongolian mn-todo' }
+		],
+		inputmethod: 'mn-todo'
+	},{
+		description: 'Mongolian mn-tradali test',
+		tests: [
+			{ input: 'adgj', output: 'ᢊᢌᢎᢐ', description: 'Mongolian mn-tradali' }
+		],
+		inputmethod: 'mn-tradali'
+	},{
+		description: 'Mongolian mn-todoali test',
+		tests: [
+			{ input: 'kjhg', output: 'ᢑᢘᢏᢎ', description: 'Mongolian mn-todoali' }
+		],
+		inputmethod: 'mn-todoali'
+	},{
+		description: 'Mongolian phags-pa test',
+		tests: [
+			{ input: 'SFHK', output: 'ꡚꡰꡯꡁ', description: 'Mongolian phags-pa' }
+		],
+		inputmethod: 'phagspa'
+	},{
+		description: 'Manchu mnc test',
+		tests: [
+			{ input: 'LWE', output: 'ᡀᠸᠧ', description: 'Manchu mnc' }
+		],
+		inputmethod: 'mnc'
+	},{
+		description: 'Manchu mnc-ali test',
+		tests: [
+			{ input: 'ASG', output: 'ᢤᢥᢪ', description: 'Manchu mnc-ali' }
+		],
+		inputmethod: 'mnc-ali'
+	},{
+		description: 'Xibe sjo test',
+		tests: [
+			{ input: 'WER', output: 'ᠸᠧᡰ', description: 'Xibe sjo 〈ᠴᠣᡝ〉' }
+		],
+		inputmethod: 'sjo'
+	},{
 		description: 'Myanmar mm3 test',
 		tests: [
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
