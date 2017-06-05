@@ -2254,6 +2254,9 @@ var palochkaVariants = {
 		tests: [
 			// hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
 			// T still gives the conjunct form க்ஷ
+			{ input: 'I', output: ':', description: 'I in Tamil99 for :' },
+			{ input: '"', output: '\'', description: '" in Tamil99 for \'' },
+			{ input: 'N', output: 'ௐ', description: 'N in Tamil99 for ௐ' },
 			{ input: 'lshfWslf', output: 'திக்\u200cஷித்', description: 'lshfWslf in Tamil99 for திக்\u200cஷித் non conjunct form' }, // (with ZWNJ)
 			{ input: 'lsTslf', output: 'திக்ஷித்', description: 'lsTslf in Tamil99 for திக்ஷித் conjunct form' },
 			{ input: 'hfWtkakf', output: 'க்\u200cஷேமம்', description: 'hfWtkakf in Tamil99 for க்\u200cஷேமம் hfW -> க்\u200cஷ non conjunct form' }, // (with ZWNJ)
