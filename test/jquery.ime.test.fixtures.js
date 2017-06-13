@@ -513,6 +513,16 @@ var palochkaVariants = {
 				output: 'Kpaɣuʒiɛɣu ʒi ŋɔ nyɛla',
 				description: 'Dagbani Alt - Kpaɣuʒiɛɣu ʒi ŋɔ nyɛla'
 			},
+			{
+				input: [
+					[ 'y', false ],
+					[ 'y', true ],
+					[ 'Y', false ],
+					[ 'Y', true ]
+				],
+				output: 'yɣYƔ',
+				description: 'Dagbani Alt - yɣYƔ'
+			}
 		],
 		inputmethod: 'dag-alt'
 	},{
