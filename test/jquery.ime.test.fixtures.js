@@ -607,8 +607,8 @@ var palochkaVariants = {
 		description: 'Gothic Standard',
 		tests: [
 			{ input: 'anastodeinilaufs', output: '𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃', description: 'Gothic 𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃' },
-			{ input: 'hwweilos', output: '𐍈𐌴𐌹𐌻𐍉𐍃', description: 'Gothic 𐍈𐌴𐌹𐌻𐍉𐍃' },
-			{ input: 'thhis', output: '𐌸𐌹𐍃', description: 'Gothic 𐌸𐌹𐍃' }
+			{ input: 'veilos', output: '𐍈𐌴𐌹𐌻𐍉𐍃', description: 'Gothic 𐍈𐌴𐌹𐌻𐍉𐍃' },
+			{ input: 'Tis', output: '𐌸𐌹𐍃', description: 'Gothic 𐌸𐌹𐍃' }
 		],
 		inputmethod: 'got-standard'
 	},{
