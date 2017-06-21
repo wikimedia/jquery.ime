@@ -604,6 +604,14 @@ var palochkaVariants = {
 		],
 		inputmethod: 'de-transliteration'
 	},{
+		description: 'Gothic Standard',
+		tests: [
+			{ input: 'anastodeinilaufs', output: '𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃', description: 'Gothic 𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃' },
+			{ input: 'veilos', output: '𐍈𐌴𐌹𐌻𐍉𐍃', description: 'Gothic 𐍈𐌴𐌹𐌻𐍉𐍃' },
+			{ input: 'Tis', output: '𐌸𐌹𐍃', description: 'Gothic 𐌸𐌹𐍃' }
+		],
+		inputmethod: 'got-standard'
+	},{
 		description: 'Gujarati Transliteration',
 		tests: [
 			{ input: '~', output: '~', description: 'Gujarati - tilde must not change' },

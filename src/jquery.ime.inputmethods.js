@@ -206,6 +206,10 @@
 			name: 'Ga - CQX replacement',
 			source: 'rules/gaa/gaa-cqx.js'
 		},
+		'got-standard': {
+			name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
+			source: 'rules/got/got-standard.js'
+		},
 		'lud-transliteration': {
 			name: 'lud',
 			source: 'rules/lud/lud-transliteration.js'
@@ -865,6 +869,10 @@
 		gaa: {
 			autonym: 'Ga',
 			inputmethods: [ 'gaa-cqx' ]
+		},
+		got: {
+			autonym: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
+			inputmethods: [ 'got-standard' ]
 		},
 		lrc: {
 			autonym: 'لۊری شومالی',
