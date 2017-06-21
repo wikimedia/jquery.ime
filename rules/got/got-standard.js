@@ -5,9 +5,9 @@
 		id: 'got-standard',
 		name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
 		description: 'Gothic keyboard layout',
-		date: '2016-27-06',
+		date: '2016-06-27',
 		URL: 'http://github.com/wikimedia/jquery.ime',
-		author:  'Bokareis',
+		author: 'Bokareis',
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
