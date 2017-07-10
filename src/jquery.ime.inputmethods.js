@@ -803,7 +803,7 @@
 			inputmethods: [ 'byn-geezim' ]
 		},
 		ckb: {
-			autonym: 'کوردیی ناوەندی',
+			autonym: 'کوردی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
 		},
 		ce: {
