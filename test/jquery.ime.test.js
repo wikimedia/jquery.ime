@@ -241,7 +241,7 @@
 			$input.ime();
 			$input.focus();
 			ime = $input.data( 'ime' );
-			QUnit.expect( 1 );
+			assert.expect( 1 );
 			QUnit.stop();
 			ime.load( inputmethodId ).done( function () {
 				QUnit.ok( true, !!$.ime.inputmethods[ inputmethodId ], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
@@ -257,7 +257,7 @@
 			var i, inputmethod,
 				inputmethods = language.inputmethods;
 
-			QUnit.expect( inputmethods.length );
+			assert.expect( inputmethods.length );
 
 			for ( i = 0; i < inputmethods.length; i++ ) {
 				inputmethod = $.ime.sources[ inputmethods[ i ] ];
@@ -288,7 +288,7 @@
 		QUnit.test( opt.description, function () {
 			var ime, $input;
 
-			QUnit.expect( opt.tests.length + 1 );
+			assert.expect( opt.tests.length + 1 );
 			if ( opt.inputType === 'textarea' ) {
 				$input = $( '<textarea>' );
 				opt.inputType = 'textarea';
