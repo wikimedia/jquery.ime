@@ -40,10 +40,10 @@
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
   "bugs": {
-    "url" : "http://github.com/wikimedia/jquery.ime/issues"
+    "url" : "https://github.com/wikimedia/jquery.ime/issues"
     },
   "engine": {
-    "node": ">=0.6.x"
+    "node": ">=6.11.1"
   },
   "licenses": [
     {
