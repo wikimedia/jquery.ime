@@ -2334,6 +2334,8 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
+			{ input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu' }
+			{ input: 'ఞా', output: '~naa', description: 'Telugu ~naa' }
 		],
 		inputmethod: 'te-transliteration'
 	},{
