@@ -4437,16 +4437,19 @@ var palochkaVariants = {
 			{ input: 'Jd', output: 'భ్', description: 'Telugu Bh' },
 			{ input: 'jzgdf', output: 'నృత్య', description: 'word Nruthyam' }
 		]
-	},{
+	},
+	{
 	  description: 'Telugu Transliteration test',
 	  tests: [
-	    { input: 'c', output: 'చ్', description: 'Telugu c' },
-	    { input: 'ch', output: 'చ్', description: 'Telugu ch' }
-	    { input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu' },
-	    { input: 'ఞా', output: '~naa', description: 'Telugu ~naa' }
-	  ],
-	  inputmethod: 'te-transliteration'
-	},{
+			{ input: 'SAstraj~nuDu', output: 'శాస్త్రజ్ఞుడు', description: 'Telugu SAstraj~nuDu' },
+			{ input: 'c', output: 'చ్', description: 'Telugu c' },
+			{ input: 'ch', output: 'చ్', description: 'Telugu ch' },
+			{ input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu' },
+			{ input: '~naa', output: 'ఞా', description: 'Telugu ~naa' }
+		],
+		inputmethod: 'te-transliteration'
+	},
+	{
 		description: 'Tigrinya GeezIM test',
 		inputmethod: 'ti-geezim',
 		tests: [
