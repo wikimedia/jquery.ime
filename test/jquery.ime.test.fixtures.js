@@ -1811,6 +1811,8 @@ var testFixtures = [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' },
 			{ input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu -> జ్ఞు' },
+			{ input: '~cu', output: 'ౘు', description: 'Telugu ~cu -> ౘు' },
+			{ input: '~ju', output: 'ౙు', description: 'Telugu ~ju -> ౙు' },
 			{ input: 'j~nE', output: 'జ్ఞే', description: 'Telugu j~nE -> జ్ఞే' }
 		],
 		inputmethod: 'te-transliteration'
