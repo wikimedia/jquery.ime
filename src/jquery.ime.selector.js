@@ -80,6 +80,10 @@
 			// Hide all other IME settings and collapse open menus
 			$( 'div.imeselector' ).hide();
 			$( 'div.imeselector-menu' ).removeClass( 'ime-open' );
+			this.afterKeydown();
+		},
+
+		afterKeydown: function () {
 			this.$imeSetting.show();
 			this.resetTimer();
 		},
@@ -219,7 +223,7 @@
 				previousInputMethods,
 				languageCode;
 
-			this.focus(); // shows the trigger in case it is hidden
+			this.afterKeydown(); // shows the trigger in case it is hidden
 
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
