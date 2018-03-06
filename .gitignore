@@ -2,6 +2,6 @@
 .*.swp
 *.kate-swp
 *.bak
-/nbproject/private/
-node_modules/
-dist/
+/nbproject/private
+/node_modules
+/dist
