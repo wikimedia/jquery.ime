@@ -918,6 +918,10 @@
 			autonym: 'छत्तीसगढ़ी',
 			inputmethods: [ 'hi-transliteration' ]
 		},
+		inh: {
+			autonym: 'гӀалгӀай',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		is: {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
