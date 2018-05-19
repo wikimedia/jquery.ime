@@ -232,7 +232,7 @@
 		testDescription = 'Input method rules file test for input method ' +
 			$.ime.sources[ inputmethodId ].name + ' - ' + inputmethodId;
 
-		QUnit.test( testDescription, function () {
+		QUnit.test( testDescription, function ( assert ) {
 			var ime,
 				$input = $( '<input>' );
 
@@ -253,7 +253,7 @@
 	$.each( $.ime.languages, function ( languageCode ) {
 		var language = $.ime.languages[ languageCode ];
 
-		QUnit.test( 'Input method rules test for language ' + language.autonym, function () {
+		QUnit.test( 'Input method rules test for language ' + language.autonym, function ( assert ) {
 			var i, inputmethod,
 				inputmethods = language.inputmethods;
 
@@ -285,7 +285,7 @@
 			inputmethod: '' // The input method name.
 		}, options );
 
-		QUnit.test( opt.description, function () {
+		QUnit.test( opt.description, function ( assert ) {
 			var ime, $input;
 
 			assert.expect( opt.tests.length + 1 );
