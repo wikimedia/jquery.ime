@@ -4131,14 +4131,13 @@ var palochkaVariants = {
 	{
 	description: 'fon alt test',
 	tests: [
+		{ input: '~D', output: 'Ɖ', description: 'fon ~D -> Ɖ' },
+		{ input: '~d', output:'ɖ' , description: 'fon ~d -> ɖ' },
 		{ input: '~E', output: 'Ɛ', description: 'fon ~E -> Ɛ' },
 		{ input: '~e', output: 'ɛ', description: 'fon ~e -> ɛ '},
 		{ input: '~O', output: 'Ɔ', description: 'fon ~O -> Ɔ' },
-		{ input: '~o', output: 'ɔ', description: 'fon ~o -> ɔ' },
-		{ input: '~D', output: 'Ɖ', description: 'fon ~D -> Ɖ' },
-		{ input: '~d', output:'ɖ' , description: 'fon ~d -> ɖ' },
-		{ input:'~/',  output:'Ó' , description: 'fon ~/ -> Ó' }
+		{ input: '~o', output: 'ɔ', description: 'fon ~o -> ɔ' }
 	],
-	inputmethod: 'fon-alt'
+	inputmethod: 'fonTilde'
 	}
 ];
