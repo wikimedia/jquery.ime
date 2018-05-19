@@ -722,6 +722,10 @@
 		'yo-alt': {
 			name: 'Yorùbá Alt',
 			source: 'rules/yo/yo-alt.js'
+		},
+		'fon-alt': {
+			name: 'Fon Alt',
+			source: 'rules/fon/fon-alt.js'
 		}
 	} );
 
@@ -1161,6 +1165,10 @@
 		yo: {
 			autonym: 'Yorùbá',
 			inputmethods: [ 'yo-alt' ]
+		},
+		fon: {
+			autonym: 'Fon',
+			inputmethods: [ 'fon-alt']
 		}
 	} );
 
