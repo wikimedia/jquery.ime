@@ -19,7 +19,7 @@ module.exports = function ( grunt ) {
 				+ '<%= grunt.template.today("yyyymmdd") %>\n'
 				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
 				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-				+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
+				+ ' License: <%= pkg.license %> */\n'
 		},
 		concat: {
 			options: {
