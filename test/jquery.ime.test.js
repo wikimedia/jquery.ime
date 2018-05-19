@@ -120,13 +120,13 @@
 
 		QUnit.stop();
 		textareaIME.load( 'hi-transliteration' ).done( function () {
+			var im;
 			selector.selectLanguage( 'hi' );
 			textareaIME.enable();
 			assert.strictEqual( textareaIME.getIM().id, 'hi-transliteration',
 				'inputmethod is Hindi Transliteration' );
-			selector.selectLanguage( 'ta' );
-			assert.strictEqual( textareaIME.getIM().id, 'ta-bamini',
-				'inputmethod for Tamil is Tamil Bamini' );
+			im = selector.selectLanguage( 'ta' );
+			assert.strictEqual( im, 'ta-bamini', 'inputmethod for Tamil is Tamil Bamini' );
 			QUnit.start();
 		} );
 
