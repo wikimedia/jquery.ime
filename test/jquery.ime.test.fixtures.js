@@ -4127,5 +4127,17 @@ var palochkaVariants = {
 			{ input: [ 'v', [ '1', true ], 'i', 'T', 'U' ], output: 'វ‌ិទូ', description: 'ZWNJ (savant): v AltGr-1 iTU -> វ‌ិទូ' },
 			{ input: [ 'v', [ '`', true ], 'i', 'T', 'U' ], output: 'វ‍ិទូ', description: 'ZWJ (savant): v AltGr-` iTU -> វ‍ិទូ' }
 		]
+	},
+	{
+		description: 'fon alt test',
+		tests: [
+			{ input: '~D', output: 'Ɖ', description: 'fon ~D -> Ɖ' },
+			{ input: '~d', output:'ɖ' , description: 'fon ~d -> ɖ' },
+			{ input: '~E', output: 'Ɛ', description: 'fon ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'fon ~e -> ɛ '},
+			{ input: '~O', output: 'Ɔ', description: 'fon ~O -> Ɔ' },
+			{ input: '~o', output: 'ɔ', description: 'fon ~o -> ɔ' }
+		],
+		inputmethod: 'fonTilde'
 	}
 ];

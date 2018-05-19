@@ -304,6 +304,10 @@
 			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
 		},
+		'fon-tilde': {
+			name: 'Fon Tilde',
+			source: 'rules/fon/fon-tilde.js'
+		},
 		'he-standard-2012': {
 			name: 'עברית עם ניקוד על בסיס אנגלית',
 			source: 'rules/he/he-standard-2012.js'
@@ -861,6 +865,10 @@
 		fo: {
 			autonym: 'Føroyskt',
 			inputmethods: [ 'fo-normforms' ]
+		},
+		fon: {
+			autonym: 'Fon',
+			inputmethods: [ 'fon-tilde' ],
 		},
 		fi: {
 			autonym: 'Suomi',
