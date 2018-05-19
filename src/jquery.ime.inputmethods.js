@@ -304,6 +304,10 @@
 			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
 		},
+		'fon-tilde': {
+			name: 'Fon Tilde',
+			source: 'rules/fon/fon-tilde.js'
+		},
 		'he-standard-2012': {
 			name: 'עברית עם ניקוד על בסיס אנגלית',
 			source: 'rules/he/he-standard-2012.js'
@@ -722,10 +726,6 @@
 		'yo-alt': {
 			name: 'Yorùbá Alt',
 			source: 'rules/yo/yo-alt.js'
-		},
-		'fon-alt': {
-			name: 'Fon Alt',
-			source: 'rules/fon/fon-alt.js'
 		}
 	} );
 
@@ -865,6 +865,10 @@
 		fo: {
 			autonym: 'Føroyskt',
 			inputmethods: [ 'fo-normforms' ]
+		},
+		fon: {
+			autonym: 'Fon',
+			inputmethods: [ 'fon-tilde' ],
 		},
 		fi: {
 			autonym: 'Suomi',
@@ -1165,10 +1169,6 @@
 		yo: {
 			autonym: 'Yorùbá',
 			inputmethods: [ 'yo-alt' ]
-		},
-		fon: {
-			autonym: 'Fon',
-			inputmethods: [ 'fon-alt']
 		}
 	} );
 

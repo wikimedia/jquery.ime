@@ -2,9 +2,9 @@
 ( function ( $ ) {
 	'use strict';
 
-	var fonAlt = {
-		id: 'fon-alt',
-		name: 'fon-alt',
+	var fonTilde = {
+		id: 'fon-tilde',
+		name: 'fon-tilde',
 		description: 'Fon input keyboard',
 		date: '2018-05-18',
 		URL: 'http://github.com/wikimedia/jquery.ime',
@@ -12,23 +12,16 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-<<<<<<< HEAD
+			[ '~D', 'Ɖ' ],
+      [ '~d', 'ɖ' ],
       [ '~E', 'Ɛ' ],
       [ '~e', 'ɛ' ],
-=======
-      			[ '~E', 'Ɛ' ],
->>>>>>> eed046c94aa8a8b92bbbd77249d0bc24a91ed355
 			[ '~O', 'Ɔ' ],
       [ '~o', 'ɔ' ],
-			[ '~D', 'Ɖ' ],
-<<<<<<< HEAD
-      [ '~d', 'ɖ' ],
-      [ '~/', 'Ó' ]
-=======
-      			[ '~d', 'ɖ' ]
->>>>>>> eed046c94aa8a8b92bbbd77249d0bc24a91ed355
+			[ '~/', '\u0341' ], // Combining acute tone mark
+			[ '~\\\\', '\u0340' ] // Combining grave tone mark
 		]
 	};
 
-	$.ime.register( fonAlt );
+	$.ime.register( fonTilde );
 }( jQuery ) );
