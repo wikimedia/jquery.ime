@@ -4129,7 +4129,7 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'fon alt test',
+		description: 'fon tilde test',
 		tests: [
 			{ input: '~D', output: 'Ɖ', description: 'fon ~D -> Ɖ' },
 			{ input: '~d', output:'ɖ' , description: 'fon ~d -> ɖ' },
