@@ -73,12 +73,12 @@
 		 * Listen for events and bind to handlers
 		 */
 		listen: function () {
-			this.$element.on( 'keypress.ime', $.proxy( this.keypress, this ) );
-			this.$element.on( 'keyup.ime', $.proxy( this.keyup, this ) );
-			this.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
-			this.$element.on( 'destroy.ime', $.proxy( this.destroy, this ) );
-			this.$element.on( 'enable.ime', $.proxy( this.enable, this ) );
-			this.$element.on( 'disable.ime', $.proxy( this.disable, this ) );
+			this.$element.on( 'keypress.ime', this.keypress.bind( this ) );
+			this.$element.on( 'keyup.ime', this.keyup.bind( this ) );
+			this.$element.on( 'keydown.ime', this.keydown.bind( this ) );
+			this.$element.on( 'destroy.ime', this.destroy.bind( this ) );
+			this.$element.on( 'enable.ime', this.enable.bind( this ) );
+			this.$element.on( 'disable.ime', this.disable.bind( this ) );
 		},
 
 		/**
