@@ -73,12 +73,14 @@
 		 * Listen for events and bind to handlers
 		 */
 		listen: function () {
-			this.$element.on( 'keypress.ime', this.keypress.bind( this ) );
-			this.$element.on( 'keyup.ime', this.keyup.bind( this ) );
-			this.$element.on( 'keydown.ime', this.keydown.bind( this ) );
-			this.$element.on( 'destroy.ime', this.destroy.bind( this ) );
-			this.$element.on( 'enable.ime', this.enable.bind( this ) );
-			this.$element.on( 'disable.ime', this.disable.bind( this ) );
+			this.$element.on( {
+				'keypress.ime': this.keypress.bind( this ),
+				'keyup.ime': this.keyup.bind( this ),
+				'keydown.ime': this.keydown.bind( this ),
+				'destroy.ime': this.destroy.bind( this ),
+				'enable.ime': this.enable.bind( this ),
+				'disable.ime': this.disable.bind( this )
+			} );
 		},
 
 		/**

@@ -195,8 +195,10 @@
 			} );
 
 			// Possible resize of textarea
-			imeselector.$element.on( 'mouseup.ime', this.position.bind( this ) );
-			imeselector.$element.on( 'keydown.ime', this.keydown.bind( this ) );
+			imeselector.$element.on( {
+				'mouseup.ime': this.position.bind( this ),
+				'keydown.ime': this.keydown.bind( this )
+			} );
 
 			// Update IM selector position when the window is resized
 			// or the browser window is zoomed in or zoomed out
