@@ -867,7 +867,7 @@
 			inputmethods: [ 'fo-normforms' ]
 		},
 		fon: {
-			autonym: 'Fon',
+			autonym: 'Fɔ̀ngbè',
 			inputmethods: [ 'fon-tilde' ],
 		},
 		fi: {
