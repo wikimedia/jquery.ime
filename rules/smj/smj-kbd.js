@@ -15,7 +15,7 @@
       [ 'q', 'á' ],
       [ 'Q', 'Á' ],
       [ '¨', 'ŋ' ],
-      [ '^', 'Ŋ' ],
+      [ '\^', 'Ŋ' ],
       // Tilde negations to get the "normal" letters
       [ '~á', 'q' ],
       [ '~Á', 'Q' ],
