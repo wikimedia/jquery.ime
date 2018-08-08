@@ -563,7 +563,7 @@
 		'se-tildeforms': {
 			name: 'Tilde forms',
 			source: 'rules/se/se-tildeforms.js'
-		}
+		},
 		'sk-kbd': {
 			name: 'Štandardná',
 			source: 'rules/sk/sk-kbd.js'
