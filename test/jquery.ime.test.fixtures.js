@@ -4139,5 +4139,54 @@ var palochkaVariants = {
 			{ input: '~o', output: 'ɔ', description: 'fon ~o -> ɔ' }
 		],
 		inputmethod: 'fon-tilde'
+	},
+	{
+		description: 'Northern Sami normal form test',
+		tests: [
+			{ input: 'q', output: 'á', description: 'Northern Sami q -> á' },
+			{ input: '¨', output: 'ŋ', description: 'Northern Sami ¨ -> ŋ' },
+			{ input: '~đ', output: '\'', description: 'Northern Sami ~đ -> \'' },
+			{ input: '~Ž', output: '>', description: 'Northern Sami ~Ž -> >' }
+		],
+		inputmethod: 'se-normforms'
+	},
+	{
+		description: 'Northern Sami tilde form test',
+		tests: [
+			{ input: '\'a', output: 'á', description: 'Northern Sami \'a -> á' },
+			{ input: '~G', output: 'Ŋ', description: 'Northern Sami ~G -> Ŋ' },
+			{ input: '~t', output: 'ŧ', description: 'Northern Sami ~t -> ŧ' }
+		],
+		inputmethod: 'se-tildeforms'
+	},
+	{
+		description: 'Southern Sami test',
+		tests: [
+			{ input: '¨', output: 'ï', description: 'Southern Sami ¨ -> ï' },
+			{ input: 'ø', output: 'ö', description: 'Southern Sami ø -> ö' },
+			{ input: 'Ä', output: 'Æ', description: 'Southern Sami Ä -> Æ' }
+		],
+		inputmethod: 'sma-kbd'
+	},
+	{
+		description: 'Lule Sami test',
+		tests: [
+			{ input: 'q', output: 'á', description: 'Lule Sami q -> á' },
+			{ input: '¨', output: 'ŋ', description: 'Lule Sami ¨ -> ŋ' },
+			{ input: '~Á', output: 'Q', description: 'Lule Sami ~Á -> Q' },
+			{ input: '~Ŋ', output: '^', description: 'Lule Sami ~Ŋ -> ^' },
+		],
+		inputmethod: 'smj-kbd'
+	},
+	{
+		description: 'Inari Sami test',
+		tests: [
+			{ input: 'å', output: 'â', description: 'Inari Sami å -> â' },
+			{ input: 'ö', output: 'đ', description: 'Inari Sami ö -> đ' },
+			{ input: '>', output: 'ž', description: 'Inari Sami > -> Ž' },
+			{ input: '~Š', output: 'W', description: 'Inari Sami ~Š -> W' },
+			{ input: '~Đ', output: 'Ö', description: 'Inari Sami ~Đ -> Ô' }
+		],
+		inputmethod: 'smn-kbd'
 	}
 ];

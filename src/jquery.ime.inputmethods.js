@@ -560,9 +560,25 @@
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
 		},
+		'se-tildeforms': {
+			name: 'Tilde forms',
+			source: 'rules/se/se-tildeforms.js'
+		}
 		'sk-kbd': {
 			name: 'Štandardná',
 			source: 'rules/sk/sk-kbd.js'
+		},
+		'sma-kbd': {
+			name: 'Sïejhme',
+			source: 'rules/sma/sma-kbd.js'
+		},
+		'smj-kbd': {
+			name: 'Almajda',
+			source: 'rules/smj/smj-kbd.js'
+		},
+		'smn-kbd': {
+			name: 'Normaal',
+			source: 'rules/smn/smn-kbd.js'
 		},
 		'sr-kbd': {
 			name: 'Стандардна',
@@ -1076,7 +1092,7 @@
 		},
 		se: {
 			autonym: 'Davvisámegiella',
-			inputmethods: [ 'se-normforms' ]
+			inputmethods: [ 'se-normforms', 'se-tildeforms' ]
 		},
 		shi: {
 			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
@@ -1093,6 +1109,18 @@
 		sk: {
 			autonym: 'Slovenčina',
 			inputmethods: [ 'sk-kbd' ]
+		},
+		sma: {
+			autonym: 'Åarjelsaemien',
+			inputmethods: [ 'sma-kbd' ]
+		},
+		smj: {
+			automym: 'Julevsámegiella',
+			inputmethods: [ 'smj-kbd' ]
+		},
+		smn: {
+			autonym: 'Anarâškielâ',
+			inputmethods: [ 'smn-kbd' ]
 		},
 		sr: {
 			autonym: 'Српски / srpski',

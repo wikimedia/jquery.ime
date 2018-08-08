@@ -2,11 +2,11 @@
   'use strict';
 
   var defs = {
-    id: 'se-normforms',
-    name: 'Davvisámegiella',
-    description: 'Northern Sami keyboard layout',
+    id: 'smn-kbd',
+    name: 'Anarâškielâ',
+    description: 'Inari Sami keyboard layout',
     date: '2018-08-08',
-    URL: 'http://divvun.no/keyboards/layout-sme.html',
+    URL: 'http://divvun.no/keyboards/layout-smn.html',
     author: 'Jon Harald Søby',
     license: 'GPLv3',
     version: '1.0',
@@ -16,12 +16,10 @@
       [ 'Q', 'Á' ],
       [ 'w', 'š' ],
       [ 'W', 'Š' ],
-      [ 'y', 'ŧ' ],
-      [ 'Y', 'Ŧ' ],
-      [ '¨', 'ŋ' ],
-      [ '^', 'Ŋ' ],
-      [ '\'', 'đ' ],
-      [ '*', 'Đ' ],
+      [ 'å', 'â' ],
+      [ 'Å', 'Â' ],
+      [ 'ö', 'đ' ],
+      [ 'Ö', 'Đ' ],
       [ '<', 'ž' ],
       [ '>', 'Ž' ],
       [ 'x', 'č' ],
@@ -31,16 +29,14 @@
       [ '~Á', 'Q' ],
       [ '~š', 'w' ],
       [ '~Š', 'W' ],
-      [ '~ŧ', 'y' ],
-      [ '~Ŧ', 'Y' ],
-      [ '~ŋ', '¨' ],
-      [ '~Ŋ', '^' ],
-      [ '~đ', '\'' ],
-      [ '~Đ', '*' ],
+      [ '~â', 'å' ],
+      [ '~Â', 'Å' ],
+      [ '~đ', 'ö' ],
+      [ '~Đ', 'Ö' ],
       [ '~ž', '<' ],
       [ '~Ž', '>' ],
       [ '~č', 'x' ],
-      [ '~Č', 'X' ]
+      [ '~C', 'X']
     ]
 
   };
