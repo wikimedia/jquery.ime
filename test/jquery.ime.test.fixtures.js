@@ -3943,6 +3943,8 @@ var palochkaVariants = {
 			{ input: 'b', output: 'ᱵ', description: 'Santali b -> ᱵ' },
 			{ input: 'P', output: 'ᱯ', description: 'Santali P -> ᱯ' },
 			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' }
+			{ input: 'W', output: 'ᱣ', description: 'Santali W -> ᱣ' }
+			{ input: 'c', output: 'ᱪ', description: 'Santali c -> ᱪ' }
 		],
 		inputmethod: 'sat-sarjom-baha'
 	},

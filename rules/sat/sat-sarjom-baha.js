@@ -8,11 +8,11 @@
 		date: '2016-03-29',
 		author: 'Jnanaranjan Sahu',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.01',
 		patterns: [
 			[ 'a', 'ᱟ' ],
 			[ 'b', 'ᱵ' ],
-			[ 'c', 'ᱰ' ],
+			[ 'c', 'ᱪ' ],
 			[ 'd', 'ᱰ' ],
 			[ 'e', 'ᱮ' ],
 			[ 'f', 'ᱝ' ],
