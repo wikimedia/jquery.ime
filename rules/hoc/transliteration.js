@@ -5,7 +5,7 @@
 		id: 'hoc-transliteration',
 		name: 'ho transliteration',
 		description: 'Phonetic keyboard for Ho',
-		date: '29-09-2018',
+		date: '2018-09-29',
 		author: 'Purty',
 		license: 'GPLv3',
 		version: '1.0',
