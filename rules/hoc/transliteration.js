@@ -97,6 +97,6 @@
 			[ '9', '𑣩' ]
 		]
 	};
-	$.ime.register( satSarjomBaha );
-
+	
+	$.ime.register( hocTransliteration );
 }( jQuery ) );
