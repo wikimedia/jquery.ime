@@ -910,6 +910,10 @@
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
+		hoc: {
+			autonym: 'Ho',
+			inputmethods: [ 'hoc-transliteration' ]
+		},
 		hr: {
 			autonym: 'Hrvatski',
 			inputmethods: [ 'hr-kbd' ]
