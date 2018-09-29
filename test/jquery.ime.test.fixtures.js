@@ -813,6 +813,16 @@ var palochkaVariants = {
 		],
 		inputmethod: 'hi-transliteration'
 	},{
+		description: 'Ho Transliteration test',
+		tests: [
+			{ input: 'abdg', output: '𑣁𑣗𑣑𑣋', description: 'Ho abdg' },
+			{ input: 'ABDG', output: '𑢡𑢷𑢱𑢫', description: 'Ho ABDG' },
+			{ input: '1234567890', output: '𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩𑣠', description: 'Ho 1234567890' },
+			{ input: '@', output: '𑣿', description: 'Ho @' },
+			{ input: 'QqSsCc', output: '𑢤𑣄𑢾𑣞Cc', description: '𑢤𑣄𑢾𑣞Cc' }
+		],
+		inputmethod: 'hoc-transliteration'
+	},{
 		description: 'Armenian phonetic layout with extended keys test',
 		tests: [
 			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
