@@ -4,7 +4,7 @@
 	var satInScript2 = {
 		id: 'sat-inscript2',
 		name: 'संताली इनस्क्रिप्ट २',
-		description: 'Enhanced InScript keyboard for Santali language',
+		description: 'Enhanced InScript Devanagari keyboard for Santali language',
 		date: '2013-20-13',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
