@@ -1063,7 +1063,7 @@
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript', 'sa-iast' ]
 		},
 		sat: {
-			autonym: 'संताली (ᱥᱟᱱᱛᱟᱞᱤ)',
+			autonym: 'ᱥᱟᱱᱛᱟᱞᱤ (संताली)',
 			inputmethods: [ 'sat-inscript2', 'sat-inscript2-ol-chiki', 'sat-sarjom-baha' ]
 		},
 		sd: {

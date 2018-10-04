@@ -3,8 +3,8 @@
 
 	var satSarjomBaha = {
 		id: 'sat-sarjom-baha',
-		name: 'sarjom baha',
-		description: 'Phonetic keyboard, Sarjom Baha for Santali language',
+		name: 'Sarjom Baha',
+		description: 'Phonetic Ol Chiki keyboard, Sarjom Baha for Santali language',
 		date: '2016-03-29',
 		author: 'Jnanaranjan Sahu',
 		license: 'GPLv3',
