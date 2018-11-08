@@ -40,13 +40,13 @@
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
   "bugs": {
-    "url" : "https://github.com/wikimedia/jquery.ime/issues"
-    },
+    "url": "https://github.com/wikimedia/jquery.ime/issues"
+  },
   "engine": {
     "node": ">=6.11.1"
   },
   "license": "(GPL-2.0+ OR MIT)",
   "scripts": {
-     "test": "grunt test --verbose"
+    "test": "grunt test --verbose"
   }
 }
