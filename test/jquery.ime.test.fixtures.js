@@ -526,6 +526,30 @@ var palochkaVariants = {
 		],
 		inputmethod: 'dag-alt'
 	},{
+		description: 'Ewe tilde test',
+		tests: [
+			{ input: '~D', output: 'Ɖ', description: 'Ewe ~D -> Ɖ' },
+			{ input: '~d', output: 'ɖ', description: 'Ewe ~d -> ɖ' },
+			{ input: '~E', output: 'Ɛ', description: 'Ewe ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Ewe ~e -> ɛ' },
+			{ input: '~F', output: 'Ƒ', description: 'Ewe ~F -> Ƒ' },
+			{ input: '~f', output: 'ƒ', description: 'Ewe ~f -> ƒ' },
+			{ input: '~G', output: 'Ɣ', description: 'Ewe ~G -> Ɣ' },
+			{ input: '~g', output: 'ɣ', description: 'Ewe ~g -> ɣ' },
+			{ input: '~N', output: 'Ŋ', description: 'Ewe ~N -> Ŋ' },
+			{ input: '~n', output: 'ŋ', description: 'Ewe ~n -> ŋ' },
+			{ input: '~O', output: 'Ɔ', description: 'Ewe ~O -> Ɔ' },
+			{ input: '~o', output: 'ɔ', description: 'Ewe ~o -> ɔ' },
+			{ input: '~V', output: 'Ʋ', description: 'Ewe ~V -> Ʋ' },
+			{ input: '~v', output: 'ʋ', description: 'Ewe ~v -> ʋ' },
+			{ input: '~~~~', output: '~~~~', description: 'Ewe ~~~~ -> ~~~~' },
+			{ input: 'mi~/', output: 'mí', description: 'Ewe mi~/ -> mí' },
+			{ input: 'wo~\\', output: 'wò', description: 'Ewe wo~\\ -> wò' },
+			{ input: '~E~{', output: 'Ɛ̃', description: 'Ewe ~E~{ -> Ɛ̃' },
+			{ input: 'to~^', output: 'tǒ', description: 'Ewe to~^ -> tǒ' }
+		],
+		inputmethod: 'ee-tilde'
+	},{
 		description: 'Cyrillic with palochka transliteration test',
 		tests: [
 			// Sanity test - palochka should produce itself

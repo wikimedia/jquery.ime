@@ -300,6 +300,10 @@
 			name: 'Deutsch Tilde',
 			source: 'rules/de/de-transliteration.js'
 		},
+		'ee-tilde': {
+			name: 'Ewe Tilde',
+			source: 'rules/ee/ee-tilde.js'
+		},
 		'el-kbd': {
 			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
@@ -845,6 +849,10 @@
 		en: {
 			autonym: 'English',
 			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
+		},
+		ee: {
+			autonym: 'Èʋegbe',
+			inputmethods: [ 'ee-tilde' ]
 		},
 		el: {
 			autonym: 'Ελληνικά',
