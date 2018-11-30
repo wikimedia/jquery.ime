@@ -214,6 +214,10 @@
 			name: 'lud',
 			source: 'rules/lud/lud-transliteration.js'
 		},
+		'ha-tilde': {
+			name: 'Hausa - tilde',
+			source: 'rules/ha/ha-tilde.js'
+		},
 		'hi-transliteration': {
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
@@ -229,6 +233,10 @@
 		'hi-phonetic': {
 			name: 'फोनेटिक',
 			source: 'rules/hi/hi-phonetic.js'
+		},
+		'ig-tilde': {
+			name: 'Igbo - tilde',
+			source: 'rules/ig/ig-tilde.js'
 		},
 		'is-normforms': {
 			name: 'Venjuleg eyðublöð',
@@ -726,6 +734,10 @@
 		'yo-alt': {
 			name: 'Yorùbá Alt',
 			source: 'rules/yo/yo-alt.js'
+		},
+		'yo-tilde': {
+			name: 'Yorùbá tilde',
+			source: 'rules/yo/yo-tilde.js'
 		}
 	} );
 
@@ -881,6 +893,14 @@
 		got: {
 			autonym: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
 			inputmethods: [ 'got-standard' ]
+		},
+		ha: {
+			autonym: 'Hausa',
+			inputmethods: [ 'ha-tilde' ]
+		},
+		ig: {
+			autonym: 'Igbo',
+			inputmethods: [ 'ig-tilde' ]
 		},
 		lrc: {
 			autonym: 'لۊری شومالی',
@@ -1168,7 +1188,7 @@
 		},
 		yo: {
 			autonym: 'Yorùbá',
-			inputmethods: [ 'yo-alt' ]
+			inputmethods: [ 'yo-alt', 'yo-tilde' ]
 		}
 	} );
 

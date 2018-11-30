@@ -562,6 +562,38 @@ var palochkaVariants = {
 		],
 		inputmethod: 'ka-transliteration'
 	},{
+		description: 'Hausa tilde test',
+		tests: [
+			{ input: '~B', output: 'Ɓ', description: 'Hausa tilde ~B -> Ɓ' },
+			{ input: '~b', output: 'ɓ', description: 'Hausa tilde ~b -> ɓ' },
+			{ input: '~D', output: 'Ɗ', description: 'Hausa tilde ~D -> Ɗ' },
+			{ input: '~d', output: 'ɗ', description: 'Hausa tilde ~d -> ɗ' },
+			{ input: '~K', output: 'Ƙ', description: 'Hausa tilde ~K -> Ƙ' },
+			{ input: '~k', output: 'ƙ', description: 'Hausa tilde ~k -> ƙ' },
+			{ input: '~R', output: 'R̃', description: 'Hausa tilde ~R -> R̃' },
+			{ input: '~r', output: 'r̃', description: 'Hausa tilde ~r -> r̃' },
+			{ input: '~Y', output: 'Ƴ', description: 'Hausa tilde ~Y -> Ƴ' },
+			{ input: '~y', output: 'ƴ', description: 'Hausa tilde ~y -> ƴ' },
+			{ input: 'E~\\', output: 'È', description: 'Hausa tilde E~\ -> È' },
+			{ input: 'i~^', output: 'î', description: 'Hausa tilde i~^ -> î' }
+		],
+		inputmethod: 'ha-tilde'
+	},{
+		description: 'Igbo tilde test',
+		tests: [
+			{ input: '~I', output: 'Ị', description: 'Igbo tilde ~B -> Ɓ' },
+			{ input: '~i', output: 'ị', description: 'Igbo tilde ~b -> ɓ' },
+			{ input: '~N', output: 'Ṅ', description: 'Igbo tilde ~D -> Ɗ' },
+			{ input: '~n', output: 'ṅ', description: 'Igbo tilde ~d -> ɗ' },
+			{ input: '~O', output: 'Ọ', description: 'Igbo tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Igbo tilde ~o -> ọ' },
+			{ input: '~U', output: 'Ụ', description: 'Igbo tilde ~R -> R̃' },
+			{ input: '~u', output: 'ụ', description: 'Igbo tilde ~r -> r̃' },
+			{ input: 'E~\\', output: 'È', description: 'Igbo tilde E~\\ -> È' },
+			{ input: 'i~/', output: 'í', description: 'Igbo tilde i~/ -> í' }
+		],
+		inputmethod: 'ig-tilde'
+	},{
 		description: 'Esperanto x-sistemo test',
 		tests: [
 			{ input: 'cx', output: 'ĉ', description: 'Esperanto cx' },
@@ -3922,8 +3954,23 @@ var palochkaVariants = {
 			}
 		],
 		inputmethod: 'yo-alt'
-	},
-	{
+	},{
+		description: 'Yoruba tilde test',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Yoruba tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Yoruba tilde ~e -> ẹ' },
+			{ input: '~O', output: 'Ọ', description: 'Yoruba tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Yoruba tilde ~o -> ọ' },
+			{ input: '~S', output: 'Ṣ', description: 'Yoruba tilde ~S -> Ṣ' },
+			{ input: '~s', output: 'ṣ', description: 'Yoruba tilde ~s -> ṣ' },
+			{ input: '~e~-', output: 'ẹ̄', description: 'Yoruba tilde ~e~- -> ẹ̄' },
+			{ input: '~E~\\', output: 'Ẹ̀', description: 'Yoruba tilde ~E~\ -> Ẹ̀' },
+			{ input: '~e~/', output: 'ẹ́', description: 'Yoruba tilde ~e~/ -> ẹ́' },
+			{ input: '~O~^', output: 'Ộ', description: 'Yoruba tilde ~O~^ -> Ộ' },
+			{ input: '~o~v', output: 'ọ̌', description: 'Yoruba tilde ~o~v -> ọ̌' }
+		],
+		inputmethod: 'yo-tilde'
+	},{
 		description: 'Santali Inscript2 test',
 		tests: [
 			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
