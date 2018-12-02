@@ -530,6 +530,10 @@
 			name: 'Tildemerkt transliterasjon',
 			source: 'rules/nb/nb-tildeforms.js'
 		},
+		'nso-tilde': {
+			name: 'Sesotho sa Leboa tilde',
+			source: 'rules/nso/nso-tilde.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -674,6 +678,10 @@
 			name: 'Стандардна',
 			source: 'rules/sr/sr-kbd.js'
 		},
+		'st-tilde': {
+			name: 'Sesotho tilde',
+			source: 'rules/st/st-tilde.js'
+		},
 		'sv-normforms': {
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
@@ -757,6 +765,10 @@
 		'uz-kbd': {
 			name: 'Uzbek kbd',
 			source: 'rules/uz/uz-kbd.js'
+		},
+		've-tilde': {
+			name: 'TshiVenḓa tilde',
+			source: 'rules/ve/ve-tilde.js'
 		},
 		'vec-GVU': {
 			name: 'Vèneto',
@@ -1118,6 +1130,10 @@
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
 		},
+		nso: {
+			autonym: 'Sesotho sa Leboa',
+			inputmethods: [ 'nso-tilde' ]
+		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',
 			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-OdiScript' ]
@@ -1194,6 +1210,10 @@
 			autonym: 'Српски / srpski',
 			inputmethods: [ 'sr-kbd' ]
 		},
+		st: {
+			autonym: 'Sesotho',
+			inputmethods: [ 'st-tilde' ]
+		},
 		sv: {
 			autonym: 'Svenska',
 			inputmethods: [ 'sv-normforms' ]
@@ -1253,6 +1273,10 @@
 		uz: {
 			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
+		},
+		ve: {
+			autonym: 'TshiVenḓa',
+			inputmethods: [ 've-tilde' ]
 		},
 		vec: {
 			autonym: 'Vèneto',

@@ -3399,6 +3399,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Northern Sotho tilde test',
+		inputmethod: 'nso-tilde',
+		tests: [
+			{ input: '~Salang', output: 'Šalang', description: 'Northern Sotho tilde Šalang' },
+			{ input: 'let~sat~sing', output: 'letšatšing', description: 'Northern Sotho tilde letšatšing' },
+			{ input: 'Gontsha', output: 'Gontsha', description: 'Northern Sotho tilde Gontsha' },
+			{ input: '~E', output: 'Ê', description: 'Northern Sotho tilde Ê' },
+			{ input: '~e', output: 'ê', description: 'Northern Sotho tilde ê' },
+			{ input: '~O', output: 'Ô', description: 'Northern Sotho tilde Ô' },
+			{ input: '~o', output: 'ô', description: 'Northern Sotho tilde ô' }
+		]
+	},
+	{
 		description: 'Oriya InScript test',
 		inputmethod: 'or-inscript',
 		tests: [
@@ -3953,6 +3966,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Sotho tilde test',
+		inputmethod: 'st-tilde',
+		tests: [
+			{ input: 'loant~sa', output: 'loantša', description: 'Sotho tilde loantša' },
+			{ input: 'ro~-na', output: 'rōna', description: 'Sotho tilde rōna' }
+		]
+	},
+	{
 		description: 'Tamil 99 test',
 		inputmethod: 'ta-99',
 		tests: [
@@ -4229,6 +4250,18 @@ var palochkaVariants = {
 		inputmethod: 'uz-kbd',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Uzbek kbd - . -> ю' }
+		]
+	},
+	{
+		description: 'Venda tilde test',
+		inputmethod: 've-tilde',
+		tests: [
+			{ input: 'Vhaven~da', output: 'Vhavenḓa', description: 'Venda tilde Vhavenḓa' },
+			{ input: '~la', output: 'ḽa', description: 'Venda tilde ḽa' },
+			{ input: '~Nama', output: 'Ṋama', description: 'Venda tilde Ṋama' },
+			{ input: '~nama', output: 'ṋama', description: 'Venda tilde ṋama' },
+			{ input: '~Thaluso', output: 'Ṱhaluso', description: 'Venda tilde Ṱhaluso' },
+			{ input: 'Vha`nwali', output: 'Vhaṅwali', description: 'Venda tilde Vhaṅwali' }
 		]
 	},
 	{
