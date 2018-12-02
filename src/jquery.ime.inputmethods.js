@@ -432,7 +432,7 @@
 			name: 'Lushootseed Tulalip',
 			source: 'rules/lut/lut-tulalip.js'
 		},
-		mh: {
+		'mh': {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
 		},
@@ -583,7 +583,8 @@
 		'te-apple': {
 			name: 'ఆపిల్',
 			source: 'rules/te/te-apple.js'
-		},'te-modular': {
+		},
+		'te-modular': {
 			name: 'మాడ్యులర్',
 			source: 'rules/te/te-modular.js'
 		},
