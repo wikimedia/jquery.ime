@@ -4,13 +4,13 @@
 	// All keys have quotes for consistency
 	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
-		'am-transliteration': {
-			name: 'ትራንስልተራትዖን',
-			source: 'rules/am/am-transliteration.js'
-		},
 		'ak-qx': {
 			name: 'QX replacement',
 			source: 'rules/ak/ak-qx.js'
+		},
+		'am-transliteration': {
+			name: 'ትራንስልተራትዖን',
+			source: 'rules/am/am-transliteration.js'
 		},
 		'ar-kbd': {
 			name: 'لوحة المفاتيح العربية',
@@ -132,13 +132,13 @@
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
 		},
-		'cv-lat-altgr': {
-			name: 'Căvašla (AltGr)',
-			source: 'rules/cv/cv-lat-altgr.js'
-		},
 		'cv-cyr-numbers': {
 			name: 'Чăвашла (цифрилисем)',
 			source: 'rules/cv/cv-cyr-numbers.js'
+		},
+		'cv-lat-altgr': {
+			name: 'Căvašla (AltGr)',
+			source: 'rules/cv/cv-lat-altgr.js'
 		},
 		'cyrl-palochka': {
 			name: 'Palochka',
@@ -152,6 +152,10 @@
 			name: 'Dagbani Alt',
 			source: 'rules/dag/dag-alt.js'
 		},
+		'de-transliteration': {
+			name: 'Deutsch Tilde',
+			source: 'rules/de/de-transliteration.js'
+		},
 		'din-fqsx': {
 			name: 'Dinka FQSX',
 			source: 'rules/din/din-fqsx.js'
@@ -160,9 +164,13 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/doi/doi-inscript2.js'
 		},
-		'eo-transliteration': {
-			name: 'transliterigo',
-			source: 'rules/eo/eo-transliteration.js'
+		'ee-tilde': {
+			name: 'Ewe Tilde',
+			source: 'rules/ee/ee-tilde.js'
+		},
+		'el-kbd': {
+			name: 'Τυπική πληκτρολόγιο',
+			source: 'rules/el/el-kbd.js'
 		},
 		'eo-h': {
 			name: 'Esperanto h',
@@ -180,6 +188,10 @@
 			name: 'Esperanto q sistemo',
 			source: 'rules/eo/eo-q.js'
 		},
+		'eo-transliteration': {
+			name: 'transliterigo',
+			source: 'rules/eo/eo-transliteration.js'
+		},
 		'eo-vi': {
 			name: 'Esperanto vi sistemo',
 			source: 'rules/eo/eo-vi.js'
@@ -196,167 +208,29 @@
 			name: 'Fulfulde',
 			source: 'rules/ff/ff-alt.js'
 		},
-		'fo-normforms': {
-			name: 'Føroyskt',
-			source: 'rules/fo/fo-normforms.js'
-		},
 		'fi-transliteration': {
 			name: 'translitterointi',
 			source: 'rules/fi/fi-transliteration.js'
 		},
-		'gaa-cqx': {
-			name: 'Ga - CQX replacement',
-			source: 'rules/gaa/gaa-cqx.js'
-		},
-		'got-standard': {
-			name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
-			source: 'rules/got/got-standard.js'
-		},
-		'lud-transliteration': {
-			name: 'lud',
-			source: 'rules/lud/lud-transliteration.js'
-		},
-		'ha-tilde': {
-			name: 'Hausa - tilde',
-			source: 'rules/ha/ha-tilde.js'
-		},
-		'hi-transliteration': {
-			name: 'लिप्यंतरण',
-			source: 'rules/hi/hi-transliteration.js'
-		},
-		'hi-inscript': {
-			name: 'इनस्क्रिप्ट',
-			source: 'rules/hi/hi-inscript.js'
-		},
-		'hi-inscript2': {
-			name: 'इनस्क्रिप्ट २',
-			source: 'rules/hi/hi-inscript2.js'
-		},
-		'hi-phonetic': {
-			name: 'फोनेटिक',
-			source: 'rules/hi/hi-phonetic.js'
-		},
-		'ig-tilde': {
-			name: 'Igbo - tilde',
-			source: 'rules/ig/ig-tilde.js'
-		},
-		'is-normforms': {
-			name: 'Venjuleg eyðublöð',
-			source: 'rules/is/is-normforms.js'
-		},
-		'hoc-transliteration': {
-			name: 'Ho transliteration',
-			source: 'rules/hoc/hoc-transliteration.js'
-		},
-		'jv-transliteration': {
-			name: 'Transliteration',
-			source: 'rules/jv/jv-transliteration.js'
-		},
-		'mai-inscript': {
-			name: 'इनस्क्रिप्ट',
-			source: 'rules/mai/mai-inscript.js',
-			depends: 'hi-inscript'
-		},
-		'mai-inscript2': {
-			name: 'इनस्क्रिप्ट २',
-			source: 'rules/mai/mai-inscript2.js',
-			depends: 'hi-inscript2'
-		},
-		'hi-bolnagri': {
-			name: 'बोलनागरी',
-			source: 'rules/hi/hi-bolnagri.js'
-		},
-		'ml-transliteration': {
-			name: 'ലിപ്യന്തരണം',
-			source: 'rules/ml/ml-transliteration.js'
-		},
-		'ml-inscript': {
-			name: 'ഇൻസ്ക്രിപ്റ്റ്',
-			source: 'rules/ml/ml-inscript.js'
-		},
-		'ml-inscript2': {
-			name: 'ഇൻസ്ക്രിപ്റ്റ് 2',
-			source: 'rules/ml/ml-inscript2.js'
-		},
-		'sv-normforms': {
-			name: 'Normal forms',
-			source: 'rules/sv/sv-normforms.js'
-		},
-		'ta-inscript': {
-			name: 'இன்ஸ்கிரிப்ட்',
-			source: 'rules/ta/ta-inscript.js'
-		},
-		'ta-inscript2': {
-			name: 'இன்ஸ்கிரிப்ட் 2',
-			source: 'rules/ta/ta-inscript2.js'
-		},
-		'ta-transliteration': {
-			name: 'எழுத்துப்பெயர்ப்பு',
-			source: 'rules/ta/ta-transliteration.js'
-		},
-		'ta-99': {
-			name: 'தமிழ்99',
-			source: 'rules/ta/ta-99.js'
-		},
-		'ta-bamini': {
-			name: 'பாமினி',
-			source: 'rules/ta/ta-bamini.js'
-		},
-		'th-kedmanee': {
-			name: 'เกษมณี',
-			source: 'rules/th/th-kedmanee.js'
-		},
-		'th-pattachote': {
-			name: 'ปัตตะโชติ',
-			source: 'rules/th/th-pattachote.js'
-		},
-		'de-transliteration': {
-			name: 'Deutsch Tilde',
-			source: 'rules/de/de-transliteration.js'
-		},
-		'ee-tilde': {
-			name: 'Ewe Tilde',
-			source: 'rules/ee/ee-tilde.js'
-		},
-		'el-kbd': {
-			name: 'Τυπική πληκτρολόγιο',
-			source: 'rules/el/el-kbd.js'
+		'fo-normforms': {
+			name: 'Føroyskt',
+			source: 'rules/fo/fo-normforms.js'
 		},
 		'fon-tilde': {
 			name: 'Fon Tilde',
 			source: 'rules/fon/fon-tilde.js'
 		},
-		'he-standard-2012': {
-			name: 'עברית עם ניקוד על בסיס אנגלית',
-			source: 'rules/he/he-standard-2012.js'
+		'gaa-cqx': {
+			name: 'Ga - CQX replacement',
+			source: 'rules/gaa/gaa-cqx.js'
 		},
-		'he-standard-2012-extonly': {
-			name: 'עברית עם ניקוד',
-			source: 'rules/he/he-standard-2012-extonly.js'
+		'gom-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/gom/gom-inscript2.js'
 		},
-		'hr-kbd': {
-			name: 'Croatian kbd',
-			source: 'rules/hr/hr-kbd.js'
-		},
-		'hy-ephonetic': {
-			name: 'Հնչյունային դասավորություն',
-			source: 'rules/hy/hy-ephonetic.js'
-		},
-		'hy-typewriter': {
-			name: 'Գրամեքենայի դասավորություն',
-			source: 'rules/hy/hy-typewriter.js'
-		},
-		'hy-ephoneticalt': {
-			name: 'Հնչյունային նոր (R→Ր, F→Թ)',
-			source: 'rules/hy/hy-ephoneticalt.js'
-		},
-		'hy-emslegacy': {
-			name: 'Մայքրոսոֆթի հին արևելահայերեն',
-			source: 'rules/hy/hy-emslegacy.js'
-		},
-		'hy-wmslegacy': {
-			name: 'Մայքրոսոֆթի հին արևմտահայերեն',
-			source: 'rules/hy/hy-wmslegacy.js'
+		'got-standard': {
+			name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
+			source: 'rules/got/got-standard.js'
 		},
 		'gu-inscript': {
 			name: 'ઇનસ્ક્રિપ્ટ',
@@ -374,13 +248,93 @@
 			name: 'લિપ્યંતરણ',
 			source: 'rules/gu/gu-transliteration.js'
 		},
-		'ka-transliteration': {
-			name: 'ტრანსლიტერაცია',
-			source: 'rules/ka/ka-transliteration.js'
+		'ha-tilde': {
+			name: 'Hausa - tilde',
+			source: 'rules/ha/ha-tilde.js'
+		},
+		'he-standard-2012': {
+			name: 'עברית עם ניקוד על בסיס אנגלית',
+			source: 'rules/he/he-standard-2012.js'
+		},
+		'he-standard-2012-extonly': {
+			name: 'עברית עם ניקוד',
+			source: 'rules/he/he-standard-2012-extonly.js'
+		},
+		'hi-bolnagri': {
+			name: 'बोलनागरी',
+			source: 'rules/hi/hi-bolnagri.js'
+		},
+		'hi-inscript': {
+			name: 'इनस्क्रिप्ट',
+			source: 'rules/hi/hi-inscript.js'
+		},
+		'hi-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/hi/hi-inscript2.js'
+		},
+		'hi-phonetic': {
+			name: 'फोनेटिक',
+			source: 'rules/hi/hi-phonetic.js'
+		},
+		'hi-transliteration': {
+			name: 'लिप्यंतरण',
+			source: 'rules/hi/hi-transliteration.js'
+		},
+		'hoc-transliteration': {
+			name: 'Ho transliteration',
+			source: 'rules/hoc/hoc-transliteration.js'
+		},
+		'hr-kbd': {
+			name: 'Croatian kbd',
+			source: 'rules/hr/hr-kbd.js'
+		},
+		'hy-emslegacy': {
+			name: 'Մայքրոսոֆթի հին արևելահայերեն',
+			source: 'rules/hy/hy-emslegacy.js'
+		},
+		'hy-ephonetic': {
+			name: 'Հնչյունային դասավորություն',
+			source: 'rules/hy/hy-ephonetic.js'
+		},
+		'hy-ephoneticalt': {
+			name: 'Հնչյունային նոր (R→Ր, F→Թ)',
+			source: 'rules/hy/hy-ephoneticalt.js'
+		},
+		'hy-typewriter': {
+			name: 'Գրամեքենայի դասավորություն',
+			source: 'rules/hy/hy-typewriter.js'
+		},
+		'hy-wmslegacy': {
+			name: 'Մայքրոսոֆթի հին արևմտահայերեն',
+			source: 'rules/hy/hy-wmslegacy.js'
+		},
+		'ig-tilde': {
+			name: 'Igbo - tilde',
+			source: 'rules/ig/ig-tilde.js'
+		},
+		'ipa-sil': {
+			name: 'International Phonetic Alphabet - SIL',
+			source: 'rules/fonipa/ipa-sil.js'
+		},
+		'ipa-x-sampa': {
+			name: 'International Phonetic Alphabet - X-SAMPA',
+			source: 'rules/fonipa/ipa-x-sampa.js'
+		},
+		'is-normforms': {
+			name: 'Venjuleg eyðublöð',
+			source: 'rules/is/is-normforms.js'
+		},
+		'jv-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/jv/jv-transliteration.js'
 		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
 			source: 'rules/ka/ka-kbd.js'
+		},
+		'ka-transliteration': {
+			name: 'ტრანსლიტერაცია',
+			source: 'rules/ka/ka-transliteration.js'
 		},
 		'kk-arabic': {
 			name: 'Kazakh Arabic transliteration',
@@ -402,21 +356,17 @@
 			name: 'ಇನ್\u200cಸ್ಕ್ರಿಪ್ಟ್ ೨',
 			source: 'rules/kn/kn-inscript2.js'
 		},
-		'kn-transliteration': {
-			name: 'ಲಿಪ್ಯಂತರಣ',
-			source: 'rules/kn/kn-transliteration.js'
-		},
 		'kn-kgp': {
 			name: 'KGP/Nudi/KP Rao',
 			source: 'rules/kn/kn-kgp.js'
 		},
+		'kn-transliteration': {
+			name: 'ಲಿಪ್ಯಂತರಣ',
+			source: 'rules/kn/kn-transliteration.js'
+		},
 		'ky-cyrl-alt': {
 			name: 'Кыргыз Alt',
 			source: 'rules/ky/ky-cyrl-alt.js'
-		},
-		'gom-inscript2': {
-			name: 'इनस्क्रिप्ट २',
-			source: 'rules/gom/gom-inscript2.js'
 		},
 		'ks-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -442,37 +392,59 @@
 			name: 'لۊری شومالی',
 			source: 'rules/lrc/lrc-kbd.js'
 		},
+		'lud-transliteration': {
+			name: 'lud',
+			source: 'rules/lud/lud-transliteration.js'
+		},
 		'lut-tulalip': {
 			name: 'Lushootseed Tulalip',
 			source: 'rules/lut/lut-tulalip.js'
+		},
+		'mai-inscript': {
+			name: 'इनस्क्रिप्ट',
+			source: 'rules/mai/mai-inscript.js',
+			depends: 'hi-inscript'
+		},
+		'mai-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/mai/mai-inscript2.js',
+			depends: 'hi-inscript2'
 		},
 		'mh': {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
 		},
+		'ml-inscript': {
+			name: 'ഇൻസ്ക്രിപ്റ്റ്',
+			source: 'rules/ml/ml-inscript.js'
+		},
+		'ml-inscript2': {
+			name: 'ഇൻസ്ക്രിപ്റ്റ് 2',
+			source: 'rules/ml/ml-inscript2.js'
+		},
+		'ml-transliteration': {
+			name: 'ലിപ്യന്തരണം',
+			source: 'rules/ml/ml-transliteration.js'
+		},
 		'mn-cyrl': {
 			name: 'Кирилл',
 			source: 'rules/mn/mn-cyrl.js'
-		},
-		'mn-trad': {
-			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
-			source: 'rules/mn/mn-trad.js'
 		},
 		'mn-todo': {
 			name: 'ᡐᡆᡑᡆ ᡋᡅᡔᡅᡎ᠌',
 			source: 'rules/mn/mn-todo.js'
 		},
-		'mn-tradali': {
-			name: 'Traditional Mongolian Ali-gali',
-			source: 'rules/mn/mn-tradali.js'
-		},
 		'mn-todoali': {
 			name: 'Todo Mongolian Ali-gali',
 			source: 'rules/mn/mn-todoali.js'
 		},
-		'phagspa': {
-			name: 'PhagsPa',
-			source: 'rules/mn/phagspa.js'
+		'mn-trad': {
+			name: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌',
+			source: 'rules/mn/mn-trad.js'
+		},
+		'mn-tradali': {
+			name: 'Traditional Mongolian Ali-gali',
+			source: 'rules/mn/mn-tradali.js'
 		},
 		'mnc': {
 			name: 'ᠮᠠᠨᠵᡠ',
@@ -494,13 +466,13 @@
 			name: 'मराठी इनस्क्रिप्ट २',
 			source: 'rules/mr/mr-inscript2.js'
 		},
-		'mr-transliteration': {
-			name: 'अक्षरांतरण',
-			source: 'rules/mr/mr-transliteration.js'
-		},
 		'mr-phonetic': {
 			name: 'फोनेटिक',
 			source: 'rules/mr/mr-phonetic.js'
+		},
+		'mr-transliteration': {
+			name: 'अक्षरांतरण',
+			source: 'rules/mr/mr-transliteration.js'
 		},
 		'my-mm3': {
 			name: 'မြန်မာ၃ လက်ကွက်',
@@ -510,6 +482,14 @@
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
 		},
+		'nb-normforms': {
+			name: 'Normal transliterasjon',
+			source: 'rules/nb/nb-normforms.js'
+		},
+		'nb-tildeforms': {
+			name: 'Tildemerket transliterasjon',
+			source: 'rules/nb/nb-tildeforms.js'
+		},
 		'ne-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/ne/ne-inscript.js'
@@ -517,10 +497,6 @@
 		'ne-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/ne/ne-inscript2.js'
-		},
-		'ne-transliteration': {
-			name: 'ट्रांस्लितेरेशन',
-			source: 'rules/ne/ne-transliteration.js'
 		},
 		'ne-rom': {
 			name: 'Romanized',
@@ -530,25 +506,13 @@
 			name: 'Traditional',
 			source: 'rules/ne/ne-trad.js'
 		},
-		'nb-normforms': {
-			name: 'Normal transliterasjon',
-			source: 'rules/nb/nb-normforms.js'
-		},
-		'nb-tildeforms': {
-			name: 'Tildemerket transliterasjon',
-			source: 'rules/nb/nb-tildeforms.js'
+		'ne-transliteration': {
+			name: 'ट्रांस्लितेरेशन',
+			source: 'rules/ne/ne-transliteration.js'
 		},
 		'nn-tildeforms': {
 			name: 'Tildemerkt transliterasjon',
 			source: 'rules/nb/nb-tildeforms.js'
-		},
-		'or-transliteration': {
-			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
-			source: 'rules/or/or-transliteration.js'
-		},
-		'or-OdiScript': {
-			name: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ',
-			source: 'rules/or/or-OdiScript.js'
 		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
@@ -562,49 +526,17 @@
 			name: 'ଲେଖନୀ',
 			source: 'rules/or/or-lekhani.js'
 		},
+		'or-OdiScript': {
+			name: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ',
+			source: 'rules/or/or-OdiScript.js'
+		},
 		'or-phonetic': {
 			name: 'ଫୋନେଟିକ',
 			source: 'rules/or/or-phonetic.js'
 		},
-		'sd-inscript2': {
-			name: 'इनस्क्रिप्ट २',
-			source: 'rules/sd/sd-inscript2.js'
-		},
-		'sdh-kbd': {
-			name: 'کوردی خوارگ',
-			source: 'rules/sdh/sdh-kbd.js'
-		},
-		'se-normforms': {
-			name: 'Normal forms',
-			source: 'rules/se/se-normforms.js'
-		},
-		'sk-kbd': {
-			name: 'Štandardná',
-			source: 'rules/sk/sk-kbd.js'
-		},
-		'sr-kbd': {
-			name: 'Стандардна',
-			source: 'rules/sr/sr-kbd.js'
-		},
-		'te-inscript': {
-			name: 'ఇన్\u200dస్క్రిప్ట్',
-			source: 'rules/te/te-inscript.js'
-		},
-		'te-inscript2': {
-			name: 'ఇన్\u200dస్క్రిప్ట్ 2',
-			source: 'rules/te/te-inscript2.js'
-		},
-		'te-apple': {
-			name: 'ఆపిల్',
-			source: 'rules/te/te-apple.js'
-		},
-		'te-modular': {
-			name: 'మాడ్యులర్',
-			source: 'rules/te/te-modular.js'
-		},
-		'te-transliteration': {
-			name: 'లిప్యంతరీకరణ',
-			source: 'rules/te/te-transliteration.js'
+		'or-transliteration': {
+			name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
+			source: 'rules/or/or-transliteration.js'
 		},
 		'pa-inscript': {
 			name: 'ਇਨਸਕ੍ਰਿਪਟ',
@@ -626,13 +558,17 @@
 			name: 'ਫੋਨੇਟਿਕ',
 			source: 'rules/pa/pa-phonetic.js'
 		},
-		'roa-tara-GVU': {
-			name: 'Tarandine',
-			source: 'rules/roa-tara/roa-tara.js'
+		'phagspa': {
+			name: 'PhagsPa',
+			source: 'rules/mn/phagspa.js'
 		},
 		'pms': {
 			name: 'Piemontèis',
 			source: 'rules/pms/pms.js'
+		},
+		'roa-tara-GVU': {
+			name: 'Tarandine',
+			source: 'rules/roa-tara/roa-tara.js'
 		},
 		'ru-jcuken': {
 			name: 'ЙЦУКЕН',
@@ -682,6 +618,18 @@
 			name: 'sarjom baha',
 			source: 'rules/sat/sat-sarjom-baha.js'
 		},
+		'sd-inscript2': {
+			name: 'इनस्क्रिप्ट २',
+			source: 'rules/sd/sd-inscript2.js'
+		},
+		'sdh-kbd': {
+			name: 'کوردی خوارگ',
+			source: 'rules/sdh/sdh-kbd.js'
+		},
+		'se-normforms': {
+			name: 'Normal forms',
+			source: 'rules/se/se-normforms.js'
+		},
 		'si-singlish': {
 			name: 'සිංග්ලිෂ්',
 			source: 'rules/si/si-singlish.js'
@@ -689,6 +637,70 @@
 		'si-wijesekara': {
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
+		},
+		'sjo': {
+			name: 'ᠰᡞᠪᡝ',
+			source: 'rules/sjo/sjo.js'
+		},
+		'sk-kbd': {
+			name: 'Štandardná',
+			source: 'rules/sk/sk-kbd.js'
+		},
+		'sr-kbd': {
+			name: 'Стандардна',
+			source: 'rules/sr/sr-kbd.js'
+		},
+		'sv-normforms': {
+			name: 'Normal forms',
+			source: 'rules/sv/sv-normforms.js'
+		},
+		'ta-99': {
+			name: 'தமிழ்99',
+			source: 'rules/ta/ta-99.js'
+		},
+		'ta-bamini': {
+			name: 'பாமினி',
+			source: 'rules/ta/ta-bamini.js'
+		},
+		'ta-inscript': {
+			name: 'இன்ஸ்கிரிப்ட்',
+			source: 'rules/ta/ta-inscript.js'
+		},
+		'ta-inscript2': {
+			name: 'இன்ஸ்கிரிப்ட் 2',
+			source: 'rules/ta/ta-inscript2.js'
+		},
+		'ta-transliteration': {
+			name: 'எழுத்துப்பெயர்ப்பு',
+			source: 'rules/ta/ta-transliteration.js'
+		},
+		'te-apple': {
+			name: 'ఆపిల్',
+			source: 'rules/te/te-apple.js'
+		},
+		'te-inscript': {
+			name: 'ఇన్\u200dస్క్రిప్ట్',
+			source: 'rules/te/te-inscript.js'
+		},
+		'te-inscript2': {
+			name: 'ఇన్\u200dస్క్రిప్ట్ 2',
+			source: 'rules/te/te-inscript2.js'
+		},
+		'te-modular': {
+			name: 'మాడ్యులర్',
+			source: 'rules/te/te-modular.js'
+		},
+		'te-transliteration': {
+			name: 'లిప్యంతరీకరణ',
+			source: 'rules/te/te-transliteration.js'
+		},
+		'th-kedmanee': {
+			name: 'เกษมณี',
+			source: 'rules/th/th-kedmanee.js'
+		},
+		'th-pattachote': {
+			name: 'ปัตตะโชติ',
+			source: 'rules/th/th-pattachote.js'
 		},
 		'ti-geezim': {
 			name: 'ትግርኛ',
@@ -698,9 +710,17 @@
 			name: 'ትግረ',
 			source: 'rules/tig/tig-geezim.js'
 		},
-		'sjo': {
-			name: 'ᠰᡞᠪᡝ',
-			source: 'rules/sjo/sjo.js'
+		'udm-alt': {
+			name: 'Удмурт ALT',
+			source: 'rules/udm/udm-alt.js'
+		},
+		'ug-kbd': {
+			name: 'Uyghur kbd',
+			source: 'rules/ug/ug-kbd.js'
+		},
+		'uk-kbd': {
+			name: 'кбд',
+			source: 'rules/uk/uk-kbd.js'
 		},
 		'ur-phonetic': {
 			name: 'صوتی',
@@ -709,26 +729,6 @@
 		'ur-transliteration': {
 			name: 'ٹرانسلٹریشن',
 			source: 'rules/ur/ur-transliteration.js'
-		},
-		'ipa-sil': {
-			name: 'International Phonetic Alphabet - SIL',
-			source: 'rules/fonipa/ipa-sil.js'
-		},
-		'ipa-x-sampa': {
-			name: 'International Phonetic Alphabet - X-SAMPA',
-			source: 'rules/fonipa/ipa-x-sampa.js'
-		},
-		'udm-alt': {
-			name: 'Удмурт ALT',
-			source: 'rules/udm/udm-alt.js'
-		},
-		'uk-kbd': {
-			name: 'кбд',
-			source: 'rules/uk/uk-kbd.js'
-		},
-		'ug-kbd': {
-			name: 'Uyghur kbd',
-			source: 'rules/ug/ug-kbd.js'
 		},
 		'uz-kbd': {
 			name: 'Uzbek kbd',
