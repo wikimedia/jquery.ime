@@ -235,7 +235,7 @@
 			source: 'rules/is/is-normforms.js'
 		},
 		'hoc-transliteration': {
-			name: 'ho transliteration',
+			name: 'Ho transliteration',
 			source: 'rules/hoc/hoc-transliteration.js'
 		},
 		'jv-transliteration': {
@@ -912,7 +912,7 @@
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
 		hoc: {
-			autonym: 'Ho',
+			autonym: '𑢹𑣉𑣉',
 			inputmethods: [ 'hoc-transliteration' ]
 		},
 		hr: {
