@@ -6,10 +6,10 @@
 		name: 'fon-tilde',
 		description: 'Fon input keyboard',
 		date: '2018-05-18',
-		URL: 'http://github.com/wikimedia/jquery.ime',
-		author: 'Mahuton POSSOUPE',
+		URL: 'https://github.com/wikimedia/jquery.ime',
+		author: 'Mahuton POSSOUPE, Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
 		patterns: [
 			[ '~D', 'Ɖ' ],
 			[ '~d', 'ɖ' ],
@@ -17,8 +17,11 @@
 			[ '~e', 'ɛ' ],
 			[ '~O', 'Ɔ' ],
 			[ '~o', 'ɔ' ],
-			[ '~/', '\u0341' ], // Combining acute tone mark
-			[ '~\\\\', '\u0340' ] // Combining grave tone mark
+			[ '~\\\\', '\u0300' ], // Combining grave accent
+			[ '~/', '\u0301' ], // Combining acute accent
+			[ '~\\^', '\u0302' ], // Combining circumflex accent
+			[ '~-', '\u0304' ], // Combining macron
+			[ '~v', '\u030C' ] // Combining caron
 		]
 	};
 

@@ -4181,11 +4181,15 @@ var palochkaVariants = {
 		description: 'Fon tilde test',
 		tests: [
 			{ input: '~D', output: 'Ɖ', description: 'fon ~D -> Ɖ' },
-			{ input: '~d', output:'ɖ' , description: 'fon ~d -> ɖ' },
+			{ input: '~d', output: 'ɖ', description: 'fon ~d -> ɖ' },
 			{ input: '~E', output: 'Ɛ', description: 'fon ~E -> Ɛ' },
-			{ input: '~e', output: 'ɛ', description: 'fon ~e -> ɛ '},
+			{ input: '~e', output: 'ɛ', description: 'fon ~e -> ɛ' },
 			{ input: '~O', output: 'Ɔ', description: 'fon ~O -> Ɔ' },
-			{ input: '~o', output: 'ɔ', description: 'fon ~o -> ɔ' }
+			{ input: '~o~\\', output: 'ɔ̀', description: 'fon ~o~\\ -> ɔ̀' },
+			{ input: '~e~/', output: 'ɛ́', description: 'fon ~e~/ -> ɛ́' },
+			{ input: 'i~v', output: 'ǐ', description: 'fon i~v -> ǐ' },
+			{ input: 'u~-', output: 'ū', description: 'fon u~- -> ū' },
+			{ input: 'o~^', output: 'ô', description: 'fon o~^ -> ô' }
 		],
 		inputmethod: 'fon-tilde'
 	}
