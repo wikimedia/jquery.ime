@@ -10,7 +10,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
 	// Project configuration.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -76,17 +75,6 @@ module.exports = function ( grunt ) {
 				'test/**/*.js'
 			]
 		},
-		jscs: {
-			fix: {
-				options: {
-					fix: true
-				},
-				src: '<%= jshint.all %>'
-			},
-			main: {
-				src: '<%= jshint.all %>'
-			}
-		},
 		csslint: {
 			all: [
 				'css/**/*.css'
@@ -94,7 +82,7 @@ module.exports = function ( grunt ) {
 		},
 		watch: {
 			files: [
-				'.{csslintrc,jscsrc,jshintignore,jshintrc}',
+				'.{csslintrc,jshintignore,jshintrc}',
 				'<%= jshint.all %>',
 				'<%= csslint.all %>'
 			],
@@ -103,7 +91,7 @@ module.exports = function ( grunt ) {
 	} );
 
 	// Default task.
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main', 'csslint' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'csslint' ] );
 	grunt.registerTask( 'build', [ 'concat', 'uglify', 'copy' ] );
 	grunt.registerTask( 'test', [ 'build', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'lint', 'test' ] );
