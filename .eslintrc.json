@@ -23,8 +23,6 @@
 		"no-useless-escape": 0,
 		"one-var": [ "error", { "var": "always" } ],
 		"spaced-comment": 0,
-		"valid-jsdoc": 0,
-		"wrap-iife": 0,
-		"yoda": 0
+		"valid-jsdoc": 0
 	}
 }
