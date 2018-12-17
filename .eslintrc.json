@@ -22,12 +22,8 @@
 		"no-use-before-define": 0,
 		"no-useless-escape": 0,
 		"one-var": [ "error", { "var": "always" } ],
-		"space-infix-ops": 0,
-		"space-unary-ops": 0,
 		"spaced-comment": 0,
-		"switch-colon-spacing": 0,
 		"valid-jsdoc": 0,
-		"vars-on-top": 0,
 		"wrap-iife": 0,
 		"yoda": 0
 	}
