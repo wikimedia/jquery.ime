@@ -14,7 +14,6 @@
 		"require": false
 	},
 	"rules": {
-		"array-bracket-spacing": 0,
 		"camelcase": 0,
 		"comma-spacing": 0,
 		"indent": 0,
