@@ -8,8 +8,7 @@ var palochkaVariants = {
 		ukrainianCapitalI: 'І',
 		digitOne: '1'
 	},
-	/*jshint unused:false */
-	testFixtures = [
+	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
 		description: 'Blin GeezIM test',
 		tests: [
