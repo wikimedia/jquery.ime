@@ -56,8 +56,12 @@
 
 	QUnit.test( 'Custom event tests', 2, function ( assert ) {
 		var seen = { language: false, method: false };
-		$textarea.on( 'imeLanguageChange.test', function () { seen.language = true; } );
-		$textarea.on( 'imeMethodChange.test', function () { seen.method = true; } );
+		$textarea.on( 'imeLanguageChange.test', function () {
+			seen.language = true;
+		} );
+		$textarea.on( 'imeMethodChange.test', function () {
+			seen.method = true;
+		} );
 		textareaIME.setLanguage( 'hi' );
 		assert.ok( seen.language, 'imeLanguageChange fires' );
 		$textarea.off( 'imeLanguageChange.test' );
