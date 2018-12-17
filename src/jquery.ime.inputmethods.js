@@ -626,7 +626,7 @@
 		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
-			source: 'rules/roa-tara/roa-tara.js',
+			source: 'rules/roa-tara/roa-tara.js'
 		},
 		'pms': {
 			name: 'Piemontèis',
@@ -893,7 +893,7 @@
 		},
 		fon: {
 			autonym: 'Fon',
-			inputmethods: [ 'fon-tilde' ],
+			inputmethods: [ 'fon-tilde' ]
 		},
 		fi: {
 			autonym: 'Suomi',
