@@ -22,7 +22,6 @@
 		"no-use-before-define": 0,
 		"no-useless-escape": 0,
 		"one-var": [ "error", { "var": "always" } ],
-		"quote-props": 0,
 		"quotes": 0,
 		"semi": 0,
 		"semi-spacing": 0,
