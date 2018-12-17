@@ -192,7 +192,7 @@
 				e.stopPropagation();
 			} );
 
-			imeselector.$element.attrchange( function ( ) {
+			imeselector.$element.attrchange( function () {
 				if ( imeselector.$element.is( ':hidden' ) ) {
 					imeselector.$imeSetting.hide();
 				}

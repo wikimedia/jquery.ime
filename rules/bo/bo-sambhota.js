@@ -31,7 +31,7 @@
 
 				return sub;
 			default:
-				if (alwaysStacked) {
+				if ( alwaysStacked ) {
 					return sub;
 				}
 
