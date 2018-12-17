@@ -15,11 +15,11 @@ module.exports = function ( grunt ) {
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
-			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+'
-				+ '<%= grunt.template.today("yyyymmdd") %>\n'
-				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
-				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-				+ ' License: <%= pkg.license %> */\n'
+			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+' +
+				'<%= grunt.template.today("yyyymmdd") %>\n' +
+				'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+				'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+				' License: <%= pkg.license %> */\n'
 		},
 		concat: {
 			options: {
