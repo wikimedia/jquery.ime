@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	// All keys have quotes for consistency
+	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
 		'am-transliteration': {
 			name: 'ትራንስልተራትዖን',
@@ -749,6 +751,7 @@
 			source: 'rules/yo/yo-tilde.js'
 		}
 	} );
+	/* eslint-disable quote-props */
 
 	$.extend( $.ime.languages, {
 		ady: {
