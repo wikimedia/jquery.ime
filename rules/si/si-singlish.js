@@ -13,7 +13,7 @@
 		contextLength: 5,
 		maxKeyLength: 5,
 		patterns: [
-			// ['ඬ්හ්a', 'ඳ'],	// nndha
+			// ['ඬ්හ්a', 'ඳ'], // nndha
 			[ 'ඬ්h', 'ඳ්' ], // nndh
 			[ 'න්න්d', 'ඬ්' ], // nnd
 			[ 'න්න්g', 'ඟ්' ],// nng
