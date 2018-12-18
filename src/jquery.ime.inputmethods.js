@@ -336,6 +336,10 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
+		'kbp-tilde': {
+			name: 'Kabɩyɛ tilde',
+			source: 'rules/kbp/kbp-tilde.js'
+		},
 		'ki-tilde': {
 			name: 'Gĩkũyũ',
 			source: 'rules/ki/ki-tilde.js'
@@ -1025,6 +1029,10 @@
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		kbp: {
+			autonym: 'Kabɩyɛ',
+			inputmethods: [ 'kbp-tilde' ]
 		},
 		ki: {
 			autonym: 'Gĩkũyũ',
