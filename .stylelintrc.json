@@ -1,0 +1,7 @@
+{
+	"extends": "stylelint-config-wikimedia",
+	"rules": {
+		"declaration-property-value-blacklist": {},
+		"selector-max-id": 1
+	}
+}

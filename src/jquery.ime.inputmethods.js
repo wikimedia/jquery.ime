@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	// All keys have quotes for consistency
+	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
 		'am-transliteration': {
 			name: 'ትራንስልተራትዖን',
@@ -626,7 +628,7 @@
 		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
-			source: 'rules/roa-tara/roa-tara.js',
+			source: 'rules/roa-tara/roa-tara.js'
 		},
 		'pms': {
 			name: 'Piemontèis',
@@ -749,6 +751,7 @@
 			source: 'rules/yo/yo-tilde.js'
 		}
 	} );
+	/* eslint-disable quote-props */
 
 	$.extend( $.ime.languages, {
 		ady: {
@@ -893,7 +896,7 @@
 		},
 		fon: {
 			autonym: 'Fon',
-			inputmethods: [ 'fon-tilde' ],
+			inputmethods: [ 'fon-tilde' ]
 		},
 		fi: {
 			autonym: 'Suomi',

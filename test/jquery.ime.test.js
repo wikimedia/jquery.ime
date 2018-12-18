@@ -56,8 +56,12 @@
 
 	QUnit.test( 'Custom event tests', 2, function ( assert ) {
 		var seen = { language: false, method: false };
-		$textarea.on( 'imeLanguageChange.test', function () { seen.language = true; } );
-		$textarea.on( 'imeMethodChange.test', function () { seen.method = true; } );
+		$textarea.on( 'imeLanguageChange.test', function () {
+			seen.language = true;
+		} );
+		$textarea.on( 'imeMethodChange.test', function () {
+			seen.method = true;
+		} );
 		textareaIME.setLanguage( 'hi' );
 		assert.ok( seen.language, 'imeLanguageChange fires' );
 		$textarea.off( 'imeLanguageChange.test' );
@@ -276,6 +280,7 @@
 
 	/**
 	 * A general framework for testing a keyboard layout.
+	 * @param {Object} [options]
 	 */
 	imeTest = function ( options ) {
 		var opt = $.extend( {
@@ -338,7 +343,7 @@
 		} );
 	};
 
-	/*global testFixtures */
+	/* global testFixtures */
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	$.each( testFixtures, function ( i, fixture ) {
 		imeTest( fixture );

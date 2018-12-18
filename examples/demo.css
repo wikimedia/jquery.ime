@@ -14,8 +14,8 @@ textarea {
 	margin-bottom: 20px;
 }
 
-[contenteditable] {
-	border: 1px solid green;
+[ contenteditable ] {
+	border: 1px solid #008000;
 	height: 300px;
 	width: 500px;
 }
