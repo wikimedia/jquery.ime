@@ -3,6 +3,16 @@ $( document ).ready( function () {
 
 	var $ced, ime, $imeSelector, $langSelector;
 
+	function listInputMethods( lang ) {
+		$imeSelector.empty();
+		ime.getInputMethods( lang ).forEach( function ( inputMethod ) {
+			$imeSelector.append(
+				$( '<option/>' ).attr( 'value', inputMethod.id ).text( inputMethod.name )
+			);
+		} );
+		$imeSelector.trigger( 'change' );
+	}
+
 	$.ime.setPath( '../../' );
 	$ced = $( '#ced' );
 	// Initialise IME on this element
@@ -41,16 +51,6 @@ $( document ).ready( function () {
 	$ced.on( 'imeLanguageChange', function () {
 		listInputMethods( ime.getLanguage() );
 	} );
-
-	function listInputMethods( lang ) {
-		$imeSelector.empty();
-		ime.getInputMethods( lang ).forEach( function ( inputMethod ) {
-			$imeSelector.append(
-				$( '<option/>' ).attr( 'value', inputMethod.id ).text( inputMethod.name )
-			);
-		} );
-		$imeSelector.trigger( 'change' );
-	}
 
 	$imeSelector.on( 'change', function () {
 		var inputMethodId = $imeSelector.find( 'option:selected' ).val();
