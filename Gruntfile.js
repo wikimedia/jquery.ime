@@ -10,6 +10,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	// Project configuration.
 	grunt.initConfig( {
@@ -63,7 +64,11 @@ module.exports = function ( grunt ) {
 			}
 		},
 		qunit: {
-			files: [ 'test/index.html' ]
+			all: {
+				options: {
+					urls: [ 'http://localhost:9000/test/index.html' ]
+				}
+			}
 		},
 		jshint: {
 			options: {
@@ -99,12 +104,20 @@ module.exports = function ( grunt ) {
 				'<%= csslint.all %>'
 			],
 			tasks: 'lint'
+		},
+		connect: {
+			server: {
+				options: {
+					hostname: '*',
+					port: 9000
+				}
+			}
 		}
 	} );
 
 	// Default task.
 	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main', 'csslint' ] );
 	grunt.registerTask( 'build', [ 'concat', 'uglify', 'copy' ] );
-	grunt.registerTask( 'test', [ 'build', 'qunit' ] );
+	grunt.registerTask( 'test', [ 'build', 'connect', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'lint', 'test' ] );
 };
