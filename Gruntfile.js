@@ -72,17 +72,19 @@ module.exports = function ( grunt ) {
 		eslint: {
 			all: [
 				'**/*.js',
-				'!libs/**',
 				'!dist/**',
+				'!libs/**',
 				'!node_modules/**'
 			]
 		},
 		stylelint: {
 			options: {
-				syntax: 'css'
+				syntax: 'less'
 			},
 			src: [
 				'**/*.css',
+				'!dist/**',
+				'!libs/**',
 				'!node_modules/**'
 			]
 		},
