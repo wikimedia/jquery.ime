@@ -5,7 +5,7 @@
 		defaultInputMethod;
 
 	// rangy is defined in the rangy library
-	/*global rangy */
+	/* global rangy */
 
 	function arrayKeys( obj ) {
 		return $.map( obj, function ( element, index ) {

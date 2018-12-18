@@ -20,7 +20,6 @@
 		"max-len": 0,
 		"no-multi-spaces": 0,
 		"no-useless-escape": 0,
-		"one-var": [ "error", { "var": "always" } ],
-		"spaced-comment": 0
+		"one-var": [ "error", { "var": "always" } ]
 	}
 }
