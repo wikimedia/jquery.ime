@@ -216,6 +216,7 @@
 		 *
 		 * @context {HTMLElement}
 		 * @param {jQuery.Event} e
+		 * @return {boolean}
 		 */
 		keydown: function ( e ) {
 			var ime = $( e.target ).data( 'ime' ),
@@ -410,6 +411,7 @@
 
 		/**
 		 * Decide on initial language to select
+		 * @return {string}
 		 */
 		decideLanguage: function () {
 			if ( $.ime.preferences.getLanguage() ) {

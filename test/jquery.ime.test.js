@@ -280,6 +280,7 @@
 
 	/**
 	 * A general framework for testing a keyboard layout.
+	 * @param {Object} [options]
 	 */
 	imeTest = function ( options ) {
 		var opt = $.extend( {
