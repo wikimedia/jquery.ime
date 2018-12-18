@@ -757,6 +757,7 @@
 	 * jQuery plugin ime
 	 *
 	 * @param {Object} option
+	 * @return {jQuery}
 	 */
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
@@ -865,6 +866,7 @@
 
 	/**
 	 * private function for debugging
+	 * @param {jQuery} [$obj]
 	 */
 	function debug( $obj ) {
 		if ( window.console && window.console.log ) {
