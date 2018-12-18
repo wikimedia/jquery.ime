@@ -4077,7 +4077,7 @@ var palochkaVariants = {
 			{ input: 'GIe', output: 'អើ', description: 'correction (Ie to :): GIe -> អើ' },
 
 			// test AltGr
-			{ input: [ [ 'e', true/*AltGr*/ ] ], output: 'ឯ', description: 'AltGr: AltGr-e -> ឯ' },
+			{ input: [ [ 'e', true ] ], output: 'ឯ', description: 'AltGr: AltGr-e -> ឯ' },
 			{ input: [ [ '2', true ] ], output: '@', description: 'AltGr: AltGr-2 -> @' },
 			{ input: [ 'G', [ '3', true ] ], output: 'អ៑', description: 'AltGr: G AltGr-3 -> អ៑' },
 			{ input: [ [ 'Q', true ] ], output: '᧠', description: 'AltGr-Shift: AltGr-Shift-q -> ᧠' },
@@ -4212,7 +4212,7 @@ var palochkaVariants = {
 			{ input: 'kEH', output: 'កែះ', description: 'NiDA: kEH -> កែះ' },
 
 			{ input: ' ', output: '\u200b', description: 'NiDA: SP -> ZWSP' },
-			{ input: [ [ ' ', false/*AltGr*/, true/*Shift*/ ] ], output: ' ', description: 'NiDA: Shift-SP -> SP' },
+			{ input: [ [ ' ', false, true ] ], output: ' ', description: 'NiDA: Shift-SP -> SP' },
 			{ input: [ [ ' ', true ] ], output: '\u00a0', description: 'NiDA: AltGr-SP -> NBSP' },
 
 			// test (non-)joiners, from Unicode 8.0 chapter 16
