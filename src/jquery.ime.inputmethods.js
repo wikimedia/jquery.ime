@@ -747,6 +747,10 @@
 		'yo-tilde': {
 			name: 'Yorùbá tilde',
 			source: 'rules/yo/yo-tilde.js'
+		},
+		'zh-pinyin-transliteration': {
+			name: '拼音符号输入法',
+			source: 'rules/zh/zh-pinyin-transliteration.js'
 		}
 	} );
 
@@ -1210,6 +1214,10 @@
 		yo: {
 			autonym: 'Yorùbá',
 			inputmethods: [ 'yo-alt', 'yo-tilde' ]
+		},
+		zh: {
+			autonym: '中文',
+			inputmethods: [ 'zh-pinyin-transliteration' ]
 		}
 	} );
 
