@@ -642,6 +642,10 @@
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
 		},
+		'ses-tilde': {
+			name: 'Koyraboro Senni tilde',
+			source: 'rules/ses/ses-tilde.js'
+		},
 		'sg-tilde': {
 			name: 'Sängö',
 			source: 'rules/sg/sg-tilde.js'
@@ -1153,6 +1157,10 @@
 		se: {
 			autonym: 'Davvisámegiella',
 			inputmethods: [ 'se-normforms' ]
+		},
+		ses: {
+			autonym: 'Koyraboro Senni',
+			inputmethods: [ 'ses-tilde' ]
 		},
 		sg: {
 			autonym: 'Sängö',

@@ -3777,6 +3777,22 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Koyraboro Senni tilde test',
+		inputmethod: 'ses-tilde',
+		tests: [
+			{ input: 'Zah~o', output: 'Zahõ', description: 'Koyraboro Senni tilde Zahõ' },
+			{ input: '~Yaali', output: 'Ɲaali', description: 'Koyraboro Senni tilde Ɲaali' },
+			{ input: 'h~aa', output: 'hãa', description: 'Koyraboro Senni tilde hãa' },
+			{ input: '~senday', output: 'šenday', description: 'Koyraboro Senni tilde šenday' },
+			{ input: 'ka~g', output: 'kaŋ', description: 'Koyraboro Senni tilde kaŋ' },
+			{ input: 'KA~G', output: 'KAŊ', description: 'Koyraboro Senni tilde KAŊ' },
+			{ input: 'addu~y~yaa', output: 'adduɲɲaa', description: 'Koyraboro Senni tilde adduɲɲaa' },
+			{ input: '~Sendaa', output: 'Šendaa', description: 'Koyraboro Senni tilde Šendaa' },
+			{ input: 'socie~/te~/', output: 'société', description: 'Koyraboro Senni tilde société' },
+			{ input: '~zeenaa', output: 'žeenaa', description: 'Koyraboro Senni tilde žeenaa' }
+		]
+	},
+	{
 		description: 'Sängö tilde test',
 		inputmethod: 'sg-tilde',
 		tests: [
