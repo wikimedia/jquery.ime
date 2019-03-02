@@ -143,7 +143,7 @@
 			source: 'rules/cyrl/cyrl-palochka.js'
 		},
 		'da-normforms': {
-			name: 'normalformer',
+			name: 'Brug translitteration',
 			source: 'rules/da/da-normforms.js'
 		},
 		'dag-alt': {
