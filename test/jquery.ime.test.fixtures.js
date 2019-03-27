@@ -194,14 +194,16 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'South Azerbaijani Keyboard Layout: ? -> ؟' }
 		],
 		inputmethod: 'azb-kbd'
-	},{
+	},
+	{
 		description: 'Belarusian transliteration test',
 		tests: [
 			{ input: '[];\',.`', output: 'х\'жэбюё', description: 'Belarusian transliteration - [];\',.` -> х\'жэбюё' },
 			{ input: '{}:"<>~', output: 'Х\'ЖЭБЮЁ', description: 'Belarusian transliteration - {}:"<>~ -> Х\'ЖЭБЮЁ' }
 		],
 		inputmethod: 'be-transliteration'
-	},{
+	},
+	{
 		description: 'Belarusian Łacinka test',
 		tests: [
 			{ input: '=c', output: 'č', description: 'Belarusian Łacinka - =c -> č' },
@@ -210,7 +212,8 @@ var palochkaVariants = {
 			{ input: '-l', output: 'ł', description: 'Belarusian Łacinka - -l -> ł' }
 		],
 		inputmethod: 'be-latin'
-	},{
+	},
+	{
 		description: 'Western Baluchi Keyboard test',
 		tests: [
 			{ input: '`',  output: '\u200c', description: 'Western Baluchi Keyboard Layout: ` -> \\u200c' },
@@ -305,7 +308,8 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'Western Baluchi Keyboard Layout: ? -> ؟' }
 		],
 		inputmethod: 'bgn-kbd'
-	},{
+	},
+	{
 		description: 'Bamanankan Alt layout test',
 		tests: [
 			{
@@ -353,14 +357,14 @@ var palochkaVariants = {
 					[ 'H', true ],
 					[ 'O', true ],
 					[ 'B', true ]
-
 				],
 				output: 'Ɲ́Ɛ̂Ɔ̌',
 				description: 'Bamanankan Alt - Ɲ́Ɛ̂Ɔ̌'
 			}
 		],
 		inputmethod: 'bm-alt'
-	},{
+	},
+	{
 		description: 'Bengali Probhat layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Probhat - ka' },
@@ -371,7 +375,8 @@ var palochkaVariants = {
 			{ input: 'be', output: 'বী', description: 'Bengali Probhat - bee' }
 		],
 		inputmethod: 'bn-probhat'
-	},{
+	},
+	{
 		description: 'Tibetan EWTS test',
 		tests: [
 			{ input: 'brgyud', output: 'བརྒྱུད', description: 'Tibetan EWTS - brgyud' },
@@ -385,7 +390,8 @@ var palochkaVariants = {
 			{ input: 'bau', output: 'བཽ', description: 'Tibetan EWTS - bau' }
 		],
 		inputmethod: 'bo-ewts'
-	},{
+	},
+	{
 		description: 'Tibetan Sambhota Keyboard test',
 		tests: [
 			{ input: 'bfrgyud', output: 'བརྒྱུད', description: 'Tibetan Sambhota - brgyud' },
@@ -395,7 +401,8 @@ var palochkaVariants = {
 			{ input: 'pafdma', output: 'པདྨ', description: 'Tibetan Sambhota - pafdma' }
 		],
 		inputmethod: 'bo-sambhota'
-	},{
+	},
+	{
 		description: 'Chuvash (AltGr) with jcuken',
 		tests: [
 			{ input: [ [ 'а', true ] ], output: 'ӑ', description: 'Alt + a (Cyrillic) -> a breve (Cyrillic), lower case' },
@@ -408,7 +415,8 @@ var palochkaVariants = {
 			{ input: [ [ 'У', true ] ], output: 'Ӳ', description: 'Alt + У (Cyrillic) -> Ue (Cyrillic), upper case' }
 		],
 		inputmethod: 'cv-cyr-altgr'
-	},{
+	},
+	{
 		description: 'Chuvash (AltGr) with qwerty (en-US)',
 		tests: [
 			{ input: [ [ 'f', true ] ], output: 'ӑ', description: 'Alt + f -> a breve (Cyrillic), lower case' },
@@ -421,7 +429,8 @@ var palochkaVariants = {
 			{ input: [ [ 'E', true ] ], output: 'Ӳ', description: 'Alt + E (Latin) -> Ue (Cyrillic), upper case' }
 		],
 		inputmethod: 'cv-cyr-altgr'
-	},{
+	},
+	{
 		description: 'Chuvash (Mercen): CVLat with qwerty (en-US)',
 		tests: [
 			{ input: [ [ 'a', true ] ], output: 'ă', description: 'Alt + a -> a breve, lower case' },
@@ -438,7 +447,8 @@ var palochkaVariants = {
 			{ input: [ [ 'W', true ] ], output: 'Ü', description: 'Alt + W -> Ue, upper case' }
 		],
 		inputmethod: 'cv-lat-altgr'
-	},{
+	},
+	{
 		description: 'Chuvash (Number based) with qwerty (en-US)',
 		tests: [
 			{ input: '1', output: '?', description: '1 -> ?' },
@@ -460,7 +470,8 @@ var palochkaVariants = {
 			{ input: '0', output: ']', description: '0 -> [ (wiki format links)' }
 		],
 		inputmethod: 'cv-cyr-numbers'
-	},{
+	},
+	{
 		description: 'Chuvash (Number based) with jcuken',
 		tests: [
 			{ input: '1', output: '?', description: '1 -> ?' },
@@ -481,7 +492,8 @@ var palochkaVariants = {
 			{ input: '0', output: ']', description: '0 -> [ (wiki format links)' }
 		],
 		inputmethod: 'cv-cyr-numbers'
-	},{
+	},
+	{
 		description: 'Bengali Avro layout test',
 		tests: [
 			{ input: 'ka', output: 'কা', description: 'Bengali Avro - ka' },
@@ -490,7 +502,8 @@ var palochkaVariants = {
 			{ input: 'kee', output: 'কী', description: 'Bengali Avro - kee' }
 		],
 		inputmethod: 'bn-avro'
-	},{
+	},
+	{
 		description: 'Dagbani Alt layout test',
 		tests: [
 			{
@@ -533,7 +546,8 @@ var palochkaVariants = {
 			}
 		],
 		inputmethod: 'dag-alt'
-	},{
+	},
+	{
 		description: 'Ewe tilde test',
 		tests: [
 			{ input: '~D', output: 'Ɖ', description: 'Ewe ~D -> Ɖ' },
@@ -557,7 +571,8 @@ var palochkaVariants = {
 			{ input: 'to~^', output: 'tǒ', description: 'Ewe to~^ -> tǒ' }
 		],
 		inputmethod: 'ee-tilde'
-	},{
+	},
+	{
 		description: 'Cyrillic with palochka transliteration test',
 		tests: [
 			// Sanity test - palochka should produce itself
@@ -584,7 +599,8 @@ var palochkaVariants = {
 			{ input: [ [ 'Ш', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic capital Ш becomes palochka' }
 		],
 		inputmethod: 'cyrl-palochka'
-	},{
+	},
+	{
 		description: 'Georgian Transliteration test',
 		tests: [
 			{ input: 'vikipedia\\`', output: 'ვიკიპედია`', description: 'Georgian vikipedia with `' },
@@ -593,14 +609,16 @@ var palochkaVariants = {
 			{ input: 'WRTSJZC`~', output: 'ჭღთშჟძჩ„“', description: 'WRTSJZC`~ in Georgian' }
 		],
 		inputmethod: 'ka-transliteration'
-	},{
+	},
+	{
 		description: 'Kikuyu tilde test',
 		tests: [
 			{ input: 'Ng~ug~i wa Thiong\'o', output: 'Ngũgĩ wa Thiong\'o', description: 'Kikuyu Ngũgĩ wa Thiong\'o' },
 			{ input: 'NG~UG~I', output: 'NGŨGĨ', description: 'Kikuyu NGŨGĨ' }
 		],
 		inputmethod: 'ki-tilde'
-	},{
+	},
+	{
 		description: 'Hausa tilde test',
 		tests: [
 			{ input: '~B', output: 'Ɓ', description: 'Hausa tilde ~B -> Ɓ' },
@@ -617,7 +635,8 @@ var palochkaVariants = {
 			{ input: 'i~^', output: 'î', description: 'Hausa tilde i~^ -> î' }
 		],
 		inputmethod: 'ha-tilde'
-	},{
+	},
+	{
 		description: 'Igbo tilde test',
 		tests: [
 			{ input: '~I', output: 'Ị', description: 'Igbo tilde ~B -> Ɓ' },
@@ -632,7 +651,8 @@ var palochkaVariants = {
 			{ input: 'i~/', output: 'í', description: 'Igbo tilde i~/ -> í' }
 		],
 		inputmethod: 'ig-tilde'
-	},{
+	},
+	{
 		description: 'Esperanto x-sistemo test',
 		tests: [
 			{ input: 'cx', output: 'ĉ', description: 'Esperanto cx' },
@@ -666,7 +686,8 @@ var palochkaVariants = {
 			}
 		],
 		inputmethod: 'eo-x'
-	},{
+	},
+	{
 		description: 'German Transliteration and keybuffer test',
 		tests: [
 			{ input: '~o', output: 'ö', description: 'German ö' },
@@ -674,7 +695,8 @@ var palochkaVariants = {
 			{ input: '~s', output: 'ß', description: 'German ß' }
 		],
 		inputmethod: 'de-transliteration'
-	},{
+	},
+	{
 		description: 'Gothic Standard',
 		tests: [
 			{ input: 'anastodeinilaufs', output: '𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃', description: 'Gothic 𐌰𐌽𐌰𐍃𐍄𐍉𐌳𐌴𐌹𐌽𐌹𐌻𐌰𐌿𐍆𐍃' },
@@ -682,7 +704,8 @@ var palochkaVariants = {
 			{ input: 'Tis', output: '𐌸𐌹𐍃', description: 'Gothic 𐌸𐌹𐍃' }
 		],
 		inputmethod: 'got-standard'
-	},{
+	},
+	{
 		description: 'Gujarati Transliteration',
 		tests: [
 			{ input: '~', output: '~', description: 'Gujarati - tilde must not change' },
@@ -703,14 +726,16 @@ var palochkaVariants = {
 			{ input: 'gnaati', output: 'જ્ઞાતિ', description: 'Gujarati gnaati - testing gn a new combination' }
 		],
 		inputmethod: 'gu-transliteration'
-	},{
+	},
+	{
 		description: 'Gujarati Phonetic',
 		tests: [
 			{ input: '\\', output: 'ૉ', description: 'Gujarati - O Matra' },
 			{ input: 'k\\mfpyuwr', output: 'કૉમ્પયુટર', description: 'Gujarati - Computer' }
 		],
 		inputmethod: 'gu-phonetic'
-	},{
+	},
+	{
 		description: 'Urdu Phonetics',
 		tests: [
 			{ input: '1',  output: '1', description: 'Urdu Numeral 1 -> 1' },
@@ -725,20 +750,23 @@ var palochkaVariants = {
 			{ input: '0',  output: '0', description: 'Urdu Numeral 0 -> 0' }
 		],
 		inputmethod: 'ur-phonetic'
-	},{
+	},
+	{
 		description: 'Gujarati Inscript 2',
 		tests: [
 			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref' },
 			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha' }
 		],
 		inputmethod: 'gu-inscript2'
-	},{
+	},
+	{
 		description: 'Gujarati Inscript',
 		tests: [
 			{ input: '""d"a', output: 'ઠઠ્ઠો', description: 'Gujarati Inscript test' }
 		],
 		inputmethod: 'gu-inscript'
-	},{
+	},
+	{
 		description: 'Hebrew layout and extended keys test',
 		tests: [
 			// The output is the LRM control character
@@ -753,13 +781,15 @@ var palochkaVariants = {
 			{ input: [ [ '-', true ] ], output: '־', description: 'Hebrew extended -' }
 		],
 		inputmethod: 'he-standard-2012-extonly'
-	},{
+	},
+	{
 		description: 'Hindi InScript layout test',
 		tests: [
 			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
 		],
 		inputmethod: 'hi-inscript'
-	},{
+	},
+	{
 		description: 'Hindi transliteration tests - for textarea',
 		tests: [
 			// The regex returns \n for \r.
@@ -767,7 +797,8 @@ var palochkaVariants = {
 		],
 		inputmethod: 'hi-transliteration',
 		inputType: 'textarea'
-	},{
+	},
+	{
 		description: 'Hindi Phonetic tests',
 		tests: [
 			{ input: 'dffB', output: 'द्\u200cभ', description: 'Hindi Phonetic ZWNJ character' },
@@ -775,7 +806,8 @@ var palochkaVariants = {
 			{ input: 'k`k', output: 'कॆक', description: 'Hindi Phonetic Cake' }
 		],
 		inputmethod: 'hi-phonetic'
-	},{
+	},
+	{
 		description: 'Hindi transliteration tests',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
@@ -883,7 +915,8 @@ var palochkaVariants = {
 			{ input: '0', output: '०', description: '0 for ० translitration' }
 		],
 		inputmethod: 'hi-transliteration'
-	},{
+	},
+	{
 		description: 'Ho Transliteration test',
 		tests: [
 			{ input: 'abcdeghijklmnopqrstuvwxy', output: '𑣁𑣗c𑣑𑣈𑣋𑣙𑣂𑣎𑣌𑣚𑣖𑣓𑣉𑣘𑣄𑣜𑣞𑣒𑣃𑣀𑣟𑣝𑣅', description: 'Ho abcdeghijklmnopqrst' },
@@ -897,7 +930,8 @@ var palochkaVariants = {
 			{ input: 'AiAuChDhNgNjNnRrTh', output: '𑢦𑢧𑢯𑢴𑢪𑢭𑢰𑢻𑢵', description: 'Ho AiAuChDhNgNjNnRrTh' }
 		],
 		inputmethod: 'hoc-transliteration'
-	},{
+	},
+	{
 		description: 'Armenian phonetic layout with extended keys test',
 		tests: [
 			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
@@ -914,7 +948,8 @@ var palochkaVariants = {
 			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
 		],
 		inputmethod: 'hy-ephonetic'
-	},{
+	},
+	{
 		description: 'Armenian typewriter layout with extended keys test',
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
@@ -929,7 +964,8 @@ var palochkaVariants = {
 			{ input: 'ZXCVBNM<>?', output: 'ԺԴՉՅԶԼՔԽՇՌ', description: 'Armenian typewriter 3rd row With Shift' }
 		],
 		inputmethod: 'hy-typewriter'
-	},{
+	},
+	{
 		description: 'Armenian alternative phonetic layout with extended keys test',
 		tests: [
 			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
@@ -946,7 +982,8 @@ var palochkaVariants = {
 			{ input: 'ZXCVBNM<>?', output: 'ԶՂՑՎԲՆՄ«»՞', description: 'Armenian phonetic 3rd row With Shift' }
 		],
 		inputmethod: 'hy-ephoneticalt'
-	},{
+	},
+	{
 		description: 'Armenian MS legacy Eastern layout with extended keys test',
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
@@ -961,7 +998,8 @@ var palochkaVariants = {
 			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՎԲՆՄՇՂԾ', description: 'Armenian MS legacy Eastern 3rd row With Shift' }
 		],
 		inputmethod: 'hy-emslegacy'
-	},{
+	},
+	{
 		description: 'Dinka din-fqsx input method test',
 		tests: [
 			{ input: 'ufu', output: 'uɣu', description: 'Dinka uɣu' },
@@ -986,7 +1024,8 @@ var palochkaVariants = {
 			{ input: '\\Xi\\x', output: 'Xix', description: 'Dinka Xix' }
 		],
 		inputmethod: 'din-fqsx'
-	},{
+	},
+	{
 		description: 'Armenian MS legacy Westerm layout with extended keys test',
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
@@ -1001,7 +1040,8 @@ var palochkaVariants = {
 			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՒՊՆՄՇՂԾ', description: 'Armenian MS legacy Westerm 3rd row With Shift' }
 		],
 		inputmethod: 'hy-wmslegacy'
-	},{
+	},
+	{
 		description: 'Batak QWERTY test',
 		tests: [
 			{ input: 'q', output: 'ᯥ', description: 'Batak QWERTY - q - u' },
@@ -1078,7 +1118,8 @@ var palochkaVariants = {
 			{ input: [ [ '`', true ] ], output: '`', description: 'Batak QWERTY - alt-`' }
 		],
 		inputmethod: 'batak-qwerty'
-	},{
+	},
+	{
 		description: 'Javanese transliteration test',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
@@ -1111,7 +1152,8 @@ var palochkaVariants = {
 			{ input: ')', output: '꧍', description: 'last line test' }
 		],
 		inputmethod: 'jv-transliteration'
-	},{
+	},
+	{
 		description: 'Kannada KGP test',
 		tests: [
 			{ input: 'aAiIuURRXeEYoOVaMaH', output: 'ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ', description: 'vowels ಅಆಇಈಉಊಋೠಎಏಐಒಓಔಅಂಅಃ' },
@@ -1141,7 +1183,8 @@ var palochkaVariants = {
 			{ input: 'rFfyAMkf', output: 'ರ\u200d್ಯಾಂಕ್', description: 'ZWJ ರ\u200d್ಯಾಂಕ್' } // with ZWJ
 		],
 		inputmethod: 'kn-kgp'
-	},{
+	},
+	{
 		description: 'Kannada Transliteration test',
 		tests: [
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' },
@@ -1774,13 +1817,15 @@ var palochkaVariants = {
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
 		],
 		inputmethod: 'kn-transliteration'
-	},{
+	},
+	{
 		description: 'Kannada InScript 2 test',
 		tests: [
 			{ input: [ [ '.', true ] ], output: '॥', description: 'Kannada InScript 2 AltGr-. -> ॥' }
 		],
 		inputmethod: 'kn-inscript2'
-	},{
+	},
+	{
 		description: 'Kajin M̧ajeļ (Marshallese) test',
 		tests: [
 			{ input: 'Y', output: 'Ū', description: 'Y for Ū in Marshallese' },
@@ -1801,61 +1846,71 @@ var palochkaVariants = {
 			{ input: 'v', output: 'ļ', description: 'v for ļ in Marshallese' }
 		],
 		inputmethod: 'mh'
-	},{
+	},
+	{
 		description: 'Mongolian mn-trad test',
 		tests: [
 			{ input: '{QWE}', output: '〈᠅ᠸᠧ〉', description: 'Mongolian mn-trad' }
 		],
 		inputmethod: 'mn-trad'
-	},{
+	},
+	{
 		description: 'Mongolian mn-todo test',
 		tests: [
 			{ input: '<GHJ>', output: '《ᡘᡙᠴ》', description: 'Mongolian mn-todo' }
 		],
 		inputmethod: 'mn-todo'
-	},{
+	},
+	{
 		description: 'Mongolian mn-tradali test',
 		tests: [
 			{ input: 'adgj', output: 'ᢊᢌᢎᢐ', description: 'Mongolian mn-tradali' }
 		],
 		inputmethod: 'mn-tradali'
-	},{
+	},
+	{
 		description: 'Mongolian mn-todoali test',
 		tests: [
 			{ input: 'kjhg', output: 'ᢑᢘᢏᢎ', description: 'Mongolian mn-todoali' }
 		],
 		inputmethod: 'mn-todoali'
-	},{
+	},
+	{
 		description: 'Mongolian phags-pa test',
 		tests: [
 			{ input: 'SFHK', output: 'ꡚꡰꡯꡁ', description: 'Mongolian phags-pa' }
 		],
 		inputmethod: 'phagspa'
-	},{
+	},
+	{
 		description: 'Manchu mnc test',
 		tests: [
 			{ input: 'LWE', output: 'ᡀᠸᠧ', description: 'Manchu mnc' }
 		],
 		inputmethod: 'mnc'
-	},{
+	},
+	{
 		description: 'Manchu mnc-ali test',
 		tests: [
 			{ input: 'ASG', output: 'ᢤᢥᢪ', description: 'Manchu mnc-ali' }
 		],
 		inputmethod: 'mnc-ali'
-	},{
+	},
+	{
 		description: 'Xibe sjo test',
 		tests: [
 			{ input: 'WER', output: 'ᠸᠧᡰ', description: 'Xibe sjo 〈ᠴᠣᡝ〉' }
 		],
 		inputmethod: 'sjo'
-	},{
+	},
+	{
 		description: 'Myanmar mm3 test',
 		tests: [
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
 		],
 		inputmethod: 'my-mm3'
-	},{
+	},
+	{
 		description: 'Marathi Phonetic test',
 		tests: [
 			{
@@ -1873,7 +1928,8 @@ var palochkaVariants = {
 		],
 		inputType: 'input',
 		inputmethod: 'mr-phonetic'
-	},{
+	},
+	{
 		description: 'Marathi InScript 2 test',
 		tests: [
 			{ input: [ [ '1', false ] ], output: '१', description: 'Marathi InScript regular 1 - १' },
@@ -1882,7 +1938,8 @@ var palochkaVariants = {
 			{ input: [ [ '2', true ] ], output: '\u200c', description: 'Marathi InScript regular 2 - ZWNJ' }
 		],
 		inputmethod: 'mr-inscript2'
-	},{
+	},
+	{
 		description: 'Marathi Transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Marathi transliteration - \\~ -> ~' },
@@ -1977,13 +2034,15 @@ var palochkaVariants = {
 			{ input: 'dnyaana', output: 'ज्ञान', description: 'dnyana for ज्ञान translitration' }
 		],
 		inputmethod: 'mr-transliteration'
-	},{
+	},
+	{
 		description: 'Malayalam InScript test',
 		tests: [
 			{ input: 'ka', output: 'കോ' }
 		],
 		inputmethod: 'ml-inscript'
-	},{
+	},
+	{
 		description: 'Malayalam Transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Malayalam transliteration - \\~ -> ~' },
@@ -2008,7 +2067,8 @@ var palochkaVariants = {
 			{ input: '//', output: 'ഽ', description: 'Malayalam sign Avagraha' }
 		],
 		inputmethod: 'ml-transliteration'
-	},{
+	},
+	{
 		description: 'Udmurt ALT test',
 		tests: [
 			{ input: 'ц', output: 'ӵ', description: 'Udmurt letters, ц > ӵ' },
@@ -2033,7 +2093,8 @@ var palochkaVariants = {
 			{ input: [ [ 'Ё', true ] ], output: 'Ӧ', description: 'Udmurt letters, Alt-Ё -> Ӧ' }
 		],
 		inputmethod: 'udm-alt'
-	},{
+	},
+	{
 		description: 'Kyrgyz Cyrillic test',
 		tests: [
 			{ input: [ [ 'н', true ] ], output: 'ң', description: 'Kyrgyz Cyrillic letters, Alt-н' },
@@ -2050,13 +2111,15 @@ var palochkaVariants = {
 			{ input: 'У', output: 'У', description: 'Kyrgyz Cyrillic letters, У does not change' }
 		],
 		inputmethod: 'ky-cyrl-alt'
-	},{
+	},
+	{
 		description: 'Oriya InScript test',
 		tests: [
 			{ input: 'ka', output: 'କୋ', description: 'Odia InScript ka -> କୋ' }
 		],
 		inputmethod: 'or-inscript'
-	},{
+	},
+	{
 		description: 'Oriya OdiScript test',
 		tests: [
 			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia OdiScript j} -> ର‍୍ୟ' },
@@ -2092,7 +2155,8 @@ var palochkaVariants = {
 			{ input: 'TEgtds]gwdU', output: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ', description: 'Odia OdiScript TEgtds]gwdU-> ଓଡ଼ିସ୍କ୍ରିପ୍ଟ' }
 		],
 		inputmethod: 'or-OdiScript'
-	},{ description: 'Oriya phonetic test',
+	},
+	{ description: 'Oriya phonetic test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Oriya phonetic - \\~ -> ~' },
 			{ input: 'a',  output: 'ଅ', description: 'Odia phonetic a -> ଅ ' },
@@ -2148,7 +2212,8 @@ var palochkaVariants = {
 			{ input: 'kumbhkrzNeshu', output: 'କୁମ୍ଭକର୍ଣେଷୁ', description: 'Odia phonetic kumbhkrzNeshu -> କୁମ୍ଭକର୍ଣେଷୁ' }
 		],
 		inputmethod: 'or-lekhani'
-	},{
+	},
+	{
 		description: 'Oriya transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Oriya transliteration - \\~ -> ~' },
@@ -2200,7 +2265,8 @@ var palochkaVariants = {
 			{ input: 'ha', output: 'ହ', description: 'Odia transliteration ha -> ହ' }
 		],
 		inputmethod: 'or-transliteration'
-	},{
+	},
+	{
 		description: 'Punjabi Gurmukhi Transliteration',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Punjabi Gurmukhi transliteration - \\~ -> ~' },
@@ -2240,7 +2306,8 @@ var palochkaVariants = {
 			{ input: 'eeTaanagara', output: 'ਈਟਾਨਗਰ', description: 'Punjabi Gurmukhi eeTaanagara' }
 		],
 		inputmethod: 'pa-transliteration'
-	},{
+	},
+	{
 		description: 'Punjabi Gurmukhi Phonetic',
 		tests: [
 			{ input: 'st.', output: 'ਸਟ।', description: 'Punjabi Phonetic test - "st."' },
@@ -2250,7 +2317,8 @@ var palochkaVariants = {
 			{ input: '(', output: '੯', description: 'Punjabi Phonetic test - Nine' }
 		],
 		inputmethod: 'pa-phonetic'
-	},{
+	},
+	{
 		description: 'Tamil InScript test',
 		tests: [
 			{ input: 'ka', output: 'கோ', description: 'Tamil Inscript கோ' },
@@ -2275,13 +2343,15 @@ var palochkaVariants = {
 			{ input: ';qje\'d\'fj', output: 'சௌராட்டிர', description: 'Tamil Inscript சௌராட்டிர Saurattira' }
 		],
 		inputmethod: 'ta-inscript'
-	},{
+	},
+	{
 		description: 'Tamil InScript 2 test',
 		tests: [
 			{ input: [ [ '.', true ] ], output: '॥', description: 'Tamil InScript 2 AltGr-. -> ॥' }
 		],
 		inputmethod: 'ta-inscript2'
-	},{
+	},
+	{
 		description: 'Tamil Transliteration test',
 		tests: [
 			// (ks|KS)h should give non-conjunct form of ksh க்\u200cஷ் (with ZWNJ)
@@ -2352,7 +2422,8 @@ var palochkaVariants = {
 			{ input: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau', output: 'ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ', description: 'hahaahAhihIhiihuhUhuuhehEheehaihohoohOhau in Tamil transliteration for ஹஹாஹாஹிஹீஹீஹுஹூஹூஹெஹேஹேஹைஹொஹோஹோஹௌ non conjunct form' }
 		],
 		inputmethod: 'ta-transliteration'
-	},{
+	},
+	{
 		description: 'Tamil 99 test',
 		tests: [
 			// hfW should give non-conjunct form of ksha க்\u200cஷ (with ZWNJ)
@@ -2366,7 +2437,8 @@ var palochkaVariants = {
 			{ input: 'Ttkakf', output: 'க்ஷேமம்', description: 'Ttkakf in Tamil99 for க்ஷேமம் T -> க்ஷ conjunct form' }
 		],
 		inputmethod: 'ta-99'
-	},{
+	},
+	{
 		description: 'Telugu InScript test',
 		tests: [
 			{ input: 'k-', output: 'కః', description: 'Telugu k- (visarga)' },
@@ -2385,7 +2457,8 @@ var palochkaVariants = {
 			{ input: [ [ '+', true ] ], output: 'ౠ', description: 'Telugu Alt + (RRuu)' }
 		],
 		inputmethod: 'te-inscript'
-	},{
+	},
+	{
 		description: 'Telugu Apple test',
 		tests: [
 			{ input: 'k', output: 'ర', description: 'Telugu ra' },
@@ -2401,7 +2474,8 @@ var palochkaVariants = {
 
 		],
 		inputmethod: 'te-apple'
-	},{
+	},
+	{
 		description: 'Telugu Modular test',
 		tests: [
 			{ input: 'H', output: 'ధ', description: 'Telugu dha' },
@@ -2414,32 +2488,37 @@ var palochkaVariants = {
 
 		],
 		inputmethod: 'te-modular'
-	},{
+	},
+	{
 		description: 'Telugu Transliteration test',
 		tests: [
 			{ input: 'c', output: 'చ్', description: 'Telugu c' },
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' }
 		],
 		inputmethod: 'te-transliteration'
-	},{
+	},
+	{
 		description: 'Uzbek kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Uzbek kbd - . -> ю' }
 		],
 		inputmethod: 'uz-kbd'
-	},{
+	},
+	{
 		description: 'Belarusian kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Belarusian kbd - . -> ю' }
 		],
 		inputmethod: 'be-kbd'
-	},{
+	},
+	{
 		description: 'Ukrainian kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Ukrainian kbd - . -> ю' }
 		],
 		inputmethod: 'uk-kbd'
-	},{
+	},
+	{
 		description: 'Tarandine input method test',
 		tests: [
 			{ input: 'a§', output: 'á', description: 'Tarandine á' },
@@ -2448,7 +2527,8 @@ var palochkaVariants = {
 			{ input: 'O§', output: 'Ó', description: 'Tarandine Ó' }
 		],
 		inputmethod: 'roa-tara-GVU'
-	},{
+	},
+	{
 		description: 'Piemontèis input method test',
 		tests: [
 			{ input: ':e', output: 'ë', description: 'Piemontèis ë' },
@@ -2471,13 +2551,15 @@ var palochkaVariants = {
 			{ input: ':A', output: 'Ä', description: 'Piemontèis (local) Ä' }
 		],
 		inputmethod: 'pms'
-	},{
+	},
+	{
 		description: 'Russian kbd keyboard test',
 		tests: [
 			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }
 		],
 		inputmethod: 'ru-kbd'
-	},{
+	},
+	{
 		description: 'Romanized input method for Sanskrit test',
 		tests: [
 			{ input: 'aa', output: 'ā', description: 'Sanskrit transliteration - aa -> ā' },
@@ -2486,7 +2568,8 @@ var palochkaVariants = {
 			{ input: 'ḶL', output: 'Ḹ', description: 'Sanskrit transliteration - ḶL -> Ḹ' }
 		],
 		inputmethod: 'sa-iast'
-	},{
+	},
+	{
 		description: 'Southern Kurdish Keyboard test',
 		tests: [
 			{ input: '`',  output: '\u200c', description: 'Southern Kurdish Keyboard Layout: ` -> \u200c' },
@@ -2573,7 +2656,8 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'Southern Kurdish Keyboard Layout: ? -> ؟' }
 		],
 		inputmethod: 'sdh-kbd'
-	},{
+	},
+	{
 		description: 'Slovak keyboard test',
 		tests: [
 			{ input: '`', output: ';', description: 'Slovak ` -> ;' },
@@ -2657,13 +2741,15 @@ var palochkaVariants = {
 			{ input: '?', output: '_', description: 'Slovak ? -> _' }
 		],
 		inputmethod: 'sk-kbd'
-	},{
+	},
+	{
 		description: 'Sanskrit transliteration test',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Sanskrit transliteration - \\~ -> ~' }
 		],
 		inputmethod: 'sa-transliteration'
-	},{
+	},
+	{
 		description: 'Sinhala Wijesekara transliteration tests',
 		tests: [
 			// A consonant is entered with a single key.
@@ -2712,7 +2798,8 @@ var palochkaVariants = {
 			{ input: 'iDD', output: 'සෲ', description: 'Sinhala Wijesekara - iDD -> සෲ (SRR)' }
 		],
 		inputmethod: 'si-wijesekara'
-	},{
+	},
+	{
 		description: 'Kurdish h test',
 		tests: [
 			{ input: 'chh', output: 'ch', description: 'chh -> ch' },
@@ -2765,7 +2852,8 @@ var palochkaVariants = {
 			{ input: 'UU', output: 'Û', description: 'UU -> Û' }
 		],
 		inputmethod: 'ku-h'
-	},{
+	},
+	{
 		description: 'Kurdish tr test (for Turkish keyboard)',
 		tests: [
 			{ input: 'hhh', output: 'hh', description: 'hhh -> hh' },
@@ -2787,7 +2875,8 @@ var palochkaVariants = {
 			{ input: 'HH', output: 'Ḧ', description: 'HH -> Ḧ' }
 		],
 		inputmethod: 'ku-tr'
-	},{
+	},
+	{
 		description: 'Northern Luri keyboard test',
 		tests: [
 			{ input: '`', output: '\u200c', description: 'Northern Luri Keyboard Layout: ` -> \\u200c' },
@@ -2874,7 +2963,8 @@ var palochkaVariants = {
 			{ input: '?', output: '؟', description: 'Northern Luri Keyboard Layout: ? -> ؟' }
 		],
 		inputmethod: 'lrc-kbd'
-	},{
+	},
+	{
 		description: 'Lushootseed Tulalip keyboard test',
 		tests: [
 			{ input: 'e', output: 'ə', description: 'Lushootseed Tulalip ə' },
@@ -2909,7 +2999,8 @@ var palochkaVariants = {
 			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
 		],
 		inputmethod: 'lut-tulalip'
-	},{
+	},
+	{
 		description: 'Central Kurdish keyboard based on Arabic keyboard test',
 		tests: [
 			{ input: '`',  output: 'ژ', description: 'Central Kurdish keyboard based on Arabic: ` -> ژ' },
@@ -2999,7 +3090,8 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Arabic: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-arkbd'
-	},{
+	},
+	{
 		description: 'Central Kurdish keyboard based on Persian keyboard test',
 		tests: [
 			{ input: '`',  output: 'پ', description: 'Central Kurdish keyboard based on Persian: ` -> پ' },
@@ -3090,7 +3182,8 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Persian: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-fakbd'
-	},{
+	},
+	{
 		description: 'Central Kurdish keyboard based on Latin keyboard test',
 		tests: [
 			{ input: '1',  output: '١', description: 'Central Kurdish keyboard based on Latin: 1 -> ١' },
@@ -3177,7 +3270,8 @@ var palochkaVariants = {
 			{ input: '?',  output: '؟', description: 'Central Kurdish keyboard based on Latin: ? -> ؟' }
 		],
 		inputmethod: 'ckb-transliteration-lakbd'
-	},{
+	},
+	{
 		description: 'SIL IPA keyboard test',
 		tests: [
 			// This test suite follows the layout description document of
@@ -3282,6 +3376,7 @@ var palochkaVariants = {
 			// Other symbols
 			{ input: 'w=',     output: 'ʍ',   description: 'Voiceless labial-velar fricative' },
 			{ input: 'w',      output: 'w',   description: 'Voiced labial-velar approximant' },
+
 			// Two variants
 			{ input: 'y<',     output: 'ɥ',   description: 'Voiced labial-palatal approximant (y<)' },
 			{ input: 'h=',     output: 'ɥ',   description: 'Voiced labial-palatal approximant (h=)' },
@@ -3454,7 +3549,8 @@ var palochkaVariants = {
 			{ input: '[}e:i=ja}}fjatl%a}}jE<:ky=tl%]', output: '[ˈeːɪjaˌfjatl̥aˌjœːkʏtl̥]', description: 'Eyjafjallajökull' }
 		],
 		inputmethod: 'ipa-sil'
-	},{
+	},
+	{
 		description: 'X-SAMPA IPA keyboard test',
 		tests: [
 			// Bilabial consonants
@@ -3677,7 +3773,8 @@ var palochkaVariants = {
 			}
 		],
 		inputmethod: 'ipa-x-sampa'
-	},{
+	},
+	{
 		description: 'Persian Standard keyboard test',
 		tests: [
 			{ input: '`',  output: '\u200d', description: 'Persian Standard keyboard - ` -> ZWJ' },
@@ -3817,7 +3914,8 @@ var palochkaVariants = {
 			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' }
 		],
 		inputmethod: 'fa-kbd'
-	},{
+	},
+	{
 		description: 'Fula Alt input method test',
 		tests: [
 			{ input: [ [ 'b', true ] ], output: 'ɓ', description: 'Fula ɓ' },
@@ -3850,7 +3948,8 @@ var palochkaVariants = {
 			{ input: 'n~~', output: 'n~', description: 'Fula n~' }
 		],
 		inputmethod: 'ff-alt'
-	},{
+	},
+	{
 		description: 'Venetian vec-GVU input method test',
 		tests: [
 			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
@@ -3869,7 +3968,8 @@ var palochkaVariants = {
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		],
 		inputmethod: 'vec-GVU'
-	},{
+	},
+	{
 		description: 'Wolof Alt input method test',
 		tests: [
 			{
@@ -3902,7 +4002,8 @@ var palochkaVariants = {
 			{ input: 'n~~', output: 'n~', description: 'Wolof n~' }
 		],
 		inputmethod: 'wo-alt'
-	},{
+	},
+	{
 		description: 'Yoruba yo-alt input method test',
 		tests: [
 			{
@@ -4007,7 +4108,8 @@ var palochkaVariants = {
 			}
 		],
 		inputmethod: 'yo-alt'
-	},{
+	},
+	{
 		description: 'Yoruba tilde test',
 		tests: [
 			{ input: '~E', output: 'Ẹ', description: 'Yoruba tilde ~E -> Ẹ' },
@@ -4023,7 +4125,8 @@ var palochkaVariants = {
 			{ input: '~o~v', output: 'ọ̌', description: 'Yoruba tilde ~o~v -> ọ̌' }
 		],
 		inputmethod: 'yo-tilde'
-	},{
+	},
+	{
 		description: 'Santali Inscript2 test',
 		tests: [
 			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
