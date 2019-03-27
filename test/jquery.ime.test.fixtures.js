@@ -594,6 +594,13 @@ var palochkaVariants = {
 		],
 		inputmethod: 'ka-transliteration'
 	},{
+		description: 'Kikuyu tilde test',
+		tests: [
+			{ input: 'Ng~ug~i wa Thiong\'o', output: 'Ngũgĩ wa Thiong\'o', description: 'Kikuyu Ngũgĩ wa Thiong\'o' },
+			{ input: 'NG~UG~I', output: 'NGŨGĨ', description: 'Kikuyu NGŨGĨ' }
+		],
+		inputmethod: 'ki-tilde'
+	},{
 		description: 'Hausa tilde test',
 		tests: [
 			{ input: '~B', output: 'Ɓ', description: 'Hausa tilde ~B -> Ɓ' },

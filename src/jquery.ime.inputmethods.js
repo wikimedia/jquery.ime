@@ -336,6 +336,10 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
+		'ki-tilde': {
+			name: 'Gĩkũyũ',
+			source: 'rules/ki/ki-tilde.js'
+		},
 		'kk-arabic': {
 			name: 'Kazakh Arabic transliteration',
 			source: 'rules/kk/kk-arabic.js'
@@ -981,6 +985,10 @@
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		ki: {
+			autonym: 'Gĩkũyũ',
+			inputmethods: [ 'ki-tilde' ]
 		},
 		kk: {
 			autonym: 'Қазақша',
