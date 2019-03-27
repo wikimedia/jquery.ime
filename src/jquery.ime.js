@@ -1,10 +1,27 @@
 ( function ( $ ) {
 	'use strict';
+
 	var TextEntryFactory, TextEntry, FormWidgetEntry, ContentEditableEntry,
 		defaultInputMethod;
 
 	// rangy is defined in the rangy library
-	/*global rangy */
+	/* global rangy */
+
+	function arrayKeys( obj ) {
+		return $.map( obj, function ( element, index ) {
+			return index;
+		} );
+	}
+
+	/**
+	 * private function for debugging
+	 * @param {jQuery} [$obj]
+	 */
+	function debug( $obj ) {
+		if ( window.console && window.console.log ) {
+			window.console.log( $obj );
+		}
+	}
 
 	/**
 	 * Just initializes an empty static object.
@@ -757,6 +774,7 @@
 	 * jQuery plugin ime
 	 *
 	 * @param {Object} option
+	 * @return {jQuery}
 	 */
 	$.fn.ime = function ( option ) {
 		return this.each( function () {
@@ -862,19 +880,4 @@
 		helpHandler: null, // Called for each ime option in the menu
 		showSelector: true
 	};
-
-	/**
-	 * private function for debugging
-	 */
-	function debug( $obj ) {
-		if ( window.console && window.console.log ) {
-			window.console.log( $obj );
-		}
-	}
-
-	function arrayKeys( obj ) {
-		return $.map( obj, function ( element, index ) {
-			return index;
-		} );
-	}
 }( jQuery ) );

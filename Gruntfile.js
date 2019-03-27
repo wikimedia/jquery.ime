@@ -1,26 +1,25 @@
-'use strict';
-
-/* jshint node: true */
+/* eslint-env node */
 module.exports = function ( grunt ) {
+	'use strict';
+
+	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	grunt.loadNpmTasks( 'grunt-contrib-csslint' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
+
 	// Project configuration.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
-			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+'
-				+ '<%= grunt.template.today("yyyymmdd") %>\n'
-				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
-				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-				+ ' License: <%= pkg.license %> */\n'
+			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+' +
+				'<%= grunt.template.today("yyyymmdd") %>\n' +
+				'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+				'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+				' License: <%= pkg.license %> */\n'
 		},
 		concat: {
 			options: {
@@ -70,38 +69,28 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		jshint: {
-			options: {
-				jshintrc: true
-			},
+		eslint: {
 			all: [
-				'*.js',
-				'src/*.js',
-				'rules/**/*.js',
-				'test/**/*.js'
+				'**/*.js',
+				'!dist/**',
+				'!libs/**',
+				'!node_modules/**'
 			]
 		},
-		jscs: {
-			fix: {
-				options: {
-					fix: true
-				},
-				src: '<%= jshint.all %>'
+		stylelint: {
+			options: {
+				syntax: 'less'
 			},
-			main: {
-				src: '<%= jshint.all %>'
-			}
-		},
-		csslint: {
-			all: [
-				'css/**/*.css'
+			src: [
+				'**/*.css',
+				'!dist/**',
+				'!libs/**',
+				'!node_modules/**'
 			]
 		},
 		watch: {
 			files: [
-				'.{csslintrc,jscsrc,jshintignore,jshintrc}',
-				'<%= jshint.all %>',
-				'<%= csslint.all %>'
+				'.{eslintrc.json}'
 			],
 			tasks: 'lint'
 		},
@@ -115,8 +104,7 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	// Default task.
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main', 'csslint' ] );
+	grunt.registerTask( 'lint', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'build', [ 'concat', 'uglify', 'copy' ] );
 	grunt.registerTask( 'test', [ 'build', 'connect', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'lint', 'test' ] );

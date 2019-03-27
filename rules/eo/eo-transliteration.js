@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	var eoTransliteration;
+
 	function prepareRules() {
 		var rules = [],
 			chars;
@@ -28,7 +30,7 @@
 		return rules;
 	}
 
-	var eoTransliteration = {
+	eoTransliteration = {
 		id: 'eo-transliteration',
 		name: 'Esperanto Transliteration',
 		description: 'Esperanto x-code transliteration',

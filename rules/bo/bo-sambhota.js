@@ -31,7 +31,7 @@
 
 				return sub;
 			default:
-				if (alwaysStacked) {
+				if ( alwaysStacked ) {
 					return sub;
 				}
 
@@ -60,6 +60,7 @@
 		version: '1.0',
 		maxKeyLength: 5,
 		patterns: [
+			/* eslint-disable max-statements-per-line */
 			[ ' ', function () { reinit(); return '་'; } ],
 			[ '\\.', function () { reinit(); return ' '; } ],
 			[ ',', function () { reinit(); return '།'; } ],
@@ -139,7 +140,7 @@
 			[ 'h', function () { return normalOrSub( 'ཧ', 'ྷ', true ); } ],
 			[ 'A', function () { return normalOrSub( 'ཨ', 'ྸ' ); } ],
 			[ 'R', function () { return normalOrSub( 'ཪ', 'ྼ' ); } ],
-			[ 'Y', 'ྻ'],
+			[ 'Y', 'ྻ' ],
 			[ 'ྲI', function () { reinit(); return 'ྲྀ'; } ],
 			[ 'ླI', function () { reinit(); return 'ླྀ'; } ],
 			[ 'I', function () { reinit(); return 'ྀ'; } ],
@@ -181,6 +182,7 @@
 			[ '7', function () { reinit(); return '༧'; } ],
 			[ '8', function () { reinit(); return '༨'; } ],
 			[ '9', function () { reinit(); return '༩'; } ]
+			/* eslint-enable max-statements-per-line */
 		]
 	};
 

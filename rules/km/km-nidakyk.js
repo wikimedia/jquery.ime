@@ -32,6 +32,11 @@
 			//       Make sure contextLength is large enough for
 			//       these rules.
 
+			// Khmer uses a lot of U+200B, zero width space,
+			// so ignore it in this file
+
+			/* eslint-disable no-irregular-whitespace */
+
 			// correction for two-part dependent vowels
 			[ '\u17c1a', 'e', '\u17c4' ], // ​េ + ​ា -> ​ោ (o)
 			[ '\u17b6e', 'a', '\u17c4' ], // ​ា + ​េ -> ​ោ (o)
@@ -209,6 +214,8 @@
 			[ 't', 'ឨ' ],
 			[ 'q', 'ៜ' ],
 			[ 'w', '\u17dd' ], // ​៝
+
+			/* eslint-enable no-irregular-whitespace */
 
 			// divination signs (digits)
 			[ '\\!', '៱' ], // shift-1

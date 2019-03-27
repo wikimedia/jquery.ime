@@ -1,0 +1,25 @@
+{
+	"extends": "wikimedia",
+	"parserOptions": {
+		"ecmaVersion": 6
+	},
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jquery": true,
+		"node": true,
+		"qunit": true
+	},
+	"globals": {
+		"require": false
+	},
+	"rules": {
+		"camelcase": 0,
+		"comma-spacing": 0,
+		"indent": 0,
+		"max-len": 0,
+		"no-multi-spaces": 0,
+		"no-useless-escape": 0,
+		"one-var": [ "error", { "var": "always" } ]
+	}
+}
