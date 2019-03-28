@@ -388,6 +388,10 @@
 			name: 'Kurdî-tr',
 			source: 'rules/ku/ku-tr.js'
 		},
+		'lg-tilde': {
+			name: 'Luganda tilde',
+			source: 'rules/lg/lg-tilde.js'
+		},
 		'ln-tilde': {
 			name: 'Lingála tilde',
 			source: 'rules/ln/ln-tilde.js'
@@ -1045,6 +1049,10 @@
 		lez: {
 			autonym: 'лезги',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		lg: {
+			autonym: 'Luganda',
+			inputmethods: [ 'lg-tilde' ]
 		},
 		lo: {
 			autonym: 'ລາວ',
