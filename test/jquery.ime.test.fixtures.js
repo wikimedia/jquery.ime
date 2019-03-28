@@ -3017,6 +3017,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Luganda tilde test',
+		inputmethod: 'lg-tilde',
+		tests: [
+			{ input: '~N~naano', output: 'Ŋŋaano', description: 'Luganda tilde test Ŋŋaano' }
+		]
+	},
+	{
 		description: 'Lingala tilde test',
 		inputmethod: 'ln-tilde',
 		tests: [
