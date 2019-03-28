@@ -4351,5 +4351,19 @@ var palochkaVariants = {
 			{ input: '~O~^', output: 'Ộ', description: 'Yoruba tilde ~O~^ -> Ộ' },
 			{ input: '~o~v', output: 'ọ̌', description: 'Yoruba tilde ~o~v -> ọ̌' }
 		]
+	},
+	{
+		description: 'Chinese Pinyin test',
+		inputmethod: 'zh-pinyin-transliteration',
+		tests: [
+			{ input: 'wen2', output: 'wén', description: 'Chinese Pinyin wén' },
+			{ input: 'lv3', output: 'lǚ', description: 'Chinese Pinyin lǚ' },
+			{ input: 'hua4', output: 'huà', description: 'Chinese Pinyin huà' },
+			{ input: 'liou2', output: 'liú', description: 'Chinese Pinyin liú' },
+			{ input: 'jv', output: 'ju', description: 'Chinese Pinyin ju' },
+			{ input: 'xiao4', output: 'xiào', description: 'Chinese Pinyin xiào' },
+			{ input: 'jv1', output: 'jū', description: 'Chinese Pinyin jū' },
+			{ input: 'wang3', output: 'wǎng', description: 'Chinese Pinyin wǎng' }
+		]
 	}
 ];
