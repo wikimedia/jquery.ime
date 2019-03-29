@@ -414,6 +414,10 @@
 			source: 'rules/mai/mai-inscript2.js',
 			depends: 'hi-inscript2'
 		},
+		'mg-tilde': {
+			name: 'Malagasy tilde',
+			source: 'rules/mg/mg-tilde.js'
+		},
 		'mh': {
 			name: 'Kajin M̧ajeļ',
 			source: 'rules/mh/mh.js'
@@ -1041,6 +1045,10 @@
 		mai: {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+		},
+		mg: {
+			autonym: 'Malagasy',
+			inputmethods: [ 'mg-tilde' ]
 		},
 		mh: {
 			autonym: 'Kajin M̧ajeļ',
