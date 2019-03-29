@@ -388,6 +388,10 @@
 			name: 'Kurdî-tr',
 			source: 'rules/ku/ku-tr.js'
 		},
+		'ln-tilde': {
+			name: 'Lingála tilde',
+			source: 'rules/ln/ln-tilde.js'
+		},
 		'lo-kbd': {
 			name: 'າຶກ',
 			source: 'rules/lo/lo-kbd.js'
@@ -925,6 +929,10 @@
 		ig: {
 			autonym: 'Igbo',
 			inputmethods: [ 'ig-tilde' ]
+		},
+		ln: {
+			autonym: 'Lingála',
+			inputmethods: [ 'ln-tilde' ]
 		},
 		lrc: {
 			autonym: 'لۊری شومالی',
