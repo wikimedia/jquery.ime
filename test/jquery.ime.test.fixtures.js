@@ -3141,6 +3141,15 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Malagasy tilde test',
+		inputmethod: 'mg-tilde',
+		tests: [
+			{ input: 'taty~\\', output: 'tatỳ', description: 'Malagasy tilde tatỳ' },
+			{ input: 'tana~\\na', output: 'tanàna', description: 'Malagasy tilde tanàna' },
+			{ input: 'To~^la~naro', output: 'Tôlan̈aro', description: 'Malagasy tilde Tôlan̈aro' }
+		]
+	},
+	{
 		description: 'Kajin M̧ajeļ (Marshallese) test',
 		inputmethod: 'mh',
 		tests: [
