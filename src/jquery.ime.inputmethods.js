@@ -336,6 +336,10 @@
 			name: 'ტრანსლიტერაცია',
 			source: 'rules/ka/ka-transliteration.js'
 		},
+		'kab-tilde': {
+			name: 'Taqbaylit Alatin tilde',
+			source: 'rules/kab/kab-tilde.js'
+		},
 		'kbp-tilde': {
 			name: 'Kabɩyɛ tilde',
 			source: 'rules/kbp/kbp-tilde.js'
@@ -1026,6 +1030,10 @@
 			autonym: 'ქართული ენა',
 			inputmethods: [ 'ka-transliteration', 'ka-kbd' ]
 		},
+		kab: {
+			autonym: 'Taqbaylit / ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
+			inputmethods: [ 'kab-tilde', 'ber-tfng' ]
+		},
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -1057,10 +1065,6 @@
 		ky: {
 			autonym: 'Кыргыз',
 			inputmethods: [ 'ky-cyrl-alt' ]
-		},
-		kab: {
-			autonym: 'ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
-			inputmethods: [ 'ber-tfng' ]
 		},
 		ku: {
 			autonym: 'Kurdî',
