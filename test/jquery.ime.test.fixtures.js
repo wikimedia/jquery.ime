@@ -3017,6 +3017,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Lingala tilde test',
+		inputmethod: 'ln-tilde',
+		tests: [
+			{ input: 'Mol~ong~o~/', output: 'Molɔngɔ́', description: 'Lingala tilde test ' },
+			{ input: 'B~end~e~/l~e ya bise~/', output: 'Bɛndɛ́lɛ ya bisé', description: 'Lingala tilde test Bɛndɛ́lɛ ya bisé' },
+			{ input: 'Libi~^ya', output: 'Libîya', description: 'Lingala tilde test Libîya' },
+			{ input: 'to~v', output: 'tǒ', description: 'Lingala tilde test tǒ' },
+			{ input: 'm~o~vk~o~/', output: 'mɔ̌kɔ́', description: 'Lingala tilde test ' },
+			{ input: 'bo~^ngo~/', output: 'bôngó', description: 'Lingala tilde test bôngó' },
+			{ input: 'wa~^na~/', output: 'wâná', description: 'Lingala tilde test wâná' }
+		]
+	},
+	{
 		description: 'Northern Luri keyboard test',
 		inputmethod: 'lrc-kbd',
 		tests: [
