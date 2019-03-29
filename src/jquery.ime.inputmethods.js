@@ -874,13 +874,13 @@
 			autonym: 'ብሊን',
 			inputmethods: [ 'byn-geezim' ]
 		},
-		ckb: {
-			autonym: 'کوردی',
-			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
-		},
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		ckb: {
+			autonym: 'کوردی',
+			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
 		},
 		cv: {
 			autonym: 'Чăвашла',
@@ -934,6 +934,10 @@
 			autonym: 'Fulfulde',
 			inputmethods: [ 'ff-alt' ]
 		},
+		fi: {
+			autonym: 'Suomi',
+			inputmethods: [ 'fi-transliteration' ]
+		},
 		fo: {
 			autonym: 'Føroyskt',
 			inputmethods: [ 'fo-normforms' ]
@@ -942,9 +946,9 @@
 			autonym: 'Fon',
 			inputmethods: [ 'fon-tilde' ]
 		},
-		fi: {
-			autonym: 'Suomi',
-			inputmethods: [ 'fi-transliteration' ]
+		fonipa: {
+			autonym: 'International Phonetic Alphabet',
+			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
 		gaa: {
 			autonym: 'Ga',
@@ -962,18 +966,6 @@
 			autonym: 'Igbo',
 			inputmethods: [ 'ig-tilde' ]
 		},
-		ln: {
-			autonym: 'Lingála',
-			inputmethods: [ 'ln-tilde' ]
-		},
-		lrc: {
-			autonym: 'لۊری شومالی',
-			inputmethods: [ 'lrc-kbd' ]
-		},
-		lud: {
-			autonym: 'lüüdi',
-			inputmethods: [ 'lud-transliteration' ]
-		},
 		gom: {
 			autonym: 'गोंयची कोंकणी / Gõychi Konknni',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'gom-inscript2' ]
@@ -990,6 +982,10 @@
 			autonym: 'हिन्दी',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
 		},
+		hne: {
+			autonym: 'छत्तीसगढ़ी',
+			inputmethods: [ 'hi-transliteration' ]
+		},
 		hoc: {
 			autonym: '𑢹𑣉𑣉',
 			inputmethods: [ 'hoc-transliteration' ]
@@ -1002,10 +998,6 @@
 			autonym: 'հայերեն',
 			inputmethods: [ 'hy-ephonetic', 'hy-typewriter', 'hy-ephoneticalt', 'hy-emslegacy', 'hy-wmslegacy' ]
 		},
-		hne: {
-			autonym: 'छत्तीसगढ़ी',
-			inputmethods: [ 'hi-transliteration' ]
-		},
 		inh: {
 			autonym: 'гӀалгӀай',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -1013,10 +1005,6 @@
 		is: {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
-		},
-		fonipa: {
-			autonym: 'International Phonetic Alphabet',
-			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ',
@@ -1078,9 +1066,21 @@
 			autonym: 'Luganda',
 			inputmethods: [ 'lg-tilde' ]
 		},
+		ln: {
+			autonym: 'Lingála',
+			inputmethods: [ 'ln-tilde' ]
+		},
 		lo: {
 			autonym: 'ລາວ',
 			inputmethods: [ 'lo-kbd' ]
+		},
+		lrc: {
+			autonym: 'لۊری شومالی',
+			inputmethods: [ 'lrc-kbd' ]
+		},
+		lud: {
+			autonym: 'lüüdi',
+			inputmethods: [ 'lud-transliteration' ]
 		},
 		lut: {
 			autonym: 'dxʷləšucid',
@@ -1122,6 +1122,10 @@
 			autonym: 'မြန်မာ',
 			inputmethods: [ 'my-mm3', 'my-xkb' ]
 		},
+		nb: {
+			autonym: 'Norsk (bokmål)',
+			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
+		},
 		ne: {
 			autonym: 'नेपाली',
 			inputmethods: [ 'ne-transliteration', 'ne-inscript2', 'ne-inscript', 'ne-rom', 'ne-trad' ]
@@ -1129,10 +1133,6 @@
 		'new': {
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
-		},
-		nb: {
-			autonym: 'Norsk (bokmål)',
-			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
@@ -1166,13 +1166,13 @@
 			autonym: 'русский',
 			inputmethods: [ 'ru-jcuken', 'ru-kbd', 'ru-phonetic', 'ru-yawerty' ]
 		},
-		sah: {
-			autonym: 'саха тыла',
-			inputmethods: [ 'sah-transliteration' ]
-		},
 		sa: {
 			autonym: 'संस्कृत',
 			inputmethods: [ 'sa-transliteration', 'sa-inscript2', 'sa-inscript', 'sa-iast' ]
+		},
+		sah: {
+			autonym: 'саха тыла',
+			inputmethods: [ 'sah-transliteration' ]
 		},
 		sat: {
 			autonym: 'ᱥᱟᱱᱛᱟᱞᱤ (संताली)',
