@@ -3755,6 +3755,17 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Sängö tilde test',
+		inputmethod: 'sg-tilde',
+		tests: [
+			{ input: 'se~^hi~:nga~:ngo~:', output: 'sêhïngängö', description: 'Sängö tilde test sêhïngängö' },
+			{ input: 'angba~^',  output: 'angbâ', description: 'Sängö tilde test angbâ' },
+			{ input: 'TE~/LE~/CHARGENGO', output: 'TÉLÉCHARGENGO', description: 'Sängö tilde test TÉLÉCHARGENGO' },
+			{ input: 'Kembe~/',  output: 'Kembé', description: 'Sängö tilde test Kembé' },
+			{ input: 'Mbre~\\s',  output: 'Mbrès', description: 'Sängö tilde test Mbrès' }
+		]
+	},
+	{
 		description: 'Sinhala Wijesekara transliteration tests',
 		inputmethod: 'si-wijesekara',
 		tests: [

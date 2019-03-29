@@ -634,6 +634,10 @@
 			name: 'Normal forms',
 			source: 'rules/se/se-normforms.js'
 		},
+		'sg-tilde': {
+			name: 'Sängö',
+			source: 'rules/sg/sg-tilde.js'
+		},
 		'si-singlish': {
 			name: 'සිංග්ලිෂ්',
 			source: 'rules/si/si-singlish.js'
@@ -1133,6 +1137,10 @@
 		se: {
 			autonym: 'Davvisámegiella',
 			inputmethods: [ 'se-normforms' ]
+		},
+		sg: {
+			autonym: 'Sängö',
+			inputmethods: [ 'sg-tilde' ]
 		},
 		shi: {
 			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
