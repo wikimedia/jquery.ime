@@ -1120,7 +1120,6 @@ var palochkaVariants = {
 			/* XXX Disabled. For some reason it fails in contenteditable.
 			{ input: 'thvsd advdk hsj', output: 'فارسی شیرین است', description: 'Persian Standard keyboard - text test' },
 			*/
-
 			{ input: [ [ ' ', true ] ], output: '\xa0', description: 'Persian Standard keyboard - AltGr+Space -> NBSP' },
 			{ input: [ [ ' ', false, true ] ], output: '\u200c', description: 'Persian Standard keyboard - Shift space is ZWNJ' }
 		]
