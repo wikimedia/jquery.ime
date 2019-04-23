@@ -782,6 +782,10 @@
 			name: 'TshiVenḓa tilde',
 			source: 'rules/ve/ve-tilde.js'
 		},
+		'vai-transliteration': {
+			name: 'Vai transliteration',
+			source: 'rules/vai/vai-transliteration.js'
+		},
 		'vec-GVU': {
 			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
@@ -1289,6 +1293,10 @@
 		uz: {
 			autonym: 'Oʻzbekcha',
 			inputmethods: [ 'uz-kbd' ]
+		},
+		vai: {
+			autonym: 'ꕙꔤ',
+			inputmethods: [ 'vai-transliteration' ]
 		},
 		ve: {
 			autonym: 'TshiVenḓa',
