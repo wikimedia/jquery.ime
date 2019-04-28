@@ -566,6 +566,14 @@
 			name: 'Tildemerkt transliterasjon',
 			source: 'rules/nb/nb-tildeforms.js'
 		},
+		'nqo-standard-qwerty': {
+			name: "N'Ko standard QWERTY",
+			source: 'rules/nqo/nqo-standard-qwerty.js'
+		},
+		'nqo-transliteration': {
+			name: "N'Ko transliteration",
+			source: 'rules/nqo/nqo-transliteration.js'
+		},
 		'nso-tilde': {
 			name: 'Sesotho sa Leboa tilde',
 			source: 'rules/nso/nso-tilde.js'
@@ -1181,6 +1189,10 @@
 		nn: {
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
+		},
+		nqo: {
+			autonym: 'ߒߞߏ',
+			inputmethods: [ 'nqo-standard-qwerty', 'nqo-transliteration' ]
 		},
 		nso: {
 			autonym: 'Sesotho sa Leboa',
