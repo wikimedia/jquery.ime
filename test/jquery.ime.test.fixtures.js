@@ -935,6 +935,22 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Dinka tilde input method test',
+		inputmethod: 'din-tilde',
+		tests: [
+			{ input: 'a~:', output: 'ä', description: 'Dinka tilde a~:' },
+			{ input: 'e~:', output: 'ë', description: 'Dinka tilde e~:' },
+			{ input: '~e', output: 'ɛ', description: 'Dinka tilde ~e' },
+			{ input: '~e~:', output: 'ɛ̈', description: 'Dinka tilde ~e~:' },
+			{ input: '~g', output: 'ɣ', description: 'Dinka tilde ~g' },
+			{ input: 'i~:', output: 'ï', description: 'Dinka tilde i~:' },
+			{ input: '~n', output: 'ŋ', description: 'Dinka tilde ~n' },
+			{ input: 'o~:', output: 'ö', description: 'Dinka tilde o~:' },
+			{ input: '~o', output: 'ɔ', description: 'Dinka tilde ~o' },
+			{ input: '~o~:', output: 'ɔ̈', description: 'Dinka tilde ~o~:' }
+		]
+	},
+	{
 		description: 'Ewe tilde test',
 		inputmethod: 'ee-tilde',
 		tests: [
