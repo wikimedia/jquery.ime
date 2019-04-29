@@ -164,6 +164,10 @@
 			name: 'Dinka FQSX',
 			source: 'rules/din/din-fqsx.js'
 		},
+		'din-tilde': {
+			name: 'Dinka tilde',
+			source: 'rules/din/din-tilde.js'
+		},
 		'doi-inscript2': {
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/doi/doi-inscript2.js'
@@ -908,7 +912,7 @@
 		},
 		din: {
 			autonym: 'Thuɔŋjäŋ',
-			inputmethods: [ 'din-fqsx' ]
+			inputmethods: [ 'din-fqsx', 'din-tilde' ]
 		},
 		diq: {
 			autonym: 'Kirdkî',
