@@ -790,6 +790,10 @@
 			name: 'Wolof Alt',
 			source: 'rules/wo/wo-alt.js'
 		},
+		'wo-tilde': {
+			name: 'Wolof tilde',
+			source: 'rules/wo/wo-tilde.js'
+		},
 		'yo-alt': {
 			name: 'Yorùbá Alt',
 			source: 'rules/yo/yo-alt.js'
@@ -1300,7 +1304,7 @@
 		},
 		wo: {
 			autonym: 'Wolof',
-			inputmethods: [ 'wo-alt' ]
+			inputmethods: [ 'wo-alt', 'wo-tilde' ]
 		},
 		yo: {
 			autonym: 'Yorùbá',

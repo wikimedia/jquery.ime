@@ -4388,6 +4388,18 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Wolof tilde test',
+		inputmethod: 'wo-tilde',
+		tests: [
+			{ input: '~n~ew~el', output: 'ñëwël', description: 'Wolof tilde ~n~ew~el' },
+			{ input: '~E', output: 'Ë', description: 'Wolof tilde ~E' },
+			{ input: 'Pe~/nc', output: 'Pénc', description: 'Wolof tilde Pe~/nc' },
+			{ input: 'ja~\\mm', output: 'jàmm', description: 'Wolof tilde ja~\\mm' },
+			{ input: '~goy', output: 'ŋoy', description: 'Wolof tilde ~goy' },
+			{ input: '~G', output: 'Ŋ', description: 'Wolof tilde ~G' }
+		]
+	},
+	{
 		description: 'Yoruba yo-alt input method test',
 		inputmethod: 'yo-alt',
 		tests: [
