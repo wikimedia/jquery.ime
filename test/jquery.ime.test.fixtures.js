@@ -1194,6 +1194,26 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Fula tilde input method test',
+		inputmethod: 'ff-tilde',
+		tests: [
+			{ input: '~b', output: 'ɓ', description: 'Fula tilde ~b' },
+			{ input: '~B', output: 'Ɓ', description: 'Fula tilde ~B' },
+			{ input: '~d', output: 'ɗ', description: 'Fula tilde ~d' },
+			{ input: '~D', output: 'Ɗ', description: 'Fula tilde ~D' },
+			{ input: '~g', output: 'ɠ', description: 'Fula tilde ~g' },
+			{ input: '~G', output: 'Ɠ', description: 'Fula tilde ~G' },
+			{ input: '~n', output: 'ñ', description: 'Fula tilde ~n' },
+			{ input: '~N', output: 'Ñ', description: 'Fula tilde ~N' },
+			{ input: '~j', output: 'ɲ', description: 'Fula tilde ~n' },
+			{ input: '~J', output: 'Ɲ', description: 'Fula tilde ~N' },
+			{ input: '~q', output: 'ŋ', description: 'Fula tilde ~q' },
+			{ input: '~Q', output: 'Ŋ', description: 'Fula tilde ~Q' },
+			{ input: '~y', output: 'ƴ', description: 'Fula tilde ~y' },
+			{ input: '~Y', output: 'Ƴ', description: 'Fula tilde ~Y' }
+		]
+	},
+	{
 		description: 'Fon tilde test',
 		inputmethod: 'fon-tilde',
 		tests: [
