@@ -209,8 +209,12 @@
 			source: 'rules/fa/fa-kbd.js'
 		},
 		'ff-alt': {
-			name: 'Fulfulde',
+			name: 'Fulfulde alt',
 			source: 'rules/ff/ff-alt.js'
+		},
+		'ff-tilde': {
+			name: 'Fulfulde tilde',
+			source: 'rules/ff/ff-tilde.js'
 		},
 		'fi-transliteration': {
 			name: 'translitterointi',
@@ -940,7 +944,7 @@
 		},
 		ff: {
 			autonym: 'Fulfulde',
-			inputmethods: [ 'ff-alt' ]
+			inputmethods: [ 'ff-alt', 'ff-tilde' ]
 		},
 		fi: {
 			autonym: 'Suomi',

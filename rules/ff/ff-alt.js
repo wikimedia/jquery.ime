@@ -6,7 +6,7 @@
 		name: 'Fulfulde Alt',
 		description: 'Fulfulde Alt',
 		date: '2017-05-30',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://github.com/wikimedia/jquery.ime',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',
