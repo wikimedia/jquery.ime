@@ -76,6 +76,10 @@
 			name: 'Bamanankan Alt',
 			source: 'rules/bm/bm-alt.js'
 		},
+		'bm-tilde': {
+			name: 'Bamanankan tilde',
+			source: 'rules/bm/bm-tilde.js'
+		},
 		'bn-avro': {
 			name: 'অভ্র',
 			source: 'rules/bn/bn-avro.js'
@@ -860,7 +864,7 @@
 		},
 		bm: {
 			autonym: 'Bamanankan',
-			inputmethods: [ 'bm-alt' ]
+			inputmethods: [ 'bm-alt', 'bm-tilde' ]
 		},
 		bn: {
 			autonym: 'বাংলা',
