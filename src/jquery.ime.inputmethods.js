@@ -156,6 +156,10 @@
 			name: 'Dagbani Alt',
 			source: 'rules/dag/dag-alt.js'
 		},
+		'dag-tilde': {
+			name: 'Dagbani tilde',
+			source: 'rules/dag/dag-tilde.js'
+		},
 		'de-transliteration': {
 			name: 'Deutsch Tilde',
 			source: 'rules/de/de-transliteration.js'
@@ -908,7 +912,7 @@
 		},
 		dag: {
 			autonym: 'Dagbani',
-			inputmethods: [ 'dag-alt' ]
+			inputmethods: [ 'dag-alt', 'dag-tilde' ]
 		},
 		de: {
 			autonym: 'Deutsch',
