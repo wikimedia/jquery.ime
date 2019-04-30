@@ -5,8 +5,12 @@
 	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
 		'ak-qx': {
-			name: 'QX replacement',
+			name: 'Akan QX replacement',
 			source: 'rules/ak/ak-qx.js'
+		},
+		'ak-tilde': {
+			name: 'Akan tilde',
+			source: 'rules/ak/ak-tilde.js'
 		},
 		'am-transliteration': {
 			name: 'ትራንስልተራትዖን',
@@ -836,7 +840,7 @@
 		},
 		ak: {
 			autonym: 'Akan',
-			inputmethods: [ 'ak-qx' ]
+			inputmethods: [ 'ak-qx', 'ak-tilde' ]
 		},
 		am: {
 			autonym: 'አማርኛ',
@@ -1284,7 +1288,7 @@
 		},
 		tw: {
 			autonym: 'Twi',
-			inputmethods: [ 'ak-qx' ]
+			inputmethods: [ 'ak-qx', 'ak-tilde' ]
 		},
 		tzm: {
 			autonym: 'ⵜⴰⵎⴰⵣⵉⵖⵜ',

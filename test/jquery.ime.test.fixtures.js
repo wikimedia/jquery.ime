@@ -10,6 +10,30 @@ var palochkaVariants = {
 	},
 	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
+		description: 'Akan QX test',
+		inputmethod: 'ak-qx',
+		tests: [
+			{ input: 'Q', output: 'Ɛ', description: 'Akan QX Q' },
+			{ input: 'q', output: 'ɛ', description: 'Akan QX q' },
+			{ input: 'X', output: 'Ɔ', description: 'Akan QX X' },
+			{ input: 'x', output: 'ɔ', description: 'Akan QX x' },
+			{ input: '\\Q', output: 'Q', description: 'Akan QX \\Q' },
+			{ input: '\\q', output: 'q', description: 'Akan QX \\q' },
+			{ input: '\\X', output: 'X', description: 'Akan QX \\X' },
+			{ input: '\\x', output: 'x', description: 'Akan QX \\x' }
+		]
+	},
+	{
+		description: 'Akan tilde test',
+		inputmethod: 'ak-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Akan tilde ~E' },
+			{ input: '~e', output: 'ɛ', description: 'Akan tilde ~e' },
+			{ input: '~O', output: 'Ɔ', description: 'Akan tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Akan tilde ~o' }
+		]
+	},
+	{
 		description: 'Amharic Transliteration test',
 		inputmethod: 'am-transliteration',
 		tests: [
