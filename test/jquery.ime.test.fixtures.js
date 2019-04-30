@@ -900,6 +900,13 @@ var palochkaVariants = {
 	},
 	*/
 	{
+		description: 'Dagbani tilde test',
+		inputmethod: 'dag-tilde',
+		tests: [
+			{ input: 'Kpa~gu~zi~e~yu ~Zi ~no ny~ela', output: 'Kpaɣuʒiɛɣu Ʒi ŋo nyɛla', description: 'Dagbani tilde Kpa~gu~zi~e~yu ~Zi ~no nyela' }
+		]
+	},
+	{
 		description: 'German Transliteration and keybuffer test',
 		inputmethod: 'de-transliteration',
 		tests: [
