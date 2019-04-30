@@ -34,6 +34,26 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Afrikaans tilde test',
+		inputmethod: 'af-tilde',
+		tests: [
+			{ input: 'na~/', output: 'ná', description: 'Afrikaans tilde na~/' },
+			{ input: 'die~/', output: 'dié', description: 'Afrikaans tilde die~/' },
+			{ input: 'de~\\', output: 'dè', description: 'Afrikaans tilde de~\\' },
+			{ input: 'he~^', output: 'hê', description: 'Afrikaans tilde he~^' },
+			{ input: 'gee~:et', output: 'geëet', description: 'Afrikaans tilde gee~:et' },
+			{ input: 'di~/t', output: 'dít', description: 'Afrikaans tilde di~/t' },
+			{ input: 'wi~^e', output: 'wîe', description: 'Afrikaans tilde wi~^e' },
+			{ input: 'bei~:nvloed', output: 'beïnvloed', description: 'Afrikaans tilde bei~:nvloed' },
+			{ input: 'o~/ns', output: 'óns', description: 'Afrikaans tilde o~/ns' },
+			{ input: 'mo~^re', output: 'môre', description: 'Afrikaans tilde mo~^re' },
+			{ input: 'hu~/l', output: 'húl', description: 'Afrikaans tilde hu~/l' },
+			{ input: 'bru~^e', output: 'brûe', description: 'Afrikaans tilde bru~^e' },
+			{ input: 'sy~/', output: 'sý', description: 'Afrikaans tilde sy~/' },
+			{ input: "~'n", output: '’n', description: "Afrikaans tilde ~'n" }
+		]
+	},
+	{
 		description: 'Amharic Transliteration test',
 		inputmethod: 'am-transliteration',
 		tests: [
