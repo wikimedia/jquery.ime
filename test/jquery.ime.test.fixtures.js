@@ -379,6 +379,18 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bamanankan tilde test',
+		inputmethod: 'bm-tilde',
+		tests: [
+			{
+				input: '~Ga~/la a~\\ t~o~/g~o Nga~/la ni~/ ti~\\~ne', output: 'Ŋála à tɔ́gɔ Ngála ní tìɲe', description: 'Bamanankan tilde - ~Ga~/la a~\\ t~o~/g~o Nga~/la ni~/ ti~\\~ne'
+			},
+			{
+				input: '~N~/~E~^~O~v', output: 'Ɲ́Ɛ̂Ɔ̌', description: 'Bamanankan tilde - ~N~/~E~^~O~v'
+			}
+		]
+	},
+	{
 		description: 'Bengali Avro layout test',
 		inputmethod: 'bn-avro',
 		tests: [
