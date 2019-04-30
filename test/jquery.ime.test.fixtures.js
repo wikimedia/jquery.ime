@@ -1187,6 +1187,36 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Ga CQX test',
+		inputmethod: 'gaa-cqx',
+		tests: [
+			{ input: 'C', output: 'Ŋ', description: 'Ga CQX C' },
+			{ input: 'c', output: 'ŋ', description: 'Ga CQX c' },
+			{ input: 'Q', output: 'Ɛ', description: 'Ga CQX Q' },
+			{ input: 'q', output: 'ɛ', description: 'Ga CQX q' },
+			{ input: 'X', output: 'Ɔ', description: 'Ga CQX X' },
+			{ input: 'x', output: 'ɔ', description: 'Ga CQX x' },
+			{ input: '\\C', output: 'C', description: 'Ga CQX \\C' },
+			{ input: '\\c', output: 'c', description: 'Ga CQX \\c' },
+			{ input: '\\Q', output: 'Q', description: 'Ga CQX \\Q' },
+			{ input: '\\q', output: 'q', description: 'Ga CQX \\q' },
+			{ input: '\\X', output: 'X', description: 'Ga CQX \\X' },
+			{ input: '\\x', output: 'x', description: 'Ga CQX \\x' }
+		]
+	},
+	{
+		description: 'Ga tilde test',
+		inputmethod: 'gaa-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Ga tilde ~E' },
+			{ input: '~e', output: 'ɛ', description: 'Ga tilde ~e' },
+			{ input: '~N', output: 'Ŋ', description: 'Ga tilde ~N' },
+			{ input: '~n', output: 'ŋ', description: 'Ga tilde ~n' },
+			{ input: '~O', output: 'Ɔ', description: 'Ga tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Ga tilde ~o' }
+		]
+	},
+	{
 		description: 'Gothic Standard',
 		inputmethod: 'got-standard',
 		tests: [
