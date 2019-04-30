@@ -225,8 +225,12 @@
 			source: 'rules/fon/fon-tilde.js'
 		},
 		'gaa-cqx': {
-			name: 'Ga - CQX replacement',
+			name: 'Ga CQX replacement',
 			source: 'rules/gaa/gaa-cqx.js'
+		},
+		'gaa-tilde': {
+			name: 'Ga tilde',
+			source: 'rules/gaa/gaa-tilde.js'
 		},
 		'gom-inscript2': {
 			name: 'इनस्क्रिप्ट २',
@@ -960,7 +964,7 @@
 		},
 		gaa: {
 			autonym: 'Ga',
-			inputmethods: [ 'gaa-cqx' ]
+			inputmethods: [ 'gaa-cqx', 'gaa-tilde' ]
 		},
 		got: {
 			autonym: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
