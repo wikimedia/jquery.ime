@@ -1,18 +1,20 @@
 ( function ( $ ) {
 	'use strict';
 
-	var defs = {
+	var akQx = {
 		id: 'ak-qx',
-		name: 'QX replacement',
+		name: 'Akan QX replacement',
 		description: 'Akan input method with Q and X replaced by Ɛ and Ɔ',
 		date: '2016-06-23',
-		URL: 'http://www.kasahorow.org/node/260',
+		URL: 'https://www.kasahorow.org/node/260',
 		author: 'Amir E. Aharoni, based on Kasahorow',
 		license: 'GPLv3',
-		version: '1.0',
-		contextLength: 1,
-		maxKeyLength: 1,
+		version: '1.1',
 		patterns: [
+			[ '\\\\Q', 'Q' ],
+			[ '\\\\q', 'q' ],
+			[ '\\\\X', 'X' ],
+			[ '\\\\x', 'x' ],
 			[ 'Q', 'Ɛ' ],
 			[ 'q', 'ɛ' ],
 			[ 'X', 'Ɔ' ],
@@ -20,5 +22,5 @@
 		]
 	};
 
-	$.ime.register( defs );
+	$.ime.register( akQx );
 }( jQuery ) );
