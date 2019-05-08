@@ -4395,101 +4395,101 @@ var palochkaVariants = {
 				input: [
 					[ 'a', false ],
 					[ '\\', true ]
-				], output: 'à', description: 'Yoruba à'
+				], output: 'à', description: 'Yoruba a + alt-\\'
 			},
 			{
 				input: [
 					[ 'a', false ],
 					[ '/', true ]
-				], output: 'á', description: 'Yoruba á'
+				], output: 'á', description: 'Yoruba a + alt-/'
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '\\', true ]
-				], output: 'è', description: 'Yoruba è'
+				], output: 'è', description: 'Yoruba e + alt-\\'
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '/', true ]
-				], output: 'é', description: 'Yoruba é'
+				], output: 'é', description: 'Yoruba e + alt-/'
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '.', true ]
-				], output: 'ẹ', description: 'Yoruba ẹ'
+				], output: 'ẹ', description: 'Yoruba e + alt-.'
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '.', true ],
 					[ '\\', true ]
-				], output: 'ẹ̀', description: 'Yoruba ẹ̀'
+				], output: 'ẹ̀', description: 'Yoruba e + alt-. + alt-\\'
 			},
 			{
 				input: [
 					[ 'e', false ],
 					[ '.', true ],
 					[ '/', true ]
-				], output: 'ẹ́', description: 'Yoruba ẹ́'
+				], output: 'ẹ́', description: 'Yoruba e + alt-. + alt-/'
 			},
 			{
 				input: [
 					[ 'i', false ],
 					[ '\\', true ]
-				], output: 'ì', description: 'Yoruba ì'
+				], output: 'ì', description: 'Yoruba i + alt-\\'
 			},
 			{
 				input: [
 					[ 'i', false ],
 					[ '/', true ]
-				], output: 'í', description: 'Yoruba í'
+				], output: 'í', description: 'Yoruba i + alt-/'
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '\\', true ]
-				], output: 'ò', description: 'Yoruba ò'
+				], output: 'ò', description: 'Yoruba o + alt-\\'
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '/', true ]
-				], output: 'ó', description: 'Yoruba ó'
+				], output: 'ó', description: 'Yoruba o + alt-/'
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '.', true ]
-				], output: 'ọ', description: 'Yoruba ọ'
+				], output: 'ọ', description: 'Yoruba o + alt-.'
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '.', true ],
 					[ '\\', true ]
-				], output: 'ọ̀', description: 'Yoruba ọ̀'
+				], output: 'ọ̀', description: 'Yoruba a + alt-. + alt-\\'
 			},
 			{
 				input: [
 					[ 'o', false ],
 					[ '.', true ],
 					[ '/', true ]
-				], output: 'ọ́', description: 'Yoruba ọ́'
+				], output: 'ọ́', description: 'Yoruba a + alt-. + alt-/'
 			},
 			{
 				input: [
 					[ 'u', false ],
 					[ '\\', true ]
-				], output: 'ù', description: 'Yoruba ù'
+				], output: 'ù', description: 'Yoruba u + alt-\\'
 			},
 			{
 				input: [
 					[ 'u', false ],
 					[ '/', true ]
-				], output: 'ú', description: 'Yoruba ú'
+				], output: 'ú', description: 'Yoruba u + alt-/'
 			}
 		]
 	},
