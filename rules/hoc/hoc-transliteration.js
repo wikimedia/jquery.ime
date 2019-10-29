@@ -6,7 +6,7 @@
 		name: 'ho transliteration',
 		description: 'Phonetic keyboard for Ho',
 		date: '2018-09-29',
-		author: 'Purty',
+		author: 'Mangu Purty',
 		license: 'GPLv3',
 		version: '1.0',
 		contextLength: 1,
