@@ -1,6 +1,7 @@
 // Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
+// eslint-disable-next-line no-implicit-globals
 var palochkaVariants = {
 		palochka: 'Ӏ',
 		latinSmallL: 'l',
@@ -8,6 +9,7 @@ var palochkaVariants = {
 		ukrainianCapitalI: 'І',
 		digitOne: '1'
 	},
+	// eslint-disable-next-line no-implicit-globals
 	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
 		description: 'Akan QX test',
@@ -2426,7 +2428,7 @@ var palochkaVariants = {
 			{ input: [ [ ' ', false, true ] ], output: ' ', description: 'NiDA: Shift-SP -> SP' },
 			{ input: [ [ ' ', true ] ], output: '\u00a0', description: 'NiDA: AltGr-SP -> NBSP' },
 
-			// test (non-)joiners, from Unicode 8.0 chapter 16
+			// check (non-)joiners, from Unicode 8.0 chapter 16
 			{ input: [ 'b', [ '1', true ], '/', 'I', 'y', 'E', 'r' ], output: 'ប‌៊ីយែរ', description: 'ZWNJ (beer): b AltGr-1 /IyEr -> ប‌៊ីយែរ' },
 			{ input: [ 'b', 'j', 'r', 't', 'W', 'g', 'G', [ '1', true ], '/', 'w', 'H' ], output: 'ប្រតឺងអ‌៊ឹះ', description: 'ZWNJ (urgent, too busy): bjrtWgG AltGr-1 /wH -> ប្រតឺងអ‌៊ឹះ' },
 			// these two should looks different with a Moul font

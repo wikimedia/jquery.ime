@@ -25,7 +25,7 @@
 			}
 
 			// Add to the previous languages, but avoid duplicates.
-			if ( $.inArray( language, this.registry.previousLanguages ) === -1 ) {
+			if ( this.registry.previousLanguages.indexOf( language ) === -1 ) {
 				this.registry.previousLanguages.unshift( language );
 				this.registry.previousLanguages = this.registry.previousLanguages.slice( 0, 5 );
 			}

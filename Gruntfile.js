@@ -70,8 +70,12 @@ module.exports = function ( grunt ) {
 			}
 		},
 		eslint: {
+			options: {
+				extensions: [ '.js', '.json' ],
+				cache: true
+			},
 			all: [
-				'**/*.js',
+				'**/*.{js,json}',
 				'!dist/**',
 				'!libs/**',
 				'!node_modules/**'
