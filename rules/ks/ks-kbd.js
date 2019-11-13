@@ -2,8 +2,8 @@
 	'use strict';
 
 	var ksKbd = {
-		id: 'ks-Kbd',
-		name: 'Kbd',
+		id: 'ks-kbd',
+		name: 'Kashmiri kbd',
 		description: 'Kbd keyboard for Kashmiri language using Arabic script',
 		date: '2013-02-09',
 		author: 'Parag Nemade',

@@ -562,10 +562,6 @@
 			name: 'ट्रांस्लितेरेशन',
 			source: 'rules/ne/ne-transliteration.js'
 		},
-		'nn-tildeforms': {
-			name: 'Tildemerkt transliterasjon',
-			source: 'rules/nb/nb-tildeforms.js'
-		},
 		'nqo-standard-qwerty': {
 			name: "N'Ko standard QWERTY",
 			source: 'rules/nqo/nqo-standard-qwerty.js'
@@ -1188,7 +1184,7 @@
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
-			inputmethods: [ 'nb-normforms', 'nn-tildeforms' ]
+			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
 		nqo: {
 			autonym: 'ߒߞߏ',

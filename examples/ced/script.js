@@ -1,4 +1,6 @@
-$( document ).ready( function () {
+/* global $ */
+/* eslint-disable no-jquery/no-global-selector */
+$( function () {
 	'use strict';
 
 	var $ced, ime, $imeSelector, $langSelector;
@@ -7,7 +9,7 @@ $( document ).ready( function () {
 		$imeSelector.empty();
 		ime.getInputMethods( lang ).forEach( function ( inputMethod ) {
 			$imeSelector.append(
-				$( '<option/>' ).attr( 'value', inputMethod.id ).text( inputMethod.name )
+				$( '<option>' ).attr( 'value', inputMethod.id ).text( inputMethod.name )
 			);
 		} );
 		$imeSelector.trigger( 'change' );
@@ -23,15 +25,15 @@ $( document ).ready( function () {
 	ime = $ced.data( 'ime' );
 	ime.enable();
 
-	$( '#bold' ).click( function () {
+	$( '#bold' ).on( 'click', function () {
 		document.execCommand( 'bold', false, null );
 	} );
 
-	$( '#italic' ).click( function () {
+	$( '#italic' ).on( 'click', function () {
 		document.execCommand( 'italic', false, null );
 	} );
 
-	$( '#underline' ).click( function () {
+	$( '#underline' ).on( 'click', function () {
 		document.execCommand( 'underline', false, null );
 	} );
 
@@ -41,11 +43,11 @@ $( document ).ready( function () {
 
 	ime.getLanguageCodes().forEach( function ( lang ) {
 		$langSelector.append(
-			$( '<option/>' ).attr( 'value', lang ).text( ime.getAutonym( lang ) )
+			$( '<option>' ).attr( 'value', lang ).text( ime.getAutonym( lang ) )
 		);
 	} );
 	$langSelector.on( 'change', function () {
-		var lang = $langSelector.find( 'option:selected' ).val() || null;
+		var lang = $langSelector.val() || null;
 		ime.setLanguage( lang );
 	} );
 	$ced.on( 'imeLanguageChange', function () {
@@ -53,7 +55,7 @@ $( document ).ready( function () {
 	} );
 
 	$imeSelector.on( 'change', function () {
-		var inputMethodId = $imeSelector.find( 'option:selected' ).val();
+		var inputMethodId = $imeSelector.val();
 		ime.load( inputMethodId ).done( function () {
 			ime.setIM( inputMethodId );
 		} );

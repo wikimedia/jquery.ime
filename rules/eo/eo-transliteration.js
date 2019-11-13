@@ -22,6 +22,7 @@
 			u: 'ŭ'
 		};
 
+		// eslint-disable-next-line no-jquery/no-each-util
 		$.each( chars, function ( ascii, accented ) {
 			rules.push( [ ascii + '[Xx]', ascii, accented ] );
 			rules.push( [ accented + '([Xx])', '[Xx]', ascii + '$1' ] );

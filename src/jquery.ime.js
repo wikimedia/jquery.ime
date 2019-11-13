@@ -7,12 +7,6 @@
 	// rangy is defined in the rangy library
 	/* global rangy */
 
-	function arrayKeys( obj ) {
-		return $.map( obj, function ( element, index ) {
-			return index;
-		} );
-	}
-
 	/**
 	 * private function for debugging
 	 * @param {jQuery} [$obj]
@@ -64,7 +58,7 @@
 		this.$element = $( element );
 		this.textEntry = textEntry;
 		// This needs to be delayed here since extending language list happens at DOM ready
-		$.ime.defaults.languages = arrayKeys( $.ime.languages );
+		$.ime.defaults.languages = Object.keys( $.ime.languages );
 		this.options = $.extend( {}, $.ime.defaults, options );
 		if ( this.options.imePath ) {
 			// Set the global IME path from the one specified to the instance
@@ -183,7 +177,7 @@
 					.concat( patterns );
 			}
 
-			if ( $.isFunction( patterns ) ) {
+			if ( typeof patterns === 'function' ) {
 				// For backwards compatibility, allow the rule functions to return plain
 				// string. Determine noop by checking whether input is different from
 				// output. If the rule function returns object, just return it as-is.
@@ -340,7 +334,7 @@
 		 * Destroy the binding of ime to the editable element
 		 */
 		destroy: function () {
-			$( 'body' ).off( '.ime' );
+			$( document.body ).off( '.ime' );
 			this.$element.off( '.ime' ).removeData( 'ime' ).removeData( 'imeselector' );
 		},
 
@@ -520,6 +514,7 @@
 		return $element.is( 'input:not([type]), input[type=text], input[type=search], textarea' ) &&
 			!$element.prop( 'readonly' ) &&
 			!$element.prop( 'disabled' ) &&
+			// eslint-disable-next-line no-jquery/no-class-state
 			!$element.hasClass( 'noime' );
 	};
 
@@ -671,6 +666,7 @@
 	 * @inheritdoc TextEntry
 	 */
 	ContentEditableEntry.static.canWrap = function ( $element ) {
+		// eslint-disable-next-line no-jquery/no-class-state
 		return $element.is( '[contenteditable]' ) && !$element.hasClass( 'noime' );
 	};
 

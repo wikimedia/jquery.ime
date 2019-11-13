@@ -1,25 +1,20 @@
 {
-	"extends": "wikimedia",
-	"parserOptions": {
-		"ecmaVersion": 6
-	},
-	"env": {
-		"browser": true,
-		"es6": true,
-		"jquery": true,
-		"node": true,
-		"qunit": true
-	},
+	"root": true,
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery"
+	],
 	"globals": {
-		"require": false
+		"jQuery": "readonly",
+		"$": "off"
 	},
 	"rules": {
-		"camelcase": 0,
-		"comma-spacing": 0,
-		"indent": 0,
-		"max-len": 0,
-		"no-multi-spaces": 0,
-		"no-useless-escape": 0,
+		"camelcase": "off",
+		"comma-spacing": "off",
+		"indent": "off",
+		"max-len": "off",
+		"no-multi-spaces": "off",
+		"no-useless-escape": "off",
 		"one-var": [ "error", { "var": "always" } ]
 	}
 }
