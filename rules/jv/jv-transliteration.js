@@ -5,11 +5,11 @@
 		id: 'jv-transliteration',
 		name: 'Javanese',
 		description: 'Javanese transliteration',
-		date: '2020-03-20',
+		date: '2013-08-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Bennylin',
 		license: 'GPLv3',
-		version: '1.2',
+		version: '1.1',
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
