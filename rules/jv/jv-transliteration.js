@@ -5,11 +5,11 @@
 		id: 'jv-transliteration',
 		name: 'Javanese',
 		description: 'Javanese transliteration',
-		date: '2013-08-10',
+		date: '2020-03-20',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Bennylin',
 		license: 'GPLv3',
-		version: '1.1',
+		version: '1.2',
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
@@ -28,23 +28,84 @@
 
 			// VII. Vocal ended with special pasangan followed by vocal = back to normal
 			[ 'ꦃa', '','ꦲ' ], // vocal ended with -h followed by a
+			[ 'ꦃA', '','ꦲ' ],
 			[ 'ꦃe', '','ꦲꦺ' ], // vocal ended with -h followed by e
+			[ 'ꦃE', '','ꦲꦺ' ],
 			[ 'ꦃi', '','ꦲꦶ' ], // vocal ended with -h followed by i
+			[ 'ꦃI', '','ꦲꦶ' ],
 			[ 'ꦃo', '','ꦲꦺꦴ' ], // vocal ended with -h followed by o
+			[ 'ꦃO', '','ꦲꦺꦴ' ],
 			[ 'ꦃu', '','ꦲꦸ' ], // vocal ended with -h followed by u
+			[ 'ꦃU', '','ꦲꦸ' ],
+			[ 'ꦃx', '','ꦲꦼ' ], // vocal ended with -h followed by u
+			[ 'ꦃX', '','ꦲꦼ' ],
 
 			[ 'ꦂa', '','ꦫ' ], // vocal ended with -r followed by a
+			[ 'ꦂA', '','ꦫ' ],
 			[ 'ꦂe', '','ꦫꦺ' ], // vocal ended with -r followed by e
+			[ 'ꦂE', '','ꦫꦺ' ],
 			[ 'ꦂi', '','ꦫꦶ' ], // vocal ended with -r followed by i
+			[ 'ꦂI', '','ꦫꦶ' ],
 			[ 'ꦂo', '','ꦫꦺꦴ' ], // vocal ended with -r followed by o
+			[ 'ꦂO', '','ꦫꦺꦴ' ],
 			[ 'ꦂu', '','ꦫꦸ' ], // vocal ended with -r followed by u
+			[ 'ꦂU', '','ꦫꦸ' ],
+			[ 'ꦂx', '','ꦫꦼ' ], // vocal ended with -r followed by u
+			[ 'ꦂX', '','ꦫꦼ' ],
 			[ 'ꦂy', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special)
 
 			[ 'ꦁa', '','ꦔ' ], // vocal ended with -ng followed by a
+			[ 'ꦁA', '','ꦔ' ],
 			[ 'ꦁe', '','ꦔꦺ' ], // vocal ended with -ng followed by e
+			[ 'ꦁE', '','ꦔꦺ' ],
 			[ 'ꦁi', '','ꦔꦶ' ], // vocal ended with -ng followed by i
+			[ 'ꦁI', '','ꦔꦶ' ],
 			[ 'ꦁo', '','ꦔꦺꦴ' ], // vocal ended with -ng followed by o
+			[ 'ꦁO', '','ꦔꦺꦴ' ],
 			[ 'ꦁu', '','ꦔꦸ' ], // vocal ended with -ng followed by u
+			[ 'ꦁU', '','ꦔꦸ' ],
+			[ 'ꦁx', '','ꦔꦼ' ], // vocal ended with -ng followed by u
+			[ 'ꦁX', '','ꦔꦼ' ],
+
+			[ 'ꦿa', '','ꦿ' ], // medial consonant -r- followed by a
+			[ 'ꦿA', '','ꦿ' ],
+			[ 'ꦿe', '','ꦿꦺ' ], // medial consonant -r- followed by e
+			[ 'ꦿE', '','ꦿꦺ' ],
+			[ 'ꦿi', '','ꦿꦶ' ], // medial consonant -r- followed by i
+			[ 'ꦿI', '','ꦿꦶ' ],
+			[ 'ꦿo', '','ꦿꦺꦴ' ], // medial consonant -r- followed by o
+			[ 'ꦿO', '','ꦿꦺꦴ' ],
+			[ 'ꦿu', '','ꦿꦸ' ], // medial consonant -r- followed by u
+			[ 'ꦿU', '','ꦿꦸ' ],
+			[ 'ꦿx', '','ꦽ' ], // special biconsonant -rê
+			[ 'ꦿ꧀x', '','ꦽ' ],
+			[ 'ꦿ꧀X', '','ꦽ' ],
+
+			[ 'ꦾa', '','ꦾ' ], // medial consonant -y- followed by a
+			[ 'ꦾA', '','ꦾ' ],
+			[ 'ꦾe', '','ꦾꦺ' ], // medial consonant -y- followed by e
+			[ 'ꦾE', '','ꦾꦺ' ],
+			[ 'ꦾi', '','ꦾꦶ' ], // medial consonant -y- followed by i
+			[ 'ꦾI', '','ꦾꦶ' ],
+			[ 'ꦾo', '','ꦾꦺꦴ' ], // medial consonant -y- followed by o
+			[ 'ꦾO', '','ꦾꦺꦴ' ],
+			[ 'ꦾu', '','ꦾꦸ' ], // medial consonant -y- followed by u
+			[ 'ꦾU', '','ꦾꦸ' ],
+			[ 'ꦾx', '','ꦾꦼ' ],
+			[ 'ꦾX', '','ꦾꦼ' ],
+
+			[ '꧀a', '','' ], // default vowel is a, so, remove the pangkon
+			[ '꧀A', '','ꦄ' ], // A
+			[ '꧀e', '','ꦺ' ], // é|è
+			[ '꧀E', '','ꦌ' ], // É|È
+			[ '꧀i', '','ꦶ' ], // i
+			[ '꧀I', '','ꦆ' ], // I
+			[ '꧀o', '','ꦺꦴ' ], // o
+			[ '꧀O', '','ꦎ' ], // O
+			[ '꧀u', '','ꦸ' ], // u
+			[ '꧀U', '','ꦈ' ], // U
+			[ '꧀x', '','ꦼ' ], // x is another way to write ê
+			[ '꧀X', '','ꦄꦼ' ], // X is another way to write Ê
 
 			// VI. Vocal (lowercase, uppercase, extended) ended with h/r/ng = special pasangan (-h, -r, -ng)
 			[ '꧀​h', '','꧀ꦲ꧀' ],
@@ -74,8 +135,6 @@
 			// the letter 'c' can only be found followed by consonant r/l, and ch
 			// the letter 'y' can only be found followed by consonant w (nasal for 'i')
 
-			[ '꧀a', '','' ], // default vowel is a, so, remove the pangkon
-			[ '꧀A', '','ꦄ' ], // A
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀b', '','$1꧀ꦧ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀B', '','$1꧀ꦨ꧀' ], // pasangan Ba murda
 			[ 'ꦤ꧀​(c|C)', '','ꦚ꧀ꦕ꧀' ], // n+zero-width-space+c
@@ -84,14 +143,10 @@
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀C', '','$1꧀ꦖ꧀' ], // pasangan Ca murda(?)
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀d', '','$1꧀ꦢ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀D', '','$1꧀ꦣ꧀' ],
-			[ '꧀e', '','ꦺ' ], // é|è
-			[ '꧀E', '','ꦌ' ], // É|È
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(f|v|F|V)', '','$1꧀ꦥ꦳꧀' ],
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀g', '','$1꧀ꦒ꧀' ], // can't be started with n, reserved for bigraf ng
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀G', '','$1꧀ꦓ꧀' ], // pasangan Ga murda (can't be started with n - see II. 2.)
 			[ '(ꦤ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(h|H)', '','$1꧀ꦲ꧀' ], // can't be started with k/d/t/g, reserved for bigraf kh/dh/th/gh
-			[ '꧀i', '','ꦶ' ], // i
-			[ '꧀I', '','ꦆ' ], // I
 			[ 'ꦤ꧀​(j|J)', '','ꦤ꧀ꦗ꧀' ], // n+zero-width-space+j
 			[ 'ꦤ꧀(j|J)', '','ꦚ꧀ꦗ꧀' ], // n followed by j became nasalized (nasal sound 'ny' + j)(REF:nyj)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(j|J)', '','$1꧀ꦗ꧀' ],
@@ -101,37 +156,29 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(m|M)', '','$1꧀ꦩ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀n', '','$1꧀ꦤ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀N', '','$1꧀ꦟ꧀' ], // pasangan Na murda
-			[ '꧀o', '','ꦺꦴ' ], // o
-			[ '꧀O', '','ꦎ' ], // O
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀p', '','$1꧀ꦥ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀P', '','$1꧀ꦦ꧀' ], // pasangan Pa murda
 			// q
 			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​r', '','$1꧀ꦫ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
 			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​R', '','$1꧀ꦬ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
-			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(r|R)', '','$1ꦿ' ], // special biconsonant -ra
+			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(r|R)', '','$1ꦿ꧀' ], // special biconsonant -ra
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀s', '','$1꧀ꦱ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀S', '','$1꧀ꦯ꧀' ], // pasangan Sa murda
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀t', '','$1꧀ꦠ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀T', '','$1꧀ꦡ꧀' ], // pasangan Ta murda
-			[ '꧀u', '','ꦸ' ], // u
-			[ '꧀U', '','ꦈ' ], // U
 			// v = f
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
 
-			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya,
+			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ꧀' ], // special biconsonant -ya,
 			// can't be started with n or y, reserved for bigraf ny (REF:-yy-)
 			[ '(ꦤ|ꦏ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(z|Z)', '','$1ꦾꦗ꦳꧀' ], // can't be started with d, reserved for bigraf dz
 
 			// IV. 1. Special consonant
-			[ '(ꦾ|ꦿ)a', '','$1' ],
-			[ 'ꦿx', '','ꦽ' ], // special biconsonant -rê
 			[ 'ꦊq', '','ꦋ' ], // special character lê Raswadi
 			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
 			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
 			[ 'ꦌx', '','ꦄꦼ' ], // Ê
-			[ '꧀x', '','ꦼ' ], // x is another way to write ê
-			[ '꧀X', '','ꦄꦼ' ], // X is another way to write Ê
 
 			// IV. 3. Extended vowel
 			// long a (aa) - see II.
