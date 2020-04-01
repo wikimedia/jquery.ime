@@ -4973,18 +4973,18 @@ var palochkaVariants = {
 		inputmethod: 'vec-GVU',
 		tests: [
 			{ input: 'dh', output: 'đ', description: 'Venetian đ' },
-			{ input: 'lh', output: 'ƚ', description: 'Venetian ƚ' },
+			{ input: 'lh', output: 'ł', description: 'Venetian ł' },
 			{ input: 'òò', output: 'ó', description: 'Venetian ó' },
 			{ input: 'zh', output: 'ẑ', description: 'Venetian ẑ' },
 			{ input: 'đh', output: 'dh', description: 'Venetian dh' },
-			{ input: 'ƚh', output: 'lh', description: 'Venetian lh' },
+			{ input: 'łh', output: 'lh', description: 'Venetian lh' },
 			{ input: 'ẑh', output: 'zh', description: 'Venetian zh' },
 			{ input: 'Dh', output: 'Đ', description: 'Venetian Đ' },
-			{ input: 'Lh', output: 'Ƚ', description: 'Venetian Ƚ' },
+			{ input: 'Lh', output: 'Ł', description: 'Venetian Ł' },
 			{ input: 'Òò', output: 'Ó', description: 'Venetian Ó' },
 			{ input: 'Zh', output: 'Ẑ', description: 'Venetian Ẑ' },
 			{ input: 'Đh', output: 'Dh', description: 'Venetian Dh' },
-			{ input: 'Ƚh', output: 'Lh', description: 'Venetian Lh' },
+			{ input: 'Łh', output: 'Lh', description: 'Venetian Lh' },
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
 		]
 	},
