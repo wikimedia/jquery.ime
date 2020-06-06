@@ -2248,6 +2248,7 @@ var palochkaVariants = {
 		description: 'Kabiye tilde test',
 		inputmethod: 'kbp-tilde',
 		tests: [
+			{ input: 'N~{~i~gl~im', output: 'Ñɩɣlɩm', description: 'Kabiye tilde Ñɩɣlɩm' },
 			{ input: 'Tal~i ~deu', output: 'Talɩ ɖeu', description: 'Kabiye tilde Talɩ ɖeu' },
 			{ input: 'T~om c~o~d~i~n t~i~na', output: 'Tɔm cɔɖɩŋ tɩŋa', description: 'Kabiye tilde Tɔm cɔɖɩŋ tɩŋa' },
 			{ input: '~Dajaa', output: 'Ɖajaa', description: 'Kabiye tilde Ɖajaa' },
