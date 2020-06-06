@@ -60,6 +60,10 @@
 			name: 'Batak QWERTY',
 			source: 'rules/bbc/batak-qwerty.js'
 		},
+		'bci-tilde': {
+			name: 'Baoulé tilde keyboard',
+			source: 'rules/bci/bci-tilde.js'
+		},
 		'be-kbd': {
 			name: 'Стандартная',
 			source: 'rules/be/be-kbd.js'
@@ -881,6 +885,10 @@
 		bbc: {
 			autonym: 'Batak',
 			inputmethods: [ 'batak-qwerty' ]
+		},
+		bci: {
+			autonym: 'wawle',
+			inputmethods: [ 'bci-tilde' ]
 		},
 		be: {
 			autonym: 'беларуская',
