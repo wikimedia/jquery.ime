@@ -249,6 +249,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Baoulé tilde test',
+		inputmethod: 'bci-tilde',
+		tests: [
+			{ input: 'kl~o k~e', output: 'klɔ kɛ', description: 'Baoulé tilde - ~o, ~e -> ɔ, ɛ' },
+			{ input: 'Djo~^', output: 'Djô', description: 'Baoulé tilde - o~^ -> ô' },
+			{ input: '~e~/', output: 'ɛ́', description: 'Baoulé tilde - ~e~/ -> ɛ́' },
+			{ input: '~N', output: 'Ɲ', description: 'Baoulé tilde - ~N -> Ɲ' }
+		]
+	},
+	{
 		description: 'Belarusian kbd keyboard test',
 		inputmethod: 'be-kbd',
 		tests: [
