@@ -261,7 +261,7 @@
 		/**
 		 * Keydown event handler. Handles shortcut key presses
 		 *
-		 * @context {HTMLElement}
+		 * @this HTMLElement
 		 * @param {jQuery.Event} e
 		 * @return {boolean}
 		 */
@@ -395,7 +395,7 @@
 		 * Select a language
 		 *
 		 * @param {string} languageCode
-		 * @return {string|bool} Selected input method id or false
+		 * @return {string|boolean} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
 			var ime, imePref, language;
@@ -458,6 +458,7 @@
 
 		/**
 		 * Decide on initial language to select
+		 *
 		 * @return {string}
 		 */
 		decideLanguage: function () {

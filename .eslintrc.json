@@ -2,7 +2,8 @@
 	"root": true,
 	"extends": [
 		"wikimedia/client",
-		"wikimedia/jquery"
+		"wikimedia/jquery",
+		"wikimedia/jsduck"
 	],
 	"globals": {
 		"jQuery": "readonly",
