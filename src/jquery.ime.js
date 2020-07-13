@@ -9,6 +9,7 @@
 
 	/**
 	 * private function for debugging
+	 *
 	 * @param {jQuery} [$obj]
 	 */
 	function debug( $obj ) {
@@ -45,7 +46,7 @@
 	/**
 	 * IME Class
 	 *
-	 * @class
+	 * @class IME
 	 * @constructor
 	 * @param {HTMLElement} element Element on which to listen for events
 	 * @param {TextEntry} textEntry Text entry object to use to get/set text
@@ -402,7 +403,7 @@
 	/**
 	 * TextEntry factory
 	 *
-	 * @class
+	 * @class TextEntryFactory
 	 * @constructor
 	 */
 	TextEntryFactory = function IMETextEntryFactory() {
@@ -448,7 +449,7 @@
 	/**
 	 * Generic text entry
 	 *
-	 * @class
+	 * @class TextEntry
 	 * @abstract
 	 */
 	TextEntry = function IMETextEntry() {
@@ -493,7 +494,7 @@
 	/**
 	 * TextEntry class for input/textarea widgets
 	 *
-	 * @class
+	 * @class FormWidgetEntry
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
@@ -608,6 +609,7 @@
 			// IE
 			range = document.selection.createRange();
 
+			// eslint-disable-next-line no-restricted-properties
 			if ( range && range.parentElement() === el ) {
 				len = el.value.length;
 				normalizedValue = el.value.replace( /\r\n/g, '\n' );
@@ -648,7 +650,7 @@
 	/**
 	 * TextEntry class for ContentEditable
 	 *
-	 * @class
+	 * @class ContentEditableEntry
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
