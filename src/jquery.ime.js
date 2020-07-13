@@ -73,6 +73,10 @@
 		this.language = null;
 		this.context = '';
 		if ( this.options.showSelector ) {
+			this.options.selectorInside = options.selectorInside !== undefined ?
+				options.selectorInside :
+				// eslint-disable-next-line no-jquery/no-class-state
+				this.$element.hasClass( 'ime-position-inside' );
 			this.selector = this.$element.imeselector( this.options );
 		}
 		this.listen();
@@ -876,6 +880,7 @@
 	$.ime.defaults = {
 		languages: [], // Languages to be used- by default all languages
 		helpHandler: null, // Called for each ime option in the menu
-		showSelector: true
+		showSelector: true,
+		selectorInside: undefined // If not set will check if '.ime-position-inside' class is preset
 	};
 }( jQuery ) );
