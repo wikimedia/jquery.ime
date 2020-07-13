@@ -429,17 +429,21 @@
 	 * Wrap an editable element with the appropriate TextEntry class
 	 *
 	 * @param {jQuery} $element The element to wrap
-	 * @return {TextEntry|undefined} A TextEntry, or undefined if no match
+	 * @return {TextEntry|null} A TextEntry, or null if no match
 	 */
 	TextEntryFactory.prototype.wrap = function ( $element ) {
 		var i, len, TextEntryClass;
+		// eslint-disable-next-line no-jquery/no-class-state
+		if ( $element.hasClass( 'noime' ) ) {
+			return null;
+		}
 		for ( i = 0, len = this.TextEntryClasses.length; i < len; i++ ) {
 			TextEntryClass = this.TextEntryClasses[ i ];
 			if ( TextEntryClass.static.canWrap( $element ) ) {
 				return new TextEntryClass( $element );
 			}
 		}
-		return undefined;
+		return null;
 	};
 
 	/* Initialization */
@@ -514,9 +518,7 @@
 	FormWidgetEntry.static.canWrap = function ( $element ) {
 		return $element.is( 'input:not([type]), input[type=text], input[type=search], textarea' ) &&
 			!$element.prop( 'readonly' ) &&
-			!$element.prop( 'disabled' ) &&
-			// eslint-disable-next-line no-jquery/no-class-state
-			!$element.hasClass( 'noime' );
+			!$element.prop( 'disabled' );
 	};
 
 	/* Instance methods */
@@ -668,8 +670,7 @@
 	 * @inheritdoc TextEntry
 	 */
 	ContentEditableEntry.static.canWrap = function ( $element ) {
-		// eslint-disable-next-line no-jquery/no-class-state
-		return $element.is( '[contenteditable]' ) && !$element.hasClass( 'noime' );
+		return $element.is( '[contenteditable]' );
 	};
 
 	/* Instance methods */
@@ -783,7 +784,7 @@
 			data = $this.data( 'ime' );
 			if ( !data ) {
 				textEntry = TextEntryFactory.static.singleton.wrap( $this );
-				if ( textEntry === undefined ) {
+				if ( !textEntry ) {
 					return;
 				}
 				data = new IME( this, textEntry, options );
