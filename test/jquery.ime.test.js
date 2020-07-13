@@ -283,6 +283,7 @@
 
 	/**
 	 * A general framework for testing a keyboard layout.
+	 *
 	 * @param {Object} [options]
 	 */
 	imeTest = function ( options ) {
@@ -397,8 +398,6 @@
 				altKey: altKeyValue
 			} );
 
-			// False positive on variable-pattern rule
-			// eslint-disable-next-line no-jquery/variable-pattern
 			replacementSkipped = $input.triggerHandler( event );
 
 			if ( shiftKeyValue ) {
