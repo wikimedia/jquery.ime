@@ -45,8 +45,7 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.js',
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
-						'src/jquery.ime.inputmethods.js',
-						'libs/rangy/rangy-core.js'
+						'src/jquery.ime.inputmethods.js'
 					]
 				}
 			}
