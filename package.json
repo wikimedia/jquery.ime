@@ -30,7 +30,6 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-qunit": "4.0.0",
     "grunt-contrib-uglify": "4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "23.0.0",
     "grunt-stylelint": "0.15.0",
     "jquery": "^3.5.1",
