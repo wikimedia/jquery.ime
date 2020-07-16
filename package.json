@@ -42,6 +42,13 @@
     "type": "git",
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
+  "main": "dist/jquery.ime/jquery.ime.min.js",
+  "files": [
+    "dist/",
+    "GPL-LICENSE",
+    "MIT-LICENSE",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/wikimedia/jquery.ime/issues"
   },
@@ -50,6 +57,7 @@
   },
   "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "prepare": "grunt build"
   }
 }
