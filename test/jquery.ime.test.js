@@ -323,14 +323,14 @@
 				ime.enable();
 
 				imesettingLabel = imeSelector.$imeSetting.find( 'a.ime-name' ).text();
-				QUnit.strictEqual( imesettingLabel, $.ime.sources[ opt.inputmethod ].name,
+				assert.strictEqual( imesettingLabel, $.ime.sources[ opt.inputmethod ].name,
 					'IME selector shows ' + $.ime.sources[ opt.inputmethod ].name );
 				for ( i = 0; i < opt.tests.length; i++ ) {
 					// Simulate pressing keys for each of the sample characters
 					typeChars( $input, opt.tests[ i ].input );
 
 					// The actual check
-					QUnit.strictEqual(
+					assert.strictEqual(
 						$input.val() || $input.text(),
 						opt.tests[ i ].output,
 						opt.tests[ i ].description + ' - ' + opt.inputType
