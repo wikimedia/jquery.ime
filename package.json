@@ -34,7 +34,7 @@
     "grunt-eslint": "23.0.0",
     "grunt-stylelint": "0.15.0",
     "jquery": "^3.5.1",
-    "qunitjs": "2.4.1",
+    "qunit": "2.10.1",
     "stylelint": "13.6.1",
     "stylelint-config-wikimedia": "0.10.1"
   },
