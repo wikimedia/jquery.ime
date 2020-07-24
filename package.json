@@ -30,11 +30,10 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-qunit": "4.0.0",
     "grunt-contrib-uglify": "4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "23.0.0",
     "grunt-stylelint": "0.15.0",
     "jquery": "^3.5.1",
-    "qunitjs": "2.4.1",
+    "qunit": "2.10.1",
     "stylelint": "13.6.1",
     "stylelint-config-wikimedia": "0.10.1"
   },
@@ -42,6 +41,13 @@
     "type": "git",
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
+  "main": "dist/jquery.ime/jquery.ime.min.js",
+  "files": [
+    "dist/",
+    "GPL-LICENSE",
+    "MIT-LICENSE",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/wikimedia/jquery.ime/issues"
   },
@@ -50,6 +56,7 @@
   },
   "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "prepare": "grunt build"
   }
 }
