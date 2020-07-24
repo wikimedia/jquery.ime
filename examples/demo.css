@@ -6,16 +6,20 @@ body {
 input {
 	width: 500px;
 	margin-bottom: 20px;
+	padding: 2px 4px;
 }
 
 textarea {
 	width: 500px;
 	height: 300px;
 	margin-bottom: 20px;
+	padding: 2px 4px;
 }
 
 [ contenteditable ] {
 	border: 1px solid #008000;
 	height: 300px;
 	width: 500px;
+	margin-bottom: 20px;
+	padding: 2px 4px;
 }
