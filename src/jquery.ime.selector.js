@@ -332,6 +332,10 @@
 					this.$imeSetting.outerWidth();
 			}
 
+			if ( this.options.selectorInside ) {
+				top -= this.$imeSetting.outerHeight();
+			}
+
 			// While determining whether to place the selector above or below the input box,
 			// take into account the value of scrollTop, to avoid the selector from always
 			// getting placed above the input box since window.height would be less than top
@@ -340,6 +344,9 @@
 
 			if ( verticalRoom < this.$imeSetting.outerHeight() ) {
 				top = elementPosition.top - this.$imeSetting.outerHeight();
+				if ( this.options.selectorInside ) {
+					top += this.$imeSetting.outerHeight();
+				}
 				menuTop = this.$menu.outerHeight() +
 					this.$imeSetting.outerHeight();
 
