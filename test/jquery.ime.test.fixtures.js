@@ -1640,14 +1640,15 @@ var palochkaVariants = {
 		description: 'Igbo tilde test',
 		inputmethod: 'ig-tilde',
 		tests: [
-			{ input: '~I', output: 'Ị', description: 'Igbo tilde ~B -> Ɓ' },
-			{ input: '~i', output: 'ị', description: 'Igbo tilde ~b -> ɓ' },
-			{ input: '~N', output: 'Ṅ', description: 'Igbo tilde ~D -> Ɗ' },
-			{ input: '~n', output: 'ṅ', description: 'Igbo tilde ~d -> ɗ' },
+			{ input: '~I', output: 'Ị', description: 'Igbo tilde ~I -> Ị' },
+			{ input: '~i', output: 'ị', description: 'Igbo tilde ~i -> ị' },
+			{ input: '~N', output: 'Ṅ', description: 'Igbo tilde ~N -> Ṅ' },
+			{ input: '~n', output: 'ṅ', description: 'Igbo tilde ~n -> ṅ' },
 			{ input: '~O', output: 'Ọ', description: 'Igbo tilde ~O -> Ọ' },
 			{ input: '~o', output: 'ọ', description: 'Igbo tilde ~o -> ọ' },
-			{ input: '~U', output: 'Ụ', description: 'Igbo tilde ~R -> R̃' },
-			{ input: '~u', output: 'ụ', description: 'Igbo tilde ~r -> r̃' },
+			{ input: '~U', output: 'Ụ', description: 'Igbo tilde ~U -> Ụ' },
+			{ input: '~u', output: 'ụ', description: 'Igbo tilde ~u -> ụ' },
+			{ input: 'm~/ma~-', output: 'ḿmā', description: 'Igbo tilde m~/ma~- -> ḿmā' },
 			{ input: 'E~\\', output: 'È', description: 'Igbo tilde E~\\ -> È' },
 			{ input: 'i~/', output: 'í', description: 'Igbo tilde i~/ -> í' }
 		]
