@@ -20,7 +20,8 @@
 			[ '~U', 'Ụ' ],
 			[ '~u', 'ụ' ],
 			[ '~\\\\', '\u0300' ], // Combining grave
-			[ '~/', '\u0301' ] // Combining acute
+			[ '~/', '\u0301' ], // Combining acute
+			[ '~\\-', '\u0304' ] // Combining macron
 		]
 	};
 
