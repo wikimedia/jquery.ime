@@ -83,6 +83,26 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Obolo tilde test',
+		inputmethod: 'ann-tilde',
+		tests: [
+			{ input: '~O', output: 'Ọ', description: 'Obolo tilde Ọ (~O)' },
+			{ input: 'o~.', output: 'ọ', description: 'Obolo tilde ọ (o~.)' },
+			{ input: '~s', output: 'ṣ', description: 'Obolo tilde ṣ (~s)' },
+			{ input: 'S~.', output: 'Ṣ', description: 'Obolo tilde Ṣ (S~.)' },
+			{ input: 'M~/ N~/', output: 'Ḿ Ń', description: 'Obolo tilde Ḿ Ń' },
+			{ input: 'Akpata~n', output: 'Akpatan̄', description: 'Obolo tilde Akpatan̄ (~n)' },
+			{ input: 'Akpatan~-', output: 'Akpatan̄', description: 'Obolo tilde Akpatan̄ (n~-)' },
+			{ input: 'ri~o~o~n', output: 'riọọn̄', description: 'Obolo tilde riọọn̄' },
+			{ input: 'mo~^k~ot', output: 'môkọt', description: 'Obolo tilde môkọt' },
+			{ input: 'Mi~^gobo', output: 'Mîgobo', description: 'Obolo tilde Mîgobo' },
+			{ input: 'fu~vk', output: 'fǔk', description: 'Obolo tilde fǔk' },
+			{ input: 'i~^fo~v', output: 'îfǒ', description: 'Obolo tilde îfǒ' },
+			{ input: 'e~/gbe~\\', output: 'égbè', description: 'Obolo tilde égbè' },
+			{ input: 'i~\\j~o~\\n', output: 'ìjọ̀n', description: 'Obolo tilde ìjọ̀n' }
+		]
+	},
+	{
 		description: 'South Azerbaijani Keyboard test',
 		inputmethod: 'azb-kbd',
 		tests: [
