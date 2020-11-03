@@ -20,6 +20,10 @@
 			name: 'ትራንስልተራትዖን',
 			source: 'rules/am/am-transliteration.js'
 		},
+		'ann-tilde': {
+			name: 'Obolo tilde',
+			source: 'rules/ann/ann-tilde.js'
+		},
 		'ar-kbd': {
 			name: 'لوحة المفاتيح العربية',
 			source: 'rules/ar/ar-kbd.js'
@@ -865,6 +869,10 @@
 		am: {
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
+		},
+		ann: {
+			autonym: 'Obolo',
+			inputmethods: [ 'ann-tilde' ]
 		},
 		ar: {
 			autonym: 'العربية',
