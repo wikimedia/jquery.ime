@@ -44,7 +44,7 @@
 		},
 
 		getPreviousInputMethods: function () {
-			return this.registry.previousInputMethods;
+			return this.registry.previousInputMethods || [];
 		},
 
 		// Set the given IM as the last used for the language
