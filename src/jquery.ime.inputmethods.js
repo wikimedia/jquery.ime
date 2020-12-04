@@ -380,6 +380,10 @@
 			name: 'Kabɩyɛ tilde',
 			source: 'rules/kbp/kbp-tilde.js'
 		},
+		'kcg-tilde': {
+			name: 'Tyap tilde',
+			source: 'rules/kcg/kcg-tilde.js'
+		},
 		'ki-tilde': {
 			name: 'Gĩkũyũ',
 			source: 'rules/ki/ki-tilde.js'
@@ -1089,6 +1093,10 @@
 		kbp: {
 			autonym: 'Kabɩyɛ',
 			inputmethods: [ 'kbp-tilde' ]
+		},
+		kcg: {
+			autonym: 'Tyap',
+			inputmethods: [ 'kcg-tilde' ]
 		},
 		ki: {
 			autonym: 'Gĩkũyũ',
