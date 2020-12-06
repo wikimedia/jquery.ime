@@ -3381,6 +3381,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Madurese tilde test',
+		inputmethod: 'mad-tilde',
+		tests: [
+			{ input: '~A', output: 'Â', description: 'Madurese tilde ~A' },
+			{ input: '~a', output: 'â', description: 'Madurese tilde ~a' },
+			{ input: '~D', output: 'Ḍ', description: 'Madurese tilde ~D' },
+			{ input: '~d', output: 'ḍ', description: 'Madurese tilde ~d' },
+			{ input: '~E', output: 'È', description: 'Madurese tilde ~E' },
+			{ input: '~e', output: 'è', description: 'Madurese tilde ~e' },
+			{ input: '~T', output: 'Ṭ', description: 'Madurese tilde ~T' },
+			{ input: '~t', output: 'ṭ', description: 'Madurese tilde ~t' }
+		]
+	},
+	{
 		description: 'Malagasy tilde test',
 		inputmethod: 'mg-tilde',
 		tests: [
