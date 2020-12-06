@@ -460,6 +460,10 @@
 			name: 'Lushootseed Tulalip',
 			source: 'rules/lut/lut-tulalip.js'
 		},
+		'mad-tilde': {
+			name: 'Madhurâ tilde',
+			source: 'rules/mad/mad-tilde.js'
+		},
 		'mai-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/mai/mai-inscript.js',
@@ -1161,6 +1165,10 @@
 		mai: {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+		},
+		mad: {
+			autonym: 'madhurâ',
+			inputmethods: [ 'mad-tilde' ]
 		},
 		mg: {
 			autonym: 'Malagasy',
