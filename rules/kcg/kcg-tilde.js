@@ -11,10 +11,10 @@
 		license: 'GPLv3',
 		version: '1.1',
 		patterns: [
-			[ '~A', 'A̠' ],
-			[ '~a', 'a̱' ],
-			[ '~I', 'I̠' ],
-			[ '~i', 'i̠' ],
+			[ '~A', 'A\u0331' ],
+			[ '~a', 'a\u0331' ],
+			[ '~I', 'I\u0331' ],
+			[ '~i', 'i\u0331' ],
 			[ '~/', '\u0301' ], // Combining acute accent
 			[ '~_', '\u0331' ] // Combining macron below
 		]

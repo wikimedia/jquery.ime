@@ -2282,11 +2282,11 @@ var palochkaVariants = {
 		description: 'Tyap tilde test',
 		inputmethod: 'kcg-tilde',
 		tests: [
-			{ input: '~Alyem', output: 'A̠lyem', description: 'Tyap tilde A̠lyem' },
+			{ input: '~Alyem', output: 'A̱lyem', description: 'Tyap tilde A̱lyem' },
 			{ input: '~a~/pyi~a', output: 'á̱pyia̱', description: 'Tyap tilde á̱pyia̱ with ~' },
 			{ input: 'a~_~/pyia~_', output: 'á̱pyia̱', description: 'Tyap tilde á̱pyia̱ with _' },
 			{ input: 'wusika~/', output: 'wusiká', description: 'Tyap tilde wusiká' },
-			{ input: '~at~itak', output: 'a̱ti̠tak', description: 'Tyap tilde a̱ti̱tak' },
+			{ input: '~at~itak', output: 'a̱ti̱tak', description: 'Tyap tilde a̱ti̱tak' },
 			{ input: 'kwi~/', output: 'kwí', description: 'Tyap tilde kwí' },
 			{ input: 'ji~_~/p', output: 'jí̱p', description: 'Tyap tilde jí̱p' },
 			{ input: 'KWI~/', output: 'KWÍ', description: 'Tyap tilde KWÍ' },
