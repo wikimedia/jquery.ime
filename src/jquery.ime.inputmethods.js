@@ -578,6 +578,10 @@
 			name: 'ट्रांस्लितेरेशन',
 			source: 'rules/ne/ne-transliteration.js'
 		},
+		'nia-tilde': {
+			name: 'Li Niha tilde',
+			source: 'rules/nia/nia-tilde.js'
+		},
 		'nqo-standard-qwerty': {
 			name: "N'Ko standard QWERTY",
 			source: 'rules/nqo/nqo-standard-qwerty.js'
@@ -1213,6 +1217,10 @@
 		'new': {
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
+		},
+		nia: {
+			autonym: 'li niha',
+			inputmethods: [ 'nia-tilde' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',

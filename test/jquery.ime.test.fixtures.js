@@ -3758,6 +3758,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Nias tilde test',
+		inputmethod: 'nia-tilde',
+		tests: [
+			{ input: '~O moroi', output: 'Ö moroi', description: 'Nias tilde Ö moroi' },
+			{ input: 'Sanandr~osa', output: 'Sanandrösa', description: 'Nias tilde Sanandrösa' },
+			{ input: 'MIYA~WA', output: 'MIYAŴA', description: 'Nias tilde MIYAŴA' },
+			{ input: 'zali~wa-li~wa', output: 'zaliŵa-liŵa', description: 'Nias tilde zaliŵa-liŵa' }
+		]
+	},
+	{
 		description: 'Northern Sotho tilde test',
 		inputmethod: 'nso-tilde',
 		tests: [
