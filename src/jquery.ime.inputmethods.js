@@ -594,6 +594,10 @@
 			name: 'Sesotho sa Leboa tilde',
 			source: 'rules/nso/nso-tilde.js'
 		},
+		'nus-tilde': {
+			name: 'Thok Naath tilde',
+			source: 'rules/nus/nus-tilde.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -1233,6 +1237,10 @@
 		nso: {
 			autonym: 'Sesotho sa Leboa',
 			inputmethods: [ 'nso-tilde' ]
+		},
+		nus: {
+			autonym: 'Thok Naath',
+			inputmethods: [ 'nus-tilde' ]
 		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',

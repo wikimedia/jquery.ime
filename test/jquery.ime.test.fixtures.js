@@ -3781,6 +3781,40 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Nuer tilde test',
+		inputmethod: 'nus-tilde',
+		tests: [
+			{ input: 'A~_', output: 'A̱', description: 'Nuer tilde A̱' },
+			{ input: 'A~:', output: 'Ä', description: 'Nuer tilde Ä' },
+			{ input: 'E~_', output: 'E̱', description: 'Nuer tilde E̱' },
+			{ input: 'E~:', output: 'Ë', description: 'Nuer tilde Ë' },
+			{ input: '~E', output: 'Ɛ', description: 'Nuer tilde Ɛ' },
+			{ input: '~E~_', output: 'Ɛ̱', description: 'Nuer tilde Ɛ̱' },
+			{ input: '~E~:', output: 'Ɛ̈', description: 'Nuer tilde Ɛ̈' },
+			{ input: '~G', output: 'Ɣ', description: 'Nuer tilde Ɣ' },
+			{ input: 'I~_', output: 'I̱', description: 'Nuer tilde I̱' },
+			{ input: '~N', output: 'Ŋ', description: 'Nuer tilde Ŋ' },
+			{ input: 'O~_', output: 'O̱', description: 'Nuer tilde O̱' },
+			{ input: 'O~:', output: 'Ö', description: 'Nuer tilde Ö' },
+			{ input: '~O', output: 'Ɔ', description: 'Nuer tilde Ɔ' },
+			{ input: '~O~_', output: 'Ɔ̱', description: 'Nuer tilde Ɔ̱' },
+			{ input: 'a~_', output: 'a̱', description: 'Nuer tilde a̱' },
+			{ input: 'a~:', output: 'ä', description: 'Nuer tilde ä' },
+			{ input: 'e~_', output: 'e̱', description: 'Nuer tilde e̱' },
+			{ input: 'e~:', output: 'ë', description: 'Nuer tilde ë' },
+			{ input: '~e', output: 'ɛ', description: 'Nuer tilde ɛ' },
+			{ input: '~e~_', output: 'ɛ̱', description: 'Nuer tilde ɛ̱' },
+			{ input: '~e~:', output: 'ɛ̈', description: 'Nuer tilde ɛ̈' },
+			{ input: '~g', output: 'ɣ', description: 'Nuer tilde ɣ' },
+			{ input: 'i~_', output: 'i̱', description: 'Nuer tilde i̱' },
+			{ input: '~n', output: 'ŋ', description: 'Nuer tilde ŋ' },
+			{ input: 'o~_', output: 'o̱', description: 'Nuer tilde o̱' },
+			{ input: 'o~:', output: 'ö', description: 'Nuer tilde ö' },
+			{ input: '~o', output: 'ɔ', description: 'Nuer tilde ɔ' },
+			{ input: '~o~_', output: 'ɔ̱', description: 'Nuer tilde ɔ̱' }
+		]
+	},
+	{
 		description: 'Oriya InScript test',
 		inputmethod: 'or-inscript',
 		tests: [
