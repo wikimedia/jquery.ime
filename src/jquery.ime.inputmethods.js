@@ -60,6 +60,10 @@
 			name: 'تۆرکجه',
 			source: 'rules/azb/azb-kbd.js'
 		},
+		'bas-tilde': {
+			name: 'Ɓasaá tilde',
+			source: 'rules/bas/bas-tilde.js'
+		},
 		'batak-qwerty': {
 			name: 'Batak QWERTY',
 			source: 'rules/bbc/batak-qwerty.js'
@@ -905,6 +909,10 @@
 		azb: {
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
+		},
+		bas: {
+			autonym: 'ɓasaá',
+			inputmethods: [ 'bas-tilde' ]
 		},
 		bbc: {
 			autonym: 'Batak',
