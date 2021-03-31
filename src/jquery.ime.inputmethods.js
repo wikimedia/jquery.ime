@@ -92,6 +92,10 @@
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
 		},
+		'bkm-tilde': {
+			name: 'Kom tilde',
+			source: 'rules/bkm/bkm-tilde.js'
+		},
 		'bm-alt': {
 			name: 'Bamanankan Alt',
 			source: 'rules/bm/bm-alt.js'
@@ -941,6 +945,10 @@
 		bho: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
+		},
+		bkm: {
+			autonym: 'Itaŋikom',
+			inputmethods: [ 'bkm-tilde' ]
 		},
 		bm: {
 			autonym: 'Bamanankan',
