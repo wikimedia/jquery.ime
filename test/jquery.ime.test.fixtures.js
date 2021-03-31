@@ -191,6 +191,18 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Basaa tilde test',
+		inputmethod: 'bas-tilde',
+		tests: [
+			{ input: 'Mb~e~/n~e~^', output: 'Mbɛ́nɛ̂', description: 'Basaa tilde: Mb~e~/n~e~^ -> Mbɛ́nɛ̂' },
+			{ input: '~Basaa~/', output: 'Ɓasaá', description: 'Basaa tilde: ~Basaa~/ -> Ɓasaá' },
+			{ input: '~Ba~\\sa~\\a', output: 'Ɓàsàa', description: 'Basaa tilde: ~Ba~\\sa~\\a -> Ɓàsàa' },
+			{ input: 'l~o', output: 'lɔ', description: 'Basaa tilde: l~o -> lɔ' },
+			{ input: 'a~/~n', output: 'áŋ', description: 'Basaa tilde: a~/~n -> áŋ' },
+			{ input: '~ba~n', output: 'ɓaŋ', description: 'Basaa tilde: ~ba~n	 -> ɓaŋ' }
+		]
+	},
+	{
 		description: 'Batak QWERTY test',
 		inputmethod: 'batak-qwerty',
 		tests: [
