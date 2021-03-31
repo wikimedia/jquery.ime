@@ -400,6 +400,41 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kom tilde test',
+		inputmethod: 'bkm-tilde',
+		tests: [
+			{ input: 'nchwaes~i',  output: 'nchwæsɨ', description: 'Kom tilde: nchwaes~i -> nchwæsɨ' },
+			{ input: 'nchw~as~i',  output: 'nchwæsɨ', description: 'Kom tilde: nchw~as~i -> nchwæsɨ' },
+			{ input: 'NCHW~AS~I',  output: 'NCHWÆSƗ', description: 'Kom tilde: NCHW~AS~I -> NCHWÆSƗ' },
+			{ input: 'KAE',  output: 'KÆ', description: 'Kom tilde: KAE -> KÆ' },
+			{ input: 'KAe',  output: 'KÆ', description: 'Kom tilde: KAe -> KÆ' },
+			{ input: 'Refa~el',  output: 'Refael', description: 'Kom tilde: Refael' },
+			{ input: 'REFA~EL',  output: 'REFAEL', description: 'Kom tilde: REFA~EL -> REFAEL' },
+			{ input: 'A~eroflot',  output: 'Aeroflot', description: 'Kom tilde: A~eroflot -> Aeroflot' },
+			{ input: 'REFA~EL',  output: 'REFAEL', description: 'Kom tilde: REFA~EL -> REFAEL' },
+
+			{ input: 'ka~\\',  output: 'kà', description: 'Kom tilde: ka~\\ -> kà' },
+			{ input: 'KA~\\',  output: 'KÀ', description: 'Kom tilde: KA~\\ -> KÀ' },
+			{ input: 'lae~\\',  output: 'læ̀', description: 'Kom tilde: lae~\\ -> læ̀' },
+			{ input: 'l~a~\\',  output: 'læ̀', description: 'Kom tilde: l~a~\\ -> læ̀' },
+			{ input: 'LAE~\\',  output: 'LÆ̀', description: 'Kom tilde: LAE~\\ -> LÆ̀' },
+			{ input: 'ne~\\\'s~i~\\',  output: 'nè\'sɨ̀', description: 'Kom tilde: ne~\\\'s~i~\\ -> nè\'sɨ̀' },
+			{ input: 'ka~^~nt~i',  output: 'kâŋtɨ', description: 'Kom tilde: ka~^~nt~i -> kâŋtɨ' },
+
+			{ input: 'boes~i',  output: 'bœsɨ', description: 'Kom tilde: boes~i -> bœsɨ' },
+			{ input: 'b~os~i',  output: 'bœsɨ', description: 'Kom tilde: b~os~i -> bœsɨ' },
+			{ input: 'B~OS~I',  output: 'BŒSƗ', description: 'Kom tilde: B~OS~I -> BŒSƗ' },
+			{ input: '~IKOE',  output: 'ƗKŒ', description: 'Kom tilde: A~eroflot -> ƗKŒ' },
+			{ input: 'Oe',  output: 'Œ', description: 'Kom tilde: Oe -> Œ' },
+			{ input: 'O~ENO',  output: 'OENO', description: 'Kom tilde: O~E -> OENO' },
+			{ input: 'O~eno',  output: 'Oeno', description: 'Kom tilde: O~e -> Oeno' },
+			{ input: 'o~e',  output: 'oe', description: 'Kom tilde: o~e -> oe' },
+
+			{ input: 'ta~ni',  output: 'taŋi', description: 'Kom tilde: ta~ni -> taŋi' },
+			{ input: '~Neyn',  output: 'Ŋeyn', description: 'Kom tilde: ~Neyn -> Ŋeyn' },
+		]
+	},
+	{
 		description: 'Bamanankan Alt layout test',
 		inputmethod: 'bm-alt',
 		tests: [
