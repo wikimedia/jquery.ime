@@ -199,7 +199,9 @@ var palochkaVariants = {
 			{ input: '~Ba~\\sa~\\a', output: 'Ɓàsàa', description: 'Basaa tilde: ~Ba~\\sa~\\a -> Ɓàsàa' },
 			{ input: 'l~o', output: 'lɔ', description: 'Basaa tilde: l~o -> lɔ' },
 			{ input: 'a~/~n', output: 'áŋ', description: 'Basaa tilde: a~/~n -> áŋ' },
-			{ input: '~ba~n', output: 'ɓaŋ', description: 'Basaa tilde: ~ba~n	 -> ɓaŋ' }
+			{ input: '~ba~n', output: 'ɓaŋ', description: 'Basaa tilde: ~ba~n -> ɓaŋ' },
+			{ input: 'ma~\\~bo~vn su~vglu~\\', output: 'màɓǒn sǔglù', description: 'Basaa tilde: ma~\\~bo~vn su~vglu~\\ -> màɓǒn sǔglù' },
+			{ input: 'ki~n yada~-', output: 'kiŋ yadā', description: 'Basaa tilde: ki~n yada~- -> kiŋ yadā' }
 		]
 	},
 	{
