@@ -1405,7 +1405,7 @@ var palochkaVariants = {
 		inputmethod: 'gu-inscript2',
 		tests: [
 			{ input: 'ke$lfk', output: 'કાર્તિક', description: 'Gujarati Kartik - Testing Ref' },
-			{ input: '\"eie\"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha' }
+			{ input: '"eie"w/e', output: 'ઠાગાઠૈયા', description: 'Gujarati ThagaaThaiya - Testing Tha' }
 		]
 	},
 	{
@@ -1452,7 +1452,7 @@ var palochkaVariants = {
 			{ input: '~r', output: 'r̃', description: 'Hausa tilde ~r -> r̃' },
 			{ input: '~Y', output: 'Ƴ', description: 'Hausa tilde ~Y -> Ƴ' },
 			{ input: '~y', output: 'ƴ', description: 'Hausa tilde ~y -> ƴ' },
-			{ input: 'E~\\', output: 'È', description: 'Hausa tilde E~\ -> È' },
+			{ input: 'E~\\', output: 'È', description: 'Hausa tilde E~\\ -> È' },
 			{ input: 'i~^', output: 'î', description: 'Hausa tilde i~^ -> î' }
 		]
 	},
@@ -1614,8 +1614,8 @@ var palochkaVariants = {
 			{ input: 'ABCDEGHIJKLMNOPQRSTUVWXY', output: '𑢡𑢷C𑢱𑢨𑢫𑢹𑢢𑢮𑢬𑢺𑢶𑢳𑢩𑢸𑢤𑢼𑢾𑢲𑢣𑢠𑢿𑢽𑢥', description: 'Ho ABCDEGHIJKLMNOPQRSTUVWXY' },
 			{ input: '1234567890', output: '𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩𑣠', description: 'Ho 1234567890' },
 			{ input: '@', output: '𑣿', description: 'Ho @ -> 𑣿' },
-			{ input: '\\@', output: '@', description: 'Ho \@ -> @' },
-			{ input: '\\a', output: 'a', description: 'Ho \a -> a' },
+			{ input: '\\@', output: '@', description: 'Ho \\@ -> @' },
+			{ input: '\\a', output: 'a', description: 'Ho \\a -> a' },
 			{ input: 'aiauchdhngnjnnrrth', output: '𑣆𑣇𑣏𑣔𑣊𑣍𑣐𑣛𑣕', description: 'Ho aiauchdhngnjnnrrth' },
 			{ input: 'AIAUCHDHNGNJNNRRTH', output: '𑢦𑢧𑢯𑢴𑢪𑢭𑢰𑢻𑢵', description: 'Ho AIAUCHDHNGNJNNRRTH' },
 			{ input: 'AiAuChDhNgNjNnRrTh', output: '𑢦𑢧𑢯𑢴𑢪𑢭𑢰𑢻𑢵', description: 'Ho AiAuChDhNgNjNnRrTh' }
@@ -2450,8 +2450,8 @@ var palochkaVariants = {
 			{ input: 'G\'', output: 'អ់', description: 'special: G\' -> អ់' },
 			{ input: [ 'G', [ '\'', true ] ], output: 'អៈ', description: 'special: G AltGr-: -> អៈ' },
 			// "
-			{ input: 'G\"', output: 'អ៉', description: 'special: G\" -> អ៉' },
-			{ input: [ [ '\"', true ] ], output: '᧶', description: 'special: AltGr-\" -> ᧶' },
+			{ input: 'G"', output: 'អ៉', description: 'special: G" -> អ៉' },
+			{ input: [ [ '"', true ] ], output: '᧶', description: 'special: AltGr-" -> ᧶' },
 			// ,
 			{ input: 'G,', output: 'អុំ', description: 'special: G, -> អុំ' },
 			{ input: [ [ ',', true ] ], output: ',', description: 'special: AltGr-, -> ,' },
@@ -5305,7 +5305,7 @@ var palochkaVariants = {
 			{ input: '~S', output: 'Ṣ', description: 'Yoruba tilde ~S -> Ṣ' },
 			{ input: '~s', output: 'ṣ', description: 'Yoruba tilde ~s -> ṣ' },
 			{ input: '~e~-', output: 'ẹ̄', description: 'Yoruba tilde ~e~- -> ẹ̄' },
-			{ input: '~E~\\', output: 'Ẹ̀', description: 'Yoruba tilde ~E~\ -> Ẹ̀' },
+			{ input: '~E~\\', output: 'Ẹ̀', description: 'Yoruba tilde ~E~\\ -> Ẹ̀' },
 			{ input: '~e~/', output: 'ẹ́', description: 'Yoruba tilde ~e~/ -> ẹ́' },
 			{ input: '~O~^', output: 'Ộ', description: 'Yoruba tilde ~O~^ -> Ộ' },
 			{ input: '~o~v', output: 'ọ̌', description: 'Yoruba tilde ~o~v -> ọ̌' }
