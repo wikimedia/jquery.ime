@@ -6,10 +6,14 @@
  *
  * This layout assumes that the standard Russian keyboard layout is used. All the rules produce the
  * same character palochka, and the characters used are the same that are often used by the speakers
- * of these languages online: 1. Latin small 'l'. 2. Latin capital 'I'. 3. Ukrainian capital 'І'. 4.
- * Alt-1 (the digit one). 5. Alt-д (Cyrillic small 'de', on the same key as Latin 'l'). 6. Alt-ш
- * (Cyrillic small 'sha', on the same key as Latin 'i'). 7. Alt-Ш (Cyrillic capital 'sha', on the
- * same key as Latin 'I').
+ * of these languages online:
+ * 1. Latin small 'l'.
+ * 2. Latin capital 'I'.
+ * 3. Ukrainian capital 'І'.
+ * 4. Alt-1 (the digit one).
+ * 5. Alt-д (Cyrillic small 'de', on the same key as Latin 'l').
+ * 6. Alt-ш (Cyrillic small 'sha', on the same key as Latin 'i').
+ * 7. Alt-Ш (Cyrillic capital 'sha', on the same key as Latin 'I').
  */
 
 ( function ( $ ) {
