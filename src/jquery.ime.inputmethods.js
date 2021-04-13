@@ -990,6 +990,10 @@
 			autonym: 'Dagbani',
 			inputmethods: [ 'dag-alt', 'dag-tilde' ]
 		},
+		dar: {
+			autonym: 'дарган',
+			inputmethods: [ 'cyrl-palochka' ]
+		},
 		de: {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
