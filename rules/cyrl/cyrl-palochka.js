@@ -14,9 +14,15 @@
 
 ( function ( $ ) {
 	'use strict';
-	// All the characters are very similar in appearance,
-	// so it's better to give them names to avoid confusion.
-	var cyrlPalochka;
+
+	var cyrlPalochka,
+    // All the characters are very similar in appearance,
+    // so it's better to give them names to avoid confusion.
+    latinSmallL = 'l',
+    latinCapitalI = 'I',
+    ukrainianCapitalI = 'І',
+    palochka = 'Ӏ',
+    digitOne = '1';
 
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
@@ -28,14 +34,16 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-			[ 'l', 'Ӏ' ],
-			[ 'I', 'Ӏ' ],
-			[ 'І', 'Ӏ' ] ],
+			[ latinSmallL, palochka ],
+			[ latinCapitalI, palochka ],
+			[ ukrainianCapitalI, palochka ]
+    ],
 		patterns_x: [
-			[ '1', 'Ӏ' ],
-			[ 'д', 'Ӏ' ],
-			[ 'ш', 'Ӏ' ],
-			[ 'Ш', 'Ӏ' ] ]
+			[ digitOne, palochka ],
+			[ 'д', palochka ],
+			[ 'ш', palochka ],
+			[ 'Ш', palochka ]
+    ]
 	};
 
 	$.ime.register( cyrlPalochka );
