@@ -715,7 +715,7 @@
 	$.ime.languages = {};
 
 	/**
-	 * @property {string} Relative/absolute path for the rules folder of jquery.ime
+	 * @property {string} Relative or absolute path for the rules folder of jquery.ime
 	 */
 	$.ime.path = '../';
 	$.ime.textEntryFactory = TextEntryFactory.static.singleton;

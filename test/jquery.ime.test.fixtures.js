@@ -445,7 +445,7 @@ var palochkaVariants = {
 			{ input: 'o~e',  output: 'oe', description: 'Kom tilde: o~e -> oe' },
 
 			{ input: 'ta~ni',  output: 'taŋi', description: 'Kom tilde: ta~ni -> taŋi' },
-			{ input: '~Neyn',  output: 'Ŋeyn', description: 'Kom tilde: ~Neyn -> Ŋeyn' },
+			{ input: '~Neyn',  output: 'Ŋeyn', description: 'Kom tilde: ~Neyn -> Ŋeyn' }
 		]
 	},
 	{
