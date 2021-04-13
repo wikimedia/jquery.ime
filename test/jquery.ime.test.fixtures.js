@@ -1628,8 +1628,9 @@ var palochkaVariants = {
 		description: 'Armenian MS legacy Eastern layout with extended keys test',
 		inputmethod: 'hy-emslegacy',
 		tests: [
-			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
-			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian MS legacy Eastern layout: Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Armenian MS legacy Eastern layout: Latin dot .' },
+			{ input: [ [ '"', true ] ], output: '"', description: 'Armenian MS legacy Eastern layout: Latin double quote "' },
 			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Eastern digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'խւէրտեըիոպչջ', description: 'Armenian MS legacy Eastern 1st row No Shift' },
@@ -1644,10 +1645,12 @@ var palochkaVariants = {
 		description: 'Armenian phonetic layout with extended keys test',
 		inputmethod: 'hy-ephonetic',
 		tests: [
-			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
-			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian Armenian verjaket ։' },
-			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian phonetic: Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Armenian phonetic: Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian phonetic: Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Armenian phonetic: colon :' },
+			{ input: [ [ '"', false ] ], output: '"', description: 'Armenian phonetic: Latin double quote " without alt' },
+			{ input: [ [ '"', true ] ], output: '"', description: 'Armenian phonetic: Latin double quote " with alt' },
 			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷԹՓՁՋ()ՐՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոեռտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
@@ -1662,10 +1665,12 @@ var palochkaVariants = {
 		description: 'Armenian alternative phonetic layout with extended keys test',
 		inputmethod: 'hy-ephoneticalt',
 		tests: [
-			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian mijaket ․' },
-			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian verjaket ։' },
-			{ input: [ [ ':', true ] ], output: ':', description: 'Latin colon :' },
+			{ input: [ [ '.', false ] ], output: '․', description: 'Armenian phonetic alt: Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Armenian phonetic alt: Latin dot .' },
+			{ input: [ [ ':', false ] ], output: '։', description: 'Armenian phonetic alt: Armenian verjaket ։' },
+			{ input: [ [ ':', true ] ], output: ':', description: 'Armenian phonetic alt: colon :' },
+			{ input: [ [ '"', false ] ], output: '"', description: 'Armenian alt: Latin double quote " without alt' },
+			{ input: [ [ '"', true ] ], output: '"', description: 'Armenian alt: Latin double quote " with alt' },
 			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷՖՓՁՋ()ՌՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոերտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
@@ -1682,6 +1687,7 @@ var palochkaVariants = {
 		tests: [
 			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
 			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
+			{ input: [ [ '"', true ] ], output: '"', description: 'Armenian typewriter: Latin double quote " with alt' },
 			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ՖՁ֏֊—և՚(ՕԷՂ', description: 'Armenian typewriter digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'ճփբսմուկըթծց', description: 'Armenian typewriter 1st row No Shift' },
@@ -1696,16 +1702,17 @@ var palochkaVariants = {
 		description: 'Armenian MS legacy Westerm layout with extended keys test',
 		inputmethod: 'hy-wmslegacy',
 		tests: [
-			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian mijaket ․' },
-			{ input: [ [ '.', true ] ], output: '.', description: 'Latin dot .' },
-			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Westerm digits row No Shift' },
-			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Westerm digits row With Shift' },
-			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Westerm 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Westerm 1st row With Shift' },
-			{ input: 'asdfghjkl;\'\\', output: 'աստֆկհճքլթփ\'', description: 'Armenian MS legacy Westerm 2nd row No Shift' },
-			{ input: 'ASDFGHJKL:"|', output: 'ԱՍՏՖԿՀՃՔԼԹՓ՞', description: 'Armenian MS legacy Westerm 2nd row With Shift' },
-			{ input: 'zxcvbnm,./', output: 'զցգւպնմշղծ', description: 'Armenian MS legacy Westerm 3rd row No Shift' },
-			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՒՊՆՄՇՂԾ', description: 'Armenian MS legacy Westerm 3rd row With Shift' }
+			{ input: [ [ '7', false ] ], output: '․', description: 'Armenian MS legacy Western Armenian mijaket ․' },
+			{ input: [ [ '.', true ] ], output: '.', description: 'Armenian MS legacy Western Latin dot .' },
+			{ input: [ [ '"', true ] ], output: '"', description: 'Armenian MS legacy Western Latin double quote " with alt' },
+			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Western digits row No Shift' },
+			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Western digits row With Shift' },
+			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Western 1st row No Shift' },
+			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Western 1st row With Shift' },
+			{ input: 'asdfghjkl;\'\\', output: 'աստֆկհճքլթփ\'', description: 'Armenian MS legacy Western 2nd row No Shift' },
+			{ input: 'ASDFGHJKL:"|', output: 'ԱՍՏՖԿՀՃՔԼԹՓ՞', description: 'Armenian MS legacy Western 2nd row With Shift' },
+			{ input: 'zxcvbnm,./', output: 'զցգւպնմշղծ', description: 'Armenian MS legacy Western 3rd row No Shift' },
+			{ input: 'ZXCVBNM<>?', output: 'ԶՑԳՒՊՆՄՇՂԾ', description: 'Armenian MS legacy Western 3rd row With Shift' }
 		]
 	},
 	{
@@ -4118,7 +4125,14 @@ var palochkaVariants = {
 		description: 'Russian kbd keyboard test',
 		inputmethod: 'ru-kbd',
 		tests: [
-			{ input: '.', output: 'ю', description: 'Russian kbd - . -> ю' }
+			{ input: '~!@#$%^&*()_+', output: 'Ё!"№;%:?*()_+', description: 'Russian kbd - numbers row shifted' },
+			{ input: '`1234567890-=', output: 'ё1234567890-=', description: 'Russian kbd - numbers row not shifted' },
+			{ input: 'QWERTYUIOP{}', output: 'ЙЦУКЕНГШЩЗХЪ', description: 'Russian kbd - QWERTY row shifted' },
+			{ input: 'qwertyuiop[]\\', output: 'йцукенгшщзхъ\\', description: 'Russian kbd - qwerty row not shifted' },
+			{ input: 'ASDFGHJKL:"', output: 'ФЫВАПРОЛДЖЭ', description: 'Russian kbd - ASDF row shifted' },
+			{ input: 'asdfghjkl;\'', output: 'фывапролджэ', description: 'Russian kbd - asdf row not shifted' },
+			{ input: 'ZXCVBNM<>?', output: 'ЯЧСМИТЬБЮ,', description: 'Russian kbd - ZXCV row shifted' },
+			{ input: 'zxcvbnm,./', output: 'ячсмитьбю.', description: 'Russian kbd - zxcv row not shifted' }
 		]
 	},
 	{
@@ -4605,6 +4619,34 @@ var palochkaVariants = {
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' },
 			{ input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu' },
 			{ input: '~naa', output: 'ఞా', description: 'Telugu ~naa' }
+		]
+	},
+	{
+		description: 'Thai Kedmanee test',
+		inputmethod: 'th-kedmanee',
+		tests: [
+			{ input: 'QWERTYUIOP{}|', output: '๐"ฎฑธํ๊ณฯญฐ,ฅ', description: 'Thai Kedmanee QWERTYUIOP{}|' },
+			{ input: 'ASDFGH', output: 'ฤฆฏโฌ็', description: 'Thai Kedmanee ASDFGH' },
+			{ input: 'aJko', output: 'ฟ๋าน', description: 'Thai Kedmanee aJko' },
+			{ input: 'KL:"', output: 'ษศซ.', description: 'Thai Kedmanee KL:"' },
+			{ input: 'ZXCV', output: '()ฉฮ', description: 'Thai Kedmanee ZXCV' },
+			{ input: 'SBv;k,bDb]', output: 'ฆฺอวามิฏิล', description: 'Thai Kedmanee SBv;k,bDb]' },
+			{ input: 'vy0CN', output: 'อัจฉ์', description: 'Thai Kedmanee vy0CN' },
+			{ input: 'M<>?', output: '?ฒฬฦ', description: 'Thai Kedmanee M<>?' },
+			{ input: 'qw', output: 'ๆไ', description: 'Thai Kedmanee qw' },
+			{ input: 'z^hreoydmuj', output: 'ผู้พำนักที่', description: 'Thai Kedmanee z^hreoydmuj' },
+			{ input: 'tiop[]\\', output: 'ะรนยบลฃ', description: 'Thai Kedmanee tiop[]\\' },
+			{ input: 'asdfgh', output: 'ฟหกดเ้', description: 'Thai Kedmanee asdfgh' },
+			{ input: 'l;\'', output: 'สวง', description: 'Thai Kedmanee l;\'' },
+			{ input: 'zxcvb', output: 'ผปแอิ', description: 'Thai Kedmanee zxcvb' },
+			{ input: 'gznvd', output: 'เผือก', description: 'Thai Kedmanee gznvd' },
+			{ input: 'm,./', output: 'ทมใฝ', description: 'Thai Kedmanee m,./' },
+			{ input: '`12345', output: '_ๅ/-ภถ', description: 'Thai Kedmanee `12345' },
+			{ input: 'a6', output: 'ฟุ', description: 'Thai Kedmanee a6' },
+			{ input: 'a7o', output: 'ฟึน', description: 'Thai Kedmanee a7o' },
+			{ input: '890-=', output: 'คตจขช', description: 'Thai Kedmanee 890-=' },
+			{ input: '~!@#$%', output: '%+๑๒๓๔', description: 'Thai Kedmanee ~!@#$%' },
+			{ input: '&*()_+', output: '฿๕๖๗๘๙', description: 'Thai Kedmanee &*()_+' }
 		]
 	},
 	{
