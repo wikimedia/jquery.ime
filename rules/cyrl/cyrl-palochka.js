@@ -36,8 +36,12 @@
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
+		contextLength: 2,
+		maxKeyLength: 3,
 		patterns: [
+			[ '~~' + digitOne, '~~', '~1' ],
+			[ '~' + digitOne, palochka ],
 			[ latinSmallL, palochka ],
 			[ latinCapitalI, palochka ],
 			[ ukrainianCapitalI, palochka ]
