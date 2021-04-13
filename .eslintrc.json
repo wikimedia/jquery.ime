@@ -15,7 +15,6 @@
 		"indent": "off",
 		"max-len": "off",
 		"no-multi-spaces": "off",
-		"no-useless-escape": "off",
 		"one-var": [ "error", { "var": "always" } ]
 	}
 }
