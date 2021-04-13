@@ -954,19 +954,22 @@ var palochkaVariants = {
 		description: 'Cyrillic with palochka transliteration test',
 		inputmethod: 'cyrl-palochka',
 		tests: [
-			// Sanity test - palochka should produce itself
 			{ input: palochkaVariants.palochka, output: palochkaVariants.palochka, description: 'Palochka itself is unchanged' },
 
 			{ input: 'L', output: 'L', description: 'Latin capital L is unchanged' },
 			{ input: palochkaVariants.latinSmallL, output: palochkaVariants.palochka, description: 'Latin small l becomes palochka' },
 
 			{ input: palochkaVariants.latinCapitalI, output: palochkaVariants.palochka, description: 'Latin capital I becomes palochka' },
-			{ input: 'i', output: 'i', description: 'Latin small i becomes palochka' },
+			{ input: 'i', output: 'i', description: 'Latin small i is unchanged' },
 
 			{ input: palochkaVariants.ukrainianCapitalI, output: palochkaVariants.palochka, description: 'Ukrainian capital І becomes palochka' },
 
 			{ input: palochkaVariants.digitOne, output: palochkaVariants.digitOne, description: 'Digit one (1) is unchanged' },
 			{ input: [ [ palochkaVariants.digitOne, true ] ], output: palochkaVariants.palochka, description: 'Extended digit one (1) becomes palochka' },
+
+			{ input: 'Мях~1ячкъала', output: 'МяхӀячкъала', description: 'Tilde 1 produces palochka' },
+			{ input: '~~100', output: '~100', description: 'Two tildes and 1 produce ~1 and not palochka' },
+			{ input: '~~~~', output: '~~~~', description: 'Four tildes are unchanged' },
 
 			{ input: 'д', output: 'д', description: 'Cyrillic small д is is unchanged' },
 			{ input: [ [ 'д', true ] ], output: palochkaVariants.palochka, description: 'Extended Cyrillic д becomes palochka' },
