@@ -64,7 +64,7 @@
 			[ 'l', 'ل' ],
 			[ ':', ':' ],
 			/* Arabic semicolon */ [ ';', '؛' ],
-			/* verse sign */ [ '\"', '؎' ],
+			/* verse sign */ [ '"', '؎' ],
 			/* superscript alef */ [ '\'', 'ٰ' ],
 			/* takhallus */ [ '\\|', 'ؔ' ],
 			/* verse sign */ [ '\\', '؎' ],
