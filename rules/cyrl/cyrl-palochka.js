@@ -20,13 +20,13 @@
 	'use strict';
 
 	var cyrlPalochka,
-    // All the characters are very similar in appearance,
-    // so it's better to give them names to avoid confusion.
-    latinSmallL = 'l',
-    latinCapitalI = 'I',
-    ukrainianCapitalI = 'І',
-    palochka = 'Ӏ',
-    digitOne = '1';
+		// All the characters are very similar in appearance,
+		// so it's better to give them names to avoid confusion.
+		latinSmallL = 'l',
+		latinCapitalI = 'I',
+		ukrainianCapitalI = 'І',
+		palochka = 'Ӏ',
+		digitOne = '1';
 
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
