@@ -296,7 +296,14 @@ var palochkaVariants = {
 		description: 'Belarusian kbd keyboard test',
 		inputmethod: 'be-kbd',
 		tests: [
-			{ input: '.', output: 'ю', description: 'Belarusian kbd - . -> ю' }
+			{ input: '~!@#$%^&*()_+', output: 'Ё!"№;%:?*()_+', description: 'Belarusian kbd - numbers row shifted' },
+			{ input: '`1234567890-=', output: 'ё1234567890-=', description: 'Belarusian kbd - numbers row not shifted' },
+			{ input: 'QWERTYUIOP{}\\', output: 'ЙЦУКЕНГШЎЗХ\'\\', description: 'Belarusian kbd - QWERTY row shifted' },
+			{ input: 'qwertyuiop[]\\', output: 'йцукенгшўзх\'\\', description: 'Belarusian kbd - qwerty row not shifted' },
+			{ input: 'ASDFGHJKL:"', output: 'ФЫВАПРОЛДЖЭ', description: 'Belarusian kbd - ASDF row shifted' },
+			{ input: 'asdfghjkl;\'', output: 'фывапролджэ', description: 'Belarusian kbd - asdf row not shifted' },
+			{ input: 'ZXCVBNM<>?', output: 'ЯЧСМІТЬБЮ,', description: 'Belarusian kbd - ZXCV row shifted' },
+			{ input: 'zxcvbnm,./', output: 'ячсмітьбю.', description: 'Belarusian kbd - zxcv row not shifted' }
 		]
 	},
 	{
@@ -1625,6 +1632,26 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Croatian kbd test',
+		inputmethod: 'hr-kbd',
+		tests: [
+			{ input: 'ABCabc', output: 'ABCabc', description: 'Croatian kbd - ABCabc' },
+			{ input: ';:', output: 'čČ', description: 'Croatian kbd - čČ' },
+			{ input: '\'"', output: 'ćĆ', description: 'Croatian kbd - ćĆ' },
+			{ input: 'D\\D|', output: 'DžDŽ', description: 'Croatian kbd - DžDŽ' },
+			{ input: ']}', output: 'đĐ', description: 'Croatian kbd - đĐ' },
+			{ input: 'EFGHIJKLMNOPRSefghijklmnoprs', output: 'EFGHIJKLMNOPRSefghijklmnoprs', description: 'Croatian kbd - EFGHIJKLMNOPRSefghijklmnoprs' },
+			{ input: '[{', output: 'šŠ', description: 'Croatian kbd - šŠ' },
+			{ input: 'TUVtuv', output: 'TUVtuv', description: 'Croatian kbd - TUVtuv' },
+			{ input: '`c`C`s`S', output: 'çÇşŞ', description: 'Croatian kbd - çÇşŞ' },
+			{ input: '~a~A~e~E~o~O~u~U', output: 'äÄëËöÖüÜ', description: 'Croatian kbd - äÄëËöÖüÜ' },
+			{ input: '@^&*()-_=+', output: '"&/()=\'?+*', description: 'Croatian kbd - "&/()=\'?+*' },
+			{ input: 'yY', output: 'zZ', description: 'Croatian kbd - zZ' },
+			{ input: 'zZ', output: 'yY', description: 'Croatian kbd - yY' },
+			{ input: '<>/?', output: ';:-_', description: 'Croatian kbd - ;:-_' }
+		]
+	},
+	{
 		description: 'Armenian MS legacy Eastern layout with extended keys test',
 		inputmethod: 'hy-emslegacy',
 		tests: [
@@ -2361,6 +2388,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kazakh Cyrillic test',
+		inputmethod: 'kk-kbd',
+		tests: [
+			{ input: '~!@#$%^&*()_+', output: ')!ӘІӉҒ;:ҮҰҚӨҺ', description: 'Kazakh kbd - numbers row shifted' },
+			{ input: '`1234567890-=', output: '("әіӊғ,.үұқөһ', description: 'Kazakh kbd - numbers row not shifted' },
+			{ input: 'QWERTYUIOP{}', output: 'ЙЦУКЕНГШЩЗХЪ', description: 'Kazakh kbd - QWERTY row shifted' },
+			{ input: 'qwertyuiop[]', output: 'йцукенгшщзхъ', description: 'Kazakh kbd - qwerty row not shifted' },
+			{ input: 'ASDFGHJKL:"', output: 'ФЫВАПРОЛДЖЭ', description: 'Kazakh kbd - ASDF row shifted' },
+			{ input: 'asdfghjkl;\'', output: 'фывапролджэ', description: 'Kazakh kbd - asdf row not shifted' },
+			{ input: 'ZXCVBNM<>?', output: 'ЯЧСМИТЬБЮ?', description: 'Kazakh kbd - ZXCV row shifted' },
+			{ input: 'zxcvbnm,./', output: 'ячсмитьбю№', description: 'Kazakh kbd - zxcv row not shifted' }
+		]
+	},
+	{
 		description: 'Khmer NiDA standard Unicode keyboard test',
 		inputmethod: 'km-nidakyk',
 		tests: [
@@ -2530,6 +2571,7 @@ var palochkaVariants = {
 			{ input: [ 'G', 'I', [ '=', true ], 'H' ], output: 'អី៎ះ', description: 'NiDA: GI AltGr-= H -> អី៎ះ' },
 			{ input: 'kEH', output: 'កែះ', description: 'NiDA: kEH -> កែះ' },
 
+			{ input: '#', output: '"', description: 'NiDA: # -> "' },
 			{ input: ' ', output: '\u200b', description: 'NiDA: SP -> ZWSP' },
 			{ input: [ [ ' ', false, true ] ], output: ' ', description: 'NiDA: Shift-SP -> SP' },
 			{ input: [ [ ' ', true ] ], output: '\u00a0', description: 'NiDA: AltGr-SP -> NBSP' },
@@ -4296,6 +4338,8 @@ var palochkaVariants = {
 		description: 'Sinhala Wijesekara transliteration tests',
 		inputmethod: 'si-wijesekara',
 		tests: [
+			{ input: '"', output: ',', description: 'Sinhala Wijesekara - " -> ,' },
+
 			// A consonant is entered with a single key.
 			{ input: 'l', output: 'ක', description: 'Sinhala Wijesekara - l -> ක (KA)' },
 
@@ -4440,6 +4484,19 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'loant~sa', output: 'loantša', description: 'Sotho tilde loantša' },
 			{ input: 'ro~-na', output: 'rōna', description: 'Sotho tilde rōna' }
+		]
+	},
+	{
+		description: 'Serbian keyboard test',
+		inputmethod: 'sr-kbd',
+		tests: [
+			{ input: 'ABVGD}E|YIJKLQM', output: 'АБВГДЂЕЖЗИЈКЛЉМ', description: 'Serbian keyboard АБВГДЂЕЖЗИЈКЛЉМ' },
+			{ input: 'abvgd]e\\yijklqm', output: 'абвгдђежзијклљм', description: 'Serbian keyboard абвгдђежзијклљм' },
+			{ input: 'NWOPRST"UFHC:X{', output: 'НЊОПРСТЋУФХЦЧЏШ', description: 'Serbian keyboard НЊОПРСТЋУФХЦЧЏШ' },
+			{ input: 'nwoprst\'ufhc;x[', output: 'нњопрстћуфхцчџш', description: 'Serbian keyboard нњопрстћуфхцчџш' },
+			{ input: '-G-KZ', output: 'ЃЌЅ', description: 'Serbian keyboard ЃЌЅ' },
+			{ input: '-g-kz', output: 'ѓќѕ', description: 'Serbian keyboard ѓќѕ' },
+			{ input: '@^&*()-_=+<>/?', output: '"&/()=\'?+*;:-_', description: 'Serbian keyboard "&/()=\'?+*;:-_' }
 		]
 	},
 	{
@@ -4725,7 +4782,14 @@ var palochkaVariants = {
 		description: 'Ukrainian kbd keyboard test',
 		inputmethod: 'uk-kbd',
 		tests: [
-			{ input: '.', output: 'ю', description: 'Ukrainian kbd - . -> ю' }
+			{ input: '~!@#$%^&*()_+', output: 'Ґ!"№;%:?*()_+', description: 'Ukrainian kbd - numbers row shifted' },
+			{ input: '`1234567890-=', output: 'ґ1234567890-=', description: 'Ukrainian kbd - numbers row not shifted' },
+			{ input: 'QWERTYUIOP{}\\', output: 'ЙЦУКЕНГШЩЗХЇ\\', description: 'Ukrainian kbd - ` and QWERTY row shifted' },
+			{ input: 'qwertyuiop[]\\', output: 'йцукенгшщзхї\\', description: 'Ukrainian kbd - ` and qwerty row not shifted' },
+			{ input: 'ASDFGHJKL:"', output: 'ФІВАПРОЛДЖЄ', description: 'Ukrainian kbd - ASDF row shifted' },
+			{ input: 'asdfghjkl;\'', output: 'фівапролджє', description: 'Ukrainian kbd - asdf row not shifted' },
+			{ input: 'ZXCVBNM<>?', output: 'ЯЧСМИТЬБЮ,', description: 'Ukrainian kbd - ZXCV row shifted' },
+			{ input: 'zxcvbnm,./', output: 'ячсмитьбю.', description: 'Ukrainian kbd - zxcv row not shifted' }
 		]
 	},
 	{
@@ -4798,7 +4862,14 @@ var palochkaVariants = {
 		description: 'Uzbek kbd keyboard test',
 		inputmethod: 'uz-kbd',
 		tests: [
-			{ input: '.', output: 'ю', description: 'Uzbek kbd - . -> ю' }
+			{ input: '~!@#$%^&*()_+', output: 'Ё!"№;%:?*()ҒҲ', description: 'Uzbek cyrillic kbd - numbers row shifted' },
+			{ input: '`1234567890-=', output: 'ё1234567890ғҳ', description: 'Uzbek cyrillic kbd - numbers row not shifted' },
+			{ input: 'QWERTYUIOP{}\\', output: 'ЙЦУКЕНГШЎЗХЪ\\', description: 'Uzbek cyrillic kbd - ` and QWERTY row shifted' },
+			{ input: 'qwertyuiop[]\\', output: 'йцукенгшўзхъ\\', description: 'Uzbek cyrillic kbd - ` and qwerty row not shifted' },
+			{ input: 'ASDFGHJKL:"', output: 'ФҚВАПРОЛДЖЭ', description: 'Uzbek cyrillic kbd - ASDF row shifted' },
+			{ input: 'asdfghjkl;\'', output: 'фқвапролджэ', description: 'Uzbek cyrillic kbd - asdf row not shifted' },
+			{ input: 'ZXCVBNM<>?', output: 'ЯЧСМИТЬБЮ,', description: 'Uzbek cyrillic kbd - ZXCV row shifted' },
+			{ input: 'zxcvbnm,./', output: 'ячсмитьбю.', description: 'Uzbek cyrillic kbd - zxcv row not shifted' }
 		]
 	},
 
