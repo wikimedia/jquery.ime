@@ -3256,7 +3256,43 @@ var palochkaVariants = {
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
 		]
 	},
-
+	{
+		description: 'Kashmiri kbd test',
+		inputmethod: 'ks-kbd',
+		tests: [
+			{ input: '1234567890', output: '۱۲۳۴۵۶۷۸۹۰', description: 'Kashmiri kbd digits' },
+			{ input: 'a~', output: 'آ', description: 'Kashmiri kbd a~ -> alef madda' },
+			{ input: '!@#$-+=/%^&*', output: '!@#$-+=/%^&*', description: 'Kashmiri kbd unchanging symbols' },
+			{ input: '()', output: ')(', description: 'Kashmiri kbd parentheses' },
+			{ input: '[]', output: '][', description: 'Kashmiri kbd square brackets' },
+			{ input: 'S_', output: 'شّ', description: 'Kashmiri kbd shadda' },
+			{ input: 'Q', output: 'ﷺ', description: 'Kashmiri kbd sallallahou' },
+			{ input: 'WERT', output: 'ؤئڑٹ', description: 'Kashmiri kbd WERT' },
+			{ input: 'Y', output: '؁', description: 'Kashmiri kbd sanah' },
+			{ input: 'U', output: '،', description: 'Kashmiri kbd U -> comma' },
+			{ input: 'IOP', output: 'ۆۃإ', description: 'Kashmiri kbd IOP' },
+			{ input: 'h{h}h\'', output: 'ھٰھٰھٰ', description: 'Kashmiri kbd superscript alef' },
+			{ input: 'qwerty', output: 'قوعرتے', description: 'Kashmiri kbd qwerty' },
+			{ input: 'uiop', output: 'ءیہپ', description: 'Kashmiri kbd ءیہپ' },
+			{ input: 'ASD', output: 'آشڈ', description: 'Kashmiri kbd ASD' },
+			{ input: 'jF', output: 'جُ', description: 'Kashmiri kbd damma' },
+			{ input: 'GHJK', output: 'غحژخ', description: 'Kashmiri kbd GHJK' },
+			{ input: 'mL', output: 'مؓ', description: 'Kashmiri kbd radi' },
+			{ input: ';', output: '؛', description: 'Kashmiri kbd semicolon' },
+			{ input: '"', output: '"', description: 'Kashmiri kbd "' },
+			{ input: 'asdfghjkl', output: 'اسدفگھجکل', description: 'Kashmiri kbd اسدفگھجکل' },
+			{ input: '|', output: 'أ', description: 'Kashmiri kbd alef hamza' },
+			{ input: '\\', output: '؎', description: 'Kashmiri kbd verse sign' },
+			{ input: 's`', output: 'سٍ', description: 'Kashmiri kbd kasratan' },
+			{ input: 'ZXCVBNM', output: 'ذضثظأںٔ', description: 'Kashmiri kbd ZXCVBNM' },
+			{ input: 'zxcvbnm', output: 'زصچطبنم', description: 'Kashmiri kbd zxcvbnm' },
+			{ input: 'z<', output: 'زِ', description: 'Kashmiri kbd kasra' },
+			{ input: 'z>', output: 'زَ', description: 'Kashmiri kbd fatha' },
+			{ input: ',', output: '،', description: 'Kashmiri kbd comma' },
+			{ input: '.', output: '۔', description: 'Kashmiri kbd full stop' },
+			{ input: '?', output: '؟', description: 'Kashmiri kbd question mark' }
+		]
+	},
 	{
 		description: 'Kurdish h test',
 		inputmethod: 'ku-h',
@@ -3370,6 +3406,60 @@ var palochkaVariants = {
 			{ input: 'm~o~vk~o~/', output: 'mɔ̌kɔ́', description: 'Lingala tilde test ' },
 			{ input: 'bo~^ngo~/', output: 'bôngó', description: 'Lingala tilde test bôngó' },
 			{ input: 'wa~^na~/', output: 'wâná', description: 'Lingala tilde test wâná' }
+		]
+	},
+	{
+		description: 'Lao kbd test',
+		inputmethod: 'lo-kbd',
+		tests: [
+			{ input: 'W!@#$&*()_', output: '0123456789', description: 'Lao kbd test 0123456789' },
+			{ input: '"', output: '=', description: 'Lao kbd test " -> =' },
+			{ input: '%', output: '໌', description: 'Lao kbd test cancellation mark' },
+			{ input: '\'', output: 'ງ', description: 'Lao kbd test ngo' },
+			{ input: 'd=d+', output: 'ກໍກໍ', description: 'Lao kbd test niggahita' },
+			{ input: ',', output: 'ມ', description: 'Lao kbd test mo' },
+			{ input: '-', output: 'ຊ', description: 'Lao kbd test so tam' },
+			{ input: '.d', output: 'ໃກ', description: 'Lao kbd test rolled' },
+			{ input: '01', output: 'ຂຢ', description: 'Lao kbd test 01' },
+			{ input: '2/', output: 'ຟຝ', description: 'Lao kbd test fo tam/sung' },
+			{ input: '345', output: 'ໂຖຸ', description: 'Lao kbd test 345' },
+			{ input: 'd6', output: 'ກູ', description: 'Lao kbd test d6' },
+			{ input: '789', output: 'ຄຕຈ', description: 'Lao kbd test 789' },
+			{ input: ':;', output: '%ວ', description: 'Lao kbd test :;' },
+			{ input: '<', output: 'ໝ', description: 'Lao kbd test <' },
+			{ input: '>', output: '$', description: 'Lao kbd test >' },
+			{ input: '?', output: ')', description: 'Lao kbd test ?' },
+			{ input: 'MA', output: 'ໆັ', description: 'Lao kbd test MA' },
+			{ input: 'MB', output: 'ໆຶ', description: 'Lao kbd test MB' },
+			{ input: 'C', output: 'ຯ', description: 'Lao kbd test C' },
+			{ input: 'DFGKLRSTXZ`', output: '.,:!?_;+("*', description: 'Lao kbd test Western punctuation' },
+			{ input: 'ME', output: 'ໆຳ', description: 'Lao kbd test ME' },
+			{ input: 'MH', output: 'ໆ໊', description: 'Lao kbd test MH' },
+			{ input: 'I', output: 'ຮ', description: 'Lao kbd test I' },
+			{ input: 'MJ', output: 'ໆ໋', description: 'Lao kbd test MJ' },
+			{ input: 'MN', output: 'ໆື', description: 'Lao kbd test MN' },
+			{ input: 'O', output: 'ໜ', description: 'Lao kbd test O' },
+			{ input: 'P', output: 'ຽ', description: 'Lao kbd test P' },
+			{ input: 'MQ', output: 'ໆົ', description: 'Lao kbd test MQ' },
+			{ input: 'MU', output: 'ໆີ', description: 'Lao kbd test ໆີ' },
+			{ input: 'V', output: 'x', description: 'Lao kbd test V -> x' },
+			{ input: 'MY', output: 'ໆິ', description: 'Lao kbd test ໆິ' },
+			{ input: '[]', output: 'ບລ', description: 'Lao kbd test []' },
+			{ input: 'd^', output: 'ກຼ', description: 'Lao kbd test d^' },
+			{ input: 'dadb', output: 'ກັກຶ', description: 'Lao kbd test dadb' },
+			{ input: 'c', output: 'ແ', description: 'Lao kbd test c' },
+			{ input: 'fe', output: 'ດຳ', description: 'Lao kbd test fe' },
+			{ input: 'gI', output: 'ເຮ', description: 'Lao kbd test gI' },
+			{ input: 'ih', output: 'ຣ້', description: 'Lao kbd test ih' },
+			{ input: 'ljk', output: 'ສ່າ', description: 'Lao kbd test ljk' },
+			{ input: 'mn', output: 'ທື', description: 'Lao kbd test mn' },
+			{ input: 'opq', output: 'ນຍົ', description: 'Lao kbd test opq' },
+			{ input: 'rsut', output: 'ພຫີະ', description: 'Lao kbd test rsut' },
+			{ input: 'vwxyz', output: 'ອໄປິຜ', description: 'Lao kbd test vwxyz' },
+			{ input: '{', output: '-', description: 'Lao kbd test {' },
+			{ input: '|', output: 'ຫຼ', description: 'Lao kbd test |' },
+			{ input: '}', output: '/', description: 'Lao kbd test }' },
+			{ input: '\\', output: '\\', description: 'Lao kbd test \\' }
 		]
 	},
 	{
@@ -3642,6 +3732,7 @@ var palochkaVariants = {
 				description: 'Marathi phonetic ZWNJ character'
 			},
 
+			{ input: 'n"', output: 'नऊ', description: 'Marathi phonetic n" -> नऊ' },
 			{ input: '*', output: 'श्र', description: 'Marathi phonetic * -> श्र' }
 		]
 	},
@@ -3746,6 +3837,63 @@ var palochkaVariants = {
 		inputmethod: 'my-mm3',
 		tests: [
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
+		]
+	},
+	{
+		description: 'Myanmar xkb test',
+		inputmethod: 'my-xkb',
+		tests: [
+			{ input: 'QWERTYUIOP', output: 'ဈဝဣ၎ဤ၌ဥ၍ဿဏ', description: 'Myanmar xkb QWERTYUIOP' },
+			{ input: 'qawsedrftgyhujikolp;', output: 'ဆေတျနိမ်အါပ့ကြငုသူစး', description: 'Myanmar xkb qawsedrftgyhujikolp;' },
+			{ input: 'ASD', output: 'ဗှီ', description: 'Myanmar xkb ASD' },
+			{ input: 'WF', output: 'ဝ္', description: 'Myanmar xkb WF' },
+			{ input: 'tG', output: 'အွ', description: 'Myanmar xkb tG' },
+			{ input: 'tH', output: 'အံ', description: 'Myanmar xkb tH' },
+			{ input: 'tJ', output: 'အဲ', description: 'Myanmar xkb tJ' },
+			{ input: 'KL', output: 'ဒဓ', description: 'Myanmar xkb KL' },
+			{ input: ':"\'', output: 'ဂ"\'', description: 'Myanmar xkb :"\'' },
+			{ input: 'zxcvbnm,./', output: 'ဖထခလဘညာ,./', description: 'Myanmar xkb zxcvbnm,./' },
+			{ input: 'ZXCVBNM<>?', output: 'ဇဌဃဠယဉဦ၊။?', description: 'Myanmar xkb ' },
+			{ input: '`~', output: 'ၐဎ', description: 'Myanmar xkb ၐဎ' },
+			{ input: '1234567890', output: '၁၂၃၄၅၆၇၈၉၀', description: 'Myanmar xkb 1234567890' },
+			{ input: '!@#$%^&*()', output: 'ဍၒဋၓၔၕရ*()', description: 'Myanmar xkb !@#$%^&*()' }
+		]
+	},
+	{
+		description: 'Nepali Romanized test',
+		inputmethod: 'ne-rom',
+		tests: [
+			{ input: '!"#()+,-?=', output: '!"#()+,-?=', description: 'Nepali Romanized !"#()+,' },
+			{ input: '$', output: 'रु', description: 'Nepali Romanized $' },
+			{ input: '.', output: '।', description: 'Nepali Romanized .' },
+			{ input: 'g/y', output: 'ग्य', description: 'Nepali Romanized g/y' },
+			{ input: 'gy', output: 'गय', description: 'Nepali Romanized गय' },
+			{ input: '0123456789', output: '०१२३४५६७८९', description: 'Nepali Romanized 0123456789' },
+			{ input: '<>', output: 'ङ॥', description: 'Nepali Romanized <>' },
+			{ input: 'ABCDEFGH', output: 'आभचधैऊघअ', description: 'Nepali Romanized ABCDEFGH' },
+			{ input: 'JI', output: 'झी', description: 'Nepali Romanized JI' },
+			{ input: 'KLMNOPQRSTUVWXYZ', output: 'खळंणओफठृशथूँऔढञऋ', description: 'Nepali Romanized KLMNOPQRSTUVWXYZ' },
+			{ input: 'bacdefghijklmnopqrstuvwxyz', output: 'बाछदेउगहिजकलमनोपटरसतुवौडयष', description: 'Nepali Romanized bacdefghijklmnopqrstuvwxyz' },
+			{ input: '[]', output: 'इए', description: 'Nepali Romanized []' },
+			{ input: 'j`', output: 'ज़', description: 'Nepali Romanized j`' },
+			{ input: '{|}', output: 'ईःऐ', description: 'Nepali Romanized {|}' }
+		]
+	},
+	{
+		description: 'Nepali trad test',
+		inputmethod: 'ne-trad',
+		tests: [
+			{ input: '#"', output: 'घू', description: 'Nepali trad #"' },
+			{ input: '(\')', output: 'ढुण', description: 'Nepali trad (\')' },
+			{ input: 'A+', output: 'आं', description: 'Nepali trad A+' },
+			{ input: ',', output: 'ऽ', description: 'Nepali trad ऽ' },
+			{ input: '-', output: 'औ', description: 'Nepali trad -' },
+			{ input: '.', output: '।', description: 'Nepali trad .' },
+			{ input: '/', output: 'र', description: 'Nepali trad /' },
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Nepali trad 1234567890' },
+			{ input: 'qwertyuiop', output: 'त्रधभचतथगषयउ', description: 'Nepali trad qwertyuiop' },
+			{ input: 'asdfghjkl;\'', output: 'बकमानजवपिसु', description: 'Nepali trad asdfghjkl;\'' },
+			{ input: 'zxcvbnm', output: 'शहअखदलः', description: 'Nepali trad zxcvbnm' }
 		]
 	},
 	{
@@ -3984,10 +4132,15 @@ var palochkaVariants = {
 		description: 'Oriya OdiScript test',
 		inputmethod: 'or-OdiScript',
 		tests: [
+			{ input: '\'\'', output: '"', description: 'Odia OdiScript \'\' -> "' },
+			{ input: '\'\'\'', output: '\'\'\'', description: 'Odia OdiScript \'\' -> \'\'\'' },
 			{ input: 'j}', output: 'ର‍୍ୟ', description: 'Odia OdiScript j} -> ର‍୍ୟ' },
 			{ input: 'O}', output: 'ଡ୍ୟ', description: 'Odia OdiScript O} -> ଡ୍ୟ' },
 			{ input: 's~', output: 'କଃ', description: 'Odia OdiScript j~ -> କଃ' },
+			{ input: 'sds@@', output: 'ର୍କ୍କ', description: 'Odia OdiScript sds@@ -> ର୍କ୍କ' },
 			{ input: 's@@', output: 'ର୍କ', description: 'Odia OdiScript s@@ -> ର୍କ' },
+			{ input: 'sd s', output: 'କ୍‌ କ', description: 'Odia OdiScript sd s -> କ୍‌ କ (zwnj after halant)' },
+			{ input: 'sQ', output: 'ତ୍କ', description: 'Odia OdiScript sQ -> ତ୍କ' },
 			{ input: 'SQ', output: 'ଖି', description: 'Odia OdiScript SQ -> ଖି' },
 			{ input: 'W', output: 'ଫ', description: 'Odia OdiScript W -> ଫ' },
 			{ input: 'E', output: 'ଡ଼', description: 'Odia OdiScript E -> ଡ଼' },
@@ -4856,6 +5009,28 @@ var palochkaVariants = {
 			{ input: '8',  output: '8', description: 'Urdu phonetic Numeral 8 -> 8' },
 			{ input: '9',  output: '9', description: 'Urdu phonetic Numeral 9 -> 9' },
 			{ input: '0',  output: '0', description: 'Urdu phonetic Numeral 0 -> 0' }
+		]
+	},
+	{
+		description: 'Urdu transliteration test',
+		inputmethod: 'ur-transliteration',
+		tests: [
+			{ input: 'qwertyuiop', output: 'طصھدٹپتبجح', description: 'Urdu transliteration qwertyuiop' },
+			{ input: 'QWERT', output: 'ظضذڈث', description: 'Urdu transliteration QWERT' },
+			{ input: 'TY', output: 'ثّ­', description: 'Urdu transliteration fatha' },
+			{ input: 'TU', output: 'ثۃ', description: 'Urdu transliteration marbuta' },
+			{ input: 'I', output: 'ـ', description: 'Urdu transliteration tatweel' },
+			{ input: 'OP', output: 'چخ', description: 'Urdu transliteration OP' },
+			{ input: 'asdfghjkl', output: 'مورنلہاکی', description: 'Urdu transliteration asdfghjkl' },
+			{ input: 'ASDF', output: 'ژزڑں', description: 'Urdu transliteration ASDF' },
+			{ input: 'G', output: 'ۂ', description: 'Urdu transliteration G' },
+			{ input: 'HKL', output: 'ءگي', description: 'Urdu transliteration HKL' },
+			{ input: ';:\'"', output: '؛:\'"', description: 'Urdu transliteration ;:\'"' },
+			{ input: 'xc', output: 'فے', description: 'Urdu transliteration xc' },
+			{ input: 'vbnm,.', output: 'سشغع,.', description: 'Urdu transliteration vbnm,.' },
+			{ input: 'C', output: 'ۓ', description: 'Urdu transliteration C' },
+			{ input: 'N', output: 'ئ', description: 'Urdu transliteration N' },
+			{ input: '?', output: '؟', description: 'Urdu transliteration ?' }
 		]
 	},
 	{
