@@ -14,7 +14,6 @@
 		"comma-spacing": "off",
 		"indent": "off",
 		"max-len": "off",
-		"no-multi-spaces": "off",
 		"one-var": [ "error", { "var": "always" } ]
 	}
 }
