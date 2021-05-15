@@ -103,6 +103,73 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Assamese InScript test',
+		inputmethod: 'as-inscript',
+		tests: [
+			{ input: '1234567890', output: '১২৩৪৫৬৭৮৯০', description: 'Assamese InScript 1234567890' },
+			{ input: 'k#', output: 'ক্ৰ', description: 'Assamese InScript k#' },
+			{ input: '$k', output: 'ৰ্ক', description: 'Assamese InScript $k' },
+			{ input: '%', output: 'জ্ঞ', description: 'Assamese InScript %' },
+			{ input: '^', output: 'ত্র', description: 'Assamese InScript ^' },
+			{ input: '&', output: 'ক্ষ', description: 'Assamese InScript &' },
+			{ input: '*', output: 'শ্র', description: 'Assamese InScript *' },
+			{ input: 'k_', output: 'কঃ', description: 'Assamese InScript k_' },
+			{ input: '+', output: 'ঋ', description: 'Assamese InScript +' },
+			{ input: 'QWERTYUIOP{}', output: 'ঔঐআঈঊভঙঘধঝঢঞ', description: 'Assamese InScript QWERTYIOP{}' },
+			{ input: 'yq', output: 'বৌ', description: 'Assamese InScript yq' },
+			{ input: 'uw', output: 'হৈ', description: 'Assamese InScript uw' },
+			{ input: 'ie', output: 'গা', description: 'Assamese InScript ie' },
+			{ input: 'or', output: 'দী', description: 'Assamese InScript or' },
+			{ input: 'pt', output: 'জূ', description: 'Assamese InScript pt' },
+			{ input: '[]', output: 'ড়', description: 'Assamese InScript []' },
+			{ input: 'ASDFGHJKL:"', output: 'ওএঅইউফৎখথছঠ', description: 'Assamese InScript ASDFGHJKL:"' },
+			{ input: 'ha', output: 'পো', description: 'Assamese InScript ha' },
+			{ input: 'js', output: 'ৰে', description: 'Assamese InScript js' },
+			{ input: 'kd', output: 'ক্', description: 'Assamese InScript kd' },
+			{ input: 'lf', output: 'তি', description: 'Assamese InScript lf' },
+			{ input: ';g', output: 'চু', description: 'Assamese InScript ;g' },
+			{ input: '\'', output: 'ট', description: 'Assamese InScript \'' },
+			{ input: 'cx', output: 'মং', description: 'Assamese InScript cx' },
+			{ input: 'vnm', output: 'নলস', description: 'Assamese InScript vnm' },
+			{ input: 'CX', output: 'ণঁ', description: 'Assamese InScript CX' },
+			{ input: 'M<?', output: 'শষয', description: 'Assamese InScript M<?' }
+		]
+	},
+	{
+		description: 'Assamese InScript 2 test',
+		inputmethod: 'as-inscript2',
+		tests: [
+			{ input: '1234567890', output: '১২৩৪৫৬৭৮৯০', description: 'Assamese InScript 2 1234567890' },
+			{ input: 'k#', output: 'ক্ৰ', description: 'Assamese InScript 2 k#' },
+			{ input: '$k', output: 'ৰ্ক', description: 'Assamese InScript 2 $k' },
+			{ input: '%', output: 'জ্ঞ', description: 'Assamese InScript 2 %' },
+			{ input: '^', output: 'ত্র', description: 'Assamese InScript 2 ^' },
+			{ input: '&', output: 'ক্ষ', description: 'Assamese InScript 2 &' },
+			{ input: '*', output: 'শ্র', description: 'Assamese InScript 2 *' },
+			{ input: 'k_', output: 'কঃ', description: 'Assamese InScript 2 k_' },
+			{ input: '+', output: 'ঋ', description: 'Assamese InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'ঔঐআঈঊভঙঘধঝঢঞ', description: 'Assamese InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'বৌ', description: 'Assamese InScript 2 yq' },
+			{ input: 'uw', output: 'হৈ', description: 'Assamese InScript 2 uw' },
+			{ input: 'ie', output: 'গা', description: 'Assamese InScript 2 ie' },
+			{ input: 'or', output: 'দী', description: 'Assamese InScript 2 or' },
+			{ input: 'pt', output: 'জূ', description: 'Assamese InScript 2 pt' },
+			{ input: '[]', output: 'ড়', description: 'Assamese InScript 2 []' },
+			{ input: 'ASDFGHKL:"', output: 'ওএঅইউফখথছঠ', description: 'Assamese InScript 2 ASDFGHKL:"' },
+			{ input: 'ha', output: 'পো', description: 'Assamese InScript 2 ha' },
+			{ input: 'js', output: 'ৰে', description: 'Assamese InScript 2 js' },
+			{ input: 'kd', output: 'ক্', description: 'Assamese InScript 2 kd' },
+			{ input: 'lf', output: 'তি', description: 'Assamese InScript 2 lf' },
+			// { input: 'l', output: 'ৎ', description: 'Assamese InScript 2 l' }, // TODO fix broken rule
+			{ input: ';g', output: 'চু', description: 'Assamese InScript 2 ;g' },
+			{ input: '\'', output: 'ট', description: 'Assamese InScript 2 \'' },
+			{ input: 'cx', output: 'মং', description: 'Assamese InScript 2 cx' },
+			{ input: 'vnm', output: 'নলস', description: 'Assamese InScript 2 vnm' },
+			{ input: 'CX', output: 'ণঁ', description: 'Assamese InScript 2 CX' },
+			{ input: 'M<?', output: 'শষয', description: 'Assamese InScript 2 M<?' }
+		]
+	},
+	{
 		description: 'South Azerbaijani Keyboard test',
 		inputmethod: 'azb-kbd',
 		tests: [
@@ -533,6 +600,73 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bengali InScript test',
+		inputmethod: 'bn-inscript',
+		tests: [
+			{ input: '1234567890', output: '১২৩৪৫৬৭৮৯০', description: 'Bengali InScript 1234567890' },
+			{ input: 'k#', output: 'ক্র', description: 'Bengali InScript k#' },
+			{ input: '$k', output: 'র্ক', description: 'Bengali InScript $k' },
+			{ input: '%', output: 'জ্ঞ', description: 'Bengali InScript %' },
+			{ input: '^', output: 'ত্র', description: 'Bengali InScript ^' },
+			{ input: '&', output: 'ক্ষ', description: 'Bengali InScript &' },
+			{ input: '*', output: 'শ্র', description: 'Bengali InScript *' },
+			{ input: 'k_', output: 'কঃ', description: 'Bengali InScript k_' },
+			{ input: '+', output: 'ঋ', description: 'Bengali InScript +' },
+			{ input: 'QWERTYUIOP{}', output: 'ঔঐআঈঊভঙঘধঝঢঞ', description: 'Bengali InScript QWERTYIOP{}' },
+			{ input: 'yq', output: 'বৌ', description: 'Bengali InScript yq' },
+			{ input: 'uw', output: 'হৈ', description: 'Bengali InScript uw' },
+			{ input: 'ie', output: 'গা', description: 'Bengali InScript ie' },
+			{ input: 'or', output: 'দী', description: 'Bengali InScript or' },
+			{ input: 'pt', output: 'জূ', description: 'Bengali InScript pt' },
+			{ input: '[]', output: 'ড়', description: 'Bengali InScript ড়' },
+			{ input: 'ASDFGHJKL:"', output: 'ওএঅইউফৎখথছঠ', description: 'Bengali InScript ASDFGHJKL:"' },
+			{ input: 'ha', output: 'পো', description: 'Bengali InScript ha' },
+			{ input: 'js', output: 'রে', description: 'Bengali InScript js' },
+			{ input: 'kd', output: 'ক্', description: 'Bengali InScript kd' },
+			{ input: 'lf', output: 'তি', description: 'Bengali InScript lf' },
+			{ input: ';g', output: 'চু', description: 'Bengali InScript ;g' },
+			{ input: '\'', output: 'ট', description: 'Bengali InScript \'' },
+			{ input: 'cx', output: 'মং', description: 'Bengali InScript cx' },
+			{ input: 'vnm', output: 'নলস', description: 'Bengali InScript vnm' },
+			{ input: 'CX', output: 'ণঁ', description: 'Bengali InScript CX' },
+			{ input: 'M<?', output: 'শষয', description: 'Bengali InScript M<?' }
+		]
+	},
+	{
+		description: 'Bengali InScript 2 test',
+		inputmethod: 'bn-inscript2',
+		tests: [
+			{ input: '1234567890', output: '১২৩৪৫৬৭৮৯০', description: 'Bengali InScript 2 1234567890' },
+			{ input: 'k#', output: 'ক্র', description: 'Bengali InScript 2 k#' },
+			{ input: '$k', output: 'র্ক', description: 'Bengali InScript 2 $k' },
+			{ input: '%', output: 'জ্ঞ', description: 'Bengali InScript 2 %' },
+			{ input: '^', output: 'ত্র', description: 'Bengali InScript 2 ^' },
+			{ input: '&', output: 'ক্ষ', description: 'Bengali InScript 2 &' },
+			{ input: '*', output: 'শ্র', description: 'Bengali InScript 2 *' },
+			{ input: 'k_', output: 'কঃ', description: 'Bengali InScript 2 k_' },
+			{ input: '+', output: 'ঋ', description: 'Bengali InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'ঔঐআঈঊভঙঘধঝঢঞ', description: 'Bengali InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'বৌ', description: 'Bengali InScript 2 yq' },
+			{ input: 'uw', output: 'হৈ', description: 'Bengali InScript 2 uw' },
+			{ input: 'ie', output: 'গা', description: 'Bengali InScript 2 ie' },
+			{ input: 'or', output: 'দী', description: 'Bengali InScript 2 or' },
+			{ input: 'pt', output: 'জূ', description: 'Bengali InScript 2 pt' },
+			{ input: '[]', output: 'ড়', description: 'Bengali InScript 2 []' },
+			{ input: 'ASDFGHKL:"', output: 'ওএঅইউফখথছঠ', description: 'Bengali InScript 2 ASDFGHKL:"' },
+			{ input: 'ha', output: 'পো', description: 'Bengali InScript 2 ha' },
+			{ input: 'js', output: 'রে', description: 'Bengali InScript 2 js' },
+			{ input: 'kd', output: 'ক্', description: 'Bengali InScript 2 kd' },
+			{ input: 'lf', output: 'তি', description: 'Bengali InScript 2 lf' },
+			// { input: 'l', output: 'ৎ', description: 'Bengali InScript 2 l' }, // TODO fix broken rule
+			{ input: ';g', output: 'চু', description: 'Bengali InScript 2 ;g' },
+			{ input: '\'', output: 'ট', description: 'Bengali InScript 2 \'' },
+			{ input: 'cx', output: 'মং', description: 'Bengali InScript 2 cx' },
+			{ input: 'vnm', output: 'নলস', description: 'Bengali InScript 2 vnm' },
+			{ input: 'CX', output: 'ণঁ', description: 'Bengali InScript 2 CX' },
+			{ input: 'M<?', output: 'শষয', description: 'Bengali InScript 2 M<?' }
+		]
+	},
+	{
 		description: 'Bengali Probhat layout test',
 		inputmethod: 'bn-probhat',
 		tests: [
@@ -568,6 +702,37 @@ var palochkaVariants = {
 			{ input: 'fbkBa', output: 'བྐྵ', description: 'Tibetan Sambhota - fbkBa' },
 			{ input: 'gyak', output: 'གཡཀ', description: 'Tibetan Sambhota - gyak' },
 			{ input: 'pafdma', output: 'པདྨ', description: 'Tibetan Sambhota - pafdma' }
+		]
+	},
+	{
+		description: 'Bodo InScript 2 test',
+		inputmethod: 'brx-inscript2',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Bodo InScript 2 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Bodo InScript 2 %' },
+			{ input: '^', output: 'त्र', description: 'Bodo InScript 2 ^' },
+			{ input: '&', output: 'क्ष', description: 'Bodo InScript 2 &' },
+			{ input: '*', output: 'श्र', description: 'Bodo InScript 2 *' },
+			{ input: '+', output: 'ऋ', description: 'Bodo InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Bodo InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'बौ', description: 'Bodo InScript 2 yq' },
+			{ input: 'uw', output: 'है', description: 'Bodo InScript 2 uw' },
+			{ input: 'ie', output: 'गा', description: 'Bodo InScript 2 ie' },
+			{ input: 'or', output: 'दी', description: 'Bodo InScript 2 or' },
+			{ input: 'pt', output: 'जू', description: 'Bodo InScript 2 pt' },
+			// { input: '[]', output: 'ड़', description: 'Bodo InScript 2 []' }, // TODO fix broken rule
+			{ input: 'ASDFGHKL:"', output: 'ओएअइउफखथछठ', description: 'Bodo InScript 2 ASDFGHKL:"' },
+			{ input: 'ha', output: 'पो', description: 'Bodo InScript 2 ha' },
+			{ input: 'js', output: 'रे', description: 'Bodo InScript 2 js' },
+			{ input: 'kd', output: 'क्', description: 'Bodo InScript 2 kd' },
+			{ input: 'lf', output: 'ति', description: 'Bodo InScript 2 lf' },
+			{ input: ';\'', output: 'चट', description: 'Bodo InScript 2 ;\'' },
+			{ input: 'CM<>?', output: 'णशष।?', description: 'Bodo InScript 2 CM<>?' },
+			{ input: ';X', output: 'चँ', description: 'Bodo InScript 2 ;X' },
+			{ input: 'z', output: 'ʼ', description: 'Bodo InScript 2 z' },
+			{ input: 'mx', output: 'सं', description: 'Bodo InScript 2 mx' },
+			{ input: 'cvb', output: 'मनव', description: 'Bodo InScript 2 cvb' },
+			{ input: '/', output: 'य', description: 'Bodo InScript 2 /' }
 		]
 	},
 	{
@@ -1093,6 +1258,39 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Dogri InScript 2 test',
+		inputmethod: 'doi-inscript2',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Dogri InScript 2 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Dogri InScript 2 %' },
+			{ input: '^', output: 'त्र', description: 'Dogri InScript 2 ^' },
+			{ input: '&', output: 'क्ष', description: 'Dogri InScript 2 &' },
+			{ input: '*', output: 'श्र', description: 'Dogri InScript 2 *' },
+			{ input: 'k_', output: 'कः', description: 'Dogri InScript 2 k_' },
+			{ input: '+', output: 'ऋ', description: 'Dogri InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Dogri InScript 2 QWERTYIOP{}' },
+			// { input: 'yq', output: 'बौ', description: 'Dogri InScript 2 yq' }, // TODO fix broken rule
+			{ input: 'uw', output: 'है', description: 'Dogri InScript 2 uw' },
+			{ input: 'ie', output: 'गा', description: 'Dogri InScript 2 ie' },
+			{ input: 'or', output: 'दी', description: 'Dogri InScript 2 or' },
+			{ input: 'pt', output: 'जू', description: 'Dogri InScript 2 pt' },
+			// { input: '[]', output: 'ड़', description: 'Dogri InScript 2 []' }, // TODO fix broken rule
+			{ input: 'ASDFGHKL:"', output: 'ओएअइउफखथछठ', description: 'Dogri InScript 2 ASDFGHKL:"' },
+			// { input: 'J', output: 'ऱ', description: 'Dogri InScript 2 J' }, // TODO fix missing rule
+			{ input: 'ha', output: 'पो', description: 'Dogri InScript 2 ha' },
+			{ input: 'js', output: 'रे', description: 'Dogri InScript 2 js' },
+			{ input: 'kd', output: 'क्', description: 'Dogri InScript 2 kd' },
+			{ input: 'lf', output: 'ति', description: 'Dogri InScript 2 lf' },
+			{ input: ';\'', output: 'चट', description: 'Dogri InScript 2 ;\'' },
+			{ input: 'CM<>?', output: 'णशष।?', description: 'Dogri InScript 2 CM<>?' },
+			{ input: ';X', output: 'चँ', description: 'Dogri InScript 2 ;X' },
+			{ input: 'z', output: 'ʼ', description: 'Dogri InScript 2 z' },
+			// { input: 'mx', output: 'सं', description: 'Dogri InScript 2 mx' }, // TODO fix missing rule
+			{ input: 'cvb', output: 'मनव', description: 'Dogri InScript 2 cvb' },
+			{ input: '/', output: 'य', description: 'Dogri InScript 2 /' }
+		]
+	},
+	{
 		description: 'Ewe tilde test',
 		inputmethod: 'ee-tilde',
 		tests: [
@@ -1487,6 +1685,42 @@ var palochkaVariants = {
 		inputmethod: 'hi-inscript',
 		tests: [
 			{ input: [ [ 'F', true ] ], output: '\u090C', description: 'Hindi inscript - ALTGR+F' }
+		]
+	},
+	{
+		description: 'Hindi InScript 2 test',
+		inputmethod: 'hi-inscript2',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Hindi InScript 2 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Hindi InScript 2 %' },
+			{ input: '^', output: 'त्र', description: 'Hindi InScript 2 ^' },
+			{ input: '&', output: 'क्ष', description: 'Hindi InScript 2 &' },
+			{ input: '*', output: 'श्र', description: 'Hindi InScript 2 *' },
+			{ input: 'k_', output: 'कः', description: 'Hindi InScript 2 k_' },
+			{ input: '+', output: 'ऋ', description: 'Hindi InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Hindi InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'बौ', description: 'Hindi InScript 2 yq' },
+			{ input: 'uw', output: 'है', description: 'Hindi InScript 2 uw' },
+			{ input: 'ie', output: 'गा', description: 'Hindi InScript 2 ie' },
+			{ input: 'or', output: 'दी', description: 'Hindi InScript 2 or' },
+			{ input: 'pt', output: 'जू', description: 'Hindi InScript 2 pt' },
+			// { input: '[]', output: 'ड़', description: 'Hindi InScript 2 []' }, // TODO fix broken rule
+			{ input: 'ASDFGHKL:"', output: 'ओएअइउफखथछठ', description: 'Hindi InScript 2 ASDFGHKL:"' },
+			// { input: 'J', output: 'ऱ', description: 'Hindi InScript 2 J' }, // TODO fix missing rule
+			{ input: 'ha', output: 'पो', description: 'Hindi InScript 2 ha' },
+			{ input: 'js', output: 'रे', description: 'Hindi InScript 2 js' },
+			{ input: 'kd', output: 'क्', description: 'Hindi InScript 2 kd' },
+			{ input: 'lf', output: 'ति', description: 'Hindi InScript 2 lf' },
+			{ input: ';\'', output: 'चट', description: 'Hindi InScript 2 ;\'' },
+			// { input: 'ZVBN', output: 'ऎऩऴळ', description: 'Hindi InScript 2 ;\'' }, // TODO fix missing rule
+			{ input: 'CM<>?', output: 'णशष।?', description: 'Hindi InScript 2 CM<>?' },
+			{ input: ';X', output: 'चँ', description: 'Hindi InScript 2 ;X' },
+			// { input: 'nz', output: 'लॆ', description: 'Hindi InScript 2 nz' }, // TODO fix missing rule
+			{ input: 'mx', output: 'सं', description: 'Hindi InScript 2 mx' },
+			{ input: 'cvb', output: 'मनव', description: 'Hindi InScript 2 cvb' },
+			{ input: '/', output: 'य', description: 'Hindi InScript 2 /' },
+			// { input: '!', output: 'ऍ', description: 'Hindi InScript 2 !' }, // TODO fix missing rule
+			{ input: 'k@', output: 'कॅ', description: 'Hindi InScript 2 k@' }
 		]
 	},
 	{
@@ -3257,6 +3491,47 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kashmiri InScript test',
+		inputmethod: 'ks-inscript',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Kashmiri InScript 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Kashmiri InScript %' },
+			{ input: '^', output: 'त्र', description: 'Kashmiri InScript ^' },
+			{ input: '&', output: 'क्ष', description: 'Kashmiri InScript &' },
+			{ input: '*', output: 'श्र', description: 'Kashmiri InScript *' },
+			{ input: 'k_', output: 'कः', description: 'Kashmiri InScript k_' },
+			{ input: '+', output: 'ऋ', description: 'Kashmiri InScript +' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Kashmiri InScript QWERTYIOP{}' },
+			{ input: 'yq', output: 'बौ', description: 'Kashmiri InScript yq' },
+			{ input: 'uw', output: 'है', description: 'Kashmiri InScript uw' },
+			{ input: 'ie', output: 'गा', description: 'Kashmiri InScript ie' },
+			{ input: 'or', output: 'दी', description: 'Kashmiri InScript or' },
+			{ input: 'pt', output: 'जू', description: 'Kashmiri InScript pt' },
+			{ input: '[]', output: 'ड़', description: 'Kashmiri InScript []' },
+			{ input: 'ASDF', output: 'ओएअइ', description: 'Kashmiri InScript ASDF' },
+			{ input: 'HJKL:"', output: 'फऱखथछठ', description: 'Kashmiri InScript HJKL:"' },
+			{ input: 'ha', output: 'पो', description: 'Kashmiri InScript ha' },
+			{ input: 'js', output: 'रे', description: 'Kashmiri InScript js' },
+			{ input: 'kd', output: 'क्', description: 'Kashmiri InScript kd' },
+			{ input: 'lf', output: 'ति', description: 'Kashmiri InScript lf' },
+			{ input: ';\'', output: 'चट', description: 'Kashmiri InScript ;\'' },
+			{ input: 'ZCVBNM<>', output: 'ऎणऩऴळशष।', description: 'Kashmiri InScript ZCVBNM<>' },
+			{ input: '?', output: 'य़', description: 'Kashmiri InScript ? (yya)' },
+			{ input: ';X', output: 'चँ', description: 'Kashmiri InScript ;X' },
+			{ input: 'nz', output: 'लॆ', description: 'Kashmiri InScript nz' },
+			{ input: 'mx', output: 'सं', description: 'Kashmiri InScript mx' },
+			{ input: 'cvb', output: 'मनव', description: 'Kashmiri InScript cvb' },
+			{ input: '/', output: 'य', description: 'Kashmiri InScript /' },
+			{ input: 'kddj', output: 'क्‌र', description: 'Kashmiri InScript kddj (explicit zwnj)' },
+			{ input: 'i_', output: 'ॻ', description: 'Kashmiri InScript i_' },
+			{ input: 'p_', output: 'ॼ', description: 'Kashmiri InScript p_' },
+			{ input: '[_', output: 'ॾ', description: 'Kashmiri InScript [_' },
+			{ input: 'y_', output: 'ॿ', description: 'Kashmiri InScript y_' },
+			{ input: '!', output: 'ऍ', description: 'Kashmiri InScript !' },
+			{ input: 'k@', output: 'कॅ', description: 'Kashmiri InScript k@' }
+		]
+	},
+	{
 		description: 'Kashmiri kbd test',
 		inputmethod: 'ks-kbd',
 		tests: [
@@ -3707,6 +3982,40 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Manipuri Bengali InScript 2 test',
+		inputmethod: 'mni-inscript2',
+		tests: [
+			{ input: '1234567890', output: '১২৩৪৫৬৭৮৯০', description: 'Manipuri Bengali InScript 2 1234567890' },
+			{ input: 'k#', output: 'ক্র', description: 'Manipuri Bengali InScript 2 k#' },
+			{ input: '$k', output: 'র্ক', description: 'Manipuri Bengali InScript 2 $k' },
+			{ input: '%', output: 'জ্ঞ', description: 'Manipuri Bengali InScript 2 %' },
+			{ input: '^', output: 'ত্র', description: 'Manipuri Bengali InScript 2 ^' },
+			{ input: '&', output: 'ক্ষ', description: 'Manipuri Bengali InScript 2 &' },
+			{ input: '*', output: 'শ্র', description: 'Manipuri Bengali InScript 2 *' },
+			{ input: 'k_', output: 'কঃ', description: 'Manipuri Bengali InScript 2 k_' },
+			{ input: '+', output: 'ঋ', description: 'Manipuri Bengali InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'ঔঐআঈঊভঙঘধঝঢঞ', description: 'Manipuri Bengali InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'বৌ', description: 'Manipuri Bengali InScript 2 yq' },
+			{ input: 'uw', output: 'হৈ', description: 'Manipuri Bengali InScript 2 uw' },
+			{ input: 'ie', output: 'গা', description: 'Manipuri Bengali InScript 2 ie' },
+			{ input: 'or', output: 'দী', description: 'Manipuri Bengali InScript 2 or' },
+			{ input: 'pt', output: 'জূ', description: 'Manipuri Bengali InScript 2 pt' },
+			{ input: '[]', output: 'ড়', description: 'Manipuri Bengali InScript 2 []' },
+			{ input: 'ASDFGHKL:"', output: 'ওএঅইউফখথছঠ', description: 'Manipuri Bengali InScript 2 ASDFGHKL:"' },
+			{ input: 'ha', output: 'পো', description: 'Manipuri Bengali InScript 2 ha' },
+			{ input: 'js', output: 'রে', description: 'Manipuri Bengali InScript 2 js' },
+			{ input: 'kd', output: 'ক্', description: 'Manipuri Bengali InScript 2 kd' },
+			{ input: 'lf', output: 'তি', description: 'Manipuri Bengali InScript 2 lf' },
+			// { input: 'l', output: 'ৎ', description: 'Manipuri Bengali InScript 2 l' }, // TODO fix broken rule
+			{ input: ';g', output: 'চু', description: 'Manipuri Bengali InScript 2 ;g' },
+			{ input: '\'', output: 'ট', description: 'Manipuri Bengali InScript 2 \'' },
+			{ input: 'cx', output: 'মং', description: 'Manipuri Bengali InScript 2 cx' },
+			{ input: 'vnm', output: 'নলস', description: 'Manipuri Bengali InScript 2 vnm' },
+			{ input: 'CX', output: 'ণঁ', description: 'Manipuri Bengali InScript 2 CX' },
+			{ input: 'M<?', output: 'শষয', description: 'Manipuri Bengali InScript 2 M<?' }
+		]
+	},
+	{
 		description: 'Marathi InScript 2 test',
 		inputmethod: 'mr-inscript2',
 		tests: [
@@ -4071,6 +4380,38 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Odia InScript 2 test',
+		inputmethod: 'or-inscript2',
+		tests: [
+			{ input: '1234567890', output: '୧୨୩୪୫୬୭୮୯୦', description: 'Odia InScript 2 1234567890' },
+			{ input: 'k#', output: 'କ୍ର', description: 'Odia InScript 2 k#' },
+			{ input: '$k', output: 'ର୍କ', description: 'Odia InScript 2 $k' },
+			{ input: '%', output: 'ଜ୍ଞ', description: 'Odia InScript 2 %' },
+			{ input: '^', output: 'ତ୍ର', description: 'Odia InScript 2 ^' },
+			{ input: '&', output: 'କ୍ଷ', description: 'Odia InScript 2 &' },
+			{ input: '*', output: 'ଶ୍ର', description: 'Odia InScript 2 *' },
+			{ input: '+', output: 'ଋ', description: 'Odia InScript 2 +' },
+			{ input: 'QWERTYUIOP{}', output: 'ଔଐଆଈଊଭଙଘଧଝଢଞ', description: 'Odia InScript 2 QWERTYIOP{}' },
+			{ input: 'yq', output: 'ବୌ', description: 'Odia InScript 2 yq' },
+			{ input: 'uw', output: 'ହୈ', description: 'Odia InScript 2 uw' },
+			{ input: 'ie', output: 'ଗା', description: 'Odia InScript 2 ie' },
+			{ input: 'or', output: 'ଦୀ', description: 'Odia InScript 2 or' },
+			{ input: 'pt', output: 'ଜୂ', description: 'Odia InScript 2 pt' },
+			{ input: '[]', output: 'ଡ଼', description: 'Odia InScript 2 ড়' },
+			{ input: 'ASDFGHKL:"', output: 'ଓଏଅଇଉଫଖଥଛଠ', description: 'Odia InScript 2 ASDFGHKL:"' },
+			{ input: 'ha', output: 'ପୋ', description: 'Odia InScript 2 ha' },
+			{ input: 'js', output: 'ରେ', description: 'Odia InScript 2 js' },
+			{ input: 'kd', output: 'କ୍', description: 'Odia InScript 2 kd' },
+			{ input: 'lf', output: 'ତି', description: 'Odia InScript 2 lf' },
+			{ input: ';g', output: 'ଚୁ', description: 'Odia InScript 2 ;g' },
+			{ input: '\'', output: 'ଟ', description: 'Odia InScript 2 \'' },
+			{ input: 'cx', output: 'ମଂ', description: 'Odia InScript 2 cx' },
+			{ input: 'vnm', output: 'ନଲସ', description: 'Odia InScript 2 vnm' },
+			{ input: 'CX', output: 'ଣଁ', description: 'Odia InScript 2 CX' },
+			{ input: 'M<?', output: 'ଶଷଯ', description: 'Odia InScript 2 M<?' }
+		]
+	},
+	{
 		description: 'Oriya phonetic test',
 		inputmethod: 'or-lekhani',
 		tests: [
@@ -4348,7 +4689,37 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Santali Inscript2 test',
+		description: 'Santali InScript 2 Devanagari test',
+		inputmethod: 'sat-inscript2',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Santali InScript 2 Devanagari 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Santali InScript 2 Devanagari %' },
+			{ input: '^', output: 'त्र', description: 'Santali InScript 2 Devanagari ^' },
+			{ input: '&', output: 'क्ष', description: 'Santali InScript 2 Devanagari &' },
+			{ input: '*', output: 'श्र', description: 'Santali InScript 2 Devanagari *' },
+			{ input: 'k_', output: 'कः', description: 'Santali InScript 2 Devanagari k_' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Santali InScript 2 Devanagari QWERTYIOP{}' },
+			{ input: 'yq', output: 'बौ', description: 'Santali InScript 2 Devanagari yq' },
+			{ input: 'uw', output: 'है', description: 'Santali InScript 2 Devanagari uw' },
+			{ input: 'ie', output: 'गा', description: 'Santali InScript 2 Devanagari ie' },
+			{ input: 'or', output: 'दी', description: 'Santali InScript 2 Devanagari or' },
+			{ input: 'pt', output: 'जू', description: 'Santali InScript 2 Devanagari pt' },
+			{ input: 'ASDFGHKL:"', output: 'ओएअइउफखथछठ', description: 'Santali InScript 2 Devanagari ASDFGHKL:"' },
+			{ input: 'ha', output: 'पो', description: 'Santali InScript 2 Devanagari ha' },
+			{ input: 'js', output: 'रे', description: 'Santali InScript 2 Devanagari js' },
+			{ input: 'kd', output: 'क्', description: 'Santali InScript 2 Devanagari kd' },
+			{ input: 'lf', output: 'ति', description: 'Santali InScript 2 Devanagari lf' },
+			{ input: ';\'', output: 'चट', description: 'Santali InScript 2 Devanagari ;\'' },
+			{ input: 'C>?', output: 'ण।?', description: 'Santali InScript 2 Devanagari C>?' },
+			{ input: ';X', output: 'चँ', description: 'Santali InScript 2 Devanagari ;X' },
+			{ input: 'z', output: 'ʼ', description: 'Santali InScript 2 Devanagari z' },
+			{ input: 'mx', output: 'सं', description: 'Santali InScript 2 Devanagari mx' },
+			{ input: 'cvb', output: 'मनव', description: 'Santali InScript 2 Devanagari cvb' },
+			{ input: '/', output: 'य', description: 'Santali InScript 2 Devanagari /' }
+		]
+	},
+	{
+		description: 'Santali InScript 2 Ol Chiki test',
 		inputmethod: 'sat-inscript2-ol-chiki',
 		tests: [
 			{ input: 'e', output: 'ᱟ', description: 'Santali k -> ᱟ' },
@@ -4370,6 +4741,35 @@ var palochkaVariants = {
 			{ input: 'Q', output: 'ᱻ', description: 'Santali Q -> ᱻ' },
 			{ input: 'W', output: 'ᱣ', description: 'Santali W -> ᱣ' },
 			{ input: 'c', output: 'ᱪ', description: 'Santali c -> ᱪ' }
+		]
+	},
+	{
+		description: 'Sindhi InScript 2 Devanagari test',
+		inputmethod: 'sd-inscript2',
+		tests: [
+			{ input: '1234567890', output: '१२३४५६७८९०', description: 'Sindhi InScript 2 Devanagari 1234567890' },
+			{ input: '%', output: 'ज्ञ', description: 'Sindhi InScript 2 Devanagari %' },
+			{ input: '^', output: 'त्र', description: 'Sindhi InScript 2 Devanagari ^' },
+			{ input: '&', output: 'क्ष', description: 'Sindhi InScript 2 Devanagari &' },
+			{ input: '*', output: 'श्र', description: 'Sindhi InScript 2 Devanagari *' },
+			{ input: '+', output: 'ऋ', description: 'Sindhi InScript 2 Devanagari +' },
+			{ input: 'k=', output: 'कृ', description: 'Sindhi InScript 2 Devanagari k=' },
+			{ input: 'QWERTYUIOP{}', output: 'औऐआईऊभङघधझढञ', description: 'Sindhi InScript 2 Devanagari QWERTYIOP{}' },
+			{ input: 'yq', output: 'बौ', description: 'Sindhi InScript 2 Devanagari yq' },
+			{ input: 'uw', output: 'है', description: 'Sindhi InScript 2 Devanagari uw' },
+			{ input: 'ie', output: 'गा', description: 'Sindhi InScript 2 Devanagari ie' },
+			{ input: 'or', output: 'दी', description: 'Sindhi InScript 2 Devanagari or' },
+			{ input: 'pt', output: 'जू', description: 'Sindhi InScript 2 Devanagari pt' },
+			{ input: 'ASDFGHKL:"', output: 'ओएअइउफखथछठ', description: 'Sindhi InScript 2 Devanagari ASDFGHKL:"' },
+			{ input: 'ha', output: 'पो', description: 'Sindhi InScript 2 Devanagari ha' },
+			{ input: 'js', output: 'रे', description: 'Sindhi InScript 2 Devanagari js' },
+			{ input: 'kd', output: 'क्', description: 'Sindhi InScript 2 Devanagari kd' },
+			{ input: 'lf', output: 'ति', description: 'Sindhi InScript 2 Devanagari lf' },
+			{ input: ';\'', output: 'चट', description: 'Sindhi InScript 2 Devanagari ;\'' },
+			{ input: 'CM<>?', output: 'णशष।?', description: 'Sindhi InScript 2 Devanagari CM<>?' },
+			{ input: ';X', output: 'चँ', description: 'Sindhi InScript 2 Devanagari ;X' },
+			{ input: 'cvb', output: 'मनव', description: 'Sindhi InScript 2 Devanagari cvb' },
+			{ input: '/', output: 'य', description: 'Sindhi InScript 2 Devanagari /' }
 		]
 	},
 	{
