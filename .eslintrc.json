@@ -13,7 +13,6 @@
 		"camelcase": [ "error", { "allow": [ "patterns_x", "patterns_shift" ] } ],
 		"comma-spacing": "off",
 		"indent": "off",
-		"max-len": "off",
-		"one-var": [ "error", { "var": "always" } ]
+		"max-len": "off"
 	}
 }
