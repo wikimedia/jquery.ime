@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var sdh_kbd = {
+	var sdhKbd = {
 		id: 'sdh-kbd',
 		name: 'کوردی خوارگ',
 		description: 'Southern Kurdish Keyboard Layout',
@@ -104,5 +104,5 @@
 		]
 	};
 
-	$.ime.register( sdh_kbd );
+	$.ime.register( sdhKbd );
 }( jQuery ) );

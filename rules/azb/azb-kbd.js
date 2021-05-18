@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var azb_kbd = {
+	var azbKbd = {
 		id: 'azb-kbd',
 		name: 'تۆرکجه',
 		description: 'South Azerbaijani Keyboard Layout',
@@ -104,5 +104,5 @@
 		]
 	};
 
-	$.ime.register( azb_kbd );
+	$.ime.register( azbKbd );
 }( jQuery ) );
