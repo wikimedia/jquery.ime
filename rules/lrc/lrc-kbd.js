@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var lrc_kbd = {
+	var lrcKbd = {
 		id: 'lrc-kbd',
 		name: 'لۊری شومالی',
 		description: 'Northern Luri Keyboard Layout',
@@ -104,5 +104,5 @@
 		]
 	};
 
-	$.ime.register( lrc_kbd );
+	$.ime.register( lrcKbd );
 }( jQuery ) );
