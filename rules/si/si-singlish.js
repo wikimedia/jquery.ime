@@ -16,9 +16,9 @@
 			// ['ඬ්හ්a', 'ඳ'], // nndha
 			[ 'ඬ්h', 'ඳ්' ], // nndh
 			[ 'න්න්d', 'ඬ්' ], // nnd
-			[ 'න්න්g', 'ඟ්' ],// nng
-			[ '\\u0DC1\\u0DCA\\u200D\\u0DBB\\u0DD2i', '\u0DC1\u0DCA\u200D\u0DBB\u0DD3' ],// shrii
-			[ '\\u0DC1\\u0DCA\\u200D\\u0DBBi', '\u0DC1\u0DCA\u200D\u0DBB\u0DD2' ],// shri
+			[ 'න්න්g', 'ඟ්' ], // nng
+			[ '\\u0DC1\\u0DCA\\u200D\\u0DBB\\u0DD2i', '\u0DC1\u0DCA\u200D\u0DBB\u0DD3' ], // shrii
+			[ '\\u0DC1\\u0DCA\\u200D\\u0DBBi', '\u0DC1\u0DCA\u200D\u0DBB\u0DD2' ], // shri
 			[ 'ශ්r', '\u0DC1\u0DCA\u200D\u0DBB' ], // shr
 
 			[ '([\\u0D9A-\\u0DC6])්\\u200Dර්u', '$1ෘ' ], // <consonant>ru
