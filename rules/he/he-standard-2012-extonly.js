@@ -10,7 +10,9 @@
 		author: 'Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])',
 		license: 'GPLv3',
 		version: '1.0',
-		patterns: [], // Empty, because the assumption is that the user is using a Hebrew keyboard already
+		// Empty, because the assumption is that
+		// the user is using a Hebrew keyboard already
+		patterns: [],
 		patterns_x: [
 			[ '\u05E9', 'ְ' ], // Sheva, ש
 
