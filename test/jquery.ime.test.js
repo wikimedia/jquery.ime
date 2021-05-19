@@ -43,7 +43,7 @@
 
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
-							'imePath is defined correctly using options in the constructor' );
+			'imePath is defined correctly using options in the constructor' );
 		$.ime.setPath( '../' );
 		$readonlyTextarea.ime();
 		$disabledTextarea.ime();

@@ -45,13 +45,13 @@
 			[ latinSmallL, palochka ],
 			[ latinCapitalI, palochka ],
 			[ ukrainianCapitalI, palochka ]
-    ],
+		],
 		patterns_x: [
 			[ digitOne, palochka ],
 			[ 'д', palochka ],
 			[ 'ш', palochka ],
 			[ 'Ш', palochka ]
-    ]
+		]
 	};
 
 	$.ime.register( cyrlPalochka );
