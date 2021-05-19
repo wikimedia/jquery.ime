@@ -101,7 +101,7 @@
 			[ '^', ':' ], // 6
 			[ '&', '?' ] // 7
 			// '*', '(' and ')' are the same    // 8, 9, 0
-			],
+		],
 		// support both qwerty and jcuken keyboards
 		patterns_x: [
 			[ 'f|а', 'ӑ' ],
