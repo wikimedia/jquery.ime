@@ -294,7 +294,8 @@
 								this.selectIM( previousInputMethods[ 0 ] );
 							} else {
 								// Provide the default input method in this case.
-								firstInputmethod = $.ime.languages[ languageCode ].inputmethods[ 0 ];
+								firstInputmethod =
+									$.ime.languages[ languageCode ].inputmethods[ 0 ];
 								this.selectIM( firstInputmethod );
 							}
 						}
@@ -625,7 +626,9 @@
 					);
 
 				if ( imeSelector.options.helpHandler ) {
-					$inputMethod.append( imeSelector.options.helpHandler.call( imeSelector, inputmethod ) );
+					$inputMethod.append(
+						imeSelector.options.helpHandler.call( imeSelector, inputmethod )
+					);
 				}
 
 				$imeList.append( $inputMethod );
