@@ -604,7 +604,10 @@
 	/**
 	 * @inheritdoc SelectionWrapper
 	 */
-	ContentEditableEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
+	ContentEditableEntry.prototype.replaceTextAtSelection = function (
+		precedingCharCount,
+		newText
+	) {
 		var textNode, textOffset, newOffset, newRange,
 			sel = window.getSelection(),
 			range = this.getSelectedRange();
