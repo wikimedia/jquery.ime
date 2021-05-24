@@ -21,35 +21,42 @@
     "Srikanth Lakshmanan <srik.lak@gmail.com>"
   ],
   "devDependencies": {
-    "eslint-config-wikimedia": "^0.15.0",
-    "grunt": "^1.0.4",
+    "eslint-config-wikimedia": "0.17",
+    "grunt": "1.3",
     "grunt-cli": "1.3.2",
-    "grunt-contrib-concat": "1.0.0",
-    "grunt-contrib-connect": "^2.0.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-qunit": "1.1.0",
-    "grunt-contrib-uglify": "1.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "^22.0.0",
-    "grunt-stylelint": "^0.12.0",
-    "jquery": "^3.4.0",
-    "qunitjs": "1.22.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-wikimedia": "0.7.0"
+    "grunt-contrib-qunit": "4.0.0",
+    "grunt-contrib-uglify": "4.0.1",
+    "grunt-eslint": "23.0.0",
+    "grunt-stylelint": "0.15.0",
+    "jquery": "^3.5.1",
+    "qunit": "2.10.1",
+    "stylelint": "13.8",
+    "stylelint-config-wikimedia": "0.10.3"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
+  "main": "dist/jquery.ime/jquery.ime.min.js",
+  "files": [
+    "dist/",
+    "GPL-LICENSE",
+    "MIT-LICENSE",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/wikimedia/jquery.ime/issues"
   },
   "engine": {
     "node": ">=6.11.1"
   },
-  "license": "(GPL-2.0+ OR MIT)",
+  "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "prepare": "grunt build"
   }
 }

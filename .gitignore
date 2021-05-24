@@ -3,7 +3,6 @@
 *.kate-swp
 *.bak
 /nbproject/private/
-package-lock.json
 node_modules/
 dist/
 .eslintcache

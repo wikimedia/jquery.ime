@@ -261,7 +261,7 @@
 		/**
 		 * Keydown event handler. Handles shortcut key presses
 		 *
-		 * @context {HTMLElement}
+		 * @this HTMLElement
 		 * @param {jQuery.Event} e
 		 * @return {boolean}
 		 */
@@ -294,7 +294,8 @@
 								this.selectIM( previousInputMethods[ 0 ] );
 							} else {
 								// Provide the default input method in this case.
-								firstInputmethod = $.ime.languages[ languageCode ].inputmethods[ 0 ];
+								firstInputmethod =
+									$.ime.languages[ languageCode ].inputmethods[ 0 ];
 								this.selectIM( firstInputmethod );
 							}
 						}
@@ -332,6 +333,10 @@
 					this.$imeSetting.outerWidth();
 			}
 
+			if ( this.options.selectorInside ) {
+				top -= this.$imeSetting.outerHeight();
+			}
+
 			// While determining whether to place the selector above or below the input box,
 			// take into account the value of scrollTop, to avoid the selector from always
 			// getting placed above the input box since window.height would be less than top
@@ -340,6 +345,9 @@
 
 			if ( verticalRoom < this.$imeSetting.outerHeight() ) {
 				top = elementPosition.top - this.$imeSetting.outerHeight();
+				if ( this.options.selectorInside ) {
+					top += this.$imeSetting.outerHeight();
+				}
 				menuTop = this.$menu.outerHeight() +
 					this.$imeSetting.outerHeight();
 
@@ -395,7 +403,7 @@
 		 * Select a language
 		 *
 		 * @param {string} languageCode
-		 * @return {string|bool} Selected input method id or false
+		 * @return {string|boolean} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
 			var ime, imePref, language;
@@ -458,6 +466,7 @@
 
 		/**
 		 * Decide on initial language to select
+		 *
 		 * @return {string}
 		 */
 		decideLanguage: function () {
@@ -617,7 +626,9 @@
 					);
 
 				if ( imeSelector.options.helpHandler ) {
-					$inputMethod.append( imeSelector.options.helpHandler.call( imeSelector, inputmethod ) );
+					$inputMethod.append(
+						imeSelector.options.helpHandler.call( imeSelector, inputmethod )
+					);
 				}
 
 				$imeList.append( $inputMethod );

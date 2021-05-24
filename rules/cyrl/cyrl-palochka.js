@@ -6,17 +6,27 @@
  *
  * This layout assumes that the standard Russian keyboard layout is used. All the rules produce the
  * same character palochka, and the characters used are the same that are often used by the speakers
- * of these languages online: 1. Latin small 'l'. 2. Latin capital 'I'. 3. Ukrainian capital 'І'. 4.
- * Alt-1 (the digit one). 5. Alt-д (Cyrillic small 'de', on the same key as Latin 'l'). 6. Alt-ш
- * (Cyrillic small 'sha', on the same key as Latin 'i'). 7. Alt-Ш (Cyrillic capital 'sha', on the
- * same key as Latin 'I').
+ * of these languages online:
+ * 1. Latin small 'l'.
+ * 2. Latin capital 'I'.
+ * 3. Ukrainian capital 'І'.
+ * 4. Alt-1 (the digit one).
+ * 5. Alt-д (Cyrillic small 'de', on the same key as Latin 'l').
+ * 6. Alt-ш (Cyrillic small 'sha', on the same key as Latin 'i').
+ * 7. Alt-Ш (Cyrillic capital 'sha', on the same key as Latin 'I').
  */
 
 ( function ( $ ) {
 	'use strict';
-	// All the characters are very similar in appearance,
-	// so it's better to give them names to avoid confusion.
-	var cyrlPalochka;
+
+	var cyrlPalochka,
+		// All the characters are very similar in appearance,
+		// so it's better to give them names to avoid confusion.
+		latinSmallL = 'l',
+		latinCapitalI = 'I',
+		ukrainianCapitalI = 'І',
+		palochka = 'Ӏ',
+		digitOne = '1';
 
 	cyrlPalochka = {
 		id: 'cyrl-palochka',
@@ -26,16 +36,22 @@
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
+		contextLength: 2,
+		maxKeyLength: 3,
 		patterns: [
-			[ 'l', 'Ӏ' ],
-			[ 'I', 'Ӏ' ],
-			[ 'І', 'Ӏ' ] ],
+			[ '~~' + digitOne, '~~', '~1' ],
+			[ '~' + digitOne, palochka ],
+			[ latinSmallL, palochka ],
+			[ latinCapitalI, palochka ],
+			[ ukrainianCapitalI, palochka ]
+		],
 		patterns_x: [
-			[ '1', 'Ӏ' ],
-			[ 'д', 'Ӏ' ],
-			[ 'ш', 'Ӏ' ],
-			[ 'Ш', 'Ӏ' ] ]
+			[ digitOne, palochka ],
+			[ 'д', palochka ],
+			[ 'ш', palochka ],
+			[ 'Ш', palochka ]
+		]
 	};
 
 	$.ime.register( cyrlPalochka );

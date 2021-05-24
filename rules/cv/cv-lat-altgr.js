@@ -1,7 +1,8 @@
 // This Chuvash keyboard is a stripped version of latin Mercen
 // https://sites.google.com/site/mercen77/
 // http://cvlat.blogspot.com
-// only Chuvash diacritics are used, no additional letters for Turkish or dead keys implemented (for now?)
+// Only Chuvash diacritics are used, no additional letters
+// for Turkish or dead keys implemented (for now?)
 
 ( function ( $ ) {
 	'use strict';

@@ -2,19 +2,17 @@
 	"root": true,
 	"extends": [
 		"wikimedia/client",
-		"wikimedia/jquery"
+		"wikimedia/jquery",
+		"wikimedia/jsduck"
 	],
 	"globals": {
 		"jQuery": "readonly",
 		"$": "off"
 	},
 	"rules": {
-		"camelcase": "off",
+		"camelcase": [ "error", { "allow": [ "patterns_x", "patterns_shift" ] } ],
 		"comma-spacing": "off",
 		"indent": "off",
-		"max-len": "off",
-		"no-multi-spaces": "off",
-		"no-useless-escape": "off",
-		"one-var": [ "error", { "var": "always" } ]
+		"max-len": "off"
 	}
 }

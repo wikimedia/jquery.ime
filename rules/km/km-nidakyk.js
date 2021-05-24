@@ -27,10 +27,11 @@
 		],
 
 		patterns: [
-			// NOTE: Contextual rules must appear before rules
-			//       without context to avoid collisions.
-			//       Make sure contextLength is large enough for
-			//       these rules.
+			// NOTE:
+			// Contextual rules must appear before rules
+			// without context to avoid collisions.
+			// Make sure contextLength is large enough for
+			// these rules.
 
 			// Khmer uses a lot of U+200B, zero width space,
 			// so ignore it in this file
@@ -40,7 +41,7 @@
 			// correction for two-part dependent vowels
 			[ '\u17c1a', 'e', '\u17c4' ], // ​េ + ​ា -> ​ោ (o)
 			[ '\u17b6e', 'a', '\u17c4' ], // ​ា + ​េ -> ​ោ (o)
-			[ '\u17c1I', 'e', '\u17be' ], // ​េ  + ​ី -> ​ើ (;)
+			[ '\u17c1I', 'e', '\u17be' ], // ​េ + ​ី -> ​ើ (;)
 			[ '\u17b8e', 'I', '\u17be' ], // ​ី + ​េ -> ​ើ (;)
 
 			// normalize common combination of dependent vowels and
@@ -54,12 +55,12 @@
 			// Unicode 4.0: normalize consonant shifter before
 			// subscript consonants and their optional following
 			// robats: (SR?)+Z?C -> Z?C(SR?)+
-			/* XXX: Not compatible with Unicode 3.0, which places
-			   consonant shifters after subscript consonants.
-			   Make sure maxKeyLength is large enough for this rule.
-			[ '((?:\u17d2.\u17cc?)+)((:?\u200c|\u200d)?)/', '$2\u17ca$1' ], // ៊
-			[ '((?:\u17d2.\u17cc?)+)((:?\u200c|\u200d)?)\"', '$2\u17c9$1' ], // ​៉
-			*/
+			// XXX:
+			// Not compatible with Unicode 3.0, which places
+			// consonant shifters after subscript consonants.
+			// Make sure maxKeyLength is large enough for this rule.
+			// [ '((?:\u17d2.\u17cc?)+)((:?\u200c|\u200d)?)/', '$2\u17ca$1' ], // ៊
+			// [ '((?:\u17d2.\u17cc?)+)((:?\u200c|\u200d)?)"', '$2\u17c9$1' ], // ​៉
 
 			// consonants
 			[ 'q', 'ឆ' ],
@@ -130,7 +131,7 @@
 			[ ',', '\u17bb\u17c6' ], // ​ុា
 			[ '/', '\u17ca' ], // ​៊
 			[ ':', '\u17c4\u17c7' ], // ​ោះ
-			[ '\"', '\u17c9' ], // ​៉
+			[ '"', '\u17c9' ], // ​៉
 			[ '<', '\u17bb\u17c7' ], // ​ុះ
 			[ '\\^', '\u17cd' ], // ​៍
 			[ '&', '\u17d0' ], // ​័
@@ -160,7 +161,7 @@
 			[ '~', '»' ],
 			[ '\\!', '!' ],
 			[ '@', 'ៗ' ],
-			[ '#', '\"' ],
+			[ '#', '"' ],
 			[ '\\$', '៛' ],
 			[ '%', '%' ],
 			[ '\\(', '(' ],
@@ -252,7 +253,7 @@
 			[ 'K', '᧳' ], // shift-k
 			[ 'L', '᧴' ], // shift-l
 			[ ':', '᧵' ], // shift-;
-			[ '\"', '᧶' ], // shift-'
+			[ '"', '᧶' ], // shift-'
 			[ 'Z', '᧷' ], // shift-z
 			[ 'X', '᧸' ], // shift-x
 			[ 'C', '᧹' ], // shift-c
@@ -261,7 +262,7 @@
 			[ 'N', '᧼' ], // shift-n
 			[ 'M', '᧽' ], // shift-m
 			[ '<', '᧾' ], // shift-,
-			[ '>', '᧿' ]  // shift-.
+			[ '>', '᧿' ] // shift-.
 		]
 	};
 

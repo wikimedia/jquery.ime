@@ -8,7 +8,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 
 	// Project configuration.
@@ -45,8 +44,7 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.js',
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
-						'src/jquery.ime.inputmethods.js',
-						'libs/rangy/rangy-core.js'
+						'src/jquery.ime.inputmethods.js'
 					]
 				}
 			}
@@ -71,8 +69,8 @@ module.exports = function ( grunt ) {
 		},
 		eslint: {
 			options: {
-				extensions: [ '.js', '.json' ],
-				cache: true
+				cache: true,
+				fix: grunt.option( 'fix' )
 			},
 			all: [
 				'**/*.{js,json}',
@@ -91,12 +89,6 @@ module.exports = function ( grunt ) {
 				'!libs/**',
 				'!node_modules/**'
 			]
-		},
-		watch: {
-			files: [
-				'.{eslintrc.json}'
-			],
-			tasks: 'lint'
 		},
 		connect: {
 			server: {

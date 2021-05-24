@@ -20,6 +20,10 @@
 			name: 'ትራንስልተራትዖን',
 			source: 'rules/am/am-transliteration.js'
 		},
+		'ann-tilde': {
+			name: 'Obolo tilde',
+			source: 'rules/ann/ann-tilde.js'
+		},
 		'ar-kbd': {
 			name: 'لوحة المفاتيح العربية',
 			source: 'rules/ar/ar-kbd.js'
@@ -56,9 +60,17 @@
 			name: 'تۆرکجه',
 			source: 'rules/azb/azb-kbd.js'
 		},
+		'bas-tilde': {
+			name: 'Ɓasaá tilde',
+			source: 'rules/bas/bas-tilde.js'
+		},
 		'batak-qwerty': {
 			name: 'Batak QWERTY',
 			source: 'rules/bbc/batak-qwerty.js'
+		},
+		'bci-tilde': {
+			name: 'Baoulé tilde keyboard',
+			source: 'rules/bci/bci-tilde.js'
 		},
 		'be-kbd': {
 			name: 'Стандартная',
@@ -79,6 +91,10 @@
 		'bgn-kbd': {
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
+		},
+		'bkm-tilde': {
+			name: 'Kom tilde',
+			source: 'rules/bkm/bkm-tilde.js'
 		},
 		'bm-alt': {
 			name: 'Bamanankan Alt',
@@ -372,6 +388,10 @@
 			name: 'Kabɩyɛ tilde',
 			source: 'rules/kbp/kbp-tilde.js'
 		},
+		'kcg-tilde': {
+			name: 'Tyap tilde',
+			source: 'rules/kcg/kcg-tilde.js'
+		},
 		'ki-tilde': {
 			name: 'Gĩkũyũ',
 			source: 'rules/ki/ki-tilde.js'
@@ -447,6 +467,10 @@
 		'lut-tulalip': {
 			name: 'Lushootseed Tulalip',
 			source: 'rules/lut/lut-tulalip.js'
+		},
+		'mad-tilde': {
+			name: 'Madhurâ tilde',
+			source: 'rules/mad/mad-tilde.js'
 		},
 		'mai-inscript': {
 			name: 'इनस्क्रिप्ट',
@@ -562,6 +586,10 @@
 			name: 'ट्रांस्लितेरेशन',
 			source: 'rules/ne/ne-transliteration.js'
 		},
+		'nia-tilde': {
+			name: 'Li Niha tilde',
+			source: 'rules/nia/nia-tilde.js'
+		},
 		'nqo-standard-qwerty': {
 			name: "N'Ko standard QWERTY",
 			source: 'rules/nqo/nqo-standard-qwerty.js'
@@ -573,6 +601,10 @@
 		'nso-tilde': {
 			name: 'Sesotho sa Leboa tilde',
 			source: 'rules/nso/nso-tilde.js'
+		},
+		'nus-tilde': {
+			name: 'Thok Naath tilde',
+			source: 'rules/nus/nus-tilde.js'
 		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
@@ -862,6 +894,10 @@
 			autonym: 'አማርኛ',
 			inputmethods: [ 'am-transliteration' ]
 		},
+		ann: {
+			autonym: 'Obolo',
+			inputmethods: [ 'ann-tilde' ]
+		},
 		ar: {
 			autonym: 'العربية',
 			inputmethods: [ 'ar-kbd' ]
@@ -878,9 +914,17 @@
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
 		},
+		bas: {
+			autonym: 'ɓasaá',
+			inputmethods: [ 'bas-tilde' ]
+		},
 		bbc: {
 			autonym: 'Batak',
 			inputmethods: [ 'batak-qwerty' ]
+		},
+		bci: {
+			autonym: 'wawle',
+			inputmethods: [ 'bci-tilde' ]
 		},
 		be: {
 			autonym: 'беларуская',
@@ -901,6 +945,10 @@
 		bho: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
+		},
+		bkm: {
+			autonym: 'Itaŋikom',
+			inputmethods: [ 'bkm-tilde' ]
 		},
 		bm: {
 			autonym: 'Bamanankan',
@@ -941,6 +989,10 @@
 		dag: {
 			autonym: 'Dagbani',
 			inputmethods: [ 'dag-alt', 'dag-tilde' ]
+		},
+		dar: {
+			autonym: 'дарган',
+			inputmethods: [ 'cyrl-palochka' ]
 		},
 		de: {
 			autonym: 'Deutsch',
@@ -1074,6 +1126,10 @@
 			autonym: 'Kabɩyɛ',
 			inputmethods: [ 'kbp-tilde' ]
 		},
+		kcg: {
+			autonym: 'Tyap',
+			inputmethods: [ 'kcg-tilde' ]
+		},
 		ki: {
 			autonym: 'Gĩkũyũ',
 			inputmethods: [ 'ki-tilde' ]
@@ -1138,6 +1194,10 @@
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
 		},
+		mad: {
+			autonym: 'madhurâ',
+			inputmethods: [ 'mad-tilde' ]
+		},
 		mg: {
 			autonym: 'Malagasy',
 			inputmethods: [ 'mg-tilde' ]
@@ -1182,6 +1242,10 @@
 			autonym: 'नेपाल भाषा',
 			inputmethods: [ 'hi-transliteration', 'hi-inscript' ]
 		},
+		nia: {
+			autonym: 'li niha',
+			inputmethods: [ 'nia-tilde' ]
+		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
@@ -1193,6 +1257,10 @@
 		nso: {
 			autonym: 'Sesotho sa Leboa',
 			inputmethods: [ 'nso-tilde' ]
+		},
+		nus: {
+			autonym: 'Thok Naath',
+			inputmethods: [ 'nus-tilde' ]
 		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',

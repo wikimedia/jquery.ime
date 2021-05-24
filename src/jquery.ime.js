@@ -4,11 +4,9 @@
 	var TextEntryFactory, TextEntry, FormWidgetEntry, ContentEditableEntry,
 		defaultInputMethod;
 
-	// rangy is defined in the rangy library
-	/* global rangy */
-
 	/**
 	 * private function for debugging
+	 *
 	 * @param {jQuery} [$obj]
 	 */
 	function debug( $obj ) {
@@ -45,7 +43,7 @@
 	/**
 	 * IME Class
 	 *
-	 * @class
+	 * @class IME
 	 * @constructor
 	 * @param {HTMLElement} element Element on which to listen for events
 	 * @param {TextEntry} textEntry Text entry object to use to get/set text
@@ -72,6 +70,10 @@
 		this.language = null;
 		this.context = '';
 		if ( this.options.showSelector ) {
+			this.options.selectorInside = options.selectorInside !== undefined ?
+				options.selectorInside :
+				// eslint-disable-next-line no-jquery/no-class-state
+				this.$element.hasClass( 'ime-position-inside' );
 			this.selector = this.$element.imeselector( this.options );
 		}
 		this.listen();
@@ -402,7 +404,7 @@
 	/**
 	 * TextEntry factory
 	 *
-	 * @class
+	 * @class TextEntryFactory
 	 * @constructor
 	 */
 	TextEntryFactory = function IMETextEntryFactory() {
@@ -428,17 +430,21 @@
 	 * Wrap an editable element with the appropriate TextEntry class
 	 *
 	 * @param {jQuery} $element The element to wrap
-	 * @return {TextEntry|undefined} A TextEntry, or undefined if no match
+	 * @return {TextEntry|null} A TextEntry, or null if no match
 	 */
 	TextEntryFactory.prototype.wrap = function ( $element ) {
 		var i, len, TextEntryClass;
+		// eslint-disable-next-line no-jquery/no-class-state
+		if ( $element.hasClass( 'noime' ) ) {
+			return null;
+		}
 		for ( i = 0, len = this.TextEntryClasses.length; i < len; i++ ) {
 			TextEntryClass = this.TextEntryClasses[ i ];
 			if ( TextEntryClass.static.canWrap( $element ) ) {
 				return new TextEntryClass( $element );
 			}
 		}
-		return undefined;
+		return null;
 	};
 
 	/* Initialization */
@@ -448,7 +454,7 @@
 	/**
 	 * Generic text entry
 	 *
-	 * @class
+	 * @class TextEntry
 	 * @abstract
 	 */
 	TextEntry = function IMETextEntry() {
@@ -493,7 +499,7 @@
 	/**
 	 * TextEntry class for input/textarea widgets
 	 *
-	 * @class
+	 * @class FormWidgetEntry
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
@@ -513,9 +519,7 @@
 	FormWidgetEntry.static.canWrap = function ( $element ) {
 		return $element.is( 'input:not([type]), input[type=text], input[type=search], textarea' ) &&
 			!$element.prop( 'readonly' ) &&
-			!$element.prop( 'disabled' ) &&
-			// eslint-disable-next-line no-jquery/no-class-state
-			!$element.hasClass( 'noime' );
+			!$element.prop( 'disabled' );
 	};
 
 	/* Instance methods */
@@ -524,10 +528,10 @@
 	 * @inheritdoc TextEntry
 	 */
 	FormWidgetEntry.prototype.getTextBeforeSelection = function ( maxLength ) {
-		var pos = this.getCaretPosition();
+		var element = this.$element.get( 0 );
 		return this.$element.val().substring(
-			Math.max( 0, pos.start - maxLength ),
-			pos.start
+			Math.max( 0, element.selectionStart - maxLength ),
+			element.selectionStart
 		);
 	};
 
@@ -535,112 +539,24 @@
 	 * @inheritdoc TextEntry
 	 */
 	FormWidgetEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
-		var selection,
-			length,
-			newLines,
-			start,
-			scrollTop,
-			pos,
-			element = this.$element.get( 0 );
-
-		if ( typeof element.selectionStart === 'number' && typeof element.selectionEnd === 'number' ) {
-			// IE9+ and all other browsers
-			start = element.selectionStart;
+		var element = this.$element.get( 0 ),
+			start = element.selectionStart,
 			scrollTop = element.scrollTop;
 
-			// Replace the whole text of the text area:
-			// text before + newText + text after.
-			// This could be made better if range selection worked on browsers.
-			// But for complex scripts, browsers place cursor in unexpected places
-			// and it's not possible to fix cursor programmatically.
-			// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-			element.value = element.value.substring( 0, start - precedingCharCount ) +
-				newText +
-				element.value.substring( element.selectionEnd, element.value.length );
+		// Replace the whole text of the text area:
+		// text before + newText + text after.
+		// This could be made better if range selection worked on browsers.
+		// But for complex scripts, browsers place cursor in unexpected places
+		// and it's not possible to fix cursor programmatically.
+		// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
+		element.value = element.value.substring( 0, start - precedingCharCount ) +
+			newText +
+			element.value.substring( element.selectionEnd, element.value.length );
 
-			// restore scroll
-			element.scrollTop = scrollTop;
-			// set selection
-			element.selectionStart = element.selectionEnd = start - precedingCharCount + newText.length;
-		} else {
-			// IE8 and lower
-			pos = this.getCaretPosition();
-			selection = element.createTextRange();
-			length = element.value.length;
-			// IE doesn't count \n when computing the offset, so we won't either
-			newLines = element.value.match( /\n/g );
-
-			if ( newLines ) {
-				length = length - newLines.length;
-			}
-
-			selection.moveStart( 'character', pos.start - precedingCharCount );
-			selection.moveEnd( 'character', pos.end - length );
-
-			selection.text = newText;
-			selection.collapse( false );
-			selection.select();
-		}
-	};
-
-	/**
-	 * Get the current selection offsets inside the widget
-	 *
-	 * @return {Object} return Offsets in chars (0 means first offset *or* no selection in widget)
-	 * @return {number} return.start Selection start
-	 * @return {number} return.end Selection end
-	 */
-	FormWidgetEntry.prototype.getCaretPosition = function () {
-		var el = this.$element.get( 0 ),
-			start = 0,
-			end = 0,
-			normalizedValue,
-			range,
-			textInputRange,
-			len,
-			newLines,
-			endRange;
-
-		if ( typeof el.selectionStart === 'number' && typeof el.selectionEnd === 'number' ) {
-			start = el.selectionStart;
-			end = el.selectionEnd;
-		} else {
-			// IE
-			range = document.selection.createRange();
-
-			if ( range && range.parentElement() === el ) {
-				len = el.value.length;
-				normalizedValue = el.value.replace( /\r\n/g, '\n' );
-				newLines = normalizedValue.match( /\n/g );
-
-				// Create a working TextRange that lives only in the input
-				textInputRange = el.createTextRange();
-				textInputRange.moveToBookmark( range.getBookmark() );
-
-				// Check if the start and end of the selection are at the very end
-				// of the input, since moveStart/moveEnd doesn't return what we want
-				// in those cases
-				endRange = el.createTextRange();
-				endRange.collapse( false );
-
-				if ( textInputRange.compareEndPoints( 'StartToEnd', endRange ) > -1 ) {
-					if ( newLines ) {
-						start = end = len - newLines.length;
-					} else {
-						start = end = len;
-					}
-				} else {
-					start = -textInputRange.moveStart( 'character', -len );
-
-					if ( textInputRange.compareEndPoints( 'EndToEnd', endRange ) > -1 ) {
-						end = len;
-					} else {
-						end = -textInputRange.moveEnd( 'character', -len );
-					}
-				}
-			}
-		}
-		return { start: start, end: end };
+		// restore scroll
+		element.scrollTop = scrollTop;
+		// set selection
+		element.selectionStart = element.selectionEnd = start - precedingCharCount + newText.length;
 	};
 
 	TextEntryFactory.static.singleton.register( FormWidgetEntry );
@@ -648,7 +564,7 @@
 	/**
 	 * TextEntry class for ContentEditable
 	 *
-	 * @class
+	 * @class ContentEditableEntry
 	 * @constructor
 	 * @param {jQuery} $element The element to wrap
 	 */
@@ -666,8 +582,7 @@
 	 * @inheritdoc TextEntry
 	 */
 	ContentEditableEntry.static.canWrap = function ( $element ) {
-		// eslint-disable-next-line no-jquery/no-class-state
-		return $element.is( '[contenteditable]' ) && !$element.hasClass( 'noime' );
+		return $element.is( '[contenteditable]' );
 	};
 
 	/* Instance methods */
@@ -689,10 +604,15 @@
 	/**
 	 * @inheritdoc SelectionWrapper
 	 */
-	ContentEditableEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
-		var range, textNode, textOffset, newOffset, newRange;
+	ContentEditableEntry.prototype.replaceTextAtSelection = function (
+		precedingCharCount,
+		newText
+	) {
+		var textNode, textOffset, newOffset, newRange,
+			sel = window.getSelection(),
+			range = this.getSelectedRange();
 
-		if ( !this.getSelectedRange() ) {
+		if ( !range ) {
 			return;
 		}
 
@@ -702,12 +622,11 @@
 		// browsers that do not support it.
 		this.$element.trigger( 'compositionstart' );
 
-		range = this.getSelectedRange();
-
 		if ( !range.collapsed ) {
 			range.deleteContents();
 		}
 
+		newRange = document.createRange();
 		if ( range.startContainer.nodeType === Node.TEXT_NODE ) {
 			// Alter this text node's content and move the cursor
 			textNode = range.startContainer;
@@ -717,10 +636,8 @@
 				newText +
 				textNode.nodeValue.substr( textOffset );
 			newOffset = textOffset - precedingCharCount + newText.length;
-			newRange = rangy.createRange();
 			newRange.setStart( range.startContainer, newOffset );
 			newRange.setEnd( range.startContainer, newOffset );
-			rangy.getSelection().setSingleRange( newRange );
 		} else {
 			// XXX assert precedingCharCount === 0
 			// Insert a new text node with the new text
@@ -729,11 +646,11 @@
 				textNode,
 				range.startContainer.childNodes[ range.startOffset ]
 			);
-			newRange = rangy.createRange();
 			newRange.setStart( textNode, textNode.length );
 			newRange.setEnd( textNode, textNode.length );
-			rangy.getSelection().setSingleRange( newRange );
 		}
+		sel.removeAllRanges();
+		sel.addRange( newRange );
 
 		// Trigger any externally registered jQuery compositionend / input event listeners.
 		// TODO: Try node.dispatchEvent( new CompositionEvent(...) ) so listeners not
@@ -749,9 +666,9 @@
 	 * @return {Range|null} The selection range
 	 */
 	ContentEditableEntry.prototype.getSelectedRange = function () {
-		var sel, range;
-		rangy.init();
-		sel = rangy.getSelection();
+		var range,
+			sel = window.getSelection();
+
 		if ( sel.rangeCount === 0 ) {
 			return null;
 		}
@@ -781,7 +698,7 @@
 			data = $this.data( 'ime' );
 			if ( !data ) {
 				textEntry = TextEntryFactory.static.singleton.wrap( $this );
-				if ( textEntry === undefined ) {
+				if ( !textEntry ) {
 					return;
 				}
 				data = new IME( this, textEntry, options );
@@ -801,7 +718,7 @@
 	$.ime.languages = {};
 
 	/**
-	 * @property {string} Relative/absolute path for the rules folder of jquery.ime
+	 * @property {string} Relative or absolute path for the rules folder of jquery.ime
 	 */
 	$.ime.path = '../';
 	$.ime.textEntryFactory = TextEntryFactory.static.singleton;
@@ -874,6 +791,7 @@
 	$.ime.defaults = {
 		languages: [], // Languages to be used- by default all languages
 		helpHandler: null, // Called for each ime option in the menu
-		showSelector: true
+		showSelector: true,
+		selectorInside: undefined // If not set will check if '.ime-position-inside' class is preset
 	};
 }( jQuery ) );

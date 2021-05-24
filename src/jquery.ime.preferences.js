@@ -44,7 +44,7 @@
 		},
 
 		getPreviousInputMethods: function () {
-			return this.registry.previousInputMethods;
+			return this.registry.previousInputMethods || [];
 		},
 
 		// Set the given IM as the last used for the language
@@ -67,7 +67,8 @@
 			// Add to the previous languages,
 			if ( inputMethod !== 'system' ) {
 				this.registry.previousInputMethods.unshift( inputMethod );
-				this.registry.previousInputMethods = this.registry.previousInputMethods.slice( 0, 5 );
+				this.registry.previousInputMethods =
+					this.registry.previousInputMethods.slice( 0, 5 );
 			}
 		},
 
