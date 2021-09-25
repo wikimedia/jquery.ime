@@ -1647,6 +1647,30 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Farefare tilde',
+		inputmethod: 'gur-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Farefare ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Farefare ~e -> ɛ' },
+			{ input: '~G', output: 'Ɣ', description: 'Farefare ~G -> Ɣ' },
+			{ input: '~g', output: 'ɣ', description: 'Farefare ~g -> ɣ' },
+			{ input: '~I', output: 'Ɩ', description: 'Farefare ~I -> Ɩ' },
+			{ input: '~i', output: 'ɩ', description: 'Farefare ~i -> ɩ' },
+			{ input: '~N', output: 'Ŋ', description: 'Farefare ~N -> Ŋ' },
+			{ input: '~n', output: 'ŋ', description: 'Farefare ~n -> ŋ' },
+			{ input: '~O', output: 'Ɔ', description: 'Farefare ~O -> Ɔ' },
+			{ input: '~o', output: 'ɔ', description: 'Farefare ~O -> Ɔ' },
+			{ input: '~U', output: 'Ʋ', description: 'Farefare ~U -> Ʋ' },
+			{ input: '~u', output: 'ʋ', description: 'Farefare ~u -> ʋ' },
+			{ input: '~o~\\', output: 'ɔ̀', description: 'Farefare ~o~\\ -> ɔ̀' },
+			{ input: '~e~/', output: 'ɛ́', description: 'Farefare ~e~/ -> ɛ́' },
+			{ input: 'o~^', output: 'ô', description: 'Farefare o~^ -> ô' },
+			{ input: 'i~v', output: 'ǐ', description: 'Farefare i~v -> ǐ' },
+			{ input: 'u~-', output: 'ū', description: 'Farefare u~- -> ū' },
+			{ input: 'a~{', output: 'ã', description: 'Farefare a~{ -> ã' }
+		]
+	},
+	{
 		description: 'Hausa tilde test',
 		inputmethod: 'ha-tilde',
 		tests: [
