@@ -292,6 +292,10 @@
 			name: 'લિપ્યંતરણ',
 			source: 'rules/gu/gu-transliteration.js'
 		},
+		'gur-tilde': {
+			name: 'Farefare tilde',
+			source: 'rules/gur/gur-tilde.js'
+		},
 		'ha-tilde': {
 			name: 'Hausa - tilde',
 			source: 'rules/ha/ha-tilde.js'
@@ -1073,6 +1077,10 @@
 		gu: {
 			autonym: 'ગુજરાતી',
 			inputmethods: [ 'gu-transliteration', 'gu-inscript', 'gu-inscript2', 'gu-phonetic' ]
+		},
+		gur: {
+			autonym: 'farefare',
+			inputmethods: [ 'gur-tilde' ]
 		},
 		he: {
 			autonym: 'עברית',
