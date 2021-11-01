@@ -594,6 +594,10 @@
 			name: 'Li Niha tilde',
 			source: 'rules/nia/nia-tilde.js'
 		},
+		'nmz-tilde': {
+			name: 'Nawdm tilde',
+			source: 'rules/nmz/nmz-tilde.js'
+		},
 		'nqo-standard-qwerty': {
 			name: "N'Ko standard QWERTY",
 			source: 'rules/nqo/nqo-standard-qwerty.js'
@@ -1253,6 +1257,10 @@
 		nia: {
 			autonym: 'li niha',
 			inputmethods: [ 'nia-tilde' ]
+		},
+		nmz: {
+			autonym: 'nawdm',
+			inputmethods: [ 'nmz-tilde' ]
 		},
 		nn: {
 			autonym: 'Norsk (nynorsk)',
