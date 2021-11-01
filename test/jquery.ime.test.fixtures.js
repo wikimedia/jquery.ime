@@ -4230,6 +4230,22 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Nawdm tilde test',
+		inputmethod: 'nmz-tilde',
+		tests: [
+			{ input: '~e', output: 'ɛ', description: 'Nawdm tilde ɛ' },
+			{ input: '~E', output: 'Ɛ', description: 'Nawdm tilde Ɛ' },
+			{ input: '~H', output: 'Ĥ', description: 'Nawdm tilde Ĥ' },
+			{ input: '~h', output: 'ɦ', description: 'Nawdm tilde ɦ' },
+			{ input: '~n', output: 'ŋ', description: 'Nawdm tilde ŋ' },
+			{ input: '~N', output: 'Ŋ', description: 'Nawdm tilde Ŋ' },
+			{ input: '~o', output: 'ɔ', description: 'Nawdm tilde ɔ' },
+			{ input: '~O', output: 'Ɔ', description: 'Nawdm tilde Ɔ' },
+			{ input: 'g~:w, g~:b, n~:y, ~n~:m', output: 'g̈w, g̈b, n̈y, ŋ̈m', description: 'Nawdm tilde g̈w, g̈b, n̈y, ŋ̈m' },
+			{ input: 'a~/a~\\', output: 'áà', description: 'Nawdm tilde áà' }
+		]
+	},
+	{
 		description: "N'Ko standard QWERTY",
 		inputmethod: 'nqo-standard-qwerty',
 		tests: [
