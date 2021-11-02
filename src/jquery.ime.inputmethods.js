@@ -562,6 +562,10 @@
 			name: 'अक्षरांतरण',
 			source: 'rules/mr/mr-transliteration.js'
 		},
+		'mul-cm': {
+			name: 'General Alphabet of Cameroon Languages tilde keyboard',
+			source: 'rules/mul-cm/mul-cm.js'
+		},
 		'my-mm3': {
 			name: 'မြန်မာ၃ လက်ကွက်',
 			source: 'rules/my/my-mm3.js'
@@ -936,7 +940,7 @@
 		},
 		bas: {
 			autonym: 'ɓasaá',
-			inputmethods: [ 'bas-tilde' ]
+			inputmethods: [ 'bas-tilde', 'mul-cm' ]
 		},
 		bbc: {
 			autonym: 'Batak',
@@ -968,7 +972,7 @@
 		},
 		bkm: {
 			autonym: 'Itaŋikom',
-			inputmethods: [ 'bkm-tilde' ]
+			inputmethods: [ 'bkm-tilde', 'mul-cm' ]
 		},
 		bm: {
 			autonym: 'Bamanankan',
@@ -1153,6 +1157,10 @@
 		kcg: {
 			autonym: 'Tyap',
 			inputmethods: [ 'kcg-tilde' ]
+		},
+		ken: {
+			autonym: 'kɛ́nyáŋ',
+			inputmethods: [ 'mul-cm' ]
 		},
 		ki: {
 			autonym: 'Gĩkũyũ',
