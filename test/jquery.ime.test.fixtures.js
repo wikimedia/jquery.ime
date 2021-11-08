@@ -4040,6 +4040,38 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Mon Simplified Anonta test',
+		inputmethod: 'mnw-simplified-anonta',
+		tests: [
+			{ input: '`1234567890', output: 'ၝ၁၂၃၄၅၆၇၈၉၀', description: 'Mon Simplified Anonta - `1234567890' },
+			{ input: '~!@#', output: 'ဎဍဏ္ဍဋ', description: 'Mon Simplified Anonta - ~!@#' },
+			{ input: 'r$', output: 'မိဲ', description: 'Mon Simplified Anonta - r$' },
+			{ input: 'y^', output: 'ပဵ', description: 'Mon Simplified Anonta - y^' },
+			{ input: '&*_', output: 'ရဂ×', description: 'Mon Simplified Anonta - &*_' },
+			{ input: 'qwertyuiop[]\\', output: 'ဆတနမအပကၚသစဟဩၑ', description: 'Mon Simplified Anonta - qwertyuiop[]\\' },
+			{ input: 'za', output: 'ဖေ', description: 'Mon Simplified Anonta - za' },
+			{ input: 'xs', output: 'ထျ', description: 'Mon Simplified Anonta - xs' },
+			{ input: 'cd', output: 'ခိ', description: 'Mon Simplified Anonta - cd' },
+			{ input: 'vf', output: 'လ်', description: 'Mon Simplified Anonta - vf' },
+			{ input: 'bg', output: 'ဘါ', description: 'Mon Simplified Anonta - bg' },
+			{ input: 'nh', output: 'ညဴ', description: 'Mon Simplified Anonta - nh' },
+			{ input: ',m', output: 'ယာ', description: 'Mon Simplified Anonta - ,m' },
+			{ input: '.j/', output: 'ၜြ။', description: 'Mon Simplified Anonta - .j/' },
+			{ input: 'zkxl;', output: 'ဖုထူး', description: 'Mon Simplified Anonta - zkxl;' },
+			{ input: 'QRWT', output: 'ၛၟဝဳ', description: 'Mon Simplified Anonta - QRWT' },
+			{ input: 'E', output: 'ဣ', description: 'Mon Simplified Anonta - E' },
+			{ input: 'UIOP{}|', output: 'ဥ၎ဿဏဨအဴဋ္ဌ', description: 'Mon Simplified Anonta - UIOP{}|' },
+			{ input: 'AY', output: 'ဗၠ', description: 'Mon Simplified Anonta - AY' },
+			{ input: 'ZS', output: 'ဇှ', description: 'Mon Simplified Anonta - ZS' },
+			{ input: 'XD', output: 'ဌီ', description: 'Mon Simplified Anonta - XD' },
+			{ input: 'CF', output: 'ဃ္', description: 'Mon Simplified Anonta - CF' },
+			{ input: 'BG', output: 'ၐွ', description: 'Mon Simplified Anonta - BG' },
+			{ input: 'VH', output: 'ဠံ', description: 'Mon Simplified Anonta - VH' },
+			{ input: 'NJ', output: 'ဉဲ', description: 'Mon Simplified Anonta - NJ' },
+			{ input: 'K<ML?', output: 'ဒၞ÷ဓ၊', description: 'Mon Simplified Anonta - K<ML?' }
+		]
+	},
+	{
 		description: 'Marathi InScript 2 test',
 		inputmethod: 'mr-inscript2',
 		tests: [

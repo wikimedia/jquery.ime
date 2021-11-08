@@ -538,6 +538,10 @@
 			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/mni/mni-inscript2.js'
 		},
+		'mnw-simplified-anonta': {
+			name: 'Mon Simplified Anonta',
+			source: 'rules/mnw/mnw-simplified-anonta.js'
+		},
 		'mr-inscript': {
 			name: 'मराठी लिपी',
 			source: 'rules/mr/mr-inscript.js'
@@ -1233,6 +1237,10 @@
 		mni: {
 			autonym: 'Manipuri',
 			inputmethods: [ 'mni-inscript2' ]
+		},
+		mnw: {
+			autonym: 'ဘာသာ မန်',
+			inputmethods: [ 'mnw-simplified-anonta' ]
 		},
 		mr: {
 			autonym: 'मराठी',
