@@ -4210,6 +4210,7 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'QWERTYUIOP', output: 'ဈဝဣ၎ဤ၌ဥ၍ဿဏ', description: 'Myanmar xkb QWERTYUIOP' },
 			{ input: 'qawsedrftgyhujikolp;', output: 'ဆေတျနိမ်အါပ့ကြငုသူစး', description: 'Myanmar xkb qawsedrftgyhujikolp;' },
+			{ input: '[]{}', output: 'ဟဩဧဪ', description: 'Myanmar xkb []{}' },
 			{ input: 'ASD', output: 'ဗှီ', description: 'Myanmar xkb ASD' },
 			{ input: 'WF', output: 'ဝ္', description: 'Myanmar xkb WF' },
 			{ input: 'tG', output: 'အွ', description: 'Myanmar xkb tG' },
@@ -4218,7 +4219,7 @@ var palochkaVariants = {
 			{ input: 'KL', output: 'ဒဓ', description: 'Myanmar xkb KL' },
 			{ input: ':"\'', output: 'ဂ"\'', description: 'Myanmar xkb :"\'' },
 			{ input: 'zxcvbnm,./', output: 'ဖထခလဘညာ,./', description: 'Myanmar xkb zxcvbnm,./' },
-			{ input: 'ZXCVBNM<>?', output: 'ဇဌဃဠယဉဦ၊။?', description: 'Myanmar xkb ' },
+			{ input: 'ZXCVBNM<>?', output: 'ဇဌဃဠယဉဦ၊။?', description: 'Myanmar xkb ZXCVBNM<>?' },
 			{ input: '`~', output: 'ၐဎ', description: 'Myanmar xkb ၐဎ' },
 			{ input: '1234567890', output: '၁၂၃၄၅၆၇၈၉၀', description: 'Myanmar xkb 1234567890' },
 			{ input: '!@#$%^&*()', output: 'ဍၒဋၓၔၕရ*()', description: 'Myanmar xkb !@#$%^&*()' }
