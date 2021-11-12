@@ -52,7 +52,8 @@
     "url": "https://github.com/wikimedia/jquery.ime/issues"
   },
   "engine": {
-    "node": ">=6.11.1"
+    "npm": ">=7.14.0",
+    "node": ">=12"
   },
   "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
