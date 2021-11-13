@@ -8,6 +8,10 @@
 			name: 'Afrikaans tilde',
 			source: 'rules/af/af-tilde.js'
 		},
+		'ajg-tilde': {
+			name: 'Aja tilde',
+			source: 'rules/ajg/ajg-tilde.js'
+		},
 		'ak-qx': {
 			name: 'Akan QX replacement',
 			source: 'rules/ak/ak-qx.js'
@@ -897,6 +901,10 @@
 		ahr: {
 			autonym: 'अहिराणी',
 			inputmethods: [ 'mr-transliteration', 'mr-inscript' ]
+		},
+		ajg: {
+			autonym: 'ajagbe',
+			inputmethods: [ 'ajg-tilde' ]
 		},
 		ak: {
 			autonym: 'Akan',
