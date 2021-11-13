@@ -12,6 +12,19 @@ var palochkaVariants = {
 	// eslint-disable-next-line no-implicit-globals
 	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
+		description: 'Aja tilde test',
+		inputmethod: 'ajg-tilde',
+		tests: [
+			{ input: 'fak~e FAK~E', output: 'fakɛ FAKƐ', description: 'Aja tilde fakɛ' },
+			{ input: 'ab~ota AB~OTA', output: 'abɔta ABƆTA', description: 'Aja tilde abɔta' },
+			{ input: 'e~du E~DU', output: 'eɖu EƉU', description: 'Aja tilde eɖu' },
+			{ input: 'e~gi E~GI', output: 'eɣi EƔI', description: 'Aja tilde eɣi' },
+			{ input: '~n~oci ~N~OCI', output: 'ŋɔci ŊƆCI', description: 'Aja tilde ŋɔci' },
+			{ input: 'a~za A~ZA', output: 'aʒa AƷA', description: 'Aja tilde aʒa' },
+			{ input: 's~o~/ e~\\gb~o~\\', output: 'sɔ́ ègbɔ̀', description: 'Aja tilde sɔ́ ègbɔ̀' }
+		]
+	},
+	{
 		description: 'Akan QX test',
 		inputmethod: 'ak-qx',
 		tests: [
