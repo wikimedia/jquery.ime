@@ -344,6 +344,10 @@
 			name: 'Fon Tilde',
 			source: 'rules/fon/fon-tilde.js'
 		},
+		'fvr-tilde': {
+			name: 'Fur Tilde',
+			source: 'rules/fvr/fvr-tilde.js'
+		},
 		'gaa-cqx': {
 			name: 'Ga CQX replacement',
 			source: 'rules/gaa/gaa-cqx.js'
@@ -1333,6 +1337,10 @@
 		fon: {
 			autonym: 'Fon',
 			inputmethods: [ 'fon-tilde' ]
+		},
+		fvr: {
+			autonym: 'poor’íŋ belé’ŋ',
+			inputmethods: [ 'fvr-tilde' ]
 		},
 		fonipa: {
 			autonym: 'International Phonetic Alphabet',
