@@ -10,6 +10,7 @@
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
+		maxKeyLength: 2,
 		patterns: [
 			[ '΄¨i', 'ΐ' ],
 			[ '¨΄i', 'ΐ' ],
