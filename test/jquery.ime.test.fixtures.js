@@ -1347,7 +1347,7 @@ var palochkaVariants = {
 			{ input: '΄h', output: 'ή', description: 'combo to precomposed' },
 			{ input: '¨I', output: 'Ϊ', description: 'combo to precomposed' },
 			{ input: '¨΄i', output: 'ΐ', description: 'multi combo to precomposed' },
-			{ input: '΄¨y', output: 'ΰ', description: 'reverse multi combo to precomposed' },
+			{ input: '΄¨y', output: 'ΰ', description: 'reverse multi combo to precomposed' }
 		]
 	},
 	{
