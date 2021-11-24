@@ -1329,6 +1329,28 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Modern Greek Std Kbd test',
+		inputmethod: 'el-kbd',
+		tests: [
+			{ input: 'S', output: 'Σ', description: 'S to Sigma' },
+			{ input: 's', output: 'σ', description: 's to sigma' },
+			{ input: 'W', output: 'Σ', description: 'W to Sigma' },
+			{ input: 'w', output: 'ς', description: 'w to final sigma' },
+			{ input: 'U', output: 'Θ', description: 'U to Theta' },
+			{ input: 'u', output: 'θ', description: 'U to theta' },
+			{ input: 'c', output: 'ψ', description: 'c to psi' },
+			{ input: 'v', output: 'ω', description: 'v to omega' },
+			{ input: 'Q', output: ':', description: 'q to colon' },
+			{ input: 'q', output: ';', description: 'q to Greek question mark' },
+			{ input: ':', output: '¨', description: ': to diaresis' },
+			{ input: ';', output: '΄', description: '; to tonos/oxia' },
+			{ input: '΄h', output: 'ή', description: 'combo to precomposed' },
+			{ input: '¨I', output: 'Ϊ', description: 'combo to precomposed' },
+			{ input: '¨΄i', output: 'ΐ', description: 'multi combo to precomposed' },
+			{ input: '΄¨y', output: 'ΰ', description: 'reverse multi combo to precomposed' },
+		]
+	},
+	{
 		description: 'Esperanto x-sistemo test',
 		inputmethod: 'eo-x',
 		tests: [
@@ -6151,27 +6173,5 @@ var palochkaVariants = {
 			{ input: 'jv1', output: 'jū', description: 'Chinese Pinyin jū' },
 			{ input: 'wang3', output: 'wǎng', description: 'Chinese Pinyin wǎng' }
 		]
-	},
-  {
-		description: 'Modern Greek Std Kbd test',
-		inputmethod: 'el-kbd',
-		tests: [
-			{ input: 'S', output: 'Σ', description: 'S to Sigma' },
-			{ input: 's', output: 'σ', description: 's to sigma' },
-			{ input: 'W', output: 'Σ', description: 'W to Sigma' },
-			{ input: 'w', output: 'ς', description: 'w to final sigma' },
-			{ input: 'U', output: 'Θ', description: 'U to Theta' },
-			{ input: 'u', output: 'θ', description: 'U to theta' },
-			{ input: 'c', output: 'ψ', description: 'c to psi' },
-			{ input: 'v', output: 'ω', description: 'v to omega' },
-			{ input: 'Q', output: ':', description: 'q to colon' },
-			{ input: 'q', output: ';', description: 'q to Greek question mark' },
-			{ input: ':', output: '¨', description: ': to diaresis' },
-			{ input: ';', output: '΄', description: '; to tonos/oxia' },
-			{ input: '΄h', output: 'ή', description: 'combo to precomposed' },
-			{ input: '¨I', output: 'Ϊ', description: 'combo to precomposed' },
-			{ input: '¨΄i', output: 'ΐ', description: 'multi combo to precomposed' },
-			{ input: '΄¨y', output: 'ΰ', description: 'reverse multi combo to precomposed' },
-   ]
-  }
+	}
 ];
