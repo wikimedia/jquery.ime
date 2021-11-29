@@ -9,7 +9,7 @@
 		URL: 'https://github.com/wikimedia/jquery.ime',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
 		maxKeyLength: 2,
 		patterns: [
 			[ '~E', 'Ɛ' ],
@@ -17,7 +17,10 @@
 			[ '~N', 'Ŋ' ],
 			[ '~n', 'ŋ' ],
 			[ '~O', 'Ɔ' ],
-			[ '~o', 'ɔ' ]
+			[ '~o', 'ɔ' ],
+			[ '~\\\\', '\u0300' ], // Combining grave accent
+			[ '~/', '\u0301' ], // Combining acute accent
+			[ '~\\{', '\u0303' ] // Combining tilde
 		]
 	};
 
