@@ -1619,6 +1619,7 @@ var palochkaVariants = {
 		description: 'Ga tilde test',
 		inputmethod: 'gaa-tilde',
 		tests: [
+			{ input: '~e~\\~e~/~e~{', output: 'ɛ̀ɛ́ɛ̃', description: 'Ga tilde ɛ̀ɛ́ɛ̃' },
 			{ input: '~E', output: 'Ɛ', description: 'Ga tilde ~E' },
 			{ input: '~e', output: 'ɛ', description: 'Ga tilde ~e' },
 			{ input: '~N', output: 'Ŋ', description: 'Ga tilde ~N' },
