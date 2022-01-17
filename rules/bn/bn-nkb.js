@@ -3,7 +3,7 @@
 
 	var bnNkb = {
 		id: 'bn-nkb',
-		name: 'National Keyboard',
+		name: 'Jatiyo Keyboard',
 		description: 'Bengali National Keyboard input method',
 		date: '2012-10-10',
 		URL: 'http://github.com/wikimedia/jquery.ime',
