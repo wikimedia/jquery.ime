@@ -121,7 +121,7 @@
 			source: 'rules/bn/bn-inscript2.js'
 		},
 		'bn-nkb': {
-			name: 'ন্যাশনাল কিবোর্ড',
+			name: 'জাতীয় কিবোর্ড',
 			source: 'rules/bn/bn-nkb.js'
 		},
 		'bn-probhat': {
