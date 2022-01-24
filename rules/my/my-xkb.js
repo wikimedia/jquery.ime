@@ -97,7 +97,7 @@
 			[ 'M', '\u1026' ], // ဦ UU
 
 			[ '\\<', '\u104A' ], // ၊ SIGN LITTLE SECTION
-			[ '\\>', '\u104B' ], // ။ SIGN SECTION
+			[ '\\>', '\u104B' ] // ။ SIGN SECTION
 		]
 	};
 
