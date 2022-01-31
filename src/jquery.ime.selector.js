@@ -15,6 +15,45 @@
 		this.listen();
 	}
 
+	function languageListTitle() {
+		return $( '<h3>' )
+			.addClass( 'ime-lang-title' )
+			.attr( 'data-i18n', 'jquery-ime-other-languages' )
+			.text( 'Other languages' );
+	}
+
+	function imeList() {
+		return $( '<ul>' ).addClass( 'ime-list' );
+	}
+
+	function imeListTitle() {
+		return $( '<h3>' ).addClass( 'ime-list-title autonym' );
+	}
+
+	function toggleMenuItem() {
+		return $( '<div>' ).addClass( 'ime-disable selectable-row' ).append(
+			$( '<span>' )
+				.addClass( 'ime-disable-link' )
+				.addClass( 'ime-checked' )
+				.attr( 'data-i18n', 'jquery-ime-disable-text' )
+				.text( 'System input method' ),
+			$( '<span>' )
+				.addClass( 'ime-disable-shortcut' )
+				.text( 'CTRL+M' )
+		);
+	}
+
+	/**
+	 * Check whether a keypress event corresponds to the shortcut key
+	 *
+	 * @param {event} event
+	 * @return {boolean} true if the key is a shortcut key
+	 */
+	function isShortcutKey( event ) {
+		// 77 - The letter M, for Ctrl-M
+		return event.ctrlKey && !event.altKey && ( event.which === 77 );
+	}
+
 	IMESelector.prototype = {
 		constructor: IMESelector,
 
@@ -28,7 +67,7 @@
 			// TODO: In this approach there is a menu for each editable area.
 			// With correct event mapping we can probably reduce it to one menu.
 			this.$imeSetting = $( selectorTemplate );
-			this.$menu = $( '<div class="imeselector-menu" role="menu">' );
+			this.$menu = $( '<div>' ).addClass( 'imeselector-menu' ).attr( 'role', 'menu' );
 			this.$menu.append(
 				imeListTitle(),
 				imeList(),
@@ -44,7 +83,7 @@
 			}
 
 			this.$imeSetting.append( this.$menu );
-			$( 'body' ).append( this.$imeSetting );
+			$( document.body ).append( this.$imeSetting );
 		},
 
 		stopTimer: function () {
@@ -63,6 +102,8 @@
 
 			this.timer = setTimeout(
 				function () {
+					// TODO: Use CSS transitions
+					// eslint-disable-next-line no-jquery/no-animate
 					imeselector.$imeSetting.animate( {
 						opacity: 0,
 						marginTop: '-20px'
@@ -78,8 +119,14 @@
 
 		focus: function () {
 			// Hide all other IME settings and collapse open menus
+			// eslint-disable-next-line no-jquery/no-global-selector
 			$( 'div.imeselector' ).hide();
+			// eslint-disable-next-line no-jquery/no-global-selector
 			$( 'div.imeselector-menu' ).removeClass( 'ime-open' );
+			this.afterKeydown();
+		},
+
+		afterKeydown: function () {
 			this.$imeSetting.show();
 			this.resetTimer();
 		},
@@ -100,6 +147,7 @@
 		},
 
 		toggle: function () {
+			// eslint-disable-next-line no-jquery/no-class-state
 			if ( this.$menu.hasClass( 'ime-open' ) ) {
 				this.hide();
 			} else {
@@ -114,9 +162,10 @@
 			var imeselector = this;
 
 			imeselector.$imeSetting.on( 'click.ime', function ( e ) {
-				var t = $( e.target );
+				var $t = $( e.target );
 
-				if ( t.hasClass( 'imeselector-toggle' ) ) {
+				// eslint-disable-next-line no-jquery/no-class-state
+				if ( $t.hasClass( 'imeselector-toggle' ) ) {
 					imeselector.toggle();
 				}
 
@@ -124,6 +173,7 @@
 			} );
 
 			imeselector.$element.on( 'blur.ime', function () {
+				// eslint-disable-next-line no-jquery/no-class-state
 				if ( !imeselector.$imeSetting.hasClass( 'ime-onfocus' ) ) {
 					imeselector.$imeSetting.hide();
 					imeselector.hide();
@@ -131,7 +181,7 @@
 			} );
 
 			// Hide the menu when clicked outside
-			$( 'html' ).click( function () {
+			$( document.body ).on( 'click', function () {
 				imeselector.hide();
 			} );
 
@@ -140,18 +190,18 @@
 				event.stopPropagation();
 			} );
 
-			imeselector.$imeSetting.mouseenter( function () {
+			imeselector.$imeSetting.on( 'mouseenter', function () {
 				// We don't want the selector to disappear
 				// while the user is trying to click it
 				imeselector.stopTimer();
 				imeselector.$imeSetting.addClass( 'ime-onfocus' );
-			} ).mouseleave( function () {
+			} ).on( 'mouseleave', function () {
 				imeselector.resetTimer();
 				imeselector.$imeSetting.removeClass( 'ime-onfocus' );
 			} );
 
 			imeselector.$menu.on( 'click.ime', 'li', function () {
-				imeselector.$element.focus();
+				imeselector.$element.trigger( 'focus' );
 
 				return false;
 			} );
@@ -188,19 +238,22 @@
 				e.stopPropagation();
 			} );
 
-			imeselector.$element.attrchange( function ( ) {
+			imeselector.$element.attrchange( function () {
+				// eslint-disable-next-line no-jquery/no-sizzle
 				if ( imeselector.$element.is( ':hidden' ) ) {
 					imeselector.$imeSetting.hide();
 				}
 			} );
 
 			// Possible resize of textarea
-			imeselector.$element.on( 'mouseup.ime', $.proxy( this.position, this ) );
-			imeselector.$element.on( 'keydown.ime', $.proxy( this.keydown, this ) );
+			imeselector.$element.on( {
+				'mouseup.ime': this.position.bind( this ),
+				'keydown.ime': this.keydown.bind( this )
+			} );
 
 			// Update IM selector position when the window is resized
 			// or the browser window is zoomed in or zoomed out
-			$( window ).resize( function () {
+			$( window ).on( 'resize', function () {
 				imeselector.position();
 			} );
 		},
@@ -208,8 +261,9 @@
 		/**
 		 * Keydown event handler. Handles shortcut key presses
 		 *
-		 * @context {HTMLElement}
+		 * @this HTMLElement
 		 * @param {jQuery.Event} e
+		 * @return {boolean}
 		 */
 		keydown: function ( e ) {
 			var ime = $( e.target ).data( 'ime' ),
@@ -217,7 +271,7 @@
 				previousInputMethods,
 				languageCode;
 
-			this.focus(); // shows the trigger in case it is hidden
+			this.afterKeydown(); // shows the trigger in case it is hidden
 
 			if ( isShortcutKey( e ) ) {
 				if ( ime.isActive() ) {
@@ -240,7 +294,8 @@
 								this.selectIM( previousInputMethods[ 0 ] );
 							} else {
 								// Provide the default input method in this case.
-								firstInputmethod = $.ime.languages[ languageCode ].inputmethods[ 0 ];
+								firstInputmethod =
+									$.ime.languages[ languageCode ].inputmethods[ 0 ];
 								this.selectIM( firstInputmethod );
 							}
 						}
@@ -278,6 +333,10 @@
 					this.$imeSetting.outerWidth();
 			}
 
+			if ( this.options.selectorInside ) {
+				top -= this.$imeSetting.outerHeight();
+			}
+
 			// While determining whether to place the selector above or below the input box,
 			// take into account the value of scrollTop, to avoid the selector from always
 			// getting placed above the input box since window.height would be less than top
@@ -286,6 +345,9 @@
 
 			if ( verticalRoom < this.$imeSetting.outerHeight() ) {
 				top = elementPosition.top - this.$imeSetting.outerHeight();
+				if ( this.options.selectorInside ) {
+					top += this.$imeSetting.outerHeight();
+				}
 				menuTop = this.$menu.outerHeight() +
 					this.$imeSetting.outerHeight();
 
@@ -341,7 +403,7 @@
 		 * Select a language
 		 *
 		 * @param {string} languageCode
-		 * @return {string|bool} Selected input method id or false
+		 * @return {string|boolean} Selected input method id or false
 		 */
 		selectLanguage: function ( languageCode ) {
 			var ime, imePref, language;
@@ -389,8 +451,8 @@
 		 * @return {string} The autonym
 		 */
 		getAutonym: function ( languageCode ) {
-			return $.ime.languages[ languageCode ]
-				&& $.ime.languages[ languageCode ].autonym;
+			return $.ime.languages[ languageCode ] &&
+				$.ime.languages[ languageCode ].autonym;
 		},
 
 		/**
@@ -404,6 +466,8 @@
 
 		/**
 		 * Decide on initial language to select
+		 *
+		 * @return {string}
 		 */
 		decideLanguage: function () {
 			if ( $.ime.preferences.getLanguage() ) {
@@ -493,10 +557,10 @@
 
 			// Language list can be very long, so we use a container with
 			// overflow auto
-			$languageListWrapper = $( '<div class="ime-language-list-wrapper">' );
-			$languageList = $( '<ul class="ime-language-list">' );
+			$languageListWrapper = $( '<div>' ).addClass( 'ime-language-list-wrapper' );
+			$languageList = $( '<ul>' ).addClass( 'ime-language-list' );
 
-			if ( $.isFunction( this.options.languages ) ) {
+			if ( typeof this.options.languages === 'function' ) {
 				languageList = this.options.languages();
 			} else {
 				languageList = this.options.languages;
@@ -514,7 +578,7 @@
 					.attr( 'href', '#' )
 					.text( this.getAutonym( languageCode ) )
 					.addClass( 'selectable-row-item autonym' );
-				$language = $( '<li class="ime-lang selectable-row">' ).attr( 'lang', languageCode );
+				$language = $( '<li>' ).addClass( 'ime-lang selectable-row' ).attr( 'lang', languageCode );
 				$language.append( $languageItem );
 				$languageList.append( $language );
 			}
@@ -539,7 +603,7 @@
 
 			$imeList.empty();
 
-			$.each( language.inputmethods, function ( index, inputmethod ) {
+			language.inputmethods.forEach( function ( inputmethod ) {
 				var $imeItem, $inputMethod, source, name;
 
 				source = $.ime.sources[ inputmethod ];
@@ -556,10 +620,15 @@
 				$inputMethod = $( '<li>' )
 					.attr( 'data-ime-inputmethod', inputmethod )
 					.addClass( 'ime-im selectable-row' )
-					.append( '<span class="ime-im-check"></span>', $imeItem );
+					.append(
+						$( '<span>' ).addClass( 'ime-im-check' ),
+						$imeItem
+					);
 
 				if ( imeSelector.options.helpHandler ) {
-					$inputMethod.append( imeSelector.options.helpHandler.call( imeSelector, inputmethod ) );
+					$inputMethod.append(
+						imeSelector.options.helpHandler.call( imeSelector, inputmethod )
+					);
 				}
 
 				$imeList.append( $inputMethod );
@@ -572,7 +641,7 @@
 		 * @return {jQuery}
 		 */
 		helpLink: function () {
-			return $( '<div class="ime-help-link selectable-row">' )
+			return $( '<div>' ).addClass( 'ime-help-link selectable-row' )
 				.append( $( '<a>' ).text( 'Help' )
 					.addClass( 'selectable-row-item' )
 					.attr( {
@@ -610,36 +679,6 @@
 
 	$.fn.imeselector.Constructor = IMESelector;
 
-	function languageListTitle() {
-		return $( '<h3>' )
-			.addClass( 'ime-lang-title' )
-			.attr( 'data-i18n', 'jquery-ime-other-languages' )
-			.text( 'Other languages' );
-	}
-
-	function imeList() {
-		return $( '<ul>' ).addClass( 'ime-list' );
-	}
-
-	function imeListTitle() {
-		return $( '<h3>' ).addClass( 'ime-list-title autonym' );
-	}
-
-	function toggleMenuItem() {
-		return $( '<div class="ime-disable selectable-row">' ).append(
-			$( '<span>' )
-				.attr( {
-					'class': 'ime-disable-link',
-					'data-i18n': 'jquery-ime-disable-text'
-				} )
-				.addClass( 'ime-checked' )
-				.text( 'System input method' ),
-			$( '<span>' )
-				.addClass( 'ime-disable-shortcut' )
-				.text( 'CTRL+M' )
-		);
-	}
-
 	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
 		'<a class="ime-name imeselector-toggle" href="#"></a>' +
 		'<b class="ime-setting-caret imeselector-toggle"></b></div>';
@@ -647,17 +686,6 @@
 	MutationObserver = window.MutationObserver ||
 		window.WebKitMutationObserver ||
 		window.MozMutationObserver;
-
-	/**
-	 * Check whether a keypress event corresponds to the shortcut key
-	 *
-	 * @param {event} event
-	 * @return {boolean} true if the key is a shortcut key
-	 */
-	function isShortcutKey( event ) {
-		// 77 - The letter M, for Ctrl-M
-		return event.ctrlKey && !event.altKey && ( event.which === 77 );
-	}
 
 	function isDOMAttrModifiedSupported() {
 		var p = document.createElement( 'p' ),

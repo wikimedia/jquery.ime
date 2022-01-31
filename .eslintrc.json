@@ -1,0 +1,18 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery",
+		"wikimedia/jsduck"
+	],
+	"globals": {
+		"jQuery": "readonly",
+		"$": "off"
+	},
+	"rules": {
+		"camelcase": [ "error", { "allow": [ "patterns_x", "patterns_shift" ] } ],
+		"comma-spacing": "off",
+		"indent": "off",
+		"max-len": "off"
+	}
+}

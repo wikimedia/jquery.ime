@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var bgn_kbd = {
+	var bgnKbd = {
 		id: 'bgn-kbd',
 		name: 'روچ کپتین بلوچی',
 		description: 'Western Baluchi Keyboard Layout',
@@ -104,5 +104,5 @@
 		]
 	};
 
-	$.ime.register( bgn_kbd );
+	$.ime.register( bgnKbd );
 }( jQuery ) );

@@ -1,6 +1,6 @@
 {
   "name": "jquery.ime",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "jQuery based internationalization library",
   "homepage": "https://github.com/wikimedia/jquery.ime",
   "keywords": [
@@ -21,41 +21,43 @@
     "Srikanth Lakshmanan <srik.lak@gmail.com>"
   ],
   "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-contrib-csslint": "1.0.0",
-    "grunt-contrib-jshint": "1.0.0",
+    "eslint-config-wikimedia": "0.21.0",
+    "grunt": "1.4.1",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-concat": "2.0.0",
+    "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-cssmin": "1.0.1",
-    "grunt-contrib-qunit": "1.1.0",
-    "grunt-contrib-concat": "1.0.0",
-    "grunt-contrib-uglify": "1.0.1",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-cli": "1.1.0",
-    "grunt-jscs": "2.8.0",
-    "jquery": "1.11.3",
-    "qunitjs": "1.22.0"
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-qunit": "5.1.1",
+    "grunt-contrib-uglify": "5.0.1",
+    "grunt-eslint": "24.0.0",
+    "grunt-stylelint": "0.17.0",
+    "jquery": "^3.6.0",
+    "qunit": "2.17.2",
+    "stylelint": "14.0.1",
+    "stylelint-config-wikimedia": "0.11.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/wikimedia/jquery.ime.git"
   },
-  "bugs": {
-    "url" : "http://github.com/wikimedia/jquery.ime/issues"
-    },
-  "engine": {
-    "node": ">=0.6.x"
-  },
-  "licenses": [
-    {
-      "type": "GPL",
-      "url": "https://github.com/wikimedia/jquery.ime/blob/master/GPL-LICENSE"
-    },
-    {
-      "type": "MIT",
-      "url": "https://github.com/wikimedia/jquery.ime/blob/master/MIT-LICENSE"
-    }
+  "main": "dist/jquery.ime/jquery.ime.min.js",
+  "files": [
+    "dist/",
+    "GPL-LICENSE",
+    "MIT-LICENSE",
+    "README.md"
   ],
+  "bugs": {
+    "url": "https://github.com/wikimedia/jquery.ime/issues"
+  },
+  "engine": {
+    "npm": ">=7.14.0",
+    "node": ">=12"
+  },
+  "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
-     "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "prepare": "grunt build"
   }
 }

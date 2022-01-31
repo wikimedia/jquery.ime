@@ -1,14 +1,13 @@
 .imeselector {
 	position: absolute;
 	/* @embed */
-	background: url('../images/ime-active.png') no-repeat left center;
+	background: url( ../images/ime-active.png ) no-repeat left center;
 	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/ime-active.svg');
+	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );
 	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/ime-active.svg');
-	background-color: rgba(255,255,255,0.75);
+	background-image: linear-gradient( transparent, transparent ), url( ../images/ime-active.svg );
+	background-color: rgba( 255, 255, 255, 0.75 );
 	background-position: left 3px center;
-	background-position-x: 3px;
 	height: 15px;
 	font-size: small;
 	padding: 2px 2px 1px 20px;
@@ -23,7 +22,7 @@
 .imeselector:hover {
 	box-shadow: 0 1px 3px 0 #565656;
 	border-top: none;
-	background-color: rgba(255,255,255,0.85);
+	background-color: rgba( 255, 255, 255, 0.85 );
 }
 
 .imeselector a,
@@ -31,7 +30,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	outline: none;
-	color: #222222;
+	color: #222;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -43,12 +42,11 @@
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	border-top: 4px solid #565656;
-	content: "";
+	content: '';
 	display: inline-block;
 	height: 0;
 	vertical-align: top;
 	width: 0;
-
 }
 
 span.ime-disable-link {
@@ -86,6 +84,10 @@ span.ime-disable-shortcut {
 }
 
 .imeselector-menu {
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
 	position: absolute;
 	top: 14px;
 	right: 0;
@@ -95,15 +97,11 @@ span.ime-disable-shortcut {
 	margin-top: 13px;
 	min-width: 160px;
 	padding: 0;
-	border: 1px solid #888;
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
+	border: 1px solid #a2a9b1;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
+	-moz-box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
+	box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.2 );
 	text-align: left;
 }
 
@@ -120,10 +118,10 @@ span.ime-disable-shortcut {
 
 /* The triangle shaped callout */
 .imeselector-menu:before {
-	border-bottom: 7px solid #888;
+	border-bottom: 7px solid #a2a9b1;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
-	content: "";
+	content: '';
 	display: inline-block;
 	right: 9px;
 	position: absolute;
@@ -136,16 +134,15 @@ span.ime-disable-shortcut {
 }
 
 .imeselector-menu:after {
-	border-bottom: 6px solid #FFFFFF;
+	border-bottom: 6px solid #fff;
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	content: "";
+	content: '';
 	display: inline-block;
 	right: 10px;
 	position: absolute;
 	top: -6px;
 }
-
 
 .imeselector-menu.ime-right:after {
 	right: auto;
@@ -153,33 +150,31 @@ span.ime-disable-shortcut {
 }
 
 .imeselector-menu.ime-position-top:before {
-	border-bottom: 0 none;
-	border-top: 7px solid #888;
+	border-bottom: 0;
+	border-top: 7px solid #a2a9b1;
 	top: auto;
 	bottom: -7px;
 }
 
 .imeselector-menu.ime-position-top:after {
-	border-bottom: 0 none;
-	border-top: 6px solid #FFFFFF;
+	border-bottom: 0;
+	border-top: 6px solid #fff;
 	top: auto;
 	bottom: -6px;
 }
 
 .imeselector-menu .ime-checked {
 	/* @embed */
-	background: url(../images/tick.png) no-repeat left center;
+	background: url( ../images/tick.png ) no-repeat left 4px center;
 	/* @embed */
-	background-image: -webkit-linear-gradient(transparent, transparent), url('../images/tick.svg');
+	background-image: -webkit-linear-gradient( transparent, transparent ), url( ../images/tick.svg );
 	/* @embed */
-	background-image: linear-gradient(transparent, transparent), url('../images/tick.svg');
-	background-position: left 4px center;
-	background-position-x: 4px;
+	background-image: linear-gradient( transparent, transparent ), url( ../images/tick.svg );
 }
 
 .imeselector-menu .ime-help-link {
 	background-color: #f0f0f0;
-	border-radius: 0 0 5px 5px;
+	border-radius: 0 0 2px 2px;
 	border-top: 1px solid #ddd;
 	margin-top: 6px;
 	padding: 2px 0;
@@ -192,11 +187,11 @@ span.ime-disable-shortcut {
 }
 
 .imeselector-menu .selectable-row-item {
+	color: #333;
 	display: block;
 	padding-left: 20px;
 	padding-right: 20px;
 	font-weight: normal;
-	color: #333333;
 	outline: none;
 	white-space: nowrap;
 	position: relative;

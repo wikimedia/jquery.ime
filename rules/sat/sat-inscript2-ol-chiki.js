@@ -3,7 +3,7 @@
 
 	var satInScript2OlChiki = {
 		id: 'sat-inscript2-ol-chiki',
-		name: 'inscript2',
+		name: 'InScript2',
 		description: 'Enhanced Ol Chiki InScript keyboard for Santali language',
 		date: '2016-03-29',
 		author: 'Jnanaranjan Sahu',
@@ -51,7 +51,7 @@
 			[ 'c', 'ᱢ' ],
 			[ 'v', 'ᱱ' ],
 			[ 'B', 'ᱶ' ],
-			[ 'b', 'ᱶ' ],
+			[ 'b', 'ᱣ' ],
 			[ 'n', 'ᱞ' ],
 			[ 'm', 'ᱥ' ],
 			[ '\\,', '᱿' ],

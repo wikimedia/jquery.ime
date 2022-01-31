@@ -1,25 +1,24 @@
-'use strict';
-
-/* jshint node: true */
+/* eslint-env node */
 module.exports = function ( grunt ) {
+	'use strict';
+
+	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	grunt.loadNpmTasks( 'grunt-contrib-csslint' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
+
 	// Project configuration.
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		meta: {
-			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+'
-				+ '<%= grunt.template.today("yyyymmdd") %>\n'
-				+ '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>'
-				+ '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;'
-				+ ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
+			banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %>+' +
+				'<%= grunt.template.today("yyyymmdd") %>\n' +
+				'<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+				'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+				' License: <%= pkg.license %> */\n'
 		},
 		concat: {
 			options: {
@@ -45,8 +44,7 @@ module.exports = function ( grunt ) {
 						'src/jquery.ime.js',
 						'src/jquery.ime.selector.js',
 						'src/jquery.ime.preferences.js',
-						'src/jquery.ime.inputmethods.js',
-						'libs/rangy/rangy-core.js'
+						'src/jquery.ime.inputmethods.js'
 					]
 				}
 			}
@@ -63,48 +61,47 @@ module.exports = function ( grunt ) {
 			}
 		},
 		qunit: {
-			files: [ 'test/index.html' ]
-		},
-		jshint: {
-			options: {
-				jshintrc: true
-			},
-			all: [
-				'*.js',
-				'src/*.js',
-				'rules/**/*.js',
-				'test/**/*.js'
-			]
-		},
-		jscs: {
-			fix: {
+			all: {
 				options: {
-					fix: true
-				},
-				src: '<%= jshint.all %>'
-			},
-			main: {
-				src: '<%= jshint.all %>'
+					urls: [ 'http://localhost:9000/test/index.html' ]
+				}
 			}
 		},
-		csslint: {
+		eslint: {
+			options: {
+				cache: true,
+				fix: grunt.option( 'fix' )
+			},
 			all: [
-				'css/**/*.css'
+				'**/*.{js,json}',
+				'!dist/**',
+				'!libs/**',
+				'!node_modules/**'
 			]
 		},
-		watch: {
-			files: [
-				'.{csslintrc,jscsrc,jshintignore,jshintrc}',
-				'<%= jshint.all %>',
-				'<%= csslint.all %>'
-			],
-			tasks: 'lint'
+		stylelint: {
+			options: {
+				syntax: 'less'
+			},
+			src: [
+				'**/*.css',
+				'!dist/**',
+				'!libs/**',
+				'!node_modules/**'
+			]
+		},
+		connect: {
+			server: {
+				options: {
+					hostname: '*',
+					port: 9000
+				}
+			}
 		}
 	} );
 
-	// Default task.
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs:main', 'csslint' ] );
+	grunt.registerTask( 'lint', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'build', [ 'concat', 'uglify', 'copy' ] );
-	grunt.registerTask( 'test', [ 'build', 'qunit' ] );
+	grunt.registerTask( 'test', [ 'build', 'connect', 'qunit' ] );
 	grunt.registerTask( 'default', [ 'lint', 'test' ] );
 };

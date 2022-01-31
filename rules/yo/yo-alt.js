@@ -13,10 +13,10 @@
 		patterns_x: [
 			// Combining dot below
 			[ '\\.', '\u0323' ],
-			// Combining grave tone mark
-			[ '\\\\', '\u0340' ],
-			// Combining acute tone mark
-			[ '/', '\u0341' ]
+			// Combining grave accent
+			[ '\\\\', '\u0300' ],
+			// Combining acute accent
+			[ '/', '\u0301' ]
 		]
 	};
 

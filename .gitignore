@@ -5,3 +5,4 @@
 /nbproject/private/
 node_modules/
 dist/
+.eslintcache

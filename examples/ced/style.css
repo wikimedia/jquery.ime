@@ -1,14 +1,14 @@
-div#toolbar {
-	background-color: #F9F9F9;
-	border: 1px solid #CCCCCC;
+#toolbar {
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
 	border-radius: 4px 4px 0 0;
 	overflow: hidden;
 	padding: 2px;
 	position: relative;
 }
 
-div#ced {
-	border: 1px solid #CCCCCC;
+#ced {
+	border: 1px solid #ccc;
 	border-radius: 0 0 4px 4px;
 	height: 250px;
 	line-height: 1.5em;
@@ -23,10 +23,11 @@ select {
 	height: 25px;
 }
 
-.langSelector,.imeSelector {
+.langSelector,
+.imeSelector {
 	float: left;
 	display: block;
-	padding-right:5px;
+	padding-right: 5px;
 }
 
 #bold {

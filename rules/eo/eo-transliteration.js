@@ -1,6 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
+	var eoTransliteration;
+
 	function prepareRules() {
 		var rules = [],
 			chars;
@@ -20,6 +22,7 @@
 			u: 'ŭ'
 		};
 
+		// eslint-disable-next-line no-jquery/no-each-util
 		$.each( chars, function ( ascii, accented ) {
 			rules.push( [ ascii + '[Xx]', ascii, accented ] );
 			rules.push( [ accented + '([Xx])', '[Xx]', ascii + '$1' ] );
@@ -28,7 +31,7 @@
 		return rules;
 	}
 
-	var eoTransliteration = {
+	eoTransliteration = {
 		id: 'eo-transliteration',
 		name: 'Esperanto Transliteration',
 		description: 'Esperanto x-code transliteration',
