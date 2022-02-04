@@ -4,6 +4,8 @@ jQuery.IME
 jQuery.IME is a jQuery based input method editor library supporting more than
 220 input methods across more than 120 languages.
 
+![jQuery.IME Demo](./examples/images/demo.gif)
+
 These input methods are well tested. Initially the input methods were
 contributed by the Wikimedia community. By now many input methods have also
 been contributed by Red Hat.
