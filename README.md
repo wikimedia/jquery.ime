@@ -21,6 +21,16 @@ Quick start
 git clone https://github.com/wikimedia/jquery.ime.git
 ```
 
+Load the necessary scripts:
+```html
+<link href="../css/jquery.ime.css" rel="stylesheet" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+<script src="../src/jquery.ime.js"></script>
+<script src="../src/jquery.ime.selector.js"></script>
+<script src="../src/jquery.ime.preferences.js"></script>
+<script src="../src/jquery.ime.inputmethods.js"></script>
+```
+
 To add input method support to all editable elements:
 
 ```javascript
@@ -82,8 +92,7 @@ Plugin Options
 
 Browser extensions
 ------------------
-This input tool is also available as Firefox and Chrome extensions.
-* [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/)
+This input tool is also available as a Chrome extension:
 * [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh)
 
 For Developers
