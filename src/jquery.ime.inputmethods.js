@@ -562,6 +562,10 @@
 			name: 'अक्षरांतरण',
 			source: 'rules/mr/mr-transliteration.js'
 		},
+		'mul-bf': {
+			name: 'Burkina Faso tilde keyboard',
+			source: 'rules/mul-bf/mul-bf.js'
+		},
 		'mul-cm': {
 			name: 'General Alphabet of Cameroon Languages tilde keyboard',
 			source: 'rules/mul-cm/mul-cm.js'
@@ -1257,6 +1261,10 @@
 		mnw: {
 			autonym: 'ဘာသာ မန်',
 			inputmethods: [ 'mnw-simplified-anonta' ]
+		},
+		mos: {
+			autonym: 'moore',
+			inputmethods: [ 'mul-bf' ]
 		},
 		mr: {
 			autonym: 'मराठी',
