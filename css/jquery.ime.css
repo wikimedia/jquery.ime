@@ -21,7 +21,7 @@
 
 .imeselector:hover {
 	box-shadow: 0 1px 3px 0 #565656;
-	border-top: none;
+	border-top: 0;
 	background-color: rgba( 255, 255, 255, 0.85 );
 }
 
@@ -29,7 +29,7 @@
 .ime-disable {
 	cursor: pointer;
 	text-decoration: none;
-	outline: none;
+	outline: 0;
 	color: #222;
 	line-height: 1em;
 	padding-top: 4px;
@@ -192,7 +192,7 @@ span.ime-disable-shortcut {
 	padding-left: 20px;
 	padding-right: 20px;
 	font-weight: normal;
-	outline: none;
+	outline: 0;
 	white-space: nowrap;
 	position: relative;
 }
