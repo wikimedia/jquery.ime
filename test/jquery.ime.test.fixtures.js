@@ -4234,6 +4234,36 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Burkina Faso tilde keyboard test',
+		inputmethod: 'mul-bf',
+		tests: [
+			{ input: '~B', output: 'Ɓ', description: 'Burkina Faso tilde keyboard - Ɓ' },
+			{ input: '~b', output: 'ɓ', description: 'Burkina Faso tilde keyboard - ɓ' },
+			{ input: '~C', output: 'Ç', description: 'Burkina Faso tilde keyboard - Ç' },
+			{ input: '~c', output: 'ç', description: 'Burkina Faso tilde keyboard - ç' },
+			{ input: '~D', output: 'Ɗ', description: 'Burkina Faso tilde keyboard - Ɗ' },
+			{ input: '~d', output: 'ɗ', description: 'Burkina Faso tilde keyboard - ɗ' },
+			{ input: '~A', output: 'Ǝ', description: 'Burkina Faso tilde keyboard - Ǝ' },
+			{ input: '~a', output: 'ǝ', description: 'Burkina Faso tilde keyboard - ǝ' },
+			{ input: '~E', output: 'Ɛ', description: 'Burkina Faso tilde keyboard - Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Burkina Faso tilde keyboard - ɛ' },
+			{ input: '~I', output: 'Ɩ', description: 'Burkina Faso tilde keyboard - Ɩ' },
+			{ input: '~i', output: 'ɩ', description: 'Burkina Faso tilde keyboard - ɩ' },
+			{ input: '~N', output: 'Ŋ', description: 'Burkina Faso tilde keyboard - Ŋ' },
+			{ input: '~n', output: 'ŋ', description: 'Burkina Faso tilde keyboard - ŋ' },
+			{ input: '~O', output: 'Ɔ', description: 'Burkina Faso tilde keyboard - Ɔ' },
+			{ input: '~o', output: 'ɔ', description: 'Burkina Faso tilde keyboard - ɔ' },
+			{ input: 'u~:', output: 'ü', description: 'Burkina Faso tilde keyboard - ü' },
+			{ input: '~U', output: 'Ʋ', description: 'Burkina Faso tilde keyboard - Ʋ' },
+			{ input: '~u', output: 'ʋ', description: 'Burkina Faso tilde keyboard - ʋ' },
+			{ input: '~W', output: 'Ⱳ', description: 'Burkina Faso tilde keyboard - Ⱳ' },
+			{ input: '~w', output: 'ⱳ', description: 'Burkina Faso tilde keyboard - ⱳ' },
+			{ input: '~Y', output: 'Ƴ', description: 'Burkina Faso tilde keyboard - Ƴ' },
+			{ input: '~y', output: 'ƴ', description: 'Burkina Faso tilde keyboard - ƴ' },
+			{ input: 'a~{', output: 'ã', description: 'Burkina Faso tilde keyboard - ã' }
+		]
+	},
+	{
 		description: 'General Alphabet of Cameroon Languages tilde keyboard test',
 		inputmethod: 'mul-cm',
 		tests: [
