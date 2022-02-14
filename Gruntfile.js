@@ -80,9 +80,6 @@ module.exports = function ( grunt ) {
 			]
 		},
 		stylelint: {
-			options: {
-				syntax: 'less'
-			},
 			src: [
 				'**/*.css',
 				'!dist/**',
