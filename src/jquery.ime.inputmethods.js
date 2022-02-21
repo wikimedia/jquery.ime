@@ -1058,6 +1058,10 @@
 			autonym: 'فارسی',
 			inputmethods: [ 'fa-kbd' ]
 		},
+		fat: {
+			autonym: 'mfantse',
+			inputmethods: [ 'ak-qx', 'ak-tilde' ]
+		},
 		ff: {
 			autonym: 'Fulfulde',
 			inputmethods: [ 'ff-alt', 'ff-tilde' ]
