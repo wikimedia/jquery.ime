@@ -994,6 +994,10 @@
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
+		bum: {
+			autonym: 'bulu',
+			inputmethods: [ 'mul-cm' ]
+		},
 		byn: {
 			autonym: 'ብሊን',
 			inputmethods: [ 'byn-geezim' ]
