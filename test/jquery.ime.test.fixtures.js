@@ -3597,7 +3597,7 @@ var palochkaVariants = {
 		tests: [
 			{ input: '1234567890', output: '۱۲۳۴۵۶۷۸۹۰', description: 'Kashmiri kbd digits' },
 			{ input: 'a~', output: 'آ', description: 'Kashmiri kbd a~ -> alef madda' },
-			{ input: '!@#$-+=/%^&*', output: '!@#$-+=/%^&*', description: 'Kashmiri kbd unchanging symbols' },
+			{ input: '!@#$-+=/%^&*:', output: '!@#$-+=/%^&*:', description: 'Kashmiri kbd unchanging symbols' },
 			{ input: '()', output: ')(', description: 'Kashmiri kbd parentheses' },
 			{ input: '[]', output: '][', description: 'Kashmiri kbd square brackets' },
 			{ input: 'S_', output: 'شّ', description: 'Kashmiri kbd shadda' },
