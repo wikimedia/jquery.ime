@@ -91,7 +91,6 @@ span.ime-disable-shortcut {
 	position: absolute;
 	top: 14px;
 	right: 0;
-	z-index: 1000;
 	display: none;
 	float: left;
 	margin-top: 13px;
@@ -206,7 +205,7 @@ span.ime-disable-shortcut {
 }
 
 .ime-open {
-	*z-index: 1000;
+	z-index: 1000;
 	display: block;
 }
 
