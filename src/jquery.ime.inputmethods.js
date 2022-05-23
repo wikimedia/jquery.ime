@@ -208,6 +208,10 @@
 			name: 'Ewe Tilde',
 			source: 'rules/ee/ee-tilde.js'
 		},
+		'efi-tilde': {
+			name: 'Efik - tilde',
+			source: 'rules/efi/efi-tilde.js'
+		},
 		'el-kbd': {
 			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
@@ -1049,6 +1053,10 @@
 		ee: {
 			autonym: 'Èʋegbe',
 			inputmethods: [ 'ee-tilde' ]
+		},
+		efi: {
+			autonym: 'efịk',
+			inputmethods: [ 'efi-tilde' ]
 		},
 		el: {
 			autonym: 'Ελληνικά',
