@@ -1329,6 +1329,24 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Efik tilde test',
+		inputmethod: 'efi-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Efik tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Efik tilde ~e -> ẹ' },
+			{ input: '~I', output: 'Ị', description: 'Efik tilde ~I -> Ị' },
+			{ input: '~i', output: 'ị', description: 'Efik tilde ~i -> ị' },
+			{ input: '~N', output: 'N̄', description: 'Efik tilde ~N -> N̄' },
+			{ input: '~n', output: 'n̄', description: 'Efik tilde ~n -> n̄' },
+			{ input: '~O', output: 'Ọ', description: 'Efik tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Efik tilde ~o -> ọ' },
+			{ input: '~U', output: 'Ụ', description: 'Efik tilde ~U -> Ụ' },
+			{ input: '~u', output: 'ụ', description: 'Efik tilde ~u -> ụ' },
+			{ input: 'E~\\', output: 'È', description: 'Efik tilde E~\\ -> È' },
+			{ input: 'i~/', output: 'í', description: 'Efik tilde i~/ -> í' }
+		]
+	},
+	{
 		description: 'Modern Greek Std Kbd test',
 		inputmethod: 'el-kbd',
 		tests: [
