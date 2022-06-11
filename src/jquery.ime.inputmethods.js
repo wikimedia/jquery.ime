@@ -440,6 +440,10 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'kr-tilde': {
+			name: 'Kanuri tilde',
+			source: 'rules/kr/kr-tilde.js'
+		},
 		'ky-cyrl-alt': {
 			name: 'Кыргыз Alt',
 			source: 'rules/ky/ky-cyrl-alt.js'
@@ -1205,6 +1209,10 @@
 		kn: {
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
+		},
+		kr: {
+			autonym: 'kanuri',
+			inputmethods: [ 'kr-tilde' ]
 		},
 		ks: {
 			autonym: 'कॉशुर / کٲشُر',
