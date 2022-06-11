@@ -3,7 +3,7 @@
 
 	var mulBf = {
 		id: 'mul-bf',
-		name: 'mul-bf',
+		name: 'Burkina Faso tilde',
 		description: 'Burkina Faso tilde keyboard',
 		date: '2022-02-14',
 		URL: 'https://github.com/wikimedia/jquery.ime',
