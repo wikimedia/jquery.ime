@@ -749,6 +749,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bura tilde test',
+		inputmethod: 'bwr-tilde',
+		tests: [
+			{ input: '~B~D~E~b~d~e', output: 'ƁƊƏɓɗə', description: 'Bura tilde ƁƊƏɓɗə' }
+		]
+	},
+	{
 		description: 'Blin GeezIM test',
 		inputmethod: 'byn-geezim',
 		tests: [
