@@ -3,7 +3,7 @@
 
 	var mulCm = {
 		id: 'mul-cm',
-		name: 'mul-cm',
+		name: 'Cameroon Languages tilde',
 		description: 'General Alphabet of Cameroon Languages tilde keyboard',
 		date: '2022-02-07',
 		URL: 'https://github.com/wikimedia/jquery.ime',
