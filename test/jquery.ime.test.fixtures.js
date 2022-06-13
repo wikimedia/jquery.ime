@@ -3576,6 +3576,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kanuri tilde test',
+		inputmethod: 'kr-tilde',
+		tests: [
+			{ input: '~E', output: 'Ǝ', description: 'Kanuri tilde ~E -> Ǝ' },
+			{ input: '~e', output: 'ǝ', description: 'Kanuri tilde ~e -> ǝ' },
+			{ input: '~R', output: 'Ɍ', description: 'Kanuri tilde ~I -> Ɍ' },
+			{ input: '~r', output: 'ɍ', description: 'Kanuri tilde ~i -> Ɍ' },
+			{ input: 'E~\\', output: 'È', description: 'Kanuri tilde E~\\ -> È' },
+			{ input: 'u~^', output: 'û', description: 'Kanuri tilde U~^ -> û' },
+			{ input: 'i~/', output: 'í', description: 'Kanuri tilde i~/ -> í' }
+		]
+	},
+	{
 		description: 'Kashmiri InScript test',
 		inputmethod: 'ks-inscript',
 		tests: [
