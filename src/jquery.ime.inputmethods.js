@@ -144,6 +144,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/brx/brx-inscript2.js'
 		},
+		'bwr-tilde': {
+			name: 'Bura ',
+			source: 'rules/bwr/bwr-tilde.js'
+		},
 		'byn-geezim': {
 			name: 'ብሊን',
 			source: 'rules/byn/byn-geezim.js'
@@ -1001,6 +1005,10 @@
 		bum: {
 			autonym: 'bulu',
 			inputmethods: [ 'mul-cm' ]
+		},
+		bwr: {
+			autonym: 'bura',
+			inputmethods: [ 'bwr-tilde' ]
 		},
 		byn: {
 			autonym: 'ብሊን',
