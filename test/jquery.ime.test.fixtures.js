@@ -1329,6 +1329,7 @@ var palochkaVariants = {
 			{ input: '~V', output: 'Ʋ', description: 'Ewe ~V -> Ʋ' },
 			{ input: '~v', output: 'ʋ', description: 'Ewe ~v -> ʋ' },
 			{ input: '~~~~', output: '~~~~', description: 'Ewe ~~~~ -> ~~~~' },
+			{ input: '~e~-', output: 'ɛ̄', description: 'Ewe ~e~- -> ɛ̄' },
 			{ input: 'mi~/', output: 'mí', description: 'Ewe mi~/ -> mí' },
 			{ input: 'wo~\\', output: 'wò', description: 'Ewe wo~\\ -> wò' },
 			{ input: '~E~{', output: 'Ɛ̃', description: 'Ewe ~E~{ -> Ɛ̃' },
