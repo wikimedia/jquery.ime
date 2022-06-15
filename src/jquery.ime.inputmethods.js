@@ -145,7 +145,7 @@
 			source: 'rules/brx/brx-inscript2.js'
 		},
 		'bwr-tilde': {
-			name: 'Bura ',
+			name: 'Bura tilde',
 			source: 'rules/bwr/bwr-tilde.js'
 		},
 		'byn-geezim': {
