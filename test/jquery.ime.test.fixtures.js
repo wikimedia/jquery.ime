@@ -4604,6 +4604,15 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Chichewa / Nyanja tilde test',
+		inputmethod: 'ny-tilde',
+		tests: [
+			{ input: 'Mala~wi', output: 'Malaŵi', description: 'Chichewa / Nyanja tilde test Malaŵi' },
+			{ input: '~Wanthu', output: 'Ŵanthu', description: 'Chichewa / Nyanja tilde test Ŵanthu' },
+			{ input: 'galu~/', output: 'galú', description: 'Chichewa / Nyanja tilde test galú' }
+		]
+	},
+	{
 		description: 'Oriya InScript test',
 		inputmethod: 'or-inscript',
 		tests: [
@@ -5534,6 +5543,15 @@ var palochkaVariants = {
 			{ input: '..', output: '.', description: 'Tigre .. -> .' },
 			{ input: '.-', output: '፨', description: 'Tigre .- -> ፨' },
 			{ input: ';;', output: '።', description: 'Tigre ;; -> ።' }
+		]
+	},
+	{
+		description: 'ChiTumbuka tilde test',
+		inputmethod: 'tum-tilde',
+		tests: [
+			{ input: 'Mala~wi', output: 'Malaŵi', description: 'ChiTumbuka tilde test Malaŵi' },
+			{ input: '~Wanthu', output: 'Ŵanthu', description: 'ChiTumbuka tilde test Ŵanthu' },
+			{ input: 'kulimira~^so', output: 'kulimirâso', description: 'ChiTumbuka tilde test kulimirâso' }
 		]
 	},
 	{
