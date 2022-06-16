@@ -642,6 +642,10 @@
 			name: 'Thok Naath tilde',
 			source: 'rules/nus/nus-tilde.js'
 		},
+		'ny-tilde': {
+			name: 'Chichewa / Nyanja tilde',
+			source: 'rules/ny/ny-tilde.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -849,6 +853,10 @@
 		'tig-geezim': {
 			name: 'ትግረ',
 			source: 'rules/tig/tig-geezim.js'
+		},
+		'tum-tilde': {
+			name: 'ChiTumbuka tilde',
+			source: 'rules/tum/tum-tilde.js'
 		},
 		'udm-alt': {
 			name: 'Удмурт ALT',
@@ -1342,6 +1350,10 @@
 			autonym: 'Thok Naath',
 			inputmethods: [ 'nus-tilde' ]
 		},
+		ny: {
+			autonym: 'Chichewa',
+			inputmethods: [ 'ny-tilde' ]
+		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',
 			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-OdiScript' ]
@@ -1453,6 +1465,10 @@
 		tkr: {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		tum: {
+			autonym: 'ChiTumbuka',
+			inputmethods: [ 'tum-tilde' ]
 		},
 		tw: {
 			autonym: 'Twi',
