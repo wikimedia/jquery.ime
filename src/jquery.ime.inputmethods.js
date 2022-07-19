@@ -854,6 +854,10 @@
 			name: 'ትግረ',
 			source: 'rules/tig/tig-geezim.js'
 		},
+		'tn-tilde': {
+			name: 'Setswana tilde',
+			source: 'rules/tn/tn-tilde.js'
+		},
 		'tum-tilde': {
 			name: 'ChiTumbuka tilde',
 			source: 'rules/tum/tum-tilde.js'
@@ -1465,6 +1469,10 @@
 		tkr: {
 			autonym: 'цӀаӀхна миз',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		tn: {
+			autonym: 'Setswana',
+			inputmethods: [ 'tn-tilde' ]
 		},
 		tum: {
 			autonym: 'ChiTumbuka',
