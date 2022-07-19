@@ -5546,6 +5546,18 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Setswana tilde test',
+		inputmethod: 'tn-tilde',
+		tests: [
+			{ input: '~S', output: 'Š', description: 'Setswana tilde ~S' },
+			{ input: '~s', output: 'š', description: 'Setswana tilde ~s' },
+			{ input: '~E', output: 'Ê', description: 'Setswana tilde ~E' },
+			{ input: '~e', output: 'ê', description: 'Setswana tilde ~e' },
+			{ input: '~O', output: 'Ô', description: 'Setswana tilde ~O' },
+			{ input: '~o', output: 'ô', description: 'Setswana tilde ~o' }
+		]
+	},
+	{
 		description: 'ChiTumbuka tilde test',
 		inputmethod: 'tum-tilde',
 		tests: [
