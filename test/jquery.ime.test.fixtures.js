@@ -2583,6 +2583,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Esan Awain tilde test',
+		inputmethod: 'ish-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Esan Awain tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Esan Awain tilde ~e -> ẹ' },
+			{ input: '~O', output: 'Ọ', description: 'Esan Awain tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Esan Awain tilde ~o -> ọ' }
+		]
+	},
+	{
 		description: 'Javanese transliteration test',
 		inputmethod: 'jv-transliteration',
 		tests: [
