@@ -384,6 +384,10 @@
 			name: 'Venjuleg eyðublöð',
 			source: 'rules/is/is-normforms.js'
 		},
+		'ish-tilde': {
+			name: 'Esan Awain tilde',
+			source: 'rules/ish/ish-tilde.js'
+		},
 		'jv-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/jv/jv-transliteration.js'
@@ -1177,6 +1181,10 @@
 		is: {
 			autonym: 'Íslenska',
 			inputmethods: [ 'is-normforms' ]
+		},
+		ish: {
+			autonym: 'awain',
+			inputmethods: [ 'ish-tilde' ]
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ',
