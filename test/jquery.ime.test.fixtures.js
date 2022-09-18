@@ -4372,6 +4372,13 @@ var palochkaVariants = {
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
 		]
 	},
+		{
+		description: 'Shan Keyboard Test',
+		inputmethod: 'my-shn',
+		tests: [
+			{ input: 'qmrf:wlnf:', output: 'ၸၢမ်းတူၺ်း', description: 'ၸၢမ်းတူၺ်းလွၵ်းမိုဝ်းတႆးၶႃႈ' }
+		]
+	},
 	{
 		description: 'Myanmar xkb test',
 		inputmethod: 'my-xkb',
