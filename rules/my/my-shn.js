@@ -11,9 +11,8 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-
 			//Basic Cosonants
-            [ 'u', '', 'ၵ' ],
+            		[ 'u', '', 'ၵ' ],
 			[ 'c', '', 'ၶ' ],
 			[ 'C', '', 'ꧠ' ],
 			[ 'i', '', 'င' ],
@@ -45,7 +44,7 @@
 			[ 't', '', 'ဢ' ],
 			[ 'I', '', 'ရ' ],
 			[ 'O', '', 'သ' ],
-            // Signs
+            		// Signs
 			[ 'm', '', 'ၢ' ],
 			[ 'g', '', 'ွ' ],
 			[ 'd', '', 'ိ' ],
@@ -60,10 +59,10 @@
 			[ 'f', '','်' ],
 			[ 'F', '','ႂ်' ],
 			[ 'M', '', 'ႃ' ],
-            //Punctuation
+            		//Punctuation
 			[ '\\>', '', '။' ],
 			[ '\\<', '', '၊' ],
-            //Signs 
+            		//Signs 
 			[ 'A', '', 'ဵ' ],
 			[ 'K', '', 'ꧦ' ],
 			[ 'L', '', 'ႊ' ],
@@ -82,7 +81,7 @@
 			[ '\\[','', '[' ],
 			[ '\\}', '', '}' ],
 			[ '\\\\', '', '\'' ],
-            //Shan Digits As Jquery IME doesn't support Alt+Key, Shift+ALt+Key, Tide Key+Key will use Shan Digit only for now.
+            		//Shan Digits As Jquery IME doesn't support Alt+Key, Shift+ALt+Key, Tide Key+Key will use Shan Digit only for now.
 			[ '0', '', '0' ],
 			[ '1', '', '1' ],
 			[ '2', '', '2' ],
