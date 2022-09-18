@@ -3,7 +3,7 @@
 
 	var shn = {
 		id: 'my-shn',
-		name: 'လွၵ်းမိုဝ်းတႆး',
+		name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
 		description: 'Shan Standard Keyboard per SIIT',
 		date: '2022-09-15',
 		URL: 'http://github.com/wikimedia/jquery.ime',
