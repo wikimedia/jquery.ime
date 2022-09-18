@@ -81,7 +81,7 @@
 			[ '\\[','', '[' ],
 			[ '\\}', '', '}' ],
 			[ '\\\\', '', '\'' ],
-            		//Shan Digits As Jquery IME doesn't support Alt+Key, Shift+ALt+Key, Tide Key+Key will use Shan Digit only for now.
+            		//Shan Digits As Jquery IME doesn't support Alt+Key, Shift+ALt+Key, Tide Key+Key will use Roman Digit only for now.
 			[ '0', '', '0' ],
 			[ '1', '', '1' ],
 			[ '2', '', '2' ],
