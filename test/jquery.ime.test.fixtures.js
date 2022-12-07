@@ -3984,6 +3984,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Nzema tilde test',
+		inputmethod: 'nzi-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Nzema tilde ~E' },
+			{ input: '~e', output: 'ɛ', description: 'Nzema tilde ~e' },
+			{ input: '~O', output: 'Ɔ', description: 'Nzema tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Nzema tilde ~o' }
+		]
+	},
+	{
 		description: 'Madurese tilde test',
 		inputmethod: 'mad-tilde',
 		tests: [
