@@ -718,6 +718,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Berom tilde test',
+		inputmethod: 'bom-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Berom tilde ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Berom tilde ~e -> ɛ' },
+			{ input: '~O', output: 'Ɔ', description: 'Berom tilde ~O -> Ɔ' },
+			{ input: '~o~\\', output: 'ɔ̀', description: 'Berom tilde ~o~\\ -> ɔ̀' },
+			{ input: '~e~/', output: 'ɛ́', description: 'Berom tilde ~e~/ -> ɛ́' },
+			{ input: 'o~^', output: 'ô', description: 'Berom tilde o~^ -> ô' },
+			{ input: 'i~v', output: 'ǐ', description: 'Berom tilde i~v -> ǐ' }
+		]
+	},
+	{
 		description: 'Bodo InScript 2 test',
 		inputmethod: 'brx-inscript2',
 		tests: [
