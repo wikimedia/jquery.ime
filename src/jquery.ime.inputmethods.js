@@ -92,6 +92,10 @@
 			name: 'Tifinagh',
 			source: 'rules/ber/ber-tfng.js'
 		},
+		'bfa-tilde': {
+			name: 'Bari Tilde',
+			source: 'rules/bfa/bfa-tilde.js'
+		},
 		'bgn-kbd': {
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
@@ -989,6 +993,10 @@
 		'be-tarask': {
 			autonym: 'беларуская (тарашкевіца)',
 			inputmethods: [ 'be-transliteration', 'be-latin' ]
+		},
+		bfa: {
+			autonym: 'Bari',
+			inputmethods: [ 'bfa-tilde' ]
 		},
 		bh: {
 			autonym: 'भोजपुरी',

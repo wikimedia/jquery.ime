@@ -405,6 +405,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bari tilde test',
+		inputmethod: 'bfa-tilde',
+		tests: [
+			{ input: '~N~n~O~o', output: 'ŊŋÖö', description: 'Bari tilde - ŊÖŋö' }
+		]
+	},
+	{
 		description: 'Western Baluchi Keyboard test',
 		inputmethod: 'bgn-kbd',
 		tests: [
