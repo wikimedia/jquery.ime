@@ -21,21 +21,21 @@
     "Srikanth Lakshmanan <srik.lak@gmail.com>"
   ],
   "devDependencies": {
-    "eslint-config-wikimedia": "0.21.0",
-    "grunt": "1.5.3",
+    "eslint-config-wikimedia": "0.22.1",
+    "grunt": "^1.5.3",
     "grunt-cli": "^1.4.3",
-    "grunt-contrib-concat": "2.0.0",
+    "grunt-contrib-concat": "^2.0.0",
     "grunt-contrib-connect": "^3.0.0",
-    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-qunit": "5.1.1",
-    "grunt-contrib-uglify": "5.0.1",
-    "grunt-eslint": "24.0.0",
-    "grunt-stylelint": "0.17.0",
+    "grunt-contrib-qunit": "^6.2.1",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-eslint": "^24.0.0",
+    "grunt-stylelint": "^0.17.0",
     "jquery": "^3.6.0",
-    "qunit": "2.17.2",
-    "stylelint": "14.5.0",
-    "stylelint-config-wikimedia": "0.12.0"
+    "qunit": "^2.17.2",
+    "stylelint": "^14.5.0",
+    "stylelint-config-wikimedia": "^0.12.0"
   },
   "repository": {
     "type": "git",
