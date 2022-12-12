@@ -472,6 +472,10 @@
 			name: 'Kurdî-tr',
 			source: 'rules/ku/ku-tr.js'
 		},
+		'kus-tilde': {
+			name: 'Kusaal tilde',
+			source: 'rules/kus/kus-tilde.js'
+		},
 		'lg-tilde': {
 			name: 'Luganda tilde',
 			source: 'rules/lg/lg-tilde.js'
@@ -1253,6 +1257,10 @@
 		ku: {
 			autonym: 'Kurdî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
+		},
+		kus: {
+			autonym: 'Kʋsaal',
+			inputmethods: [ 'kus-tilde' ]
 		},
 		lbe: {
 			autonym: 'лакку',
