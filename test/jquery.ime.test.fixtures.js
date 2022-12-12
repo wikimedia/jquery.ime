@@ -405,6 +405,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bari tilde test',
+		inputmethod: 'bfa-tilde',
+		tests: [
+			{ input: '~N~n~O~o', output: 'ŊŋÖö', description: 'Bari tilde - ŊÖŋö' }
+		]
+	},
+	{
 		description: 'Western Baluchi Keyboard test',
 		inputmethod: 'bgn-kbd',
 		tests: [
@@ -3989,6 +3996,16 @@ var palochkaVariants = {
 			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip b̓' },
 			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip n̓' },
 			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
+		]
+	},
+	{
+		description: 'Nzema tilde test',
+		inputmethod: 'nzi-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Nzema tilde ~E' },
+			{ input: '~e', output: 'ɛ', description: 'Nzema tilde ~e' },
+			{ input: '~O', output: 'Ɔ', description: 'Nzema tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Nzema tilde ~o' }
 		]
 	},
 	{
