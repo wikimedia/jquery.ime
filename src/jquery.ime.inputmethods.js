@@ -140,6 +140,10 @@
 			name: 'Tibetan Sambhota',
 			source: 'rules/bo/bo-sambhota.js'
 		},
+		'bom-tilde': {
+			name: 'Bèrom Tilde',
+			source: 'rules/bom/bom-tilde.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -654,6 +658,10 @@
 			name: 'Chichewa / Nyanja tilde',
 			source: 'rules/ny/ny-tilde.js'
 		},
+		'nzi-tilde': {
+			name: 'Nzema tilde',
+			source: 'rules/nzi/nzi-tilde.js'
+		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -1026,6 +1034,10 @@
 			autonym: 'བོད་ཡིག།',
 			inputmethods: [ 'bo-ewts', 'bo-sambhota' ]
 		},
+		bom: {
+			autonym: 'bèrom',
+			inputmethods: [ 'bom-tilde' ]
+		},
 		brx: {
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
@@ -1373,6 +1385,10 @@
 		ny: {
 			autonym: 'Chichewa',
 			inputmethods: [ 'ny-tilde' ]
+		},
+		nzi: {
+			autonym: 'Nzema',
+			inputmethods: [ 'nzi-tilde' ]
 		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',

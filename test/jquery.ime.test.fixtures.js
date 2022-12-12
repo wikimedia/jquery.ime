@@ -725,6 +725,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Berom tilde test',
+		inputmethod: 'bom-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Berom tilde ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Berom tilde ~e -> ɛ' },
+			{ input: '~O', output: 'Ɔ', description: 'Berom tilde ~O -> Ɔ' },
+			{ input: '~o~\\', output: 'ɔ̀', description: 'Berom tilde ~o~\\ -> ɔ̀' },
+			{ input: '~e~/', output: 'ɛ́', description: 'Berom tilde ~e~/ -> ɛ́' },
+			{ input: 'o~^', output: 'ô', description: 'Berom tilde o~^ -> ô' },
+			{ input: 'i~v', output: 'ǐ', description: 'Berom tilde i~v -> ǐ' }
+		]
+	},
+	{
 		description: 'Bodo InScript 2 test',
 		inputmethod: 'brx-inscript2',
 		tests: [
@@ -3975,6 +3988,16 @@ var palochkaVariants = {
 			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip b̓' },
 			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip n̓' },
 			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
+		]
+	},
+	{
+		description: 'Nzema tilde test',
+		inputmethod: 'nzi-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Nzema tilde ~E' },
+			{ input: '~e', output: 'ɛ', description: 'Nzema tilde ~e' },
+			{ input: '~O', output: 'Ɔ', description: 'Nzema tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Nzema tilde ~o' }
 		]
 	},
 	{
