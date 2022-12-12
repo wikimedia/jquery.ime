@@ -3775,6 +3775,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kusaal tilde test',
+		inputmethod: 'kus-tilde',
+		tests: [
+			{ input: '~N~n~E~e~I~i~O~o~U~u', output: 'ŊŋƐɛƖɩƆɔƲʋ', description: 'Kusaal tilde ŊŋƐɛƖɩƆɔƲʋ' },
+			{ input: 'a~\\e~/i~-o~{', output: 'àéīõ', description: 'Kusaal tilde àéīõ' }
+		]
+	},
+	{
 		description: 'Kyrgyz Cyrillic test',
 		inputmethod: 'ky-cyrl-alt',
 		tests: [
