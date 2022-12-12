@@ -136,6 +136,10 @@
 			name: 'Tibetan Sambhota',
 			source: 'rules/bo/bo-sambhota.js'
 		},
+		'bom-tilde': {
+			name: 'Bèrom Tilde',
+			source: 'rules/bom/bom-tilde.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -1021,6 +1025,10 @@
 		bo: {
 			autonym: 'བོད་ཡིག།',
 			inputmethods: [ 'bo-ewts', 'bo-sambhota' ]
+		},
+		bom: {
+			autonym: 'bèrom',
+			inputmethods: [ 'bom-tilde' ]
 		},
 		brx: {
 			autonym: 'बोड़ो',
