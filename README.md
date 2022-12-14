@@ -95,7 +95,8 @@ Plugin Options
 Browser extensions
 ------------------
 This input tool is also available as a Chrome extension:
-* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh)
+* [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/) | [source code](https://gitlab.com/kskarthik/wikimedia-input-tools)
+* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh) | (Unmaintained)  | [source code](https://github.com/pravee-n/jquery.ime-chrome-extension)
 
 For Developers
 --------------
