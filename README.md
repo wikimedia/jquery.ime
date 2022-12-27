@@ -68,16 +68,17 @@ Running
 
 -If you have python installed, run
 -```bash
- python -m SimpleHTTPServer
+ python3 -m http.server
 -```
 
-Alternatively, many programming languages provide one liner commands to start a simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255).
-
-
+Alternatively, many programming languages provide one liner commands to start a
+simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255)
 and, you can access examples from
+
 ```bash
 http://localhost:8000/examples/index.html
 ```
+
 Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like Apache or Nginx, you already know how to put the code in a
 webserver.
