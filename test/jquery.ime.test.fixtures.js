@@ -814,7 +814,16 @@ var palochkaVariants = {
 			{ input: "na'he", output: "ᎾᎮ", description: "Cherokee na'he -> ᎾᎮ"},
 			{ input: "nas'iya", output: "ᎾᏍᎢᏯ", description: ""},
 			{ input: "nasiya", output: "ᎾᏏᏯ", description: ""},
-			//{ input: "", output: "", description: "Cherokee "},
+			{ input: "tsi", output: "Ꮵ", description: "Cherokee tsi -> Ꮵ"},
+			{ input: "tla", output: "Ꮭ", description: "Cherokee tla -> Ꮭ"},
+			{ input: "dla", output: "Ꮬ", description: "Cherokee dla -> Ꮬ"},
+			{ input: "itsalis'anedi", output: "ᎢᏣᎵᏍᎠᏁᏗ", description: "Cherokee itsalis'anedi -> ᎢᏣᎵᏍᎠᏁᏗ"},
+			{ input: "uligiyus'anvne", output: "ᎤᎵᎩᏳᏍᎠᏅᏁ", description: "Cherokee uligiyus'anvne -> ᎤᎵᎩᏳᏍᎠᏅᏁ"},
+			{ input: "uniyes'iyi", output: "ᎤᏂᏰᏍᎢᏱ", description: "Cherokee uniyesiyi -> ᎾᏍᎢᏯ "},
+			{ input: "aseno", output: "ᎠᏎᏃ", description: "Cherokee "},
+			{ input: "as'eno", output: "ᎠᏍᎡᏃ", description: "Cherokee "},
+			{ input: "gesvi", output: "ᎨᏒᎢ", description: "Cherokee "},
+			{ input: "ges'vi", output: "ᎨᏍᎥᎢ", description: "Cherokee "}
 		]
 	},
 	{
