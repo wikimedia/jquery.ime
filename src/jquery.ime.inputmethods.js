@@ -160,6 +160,10 @@
 			name: 'ብሊን',
 			source: 'rules/byn/byn-geezim.js'
 		},
+		'chr': {
+			name: 'Cherokee Transliteration',
+			source: 'rules/chr/chr.js'
+		},
 		'ckb-transliteration-arkbd': {
 			name: 'باشووری',
 			source: 'rules/ckb/ckb-transliteration-arkbd.js'
@@ -1061,6 +1065,10 @@
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		chr: {
+			autonym: 'ᏣᎳᎩ',
+			inputmethods: [ 'chr' ]
 		},
 		ckb: {
 			autonym: 'کوردی',
