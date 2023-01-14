@@ -801,6 +801,23 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Cherokee transliteration test',
+		inputmethod: 'chr',
+		tests: [
+			{ input: "nah'na", output: "ᏀᎾ", description: "Cherokee nah'na -> ᏀᎾ"},
+			{ input: "na'hna", output: "ᎾᎿ", description: "Cherokee na'hna -> ᎾᎿ"},
+			{ input: "naha", output: "ᏀᎠ", description: "Cherokee naha -> ᏀᎠ"},
+			{ input: "nah'a", output: "ᏀᎠ", description: "Cherokee nah'a -> ᏀᎠ"},
+			{ input: "na'ha", output: "ᎾᎭ", description: "Cherokee na'ha -> ᎾᎭ"},
+			{ input: "nahe", output: "ᏀᎡ", description: "Cherokee nahe -> ᏀᎡ"},
+			{ input: "nah'e", output: "ᏀᎡ", description: "Cherokee nah'e -> ᏀᎡ"},
+			{ input: "na'he", output: "ᎾᎮ", description: "Cherokee na'he -> ᎾᎮ"},
+			{ input: "nas'iya", output: "ᎾᏍᎢᏯ", description: ""},
+			{ input: "nasiya", output: "ᎾᏏᏯ", description: ""},
+			//{ input: "", output: "", description: "Cherokee "},
+		]
+	},
+	{
 		description: 'Central Kurdish keyboard based on Arabic keyboard test',
 		inputmethod: 'ckb-transliteration-arkbd',
 		tests: [
