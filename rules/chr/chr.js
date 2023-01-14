@@ -10,6 +10,7 @@
 		author: 'Anne Drew Hu',
 		license: 'GPLv3',
 		version: '1.0',
+        maxKeyLength: 3,
 		patterns: [
 			
             [ 'ga', 'Ꭶ'], // Ꭶ 	ga 	Ꭷ 	ka 	  	Ꭸ 	ge 	  	Ꭹ 	gi 	  	Ꭺ 	go 	Ꭻ 	gu 	Ꭼ 	gv 
@@ -20,12 +21,26 @@
             [ 'gu', 'Ꭻ'],
             [ 'gv', 'Ꭼ'],
 
-            [ 'ha', 'Ꭽ'], // Ꭽ 	ha 	  	Ꭾ 	he 	  	Ꭿ 	hi 	  	Ꮀ 	ho 	Ꮁ 	hu 	Ꮂ 	hv
+            [ '\'ha', 'Ꭽ'], // Ꭽ 	ha 	  	Ꭾ 	he 	  	Ꭿ 	hi 	  	Ꮀ 	ho 	Ꮁ 	hu 	Ꮂ 	hv
+            [ '\'he', 'Ꭾ'],
+            [ '\'hi', 'Ꭿ'],
+            [ '\'ho', 'Ꮀ'],
+            [ '\'hu', 'Ꮁ'],
+            [ '\'hv', 'Ꮂ'],
+            [ 'ha', 'Ꭽ'],
             [ 'he', 'Ꭾ'],
             [ 'hi', 'Ꭿ'],
             [ 'ho', 'Ꮀ'],
             [ 'hu', 'Ꮁ'],
             [ 'hv', 'Ꮂ'],
+
+            [ 'dla', 'Ꮬ'], // Ꮬ 	dla 	Ꮭ 	tla 	  	Ꮮ 	tle 	  	Ꮯ 	tli 	  	Ꮰ 	tlo 	Ꮱ 	tlu 	Ꮲ 	tlv 
+            [ 'tla', 'Ꮭ'],
+            [ 'tle', 'Ꮮ'],
+            [ 'tli', 'Ꮯ'],
+            [ 'tlo', 'Ꮰ'],
+            [ 'tlu', 'Ꮱ'],
+            [ 'tlv', 'Ꮲ'],
 
             [ 'la', 'Ꮃ'], // Ꮃ 	la 	  	Ꮄ 	le 	  	Ꮅ 	li 	  	Ꮆ 	lo 	Ꮇ 	lu 	Ꮈ 	lv
             [ 'le', 'Ꮄ'],
@@ -42,13 +57,12 @@
             [ 'mv', 'Ᏽ'],
 
             // Apostrophes allow disambiguation, see: https://en.wikipedia.org/w/index.php?title=Cherokee_syllabary&oldid=1124646659#Transliteration_issues
-            [ 'hna', 'Ꮏ'], // Ꮎ 	na 	Ꮏ 	hna 	Ꮐ 	nah 	Ꮑ 	ne 	  	Ꮒ 	ni 	  	Ꮓ 	no 	Ꮔ 	nu 	Ꮕ 	nv
             [ '\'hna', 'Ꮏ'],
-            [ 'nah', 'Ꮐ'],
-            [ 'nah\'', 'Ꮐ'],
-            [ 'na', 'Ꮎ'], 
-            [ 'na\'', 'Ꮎ'],
-            [ '\'na', 'Ꮎ'],
+            [ 'hna', 'Ꮏ'], // Ꮎ 	na 	Ꮏ 	hna 	Ꮐ 	nah 	Ꮑ 	ne 	  	Ꮒ 	ni 	  	Ꮓ 	no 	Ꮔ 	nu 	Ꮕ 	nv
+            [ '\'na', 'Ꮎ'], 
+            [ 'na', 'Ꮎ'],
+            [ 'Ꮎh', 'Ꮐ'],
+            [ 'Ꮎh', 'Ꮐ'],
             [ 'ne', 'Ꮑ'],
             [ 'ni', 'Ꮒ'],
             [ 'no', 'Ꮓ'],
@@ -62,6 +76,13 @@
             [ 'quu', 'Ꮚ'],
             [ 'quv', 'Ꮛ'],
 
+            [ 'tsa', 'Ꮳ'], // Ꮳ 	tsa 	  	Ꮴ 	tse 	  	Ꮵ 	tsi 	  	Ꮶ 	tso 	Ꮷ 	tsu 	Ꮸ 	tsv
+            [ 'tse', 'Ꮴ'],
+            [ 'tsi', 'Ꮵ'],
+            [ 'tso', 'Ꮶ'],
+            [ 'tsu', 'Ꮷ'],
+            [ 'tsv', 'Ꮸ'],
+
             [ 'sa', 'Ꮜ'], // Ꮝ 	s 	Ꮜ 	sa 	  	Ꮞ 	se 	  	Ꮟ 	si 	  	Ꮠ 	so 	Ꮡ 	su 	Ꮢ 	sv
             [ 'se', 'Ꮞ'],
             [ 'si', 'Ꮟ'],
@@ -69,8 +90,6 @@
             [ 'su', 'Ꮡ'],
             [ 'sv', 'Ꮢ'],
             [ 's\'', 'Ꮝ'],
-            [ 's\'', 'Ꮝ'],
-
 
             [ 'da', 'Ꮣ'], // Ꮣ 	da 	Ꮤ 	ta 	  	Ꮥ 	de 	Ꮦ 	te 	Ꮧ 	di 	Ꮨ 	ti 	Ꮩ 	do 	Ꮪ 	du 	Ꮫ 	dv 
             [ 'ta', 'Ꮤ'],
@@ -81,21 +100,6 @@
             [ 'do', 'Ꮩ'],
             [ 'du', 'Ꮪ'],
             [ 'dv', 'Ꮫ'],
-
-            [ 'dla', 'Ꮬ'], // Ꮬ 	dla 	Ꮭ 	tla 	  	Ꮮ 	tle 	  	Ꮯ 	tli 	  	Ꮰ 	tlo 	Ꮱ 	tlu 	Ꮲ 	tlv 
-            [ 'tla', 'Ꮭ'],
-            [ 'tle', 'Ꮮ'],
-            [ 'tli', 'Ꮯ'],
-            [ 'tlo', 'Ꮰ'],
-            [ 'tlu', 'Ꮱ'],
-            [ 'tlv', 'Ꮲ'],
-
-            [ 'tsa', 'Ꮳ'], // Ꮳ 	tsa 	  	Ꮴ 	tse 	  	Ꮵ 	tsi 	  	Ꮶ 	tso 	Ꮷ 	tsu 	Ꮸ 	tsv
-            [ 'tse', 'Ꮴ'],
-            [ 'tsi', 'Ꮵ'],
-            [ 'tso', 'Ꮶ'],
-            [ 'tsu', 'Ꮷ'],
-            [ 'tsv', 'Ꮸ'],
 
             [ 'wa', 'Ꮹ'], // Ꮹ 	wa 	  	Ꮺ 	we 	  	Ꮻ 	wi 	  	Ꮼ 	wo 	Ꮽ 	wu 	Ꮾ 	wv
             [ 'we', 'Ꮺ'],
@@ -111,24 +115,18 @@
             [ 'yu', 'Ᏻ'],
             [ 'yv', 'Ᏼ'],
 
-            [ 'a', 'Ꭰ'], // Ꭰ 	a 	  	Ꭱ 	e 	  	Ꭲ 	i 	  	Ꭳ 	o 	Ꭴ 	u 	Ꭵ 	v 
-            [ 'e', 'Ꭱ'],
-            [ 'i', 'Ꭲ'],
-            [ 'o', 'Ꭳ'],
-            [ 'u', 'Ꭴ'],
-            [ 'v', 'Ꭵ'],
-            [ '\'a', 'Ꭰ'],
+            [ '\'a', 'Ꭰ'], // Ꭰ 	a 	  	Ꭱ 	e 	  	Ꭲ 	i 	  	Ꭳ 	o 	Ꭴ 	u 	Ꭵ 	v 
             [ '\'e', 'Ꭱ'],
             [ '\'i', 'Ꭲ'],
             [ '\'o', 'Ꭳ'],
             [ '\'u', 'Ꭴ'],
             [ '\'v', 'Ꭵ'],
-            [ 'a\'', 'Ꭰ'],
-            [ 'e\'', 'Ꭱ'],
-            [ 'i\'', 'Ꭲ'],
-            [ 'o\'', 'Ꭳ'],
-            [ 'u\'', 'Ꭴ'],
-            [ 'v\'', 'Ꭵ']
+            [ 'a', 'Ꭰ'], 
+            [ 'e', 'Ꭱ'],
+            [ 'i', 'Ꭲ'],
+            [ 'o', 'Ꭳ'],
+            [ 'u', 'Ꭴ'],
+            [ 'v', 'Ꭵ'],
         ]
 	};
 
