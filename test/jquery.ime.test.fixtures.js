@@ -820,10 +820,22 @@ var palochkaVariants = {
 			{ input: "itsalis'anedi", output: "ᎢᏣᎵᏍᎠᏁᏗ", description: "Cherokee itsalis'anedi -> ᎢᏣᎵᏍᎠᏁᏗ"},
 			{ input: "uligiyus'anvne", output: "ᎤᎵᎩᏳᏍᎠᏅᏁ", description: "Cherokee uligiyus'anvne -> ᎤᎵᎩᏳᏍᎠᏅᏁ"},
 			{ input: "uniyes'iyi", output: "ᎤᏂᏰᏍᎢᏱ", description: "Cherokee uniyesiyi -> ᎾᏍᎢᏯ "},
-			{ input: "aseno", output: "ᎠᏎᏃ", description: "Cherokee "},
-			{ input: "as'eno", output: "ᎠᏍᎡᏃ", description: "Cherokee "},
-			{ input: "gesvi", output: "ᎨᏒᎢ", description: "Cherokee "},
-			{ input: "ges'vi", output: "ᎨᏍᎥᎢ", description: "Cherokee "}
+			{ input: "aseno", output: "ᎠᏎᏃ", description: "Cherokee aseno -> ᎠᏎᏃ"},
+			{ input: "as'eno", output: "ᎠᏍᎡᏃ", description: "Cherokee as'eno -> ᎠᏍᎡᏃ"},
+			{ input: "gesvi", output: "ᎨᏒᎢ", description: "Cherokee gesvi -> ᎨᏒᎢ"},
+			{ input: "ges'vi", output: "ᎨᏍᎥᎢ", description: "Cherokee ges'vi -> ᎨᏍᎥᎢ"},
+			{ input: "qua", output: "Ꮖ", description: "Cherokee qua -> Ꮖ"},
+			{ input: "quequiquoquuquv", output: "ᏇᏈᏉᏊᏋ", description: "Cherokee quequiquoquuquv -> ᏇᏈᏉᏊᏋ"},
+			{ input: "tsatsetsitsotsutsv", output: "ᏣᏤᏥᏦᏧᏨ", description: "Cherokee tsatsetsitsotsutsv -> ᏣᏤᏥᏦᏧᏨ"},
+			{ input: "sasesisosusvs", output: "ᏌᏎᏏᏐᏑᏒᏍ", description: "Cherokee sasesisosusvs -> ᏌᏎᏏᏐᏑᏒᏍ"},
+			{ input: "wawewiwowuwv", output: "ᏩᏪᏫᏬᏭᏮ", description: "Cherokee wawewiwowuwv -> ᏩᏪᏫᏬᏭᏮ"},
+			{ input: "dadedidodudvtateti", output: "ᏓᏕᏗᏙᏚᏛᏔᏖᏘ", description: "Cherokee dadedidodudvtateti -> ᏓᏕᏗᏙᏚᏛᏔᏖᏘ"},
+			{ input: "yayeyiyoyuyv", output: "ᏯᏰᏱᏲᏳᏴ", description: "Cherokee yayeyiyoyuyv -> ᏯᏰᏱᏲᏳᏴ"},
+			{ input: "mamemimomumv", output: "ᎹᎺᎻᎼᎽᏵ", description: "Cherokee mamemimomumv -> ᎹᎺᎻᎼᎽᏵ"},
+			{ input: "lalelilolulv", output: "ᎳᎴᎵᎶᎷᎸ", description: "Cherokee lalelilolulv -> ᎳᎴᎵᎶᎷᎸ"},
+			{ input: "dlatlatletlitlotlutlv", output: "ᏜᏝᏞᏟᏠᏡᏢ", description: "Cherokee dlatlatletlitlotlutlv -> ᏜᏝᏞᏟᏠᏡᏢ"},
+			{ input: "hahehihohuhv", output: "ᎭᎮᎯᎰᎱᎲ", description: "Cherokee hahehihohuhv -> ᎭᎮᎯᎰᎱᎲ"},
+			{ input: "gakagegigogugv", output: "ᎦᎧᎨᎩᎪᎫᎬ", description: "Cherokee gakagegigogugv -> ᎦᎧᎨᎩᎪᎫᎬ"}
 		]
 	},
 	{
