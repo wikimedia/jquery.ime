@@ -10,10 +10,10 @@
 		author: 'Anne Drew Hu',
 		license: 'GPLv3',
 		version: '1.0',
-        maxKeyLength: 3,
+		maxKeyLength: 3,
 		patterns: [
 			
-            [ 'ga', 'Ꭶ'], // Ꭶ 	ga 	Ꭷ 	ka 	  	Ꭸ 	ge 	  	Ꭹ 	gi 	  	Ꭺ 	go 	Ꭻ 	gu 	Ꭼ 	gv 
+            [ 'ga', 'Ꭶ'],
             [ 'ka', 'Ꭷ'],
             [ 'ge', 'Ꭸ'],
             [ 'gi', 'Ꭹ'],
@@ -21,7 +21,8 @@
             [ 'gu', 'Ꭻ'],
             [ 'gv', 'Ꭼ'],
 
-            [ '\'ha', 'Ꭽ'], // Ꭽ 	ha 	  	Ꭾ 	he 	  	Ꭿ 	hi 	  	Ꮀ 	ho 	Ꮁ 	hu 	Ꮂ 	hv
+            // Apostrophes allow disambiguation, see: https://en.wikipedia.org/w/index.php?title=Cherokee_syllabary&oldid=1124646659#Transliteration_issues
+            [ '\'ha', 'Ꭽ'],
             [ '\'he', 'Ꭾ'],
             [ '\'hi', 'Ꭿ'],
             [ '\'ho', 'Ꮀ'],
@@ -34,7 +35,7 @@
             [ 'hu', 'Ꮁ'],
             [ 'hv', 'Ꮂ'],
 
-            [ 'dla', 'Ꮬ'], // Ꮬ 	dla 	Ꮭ 	tla 	  	Ꮮ 	tle 	  	Ꮯ 	tli 	  	Ꮰ 	tlo 	Ꮱ 	tlu 	Ꮲ 	tlv 
+            [ 'dla', 'Ꮬ'],
             [ 'tla', 'Ꮭ'],
             [ 'tle', 'Ꮮ'],
             [ 'tli', 'Ꮯ'],
@@ -42,23 +43,22 @@
             [ 'tlu', 'Ꮱ'],
             [ 'tlv', 'Ꮲ'],
 
-            [ 'la', 'Ꮃ'], // Ꮃ 	la 	  	Ꮄ 	le 	  	Ꮅ 	li 	  	Ꮆ 	lo 	Ꮇ 	lu 	Ꮈ 	lv
+            [ 'la', 'Ꮃ'],
             [ 'le', 'Ꮄ'],
             [ 'li', 'Ꮅ'],
             [ 'lo', 'Ꮆ'],
             [ 'lu', 'Ꮇ'],
             [ 'lv', 'Ꮈ'],
 
-            [ 'ma', 'Ꮉ'], // Ꮉ 	ma 	  	Ꮊ 	me 	  	Ꮋ 	mi 	  	Ꮌ 	mo 	Ꮍ 	mu 	Ᏽ* 	mv
+            [ 'ma', 'Ꮉ'],
             [ 'me', 'Ꮊ'],
             [ 'mi', 'Ꮋ'],
             [ 'mo', 'Ꮌ'],
             [ 'mu', 'Ꮍ'],
-            [ 'mv', 'Ᏽ'],
+            [ 'mv', 'Ᏽ'], // Note that this letter is not in use anymore. I'm open to removing it.
 
-            // Apostrophes allow disambiguation, see: https://en.wikipedia.org/w/index.php?title=Cherokee_syllabary&oldid=1124646659#Transliteration_issues
             [ '\'hna', 'Ꮏ'],
-            [ 'hna', 'Ꮏ'], // Ꮎ 	na 	Ꮏ 	hna 	Ꮐ 	nah 	Ꮑ 	ne 	  	Ꮒ 	ni 	  	Ꮓ 	no 	Ꮔ 	nu 	Ꮕ 	nv
+            [ 'hna', 'Ꮏ'],
             [ '\'na', 'Ꮎ'], 
             [ 'na', 'Ꮎ'],
             [ 'Ꮎh', 'Ꮐ'],
@@ -69,21 +69,21 @@
             [ 'nu', 'Ꮔ'],
             [ 'nv', 'Ꮕ'],
 
-            [ 'qua', 'Ꮖ'], // Ꮖ 	qua 	  	Ꮗ 	que 	  	Ꮘ 	qui 	  	Ꮙ 	quo 	Ꮚ 	quu 	Ꮛ 	quv
-            [ 'que', 'Ꮗ'],
-            [ 'qui', 'Ꮘ'],
-            [ 'quo', 'Ꮙ'],
-            [ 'quu', 'Ꮚ'],
-            [ 'quv', 'Ꮛ'],
+            [ 'qᎤa', 'Ꮖ'],
+            [ 'qᎤe', 'Ꮗ'],
+            [ 'qᎤi', 'Ꮘ'],
+            [ 'qᎤo', 'Ꮙ'],
+            [ 'qᎤu', 'Ꮚ'],
+            [ 'qᎤv', 'Ꮛ'],
 
-            [ 'tsa', 'Ꮳ'], // Ꮳ 	tsa 	  	Ꮴ 	tse 	  	Ꮵ 	tsi 	  	Ꮶ 	tso 	Ꮷ 	tsu 	Ꮸ 	tsv
+            [ 'tsa', 'Ꮳ'],
             [ 'tse', 'Ꮴ'],
             [ 'tsi', 'Ꮵ'],
             [ 'tso', 'Ꮶ'],
             [ 'tsu', 'Ꮷ'],
             [ 'tsv', 'Ꮸ'],
 
-            [ 'sa', 'Ꮜ'], // Ꮝ 	s 	Ꮜ 	sa 	  	Ꮞ 	se 	  	Ꮟ 	si 	  	Ꮠ 	so 	Ꮡ 	su 	Ꮢ 	sv
+            [ 'sa', 'Ꮜ'],
             [ 'se', 'Ꮞ'],
             [ 'si', 'Ꮟ'],
             [ 'so', 'Ꮠ'],
@@ -91,7 +91,7 @@
             [ 'sv', 'Ꮢ'],
             [ 's\'', 'Ꮝ'],
 
-            [ 'da', 'Ꮣ'], // Ꮣ 	da 	Ꮤ 	ta 	  	Ꮥ 	de 	Ꮦ 	te 	Ꮧ 	di 	Ꮨ 	ti 	Ꮩ 	do 	Ꮪ 	du 	Ꮫ 	dv 
+            [ 'da', 'Ꮣ'],
             [ 'ta', 'Ꮤ'],
             [ 'de', 'Ꮥ'],
             [ 'te', 'Ꮦ'],
@@ -101,21 +101,21 @@
             [ 'du', 'Ꮪ'],
             [ 'dv', 'Ꮫ'],
 
-            [ 'wa', 'Ꮹ'], // Ꮹ 	wa 	  	Ꮺ 	we 	  	Ꮻ 	wi 	  	Ꮼ 	wo 	Ꮽ 	wu 	Ꮾ 	wv
+            [ 'wa', 'Ꮹ'],
             [ 'we', 'Ꮺ'],
             [ 'wi', 'Ꮻ'],
             [ 'wo', 'Ꮼ'],
             [ 'wu', 'Ꮽ'],
             [ 'wv', 'Ꮾ'],
 
-            [ 'ya', 'Ꮿ'], // Ꮿ 	ya 	  	Ᏸ 	ye 	  	Ᏹ 	yi 	  	Ᏺ 	yo 	Ᏻ 	yu 	Ᏼ 	yv 
+            [ 'ya', 'Ꮿ'],
             [ 'ye', 'Ᏸ'],
             [ 'yi', 'Ᏹ'],
             [ 'yo', 'Ᏺ'],
             [ 'yu', 'Ᏻ'],
             [ 'yv', 'Ᏼ'],
 
-            [ '\'a', 'Ꭰ'], // Ꭰ 	a 	  	Ꭱ 	e 	  	Ꭲ 	i 	  	Ꭳ 	o 	Ꭴ 	u 	Ꭵ 	v 
+            [ '\'a', 'Ꭰ'],
             [ '\'e', 'Ꭱ'],
             [ '\'i', 'Ꭲ'],
             [ '\'o', 'Ꭳ'],
