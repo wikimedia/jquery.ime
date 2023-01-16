@@ -827,7 +827,7 @@ var palochkaVariants = {
 			{ input: "qua", output: "Ꮖ", description: "Cherokee qua -> Ꮖ"},
 			{ input: "quequiquoquuquv", output: "ᏇᏈᏉᏊᏋ", description: "Cherokee quequiquoquuquv -> ᏇᏈᏉᏊᏋ"},
 			{ input: "tsatsetsitsotsutsv", output: "ᏣᏤᏥᏦᏧᏨ", description: "Cherokee tsatsetsitsotsutsv -> ᏣᏤᏥᏦᏧᏨ"},
-			{ input: "sasesisosusvs", output: "ᏌᏎᏏᏐᏑᏒᏍ", description: "Cherokee sasesisosusvs -> ᏌᏎᏏᏐᏑᏒᏍ"},
+			{ input: "sasesisosusvs'", output: "ᏌᏎᏏᏐᏑᏒᏍ", description: "Cherokee sasesisosusvs' -> ᏌᏎᏏᏐᏑᏒᏍ"},
 			{ input: "wawewiwowuwv", output: "ᏩᏪᏫᏬᏭᏮ", description: "Cherokee wawewiwowuwv -> ᏩᏪᏫᏬᏭᏮ"},
 			{ input: "dadedidodudvtateti", output: "ᏓᏕᏗᏙᏚᏛᏔᏖᏘ", description: "Cherokee dadedidodudvtateti -> ᏓᏕᏗᏙᏚᏛᏔᏖᏘ"},
 			{ input: "yayeyiyoyuyv", output: "ᏯᏰᏱᏲᏳᏴ", description: "Cherokee yayeyiyoyuyv -> ᏯᏰᏱᏲᏳᏴ"},
