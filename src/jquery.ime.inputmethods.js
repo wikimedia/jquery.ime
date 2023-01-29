@@ -1094,6 +1094,10 @@
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
 		},
+		dga: {
+			autonym: 'Dagaare',
+			inputmethods: [ 'mul-bf' ]
+		},
 		din: {
 			autonym: 'Thuɔŋjäŋ',
 			inputmethods: [ 'din-fqsx', 'din-tilde' ]
