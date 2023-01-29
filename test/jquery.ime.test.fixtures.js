@@ -2138,6 +2138,23 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Igala tilde test',
+		inputmethod: 'igl-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Igala tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Igala tilde ~e -> ẹ' },
+			{ input: '~N', output: 'Ñ', description: 'Igala tilde ~N -> Ñ' },
+			{ input: '~n', output: 'ñ', description: 'Igala tilde ~n -> ñ' },
+			{ input: '~O', output: 'Ọ', description: 'Igala tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Igala tilde ~o -> ọ' },
+			{ input: '~e~-', output: 'ẹ̄', description: 'Igala tilde ~e~- -> ẹ̄' },
+			{ input: '~E~\\', output: 'Ẹ̀', description: 'Igala tilde ~E~\\ -> Ẹ̀' },
+			{ input: '~e~/', output: 'ẹ́', description: 'Igala tilde ~e~/ -> ẹ́' },
+			{ input: '~O~^', output: 'Ộ', description: 'Igala tilde ~O~^ -> Ộ' },
+			{ input: '~o~v', output: 'ọ̌', description: 'Igala tilde ~o~v -> ọ̌' }
+		]
+	},
+	{
 		description: 'SIL IPA keyboard test',
 		inputmethod: 'ipa-sil',
 		tests: [
