@@ -384,6 +384,10 @@
 			name: 'Igbo - tilde',
 			source: 'rules/ig/ig-tilde.js'
 		},
+		'igl-tilde': {
+			name: 'Igbol - tilde',
+			source: 'rules/igl/igl-tilde.js'
+		},
 		'ipa-sil': {
 			name: 'International Phonetic Alphabet - SIL',
 			source: 'rules/fonipa/ipa-sil.js'
@@ -1173,6 +1177,10 @@
 		ig: {
 			autonym: 'Igbo',
 			inputmethods: [ 'ig-tilde' ]
+		},
+		igl: {
+			autonym: 'Igala',
+			inputmethods: [ 'igl-tilde' ]
 		},
 		gom: {
 			autonym: 'गोंयची कोंकणी / Gõychi Konknni',
