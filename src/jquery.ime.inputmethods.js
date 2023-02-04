@@ -460,6 +460,10 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'kor-rr': {
+			name: 'Korean Revised Romanization',
+			source: 'rules/kor/kor-rr.js'
+		},
 		'kr-tilde': {
 			name: 'Kanuri tilde',
 			source: 'rules/kr/kr-tilde.js'
