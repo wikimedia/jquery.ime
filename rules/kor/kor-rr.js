@@ -35,7 +35,8 @@
 		[ '([ᅡ-ᅵ])h', '$1ᇂ' ],
 
 		// Use space, hyphen, and apostrophe to disambiguate
-		[ '([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?( |\'|-)', combineJamo ],
+		// Do nothing, combineJamo will do the work 
+		[ '([\- \'])', '$1'],
 
 		// Syllable initials
 		// TODO make sure that whenever you start a new syllable, the old one is combined
@@ -50,7 +51,7 @@
 		[ 'b', 'ᄇ' ],
 		[ 'ᄇp', 'ᄈ' ],
 		[ 'ᄉs', 'ᄊ' ],
-		[ '\'', 'ᄋ'],  // Apostrophe can be written to represent silent ᄋ
+		// [ '\'', 'ᄋ'],  // Apostrophe can be written to represent silent ᄋ
 		[ 's', 'ᄉ' ],
 		[ 'ᄌj', 'ᄍ' ],
 		[ 'j', 'ᄌ' ],
@@ -61,6 +62,16 @@
 		[ 'h', 'ᄒ' ],
 		
 		// Vowels
+		// Vowels without consontant initial must have ᄋ prepended
+		// [^ᄀ-ᄒ]|^ matches the start character or anything but an initial consonant
+		[ '([^ᄀ-ᄒ]|^)wa', '$1와' ],
+		[ '([^ᄀ-ᄒ]|^)wo', '$1워' ],
+		[ '([^ᄀ-ᄒ]|^)we', '$1웨' ],
+		[ '([^ᄀ-ᄒ]|^)wi', '$1위' ],
+		[ '([^ᄀ-ᄒ]|^)ya', '$1야' ],
+		[ '([^ᄀ-ᄒ]|^)ye', '$1예' ],
+		[ '([^ᄀ-ᄒ]|^)yo', '$1요' ],
+		[ '([^ᄀ-ᄒ]|^)yu', '$1유' ],
 		// 'y' diphthongs
 		[ 'ya', 'ᅣ' ],
 		[ 'ᅣe', 'ᅤ' ],
@@ -80,17 +91,6 @@
 		[ 'ᅮi', 'ᅴ' ],
 		[ 'ᅦo', 'ᅥ' ],
 		[ 'ᅡe', 'ᅢ' ],
-		// Vowels without consontant initial must have ᄋ prepended
-		// [^ᄀ-ᄒ] means not an initial consonant
-		[ '([^ᄀ-ᄒ])wa', '$1와' ],
-		[ '([^ᄀ-ᄒ])wo', '$1워' ],
-		[ '([^ᄀ-ᄒ])we', '$1웨' ],
-		[ '([^ᄀ-ᄒ])wi', '$1위' ],
-		[ '([^ᄀ-ᄒ])ya', '$1야' ],
-		[ '([^ᄀ-ᄒ])ye', '$1예' ],
-		[ '([^ᄀ-ᄒ])yo', '$1요' ],
-		[ '([^ᄀ-ᄒ])yu', '$1유' ],
-		// Must also match if this is the first character typed
 		[ '([^ᄀ-ᄒ]|^)i', '$1이' ],
 		[ '([^ᄀ-ᄒ]|^)a', '$1아' ],
 		[ '([^ᄀ-ᄒ]|^)u', '$1우' ],
@@ -118,24 +118,11 @@
 		// except it combines jamo when a new syllable starts
 		// This version does not support context rules, but we don't need them
 
-		//DEBUG
-		// patterns: patternList,
 		patterns: 
-		// patternsFunc: 
 		function(input, context) {
-			var patterns, regex, rule, replacement, i, retval;
+			var patterns, regex, rule, replacement, i, result;
 
-			// // This regex matches jamo that form a syllable so they can be combined
-			// var jamoTest = new RegExp('([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ])$');
-			// if (jamoTest.test(result)) {
-			// 	//DEBUG
-			// 	console.log('jamo combine: '+result.match(jamoTest, combineJamo));
-			// 	return { noop: false, output: result.replace(jamoTest, combineJamo) };
-			// } else {
-			// 	//DEBUG
-			// 	console.log('no jamo combine: '+result);
-			// 	return { noop: false, output: result };
-			// }
+			
 
 			for ( i = 0; i < patternList.length; i++ ) {
 				rule = patternList[ i ];
@@ -146,21 +133,16 @@
 				// method can have a function as the second argument.
 				replacement = rule.slice( -1 )[ 0 ];
 
-				//DEBUG
-				console.log('trying regex '+regex+' on '+input+', found '+input.match(regex));
-
 				// Input string match test
 				if ( regex.test( input ) ) {
-					//DEBUG
-					console.log('match: '+input.match(regex));
-
-					// Context test required?
-					if ( rule.length === 3 ) {
-						if ( new RegExp( rule[ 1 ] + '$' ).test( context ) ) {
-							return { noop: false, output: input.replace( regex, replacement ) };
-						}
+					result = input.replace(regex, replacement);
+					
+					// This regex matches jamo that form a syllable so they can be combi
+					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])(.*)$/;
+					if (jamoRegex.test(result)) {
+						return { noop: false, output: result.replace(jamoRegex, combineJamo) };
 					} else {
-						return { noop: false, output: input.replace( regex, replacement ) };
+						return { noop: false, output: result };
 					}
 				}
 			}
@@ -173,7 +155,7 @@
 	// Conjoining jamo behavior is defined by this Unicode standard
 	// https://www.unicode.org/versions/Unicode13.0.0/ch03.pdf#G24646
 	// parameter `final` is optional
-	function combineJamo(substring, initial, vowel, final) {
+	function combineJamo(substring, initial, vowel, final, nextSyllableInitial, otherChars) {
 		// Get the UTF code for each character
 		var initialNo = initial.charCodeAt(0);
 		var vowelNo = vowel.charCodeAt(0);
@@ -190,7 +172,15 @@
 		// See Unicode standard: https://www.unicode.org/versions/Unicode13.0.0/ch03.pdf#G24646
 		var syllableNo = 44032 + initialDiff * 588 + vowelDiff * 28 + finalDiff;
 
-		return String.fromCharCode(syllableNo);
+		var syllable = String.fromCharCode(syllableNo);
+
+		const disambig = /[\- ']/;
+		if (nextSyllableInitial.match(disambig)) {
+			return syllable;
+		} else if (otherChars.match(disambig)) {
+			return syllable + nextSyllableInitial;
+		}
+		return syllable + nextSyllableInitial + otherChars;
 	}
 	$.ime.register( koreanRR );
 }( jQuery ) );

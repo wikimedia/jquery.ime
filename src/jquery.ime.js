@@ -181,10 +181,7 @@
 					.concat( patterns );
 			}
 
-			// TODO: debug why pattern functions are one key stroke behind compared to rule patterns
 			if ( typeof patterns === 'function' ) {
-				//DEBUG
-				console.log('input: '+input);
 
 				// For backwards compatibility, allow the rule functions to return plain
 				// string. Determine noop by checking whether input is different from
@@ -193,14 +190,9 @@
 				if ( typeof retval === 'string' ) {
 					return { noop: input === retval, output: retval };
 				}
-
-				//DEBUG
-				console.log('output: '+retval.output);
 				return retval;
 			}
 
-			//DEBUG
-			console.log('input: ' + input);
 			for ( i = 0; i < patterns.length; i++ ) {
 				rule = patterns[ i ];
 				regex = new RegExp( rule[ 0 ] + '$' );
@@ -209,17 +201,9 @@
 				// It can also be a function, because the replace
 				// method can have a function as the second argument.
 				replacement = rule.slice( -1 )[ 0 ];
-
-				//DEBUG
-				console.log('trying regex '+regex);
 				
 				// Input string match test
 				if ( regex.test( input ) ) {
-					
-					//DEBUG
-					console.log('match: '+input.match(regex));
-					//DEBUG
-					console.log('output: '+input.replace( regex, replacement ));
 
 					// Context test required?
 					if ( rule.length === 3 ) {
