@@ -139,7 +139,7 @@
 					result = input.replace(regex, replacement);
 					
 					// This regex matches jamo that form a syllable so they can be combined
-					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])$/;
+					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])(.*)$/;
 					if (jamoRegex.test(result)) {
 						return { noop: false, output: result.replace(jamoRegex, combineJamo) };
 					} else {
@@ -156,7 +156,7 @@
 	// Conjoining jamo behavior is defined by this Unicode standard
 	// https://www.unicode.org/versions/Unicode13.0.0/ch03.pdf#G24646
 	// parameter `final` is optional
-	function combineJamo(substring, initial, vowel, final, justTyped) {
+	function combineJamo(substring, initial, vowel, final, nextSyllableInitial, otherChars) {
 		// Get the UTF code for each character
 		var initialNo = initial.charCodeAt(0);
 		var vowelNo = vowel.charCodeAt(0);
@@ -176,10 +176,12 @@
 		var syllable = String.fromCharCode(syllableNo);
 
 		const disambig = /[\- ']/;
-		if (justTyped.match(disambig)) {
+		if (nextSyllableInitial.match(disambig)) {
 			return syllable;
+		} else if (otherChars.match(disambig)) {
+			return syllable + nextSyllableInitial;
 		}
-		return syllable + justTyped + otherChars;
+		return syllable + nextSyllableInitial + otherChars;
 	}
 	$.ime.register( koreanRR );
 }( jQuery ) );
