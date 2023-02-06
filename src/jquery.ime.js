@@ -189,6 +189,7 @@
 				if ( typeof retval === 'string' ) {
 					return { noop: input === retval, output: retval };
 				}
+
 				return retval;
 			}
 
@@ -203,7 +204,6 @@
 
 				// Input string match test
 				if ( regex.test( input ) ) {
-
 					// Context test required?
 					if ( rule.length === 3 ) {
 						if ( new RegExp( rule[ 1 ] + '$' ).test( context ) ) {
