@@ -119,10 +119,10 @@
 		// This version does not support context rules, but we don't need them
 
 		//DEBUG
-		patterns: patternList,
-		// patterns: 
-		patternsFunc: 
-		function(IME, input, context) {
+		// patterns: patternList,
+		patterns: 
+		// patternsFunc: 
+		function(input, context) {
 			var patterns, regex, rule, replacement, i, retval;
 
 			// // This regex matches jamo that form a syllable so they can be combined
@@ -147,7 +147,7 @@
 				replacement = rule.slice( -1 )[ 0 ];
 
 				//DEBUG
-				console.log('trying regex '+regex);
+				console.log('trying regex '+regex+' on '+input+', found '+input.match(regex));
 
 				// Input string match test
 				if ( regex.test( input ) ) {
