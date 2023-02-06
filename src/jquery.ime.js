@@ -182,7 +182,6 @@
 			}
 
 			if ( typeof patterns === 'function' ) {
-
 				// For backwards compatibility, allow the rule functions to return plain
 				// string. Determine noop by checking whether input is different from
 				// output. If the rule function returns object, just return it as-is.
@@ -201,7 +200,7 @@
 				// It can also be a function, because the replace
 				// method can have a function as the second argument.
 				replacement = rule.slice( -1 )[ 0 ];
-				
+
 				// Input string match test
 				if ( regex.test( input ) ) {
 

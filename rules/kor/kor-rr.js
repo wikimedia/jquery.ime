@@ -114,14 +114,13 @@
 		author: 'Anne Drew Hu',
 		license: 'GPLv3',
 		version: '1.0',
-		maxKeyLength: 6,
+		maxKeyLength: 4,
 		contextLength: 1,
+
 		// This function mirrors the normal behavior in jquery.ime.js, 
 		// except it combines jamo when a new syllable starts
 		// This version does not support context rules, but we don't need them
-
-		patterns: 
-		function(input, context) {
+		patterns: function(input, context) {
 			var patterns, regex, rule, replacement, i, result;
 
 			
@@ -139,8 +138,8 @@
 				if ( regex.test( input ) ) {
 					result = input.replace(regex, replacement);
 					
-					// This regex matches jamo that form a syllable so they can be combi
-					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])(.*)$/;
+					// This regex matches jamo that form a syllable so they can be combined
+					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])$/;
 					if (jamoRegex.test(result)) {
 						return { noop: false, output: result.replace(jamoRegex, combineJamo) };
 					} else {
@@ -157,7 +156,7 @@
 	// Conjoining jamo behavior is defined by this Unicode standard
 	// https://www.unicode.org/versions/Unicode13.0.0/ch03.pdf#G24646
 	// parameter `final` is optional
-	function combineJamo(substring, initial, vowel, final, nextSyllableInitial, otherChars) {
+	function combineJamo(substring, initial, vowel, final, justTyped) {
 		// Get the UTF code for each character
 		var initialNo = initial.charCodeAt(0);
 		var vowelNo = vowel.charCodeAt(0);
@@ -177,12 +176,10 @@
 		var syllable = String.fromCharCode(syllableNo);
 
 		const disambig = /[\- ']/;
-		if (nextSyllableInitial.match(disambig)) {
+		if (justTyped.match(disambig)) {
 			return syllable;
-		} else if (otherChars.match(disambig)) {
-			return syllable + nextSyllableInitial;
 		}
-		return syllable + nextSyllableInitial + otherChars;
+		return syllable + justTyped + otherChars;
 	}
 	$.ime.register( koreanRR );
 }( jQuery ) );
