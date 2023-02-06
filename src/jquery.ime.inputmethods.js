@@ -1278,6 +1278,10 @@
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
+		kor: {
+			autonym: '한국어',
+			inputmethods: [ 'kor-rr' ]
+		},
 		kr: {
 			autonym: 'kanuri',
 			inputmethods: [ 'kr-tilde' ]
