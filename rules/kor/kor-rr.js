@@ -37,12 +37,13 @@
 		[ '([\- \'])', '$1'],
 
 		// Syllable initials
-		// TODO make sure that whenever you start a new syllable, the old one is combined
 		[ 'g', 'ᄀ' ],
 		[ 'ᄀk', 'ᄁ' ],
 		[ 'n', 'ᄂ' ],
-		[ 'ᄃt', 'ᄄ' ],  // Should both of these 'tt' rules exist?
+		[ 'ᄃt', 'ᄄ' ],
 		[ 'ᄐt', 'ᄄ' ],
+		[ 'ᄃd', 'ᄄ' ],
+		[ 'ᄐd', 'ᄄ' ],
 		[ 'd', 'ᄃ' ],
 		[ 'r', 'ᄅ' ],
 		[ 'l', 'ᄅ' ],

@@ -3742,11 +3742,15 @@ var palochkaVariants = {
 			// The holiday Seollal would be typed Seolnal, even though both RR and MR transcribe it as Seollal
 			{ input: 'seolnal ', output: '설날', description: 'Seolnal -> 설날'},
 			{ input: 'seollal ', output: '설랄', description: 'Seollal -> 설랄'},
-			// ㅌ should be allowed as a final syllable
+			// Stressed final syllables should be allowed
 			{ input: 'tieuT ', output: '티읕', description: 'tieuT -> 티읕'},
 			{ input: 'TieuT ', output: '티읕', description: 'TieuT -> 티읕'},
 			{ input: 'kieuK ', output: '키읔', description: 'kieuK -> 키읔'},
-			{ input: 'KieuK ', output: '키읔', description: 'KieuK -> 키읔'}
+			{ input: 'KieuK ', output: '키읔', description: 'KieuK -> 키읔'},
+			{ input: 'tteokbokki ', output: '떡볶이', descsription: 'tteokbokki -> 떡볶이'},
+			{ input: 'ddeokbokki ', output: '떡볶이', descsription: 'ddeokbokki -> 떡볶이'},
+			{ input: 'go-chu-jangjjigae ', output: '고추장찌개', descsription: 'go-chu-jangjjigae -> 고추장찌개'},
+			{ input: 'sundu-bu jjigae ', output: '순두부찌개', descsription: 'sundu-bu jjigae -> 순두부찌개'},
 		]
 	},
 	{
