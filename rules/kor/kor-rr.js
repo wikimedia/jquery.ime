@@ -27,10 +27,8 @@
 		[ 'ᆫg', 'ᆼ' ],
 		[ '([ᅡ-ᅵ])j', '$1ᆽ' ],
 		[ '([ᅡ-ᅵ])ch', '$1ᆾ' ],
-		// No good rule for adding ᆿ and it doesn't appear in any real words I know of
-		// [ '_________', '$1ᆿ' ],
-		// TODO figure out what to do about this final
-		// [ '([ᅡ-ᅵ])t', '$1ᇀ' ],
+		[ '([ᅡ-ᅵ])K', '$1ᆿ' ],
+		[ '([ᅡ-ᅵ])T', '$1ᇀ' ],
 		[ '([ᅡ-ᅵ])p', '$1ᇁ' ],
 		[ '([ᅡ-ᅵ])h', '$1ᇂ' ],
 
@@ -47,6 +45,7 @@
 		[ 'ᄐt', 'ᄄ' ],
 		[ 'd', 'ᄃ' ],
 		[ 'r', 'ᄅ' ],
+		[ 'l', 'ᄅ' ],
 		[ 'm', 'ᄆ' ],
 		[ 'b', 'ᄇ' ],
 		[ 'ᄇp', 'ᄈ' ],
@@ -57,7 +56,9 @@
 		[ 'j', 'ᄌ' ],
 		[ 'ch', 'ᄎ' ],
 		[ 'k', 'ᄏ' ],
+		[ 'K', 'ᄏ' ],  // There is some ambiguity for final ᆿ and ᇀ, so they get capital K and T
 		[ 't', 'ᄐ' ],
+		[ 'T', 'ᄐ' ],
 		[ 'p', 'ᄑ' ],
 		[ 'h', 'ᄒ' ],
 		
