@@ -9,7 +9,7 @@
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Bennylin',
 		license: 'GPLv3',
-		version: '1.1',
+		version: '1.2',
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
@@ -32,20 +32,41 @@
 			[ 'ꦃi', '','ꦲꦶ' ], // vocal ended with -h followed by i
 			[ 'ꦃo', '','ꦲꦺꦴ' ], // vocal ended with -h followed by o
 			[ 'ꦃu', '','ꦲꦸ' ], // vocal ended with -h followed by u
+			[ 'ꦃx', '','ꦲꦼ' ], // vocal ended with -h followed by ê
 
 			[ 'ꦂa', '','ꦫ' ], // vocal ended with -r followed by a
 			[ 'ꦂe', '','ꦫꦺ' ], // vocal ended with -r followed by e
 			[ 'ꦂi', '','ꦫꦶ' ], // vocal ended with -r followed by i
 			[ 'ꦂo', '','ꦫꦺꦴ' ], // vocal ended with -r followed by o
 			[ 'ꦂu', '','ꦫꦸ' ], // vocal ended with -r followed by u
-			[ 'ꦂy', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special)
+			[ 'ꦂx', '','ꦉ' ], // vocal ended with -r followed by ê (Special)
+			[ 'ꦂy', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special pengkal)
 
 			[ 'ꦁa', '','ꦔ' ], // vocal ended with -ng followed by a
 			[ 'ꦁe', '','ꦔꦺ' ], // vocal ended with -ng followed by e
 			[ 'ꦁi', '','ꦔꦶ' ], // vocal ended with -ng followed by i
 			[ 'ꦁo', '','ꦔꦺꦴ' ], // vocal ended with -ng followed by o
 			[ 'ꦁu', '','ꦔꦸ' ], // vocal ended with -ng followed by u
+			[ 'ꦁx', '','ꦔꦼ' ], // vocal ended with -ng followed by ê
+			[ 'ꦁy', '','ꦔꦾ' ], // vocal ended with -ng followed by y (Special pengkal)
+			[ 'ꦁr', '','ꦔꦿ' ], // vocal ended with -ng followed by r (Special cakra)
+			[ 'ꦁw', '','ꦔ꧀ꦮ' ], // vocal ended with -ng followed by w (Special panjingan)
+			[ 'ꦁl', '','ꦔ꧀ꦭ' ], // vocal ended with -ng followed by l (Special panjingan)
 
+			[ 'ꦿa', '','ꦿ' ], // cakra (medial -r-) followed by a
+			[ 'ꦿe', '','ꦿꦺ' ], // cakra (medial -r-) followed by e
+			[ 'ꦿi', '','ꦿꦶ' ], // cakra (medial -r-) followed by i
+			[ 'ꦿo', '','ꦿꦺꦴ' ], // cakra (medial -r-) followed by o
+			[ 'ꦿu', '','ꦿꦸ' ], // cakra (medial -r-) followed by u
+			[ 'ꦿx', '','ꦽ' ], // cakra (medial -r-) followed by ê (Special biconsonant -rê)
+
+			[ 'ꦾa', '','ꦾ' ], // vocal ended with -ng followed by a
+			[ 'ꦁe', '','ꦾꦺ' ], // vocal ended with -ng followed by e
+			[ 'ꦁi', '','ꦾꦶ' ], // vocal ended with -ng followed by i
+			[ 'ꦁo', '','ꦾꦺꦴ' ], // vocal ended with -ng followed by o
+			[ 'ꦁu', '','ꦾꦸ' ], // vocal ended with -ng followed by u
+			[ 'ꦁx', '','ꦾꦼ' ], // vocal ended with -ng followed by u
+			
 			// VI. Vocal (lowercase, uppercase, extended) ended with h/r/ng = special pasangan (-h, -r, -ng)
 			[ '꧀​h', '','꧀ꦲ꧀' ],
 			// vocal a ended with h/r/ng
@@ -75,7 +96,7 @@
 			// the letter 'y' can only be found followed by consonant w (nasal for 'i')
 
 			[ '꧀a', '','' ], // default vowel is a, so, remove the pangkon
-			[ '꧀A', '','ꦄ' ], // A
+			//[ '꧀A', '','꧀ꦄ' ], // A
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀b', '','$1꧀ꦧ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀B', '','$1꧀ꦨ꧀' ], // pasangan Ba murda
 			[ 'ꦤ꧀​(c|C)', '','ꦚ꧀ꦕ꧀' ], // n+zero-width-space+c
@@ -117,24 +138,26 @@
 			[ '꧀U', '','ꦈ' ], // U
 			// v = f
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
+			[ '꧀x', '','ꦼ' ], // x is another way to write ê
+			//[ '꧀X', '','꧀ꦄꦼ' ], // X is another way to write Ê
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
-
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya,
 			// can't be started with n or y, reserved for bigraf ny (REF:-yy-)
 			[ '(ꦤ|ꦏ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(z|Z)', '','$1ꦾꦗ꦳꧀' ], // can't be started with d, reserved for bigraf dz
 
 			// IV. 1. Special consonant
 			[ '(ꦾ|ꦿ)a', '','$1' ],
-			[ 'ꦿx', '','ꦽ' ], // special biconsonant -rê
 			[ 'ꦊq', '','ꦋ' ], // special character lê Raswadi
+			[ 'ꦊr', '','ꦊꦂ' ], // lêr
+			[ 'ꦊh', '','ꦊꦃ' ], // lêh
 			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
+			[ 'ꦉr', '','ꦉꦂ' ], // rêr
+			[ 'ꦉh', '','ꦉꦃ' ], // rêh
 			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
 			[ 'ꦌx', '','ꦄꦼ' ], // Ê
-			[ '꧀x', '','ꦼ' ], // x is another way to write ê
-			[ '꧀X', '','ꦄꦼ' ], // X is another way to write Ê
 
 			// IV. 3. Extended vowel
-			// long a (aa) - see II.
+			// long a (aa) - see II. - 'H'
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ|꦳)i', '','$1ꦻ' ], // hanacaraka + i = -ai
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ|꦳)u', '','$1ꦻꦴ' ], // hanacaraka + u = -au
 			[ 'ꦄi', '','ꦍ' ], // Ai
@@ -174,8 +197,9 @@
 			[ '꧀[Q|q]', '','꦳' ], // cecak telu
 			[ 'q', '','꧀' ], // pangkon - to cut off the default -a vowel
 
-			[ 'ꦫq', '','ꦿ' ], // another way to write -ra
-			[ 'ꦪq', '','ꦾ' ], // another way to write -ya
+      //doesn't work, not need for alternate input
+			//[ 'ꦫq', '','ꦿ' ], // another way to write -ra
+			//[ 'ꦪq', '','ꦾ' ], // another way to write -ya
 
 			// II. 1. Alphabetical ha-na-ca-ra-ka
 			[ 'ꦠ꧀​h', '','ꦠ꧀ꦲ꧀' ], // t_h (with zero-width-space)
@@ -191,7 +215,7 @@
 			[ 'c', '','ꦕ꧀' ],
 			[ 'd', '','ꦢ꧀' ],
 			[ 'e', '','ꦲꦺ' ], // é|è
-			[ '(f|v)', '','ꦥ꦳꧀' ],
+			[ 'f', '','ꦥ꦳꧀' ],
 			[ 'g', '','ꦒ꧀' ],
 			[ 'h', '','ꦲ꧀' ],
 			[ 'i', '','ꦲꦶ' ],
@@ -207,7 +231,7 @@
 			[ 's', '','ꦱ꧀' ],
 			[ 't', '','ꦠ꧀' ],
 			[ 'u', '','ꦲꦸ' ],
-			// v = f
+			[ 'v', '','ꦮ꦳꧀' ],
 			[ 'w', '','ꦮ꧀' ],
 			[ 'x', '','ꦲꦼ' ], // ê
 			[ 'y', '','ꦪ꧀' ],
@@ -226,9 +250,10 @@
 			[ 'C', '','ꦖ꧀' ], // Ca murda(?)
 			[ 'D', '','ꦣ꧀' ],
 			[ 'E', '','ꦌ' ], // É|È
-			[ '(F|V)', '','ꦥ꦳꧀' ],
+			[ 'F', '','ꦥ꦳꧀' ],
 			[ 'G', '','ꦓ꧀' ], // Ga murda
-			[ 'H', '','ꦲ꧀' ],
+			//[ 'H', '','ꦲ꧀' ],
+			[ 'H', '','ꦴ' ], // tarung/Long a. eg. for Cakra & Pengkal with long a ꦏꦿꦴ or ꦠꦾꦴ
 			[ 'I', '','ꦆ' ], // I
 			[ 'J', '','ꦙ꧀' ],// Ja Mahaprana
 			[ 'K', '','ꦑ꧀' ], // Ka murda
@@ -242,7 +267,7 @@
 			[ 'S', '','ꦯ꧀' ], // Sa murda
 			[ 'T', '','ꦡ꧀' ], // Ta murda
 			[ 'U', '','ꦈ' ], // U
-			// V = F
+			[ 'V', '','ꦮ꦳꧀' ],
 			[ 'W', '','ꦮ꧀' ],
 			[ 'X', '','ꦄꦼ' ], // X is another way to write Ê
 			[ 'Y', '','ꦪ꧀' ],
