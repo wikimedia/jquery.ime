@@ -43,7 +43,7 @@
 
 		$specialPath.ime( { imePath: specialPath } );
 		assert.strictEqual( $specialPath.data( 'ime' ).options.imePath, specialPath,
-							'imePath is defined correctly using options in the constructor' );
+			'imePath is defined correctly using options in the constructor' );
 		$.ime.setPath( '../' );
 		$readonlyTextarea.ime();
 		$disabledTextarea.ime();
@@ -152,7 +152,7 @@
 		$.ime.sources[ brokenImeName ].source = 'This source is wrong';
 		selector.selectIM( brokenImeName );
 		assert.strictEqual( $.ime.preferences.getIM( 'ml' ), nonBrokenImeName,
-							'Trying to load an IME with a broken URL does not change the current IME' );
+			'Trying to load an IME with a broken URL does not change the current IME' );
 		$.ime.sources[ brokenImeName ].source = saveBrokenImeSource;
 		*/
 	} );

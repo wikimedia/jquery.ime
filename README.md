@@ -2,7 +2,9 @@ jQuery.IME
 ==========
 
 jQuery.IME is a jQuery based input method editor library supporting more than
-135 input methods across more than 62 languages.
+220 input methods across more than 120 languages.
+
+![jQuery.IME Demo](./examples/images/demo.gif)
 
 These input methods are well tested. Initially the input methods were
 contributed by the Wikimedia community. By now many input methods have also
@@ -19,6 +21,16 @@ Quick start
 
 ```bash
 git clone https://github.com/wikimedia/jquery.ime.git
+```
+
+Load the necessary scripts:
+```html
+<link href="../css/jquery.ime.css" rel="stylesheet" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+<script src="../src/jquery.ime.js"></script>
+<script src="../src/jquery.ime.selector.js"></script>
+<script src="../src/jquery.ime.preferences.js"></script>
+<script src="../src/jquery.ime.inputmethods.js"></script>
 ```
 
 To add input method support to all editable elements:
@@ -56,16 +68,17 @@ Running
 
 -If you have python installed, run
 -```bash
- python -m SimpleHTTPServer
+ python3 -m http.server
 -```
 
-Alternatively, many programming languages provide one liner commands to start a simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255).
-
-
+Alternatively, many programming languages provide one liner commands to start a
+simple http static servers. You can use [any one of them](https://gist.github.com/willurd/5720255)
 and, you can access examples from
+
 ```bash
 http://localhost:8000/examples/index.html
 ```
+
 Alternatively you can use tools like webfsd. If you know how to use advanced
 web servers like Apache or Nginx, you already know how to put the code in a
 webserver.
@@ -82,9 +95,9 @@ Plugin Options
 
 Browser extensions
 ------------------
-This input tool is also available as Firefox and Chrome extensions.
-* [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/)
-* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh)
+This input tool is also available as a browser extension:
+* [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/wikimedia-input-tools/) | [source code](https://gitlab.com/kskarthik/wikimedia-input-tools)
+* [Chrome extension](https://chrome.google.com/webstore/detail/wikimedia-input-tools/fjnfifedbeeeibikgpggddmfbaeccaoh) | (Unmaintained)  | [source code](https://github.com/pravee-n/jquery.ime-chrome-extension)
 
 For Developers
 --------------

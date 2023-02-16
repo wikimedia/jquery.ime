@@ -106,23 +106,25 @@
 		},
 
 		/**
-		 * Return the autonym for an available language code
+		 * Return the autonym for a language code
 		 *
 		 * @param {string} languageCode The language code
-		 * @return {string} The autonym
+		 * @return {string|undefined} The autonym, if known
 		 */
 		getAutonym: function ( languageCode ) {
-			return $.ime.languages[ languageCode ].autonym;
+			var info = $.ime.languages[ languageCode ];
+			return info && info.autonym;
 		},
 
 		/**
 		 * Return a list of available input method ids for a language
 		 *
-		 * @param {string} languageCode An available language code
+		 * @param {string} languageCode A language code
 		 * @return {string[]} Available input method ids for that language
 		 */
 		getInputMethodIds: function ( languageCode ) {
-			return $.ime.languages[ languageCode ].inputmethods;
+			var info = $.ime.languages[ languageCode ];
+			return ( info && info.inputmethods ) || [];
 		},
 
 		/**
@@ -139,7 +141,7 @@
 		/**
 		 * Return a list of input method info { id: ..., name: ... } for a language.
 		 *
-		 * @param {string} languageCode An available language code
+		 * @param {string} languageCode A language code
 		 * @return {Object[]} Info object for each available input method
 		 */
 		getInputMethods: function ( languageCode ) {
@@ -604,7 +606,10 @@
 	/**
 	 * @inheritdoc SelectionWrapper
 	 */
-	ContentEditableEntry.prototype.replaceTextAtSelection = function ( precedingCharCount, newText ) {
+	ContentEditableEntry.prototype.replaceTextAtSelection = function (
+		precedingCharCount,
+		newText
+	) {
 		var textNode, textOffset, newOffset, newRange,
 			sel = window.getSelection(),
 			range = this.getSelectedRange();

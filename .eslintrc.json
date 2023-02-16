@@ -10,11 +10,9 @@
 		"$": "off"
 	},
 	"rules": {
-		"camelcase": "off",
+		"camelcase": [ "error", { "allow": [ "patterns_x", "patterns_shift" ] } ],
 		"comma-spacing": "off",
 		"indent": "off",
-		"max-len": "off",
-		"no-multi-spaces": "off",
-		"one-var": [ "error", { "var": "always" } ]
+		"max-len": "off"
 	}
 }
