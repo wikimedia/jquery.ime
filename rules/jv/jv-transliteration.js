@@ -40,8 +40,6 @@
 			[ 'ꦂo', '','ꦫꦺꦴ' ], // vocal ended with -r followed by o
 			[ 'ꦂu', '','ꦫꦸ' ], // vocal ended with -r followed by u
 			[ 'ꦂx', '','ꦉ' ], // vocal ended with -r followed by ê (Special)
-			[ 'ꦂy', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special pengkal)
-			//I'm not putting "rwa" ꦂ + ꦮ = ꦫ꧀ and "rla" ꦂ + ꦭ = ꦫ꧀ because I think the occurrence too low
 
 			[ 'ꦁa', '','ꦔ' ], // vocal ended with -ng followed by a
 			[ 'ꦁe', '','ꦔꦺ' ], // vocal ended with -ng followed by e
@@ -49,14 +47,6 @@
 			[ 'ꦁo', '','ꦔꦺꦴ' ], // vocal ended with -ng followed by o
 			[ 'ꦁu', '','ꦔꦸ' ], // vocal ended with -ng followed by u
 			[ 'ꦁx', '','ꦔꦼ' ], // vocal ended with -ng followed by ê
-			[ 'ꦁy', '','ꦔꦾ' ], // vocal ended with -ng followed by y (Special pengkal)
-			//if you want to write "cecak" + aksara "ya" instead, put a space between "ng" and "y"
-			[ 'ꦁr', '','ꦔꦿ' ], // vocal ended with -ng followed by r (Special cakra)
-			//if you want to write "cecak" + aksara "ra" instead, put a space between "ng" and "r"
-			[ 'ꦁw', '','ꦔ꧀ꦮ' ], // vocal ended with -ng followed by w (Special panjingan)
-			//if you want to write "cecak" + aksara "wa" instead, put a space between "ng" and "w"
-			[ 'ꦁl', '','ꦔ꧀ꦭ' ], // vocal ended with -ng followed by l (Special panjingan)
-			//if you want to write "cecak" + aksara "la" instead, put a space between "ng" and "l"
 
 			[ 'ꦿa', '','ꦿ' ], // cakra (medial -r-) followed by a
 			[ 'ꦿe', '','ꦿꦺ' ], // cakra (medial -r-) followed by e
@@ -67,11 +57,11 @@
 			//if you want to write "cakra" + aksara "hi" instead, use "hi" instead of "i", etc.
 
 			[ 'ꦾa', '','ꦾ' ], // pengkal (medial -y-) followed by a
-			[ 'ꦁe', '','ꦾꦺ' ], // pengkal (medial -y-) followed by e
-			[ 'ꦁi', '','ꦾꦶ' ], // pengkal (medial -y-) followed by i
-			[ 'ꦁo', '','ꦾꦺꦴ' ], // pengkal (medial -y-) followed by o
-			[ 'ꦁu', '','ꦾꦸ' ], // pengkal (medial -y-) followed by u
-			[ 'ꦁx', '','ꦾꦼ' ], // pengkal (medial -y-) followed by u
+			[ 'ꦾe', '','ꦾꦺ' ], // pengkal (medial -y-) followed by e
+			[ 'ꦾi', '','ꦾꦶ' ], // pengkal (medial -y-) followed by i
+			[ 'ꦾo', '','ꦾꦺꦴ' ], // pengkal (medial -y-) followed by o
+			[ 'ꦾu', '','ꦾꦸ' ], // pengkal (medial -y-) followed by u
+			[ 'ꦾx', '','ꦾꦼ' ], // pengkal (medial -y-) followed by u
 			//if you want to write "pengkal" + aksara "hi" instead, use "hi" instead of "i", etc.
 			
 			// VI. Vocal (lowercase, uppercase, extended) ended with h/r/ng = special pasangan (-h, -r, -ng)
@@ -130,7 +120,9 @@
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀J', '','$1꧀ꦙ꧀' ], // pasangan Ja mahaprana
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀k', '','$1꧀ꦏ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀K', '','$1꧀ꦑ꧀' ], // pasangan Ka murda
-			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(l|L)', '','$1꧀ꦭ꧀' ],
+			[ 'ꦁl', '','ꦔ꧀ꦭ' ], // vocal ended with -ng followed by l (Special panjingan)
+			//if you want to write "cecak" + aksara "la" instead, put a space between "ng" and "l"
+			[ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(l|L)', '','$1꧀ꦭ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(m|M)', '','$1꧀ꦩ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀n', '','$1꧀ꦤ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀N', '','$1꧀ꦟ꧀' ], // pasangan Na murda
@@ -142,6 +134,8 @@
 			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀​r', '','$1꧀ꦫ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
 			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀​R', '','$1꧀ꦬ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
 			//TODO: these two above doesn't seem to work
+			[ 'ꦁr', '','ꦔꦿ' ], // vocal ended with -ng followed by r (Special cakra)
+			//if you want to write "cecak" + aksara "ra" instead, put a space between "ng" and "r"
 			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ|ꦉ|ꦊ|ꦋ)꧀(r|R)', '','$1ꦿ' ], // special biconsonant -ra, cakra
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀s', '','$1꧀ꦱ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀S', '','$1꧀ꦯ꧀' ], // pasangan Sa murda
@@ -150,9 +144,16 @@
 			[ '꧀u', '','ꦸ' ], // u
 			[ '꧀U', '','꧀ꦈ' ], // U
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(v|V)', '','$1꧀ꦮ꦳꧀' ],
-			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
+			[ 'ꦁw', '','ꦔ꧀ꦮ' ], // vocal ended with -ng followed by w (Special panjingan)
+			//if you want to write "cecak" + aksara "wa" instead, put a space between "ng" and "w"
+			[ '(ꦲ|ꦤ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
+			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
+			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
 			[ '꧀x', '','ꦼ' ], // x is another way to write ê
 			//[ '꧀X', '','꧀ꦄꦼ' ], // X is another way to write Ê
+			[ 'ꦂy', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special pengkal)
+			[ 'ꦁy', '','ꦔꦾ' ], // vocal ended with -ng followed by y (Special pengkal)
+			//if you want to write "cecak" + aksara "ya" instead, put a space between "ng" and "y"
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
 			//TODO: the above code doesn't seem to work
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦣ|ꦡ|ꦞ|ꦜ|ꦙ|ꦬ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya, pengkal
@@ -162,8 +163,8 @@
 			// IV Special consonant and vowels
 			// IV. 1. Special consonant
 			[ 'ꦊq', '','ꦋ' ], // special character lê Raswadi
-			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
-			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
+			//[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
+			//[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
       //not need for alternate input
 			//[ 'ꦌx', '','ꦄꦼ' ], // Ê
 			//[ 'ꦝ꧀q', '','ꦞ꧀' ], // Da mahaprana
