@@ -5,49 +5,40 @@
 		id: 'ks-kbd',
 		name: 'Kashmiri kbd',
 		description: 'Kbd keyboard for Kashmiri language using Arabic script',
-		date: '2013-02-09',
-		author: 'Parag Nemade',
+		date: '2023-03-04',
+		author: 'Parag Nemade, Iflaq, Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
 		patterns: [
-			[ '\\~', '\u0653' ], // Hamza above
-			[ '1', '۱' ],
-			[ '2', '۲' ],
-			[ '3', '۳' ],
-			[ '4', '۴' ],
-			[ '5', '۵' ],
-			[ '6', '۶' ],
-			[ '7', '۷' ],
-			[ '8', '۸' ],
-			[ '9', '۹' ],
-			[ '0', '۰' ],
+			[ '`', '\u065B' ], // Inverted V above
 			[ '\\(', ')' ], // RTL mirroring
 			[ '\\)', '(' ], // RTL mirroring
 			[ '\\[', ']' ], // RTL mirroring
 			[ '\\]', '[' ], // RTL mirroring
-			[ '\\{', '\u0670' ], // Superscript Alef
-			[ '\\}', '\u0670' ], // Superscript Alef
+			[ '\\{', '}' ], // RTL mirroring
+			[ '\\}', '{' ], // RTL mirroring
 			[ '\\_', '\u0651' ], // Shadda
-			[ 'Q', 'ﷺ' ],
+
+			[ 'Q', 'ۄ' ], // Waw with ring
 			[ 'q', 'ق' ],
-			[ 'W', 'ؤ' ],
+			[ 'W', '\u0653' ], // Madda above
 			[ 'w', 'و' ],
-			[ 'E', 'ئ' ],
+			[ 'E', 'ؠ' ], // Kashmiri yeh
 			[ 'e', 'ع' ],
 			[ 'R', 'ڑ' ],
 			[ 'r', 'ر' ],
 			[ 'T', 'ٹ' ],
 			[ 't', 'ت' ],
-			[ 'Y', '\u0601' ], // Sanah
+			[ 'Y', '\u0656' ], // Subscript Alef
 			[ 'y', 'ے' ],
-			[ 'U', '،' ],
 			[ 'u', 'ء' ],
 			[ 'I', 'ۆ' ],
 			[ 'i', 'ی' ],
-			[ 'O', 'ۃ' ],
+			[ 'O', 'ٲ' ], // Alef with wavy hamza
 			[ 'o', 'ہ' ], // Heh goal
-			[ 'P', 'إ' ],
+			[ 'P', '\u0655' ], // Hamza below
 			[ 'p', 'پ' ],
+
 			[ 'A', 'آ' ],
 			[ 'a', 'ا' ],
 			[ 'S', 'ش' ],
@@ -64,14 +55,11 @@
 			[ 'j', 'ج' ],
 			[ 'K', 'خ' ],
 			[ 'k', 'ک' ],
-			[ 'L', '\u0613' ], // Radi Allahou anhu
+			[ 'L', '\u065F' ], // Arabic wavy hamza below
 			[ 'l', 'ل' ],
 			[ ';', '؛' ],
-			[ '\'', '\u0670' ], // Superscript Alef
-			[ '\\|', 'أ' ],
-			[ '\\\\', '؎' ],
-			[ '\\~', '\u064B' ], // Fathatan / FIXME This cannot actually work
-			[ '`', '\u064D' ], // Kasratan
+			[ '\\\\', '\u0657' ], // Inverted damma
+
 			[ 'Z', 'ذ' ],
 			[ 'z', 'ز' ],
 			[ 'X', 'ض' ],
