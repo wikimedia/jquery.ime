@@ -3761,6 +3761,7 @@ var palochkaVariants = {
 			{ input: 'asdfghjkl', output: 'اسدفگھجکل', description: 'Kashmiri kbd اسدفگھجکل' },
 			{ input: 'ZXCVBNM', output: 'ذضثظأںٔ', description: 'Kashmiri kbd ZXCVBNM' },
 			{ input: 'zxcvbnm', output: 'زصچطبنم', description: 'Kashmiri kbd zxcvbnm' },
+			{ input: 'IyU', output: 'ۆےٚ', description: 'Kashmiri kbd small V above' },
 			{ input: 'z<', output: 'زِ', description: 'Kashmiri kbd kasra' },
 			{ input: 'z>', output: 'زَ', description: 'Kashmiri kbd fatha' },
 			{ input: ',', output: '،', description: 'Kashmiri kbd comma' },

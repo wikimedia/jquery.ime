@@ -8,7 +8,7 @@
 		date: '2023-03-04',
 		author: 'Parag Nemade, Iflaq, Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.1',
+		version: '2.1',
 		patterns: [
 			[ '`', '\u065B' ], // Inverted V above
 			[ '\\(', ')' ], // RTL mirroring
@@ -31,8 +31,9 @@
 			[ 't', 'ت' ],
 			[ 'Y', '\u0656' ], // Subscript Alef
 			[ 'y', 'ے' ],
+			[ 'U', '\u065A' ], // Small V above
 			[ 'u', 'ء' ],
-			[ 'I', 'ۆ' ],
+			[ 'I', 'ۆ' ], // OE, waw with V above
 			[ 'i', 'ی' ],
 			[ 'O', 'ٲ' ], // Alef with wavy hamza
 			[ 'o', 'ہ' ], // Heh goal
