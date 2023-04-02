@@ -32,14 +32,14 @@
 			[ 'ꦃ(i|I)', '','ꦲꦶ' ], // vocal ended with -h followed by i
 			[ 'ꦃ(o|O)', '','ꦲꦺꦴ' ], // vocal ended with -h followed by o
 			[ 'ꦃ(u|U)', '','ꦲꦸ' ], // vocal ended with -h followed by u
-			[ 'ꦃ(x|X)', '','ꦲꦼ' ], // vocal ended with -h followed by u
+			[ 'ꦃ(x|X)', '','ꦲꦼ' ], // vocal ended with -h followed by x/ê
 
 			[ 'ꦂ(a|A)', '','ꦫ' ], // vocal ended with -r followed by a
 			[ 'ꦂ(e|E)', '','ꦫꦺ' ], // vocal ended with -r followed by e
 			[ 'ꦂ(i|I)', '','ꦫꦶ' ], // vocal ended with -r followed by i
 			[ 'ꦂ(o|O)', '','ꦫꦺꦴ' ], // vocal ended with -r followed by o
 			[ 'ꦂ(u|U)', '','ꦫꦸ' ], // vocal ended with -r followed by u
-			[ 'ꦂ(x|X)', '','ꦫꦼ' ], // vocal ended with -r followed by u
+			[ 'ꦂ(x|X)', '','ꦉ' ], // vocal ended with -r followed by x/ê
 			[ 'ꦂ(y|Y)', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special)
 
 			[ 'ꦁ(a|A)', '','ꦔ' ], // vocal ended with -ng followed by a
@@ -47,7 +47,7 @@
 			[ 'ꦁ(i|I)', '','ꦔꦶ' ], // vocal ended with -ng followed by i
 			[ 'ꦁ(o|O)', '','ꦔꦺꦴ' ], // vocal ended with -ng followed by o
 			[ 'ꦁ(u|U)', '','ꦔꦸ' ], // vocal ended with -ng followed by u
-			[ 'ꦁ(x|X)', '','ꦔꦼ' ], // vocal ended with -ng followed by u
+			[ 'ꦁ(x|X)', '','ꦔꦼ' ], // vocal ended with -ng followed by x/ê
 
 			[ 'ꦿ(a|A)', '','ꦿ' ], // medial consonant -r- followed by a
 			[ 'ꦿ(e|E)', '','ꦿꦺ' ], // medial consonant -r- followed by e
@@ -75,7 +75,6 @@
 			[ '꧀U', '','ꦈ' ], // U
 			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
 			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
-			[ 'ꦂx', '','ꦉ' ], // special character rê
 			[ '꧀x', '','ꦼ' ], // x is another way to write ê
 			[ '꧀X', '','ꦄꦼ' ], // X is another way to write Ê
 			[ 'ꦌx', '','ꦄꦼ' ], // Ê
@@ -116,15 +115,15 @@
 			[ 'ꦠ꧀​h', '','ꦠ꧀ꦲ꧀' ], // t_h (with zero-width-space)
 			[ 'ꦢ꧀​h', '','ꦢ꧀ꦲ꧀' ], // d_h (with zero-width-space)
 			[ '꧀​h', '','꧀ꦲ꧀' ],
-			[ '(꧀​|ꦿ|ꦾ|꦳)H', '','ꦴ' ],//tarung
 			[ 'ꦢ꧀h', '','ꦝ꧀' ], // dha
 			[ 'ꦣ꧀h', '','ꦞ꧀' ], // Dha murda
-			[ '(ꦢ|ꦣ)꧀H', '','ꦞ꧀' ], // Dha murda
 			[ 'ꦠ꧀h', '','ꦛ꧀' ], // tha
 			[ 'ꦛ꧀h', '','ꦜ꧀' ], // Tha murda
-			[ '(ꦠ|ꦛ)꧀H', '','ꦜ꧀' ], // Tha murda
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)h', '','$1ꦃ' ], // characters + h = -h (wignyan)
 			[ '(ꦤ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀h', '','$1꧀ꦲ꧀' ], // can't be started with k/d/t/g, reserved for bigraf kh/dh/th/gh
+			[ '(ꦢ|ꦣ)꧀H', '','ꦞ꧀' ], // Dha murda
+			[ '(ꦠ|ꦛ)꧀H', '','ꦜ꧀' ], // Tha murda
+			[ '(꧀​|ꦿ|ꦾ|꦳)H', '','ꦴ' ],//tarung
 			//[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ)꧀H', '','$1ꦴ' ], //tarung
 			[ 'ꦤ꧀​(j|J)', '','ꦤ꧀ꦗ꧀' ], // n+zero-width-space+j
 			[ 'ꦤ꧀(j|J)', '','ꦚ꧀ꦗ꧀' ], // n followed by j became nasalized (nasal sound 'ny' + j)(REF:nyj)
