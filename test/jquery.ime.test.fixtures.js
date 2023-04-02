@@ -2701,7 +2701,7 @@ var palochkaVariants = {
 			{ input: 'mas yayi', output: 'ꦩꦱ꧀ꦪꦪꦶ', description: '<consonant> + ZWS + y' },
 			{ input: 'pak raden', output: 'ꦥꦏ꧀ꦫꦢꦺꦤ꧀', description: '<consonant> + ZWS + r' },
 			{ input: 'suryasurYa', output: 'ꦱꦸꦂꦪꦱꦸꦫꦾ', description: '"layar" + "pengkal"' },
-			{ input: 'karyakarYa', output: 'ꦏꦂꦪꦏꦫꦾ', description: 'layar + y vs. layar + Y' },,
+			{ input: 'karyakarYa', output: 'ꦏꦂꦪꦏꦫꦾ', description: 'layar + y vs. layar + Y' },
 			{ input: 'ingsun cidrakxna', output: 'ꦲꦶꦁꦱꦸꦤ꧀ꦕꦶꦢꦿꦏꦼꦤ', description: 'n + ZWS + c' },
 			{ input: 'n ja', output: 'ꦤ꧀ꦗ', description: 'n + ZWS + j' },
 			{ input: 'n ga', output: 'ꦤ꧀ꦒ', description: 'n + ZWS + g' },
