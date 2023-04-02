@@ -156,7 +156,7 @@
 			[ 'ꦁw', '','ꦔ꧀ꦮ꧀' ], // cecak + w = nga + panjingan wa
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
 			// x = vowel
-			[ '꧀​y', '','꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+			//[ '꧀​y', '','꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
 			[ 'ꦁY', '','ꦔꦾ' ], // cecak + Y capital = nga + pengkal
 			[ 'ꦂY', '','ꦫꦾ' ], // layar + Y capital = ra + pengkal
 			[ 'ꦃY', '','ꦲꦾ' ], // wignya + Y capital = ha + pengkal
