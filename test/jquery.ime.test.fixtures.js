@@ -2672,7 +2672,7 @@ var palochkaVariants = {
 		inputmethod: 'jv-transliteration',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
-			{ input: 'AEIOUX', output: 'ꦄꦌꦆꦎꦈꦲꦼ', description: 'standalone vowels "AEIOUÊ" - for foreign vowel syllables' },
+			{ input: 'AEIOUX', output: 'ꦄꦌꦆꦎꦈꦄꦼ', description: 'standalone vowels "AEIOUÊ" - for foreign vowel syllables' },
 			{ input: 'aeioux', output: 'ꦲꦲꦺꦲꦶꦲꦺꦴꦲꦸꦲꦼ', description: 'vowels (sandhangan swara)' },
 			{ input: 'AiAuUuIiII', output: 'ꦍꦎꦴꦈꦴꦇꦅ', description: 'long standalone owels' },
 			{ input: 'aHiiuuai', output: 'ꦲꦴꦲꦷꦲꦹꦲꦻ', description: 'long vowels (sandhangan swara)' },
