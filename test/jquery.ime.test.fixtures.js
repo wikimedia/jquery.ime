@@ -2702,6 +2702,9 @@ var palochkaVariants = {
 			{ input: 'pak raden', output: 'ꦥꦏ꧀ꦫꦢꦺꦤ꧀', description: '<consonant> + ZWS + r' },
 			{ input: 'suryasurYa', output: 'ꦱꦸꦂꦪꦱꦸꦫꦾ', description: '"layar" + "pengkal"' },
 			{ input: 'karyakarYa', output: 'ꦏꦂꦪꦏꦫꦾ', description: 'layar + y vs. layar + Y' },
+			{ input: 'ingsun cidrakxna', output: 'ꦲꦶꦁꦱꦸꦤ꧀ꦕꦶꦢꦿꦏꦼꦤ', description: 'n + ZWS + c' },
+			{ input: 'n ja', output: 'ꦤ꧀ꦗ', description: 'n + ZWS + j' },
+			{ input: 'n ga', output: 'ꦤ꧀ꦒ', description: 'n + ZWS + g' },
 			{ input: 'n ya', output: 'ꦤ꧀ꦪ', description: 'n + ZWS + y' },
 			{ input: ')', output: '꧍', description: 'last line test' }
 		]

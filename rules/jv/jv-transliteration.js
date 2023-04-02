@@ -100,7 +100,8 @@
 
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀b', '','$1꧀ꦧ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀B', '','$1꧀ꦨ꧀' ], // pasangan Ba murda
-			[ 'ꦤ꧀​c', '','ꦤ꧀ꦕ꧀' ], // n + ZWS + C (delete the zero-width-space)
+			[ 'ꦤ꧀​c', '','ꦤ꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+//			[ 'ꦤ꧀​c', '','ꦤ꧀ꦕ꧀' ], // n + ZWS + C (delete the zero-width-space)
 			[ 'ꦤ꧀c', '','ꦚ꧀ꦕ꧀' ], // n followed by c became nasalized (nasal sound 'ny' + c)(REF:nyc)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀c', '','$1꧀ꦕ꧀' ],
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀C', '','$1꧀ꦖ꧀' ], // pasangan Ca murda(?)
@@ -127,7 +128,8 @@
 			[ '(ꦠ|ꦡ)꧀H', '','ꦜ꧀' ], // Tha murda
 			[ '(꧀​|ꦿ|ꦾ|꦳)H', '','ꦴ' ],//tarung
 			//[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ)꧀H', '','$1ꦴ' ], //tarung
-			[ 'ꦤ꧀​j', '','ꦤ꧀ꦗ꧀' ], // n + ZWS + j (delete the zero-width-space)
+			[ 'ꦤ꧀​j', '','ꦤ꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+//			[ 'ꦤ꧀​j', '','ꦤ꧀ꦗ꧀' ], // n + ZWS + j (delete the zero-width-space)
 			[ 'ꦤ꧀j', '','ꦚ꧀ꦗ꧀' ], // n followed by j became nasalized (nasal sound 'ny' + j)(REF:nyj)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(j|J)', '','$1꧀ꦗ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀k', '','$1꧀ꦏ꧀' ],
@@ -140,7 +142,8 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀p', '','$1꧀ꦥ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀P', '','$1꧀ꦦ꧀' ], // pasangan Pa murda
 			// q
-			[ '꧀​r', '','꧀ꦫ꧀' ], // pangkon + ZWS + r (delete the zero-width-space)
+			[ '꧀​r', '','꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+//			[ '꧀​r', '','꧀ꦫ꧀' ], // pangkon + ZWS + r (delete the zero-width-space)
 			[ 'ꦁR', '','ꦔꦿ' ], // cecak + R capital = nga + cakra
 			[ 'ꦂR', '','ꦫꦿ' ], // layar + R capital = ra + cakra
 			[ 'ꦃR', '','ꦲꦿ' ], // wignyan + R capital = ha + cakra
@@ -156,7 +159,7 @@
 			[ 'ꦁw', '','ꦔ꧀ꦮ꧀' ], // cecak + w = nga + panjingan wa
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
 			// x = vowel
-			//[ '꧀​y', '','꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+			[ '꧀​y', '','꧀ꦪ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
 			[ 'ꦁY', '','ꦔꦾ' ], // cecak + Y capital = nga + pengkal
 			[ 'ꦂY', '','ꦫꦾ' ], // layar + Y capital = ra + pengkal
 			[ 'ꦃY', '','ꦲꦾ' ], // wignya + Y capital = ha + pengkal
