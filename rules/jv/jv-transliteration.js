@@ -40,7 +40,6 @@
 			[ 'ꦂ(o|O)', '','ꦫꦺꦴ' ], // vocal ended with -r followed by o
 			[ 'ꦂ(u|U)', '','ꦫꦸ' ], // vocal ended with -r followed by u
 			[ 'ꦂ(x|X)', '','ꦉ' ], // vocal ended with -r followed by x/ê
-			[ 'ꦂ(y|Y)', '','ꦫꦾ' ], // vocal ended with -r followed by y (Special)
 
 			[ 'ꦁ(a|A)', '','ꦔ' ], // vocal ended with -ng followed by a
 			[ 'ꦁ(e|E)', '','ꦔꦺ' ], // vocal ended with -ng followed by e
@@ -73,7 +72,9 @@
 			[ '꧀O', '','ꦎ' ], // O
 			[ '꧀u', '','ꦸ' ], // u
 			[ '꧀U', '','ꦈ' ], // U
+			[ 'ꦭ꧀X', '','ꦭꦼ' ], // normal lê - use X capital
 			[ 'ꦭ꧀x', '','ꦊ' ], // special character lê
+			[ 'ꦫ꧀X', '','ꦫꦼ' ], // normal rê - use X capital
 			[ 'ꦫ꧀x', '','ꦉ' ], // special character rê
 			[ '꧀x', '','ꦼ' ], // x is another way to write ê
 			[ '꧀X', '','ꦄꦼ' ], // X is another way to write Ê
@@ -138,11 +139,13 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀p', '','$1꧀ꦥ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀P', '','$1꧀ꦦ꧀' ], // pasangan Pa murda
 			// q
-			[ 'ꦁr', '','ꦔꦿ' ], // cecak + r = nga + cakra
+			[ 'ꦁR', '','ꦔꦿ' ], // cecak + R capital = nga + cakra
+			[ 'ꦂR', '','ꦫꦿ' ], // layar + R capital = ra + cakra
+			[ 'ꦃR', '','ꦲꦿ' ], // wignyan + R capital = ha + cakra
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)r', '','$1ꦂ' ], // characters + r = -r (layar)
-			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​r', '','$1꧀ꦫ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
-			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​R', '','$1꧀ꦬ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
-			[ '(ꦲ|ꦃ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(r|R)', '','$1ꦿ' ], // special biconsonant -ra
+			[ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​r', '','$1꧀ꦫ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
+			[ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​R', '','$1꧀ꦬ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
+			[ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(r|R)', '','$1ꦿ' ], // special biconsonant -ra
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀s', '','$1꧀ꦱ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀S', '','$1꧀ꦯ꧀' ], // pasangan Sa murda
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀t', '','$1꧀ꦠ꧀' ],
@@ -152,13 +155,15 @@
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
 			// x = vowel
 			[ 'ꦤ꧀​y', '','ꦤ꧀ꦪ꧀' ], // n_y (with zero-width-space)
-			[ 'ꦁy', '','ꦔꦾ' ], // cecak + y = nga + pengkal
+			[ 'ꦁY', '','ꦔꦾ' ], // cecak + Y capital = nga + pengkal
+			[ 'ꦂY', '','ꦔꦾ' ], // layar + Y capital = ra + pengkal
+			[ 'ꦃY', '','ꦔꦾ' ], // wignya + Y capital = ha + pengkal
 			[ 'ꦗ꧀ꦤ꧀y', '','ꦘ꧀' ], // Nya murda - jnya
 			[ 'ꦤ꧀y', '','ꦚ꧀' ], // nya
 			[ 'ꦟ꧀y', '','ꦘ꧀' ], // Nya murda
 			[ '(ꦤ|ꦟ)꧀Y', '','ꦘ꧀' ], // NYA murda
-			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
-			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya,
+			[ '(ꦲ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
+			[ '(ꦲ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya,
 			// can't be started with n or y, reserved for bigraf ny (REF:-yy-)
 			[ '(ꦤ|ꦏ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(z|Z)', '','$1ꦾꦗ꦳꧀' ], // can't be started with d, reserved for bigraf dz
 
