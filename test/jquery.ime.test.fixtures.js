@@ -2689,7 +2689,6 @@ var palochkaVariants = {
 			{ input: 'naHniinuunai', output: 'ꦤꦴꦤꦷꦤꦹꦤꦻ', description: 'testing long vowels "tarung", "wulu melik", "suku mendut", "dirga mure"' },
 			{ input: 'kahxndak', output: 'ꦏꦲꦼꦤ꧀ꦢꦏ꧀', description: '"wignyan" + "pepet"' },
 			{ input: 'arxp', output: 'ꦲꦉꦥ꧀', description: '"layar" + "pepet"' },
-			{ input: 'surya', output: 'ꦱꦸꦫꦾ', description: '"layar" + "pengkal"' },
 			{ input: 'sangxt', output: 'ꦱꦔꦼꦠ꧀', description: '"cecak" + "pepet" https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/34 by Empat Tilda' },
 			{ input: 'pxpengxttan', output: 'ꦥꦼꦥꦺꦔꦼꦠ꧀ꦠꦤ꧀', description: 'pepengetan https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/16 by Empat Tilda' },
 			{ input: 'harYahangYahYang', output: 'ꦲꦫꦾꦲꦔꦾꦲꦾꦁ', description: '"cecak" + "pengkal"' },
@@ -2701,7 +2700,12 @@ var palochkaVariants = {
 			{ input: 'tyetyityotyutyx', output: 'ꦠꦾꦺꦠꦾꦶꦠꦾꦺꦴꦠꦾꦸꦠꦾꦼ', description: '"pengkal" + sandhangan' },
 			{ input: 'mas yayi', output: 'ꦩꦱ꧀ꦪꦪꦶ', description: '<consonant> + ZWS + y' },
 			{ input: 'pak raden', output: 'ꦥꦏ꧀ꦫꦢꦺꦤ꧀', description: '<consonant> + ZWS + r' },
-			{ input: 'karya', output: 'ꦩꦱ꧀ꦪꦪꦶ', description: '<consonant> + ZWS + y' },
+			{ input: 'suryasurYa', output: 'ꦱꦸꦂꦪꦱꦸꦫꦾ', description: '"layar" + "pengkal"' },
+			{ input: 'karyakarYa', output: 'ꦏꦂꦪꦏꦫꦾ', description: 'layar + y vs. layar + Y' },,
+			{ input: 'ingsun cidrakxna', output: 'ꦲꦶꦁꦱꦸꦤ꧀ꦕꦶꦢꦿꦏꦼꦤ', description: 'n + ZWS + c' },
+			{ input: 'n ja', output: 'ꦤ꧀ꦗ', description: 'n + ZWS + j' },
+			{ input: 'n ga', output: 'ꦤ꧀ꦒ', description: 'n + ZWS + g' },
+			{ input: 'n ya', output: 'ꦤ꧀ꦪ', description: 'n + ZWS + y' },
 			{ input: ')', output: '꧍', description: 'last line test' }
 		]
 	},
