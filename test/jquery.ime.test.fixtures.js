@@ -2672,7 +2672,7 @@ var palochkaVariants = {
 		inputmethod: 'jv-transliteration',
 		tests: [
 			{ input: '\\A', output: 'A', description: 'Javanese transliteration escape mode - A' },
-			{ input: 'AEIOUX', output: 'ꦄꦌꦆꦎꦈ', description: 'standalone vowels "AEIOUÊ" - for foreign vowel syllables' },
+			{ input: 'AEIOUX', output: 'ꦄꦌꦆꦎꦈꦲꦼ', description: 'standalone vowels "AEIOUÊ" - for foreign vowel syllables' },
 			{ input: 'aeioux', output: 'ꦲꦲꦺꦲꦶꦲꦺꦴꦲꦸꦲꦼ', description: 'vowels (sandhangan swara)' },
 			{ input: 'AiAuUuIiII', output: 'ꦍꦎꦴꦈꦴꦇꦅ', description: 'long standalone owels' },
 			{ input: 'aHiiuuai', output: 'ꦲꦴꦲꦷꦲꦹꦲꦻ', description: 'long vowels (sandhangan swara)' },
@@ -2693,7 +2693,7 @@ var palochkaVariants = {
 			{ input: 'sangxt', output: 'ꦱꦔꦼꦠ꧀', description: '"cecak" + "pepet" https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/34 by Empat Tilda' },
 			{ input: 'pxpengxttan', output: 'ꦥꦼꦥꦺꦔꦼꦠ꧀ꦠꦤ꧀', description: 'pepengetan https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/16 by Empat Tilda' },
 			{ input: 'ngya', output: 'ꦔꦾ', description: '"cecak" + "pengkal"' },
-			{ input: 'ngyxktossake', output: 'ꦔꦾꦼꦏ꧀ꦠꦺꦴꦱ꧀ꦱꦏꦺ', description: 'nyektosake: https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/22 by Empat Tilda' },
+			{ input: 'ngyxktossake', output: 'ꦔꦾꦼꦏ꧀ꦠꦺꦴꦱ꧀ꦱꦏꦺ', description: 'ngyektosake: https://jv.wikisource.org/wiki/Parembugan_Kaca:Serat_Pararaton.pdf/22 by Empat Tilda' },
 			{ input: 'ngra', output: 'ꦔꦿ', description: '"cecak" + "cakra"' },
 			{ input: 'ngwa', output: 'ꦔ꧀ꦮ', description: '"cecak" + "panjingan wa"' },
 			{ input: 'ngla', output: 'ꦔ꧀ꦭ', description: '"cecak" + "panjingan la"' },
