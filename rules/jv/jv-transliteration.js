@@ -14,17 +14,17 @@
 		maxKeyLength: 2,
 		patterns: [
 			[ '\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1' ],
-			[ 'ꦝ꧀q', '','ꦞ꧀' ], // Dha murda
+			/*[ 'ꦝ꧀q', '','ꦞ꧀' ], // Dha murda
 			[ 'ꦚ꧀q', '','ꦘ꧀' ], // Nya murda
 			[ 'ꦧ꧀q', '','ꦨ꧀' ], // Ba murda
-			[ 'ꦕ꧀q', '','ꦖ꧀' ], // Ca murda(?)
+			[ 'ꦕ꧀q', '','ꦖ꧀' ], // Ca murda
 			[ 'ꦒ꧀q', '','ꦓ꧀' ], // Ga murda
 			[ 'ꦗ꧀q', '','ꦙ꧀' ], // Ja Mahaprana
 			[ 'ꦏ꧀q', '','ꦑ꧀' ], // Ka murda
 			[ 'ꦤ꧀q', '','ꦟ꧀' ], // Na murda
 			[ 'ꦥ꧀q', '','ꦦ꧀' ], // Pa murda
 			[ 'ꦱ꧀q', '','ꦯ꧀' ], // Sa murda
-			[ 'ꦠ꧀q', '','ꦡ꧀' ], // Ta murda
+			[ 'ꦠ꧀q', '','ꦡ꧀' ], // Ta murda*/
 
 			// VII. Vocal ended with special pasangan followed by vocal = back to normal
 			[ 'ꦃa', '','ꦲ' ], // vocal ended with -h followed by a
@@ -53,9 +53,9 @@
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦿ|ꦾ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ|꦳)(r|R)', '','$1ꦂ' ], // hanacaraka + r = -r
 			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦿ|ꦾ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ|꦳)(ꦤ|ꦟ)꧀(g|G)', '','$1ꦁ' ], // hanacaraka + ng = -ng
 			// other vocals ended with h/r/ng
-			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦆ|ꦎ|ꦈ)(h|H)', '','$1ꦃ' ], // other vocal ended with -h
-			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦆ|ꦎ|ꦈ)(r|R)', '','$1ꦂ' ], // other vocal ended with -r
-			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦆ|ꦎ|ꦈ)(ꦤ|ꦟ)꧀(g|G)', '','$1ꦁ' ], // other vocal ended with -ng
+			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)(h|H)', '','$1ꦃ' ], // other vocal ended with -h
+			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)(r|R)', '','$1ꦂ' ], // other vocal ended with -r
+			[ '(ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)(ꦤ|ꦟ)꧀(g|G)', '','$1ꦁ' ], // other vocal ended with -ng
 
 			// V. Lower case consonant followed by lower case consonant: Basic
 			// Note: not all of these combination are valid in Javanese language, for example -hn-,
@@ -75,23 +75,28 @@
 			// the letter 'y' can only be found followed by consonant w (nasal for 'i')
 
 			[ '꧀a', '','' ], // default vowel is a, so, remove the pangkon
-			[ '꧀A', '','ꦄ' ], // A
+			/*[ '꧀A', '','ꦄ' ], // A*/
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀b', '','$1꧀ꦧ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀B', '','$1꧀ꦨ꧀' ], // pasangan Ba murda
-			[ 'ꦤ꧀​(c|C)', '','ꦚ꧀ꦕ꧀' ], // n+zero-width-space+c
+			[ 'ꦤ꧀​(c|C)', '','ꦤ꧀ꦕ꧀' ], // n+zero-width-space+c
 			[ 'ꦤ꧀(c|C)', '','ꦚ꧀ꦕ꧀' ], // n followed by c became nasalized (nasal sound 'ny' + c)(REF:nyc)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀c', '','$1꧀ꦕ꧀' ],
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀C', '','$1꧀ꦖ꧀' ], // pasangan Ca murda(?)
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀d', '','$1꧀ꦢ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀D', '','$1꧀ꦣ꧀' ],
 			[ '꧀e', '','ꦺ' ], // é|è
-			[ '꧀E', '','ꦌ' ], // É|È
+			/*[ '꧀E', '','ꦌ' ], // É|È*/
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(f|v|F|V)', '','$1꧀ꦥ꦳꧀' ],
+			[ 'ꦤ꧀​g', '','ꦔ꧀ꦒ꧀' ], // n_g (with zero-width-space)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀g', '','$1꧀ꦒ꧀' ], // can't be started with n, reserved for bigraf ng
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀G', '','$1꧀ꦓ꧀' ], // pasangan Ga murda (can't be started with n - see II. 2.)
+			[ 'ꦠ꧀​h', '','ꦠ꧀ꦲ꧀' ], // t_h (with zero-width-space)
+			[ 'ꦢ꧀​h', '','ꦢ꧀ꦲ꧀' ], // d_h (with zero-width-space)
+			[ 'ꦣ꧀h', '','ꦞ꧀' ], // Dha murda
+			[ '(ꦢ|ꦣ)꧀H', '','ꦞ꧀' ], // Dha murda
 			[ '(ꦤ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(h|H)', '','$1꧀ꦲ꧀' ], // can't be started with k/d/t/g, reserved for bigraf kh/dh/th/gh
 			[ '꧀i', '','ꦶ' ], // i
-			[ '꧀I', '','ꦆ' ], // I
+			/*[ '꧀I', '','ꦆ' ], // I*/
 			[ 'ꦤ꧀​(j|J)', '','ꦤ꧀ꦗ꧀' ], // n+zero-width-space+j
 			[ 'ꦤ꧀(j|J)', '','ꦚ꧀ꦗ꧀' ], // n followed by j became nasalized (nasal sound 'ny' + j)(REF:nyj)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(j|J)', '','$1꧀ꦗ꧀' ],
@@ -102,7 +107,7 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀n', '','$1꧀ꦤ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀N', '','$1꧀ꦟ꧀' ], // pasangan Na murda
 			[ '꧀o', '','ꦺꦴ' ], // o
-			[ '꧀O', '','ꦎ' ], // O
+			/*[ '꧀O', '','ꦎ' ], // O*/
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀p', '','$1꧀ꦥ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀P', '','$1꧀ꦦ꧀' ], // pasangan Pa murda
 			// q
@@ -114,11 +119,14 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀t', '','$1꧀ꦠ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀T', '','$1꧀ꦡ꧀' ], // pasangan Ta murda
 			[ '꧀u', '','ꦸ' ], // u
-			[ '꧀U', '','ꦈ' ], // U
+			/*[ '꧀U', '','ꦈ' ], // U*/
 			// v = f
 			[ '(ꦲ|ꦃ|ꦤ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦔ|ꦁ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(w|W)꧀', '','$1꧀ꦮ' ],
+			[ 'ꦗ꧀ꦤ꧀y', '','ꦘ꧀' ], // Nya murda - jnya
+			[ 'ꦟ꧀y', '','ꦘ꧀' ], // Nya murda
+			[ '(ꦤ|ꦟ)꧀Y', '','ꦘ꧀' ], // NYA murda
+			[ 'ꦤ꧀​y', '','ꦚ꧀ꦪ꧀' ], // n_y (with zero-width-space)
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '','$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
-
 			[ '(ꦲ|ꦃ|ꦫ|ꦂ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '','$1ꦾ' ], // special biconsonant -ya,
 			// can't be started with n or y, reserved for bigraf ny (REF:-yy-)
 			[ '(ꦤ|ꦏ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(z|Z)', '','$1ꦾꦗ꦳꧀' ], // can't be started with d, reserved for bigraf dz
@@ -141,24 +149,30 @@
 			[ 'ꦄu', '','ꦎꦴ' ], // Au
 			[ 'ꦶi', '','ꦷ' ], // long i (ii)
 			[ 'ꦆi', '','ꦇ' ], // long i (Ii)
+			[ 'ꦆI', '','ꦅ' ], // ?( II) - another glyph for I
 			[ 'ꦸu', '','ꦹ' ], // long u (uu)
 			[ 'ꦈu', '','ꦈꦴ' ], // long u (Uu)
 			[ 'ꦺꦴo', '','ꦵ' ], // Sundanese -o
 
 			// IV. 2. Extended consonant
-			[ 'ꦱ꧀​(s|h)', '','ꦰ꧀' ], // s_s (with zero-width-space)
+			/*[ 'ꦱ꧀​(s|h)', '','ꦰ꧀' ], // s_s (with zero-width-space) x
 			[ 'ꦏ꧀​h', '','ꦏ꧀ꦲ꧀' ], // k_h (with zero-width-space)
 			[ 'ꦒ꧀​h', '','ꦒ꧀ꦲ꧀' ], // g_h (with zero-width-space)
 			[ 'ꦢ꧀​z', '','ꦢ꧀ꦗ꦳꧀' ], // d_z (with zero-width-space)
-			[ 'ꦗ꧀​h', '','ꦙ' ], // j_h (with zero-width-space)
+			[ 'ꦗ꧀​h', '','ꦗ꧀ꦲ꧀' ], // j_h (with zero-width-space)
 			[ 'ꦱ꧀(s|h)', '','ꦰ꧀' ], // ss/sh
 			[ 'ꦏ꧀h', '','ꦏ꦳' ], // kh
 			[ 'ꦒ꧀h', '','ꦒ꦳' ], // gh
 			[ 'ꦢ꧀z', '','ꦢ꦳' ], // dz
-			[ 'ꦗ꧀h', '','ꦙ' ], // jh/Ja mahaprana
+			[ 'ꦗ꧀h', '','ꦙ' ], // jh/Ja mahaprana*/
 
 			// III. Non-words
 			// q and Q are special characters for choosing less used characters by pressing q/Q multiple times (rotating back)
+
+			[ 'ꦏ꧀Q', '','ꦐ꧀' ], // ka sasak
+			[ 'ꦫ꧀q', '','ꦿ' ], // another way to write -ra
+			[ 'ꦪ꧀q', '','ꦾ' ], // another way to write -ya
+
 			[ ' ', '','​' ], // zero-width-space, since javanese have no space
 			[ '꧅q', '','꧁' ], // rêrênggan kiwa
 			[ '꧄q', '','꧅' ], // pada luhur
@@ -174,14 +188,7 @@
 			[ '꧀[Q|q]', '','꦳' ], // cecak telu
 			[ 'q', '','꧀' ], // pangkon - to cut off the default -a vowel
 
-			[ 'ꦫq', '','ꦿ' ], // another way to write -ra
-			[ 'ꦪq', '','ꦾ' ], // another way to write -ya
-
 			// II. 1. Alphabetical ha-na-ca-ra-ka
-			[ 'ꦠ꧀​h', '','ꦠ꧀ꦲ꧀' ], // t_h (with zero-width-space)
-			[ 'ꦢ꧀​h', '','ꦢ꧀ꦲ꧀' ], // d_h (with zero-width-space)
-			[ 'ꦤ꧀​y', '','ꦚ꧀ꦪ꧀' ], // n_y (with zero-width-space)
-			[ 'ꦤ꧀​g', '','ꦔ꧀ꦒ꧀' ], // n_g (with zero-width-space)
 			[ 'ꦠ꧀h', '','ꦛ꧀' ], // th
 			[ 'ꦢ꧀h', '','ꦝ꧀' ], // dh
 			[ 'ꦤ꧀y', '','ꦚ꧀' ], // ny
@@ -215,11 +222,7 @@
 
 			// II. Basic Letters:
 			// II. 2. Capital Ha-Na-Ca-Ra-Ka (Aksara Murda)
-			[ '(ꦠ|ꦡ)꧀(h|H)', '','ꦛ꧀' ],
-			[ 'ꦣ꧀h', '','ꦞ꧀' ], // Dha murda
-			[ '(ꦢ|ꦣ)꧀H', '','ꦞ꧀' ], // Dha murda
-			[ 'ꦟ꧀y', '','ꦘ꧀' ], // Nya murda
-			[ '(ꦤ|ꦟ)꧀Y', '','ꦘ꧀' ], // NYA murda
+			[ '(ꦠ|ꦡ)꧀(h|H)', '','ꦛ꧀' ], //tha
 			[ '(ꦤ|ꦟ)꧀(g|G)', '','ꦔ꧀' ],// nga
 			[ 'A', '','ꦄ' ], // A
 			[ 'B', '','ꦨ꧀' ], // Ba murda
