@@ -204,6 +204,10 @@
 			name: 'Dagbani tilde',
 			source: 'rules/dag/dag-tilde.js'
 		},
+		'ddn-tilde': {
+			name: 'Dinde Tilde',
+			source: 'rules/ddn/ddn-tilde.js'
+		},
 		'de-transliteration': {
 			name: 'Deutsch Tilde',
 			source: 'rules/de/de-transliteration.js'
@@ -1093,6 +1097,10 @@
 		dar: {
 			autonym: 'дарган',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		ddn: {
+			autonym: 'dendi',
+			inputmethods: [ 'ddn-tilde' ]
 		},
 		de: {
 			autonym: 'Deutsch',
