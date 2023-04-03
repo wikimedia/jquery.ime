@@ -1285,6 +1285,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Dendi tilde test',
+		inputmethod: 'ddn-tilde',
+		tests: [
+			{ input: '~E', output: 'Ɛ', description: 'Dendi ~E -> Ɛ' },
+			{ input: '~e', output: 'ɛ', description: 'Dendi ~e -> ɛ' },
+			{ input: '~N', output: 'Ŋ', description: 'Dendi ~N -> Ŋ' },
+			{ input: '~n', output: 'ŋ', description: 'Dendi ~n -> ŋ' },
+			{ input: '~O', output: 'Ɔ', description: 'Dendi ~O -> Ɔ' },
+			{ input: '~o~\\', output: 'ɔ̀', description: 'Dendi ~o~\\ -> ɔ̀' },
+			{ input: '~e~/', output: 'ɛ́', description: 'Dendi ~e~/ -> ɛ́' },
+			{ input: 'u~-', output: 'ū', description: 'Dendi u~- -> ū' }
+		]
+	},
+	{
 		description: 'German Transliteration and keybuffer test',
 		inputmethod: 'de-transliteration',
 		tests: [
