@@ -384,6 +384,10 @@
 			name: 'Մայքրոսոֆթի հին արևմտահայերեն',
 			source: 'rules/hy/hy-wmslegacy.js'
 		},
+		'ibb-tilde': {
+			name: 'Ibibio - tilde',
+			source: 'rules/ibb/ibb-tilde.js'
+		},
 		'ig-tilde': {
 			name: 'Igbo - tilde',
 			source: 'rules/ig/ig-tilde.js'
@@ -1181,6 +1185,10 @@
 		ha: {
 			autonym: 'Hausa',
 			inputmethods: [ 'ha-tilde' ]
+		},
+		ibb: {
+			autonym: 'ibibio',
+			inputmethods: [ 'ibb-tilde' ]
 		},
 		ig: {
 			autonym: 'Igbo',
