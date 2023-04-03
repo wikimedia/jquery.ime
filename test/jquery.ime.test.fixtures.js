@@ -2135,6 +2135,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Ibibio tilde test',
+		inputmethod: 'ibb-tilde',
+		tests: [
+			{ input: '~e~i~n~o~a~u~E~I~N~O~A~U', output: 'ǝịñọʌụƎỊÑỌɅỤ', description: 'Ibibio tilde ǝịñọʌụƎỊÑỌɅỤ' },
+			{ input: 'a~/e~\\i~^o~-u~v', output: 'áèîōǔ', description: 'Ibibio tilde áèîōǔ' }
+		]
+	},
+	{
 		description: 'Igbo tilde test',
 		inputmethod: 'ig-tilde',
 		tests: [
