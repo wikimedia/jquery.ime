@@ -58,7 +58,7 @@
 			[ '꧀E', '', 'ꦌ' ], // É|È
 			[ '꧀i', '', 'ꦶ' ], // i
 			[ '꧀I', '', 'ꦆ' ], // I
-			[ '꧀o', '', 'ꦻ' ], // o -- used for dirga mure. for "taling tarung", type "qeH"
+			[ '꧀o', '', 'ꦺꦴ' ], // o
 			[ '꧀O', '', 'ꦎ' ], // O
 			[ '꧀u', '', 'ꦸ' ], // u
 			[ '꧀U', '', 'ꦈ' ], // U
@@ -174,7 +174,9 @@
 			[ 'ꦂq', '', 'ꦿ' ], // another way to write -ra
 			[ 'ꦪ꧀q', '', 'ꦾ' ], // another way to write -ya
 			[ 'ꦊq', '', 'ꦋ' ], // special character lê Raswadi
-
+			[ 'ꦺq', '', 'ꦻ' ], // ai - dirga mure
+			[ 'ꦺꦴq', '', 'ꦻꦴ' ], // au - dirga mure + tarung
+			
 			[ ' ', '', '​' ], // zero-width-space, since javanese have no space
 			[ '꧅q', '', '꧁' ], // rêrênggan kiwa
 			[ '꧄q', '', '꧅' ], // pada luhur
