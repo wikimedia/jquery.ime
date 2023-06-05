@@ -2,9 +2,9 @@
 	'use strict';
 
 	var tobaKbd = {
-		id: 'bbc-keyboard',
-		name: 'Toba Keyboard',
-		description: 'QWERTY-based Batak Toba keyboard',
+		id: 'bbc-transliteration',
+		name: 'Toba Transliteration',
+		description: 'QWERTY-based Batak Toba transliteration',
 		date: '2014-04-20',
 		URL: 'http://evertype.com/fonts/batak/',
 		author: 'design by Michael Everson, implementation by Amir E. Aharoni',
