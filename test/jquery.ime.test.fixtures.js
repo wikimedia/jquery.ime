@@ -2743,8 +2743,8 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Javanese transliteration test',
-		inputmethod: 'jv-transliteration',
+		description: 'Javanese Kongres test',
+		inputmethod: 'jv-kongres',
 		tests: [
 			{ input: "hncrkdtswlp;jyzmgb'q", output: 'ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦔ', description: 'hanacaraka sequence - 20 basic abugidas' }
 		]
