@@ -68,9 +68,9 @@
 			name: 'Ɓasaá tilde',
 			source: 'rules/bas/bas-tilde.js'
 		},
-		'bbc-keyboard': {
-			name: 'Toba Keyboard',
-			source: 'rules/bbc/bbc-keyboard.js'
+		'bbc-transliteration': {
+			name: 'Toba Transliteration',
+			source: 'rules/bbc/bbc-transliteration.js'
 		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
@@ -1008,7 +1008,7 @@
 		},
 		bbc: {
 			autonym: 'Batak Toba',
-			inputmethods: [ 'bbc-keyboard' ]
+			inputmethods: [ 'bbc-transliteration' ]
 		},
 		bci: {
 			autonym: 'wawle',
