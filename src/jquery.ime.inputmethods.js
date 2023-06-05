@@ -413,8 +413,12 @@
 			source: 'rules/ish/ish-tilde.js'
 		},
 		'jv-transliteration': {
-			name: 'Transliteration',
+			name: 'Transliterasi Jawa',
 			source: 'rules/jv/jv-transliteration.js'
+		},
+		'jv-kongres': {
+			name: 'Kongres Aksara Jawa',
+			source: 'rules/jv/jv-kongres.js'
 		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
@@ -1248,7 +1252,7 @@
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ',
-			inputmethods: [ 'jv-transliteration' ]
+			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
