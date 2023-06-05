@@ -116,5 +116,5 @@
 		]
 	};
 
-	$.ime.register( tobaKbd );
+	$.ime.register( jawaKbd );
 }( jQuery ) );
