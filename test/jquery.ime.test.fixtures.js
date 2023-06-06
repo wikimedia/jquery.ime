@@ -2723,6 +2723,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jawa Latin extended test',
+		inputmethod: 'jv-keyboard',
+		tests: [
+			{ input: '`En`ek', output: 'Ènèk', description: 'Jawa Latin extended È' },
+			{ input: '~Enak~e', output: 'Énaké', description: 'Jawa Latin extended É' },
+			{ input: '^En^eg', output: 'Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
+			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
+			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
+			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
+
+		]
+	},
+	{
 		description: 'Georgian Transliteration test',
 		inputmethod: 'ka-transliteration',
 		tests: [
