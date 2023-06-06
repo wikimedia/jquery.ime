@@ -2746,7 +2746,7 @@ var palochkaVariants = {
 		description: 'Javanese Kongres test',
 		inputmethod: 'jv-kongres',
 		tests: [
-			{ input: "/hncrkdtswlp;jyzmgb'zq", output: '꧋ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦔ꧀', description: 'Javanese Kongres - hanacaraka sequence - adeg-adeg + 20 basic abugidas (aksara nglegena) + virama/pangkon' },
+			{ input: "/hncrkdtswlp;jyzmgb'zq", output: '꧋ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦚ꧀', description: 'Javanese Kongres - hanacaraka sequence - adeg-adeg + 20 basic abugidas (aksara nglegena) + virama/pangkon' },
 			{ input: 'fvhihuhehohxh-h=h!h_h<', output: 'ꦉꦊꦲꦶꦲꦸꦲꦺꦲꦺꦴꦲꦼꦲ꦳ꦲꦀꦲꦵꦲꦷꦲꦹ', description: 'Javanese Kongres - other characters 1 (sandhangan swara)' },
 			{ input: 'AEIOUM>?NCKDTSPJGBZQXV+:"', output: 'ꦄꦌꦆꦎꦈꦍꦅꦇꦟꦖꦑꦣꦡꦯꦦꦘꦓꦨꦰꦐꦬꦋꦙꦞꦜ', description: 'Javanese Kongres - other characters 2 (aksara swara + murda)' },
 			{ input: 'hRhYhFhHh[h]hWhL', output: 'ꦲꦿꦲꦾꦲꦽꦲꦃꦲꦁꦲꦂꦲꦻꦲꦴ', description: 'Javanese Kongres - other characters 3 (wyanjana, sesigeg)' },
