@@ -1256,7 +1256,7 @@
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
-			inputmethods: [ 'jv-transliteration', 'jv-kongres', 'jv-keyboard' ]
+			inputmethods: [ 'jv-transliteration', 'jv-keyboard' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
