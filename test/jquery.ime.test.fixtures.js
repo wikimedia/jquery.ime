@@ -2143,6 +2143,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Indonesian keyboard test',
+		inputmethod: 'id-keyboard',
+		tests: [
+			{ input: '~Edamame', output: 'Édamame', description: 'Indonesian keyboard É' },
+			{ input: 'mer~eka', output: 'meréka', description: 'Indonesian keyboard é' },
+			{ input: 'ap`el', output: 'apèl', description: 'Indonesian keyboard' },
+			{ input: 'ap`el, b`eb`ek', output: 'apèl, bèbèk', description: 'Indonesian keyboard è' },
+			{ input: '`E`ek', output: 'Èèk', description: 'Indonesian keyboard È' },
+			{ input: '^Erang', output: 'Êrang', description: 'Indonesian keyboard Ê' },
+			{ input: 'm^em^erah', output: 'mêmêrah', description: 'Indonesian keyboard Ê' }
+		]
+	},
+	{
 		description: 'Igbo tilde test',
 		inputmethod: 'ig-tilde',
 		tests: [
