@@ -416,6 +416,10 @@
 			name: 'Transliteration',
 			source: 'rules/jv/jv-transliteration.js'
 		},
+		'jv-keyboard': {
+			name: 'Jawa Latin extended',
+			source: 'rules/jv/jv-keyboard.js'
+		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
 			source: 'rules/ka/ka-kbd.js'
@@ -1251,8 +1255,8 @@
 			inputmethods: [ 'ish-tilde' ]
 		},
 		jv: {
-			autonym: 'ꦧꦱꦗꦮ',
-			inputmethods: [ 'jv-transliteration' ]
+			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
+			inputmethods: [ 'jv-transliteration', 'jv-kongres', 'jv-keyboard' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
