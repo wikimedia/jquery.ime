@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var batakQwertyKbd = {
-		id: 'batak-qwerty',
-		name: 'Batak QWERTY',
-		description: 'QWERTY-based Batak keyboard',
+	var tobaKbd = {
+		id: 'bbc-transliteration',
+		name: 'Toba Transliteration',
+		description: 'QWERTY-based Batak Toba transliteration',
 		date: '2014-04-20',
 		URL: 'http://evertype.com/fonts/batak/',
 		author: 'design by Michael Everson, implementation by Amir E. Aharoni',
@@ -85,5 +85,5 @@
 		]
 	};
 
-	$.ime.register( batakQwertyKbd );
+	$.ime.register( tobaKbd );
 }( jQuery ) );
