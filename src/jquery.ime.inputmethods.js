@@ -1251,7 +1251,7 @@
 			inputmethods: [ 'ish-tilde' ]
 		},
 		jv: {
-			autonym: 'ꦧꦱꦗꦮ',
+			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
 			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
 		},
 		ka: {
