@@ -830,6 +830,10 @@
 			name: 'Sesotho tilde',
 			source: 'rules/st/st-tilde.js'
 		},
+		'su-keyboard': {
+			name: 'Sundanese keyboard',
+			source: 'rules/su/su-keyboard.js'
+		},
 		'sv-normforms': {
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
@@ -1513,6 +1517,10 @@
 		st: {
 			autonym: 'Sesotho',
 			inputmethods: [ 'st-tilde' ]
+		},
+		su: {
+			autonym: 'Sunda',
+			inputmethods: [ 'su-keyboard' ]
 		},
 		sv: {
 			autonym: 'Svenska',

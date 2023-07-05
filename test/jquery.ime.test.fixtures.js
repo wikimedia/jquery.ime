@@ -5488,6 +5488,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Sundanese keyboard test',
+		inputmethod: 'su-keyboard',
+		tests: [
+			{ input: '~E', output: 'É', description: 'Sundanese uppercase É' },
+			{ input: '~e', output: 'é', description: 'Sundanese lowercase é' }
+		]
+	},
+	{
 		description: 'Serbian keyboard test',
 		inputmethod: 'sr-kbd',
 		tests: [
