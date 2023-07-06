@@ -2728,6 +2728,7 @@ var palochkaVariants = {
 			{ input: 'nJa', output: 'ꦤ꧀ꦗ', description: 'n + ZWS + j' },
 			{ input: 'nGa', output: 'ꦤ꧀ꦒ', description: 'n + ZWS + g' },
 			{ input: 'n ya', output: 'ꦤ꧀ꦪ', description: 'n + ZWS + y' },
+			{ input: ',.', output: '꧈꧉', description: 'important punctuations test' },
 			{ input: ')', output: '꧍', description: 'last line test' }
 		]
 	},

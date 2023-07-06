@@ -261,7 +261,7 @@
 			[ '8', '', '꧘' ],
 			[ '9', '', '꧙' ],
 			[ ':', '', '꧇' ], // 'enclose Javanese numbers, e.g. ":1:"'
-			[ ', ', '', '꧈' ], // 'comma'
+			[ ',', '', '꧈' ], // 'comma'
 			[ '\\.', '', '꧉' ], // 'period'
 			[ '꧊\\|', '', '꧋' ], // 'opening paragraph character'
 			[ '\\|', '', '꧊' ], // 'poem character'
