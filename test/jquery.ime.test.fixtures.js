@@ -330,36 +330,26 @@ var palochkaVariants = {
 
 			{ input: 'A', output: 'ᯁ', description: 'Toba Transliteration - A - simalungun a' },
 			{ input: 'S', output: 'ᯙ', description: 'Toba Transliteration - S - simalungun sa' },
-
+			{ input: 'D', output: 'ᯩ', description: 'Toba Transliteration - D - talinga' },
 			{ input: 'F', output: '᯳', description: 'Toba Transliteration - F - virama' },
 			{ input: 'G', output: 'ᯏ', description: 'Toba Transliteration - G - simalungun ga' },
 			{ input: 'H', output: 'ᯃ', description: 'Toba Transliteration - H - simalungun ha' },
 			{ input: 'J', output: 'ᯄ', description: 'Toba Transliteration - J - mandailing ha' },
-
+			{ input: 'K', output: 'ᯱ', description: 'Toba Transliteration - K - hajoringan -h' },
 			{ input: 'L', output: 'ᯟ', description: 'Toba Transliteration - L - simalungun la' },
 
 			{ input: 'Z', output: 'ᯚ', description: 'Toba Transliteration - Z - mandailing sa' },
-
+			{ input: 'X', output: 'ᯰ', description: 'Toba Transliteration - X - amisara -ng' },
+			{ input: 'C', output: 'ᯠ', description: 'Toba Transliteration - C - nya / karo ca' },
+			{ input: 'V', output: '᯦', description: 'Toba Transliteration - V - tompi' },
 			{ input: 'B', output: 'ᯆ', description: 'Toba Transliteration - B - karo ba' },
 			{ input: 'N', output: 'ᯊ', description: 'Toba Transliteration - N - mandailing na' },
 			{ input: 'M', output: 'ᯕ', description: 'Toba Transliteration - M - simalungun ma' },
 
-			{ input: '`', output: 'ᯠ', description: 'Toba Transliteration - ` - nya' },
-			{ input: '=', output: 'ᯱ', description: 'Toba Transliteration - = - consonant sign h' },
-			{ input: '+', output: '᯦', description: 'Toba Transliteration - + - tompi' },
-			{ input: '-', output: '', description: 'Toba Transliteration - ng - amisara' },
-			{ input: '_', output: 'ᯩ', description: 'Toba Transliteration - _ - talinga' },
-			{ input: '', output: '', description: 'Toba Transliteration - ' },
-
-			{ input: 'B', output: 'ᯆ', description: 'Toba Transliteration - B - karo ba' },
-
 			{ input: [ [ '4', true ] ], output: '᯼', description: 'Toba Transliteration - alt-4 - bindu na metek' },
 			{ input: [ [ '5', true ] ], output: '᯽', description: 'Toba Transliteration - alt-5 - bindu pinarboras' },
 			{ input: [ [ '6', true ] ], output: '᯾', description: 'Toba Transliteration - alt-6 - bindu judul' },
-			{ input: [ [ '7', true ] ], output: '᯿', description: 'Toba Transliteration - alt-7 - bindu pangolat' },
-
-			{ input: [ [ 'w', true ] ], output: 'ᯍ', description: 'Toba Transliteration - alt-w' },
-			{ input: [ [ '`', true ] ], output: '`', description: 'Toba Transliteration - alt-`' }
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Toba Transliteration - alt-7 - bindu pangolat' }
 		]
 	},
 	{

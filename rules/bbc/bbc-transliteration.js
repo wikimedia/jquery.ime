@@ -7,8 +7,8 @@
 		description: 'QWERTY-based Batak Toba transliteration',
 		date: '2014-04-20',
 		URL: 'http://evertype.com/fonts/batak/',
-		author: 'design by Michael Everson, implementation by Amir E. Aharoni',
-		version: '1.0',
+		author: 'design by Michael Everson, implementation by Amir E. Aharoni and Benny Lin',
+		version: '1.1',
 		patterns: [
 			[ 'q', 'ᯥ' ],
 			[ 'w', 'ᯋ' ],
@@ -52,36 +52,27 @@
 
 			[ 'A', 'ᯁ' ],
 			[ 'S', 'ᯙ' ],
-
+			[ 'D', 'ᯩ' ],
 			[ 'F', '᯳' ],
 			[ 'G', 'ᯏ' ],
 			[ 'H', 'ᯃ' ],
 			[ 'J', 'ᯄ' ],
-
+			[ 'K', 'ᯱ' ],
 			[ 'L', 'ᯟ' ],
 
 			[ 'Z', 'ᯚ' ],
-
+			[ 'X', 'ᯰ' ],
+			[ 'C', 'ᯠ' ],
+			[ 'V', '᯦' ],
 			[ 'B', 'ᯆ' ],
 			[ 'N', 'ᯊ' ],
 			[ 'M', 'ᯕ' ],
-
-			[ '`', 'ᯠ' ],
-			[ '=', 'ᯱ' ],
-			[ '\\+', '᯦' ],
-			[ '-', '' ],
-			[ '_', 'ᯩ' ],
-
-			[ 'B', 'ᯆ' ]
 		],
 		patterns_x: [
 			[ '4', '᯼' ],
 			[ '5', '᯽' ],
 			[ '6', '᯾' ],
-			[ '7', '᯿' ],
-
-			[ 'w', 'ᯍ' ],
-			[ '`', '`' ]
+			[ '7', '᯿' ]
 		]
 	};
 
