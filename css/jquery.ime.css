@@ -116,7 +116,7 @@ span.ime-disable-shortcut {
 }
 
 /* The triangle shaped callout */
-.imeselector-menu:before {
+.imeselector-menu::before {
 	border-bottom: 7px solid #a2a9b1;
 	border-left: 7px solid transparent;
 	border-right: 7px solid transparent;
@@ -127,12 +127,12 @@ span.ime-disable-shortcut {
 	top: -7px;
 }
 
-.imeselector-menu.ime-right:before {
+.imeselector-menu.ime-right::before {
 	right: auto;
 	left: 9px;
 }
 
-.imeselector-menu:after {
+.imeselector-menu::after {
 	border-bottom: 6px solid #fff;
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
@@ -143,19 +143,19 @@ span.ime-disable-shortcut {
 	top: -6px;
 }
 
-.imeselector-menu.ime-right:after {
+.imeselector-menu.ime-right::after {
 	right: auto;
 	left: 10px;
 }
 
-.imeselector-menu.ime-position-top:before {
+.imeselector-menu.ime-position-top::before {
 	border-bottom: 0;
 	border-top: 7px solid #a2a9b1;
 	top: auto;
 	bottom: -7px;
 }
 
-.imeselector-menu.ime-position-top:after {
+.imeselector-menu.ime-position-top::after {
 	border-bottom: 0;
 	border-top: 6px solid #fff;
 	top: auto;
