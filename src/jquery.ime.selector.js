@@ -261,7 +261,6 @@
 		/**
 		 * Keydown event handler. Handles shortcut key presses
 		 *
-		 * @this HTMLElement
 		 * @param {jQuery.Event} e
 		 * @return {boolean}
 		 */
