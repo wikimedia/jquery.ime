@@ -379,7 +379,7 @@ var palochkaVariants = {
 
 			{ input: 'z', output: 'ᯝ', description: 'Alas Kluet keyboard - z = nga' },
 			{ input: 'x', output: 'ᯠ', description: 'Alas Kluet keyboard - x = nya' },
-			{ input: 'c', output: 'ᯡ', description: 'Alas Kluet keyboard - ca = sa+tompi' },
+			{ input: 'c', output: 'ᯡ', description: 'Alas Kluet keyboard - ca = sa' },
 			{ input: 'v', output: '᯦', description: 'Alas Kluet keyboard - v = tompi' },
 			{ input: 'b', output: 'ᯅ', description: 'Alas Kluet keyboard - ba' },
 			{ input: 'n', output: 'ᯉ', description: 'Alas Kluet keyboard - na' },
