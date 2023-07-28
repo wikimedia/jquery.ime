@@ -368,7 +368,7 @@ var palochkaVariants = {
 			{ input: 'p', output: 'ᯇ', description: 'Mandailing keyboard - pa' },
 
 			{ input: 'a', output: 'ᯀ', description: 'Mandailing keyboard - a' },
-			{ input: 's', output: 'ᯘ', description: 'Mandailing keyboard - sa' },
+			{ input: 's', output: 'ᯚ', description: 'Mandailing keyboard - sa' },
 			{ input: 'd', output: 'ᯑ', description: 'Mandailing keyboard - da' },
 			{ input: 'f', output: '᯳', description: 'Mandailing keyboard - f = panongonan' },
 			{ input: 'g', output: 'ᯎ', description: 'Mandailing keyboard - ga' },
