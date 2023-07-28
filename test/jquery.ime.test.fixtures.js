@@ -353,6 +353,54 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Karo keyboard test',
+		inputmethod: 'btx-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Karo keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯋ', description: 'Karo keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Karo keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Karo keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Karo keyboard - southern ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Karo keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Karo keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Karo keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Karo keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Karo keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Karo keyboard - a' },
+			{ input: 's', output: 'ᯘ', description: 'Karo keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Karo keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Karo keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Karo keyboard - ga' },
+			{ input: 'h', output: 'ᯀ', description: 'Karo keyboard - ha = a' },
+			{ input: 'j', output: 'ᯐ', description: 'Karo keyboard - ja' },
+			{ input: 'k', output: 'ᯂ', description: 'Karo keyboard - ka' },
+			{ input: 'l', output: 'ᯞ', description: 'Karo keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Karo keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Karo keyboard - x = nya' },
+			{ input: 'c', output: 'ᯠ', description: 'Karo keyboard - ca = nya' },
+			{ input: 'v', output: '᯦', description: 'Karo keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Karo keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Karo keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Karo keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Karo keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Karo keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Karo keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Karo keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Karo keyboard - H - hajoringan "-h"' },
+			{ input: 'N', output: 'ᯢ', description: 'Karo keyboard - nda' },
+			{ input: 'M', output: 'ᯣ', description: 'Karo keyboard - mba' },
+			{ input: 'Z', output: 'ᯰ', description: 'Karo keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Karo keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Karo keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Karo keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Karo keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Baoulé tilde test',
 		inputmethod: 'bci-tilde',
 		tests: [
