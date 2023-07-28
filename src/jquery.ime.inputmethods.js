@@ -72,6 +72,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'btd-keyboard': {
+			name: 'Pakpak (Dairi) Keyboard',
+			source: 'rules/btd/btd-keyboard.js'
+		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
 			source: 'rules/bci/bci-tilde.js'
@@ -1017,6 +1021,10 @@
 		bbc: {
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
+		},
+		btd: {
+			autonym: 'Batak Pakpak (Dairi)',
+			inputmethods: [ 'btd-keyboard' ]
 		},
 		bci: {
 			autonym: 'wawle',

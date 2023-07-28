@@ -353,6 +353,52 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Pakpak (Dairi) keyboard test',
+		inputmethod: 'btd-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Pakpak (Dairi) keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯍ', description: 'Pakpak (Dairi) keyboard - wa' },
+			{ input: 'e', output: 'ᯨ', description: 'Pakpak (Dairi) keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Pakpak (Dairi) keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Pakpak (Dairi) keyboard - southern ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Pakpak (Dairi) keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Pakpak (Dairi) keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Pakpak (Dairi) keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Pakpak (Dairi) keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Pakpak (Dairi) keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Pakpak (Dairi) keyboard - a' },
+			{ input: 's', output: 'ᯘ', description: 'Pakpak (Dairi) keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Pakpak (Dairi) keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Pakpak (Dairi) keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Pakpak (Dairi) keyboard - ga' },
+			{ input: 'h', output: 'ᯀ', description: 'Pakpak (Dairi) keyboard - ha = a' },
+			{ input: 'j', output: 'ᯐ', description: 'Pakpak (Dairi) keyboard - ja' },
+			{ input: 'k', output: 'ᯂ', description: 'Pakpak (Dairi) keyboard - ka' },
+			{ input: 'l', output: 'ᯞ', description: 'Pakpak (Dairi) keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Pakpak (Dairi) keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Pakpak (Dairi) keyboard - x = nya' },
+			{ input: 'c', output: 'ᯘ', description: 'Pakpak (Dairi) keyboard - ca = sa' },
+			{ input: 'v', output: '᯦', description: 'Pakpak (Dairi) keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Pakpak (Dairi) keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Pakpak (Dairi) keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Pakpak (Dairi) keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Pakpak (Dairi) keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Pakpak (Dairi) keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Pakpak (Dairi) keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Pakpak (Dairi) keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Pakpak (Dairi) keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Pakpak (Dairi) keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Pakpak (Dairi) keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Pakpak (Dairi) keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Pakpak (Dairi) keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Pakpak (Dairi) keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Baoulé tilde test',
 		inputmethod: 'bci-tilde',
 		tests: [
