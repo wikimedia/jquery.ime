@@ -379,7 +379,7 @@ var palochkaVariants = {
 
 			{ input: 'z', output: 'ᯝ', description: 'Angkola keyboard - z = nga' },
 			{ input: 'x', output: 'ᯠ', description: 'Angkola keyboard - x = nya' },
-			{ input: 'c', output: 'ᯡ', description: 'Angkola keyboard - ca = sa+tompi' },
+			{ input: 'c', output: 'ᯡ', description: 'Angkola keyboard - ca = sa' },
 			{ input: 'v', output: '᯦', description: 'Angkola keyboard - v = tompi' },
 			{ input: 'b', output: 'ᯅ', description: 'Angkola keyboard - ba' },
 			{ input: 'n', output: 'ᯉ', description: 'Angkola keyboard - na' },
