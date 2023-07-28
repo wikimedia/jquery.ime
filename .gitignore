@@ -6,6 +6,4 @@
 node_modules/
 dist/
 .eslintcache
-rules/bbc/bbc-transliteration - Copy.js
 rules/jv/jv-transliteration - Copy.js
-test/jquery.ime.test.fixtures - Copy.js

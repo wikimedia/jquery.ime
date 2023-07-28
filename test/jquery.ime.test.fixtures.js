@@ -330,36 +330,26 @@ var palochkaVariants = {
 
 			{ input: 'A', output: 'ᯁ', description: 'Toba Transliteration - A - simalungun a' },
 			{ input: 'S', output: 'ᯙ', description: 'Toba Transliteration - S - simalungun sa' },
-
+			{ input: 'D', output: 'ᯩ', description: 'Toba Transliteration - D - talinga' },
 			{ input: 'F', output: '᯳', description: 'Toba Transliteration - F - virama' },
 			{ input: 'G', output: 'ᯏ', description: 'Toba Transliteration - G - simalungun ga' },
 			{ input: 'H', output: 'ᯃ', description: 'Toba Transliteration - H - simalungun ha' },
 			{ input: 'J', output: 'ᯄ', description: 'Toba Transliteration - J - mandailing ha' },
-
+			{ input: 'K', output: 'ᯱ', description: 'Toba Transliteration - K - hajoringan -h' },
 			{ input: 'L', output: 'ᯟ', description: 'Toba Transliteration - L - simalungun la' },
 
 			{ input: 'Z', output: 'ᯚ', description: 'Toba Transliteration - Z - mandailing sa' },
-
+			{ input: 'X', output: 'ᯰ', description: 'Toba Transliteration - X - amisara -ng' },
+			{ input: 'C', output: 'ᯠ', description: 'Toba Transliteration - C - nya / karo ca' },
+			{ input: 'V', output: '᯦', description: 'Toba Transliteration - V - tompi' },
 			{ input: 'B', output: 'ᯆ', description: 'Toba Transliteration - B - karo ba' },
 			{ input: 'N', output: 'ᯊ', description: 'Toba Transliteration - N - mandailing na' },
 			{ input: 'M', output: 'ᯕ', description: 'Toba Transliteration - M - simalungun ma' },
 
-			{ input: '`', output: 'ᯠ', description: 'Toba Transliteration - ` - nya' },
-			{ input: '=', output: 'ᯱ', description: 'Toba Transliteration - = - consonant sign h' },
-			{ input: '+', output: '᯦', description: 'Toba Transliteration - + - tompi' },
-			{ input: '-', output: '', description: 'Toba Transliteration - ng - amisara' },
-			{ input: '_', output: 'ᯩ', description: 'Toba Transliteration - _ - talinga' },
-			{ input: '', output: '', description: 'Toba Transliteration - ' },
-
-			{ input: 'B', output: 'ᯆ', description: 'Toba Transliteration - B - karo ba' },
-
 			{ input: [ [ '4', true ] ], output: '᯼', description: 'Toba Transliteration - alt-4 - bindu na metek' },
 			{ input: [ [ '5', true ] ], output: '᯽', description: 'Toba Transliteration - alt-5 - bindu pinarboras' },
 			{ input: [ [ '6', true ] ], output: '᯾', description: 'Toba Transliteration - alt-6 - bindu judul' },
-			{ input: [ [ '7', true ] ], output: '᯿', description: 'Toba Transliteration - alt-7 - bindu pangolat' },
-
-			{ input: [ [ 'w', true ] ], output: 'ᯍ', description: 'Toba Transliteration - alt-w' },
-			{ input: [ [ '`', true ] ], output: '`', description: 'Toba Transliteration - alt-`' }
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Toba Transliteration - alt-7 - bindu pangolat' }
 		]
 	},
 	{
@@ -2728,19 +2718,22 @@ var palochkaVariants = {
 			{ input: 'nJa', output: 'ꦤ꧀ꦗ', description: 'n + ZWS + j' },
 			{ input: 'nGa', output: 'ꦤ꧀ꦒ', description: 'n + ZWS + g' },
 			{ input: 'n ya', output: 'ꦤ꧀ꦪ', description: 'n + ZWS + y' },
+			{ input: ',.', output: '꧈꧉', description: 'important punctuations test' },
 			{ input: ')', output: '꧍', description: 'last line test' }
 		]
 	},
 	{
-		description: 'Javanese Kongres test',
-		inputmethod: 'jv-kongres',
+		description: 'Jawa Latin extended test',
+		inputmethod: 'jv-keyboard',
 		tests: [
-			{ input: "/hncrkdtswlp;jyzmgb'zq", output: '꧋ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦚ꧀', description: 'Javanese Kongres - hanacaraka sequence - adeg-adeg + 20 basic abugidas (aksara nglegena) + virama/pangkon' },
-			{ input: 'fvhihuhehohxh-h=h!h_h<', output: 'ꦉꦊꦲꦶꦲꦸꦲꦺꦲꦺꦴꦲꦼꦲ꦳ꦲꦀꦲꦵꦲꦷꦲꦹ', description: 'Javanese Kongres - other characters 1 (sandhangan swara)' },
-			{ input: 'AEIOUM>?NCKDTSPJGBZQXV+:"', output: 'ꦄꦌꦆꦎꦈꦍꦅꦇꦟꦖꦑꦣꦡꦯꦦꦘꦓꦨꦰꦐꦬꦋꦙꦞꦜ', description: 'Javanese Kongres - other characters 2 (aksara swara + murda)' },
-			{ input: 'hRhYhFhHh[h]hWhL', output: 'ꦲꦿꦲꦾꦲꦽꦲꦃꦲꦁꦲꦂꦲꦻꦲꦴ', description: 'Javanese Kongres - other characters 3 (wyanjana, sesigeg)' },
-			{ input: '`1234567890', output: '꧇꧑꧒꧓꧔꧕꧖꧗꧘꧙꧐', description: 'Javanese Kongres - other characters 4 (number/angka)' },
-			{ input: '~@#$%^&*(),.{}', output: '꧊ꧏ꧐꧞꧟꧃꧄꧅꧌꧍꧈꧉꧁꧂', description: 'Javanese Kongres - other characters 5 (symbols)' }
+			{ input: '`En`ek', output: 'Ènèk', description: 'Jawa Latin extended È' },
+			{ input: '~Enak~e', output: 'Énaké', description: 'Jawa Latin extended É' },
+			{ input: '^En^eg', output: 'Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
+			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
+			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
+			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
+
 		]
 	},
 	{
@@ -5506,6 +5499,14 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'loant~sa', output: 'loantša', description: 'Sotho tilde loantša' },
 			{ input: 'ro~-na', output: 'rōna', description: 'Sotho tilde rōna' }
+		]
+	},
+	{
+		description: 'Sundanese keyboard test',
+		inputmethod: 'su-keyboard',
+		tests: [
+			{ input: '~E', output: 'É', description: 'Sundanese uppercase É' },
+			{ input: '~e', output: 'é', description: 'Sundanese lowercase é' }
 		]
 	},
 	{

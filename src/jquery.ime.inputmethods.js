@@ -413,12 +413,12 @@
 			source: 'rules/ish/ish-tilde.js'
 		},
 		'jv-transliteration': {
-			name: 'Transliterasi Jawa',
+			name: 'Transliteration',
 			source: 'rules/jv/jv-transliteration.js'
 		},
-		'jv-kongres': {
-			name: 'Kongres Aksara Jawa',
-			source: 'rules/jv/jv-kongres.js'
+		'jv-keyboard': {
+			name: 'Jawa Latin extended',
+			source: 'rules/jv/jv-keyboard.js'
 		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
@@ -833,6 +833,10 @@
 		'st-tilde': {
 			name: 'Sesotho tilde',
 			source: 'rules/st/st-tilde.js'
+		},
+		'su-keyboard': {
+			name: 'Sundanese keyboard',
+			source: 'rules/su/su-keyboard.js'
 		},
 		'sv-normforms': {
 			name: 'Normal forms',
@@ -1252,7 +1256,7 @@
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
-			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
+			inputmethods: [ 'jv-transliteration', 'jv-keyboard' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
@@ -1517,6 +1521,10 @@
 		st: {
 			autonym: 'Sesotho',
 			inputmethods: [ 'st-tilde' ]
+		},
+		su: {
+			autonym: 'Sunda',
+			inputmethods: [ 'su-keyboard' ]
 		},
 		sv: {
 			autonym: 'Svenska',
