@@ -72,6 +72,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'akb-keyboard': {
+			name: 'Angkola Keyboard',
+			source: 'rules/akb/akb-keyboard.js'
+		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
 			source: 'rules/bci/bci-tilde.js'
@@ -1017,6 +1021,10 @@
 		bbc: {
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
+		},
+		akb: {
+			autonym: 'Batak Angkola',
+			inputmethods: [ 'akb-keyboard' ]
 		},
 		bci: {
 			autonym: 'wawle',
