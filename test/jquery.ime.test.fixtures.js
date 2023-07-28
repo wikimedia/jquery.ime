@@ -353,6 +353,52 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Angkola keyboard test',
+		inputmethod: 'akb-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Angkola keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯋ', description: 'Angkola keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Angkola keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Angkola keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Angkola keyboard - southern ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Angkola keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Angkola keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Angkola keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Angkola keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Angkola keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Angkola keyboard - a' },
+			{ input: 's', output: 'ᯘ', description: 'Angkola keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Angkola keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Angkola keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Angkola keyboard - ga' },
+			{ input: 'h', output: 'ᯂ', description: 'Angkola keyboard - ha' },
+			{ input: 'j', output: 'ᯐ', description: 'Angkola keyboard - ja' },
+			{ input: 'k', output: 'ᯂ', description: 'Angkola keyboard - ka = ha' },
+			{ input: 'l', output: 'ᯞ', description: 'Angkola keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Angkola keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Angkola keyboard - x = nya' },
+			{ input: 'c', output: 'ᯡ', description: 'Angkola keyboard - ca = sa+tompi' },
+			{ input: 'v', output: '᯦', description: 'Angkola keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Angkola keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Angkola keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Angkola keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Angkola keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Angkola keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Angkola keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Angkola keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Angkola keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Angkola keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Angkola keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Angkola keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Angkola keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Angkola keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Baoulé tilde test',
 		inputmethod: 'bci-tilde',
 		tests: [
