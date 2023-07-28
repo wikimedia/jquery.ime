@@ -358,7 +358,7 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'q', output: '᯲', description: 'Mandailing keyboard - q = pangolat' },
 			{ input: 'w', output: 'ᯋ', description: 'Mandailing keyboard - wa' },
-			{ input: 'e', output: 'ᯧ', description: 'Mandailing keyboard = -e' },
+			{ input: 'e', output: 'ᯩ', description: 'Mandailing keyboard = -e' },
 			{ input: 'r', output: 'ᯒ', description: 'Mandailing keyboard - ra' },
 			{ input: 't', output: 'ᯖ', description: 'Mandailing keyboard - ta' },
 			{ input: 'y', output: 'ᯛ', description: 'Mandailing keyboard - ya' },
