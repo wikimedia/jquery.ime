@@ -353,6 +353,51 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Mandailing keyboard test',
+		inputmethod: 'btm-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Mandailing keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯋ', description: 'Mandailing keyboard - wa' },
+			{ input: 'e', output: 'ᯧ', description: 'Mandailing keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Mandailing keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Mandailing keyboard - ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Mandailing keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Mandailing keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Mandailing keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Mandailing keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Mandailing keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Mandailing keyboard - a' },
+			{ input: 's', output: 'ᯘ', description: 'Mandailing keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Mandailing keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Mandailing keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Mandailing keyboard - ga' },
+			{ input: 'h', output: 'ᯂ', description: 'Mandailing keyboard - ha' },
+			{ input: 'j', output: 'ᯐ', description: 'Mandailing keyboard - ja' },
+			{ input: 'k', output: 'ᯄ᯦', description: 'Mandailing keyboard - ka = ha+tompi' },
+			{ input: 'l', output: 'ᯞ', description: 'Mandailing keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Mandailing keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Mandailing keyboard - x = nya' },
+			{ input: 'c', output: 'ᯚ᯦', description: 'Mandailing keyboard - ca = sa+tompi' },
+			{ input: 'v', output: '᯦', description: 'Mandailing keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Mandailing keyboard - ba' },
+			{ input: 'n', output: 'ᯊ', description: 'Mandailing keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Mandailing keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Mandailing keyboard - E - kebereten' },
+			{ input: 'U', output: 'ᯥ', description: 'Mandailing keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Mandailing keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Mandailing keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Mandailing keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Mandailing keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Mandailing keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Mandailing keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Mandailing keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Baoulé tilde test',
 		inputmethod: 'bci-tilde',
 		tests: [
