@@ -1022,6 +1022,10 @@
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
 		},
+		btm: {
+			autonym: 'Batak Mandailing',
+			inputmethods: [ 'btm-keyboard' ]
+		},
 		bci: {
 			autonym: 'wawle',
 			inputmethods: [ 'bci-tilde' ]
