@@ -420,6 +420,10 @@
 			name: 'Jawa Latin extended',
 			source: 'rules/jv/jv-keyboard.js'
 		},
+		'jv-kongres': {
+			name: 'Kongres Aksara Jawa',
+			source: 'rules/jv/jv-kongres.js'
+		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
 			source: 'rules/ka/ka-kbd.js'
@@ -1256,7 +1260,7 @@
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
-			inputmethods: [ 'jv-transliteration', 'jv-keyboard' ]
+			inputmethods: [ 'jv-transliteration', 'jv-keyboard', 'jv-kongres' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
