@@ -39,11 +39,14 @@
 			[ 'n', 'ᯊ' ],
 			[ 'm', 'ᯔ' ],
 
-			[ 'E', 'ᯧ' ],
-			[ 'U', 'ᯥ' ],
-			[ 'I', 'ᯤ' ],
-			[ 'H', 'ᯱ' ],
-			[ 'Z', 'ᯰ' ]
+			[ 'E', 'ᯧ' ],//kebereten (-e)
+			[ 'U', 'ᯥ' ],//ina ni surat u
+			[ 'I', 'ᯤ' ],//ina ni surat i
+			[ 'H', 'ᯱ' ],//hajoringan (-h)
+			[ 'Z', 'ᯰ' ],//amisara (-ng)
+			[ '^', 'ᯰ' ],//amisara (-ng)
+			[ '<<', '<' ],
+			[ '<', 'ᯝ' ]//1BDD ᯝ BATAK LETTER NGA 
 		],
 		patterns_x: [
 			[ '4', '᯼' ],
