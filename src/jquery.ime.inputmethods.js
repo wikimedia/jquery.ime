@@ -72,6 +72,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'btz-keyboard': {
+			name: 'Alas Kluet Keyboard',
+			source: 'rules/btz/btz-keyboard.js'
+		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
 			source: 'rules/bci/bci-tilde.js'
@@ -1017,6 +1021,10 @@
 		bbc: {
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
+		},
+		btz: {
+			autonym: 'Batak Alas Kluet',
+			inputmethods: [ 'btz-keyboard' ]
 		},
 		bci: {
 			autonym: 'wawle',
