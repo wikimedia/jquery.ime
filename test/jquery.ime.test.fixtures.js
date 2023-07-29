@@ -361,7 +361,7 @@ var palochkaVariants = {
 			{ input: 'e', output: 'ᯩ', description: 'Simalungun keyboard = -e' },
 			{ input: 'r', output: 'ᯓ', description: 'Simalungun keyboard - ra' },
 			{ input: 't', output: 'ᯖ', description: 'Simalungun keyboard - southern ta' },
-			{ input: 'y', output: 'ᯛ', description: 'Simalungun keyboard - ya' },
+			{ input: 'y', output: 'ᯜ', description: 'Simalungun keyboard - ya' },
 			{ input: 'u', output: 'ᯯ', description: 'Simalungun keyboard = -u' },
 			{ input: 'i', output: 'ᯪ', description: 'Simalungun keyboard = -i' },
 			{ input: 'o', output: 'ᯬ', description: 'Simalungun keyboard = -o' },
