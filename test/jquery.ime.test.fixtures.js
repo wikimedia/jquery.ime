@@ -353,6 +353,45 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Mandailing transliteration test',
+		inputmethod: 'btm-transliteration',
+		tests: [
+			{ input: 'a', output: 'ᯀ', description: 'Mandailing transliteration a' },
+			{ input: 'ba', output: 'ᯅ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'ca', output: 'ᯚ᯦᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'da', output: 'ᯑ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'e', output: 'ᯀᯩ', description: 'Mandailing transliteration -@' },
+			{ input: 'f', output: '᯳', description: 'Mandailing transliteration PANONGONAN = virama' },
+			{ input: 'ga', output: 'ᯎ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'h', output: 'ᯱ', description: 'Mandailing transliteration CONSONANT SIGN H = hajoringan (-h)' },
+			{ input: 'ha', output: 'ᯂ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'i', output: 'ᯤ', description: 'Mandailing transliteration -@' },
+			{ input: 'ja', output: 'ᯐ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'ka', output: 'ᯄ᯦᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'la', output: 'ᯞ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'ma', output: 'ᯔ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'na', output: 'ᯊ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'o', output: 'ᯀᯬ', description: 'Mandailing transliteration -@' },
+			{ input: 'pa', output: 'ᯇ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'q', output: '᯲', description: 'Mandailing transliteration PANGOLAT (PANGGOTAP) = virama' },
+			{ input: 'ra', output: 'ᯒ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'sa', output: 'ᯚ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'ta', output: 'ᯖ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'u', output: 'ᯥ', description: 'Mandailing transliteration -@' },
+			{ input: 'v', output: '᯦', description: 'Mandailing transliteration TOMPI' },
+			{ input: 'wa', output: 'ᯋ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'x', output: 'ᯀᯧ', description: 'Mandailing transliteration VOWEL SIGN E = kebereten' },
+			{ input: 'ya', output: 'ᯛ᯲', description: 'Mandailing transliteration -@' },
+			{ input: 'z', output: 'ᯰ', description: 'Mandailing transliteration CONSONANT SIGN NG = amisara (-ng)' },
+			{ input: 'Mandung sampe amu tuson Wikikamus saro Mandailing', output: 'ᯔᯊ᯲ᯑᯮᯰ ᯚᯔ᯲ᯇᯩ ᯀᯔᯮ ᯖᯮᯚᯬᯊ᯲ ᯋᯪᯄ᯦ᯪᯄ᯦ᯔᯮᯚ᯲ ᯚᯒᯬ ᯔᯊ᯲ᯑᯤᯞᯪᯰ', description: 'Mandailing transliteration' },
+			
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Mandailing keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Mandailing keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Mandailing keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Mandailing keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Baoulé tilde test',
 		inputmethod: 'bci-tilde',
 		tests: [
