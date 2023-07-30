@@ -62,7 +62,8 @@
 			[ '(f|F)', '', '᯳' ],//1BF3 $᯳ BATAK PANONGONAN = virama
 			[ '(g|G)', '', 'ᯎ᯲' ],
 			[ '(h|H)', '(a|e|i|o|u|x)', 'ᯱ' ],//1BF1 ᯱ BATAK CONSONANT SIGN H = hajoringan (-h)
-			[ '(h|H)', '', 'ᯄ᯲' ],
+			[ 'H', '', 'ᯱ' ],//1BF1 ᯱ BATAK CONSONANT SIGN H = hajoringan (-h)
+			[ 'h', '', 'ᯄ᯲' ],
 			[ '(i|I)', '', 'ᯤ' ],
 			[ '(j|J)', '', 'ᯐ᯲' ],
 			[ '(k|K)', '', 'ᯄ᯦᯲' ],
