@@ -73,7 +73,7 @@
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
 		'btm-transliteration': {
-			name: 'Mandailing Keyboard',
+			name: 'Transliteration',
 			source: 'rules/btm/btm-transliteration.js'
 		},
 		'bci-tilde': {
