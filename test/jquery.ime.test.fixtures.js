@@ -364,7 +364,7 @@ var palochkaVariants = {
 			{ input: 'f', output: '᯳', description: 'Mandailing transliteration PANONGONAN = virama' },
 			{ input: 'ga', output: 'ᯎ', description: 'Mandailing transliteration ga' },
 			{ input: 'h', output: 'ᯱ', description: 'Mandailing transliteration CONSONANT SIGN H = hajoringan (-h)' },
-			{ input: 'ha', output: 'ᯂ', description: 'Mandailing transliteration ha' },
+			{ input: 'ha', output: 'ᯄ', description: 'Mandailing transliteration ha' },
 			{ input: 'i', output: 'ᯤ', description: 'Mandailing transliteration i' },
 			{ input: 'ja', output: 'ᯐ', description: 'Mandailing transliteration ja' },
 			{ input: 'ka', output: 'ᯄ᯦', description: 'Mandailing transliteration ka' },
