@@ -72,6 +72,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'btm-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/btm/btm-transliteration.js'
+		},
 		'btm-keyboard': {
 			name: 'Mandailing Keyboard',
 			source: 'rules/btm/btm-keyboard.js'
@@ -1024,7 +1028,7 @@
 		},
 		btm: {
 			autonym: 'Batak Mandailing',
-			inputmethods: [ 'btm-keyboard' ]
+			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
 		},
 		bci: {
 			autonym: 'wawle',
