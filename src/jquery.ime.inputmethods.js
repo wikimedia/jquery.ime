@@ -76,6 +76,10 @@
 			name: 'Transliteration',
 			source: 'rules/btm/btm-transliteration.js'
 		},
+		'btm-keyboard': {
+			name: 'Mandailing Keyboard',
+			source: 'rules/btm/btm-keyboard.js'
+		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
 			source: 'rules/bci/bci-tilde.js'
@@ -1024,7 +1028,7 @@
 		},
 		btm: {
 			autonym: 'Batak Mandailing',
-			inputmethods: [ 'btm-transliteration' ]
+			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
 		},
 		bci: {
 			autonym: 'wawle',
