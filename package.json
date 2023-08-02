@@ -58,6 +58,7 @@
   },
   "license": "(GPL-2.0-or-later OR MIT)",
   "scripts": {
+    "lint": "grunt lint",
     "test": "grunt test --verbose",
     "prepare": "grunt build"
   }
