@@ -690,10 +690,6 @@
 			name: 'Chichewa / Nyanja tilde',
 			source: 'rules/ny/ny-tilde.js'
 		},
-		'nzi-tilde': {
-			name: 'Nzema tilde',
-			source: 'rules/nzi/nzi-tilde.js'
-		},
 		'or-inscript': {
 			name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 			source: 'rules/or/or-inscript.js'
@@ -989,10 +985,6 @@
 		ajg: {
 			autonym: 'ajagbe',
 			inputmethods: [ 'ajg-tilde' ]
-		},
-		ak: {
-			autonym: 'Akan',
-			inputmethods: [ 'ak-qx', 'ak-tilde' ]
 		},
 		am: {
 			autonym: 'አማርኛ',
@@ -1452,7 +1444,7 @@
 		},
 		nzi: {
 			autonym: 'Nzema',
-			inputmethods: [ 'nzi-tilde' ]
+			inputmethods: [ 'ak-tilde' ]
 		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',
