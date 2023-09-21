@@ -2212,6 +2212,37 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jawi test',
+		inputmethod: 'id-jawi',
+		tests: [
+			{ input: 'a', output: 'ا', description: 'Jawi alif' },
+			{ input: 'b', output: 'ب', description: 'Jawi ba' },
+			{ input: 'c', output: 'ﭺ', description: 'Jawi ca' },
+			{ input: 'd', output: 'د', description: 'Jawi dal' },
+			{ input: 'e', output: 'َ', description: 'Jawi fathah -a' },
+			{ input: 'f', output: 'ف', description: 'Jawi fa' },
+			{ input: 'g', output: 'ݢ', description: 'Jawi gaf' },
+			{ input: 'h', output: 'ه', description: 'Jawi ha' },
+			{ input: 'i', output: 'ِ', description: 'Jawi kasrah -i' },
+			{ input: 'j', output: 'ج', description: 'Jawi jim' },
+			{ input: 'k', output: 'ى', description: 'Jawi kaf' },
+			{ input: 'l', output: 'ل', description: 'Jawi lam' },
+			{ input: 'm', output: 'م', description: 'Jawi mim' },
+			{ input: 'n', output: 'ن', description: 'Jawi nun' },
+			{ input: 'o', output: 'ْ', description: 'Jawi sukun' },
+			{ input: 'p', output: 'ڤ', description: 'Jawi pa' },
+			{ input: 'q', output: 'ق', description: 'Jawi qaf' },
+			{ input: 'r', output: 'ر', description: 'Jawi ra' },
+			{ input: 's', output: 'س', description: 'Jawi sin' },
+			{ input: 't', output: 'ت', description: 'Jawi ta' },
+			{ input: 'u', output: 'ُ', description: 'Jawi dhammah -u' },
+			{ input: 'v', output: 'ؤ', description: 'Jawi va' },
+			{ input: 'w', output: 'و', description: 'Jawi wau' },
+			{ input: 'x', output: 'ء', description: 'Jawi hamza' },
+			{ input: 'y', output: 'ي', description: 'Jawi ya' },
+			{ input: 'z', output: 'ز', description: 'Jawi zai' }
+	},
+	{
 		description: 'Igbo tilde test',
 		inputmethod: 'ig-tilde',
 		tests: [
