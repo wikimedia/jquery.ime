@@ -2236,7 +2236,7 @@ var palochkaVariants = {
 			{ input: 'sa', output: 'ᬲ', description: 'Balinese sa' },
 			{ input: 'ta', output: 'ᬢ', description: 'Balinese ta' },
 			{ input: 'u', output: 'ᬳᬸ', description: 'Balinese u' },
-			{ input: 'v', output: 'ᬀ', description: 'Balinese special letter' },
+			{ input: 'v', output: 'ᬀ‘, description: 'Balinese special letter' },
 			{ input: 'wa', output: 'ᬯ', description: 'Balinese wa' },
 			{ input: 'x', output: 'ᬳᭂ', description: 'Balinese pepet' },
 			{ input: 'ya', output: 'ᬬ', description: 'Balinese ya' },
