@@ -2241,6 +2241,7 @@ var palochkaVariants = {
 			{ input: 'x', output: 'ء', description: 'Jawi hamza' },
 			{ input: 'y', output: 'ي', description: 'Jawi ya' },
 			{ input: 'z', output: 'ز', description: 'Jawi zai' }
+		]
 	},
 	{
 		description: 'Igbo tilde test',
