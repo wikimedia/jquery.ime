@@ -555,6 +555,10 @@
 			newText +
 			element.value.substring( element.selectionEnd, element.value.length );
 
+		// Emit an event so that input fields that rely on events
+		// work properly
+		element.dispatchEvent( new Event( 'input' ) );
+
 		// restore scroll
 		element.scrollTop = scrollTop;
 		// set selection

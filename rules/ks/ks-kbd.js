@@ -8,7 +8,7 @@
 		date: '2023-03-04',
 		author: 'Parag Nemade, Iflaq, Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '2.1',
+		version: '2.2',
 		patterns: [
 			[ '`', '\u065B' ], // Inverted V above
 			[ '\\(', ')' ], // RTL mirroring
@@ -19,9 +19,9 @@
 			[ '\\}', '{' ], // RTL mirroring
 			[ '\\_', '\u0651' ], // Shadda
 
-			[ 'Q', 'ۄ' ], // Waw with ring
+			[ 'Q', '\u0653' ], // Madda above
 			[ 'q', 'ق' ],
-			[ 'W', '\u0653' ], // Madda above
+			[ 'W', 'ۄ' ], // Waw with ring
 			[ 'w', 'و' ],
 			[ 'E', 'ؠ' ], // Kashmiri yeh
 			[ 'e', 'ع' ],
@@ -37,7 +37,7 @@
 			[ 'i', 'ی' ],
 			[ 'O', 'ٲ' ], // Alef with wavy hamza
 			[ 'o', 'ہ' ], // Heh goal
-			[ 'P', '\u0655' ], // Hamza below
+			[ 'P', '\u0654' ], // Hamza above
 			[ 'p', 'پ' ],
 
 			[ 'A', 'آ' ],
@@ -56,7 +56,7 @@
 			[ 'j', 'ج' ],
 			[ 'K', 'خ' ],
 			[ 'k', 'ک' ],
-			[ 'L', '\u065F' ], // Arabic wavy hamza below
+			[ 'L', '\u0655' ], // Hamza below
 			[ 'l', 'ل' ],
 			[ ';', '؛' ],
 			[ '\\\\', '\u0657' ], // Inverted damma
@@ -73,7 +73,7 @@
 			[ 'b', 'ب' ],
 			[ 'N', 'ں' ],
 			[ 'n', 'ن' ],
-			[ 'M', '\u0654' ], // Hamza above
+			[ 'M', '\u065F' ], // Arabic wavy hamza below
 			[ 'm', 'م' ],
 			[ '\\>', '\u064E' ], // Fatha
 			[ ',', '،' ],
