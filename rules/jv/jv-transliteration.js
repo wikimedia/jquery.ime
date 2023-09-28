@@ -9,11 +9,22 @@
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Bennylin',
 		license: 'GPLv3',
-		version: '1.3',
+		version: '1.3.1',
 		contextLength: 1,
 		maxKeyLength: 2,
 		patterns: [
 			[ '\\\\([A-Za-z\\>_~\\.0-9])', '\\\\', '$1' ],
+			/* [ 'ꦝ꧀q', '', 'ꦞ꧀' ], // Dha murda
+			[ 'ꦚ꧀q', '', 'ꦘ꧀' ], // Nya murda
+			[ 'ꦧ꧀q', '', 'ꦨ꧀' ], // Ba murda
+			[ 'ꦕ꧀q', '', 'ꦖ꧀' ], // Ca murda
+			[ 'ꦒ꧀q', '', 'ꦓ꧀' ], // Ga murda
+			[ 'ꦗ꧀q', '', 'ꦙ꧀' ], // Ja Mahaprana
+			[ 'ꦏ꧀q', '', 'ꦑ꧀' ], // Ka murda
+			[ 'ꦤ꧀q', '', 'ꦟ꧀' ], // Na murda
+			[ 'ꦥ꧀q', '', 'ꦦ꧀' ], // Pa murda
+			[ 'ꦱ꧀q', '', 'ꦯ꧀' ], // Sa murda
+			[ 'ꦠ꧀q', '', 'ꦡ꧀' ], // Ta murda */
 
 			// VII. Vocal ended with special pasangan followed by vocal = back to normal
 			[ 'ꦃ(a|A)', '', 'ꦲ' ], // vocal ended with -h followed by a
@@ -100,7 +111,7 @@
 			[ 'ꦤ꧀g', '', 'ꦁ' ], // ng -> cecak
 			[ 'ꦟ꧀g', '', 'ꦟ꧀ꦒ꧀' ],
 			[ '(ꦤ|ꦟ)꧀G', '', 'ꦔ꧀' ], // nga
-			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)(ꦤ|ꦟ)꧀(g|G)', '', '$1ꦁ' ], // characters + ng = -ng (cecak)
+			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦊ|ꦋ|ꦉ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)(ꦤ|ꦟ)꧀(g|G)', '', '$1ꦁ' ], // characters + ng = -ng (cecak)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀g', '', '$1꧀ꦒ꧀' ], // can't be started with n, reserved for bigraf ng
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀G', '', '$1꧀ꦓ꧀' ], // pasangan Ga murda (can't be started with n - see II. 2.)
 			[ 'ꦠ꧀​h', '', 'ꦠ꧀ꦲ꧀' ], // t_h (with zero-width-space)
@@ -110,11 +121,12 @@
 			[ 'ꦣ꧀h', '', 'ꦞ꧀' ], // Dha murda
 			[ 'ꦠ꧀h', '', 'ꦛ꧀' ], // tha
 			[ 'ꦡ꧀h', '', 'ꦜ꧀' ], // Tha murda
-			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)h', '', '$1ꦃ' ], // characters + h = -h (wignyan)
+			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦊ|ꦋ|ꦉ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)h', '', '$1ꦃ' ], // characters + h = -h (wignyan)
 			[ '(ꦤ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ)꧀h', '', '$1꧀ꦲ꧀' ], // can't be started with k/d/t/g, reserved for bigraf kh/dh/th/gh
 			[ '(ꦢ|ꦣ)꧀H', '', 'ꦞ꧀' ], // Dha murda
 			[ '(ꦠ|ꦡ)꧀H', '', 'ꦜ꧀' ], // Tha murda
 			[ '(꧀|ꦿ|ꦾ|꦳)H', '', 'ꦴ' ], // tarung
+			// [ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ)꧀H', '', '$1ꦴ' ], //tarung
 			[ 'ꦤ꧀J', '', 'ꦤ꧀ꦗ꧀' ], // n + ZWS + J (delete the zero-width-space)
 			[ 'ꦤ꧀j', '', 'ꦚ꧀ꦗ꧀' ], // n followed by j became nasalized (nasal sound 'ny' + j)(REF:nyj)
 			[ '(ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(j|J)', '', '$1꧀ꦗ꧀' ],
@@ -129,10 +141,13 @@
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀P', '', '$1꧀ꦦ꧀' ], // pasangan Pa murda
 			// q
 			[ '꧀​r', '', '꧀ꦫ꧀' ], // pangkon + ZWS + y (delete the zero-width-space)
+//			[ '꧀​r', '', '꧀ꦫ꧀' ], // pangkon + ZWS + r (delete the zero-width-space)
 			[ 'ꦁR', '', 'ꦔꦿ' ], // cecak + R capital = nga + cakra
 			[ 'ꦂR', '', 'ꦫꦿ' ], // layar + R capital = ra + cakra
 			[ 'ꦃR', '', 'ꦲꦿ' ], // wignyan + R capital = ha + cakra
-			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)r', '', '$1ꦂ' ], // characters + r = -r (layar)
+			[ '(ꦲ|ꦤ|ꦕ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦪ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦐ|ꦑ|ꦓ|ꦖ|ꦘ|ꦙ|ꦜ|ꦞ|ꦟ|ꦡ|ꦣ|ꦦ|ꦨ|ꦬ|ꦯ|ꦰ|ꦊ|ꦋ|ꦉ|ꦿ|ꦾ|꦳|ꦴ|ꦻ|ꦍ|ꦺ|ꦼ|ꦶ|ꦷ|ꦸ|ꦹ|ꦄ|ꦌ|ꦅ|ꦆ|ꦇ|ꦎ|ꦈ)r', '', '$1ꦂ' ], // characters + r = -r (layar)
+			// [ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​r', '', '$1꧀ꦫ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
+			// [ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​R', '', '$1꧀ꦬ꧀' ], // consonant+zero-width-space+(r|R) doesn't make special biconsonant -ra
 			[ '(ꦲ|ꦤ|ꦕ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦚ|ꦩ|ꦒ|ꦧ|ꦛ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(r|R)', '', '$1ꦿ' ], // special biconsonant -ra
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀s', '', '$1꧀ꦱ꧀' ],
 			[ '(ꦤ|ꦏ|ꦢ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀S', '', '$1꧀ꦯ꧀' ], // pasangan Sa murda
@@ -150,6 +165,7 @@
 			[ 'ꦤ꧀y', '', 'ꦚ꧀' ], // nya
 			[ 'ꦟ꧀y', '', 'ꦘ꧀' ], // Nya murda
 			[ '(ꦤ|ꦟ)꧀Y', '', 'ꦘ꧀' ], // NYA murda
+			// [ '(ꦲ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀​(y|Y)', '', '$1꧀ꦪ꧀' ], // consonant+zero-width-space+(y|Y) doesn't make special biconsonant -ya
 			[ '(ꦲ|ꦫ|ꦏ|ꦢ|ꦠ|ꦱ|ꦮ|ꦭ|ꦥ|ꦝ|ꦗ|ꦩ|ꦒ|ꦧ|ꦔ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦦ|ꦯ|ꦡ)꧀(y|Y)', '', '$1ꦾ' ], // special biconsonant -ya,
 			// can't be started with n or y, reserved for bigraf ny (REF:-yy-)
 			[ '(ꦤ|ꦏ|ꦠ|ꦱ|ꦭ|ꦥ|ꦗ|ꦩ|ꦒ|ꦧ|ꦘ|ꦨ|ꦖ|ꦓ|ꦑ|ꦟ|ꦦ|ꦯ|ꦡ)꧀(z|Z)', '', '$1ꦾꦗ꦳꧀' ], // can't be started with d, reserved for bigraf dz
@@ -167,6 +183,18 @@
 			[ 'ꦈu', '', 'ꦈꦴ' ], // long u (Uu)
 			[ 'ꦺꦴo', '', 'ꦵ' ], // Sundanese -o
 
+			// IV. 2. Extended consonant
+			/* [ 'ꦱ꧀​(s|h)', '', 'ꦰ꧀' ], // s_s (with zero-width-space)
+			[ 'ꦏ꧀​h', '', 'ꦏ꧀ꦲ꧀' ], // k_h (with zero-width-space)
+			[ 'ꦒ꧀​h', '', 'ꦒ꧀ꦲ꧀' ], // g_h (with zero-width-space)
+			[ 'ꦢ꧀​z', '', 'ꦢ꧀ꦗ꦳꧀' ], // d_z (with zero-width-space)
+			[ 'ꦗ꧀​h', '', 'ꦗ꧀ꦲ꧀' ], // j_h (with zero-width-space)
+			[ 'ꦱ꧀(s|h)', '', 'ꦰ꧀' ], // ss/sh
+			[ 'ꦏ꧀h', '', 'ꦏ꦳' ], // kh
+			[ 'ꦒ꧀h', '', 'ꦒ꦳' ], // gh
+			[ 'ꦢ꧀z', '', 'ꦢ꦳' ], // dz
+			[ 'ꦗ꧀h', '', 'ꦙ' ], // jh/Ja mahaprana */
+
 			// III. Non-words
 			// q and Q are special characters for choosing less used characters by pressing q/Q multiple times (rotating back)
 			[ 'ꦏ꧀Q', '', 'ꦐ꧀' ], // ka sasak
@@ -174,8 +202,6 @@
 			[ 'ꦂq', '', 'ꦿ' ], // another way to write -ra
 			[ 'ꦪ꧀q', '', 'ꦾ' ], // another way to write -ya
 			[ 'ꦊq', '', 'ꦋ' ], // special character lê Raswadi
-			[ 'ꦺq', '', 'ꦻ' ], // ai - dirga mure
-			[ 'ꦺꦴq', '', 'ꦻꦴ' ], // au - dirga mure + tarung
 
 			[ ' ', '', '​' ], // zero-width-space, since javanese have no space
 			[ '꧅q', '', '꧁' ], // rêrênggan kiwa
