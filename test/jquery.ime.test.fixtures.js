@@ -2215,6 +2215,7 @@ var palochkaVariants = {
 		description: 'Jawi test',
 		inputmethod: 'id-jawi',
 		tests: [
+			{ input: 'jawi', output: 'جوِ', description: 'jawi' },
 			{ input: 'a', output: 'ا', description: 'Jawi alif' },
 			{ input: 'b', output: 'ب', description: 'Jawi ba' },
 			{ input: 'c', output: 'ﭺ', description: 'Jawi ca' },

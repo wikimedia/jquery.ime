@@ -12,7 +12,7 @@
 		contextLength: 3,
 		maxKeyLength: 3,
 		patterns: [
-			[ '\\\\([A-Za-z\\>_~\\.0-9])', '$1' ], //
+			[ '\\\\([A-Za-z\\>_~\\.0-9])', '', '$1' ], //escape characters
 			[ '(a|A)', '', 'ا' ], //alif
 			[ '(b|B)', '', 'ب' ], //ba
 			[ '(c|C)', '', 'ﭺ' ], //ca
