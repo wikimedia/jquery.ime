@@ -300,6 +300,7 @@ var palochkaVariants = {
 			{ input: 'x', output: 'ᬳᭂ', description: 'Balinese pepet' },
 			{ input: 'ya', output: 'ᬬ', description: 'Balinese ya' },
 			{ input: 'z', output: 'ᬱ', description: 'Balinese special letter' }
+		]
 	},
 	{
 		description: 'Basaa tilde test',
