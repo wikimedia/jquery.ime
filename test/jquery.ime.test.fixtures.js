@@ -279,7 +279,6 @@ var palochkaVariants = {
 			{ input: 'ca', output: 'ᬘ', description: 'Balinese ca' },
 			{ input: 'da', output: 'ᬤ', description: 'Balinese da' },
 			{ input: 'he', output: 'ᬳᬾ', description: 'Balinese e' },
-			{ input: 'haf', output: 'ᬳ᬴ ', description: 'Balinese special letter' },
 			{ input: 'ga', output: 'ᬕ', description: 'Balinese ga' },
 			{ input: 'ha', output: 'ᬳ', description: 'Balinese ha' },
 			{ input: 'hi', output: 'ᬳᬶ', description: 'Balinese i' },
