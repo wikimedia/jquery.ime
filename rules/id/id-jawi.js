@@ -9,8 +9,8 @@
 		author: 'Benny Lin, Pungkas, Michael',
 		license: 'GPLv3',
 		version: '1.0',
-		contextLength: 3,
-		maxKeyLength: 3,
+		contextLength: 1,
+		maxKeyLength: 1,
 		patterns: [
 			[ '\\\\([A-Za-z\\>_~\\.0-9])', '', '$1' ], //escape characters
 			[ '(a|A)', '', 'ا' ], //alif
