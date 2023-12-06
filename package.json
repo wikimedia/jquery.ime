@@ -21,8 +21,8 @@
     "Srikanth Lakshmanan <srik.lak@gmail.com>"
   ],
   "devDependencies": {
-    "eslint-config-wikimedia": "0.25.1",
-    "eslint-plugin-jsdoc": "46.4.4",
+    "eslint-config-wikimedia": "0.26.0",
+    "eslint-plugin-jsdoc": "46.9.0",
     "grunt": "1.5.3",
     "grunt-cli": "^1.4.3",
     "grunt-contrib-concat": "^2.0.0",
