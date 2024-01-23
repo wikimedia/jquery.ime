@@ -36,7 +36,7 @@
     "jquery": "^3.6.0",
     "qunit": "2.20.0",
     "stylelint": "15.10.2",
-    "stylelint-config-wikimedia": "0.16.0"
+    "stylelint-config-wikimedia": "0.16.1"
   },
   "repository": {
     "type": "git",
