@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint-config-wikimedia": "0.26.0",
     "eslint-plugin-jsdoc": "46.9.0",
-    "grunt": "1.5.3",
+    "grunt": "1.6.1",
     "grunt-cli": "^1.4.3",
     "grunt-contrib-concat": "^2.0.0",
     "grunt-contrib-connect": "^3.0.0",
