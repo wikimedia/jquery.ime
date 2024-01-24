@@ -1387,7 +1387,7 @@
 			inputmethods: [ 'mni-inscript2' ]
 		},
 		mnw: {
-			autonym: 'ဘာသာ မန်',
+			autonym: 'ဘာသာမန်',
 			inputmethods: [ 'mnw-simplified-anonta' ]
 		},
 		mos: {
