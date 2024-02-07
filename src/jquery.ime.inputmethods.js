@@ -168,6 +168,10 @@
 			name: 'ብሊን',
 			source: 'rules/byn/byn-geezim.js'
 		},
+		'chn-tilde': {
+			name: 'Chinook wawa tilde',
+			source: 'rules/chn/chn-tilde.js'
+		},
 		'chr': {
 			name: 'Cherokee Transliteration',
 			source: 'rules/chr/chr.js'
@@ -1089,6 +1093,10 @@
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		chn: {
+			autonym: 'chinook wawa',
+			inputmethods: [ 'chn-tilde' ]
 		},
 		chr: {
 			autonym: 'ᏣᎳᎩ',
