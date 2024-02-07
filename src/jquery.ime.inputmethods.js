@@ -168,6 +168,10 @@
 			name: 'ብሊን',
 			source: 'rules/byn/byn-geezim.js'
 		},
+		'chn-tilde': {
+			name: 'Chinook wawa tilde',
+			source: 'rules/chn/chn-tilde.js'
+		},
 		'chr': {
 			name: 'Cherokee Transliteration',
 			source: 'rules/chr/chr.js'
@@ -1090,6 +1094,10 @@
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
+		chn: {
+			autonym: 'chinook wawa',
+			inputmethods: [ 'chn-tilde' ]
+		},
 		chr: {
 			autonym: 'ᏣᎳᎩ',
 			inputmethods: [ 'chr' ]
@@ -1387,7 +1395,7 @@
 			inputmethods: [ 'mni-inscript2' ]
 		},
 		mnw: {
-			autonym: 'ဘာသာ မန်',
+			autonym: 'ဘာသာမန်',
 			inputmethods: [ 'mnw-simplified-anonta' ]
 		},
 		mos: {
