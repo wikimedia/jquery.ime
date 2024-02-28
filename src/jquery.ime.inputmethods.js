@@ -400,6 +400,10 @@
 			name: 'Ibibio - tilde',
 			source: 'rules/ibb/ibb-tilde.js'
 		},
+		'id-keyboard': {
+			name: 'Indonesian - Suku',
+			source: 'rules/id/id-keyboard.js'
+		},
 		'ig-tilde': {
 			name: 'Igbo - tilde',
 			source: 'rules/ig/ig-tilde.js'
@@ -1209,6 +1213,10 @@
 		ibb: {
 			autonym: 'ibibio',
 			inputmethods: [ 'ibb-tilde' ]
+		},
+		id: {
+			autonym: 'Indonesia',
+			inputmethods: [ 'id-keyboard' ]
 		},
 		ig: {
 			autonym: 'Igbo',
