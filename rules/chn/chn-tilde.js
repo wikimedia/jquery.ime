@@ -9,7 +9,7 @@
 		URL: 'https://github.com/wikimedia/jquery.ime',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
-		version: '1.0',
+		version: '1.1',
 		patterns: [
 			[ '~E', 'Ə' ],
 			[ '~e', 'ə' ],
@@ -19,6 +19,7 @@
 			[ '~l', 'ɬ' ],
 			[ '~X', 'X̣' ],
 			[ '~x', 'x̣' ],
+			[ '~\\\'', '’' ],
 			[ '~\\?', 'ʔ' ]
 		]
 	};
