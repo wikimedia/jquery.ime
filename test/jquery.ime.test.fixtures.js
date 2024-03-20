@@ -873,7 +873,7 @@ var palochkaVariants = {
 		description: 'Chinook Jargon tilde test',
 		inputmethod: 'chn-tilde',
 		tests: [
-			{ input: '~E~e~H~h~L~l~X~x~?', output: 'ƏəʰʰꞭɬX̣x̣ʔ', description: 'Chinook Jargon ƏəʰʰꞭɬX̣x̣ʔ' }
+			{ input: '~E~e~H~h~L~l~X~x~?~\'', output: 'ƏəʰʰꞭɬX̣x̣ʔ’', description: 'Chinook Jargon ƏəʰʰꞭɬX̣x̣ʔ’' }
 		]
 	},
 	{
