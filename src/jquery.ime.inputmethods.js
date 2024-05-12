@@ -148,6 +148,10 @@
 			name: 'Tibetan Sambhota',
 			source: 'rules/bo/bo-sambhota.js'
 		},
+		'bol-tilde': {
+			name: 'Bole - tilde',
+			source: 'rules/bol/bol-tilde.js'
+		},
 		'bom-tilde': {
 			name: 'Bèrom Tilde',
 			source: 'rules/bom/bom-tilde.js'
@@ -1069,6 +1073,10 @@
 		bo: {
 			autonym: 'བོད་ཡིག།',
 			inputmethods: [ 'bo-ewts', 'bo-sambhota' ]
+		},
+		bol: {
+			autonym: 'bòo pìkkà',
+			inputmethods: [ 'bol-tilde' ]
 		},
 		bom: {
 			autonym: 'bèrom',

@@ -794,6 +794,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bole tilde test',
+		inputmethod: 'bol-tilde',
+		tests: [
+			{ input: '~B', output: 'Ɓ', description: 'Bole tilde ~B -> Ɓ' },
+			{ input: '~b', output: 'ɓ', description: 'Bole tilde ~b -> ɓ' },
+			{ input: '~D', output: 'Ɗ', description: 'Bole tilde ~D -> Ɗ' },
+			{ input: '~d', output: 'ɗ', description: 'Bole tilde ~d -> ɗ' },
+			{ input: 'E~\\', output: 'È', description: 'Bole tilde E~\\ -> È' },
+			{ input: 'i~^', output: 'î', description: 'Bole tilde i~^ -> î' },
+			{ input: 'o~-', output: 'ō', description: 'Bole tilde o~- -> ō' },
+			{ input: 'a~v', output: 'ǎ', description: 'Bole tilde a~v -> ǎ' }
+		]
+	},
+	{
 		description: 'Berom tilde test',
 		inputmethod: 'bom-tilde',
 		tests: [
