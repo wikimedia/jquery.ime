@@ -1517,6 +1517,22 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Ekpeye tilde test',
+		inputmethod: 'ekp-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Ekpeye tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Ekpeye tilde ~e -> ẹ' },
+			{ input: '~I', output: 'Ị', description: 'Ekpeye tilde ~I -> Ị' },
+			{ input: '~i', output: 'ị', description: 'Ekpeye tilde ~i -> ị' },
+			{ input: '~O', output: 'Ọ', description: 'Ekpeye tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Ekpeye tilde ~o -> ọ' },
+			{ input: '~U', output: 'Ụ', description: 'Ekpeye tilde ~U -> Ụ' },
+			{ input: 'E~\\', output: 'È', description: 'Ekpeye tilde E~\\ -> È' },
+			{ input: 'i~^', output: 'î', description: 'Ekpeye tilde i~^ -> î' },
+			{ input: 'o~-', output: 'ō', description: 'Ekpeye tilde o~- -> ō' }
+		]
+	},
+	{
 		description: 'Modern Greek Std Kbd test',
 		inputmethod: 'el-kbd',
 		tests: [
