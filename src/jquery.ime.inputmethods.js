@@ -248,6 +248,10 @@
 			name: 'Efik - tilde',
 			source: 'rules/efi/efi-tilde.js'
 		},
+		'ekp-tilde': {
+			name: 'Ẹkpeye',
+			source: 'rules/ekp/ekp-tilde.js'
+		},
 		'el-kbd': {
 			name: 'Τυπική πληκτρολόγιο',
 			source: 'rules/el/el-kbd.js'
@@ -1165,6 +1169,10 @@
 		efi: {
 			autonym: 'efịk',
 			inputmethods: [ 'efi-tilde' ]
+		},
+		ekp: {
+			autonym: 'ẹkpeye',
+			inputmethods: [ 'ekp-tilde' ]
 		},
 		el: {
 			autonym: 'Ελληνικά',
