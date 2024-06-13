@@ -5,11 +5,11 @@
 		id: 'jv-keyboard',
 		name: 'Jawa Latin extended keyboard',
 		description: 'Javanese keyboard that include several accented letters',
-		date: '2023-06-06',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		date: '2023-10-07',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/jv-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
-		version: '1',
+		version: '1.01',
 		patterns: [
 			[ '~E', 'É' ],
 			[ '~e', 'é' ],
@@ -25,10 +25,10 @@
 			[ '~d', 'ḍ' ],
 			[ '~T', 'Ṭ' ],
 			[ '~t', 'ṭ' ],
-			[ '.D', 'Ḍ' ],
-			[ '.d', 'ḍ' ],
-			[ '.T', 'Ṭ' ],
-			[ '.t', 'ṭ' ]
+			[ '\\.D', 'Ḍ' ],
+			[ '\\.d', 'ḍ' ],
+			[ '\\.T', 'Ṭ' ],
+			[ '\\.t', 'ṭ' ]
 		]
 	};
 
