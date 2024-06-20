@@ -64,6 +64,10 @@
 			name: 'تۆرکجه',
 			source: 'rules/azb/azb-kbd.js'
 		},
+		'ban-transliteration': {
+			name: 'Balinese Transliteration',
+			source: 'rules/ban/ban-transliteration.js'
+		},
 		'bas-tilde': {
 			name: 'Ɓasaá tilde',
 			source: 'rules/bas/bas-tilde.js'
@@ -1021,6 +1025,10 @@
 		azb: {
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
+		},
+		ban: {
+			autonym: 'ᬩᬵᬲᬵᬩᬮᬶ bhāṣā Bali',
+			inputmethods: [ 'ban-transliteration' ]
 		},
 		bas: {
 			autonym: 'ɓasaá',
