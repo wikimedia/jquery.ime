@@ -108,6 +108,10 @@
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
 		},
+		'bin-tilde': {
+			name: 'Edo tilde',
+			source: 'rules/bin/bin-tilde.js'
+		},
 		'bkm-tilde': {
 			name: 'Kom tilde',
 			source: 'rules/bkm/bkm-tilde.js'
@@ -1057,6 +1061,10 @@
 		bgn: {
 			autonym: 'روچ کپتین بلوچی',
 			inputmethods: [ 'bgn-kbd' ]
+		},
+		bin: {
+			autonym: 'Ẹdo',
+			inputmethods: [ 'bin-tilde' ]
 		},
 		bho: {
 			autonym: 'भोजपुरी',

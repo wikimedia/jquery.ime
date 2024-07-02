@@ -577,6 +577,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Edo tilde test',
+		inputmethod: 'bin-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Edo tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Edo tilde ~e -> ẹ' },
+			{ input: '~O', output: 'Ọ', description: 'Edo tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Edo tilde ~o -> ọ' }
+		]
+	},
+	{
 		description: 'Kom tilde test',
 		inputmethod: 'bkm-tilde',
 		tests: [
