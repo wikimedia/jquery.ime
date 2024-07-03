@@ -2806,6 +2806,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jakaltek tilde test',
+		inputmethod: 'jac-tilde',
+		tests: [
+			{ input: "~'~n~N~x~X", output: 'ꞌn̈N̈ẍẌ', description: 'Jakaltek tilde ꞌn̈N̈ẍẌ' }
+		]
+	},
+	{
 		description: 'Javanese transliteration test',
 		inputmethod: 'jv-transliteration',
 		tests: [

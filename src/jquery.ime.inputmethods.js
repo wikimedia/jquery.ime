@@ -436,6 +436,10 @@
 			name: 'Esan Awain tilde',
 			source: 'rules/ish/ish-tilde.js'
 		},
+		'jac-tilde': {
+			name: 'Jakaltek tilde',
+			source: 'rules/jac/jac-tilde.js'
+		},
 		'jv-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/jv/jv-transliteration.js'
@@ -1293,6 +1297,10 @@
 		ish: {
 			autonym: 'awain',
 			inputmethods: [ 'ish-tilde' ]
+		},
+		jac: {
+			autonym: 'Abꞌxubꞌal Poptiꞌ',
+			inputmethods: [ 'jac-tilde' ]
 		},
 		jv: {
 			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
