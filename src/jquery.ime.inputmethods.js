@@ -966,6 +966,10 @@
 			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
 		},
+		'wlx-tilde': {
+			name: 'Waale tilde',
+			source: 'rules/wlx/wlx-tilde.js'
+		},
 		'wo-alt': {
 			name: 'Wolof Alt',
 			source: 'rules/wo/wo-alt.js'
@@ -1649,6 +1653,10 @@
 		vec: {
 			autonym: 'Vèneto',
 			inputmethods: [ 'vec-GVU' ]
+		},
+		wlx: {
+			autonym: 'Waale',
+			inputmethods: [ 'wlx-tilde' ]
 		},
 		wo: {
 			autonym: 'Wolof',
