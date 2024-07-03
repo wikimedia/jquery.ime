@@ -6491,6 +6491,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Waale tilde test',
+		inputmethod: 'wlx-tilde',
+		tests: [
+			{ input: '~E~e~N~n~O~o', output: 'ƐɛŊŋƆɔ', description: 'Waale tilde ƐɛŊŋƆɔ' }
+		]
+	},
+	{
 		description: 'Wolof Alt input method test',
 		inputmethod: 'wo-alt',
 		tests: [
