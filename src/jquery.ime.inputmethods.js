@@ -994,6 +994,10 @@
 	/* eslint-disable quote-props */
 
 	$.extend( $.ime.languages, {
+		abr: {
+			autonym: 'Abron',
+			inputmethods: [ 'ak-qx', 'ak-tilde' ]
+		},
 		ady: {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
