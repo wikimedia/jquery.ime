@@ -244,6 +244,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/doi/doi-inscript2.js'
 		},
+		'dua-tilde': {
+			name: 'Duala tilde keyboard',
+			source: 'rules/dua/dua-tilde.js'
+		},
 		'ee-tilde': {
 			name: 'Ewe Tilde',
 			source: 'rules/ee/ee-tilde.js'
@@ -1181,6 +1185,10 @@
 		doi: {
 			autonym: 'डोगरी',
 			inputmethods: [ 'doi-inscript2' ]
+		},
+		dua: {
+			autonym: 'Duálá',
+			inputmethods: [ 'dua-tilde' ]
 		},
 		en: {
 			autonym: 'English',
