@@ -1483,6 +1483,27 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Duala tilde input method test',
+		inputmethod: 'dua-tilde',
+		tests: [
+			{ input: '~b', output: 'ɓ', description: 'Duala tilde ~b' },
+			{ input: '~B', output: 'Ɓ', description: 'Duala tilde ~B' },
+			{ input: '~d', output: 'ɗ', description: 'Duala tilde ~d' },
+			{ input: '~D', output: 'Ɗ', description: 'Duala tilde ~D' },
+			{ input: '~e', output: 'ɛ', description: 'Duala tilde ~e' },
+			{ input: '~E', output: 'Ɛ', description: 'Duala tilde ~E' },
+			{ input: '~n', output: 'ŋ', description: 'Duala tilde ~n' },
+			{ input: '~N', output: 'Ŋ', description: 'Duala tilde ~N' },
+			{ input: '~j', output: 'ɲ', description: 'Duala tilde ~j' },
+			{ input: '~J', output: 'Ɲ', description: 'Duala tilde ~J' },
+			{ input: '~O', output: 'Ɔ', description: 'Duala tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Duala tilde ~o' },
+			{ input: 'Dua~/la~/', output: 'Duálá', description: 'Duala tilde Duálá' },
+			{ input: 'mule~vdi', output: 'mulědi', description: 'Duala tilde mulědi' },
+			{ input: 'a~\\o~^', output: 'àô', description: 'Duala tilde àô' },
+		]
+	},
+	{
 		description: 'Ewe tilde test',
 		inputmethod: 'ee-tilde',
 		tests: [
