@@ -1528,7 +1528,7 @@
 		},
 		sat: {
 			autonym: 'ᱥᱟᱱᱛᱟᱞᱤ (संताली)',
-			inputmethods: [ 'sat-inscript2', 'sat-inscript2-ol-chiki', 'sat-sarjom-baha' ]
+			inputmethods: [ 'sat-sarjom-baha', 'sat-inscript2-ol-chiki', 'sat-inscript2' ]
 		},
 		sd: {
 			autonym: 'सिंधी',
