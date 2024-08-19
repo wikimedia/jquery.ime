@@ -5646,6 +5646,15 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Silesian keyboard test',
+		inputmethod: 'szl-tilde',
+		tests: [
+			{ input: '~u~U~1~2~3~4~5~6~7', output: 'ůŮōôŏõãÔŌ', description: 'Silesian specific letters' },
+			{ input: '~s~l~z~x~c~n~S~L~Z~X~C~N', output: 'śłżźćńŚŁŻŹĆŃ', description: 'Uncommon letters' },
+			{ input: 'Dziyń dobry w~1m!', output: 'Dziyń dobry wōm!', description: 'Pratical use case example' }
+		]
+	},
+	{
 		description: 'Tamil 99 test',
 		inputmethod: 'ta-99',
 		tests: [

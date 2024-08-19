@@ -866,6 +866,10 @@
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
 		},
+		'szl-tilde': {
+			name: 'Silesian tilde',
+			source: 'rules/szl/szl-tilde.js'
+		},
 		'ta-99': {
 			name: 'தமிழ்99',
 			source: 'rules/ta/ta-99.js'
@@ -1581,6 +1585,10 @@
 		sv: {
 			autonym: 'Svenska',
 			inputmethods: [ 'sv-normforms' ]
+		},
+		szl: {
+			autonym: 'Ślōnskŏ',
+			inputmethods: [ 'szl-tilde' ]
 		},
 		ta: {
 			autonym: 'தமிழ்',
