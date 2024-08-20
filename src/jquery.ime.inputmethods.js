@@ -1587,7 +1587,7 @@
 			inputmethods: [ 'sv-normforms' ]
 		},
 		szl: {
-			autonym: 'Ślōnskŏ',
+			autonym: 'Ślůnski',
 			inputmethods: [ 'szl-tilde' ]
 		},
 		ta: {
