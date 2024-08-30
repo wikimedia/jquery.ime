@@ -1,4 +1,4 @@
-// Variables for Cyrillic with palochka transliteration tests.
+﻿// Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 // eslint-disable-next-line no-implicit-globals
@@ -2859,14 +2859,14 @@ var palochkaVariants = {
 		description: 'Jawa Latin extended test',
 		inputmethod: 'jv-keyboard',
 		tests: [
-			{ input: '`En`ek', output: 'Ènèk', description: 'Jawa Latin extended È' },
-			{ input: '~Enak~e', output: 'Énaké', description: 'Jawa Latin extended É' },
-			{ input: '^En^eg', output: 'Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: '`En`ek Qnqk', output: 'Ènèk Ènèk', description: 'Jawa Latin extended È' },
+			{ input: '~Enak~e Enake', output: 'Énaké Énaké', description: 'Jawa Latin extended É' },
+			{ input: '^En^eg Xnxg', output: 'Ênêg Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: 'QQ Qq qq EE Ee ee XX Xx xx', output: 'Q Q q E E e X X x', description: 'Normal QEX' },
 			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
 			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
 			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
 			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
-
 		]
 	},
 	{
