@@ -927,7 +927,7 @@
 			source: 'rules/ti/ti-geezim.js'
 		},
 		'tig-geezim': {
-			name: 'ትግረ',
+			name: 'Tigre GeezIM',
 			source: 'rules/tig/tig-geezim.js'
 		},
 		'tn-tilde': {
@@ -1619,7 +1619,7 @@
 			inputmethods: [ 'ti-geezim' ]
 		},
 		tig: {
-			autonym: 'ትግረ',
+			autonym: 'ትግሬ',
 			inputmethods: [ 'tig-geezim' ]
 		},
 		tkr: {
