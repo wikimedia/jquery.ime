@@ -464,6 +464,10 @@
 			name: 'Taqbaylit Alatin tilde',
 			source: 'rules/kab/kab-tilde.js'
 		},
+		'kaj-tilde': {
+			name: 'Jju tilde',
+			source: 'rules/kaj/kaj-tilde.js'
+		},
 		'kbp-tilde': {
 			name: 'Kabɩyɛ tilde',
 			source: 'rules/kbp/kbp-tilde.js'
@@ -1329,6 +1333,10 @@
 		kab: {
 			autonym: 'Taqbaylit / ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'kab-tilde', 'ber-tfng' ]
+		},
+		kaj: {
+			autonym: 'Jju',
+			inputmethods: [ 'kaj-tilde' ]
 		},
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
