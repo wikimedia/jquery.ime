@@ -1486,6 +1486,10 @@
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
+		nnh: {
+			autonym: 'ngiembɔɔn',
+			inputmethods: [ 'mul-cm' ]
+		},
 		nqo: {
 			autonym: 'ߒߞߏ',
 			inputmethods: [ 'nqo-standard-qwerty', 'nqo-transliteration' ]
