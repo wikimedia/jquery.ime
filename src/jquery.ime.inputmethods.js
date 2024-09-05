@@ -931,7 +931,7 @@
 			source: 'rules/ti/ti-geezim.js'
 		},
 		'tig-geezim': {
-			name: 'ትግረ',
+			name: 'Tigre GeezIM',
 			source: 'rules/tig/tig-geezim.js'
 		},
 		'tn-tilde': {
@@ -1494,6 +1494,10 @@
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
+		nnh: {
+			autonym: 'ngiembɔɔn',
+			inputmethods: [ 'mul-cm' ]
+		},
 		nqo: {
 			autonym: 'ߒߞߏ',
 			inputmethods: [ 'nqo-standard-qwerty', 'nqo-transliteration' ]
@@ -1627,7 +1631,7 @@
 			inputmethods: [ 'ti-geezim' ]
 		},
 		tig: {
-			autonym: 'ትግረ',
+			autonym: 'ትግሬ',
 			inputmethods: [ 'tig-geezim' ]
 		},
 		tkr: {
