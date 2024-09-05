@@ -2946,6 +2946,15 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jju tilde test',
+		inputmethod: 'kaj-tilde',
+		tests: [
+			{ input: '~A~a~U~u', output: 'A̱a̱U̱u̱', description: 'Jju tilde A̱a̱U̱u̱' },
+			{ input: 'n~a~/', output: 'ná̱', description: 'Jju tilde ná̱' },
+			{ input: 'zi~/', output: 'zí', description: 'Jju tilde zí' }
+		]
+	},
+	{
 		description: 'Kabiye tilde test',
 		inputmethod: 'kbp-tilde',
 		tests: [
