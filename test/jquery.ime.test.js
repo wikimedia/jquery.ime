@@ -65,12 +65,12 @@
 			seen.method = true;
 		} );
 		textareaIME.setLanguage( 'hi' );
-		assert.ok( seen.language, 'imeLanguageChange fires' );
+		assert.strictEqual( seen.language, true, 'imeLanguageChange fires' );
 		$textarea.off( 'imeLanguageChange.test' );
 
 		textareaIME.load( 'hi-transliteration' ).then( function () {
 			textareaIME.setIM( 'hi-transliteration' );
-			assert.ok( seen.method, 'imeMethodChange fires' );
+			assert.strictEqual( seen.method, true, 'imeMethodChange fires' );
 			$textarea.off( 'imeMethodChange.test' );
 			done();
 		} );
@@ -252,7 +252,11 @@
 			ime = $input.data( 'ime' );
 
 			ime.load( inputmethodId ).done( function () {
-				assert.ok( $.ime.inputmethods[ inputmethodId ], 'Rules file for ' + inputmethodId + ' exist and loaded correctly.' );
+				assert.notStrictEqual(
+					$.ime.inputmethods[ inputmethodId ],
+					undefined,
+					'Rules file for ' + inputmethodId + ' exist and loaded correctly.'
+				);
 				done();
 			} );
 		} );
@@ -268,7 +272,11 @@
 
 			for ( i = 0; i < inputmethods.length; i++ ) {
 				inputmethod = $.ime.sources[ inputmethods[ i ] ];
-				assert.ok( inputmethod, 'Definition for ' + inputmethods[ i ] + ' exist.' );
+				assert.notStrictEqual(
+					inputmethod,
+					undefined,
+					'Definition for ' + inputmethods[ i ] + ' exist.'
+				);
 			}
 		} );
 	} );
