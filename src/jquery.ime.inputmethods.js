@@ -416,6 +416,10 @@
 			name: 'Ibibio - tilde',
 			source: 'rules/ibb/ibb-tilde.js'
 		},
+		'id-jawi': {
+			name: 'Jawi Keyboard',
+			source: 'rules/id/id-jawi.js'
+		},
 		'ig-tilde': {
 			name: 'Igbo - tilde',
 			source: 'rules/ig/ig-tilde.js'
@@ -1261,6 +1265,10 @@
 		ibb: {
 			autonym: 'ibibio',
 			inputmethods: [ 'ibb-tilde' ]
+		},
+		id: {
+			autonym: 'Jawi',
+			inputmethods: [ 'id-jawi' ]
 		},
 		ig: {
 			autonym: 'Igbo',
