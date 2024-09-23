@@ -3906,6 +3906,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Krio tilde test',
+		inputmethod: 'kri-tilde',
+		tests: [
+			{ input: '~E~e~N~n~O~o', output: 'ƐɛŊŋƆɔ', description: 'Krio tilde ƐɛŊŋƆɔ' },
+			{ input: 'a~\\e~/i~^', output: 'àéî', description: 'Krio tilde àéî' }
+		]
+	},
+	{
 		description: 'Kashmiri InScript test',
 		inputmethod: 'ks-inscript',
 		tests: [

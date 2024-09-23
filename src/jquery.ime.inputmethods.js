@@ -516,6 +516,10 @@
 			name: 'Kanuri tilde',
 			source: 'rules/kr/kr-tilde.js'
 		},
+		'kri-tilde': {
+			name: 'Krio tilde',
+			source: 'rules/kri/kri-tilde.js'
+		},
 		'ky-cyrl-alt': {
 			name: 'Кыргыз Alt',
 			source: 'rules/ky/ky-cyrl-alt.js'
@@ -1381,6 +1385,10 @@
 		kr: {
 			autonym: 'kanuri',
 			inputmethods: [ 'kr-tilde' ]
+		},
+		kri: {
+			autonym: 'Krio',
+			inputmethods: [ 'kri-tilde' ]
 		},
 		ks: {
 			autonym: 'कॉशुर / کٲشُر',
