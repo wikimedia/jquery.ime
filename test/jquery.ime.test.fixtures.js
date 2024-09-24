@@ -4626,6 +4626,21 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Click consonant tilde keyboard test',
+		inputmethod: 'mul-click-tilde',
+		tests: [
+			{ input: '~o', output: 'ʘ', description: 'Click consonant tilde keyboard test - ~o -> ʘ' },
+			{ input: '~1', output: 'ǀ', description: 'Click consonant tilde keyboard test - ~1 -> ǀ' },
+			{ input: '~11', output: 'ǁ', description: 'Click consonant tilde keyboard test - ~11 -> ǁ' },
+			{ input: '~=', output: 'ǂ', description: 'Click consonant tilde keyboard test - ~= -> ǂ' },
+			{ input: '~#', output: 'ǂ', description: 'Click consonant tilde keyboard test - ~# -> ǂ' },
+			{ input: '~!', output: 'ǃ', description: 'Click consonant tilde keyboard test - ~! -> ǃ' },
+			{ input: '~,', output: '𝼊', description: 'Click consonant tilde keyboard test - ~, -> 𝼊' },
+			{ input: 'a~\\a~/a~^a~{a~-', output: 'àáâãā', description: 'Click consonant tilde keyboard test - àáâãā' },
+			{ input: '~c~x~q', output: 'ǀǁǃ', description: 'Click consonant tilde keyboard test - cxq -> ǀǁǃ' }
+		]
+	},
+	{
 		description: 'General Alphabet of Cameroon Languages tilde keyboard test',
 		inputmethod: 'mul-cm',
 		tests: [
