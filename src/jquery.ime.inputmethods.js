@@ -654,6 +654,10 @@
 			name: 'Burkina Faso tilde keyboard',
 			source: 'rules/mul-bf/mul-bf.js'
 		},
+		'mul-click-tilde': {
+			name: 'Click consonants keyboard',
+			source: 'rules/mul-click/mul-click-tilde.js'
+		},
 		'mul-cm': {
 			name: 'General Alphabet of Cameroon Languages tilde keyboard',
 			source: 'rules/mul-cm/mul-cm.js'
@@ -1477,6 +1481,10 @@
 		my: {
 			autonym: 'မြန်မာ',
 			inputmethods: [ 'my-mm3', 'my-xkb' ]
+		},
+		naq: {
+			autonym: 'Khoekhoegowab',
+			inputmethods: [ 'mul-click-tilde' ]
 		},
 		nb: {
 			autonym: 'Norsk (bokmål)',
