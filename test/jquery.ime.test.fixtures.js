@@ -5319,6 +5319,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Pontic input method test',
+		inputmethod: 'pnt-tilde',
+		tests: [
+			{ input: 'Σ~^σ~^ς~^Ξ~^ξ~^Χ~^χ~^Ζ~^ζ~^Ψ~^ψ~^', output: 'Σ̌σ̌ς̌Ξ̌ξ̌Χ̌χ̌Ζ̌ζ̌Ψ̌ψ̌', description: 'Pontic caron' },
+			{ input: 'Α~"α~"Ο~"ο~"Ά~"ά~"', output: 'Α̈α̈Ο̈ο̈Ά̈ά̈', description: 'Pontic diaeresis above' },
+			{ input: 'Α~:α~:Ο~:ο~:', output: 'Α̤α̤Ο̤ο̤', description: 'Pontic diaeresis below' },
+			{ input: 'Ό~:ό~:Ά~:ά~:Ό~:ό~:', output: 'Ό̤ό̤Ά̤ά̤Ό̤ό̤', description: 'Pontic stress and diaeresis below' }
+		]
+	},
+	{
 		description: 'Tarandine input method test',
 		inputmethod: 'roa-tara-GVU',
 		tests: [
