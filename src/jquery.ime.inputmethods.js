@@ -790,6 +790,10 @@
 			name: 'Piemontèis',
 			source: 'rules/pms/pms.js'
 		},
+		'pnt-tilde': {
+			name: 'Pontic tilde',
+			source: 'rules/pnt/pnt-tilde.js'
+		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
 			source: 'rules/roa-tara/roa-tara.js'
@@ -1569,6 +1573,10 @@
 		pms: {
 			autonym: 'Piemontèis',
 			inputmethods: [ 'pms' ]
+		},
+		pnt: {
+			autonym: 'Ποντιακά',
+			inputmethods: [ 'pnt-tilde' ]
 		},
 		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
