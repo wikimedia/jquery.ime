@@ -4101,6 +4101,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Lango tilde test',
+		inputmethod: 'laj-tilde',
+		tests: [
+			{ input: '~e~i~n~o~u~E~I~N~O~U', output: 'ëïŋöüËÏŊÖÜ', description: 'Lango tilde test ëïŋöüËÏŊÖÜ' }
+		]
+	},
+	{
 		description: 'Luganda tilde test',
 		inputmethod: 'lg-tilde',
 		tests: [

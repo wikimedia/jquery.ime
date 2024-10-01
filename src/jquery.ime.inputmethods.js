@@ -548,6 +548,10 @@
 			name: 'Kusaal tilde',
 			source: 'rules/kus/kus-tilde.js'
 		},
+		'laj-tilde': {
+			name: 'Lango tilde',
+			source: 'rules/laj/laj-tilde.js'
+		},
 		'lg-tilde': {
 			name: 'Luganda tilde',
 			source: 'rules/lg/lg-tilde.js'
@@ -1417,6 +1421,10 @@
 		kus: {
 			autonym: 'Kʋsaal',
 			inputmethods: [ 'kus-tilde' ]
+		},
+		laj: {
+			autonym: 'Lëblaŋo',
+			inputmethods: [ 'laj-tilde' ]
 		},
 		lbe: {
 			autonym: 'лакку',
