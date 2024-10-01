@@ -4,6 +4,10 @@
 	// All keys have quotes for consistency
 	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
+		'ach-tilde': {
+			name: 'Acholi tilde',
+			source: 'rules/ach/ach-tilde.js'
+		},
 		'af-tilde': {
 			name: 'Afrikaans tilde',
 			source: 'rules/af/af-tilde.js'
@@ -544,6 +548,10 @@
 			name: 'Kusaal tilde',
 			source: 'rules/kus/kus-tilde.js'
 		},
+		'laj-tilde': {
+			name: 'Lango tilde',
+			source: 'rules/laj/laj-tilde.js'
+		},
 		'lg-tilde': {
 			name: 'Luganda tilde',
 			source: 'rules/lg/lg-tilde.js'
@@ -1026,6 +1034,10 @@
 			autonym: 'Abron',
 			inputmethods: [ 'ak-qx', 'ak-tilde' ]
 		},
+		ach: {
+			autonym: 'Acoli',
+			inputmethods: [ 'ach-tilde' ]
+		},
 		ady: {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -1413,6 +1425,10 @@
 		kus: {
 			autonym: 'Kʋsaal',
 			inputmethods: [ 'kus-tilde' ]
+		},
+		laj: {
+			autonym: 'Lëblaŋo',
+			inputmethods: [ 'laj-tilde' ]
 		},
 		lbe: {
 			autonym: 'лакку',

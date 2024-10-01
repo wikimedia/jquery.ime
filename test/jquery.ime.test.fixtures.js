@@ -12,6 +12,13 @@ var palochkaVariants = {
 	// eslint-disable-next-line no-implicit-globals
 	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
+		description: 'Acholi tilde test',
+		inputmethod: 'ach-tilde',
+		tests: [
+			{ input: '~N~na~\\e~/', output: 'Ŋŋàé', description: 'Acholi tilde Ŋŋà' }
+		]
+	},
+	{
 		description: 'Aja tilde test',
 		inputmethod: 'ajg-tilde',
 		tests: [
@@ -4091,6 +4098,13 @@ var palochkaVariants = {
 			{ input: 'О', output: 'О', description: 'Kyrgyz Cyrillic letters, О does not change' },
 			{ input: 'у', output: 'у', description: 'Kyrgyz Cyrillic letters, у does not change' },
 			{ input: 'У', output: 'У', description: 'Kyrgyz Cyrillic letters, У does not change' }
+		]
+	},
+	{
+		description: 'Lango tilde test',
+		inputmethod: 'laj-tilde',
+		tests: [
+			{ input: '~e~i~n~o~u~E~I~N~O~U', output: 'ëïŋöüËÏŊÖÜ', description: 'Lango tilde test ëïŋöüËÏŊÖÜ' }
 		]
 	},
 	{
