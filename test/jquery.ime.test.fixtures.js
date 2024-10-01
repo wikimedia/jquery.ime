@@ -12,6 +12,13 @@ var palochkaVariants = {
 	// eslint-disable-next-line no-implicit-globals
 	testFixtures = [ // eslint-disable-line no-unused-vars
 	{
+		description: 'Acholi tilde test',
+		inputmethod: 'ach-tilde',
+		tests: [
+			{ input: '~N~na~\\e~/', output: 'Ŋŋàé', description: 'Acholi tilde Ŋŋà' }
+		]
+	},
+	{
 		description: 'Aja tilde test',
 		inputmethod: 'ajg-tilde',
 		tests: [

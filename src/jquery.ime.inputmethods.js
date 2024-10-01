@@ -4,6 +4,10 @@
 	// All keys have quotes for consistency
 	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
+		'ach-tilde': {
+			name: 'Acholi tilde',
+			source: 'rules/ach/ach-tilde.js'
+		},
 		'af-tilde': {
 			name: 'Afrikaans tilde',
 			source: 'rules/af/af-tilde.js'
@@ -1025,6 +1029,10 @@
 		abr: {
 			autonym: 'Abron',
 			inputmethods: [ 'ak-qx', 'ak-tilde' ]
+		},
+		ach: {
+			autonym: 'Acoli',
+			inputmethods: [ 'ach-tilde' ]
 		},
 		ady: {
 			autonym: 'адыгэбзэ',
