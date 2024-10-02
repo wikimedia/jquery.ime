@@ -391,7 +391,53 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Batak Mandailing transliteration test',
+		description: 'Batak Simalungun keyboard test',
+		inputmethod: 'bts-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Simalungun keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯌ', description: 'Simalungun keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Simalungun keyboard = -e' },
+			{ input: 'r', output: 'ᯓ', description: 'Simalungun keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Simalungun keyboard - southern ta' },
+			{ input: 'y', output: 'ᯜ', description: 'Simalungun keyboard - ya' },
+			{ input: 'u', output: 'ᯯ', description: 'Simalungun keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Simalungun keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Simalungun keyboard = -o' },
+			{ input: 'p', output: 'ᯈ', description: 'Simalungun keyboard - pa' },
+
+			{ input: 'a', output: 'ᯁ', description: 'Simalungun keyboard - a' },
+			{ input: 's', output: 'ᯙ', description: 'Simalungun keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Simalungun keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Simalungun keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯏ', description: 'Simalungun keyboard - ga' },
+			{ input: 'h', output: 'ᯃ', description: 'Simalungun keyboard - ha = a' },
+			{ input: 'j', output: 'ᯐ', description: 'Simalungun keyboard - ja' },
+			{ input: 'k', output: 'ᯃ', description: 'Simalungun keyboard - ka = ha' },
+			{ input: 'l', output: 'ᯟ', description: 'Simalungun keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Simalungun keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Simalungun keyboard - x = nya' },
+			{ input: 'c', output: 'ᯠ', description: 'Simalungun keyboard - ca = nya' },
+			{ input: 'v', output: '᯦', description: 'Simalungun keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Simalungun keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Simalungun keyboard - na' },
+			{ input: 'm', output: 'ᯕ', description: 'Simalungun keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Simalungun keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Simalungun keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Simalungun keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Simalungun keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Simalungun keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Simalungun keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Simalungun keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Simalungun keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Simalungun keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Simalungun keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{		
+    description: 'Batak Mandailing transliteration test',
 		inputmethod: 'btm-transliteration',
 		tests: [
 			{ input: 'a', output: 'ᯀ', description: 'Mandailing transliteration a' },

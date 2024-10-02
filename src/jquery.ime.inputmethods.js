@@ -80,6 +80,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'bts-keyboard': {
+			name: 'Simalungun Keyboard',
+			source: 'rules/bts/bts-keyboard.js'
+    },
 		'btm-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/btm/btm-transliteration.js'
@@ -1094,6 +1098,10 @@
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
 		},
+		bts: {
+			autonym: 'Batak Simalungun',
+			inputmethods: [ 'bts-keyboard' ]
+    },
 		btm: {
 			autonym: 'Batak Mandailing',
 			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
