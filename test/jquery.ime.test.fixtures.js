@@ -3193,6 +3193,7 @@ var palochkaVariants = {
 			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
 		]
 	},
+	{
 		description: 'Javanese Kongres test',
 		inputmethod: 'jv-kongres',
 		tests: [
