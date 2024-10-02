@@ -1350,6 +1350,7 @@
 			autonym: 'Indonesia',
 			inputmethods: [ 'id-keyboard' ]
 		},
+		{
 			autonym: 'Jawi',
 			inputmethods: [ 'id-jawi' ]
 		},
