@@ -278,6 +278,37 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Balinese test',
+		inputmethod: 'ban-transliteration',
+		tests: [
+			{ input: 'a', output: 'ᬳ', description: 'Balinese a' },
+			{ input: 'ba', output: 'ᬩ', description: 'Balinese ba' },
+			{ input: 'ca', output: 'ᬘ', description: 'Balinese ca' },
+			{ input: 'da', output: 'ᬤ', description: 'Balinese da' },
+			{ input: 'he', output: 'ᬳᬾ', description: 'Balinese e' },
+			{ input: 'ga', output: 'ᬕ', description: 'Balinese ga' },
+			{ input: 'ha', output: 'ᬳ', description: 'Balinese ha' },
+			{ input: 'hi', output: 'ᬳᬶ', description: 'Balinese i' },
+			{ input: 'ja', output: 'ᬚ', description: 'Balinese ja' },
+			{ input: 'ka', output: 'ᬓ', description: 'Balinese ka' },
+			{ input: 'la', output: 'ᬮ', description: 'Balinese la' },
+			{ input: 'ma', output: 'ᬫ', description: 'Balinese ma' },
+			{ input: 'na', output: 'ᬦ', description: 'Balinese na' },
+			{ input: 'o', output: 'ᬳᭀ', description: 'Balinese o' },
+			{ input: 'pa', output: 'ᬧ', description: 'Balinese pa' },
+			{ input: 'q', output: '᭄', description: 'Balinese virama' },
+			{ input: 'ra', output: 'ᬭ', description: 'Balinese ra' },
+			{ input: 'sa', output: 'ᬲ', description: 'Balinese sa' },
+			{ input: 'ta', output: 'ᬢ', description: 'Balinese ta' },
+			{ input: 'hu', output: 'ᬳᬸ', description: 'Balinese u' },
+			{ input: 'v', output: 'ᬀ', description: 'Balinese special letter' },
+			{ input: 'wa', output: 'ᬯ', description: 'Balinese wa' },
+			{ input: 'x', output: 'ᬳᭂ', description: 'Balinese pepet' },
+			{ input: 'ya', output: 'ᬬ', description: 'Balinese ya' },
+			{ input: 'za', output: 'ᬱ', description: 'Balinese special letter' }
+		]
+	},
+	{
 		description: 'Basaa tilde test',
 		inputmethod: 'bas-tilde',
 		tests: [
