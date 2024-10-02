@@ -12,7 +12,7 @@
 		version: '1.0',
 		patterns: [
 			[ '(q|Q)', '\u1BF2' ],// 	1BF2 \u1BF2 BATAK PANGOLAT (PANGGOTAP) = virama
-			[ '(w|QW', '\u1BCB' ],//1BCB \u1BCB BATAK LETTER WA 
+			[ '(w|QW)', '\u1BCB' ],//1BCB \u1BCB BATAK LETTER WA 
 			[ 'e', '\u1BE9' ],//1BE9 \u1BE9 BATAK VOWEL SIGN EE = talinga
 			[ 'E', '\u1BE7' ],//1BE7 \u1BE7 BATAK VOWEL SIGN E = kebereten 
 			[ '(r|R)', '\u1BD2' ],//1BD2 \u1BD2 BATAK LETTER RA 
