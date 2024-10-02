@@ -176,7 +176,7 @@
 			[ 'ꦊq', '', 'ꦋ' ], // special character lê Raswadi
 			[ 'ꦺq', '', 'ꦻ' ], // ai - dirga mure
 			[ 'ꦺꦴq', '', 'ꦻꦴ' ], // au - dirga mure + tarung
-			
+
 			[ ' ', '', '​' ], // zero-width-space, since javanese have no space
 			[ '꧅q', '', '꧁' ], // rêrênggan kiwa
 			[ '꧄q', '', '꧅' ], // pada luhur
@@ -261,7 +261,7 @@
 			[ '8', '', '꧘' ],
 			[ '9', '', '꧙' ],
 			[ ':', '', '꧇' ], // 'enclose Javanese numbers, e.g. ":1:"'
-			[ ', ', '', '꧈' ], // 'comma'
+			[ ',', '', '꧈' ], // 'comma'
 			[ '\\.', '', '꧉' ], // 'period'
 			[ '꧊\\|', '', '꧋' ], // 'opening paragraph character'
 			[ '\\|', '', '꧊' ], // 'poem character'
