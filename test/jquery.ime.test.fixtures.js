@@ -1,4 +1,4 @@
-// Variables for Cyrillic with palochka transliteration tests.
+﻿// Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 // eslint-disable-next-line no-implicit-globals
@@ -11,6 +11,13 @@ var palochkaVariants = {
 	},
 	// eslint-disable-next-line no-implicit-globals
 	testFixtures = [ // eslint-disable-line no-unused-vars
+	{
+		description: 'Acholi tilde test',
+		inputmethod: 'ach-tilde',
+		tests: [
+			{ input: '~N~na~\\e~/', output: 'Ŋŋàé', description: 'Acholi tilde Ŋŋà' }
+		]
+	},
 	{
 		description: 'Aja tilde test',
 		inputmethod: 'ajg-tilde',
@@ -271,6 +278,37 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Balinese test',
+		inputmethod: 'ban-transliteration',
+		tests: [
+			{ input: 'a', output: 'ᬳ', description: 'Balinese a' },
+			{ input: 'ba', output: 'ᬩ', description: 'Balinese ba' },
+			{ input: 'ca', output: 'ᬘ', description: 'Balinese ca' },
+			{ input: 'da', output: 'ᬤ', description: 'Balinese da' },
+			{ input: 'he', output: 'ᬳᬾ', description: 'Balinese e' },
+			{ input: 'ga', output: 'ᬕ', description: 'Balinese ga' },
+			{ input: 'ha', output: 'ᬳ', description: 'Balinese ha' },
+			{ input: 'hi', output: 'ᬳᬶ', description: 'Balinese i' },
+			{ input: 'ja', output: 'ᬚ', description: 'Balinese ja' },
+			{ input: 'ka', output: 'ᬓ', description: 'Balinese ka' },
+			{ input: 'la', output: 'ᬮ', description: 'Balinese la' },
+			{ input: 'ma', output: 'ᬫ', description: 'Balinese ma' },
+			{ input: 'na', output: 'ᬦ', description: 'Balinese na' },
+			{ input: 'o', output: 'ᬳᭀ', description: 'Balinese o' },
+			{ input: 'pa', output: 'ᬧ', description: 'Balinese pa' },
+			{ input: 'q', output: '᭄', description: 'Balinese virama' },
+			{ input: 'ra', output: 'ᬭ', description: 'Balinese ra' },
+			{ input: 'sa', output: 'ᬲ', description: 'Balinese sa' },
+			{ input: 'ta', output: 'ᬢ', description: 'Balinese ta' },
+			{ input: 'hu', output: 'ᬳᬸ', description: 'Balinese u' },
+			{ input: 'v', output: 'ᬀ', description: 'Balinese special letter' },
+			{ input: 'wa', output: 'ᬯ', description: 'Balinese wa' },
+			{ input: 'x', output: 'ᬳᭂ', description: 'Balinese pepet' },
+			{ input: 'ya', output: 'ᬬ', description: 'Balinese ya' },
+			{ input: 'za', output: 'ᬱ', description: 'Balinese special letter' }
+		]
+	},
+	{
 		description: 'Basaa tilde test',
 		inputmethod: 'bas-tilde',
 		tests: [
@@ -398,6 +436,131 @@ var palochkaVariants = {
 			{ input: [ [ '5', true ] ], output: '᯽', description: 'Karo keyboard - alt-5 - bindu pinarboras' },
 			{ input: [ [ '6', true ] ], output: '᯾', description: 'Karo keyboard - alt-6 - bindu judul' },
 			{ input: [ [ '7', true ] ], output: '᯿', description: 'Karo keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
+		description: 'Batak Simalungun keyboard test',
+		inputmethod: 'bts-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Simalungun keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯌ', description: 'Simalungun keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Simalungun keyboard = -e' },
+			{ input: 'r', output: 'ᯓ', description: 'Simalungun keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Simalungun keyboard - southern ta' },
+			{ input: 'y', output: 'ᯜ', description: 'Simalungun keyboard - ya' },
+			{ input: 'u', output: 'ᯯ', description: 'Simalungun keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Simalungun keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Simalungun keyboard = -o' },
+			{ input: 'p', output: 'ᯈ', description: 'Simalungun keyboard - pa' },
+
+			{ input: 'a', output: 'ᯁ', description: 'Simalungun keyboard - a' },
+			{ input: 's', output: 'ᯙ', description: 'Simalungun keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Simalungun keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Simalungun keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯏ', description: 'Simalungun keyboard - ga' },
+			{ input: 'h', output: 'ᯃ', description: 'Simalungun keyboard - ha = a' },
+			{ input: 'j', output: 'ᯐ', description: 'Simalungun keyboard - ja' },
+			{ input: 'k', output: 'ᯃ', description: 'Simalungun keyboard - ka = ha' },
+			{ input: 'l', output: 'ᯟ', description: 'Simalungun keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Simalungun keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Simalungun keyboard - x = nya' },
+			{ input: 'c', output: 'ᯠ', description: 'Simalungun keyboard - ca = nya' },
+			{ input: 'v', output: '᯦', description: 'Simalungun keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Simalungun keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Simalungun keyboard - na' },
+			{ input: 'm', output: 'ᯕ', description: 'Simalungun keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Simalungun keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Simalungun keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Simalungun keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Simalungun keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Simalungun keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Simalungun keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Simalungun keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Simalungun keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Simalungun keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Simalungun keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{		
+    description: 'Batak Mandailing transliteration test',
+		inputmethod: 'btm-transliteration',
+		tests: [
+			{ input: 'a', output: 'ᯀ', description: 'Mandailing transliteration a' },
+			{ input: 'ba', output: 'ᯅ', description: 'Mandailing transliteration ba' },
+			{ input: 'ca', output: 'ᯚ᯦', description: 'Mandailing transliteration ca' },
+			{ input: 'da', output: 'ᯑ', description: 'Mandailing transliteration da' },
+			{ input: 'e', output: 'ᯀᯩ', description: 'Mandailing transliteration e' },
+			{ input: 'f', output: '᯳', description: 'Mandailing transliteration PANONGONAN = virama' },
+			{ input: 'ga', output: 'ᯎ', description: 'Mandailing transliteration ga' },
+			{ input: 'h', output: 'ᯱ', description: 'Mandailing transliteration CONSONANT SIGN H = hajoringan (-h)' },
+			{ input: 'ha', output: 'ᯄ', description: 'Mandailing transliteration ha' },
+			{ input: 'i', output: 'ᯤ', description: 'Mandailing transliteration i' },
+			{ input: 'ja', output: 'ᯐ', description: 'Mandailing transliteration ja' },
+			{ input: 'ka', output: 'ᯄ᯦', description: 'Mandailing transliteration ka' },
+			{ input: 'la', output: 'ᯞ', description: 'Mandailing transliteration la' },
+			{ input: 'ma', output: 'ᯔ', description: 'Mandailing transliteration ma' },
+			{ input: 'na', output: 'ᯊ', description: 'Mandailing transliteration na' },
+			{ input: 'o', output: 'ᯀᯬ', description: 'Mandailing transliteration o' },
+			{ input: 'pa', output: 'ᯇ', description: 'Mandailing transliteration pa' },
+			{ input: 'q', output: '᯲', description: 'Mandailing transliteration PANGOLAT (PANGGOTAP) = virama' },
+			{ input: 'ra', output: 'ᯒ', description: 'Mandailing transliteration ra' },
+			{ input: 'sa', output: 'ᯚ', description: 'Mandailing transliteration sa' },
+			{ input: 'ta', output: 'ᯖ', description: 'Mandailing transliteration ta' },
+			{ input: 'u', output: 'ᯥ', description: 'Mandailing transliteration u' },
+			{ input: 'v', output: '᯦', description: 'Mandailing transliteration TOMPI' },
+			{ input: 'wa', output: 'ᯋ', description: 'Mandailing transliteration wa' },
+			{ input: 'x', output: 'ᯀᯧ', description: 'Mandailing transliteration VOWEL SIGN E = kebereten' },
+			{ input: 'ya', output: 'ᯛ', description: 'Mandailing transliteration ya' },
+			{ input: 'z', output: 'ᯰ', description: 'Mandailing transliteration CONSONANT SIGN NG = amisara (-ng)' },
+			{ input: 'Mandung sampe amu tuson Wikikamus saro Mandailing', output: 'ᯔᯊ᯲ᯑᯮᯰ ᯚᯔ᯲ᯇᯩ ᯀᯔᯮ ᯖᯮᯚᯬᯊ᯲ ᯋᯪᯄ᯦ᯪᯄ᯦ᯔᯮᯚ᯲ ᯚᯒᯬ ᯔᯊ᯲ᯑᯤᯞᯪᯰ', description: 'Mandailing transliteration' }
+		]
+	},
+	{
+		description: 'Batak Mandailing keyboard test',
+		inputmethod: 'btm-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Mandailing keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯋ', description: 'Mandailing keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Mandailing keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Mandailing keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Mandailing keyboard - ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Mandailing keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Mandailing keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Mandailing keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Mandailing keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Mandailing keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Mandailing keyboard - a' },
+			{ input: 's', output: 'ᯚ', description: 'Mandailing keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Mandailing keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Mandailing keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Mandailing keyboard - ga' },
+			{ input: 'h', output: 'ᯂ', description: 'Mandailing keyboard - ha' },
+			{ input: 'j', output: 'ᯐ', description: 'Mandailing keyboard - ja' },
+			{ input: 'k', output: 'ᯄ᯦', description: 'Mandailing keyboard - ka = ha+tompi' },
+			{ input: 'l', output: 'ᯞ', description: 'Mandailing keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Mandailing keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Mandailing keyboard - x = nya' },
+			{ input: 'c', output: 'ᯚ᯦', description: 'Mandailing keyboard - ca = sa+tompi' },
+			{ input: 'v', output: '᯦', description: 'Mandailing keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Mandailing keyboard - ba' },
+			{ input: 'n', output: 'ᯊ', description: 'Mandailing keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Mandailing keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Mandailing keyboard - E - kebereten' },
+			{ input: 'U', output: 'ᯥ', description: 'Mandailing keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Mandailing keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Mandailing keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Mandailing keyboard - Z - amisara "-ng"' },
+
+      { input: [ [ '4', true ] ], output: '᯼', description: 'Mandailing keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Mandailing keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Mandailing keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Mandailing keyboard - alt-7 - bindu pangolat' }
 		]
 	},
 	{
@@ -543,6 +706,16 @@ var palochkaVariants = {
 			{ input: '<', output: '>', description: 'Western Baluchi Keyboard Layout: < -> >' },
 			{ input: '>', output: '<', description: 'Western Baluchi Keyboard Layout: > -> <' },
 			{ input: '?', output: '؟', description: 'Western Baluchi Keyboard Layout: ? -> ؟' }
+		]
+	},
+	{
+		description: 'Edo tilde test',
+		inputmethod: 'bin-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Edo tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Edo tilde ~e -> ẹ' },
+			{ input: '~O', output: 'Ọ', description: 'Edo tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Edo tilde ~o -> ọ' }
 		]
 	},
 	{
@@ -763,6 +936,20 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Bole tilde test',
+		inputmethod: 'bol-tilde',
+		tests: [
+			{ input: '~B', output: 'Ɓ', description: 'Bole tilde ~B -> Ɓ' },
+			{ input: '~b', output: 'ɓ', description: 'Bole tilde ~b -> ɓ' },
+			{ input: '~D', output: 'Ɗ', description: 'Bole tilde ~D -> Ɗ' },
+			{ input: '~d', output: 'ɗ', description: 'Bole tilde ~d -> ɗ' },
+			{ input: 'E~\\', output: 'È', description: 'Bole tilde E~\\ -> È' },
+			{ input: 'i~^', output: 'î', description: 'Bole tilde i~^ -> î' },
+			{ input: 'o~-', output: 'ō', description: 'Bole tilde o~- -> ō' },
+			{ input: 'a~v', output: 'ǎ', description: 'Bole tilde a~v -> ǎ' }
+		]
+	},
+	{
 		description: 'Berom tilde test',
 		inputmethod: 'bom-tilde',
 		tests: [
@@ -836,6 +1023,13 @@ var palochkaVariants = {
 			{ input: ';;', output: '።', description: 'Blin ;; -> ።' },
 			{ input: 'Ge', output: 'ጘ', description: 'Blin Ge -> ጘ' },
 			{ input: 'Gi', output: 'ጚ', description: 'Blin Gi -> ጚ' }
+		]
+	},
+	{
+		description: 'Chinook Jargon tilde test',
+		inputmethod: 'chn-tilde',
+		tests: [
+			{ input: '~E~e~H~h~L~l~X~x~?~\'', output: 'ƏəʰʰꞭɬX̣x̣ʔ’', description: 'Chinook Jargon ƏəʰʰꞭɬX̣x̣ʔ’' }
 		]
 	},
 	{
@@ -1421,6 +1615,27 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Duala tilde input method test',
+		inputmethod: 'dua-tilde',
+		tests: [
+			{ input: '~b', output: 'ɓ', description: 'Duala tilde ~b' },
+			{ input: '~B', output: 'Ɓ', description: 'Duala tilde ~B' },
+			{ input: '~d', output: 'ɗ', description: 'Duala tilde ~d' },
+			{ input: '~D', output: 'Ɗ', description: 'Duala tilde ~D' },
+			{ input: '~e', output: 'ɛ', description: 'Duala tilde ~e' },
+			{ input: '~E', output: 'Ɛ', description: 'Duala tilde ~E' },
+			{ input: '~n', output: 'ŋ', description: 'Duala tilde ~n' },
+			{ input: '~N', output: 'Ŋ', description: 'Duala tilde ~N' },
+			{ input: '~j', output: 'ɲ', description: 'Duala tilde ~j' },
+			{ input: '~J', output: 'Ɲ', description: 'Duala tilde ~J' },
+			{ input: '~O', output: 'Ɔ', description: 'Duala tilde ~O' },
+			{ input: '~o', output: 'ɔ', description: 'Duala tilde ~o' },
+			{ input: 'Dua~/la~/', output: 'Duálá', description: 'Duala tilde Duálá' },
+			{ input: 'mule~vdi', output: 'mulědi', description: 'Duala tilde mulědi' },
+			{ input: 'a~\\o~^', output: 'àô', description: 'Duala tilde àô' },
+		]
+	},
+	{
 		description: 'Ewe tilde test',
 		inputmethod: 'ee-tilde',
 		tests: [
@@ -1462,6 +1677,22 @@ var palochkaVariants = {
 			{ input: '~u', output: 'ụ', description: 'Efik tilde ~u -> ụ' },
 			{ input: 'E~\\', output: 'È', description: 'Efik tilde E~\\ -> È' },
 			{ input: 'i~/', output: 'í', description: 'Efik tilde i~/ -> í' }
+		]
+	},
+	{
+		description: 'Ekpeye tilde test',
+		inputmethod: 'ekp-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Ekpeye tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Ekpeye tilde ~e -> ẹ' },
+			{ input: '~I', output: 'Ị', description: 'Ekpeye tilde ~I -> Ị' },
+			{ input: '~i', output: 'ị', description: 'Ekpeye tilde ~i -> ị' },
+			{ input: '~O', output: 'Ọ', description: 'Ekpeye tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Ekpeye tilde ~o -> ọ' },
+			{ input: '~U', output: 'Ụ', description: 'Ekpeye tilde ~U -> Ụ' },
+			{ input: 'E~\\', output: 'È', description: 'Ekpeye tilde E~\\ -> È' },
+			{ input: 'i~^', output: 'î', description: 'Ekpeye tilde i~^ -> î' },
+			{ input: 'o~-', output: 'ō', description: 'Ekpeye tilde o~- -> ō' }
 		]
 	},
 	{
@@ -1942,8 +2173,8 @@ var palochkaVariants = {
 		inputmethod: 'hi-transliteration',
 		tests: [
 			{ input: '\\~', output: '~', description: 'Hindi transliteration - \\~ -> ~' },
-			{ input: 'agar ',output: 'अगर ', description: 'Hindi transliteration - virama autoremoval on space' }, // bug 35990
-			{ input: 'agar~ ',output: 'अगर् ', description: 'Hindi transliteration - virama retention' }, // bug 35990
+			{ input: 'agar ', output: 'अगर ', description: 'Hindi transliteration - virama autoremoval on space' }, // bug 35990
+			{ input: 'agar~ ', output: 'अगर् ', description: 'Hindi transliteration - virama retention' }, // bug 35990
 
 			{ input: 'namaH', output: 'नमः', description: 'Hindi transliteration - namaH (visarga)' },
 			{ input: 'madhumaChiyoM', output: 'मधुमक्खियों', description: 'Hindi transliteration - madhumaChiyoM (anusvara)' },
@@ -2091,7 +2322,7 @@ var palochkaVariants = {
 			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Eastern digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Eastern digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'խւէրտեըիոպչջ', description: 'Armenian MS legacy Eastern 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ԽՒԷՐՏԵԸԻՈՊՉՋ', description: 'Armenian MS legacy Eastern 1st row With Shift' },
+			{ input: 'QWERTYUIOP{}', output: 'ԽՒԷՐՏԵԸԻՈՊՉՋ', description: 'Armenian MS legacy Eastern 1st row With Shift' },
 			{ input: 'asdfghjkl;\'\\', output: 'ասդֆքհճկլթփ\'', description: 'Armenian MS legacy Eastern 2nd row No Shift' },
 			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖՔՀՃԿԼԹՓ՞', description: 'Armenian MS legacy Eastern 2nd row With Shift' },
 			{ input: 'zxcvbnm,./', output: 'զցգվբնմշղծ', description: 'Armenian MS legacy Eastern 3rd row No Shift' },
@@ -2111,7 +2342,7 @@ var palochkaVariants = {
 			{ input: '`1234567890-=', output: '՝էթփձջ֏ևրչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷԹՓՁՋ()ՐՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոեռտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՌՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'QWERTYUIOP{}', output: 'ՔՈԵՌՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
 			{ input: 'asdfghjkl;\'\\', output: 'ասդֆգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
 			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴՖԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
 			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
@@ -2131,7 +2362,7 @@ var palochkaVariants = {
 			{ input: '`1234567890-=', output: '՝էֆփձջ֏ևռչճ–ժ', description: 'Armenian phonetic digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ԷՖՓՁՋ()ՌՉՃ—Ժ', description: 'Armenian phonetic digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'քոերտըւիօպխծ', description: 'Armenian phonetic 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ՔՈԵՐՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
+			{ input: 'QWERTYUIOP{}', output: 'ՔՈԵՐՏԸՒԻՕՊԽԾ', description: 'Armenian phonetic 1st row With Shift' },
 			{ input: 'asdfghjkl;\'\\', output: 'ասդթգհյկլ;՛շ', description: 'Armenian phonetic 2nd row No Shift' },
 			{ input: 'ASDFGHJKL:"|', output: 'ԱՍԴԹԳՀՅԿԼ։"Շ', description: 'Armenian phonetic 2nd row With Shift' },
 			{ input: 'zxcvbnm,./', output: 'զղցվբնմ,․…', description: 'Armenian phonetic 3rd row No Shift' },
@@ -2148,7 +2379,7 @@ var palochkaVariants = {
 			{ input: '`1234567890-=', output: '՝ֆձ-,։՞․՛)օէղ', description: 'Armenian typewriter digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜ՖՁ֏֊—և՚(ՕԷՂ', description: 'Armenian typewriter digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'ճփբսմուկըթծց', description: 'Armenian typewriter 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ՃՓԲՍՄՈՒԿԸԹԾՑ', description: 'Armenian typewriter 1st row With Shift' },
+			{ input: 'QWERTYUIOP{}', output: 'ՃՓԲՍՄՈՒԿԸԹԾՑ', description: 'Armenian typewriter 1st row With Shift' },
 			{ input: 'asdfghjkl;\'\\', output: 'ջվգեանիտհպր»', description: 'Armenian typewriter 2nd row No Shift' },
 			{ input: 'ASDFGHJKL:"|', output: 'ՋՎԳԵԱՆԻՏՀՊՐ«', description: 'Armenian typewriter 2nd row With Shift' },
 			{ input: 'zxcvbnm,./', output: 'ժդչյզլքխշռ', description: 'Armenian typewriter 3rd row No Shift' },
@@ -2165,7 +2396,7 @@ var palochkaVariants = {
 			{ input: '`1234567890-=', output: '՝։ձյ՛,-․«»օռժ', description: 'Armenian MS legacy Western digits row No Shift' },
 			{ input: '~!@#$%^&*()_+', output: '՜1ՁՅ֏49և()ՕՌԺ', description: 'Armenian MS legacy Western digits row With Shift' },
 			{ input: 'qwertyuiop[]', output: 'խվէրդեըիոբչջ', description: 'Armenian MS legacy Western 1st row No Shift' },
-			{ input: 'QWERTYUIOP{}',output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Western 1st row With Shift' },
+			{ input: 'QWERTYUIOP{}', output: 'ԽՎԷՐԴԵԸԻՈԲՉՋ', description: 'Armenian MS legacy Western 1st row With Shift' },
 			{ input: 'asdfghjkl;\'\\', output: 'աստֆկհճքլթփ\'', description: 'Armenian MS legacy Western 2nd row No Shift' },
 			{ input: 'ASDFGHJKL:"|', output: 'ԱՍՏՖԿՀՃՔԼԹՓ՞', description: 'Armenian MS legacy Western 2nd row With Shift' },
 			{ input: 'zxcvbnm,./', output: 'զցգւպնմշղծ', description: 'Armenian MS legacy Western 3rd row No Shift' },
@@ -2178,6 +2409,39 @@ var palochkaVariants = {
 		tests: [
 			{ input: '~e~i~n~o~a~u~E~I~N~O~A~U', output: 'ǝịñọʌụƎỊÑỌɅỤ', description: 'Ibibio tilde ǝịñọʌụƎỊÑỌɅỤ' },
 			{ input: 'a~/e~\\i~^o~-u~v', output: 'áèîōǔ', description: 'Ibibio tilde áèîōǔ' }
+		]
+	},
+	{
+		description: 'Jawi test',
+		inputmethod: 'id-jawi',
+		tests: [
+			{ input: 'jwi', output: 'جوِ', description: 'jawi' },
+			{ input: 'a', output: 'ا', description: 'Jawi alif' },
+			{ input: 'b', output: 'ب', description: 'Jawi ba' },
+			{ input: 'c', output: 'ﭺ', description: 'Jawi ca' },
+			{ input: 'd', output: 'د', description: 'Jawi dal' },
+			{ input: 'e', output: 'َ', description: 'Jawi fathah -a' },
+			{ input: 'f', output: 'ف', description: 'Jawi fa' },
+			{ input: 'g', output: 'ݢ', description: 'Jawi gaf' },
+			{ input: 'h', output: 'ه', description: 'Jawi ha' },
+			{ input: 'i', output: 'ِ', description: 'Jawi kasrah -i' },
+			{ input: 'j', output: 'ج', description: 'Jawi jim' },
+			{ input: 'k', output: 'ى', description: 'Jawi kaf' },
+			{ input: 'l', output: 'ل', description: 'Jawi lam' },
+			{ input: 'm', output: 'م', description: 'Jawi mim' },
+			{ input: 'n', output: 'ن', description: 'Jawi nun' },
+			{ input: 'o', output: 'ْ', description: 'Jawi sukun' },
+			{ input: 'p', output: 'ڤ', description: 'Jawi pa' },
+			{ input: 'q', output: 'ق', description: 'Jawi qaf' },
+			{ input: 'r', output: 'ر', description: 'Jawi ra' },
+			{ input: 's', output: 'س', description: 'Jawi sin' },
+			{ input: 't', output: 'ت', description: 'Jawi ta' },
+			{ input: 'u', output: 'ُ', description: 'Jawi dhammah -u' },
+			{ input: 'v', output: 'ؤ', description: 'Jawi va' },
+			{ input: 'w', output: 'و', description: 'Jawi wau' },
+			{ input: 'x', output: 'ء', description: 'Jawi hamza' },
+			{ input: 'y', output: 'ي', description: 'Jawi ya' },
+			{ input: 'z', output: 'ز', description: 'Jawi zai' }
 		]
 	},
 	{
@@ -2728,6 +2992,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jakaltek tilde test',
+		inputmethod: 'jac-tilde',
+		tests: [
+			{ input: "~'~n~N~x~X", output: 'ꞌn̈N̈ẍẌ', description: 'Jakaltek tilde ꞌn̈N̈ẍẌ' }
+		]
+	},
+	{
 		description: 'Javanese transliteration test',
 		inputmethod: 'jv-transliteration',
 		tests: [
@@ -2774,14 +3045,14 @@ var palochkaVariants = {
 		description: 'Jawa Latin extended test',
 		inputmethod: 'jv-keyboard',
 		tests: [
-			{ input: '`En`ek', output: 'Ènèk', description: 'Jawa Latin extended È' },
-			{ input: '~Enak~e', output: 'Énaké', description: 'Jawa Latin extended É' },
-			{ input: '^En^eg', output: 'Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: '`En`ek Qnqk', output: 'Ènèk Ènèk', description: 'Jawa Latin extended È' },
+			{ input: '~Enak~e Enake', output: 'Énaké Énaké', description: 'Jawa Latin extended É' },
+			{ input: '^En^eg Xnxg', output: 'Ênêg Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: 'QQ Qq qq EE Ee ee XX Xx xx', output: 'Q Q q E E e X X x', description: 'Normal QEX' },
 			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
 			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
 			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
 			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
-
 		]
 	},
 	{
@@ -2837,6 +3108,15 @@ var palochkaVariants = {
 			{ input: 'Z~,', output: 'Z̧', description: 'Kabyle tilde Z̧ combining' },
 			{ input: 'z~,', output: 'z̧', description: 'Kabyle tilde z̧ combining' },
 			{ input: '~y~w', output: 'ɣʷ', description: 'Kabyle tilde ɣʷ' }
+		]
+	},
+	{
+		description: 'Jju tilde test',
+		inputmethod: 'kaj-tilde',
+		tests: [
+			{ input: '~A~a~U~u', output: 'A̱a̱U̱u̱', description: 'Jju tilde A̱a̱U̱u̱' },
+			{ input: 'n~a~/', output: 'ná̱', description: 'Jju tilde ná̱' },
+			{ input: 'zi~/', output: 'zí', description: 'Jju tilde zí' }
 		]
 	},
 	{
@@ -3758,6 +4038,14 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Krio tilde test',
+		inputmethod: 'kri-tilde',
+		tests: [
+			{ input: '~E~e~N~n~O~o', output: 'ƐɛŊŋƆɔ', description: 'Krio tilde ƐɛŊŋƆɔ' },
+			{ input: 'a~\\e~/i~^', output: 'àéî', description: 'Krio tilde àéî' }
+		]
+	},
+	{
 		description: 'Kashmiri InScript test',
 		inputmethod: 'ks-inscript',
 		tests: [
@@ -3935,6 +4223,13 @@ var palochkaVariants = {
 			{ input: 'О', output: 'О', description: 'Kyrgyz Cyrillic letters, О does not change' },
 			{ input: 'у', output: 'у', description: 'Kyrgyz Cyrillic letters, у does not change' },
 			{ input: 'У', output: 'У', description: 'Kyrgyz Cyrillic letters, У does not change' }
+		]
+	},
+	{
+		description: 'Lango tilde test',
+		inputmethod: 'laj-tilde',
+		tests: [
+			{ input: '~e~i~n~o~u~E~I~N~O~U', output: 'ëïŋöüËÏŊÖÜ', description: 'Lango tilde test ëïŋöüËÏŊÖÜ' }
 		]
 	},
 	{
@@ -4133,16 +4428,6 @@ var palochkaVariants = {
 			{ input: 'B', output: 'b̓', description: 'Lushootseed Tulalip b̓' },
 			{ input: 'N', output: 'n̓', description: 'Lushootseed Tulalip n̓' },
 			{ input: 'M', output: 'm̓', description: 'Lushootseed Tulalip m̓' }
-		]
-	},
-	{
-		description: 'Nzema tilde test',
-		inputmethod: 'nzi-tilde',
-		tests: [
-			{ input: '~E', output: 'Ɛ', description: 'Nzema tilde ~E' },
-			{ input: '~e', output: 'ɛ', description: 'Nzema tilde ~e' },
-			{ input: '~O', output: 'Ɔ', description: 'Nzema tilde ~O' },
-			{ input: '~o', output: 'ɔ', description: 'Nzema tilde ~o' }
 		]
 	},
 	{
@@ -4485,6 +4770,21 @@ var palochkaVariants = {
 			{ input: '~Y', output: 'Ƴ', description: 'Burkina Faso tilde keyboard - Ƴ' },
 			{ input: '~y', output: 'ƴ', description: 'Burkina Faso tilde keyboard - ƴ' },
 			{ input: 'a~{', output: 'ã', description: 'Burkina Faso tilde keyboard - ã' }
+		]
+	},
+	{
+		description: 'Click consonant tilde keyboard test',
+		inputmethod: 'mul-click-tilde',
+		tests: [
+			{ input: '~o', output: 'ʘ', description: 'Click consonant tilde keyboard test - ~o -> ʘ' },
+			{ input: '~1', output: 'ǀ', description: 'Click consonant tilde keyboard test - ~1 -> ǀ' },
+			{ input: '~11', output: 'ǁ', description: 'Click consonant tilde keyboard test - ~11 -> ǁ' },
+			{ input: '~=', output: 'ǂ', description: 'Click consonant tilde keyboard test - ~= -> ǂ' },
+			{ input: '~#', output: 'ǂ', description: 'Click consonant tilde keyboard test - ~# -> ǂ' },
+			{ input: '~!', output: 'ǃ', description: 'Click consonant tilde keyboard test - ~! -> ǃ' },
+			{ input: '~,', output: '𝼊', description: 'Click consonant tilde keyboard test - ~, -> 𝼊' },
+			{ input: 'a~\\a~/a~^a~{a~-', output: 'àáâãā', description: 'Click consonant tilde keyboard test - àáâãā' },
+			{ input: '~c~x~q', output: 'ǀǁǃ', description: 'Click consonant tilde keyboard test - cxq -> ǀǁǃ' }
 		]
 	},
 	{
@@ -5158,6 +5458,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Pontic input method test',
+		inputmethod: 'pnt-tilde',
+		tests: [
+			{ input: 'Σ~^σ~^ς~^Ξ~^ξ~^Χ~^χ~^Ζ~^ζ~^Ψ~^ψ~^', output: 'Σ̌σ̌ς̌Ξ̌ξ̌Χ̌χ̌Ζ̌ζ̌Ψ̌ψ̌', description: 'Pontic caron' },
+			{ input: 'Α~"α~"Ο~"ο~"Ά~"ά~"', output: 'Α̈α̈Ο̈ο̈Ά̈ά̈', description: 'Pontic diaeresis above' },
+			{ input: 'Α~:α~:Ο~:ο~:', output: 'Α̤α̤Ο̤ο̤', description: 'Pontic diaeresis below' },
+			{ input: 'Ό~:ό~:Ά~:ά~:Ό~:ό~:', output: 'Ό̤ό̤Ά̤ά̤Ό̤ό̤', description: 'Pontic stress and diaeresis below' }
+		]
+	},
+	{
 		description: 'Tarandine input method test',
 		inputmethod: 'roa-tara-GVU',
 		tests: [
@@ -5568,6 +5878,15 @@ var palochkaVariants = {
 			{ input: '-G-KZ', output: 'ЃЌЅ', description: 'Serbian keyboard ЃЌЅ' },
 			{ input: '-g-kz', output: 'ѓќѕ', description: 'Serbian keyboard ѓќѕ' },
 			{ input: '@^&*()-_=+<>/?', output: '"&/()=\'?+*;:-_', description: 'Serbian keyboard "&/()=\'?+*;:-_' }
+		]
+	},
+	{
+		description: 'Silesian keyboard test',
+		inputmethod: 'szl-tilde',
+		tests: [
+			{ input: '~u~U~1~2~3~4~5~6~7', output: 'ůŮōôŏõãÔŌ', description: 'Silesian specific letters' },
+			{ input: '~s~l~z~x~c~n~S~L~Z~X~C~N', output: 'śłżźćńŚŁŻŹĆŃ', description: 'Uncommon letters' },
+			{ input: 'Dziyń dobry w~1m!', output: 'Dziyń dobry wōm!', description: 'Pratical use case example' }
 		]
 	},
 	{
@@ -6420,6 +6739,13 @@ var palochkaVariants = {
 			{ input: 'Đh', output: 'Dh', description: 'Venetian Dh' },
 			{ input: 'Łh', output: 'Lh', description: 'Venetian Lh' },
 			{ input: 'Ẑh', output: 'Zh', description: 'Venetian Zh' }
+		]
+	},
+	{
+		description: 'Waale tilde test',
+		inputmethod: 'wlx-tilde',
+		tests: [
+			{ input: '~E~e~N~n~O~o', output: 'ƐɛŊŋƆɔ', description: 'Waale tilde ƐɛŊŋƆɔ' }
 		]
 	},
 	{
