@@ -1347,12 +1347,8 @@
 			inputmethods: [ 'ibb-tilde' ]
 		},
 		id: {
-			autonym: 'Indonesia',
-			inputmethods: [ 'id-keyboard' ]
-		},
-		{
-			autonym: 'Jawi',
-			inputmethods: [ 'id-jawi' ]
+			autonym: 'Bahasa Indonesia',
+			inputmethods: [ 'id-keyboard', 'id-jawi' ]
 		},
 		ig: {
 			autonym: 'Igbo',
