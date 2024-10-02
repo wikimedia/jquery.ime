@@ -61,6 +61,7 @@
 		maxKeyLength: 5,
 		patterns: [
 			/* eslint-disable max-statements-per-line */
+			/* eslint-disable brace-style */
 			[ ' ', function () { reinit(); return '་'; } ],
 			[ '\\.', function () { reinit(); return ' '; } ],
 			[ ',', function () { reinit(); return '།'; } ],
@@ -183,6 +184,7 @@
 			[ '8', function () { reinit(); return '༨'; } ],
 			[ '9', function () { reinit(); return '༩'; } ]
 			/* eslint-enable max-statements-per-line */
+			/* eslint-enable brace-style */
 		]
 	};
 
