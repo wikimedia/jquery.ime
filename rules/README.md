@@ -74,7 +74,7 @@ Any valid regular expression is possible as first element of each array item.
 ex: `[ '([ക-ഹ])a', '$1ാ' ]`
 ex: `[ '(([ൺ-ൿം])\u200c+)?I', '$2ഐ' ]`
 
-In the above example, $1, $1 etc are according to the normal regular expression
+In the above example, $1, $2 etc are according to the normal regular expression
 replace syntax.
 
 The second member of the pattern can be a function as well.
