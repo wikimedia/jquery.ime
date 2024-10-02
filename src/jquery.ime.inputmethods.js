@@ -80,6 +80,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'btd-keyboard': {
+			name: 'Pakpak (Dairi) Keyboard',
+			source: 'rules/btd/btd-keyboard.js'
+		},
 		'btx-keyboard': {
 			name: 'Karo Keyboard',
 			source: 'rules/btx/btx-keyboard.js'
@@ -1101,6 +1105,10 @@
 		bbc: {
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
+		},
+		btd: {
+			autonym: 'Batak Pakpak (Dairi)',
+			inputmethods: [ 'btd-keyboard' ]
 		},
 		btx: {
 			autonym: 'Batak Karo',
