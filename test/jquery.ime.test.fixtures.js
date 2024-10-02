@@ -391,6 +391,52 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Batak Alas Kluet keyboard test',
+		inputmethod: 'btz-keyboard',
+		tests: [
+			{ input: 'q', output: '᯲', description: 'Alas Kluet keyboard - q = pangolat' },
+			{ input: 'w', output: 'ᯋ', description: 'Alas Kluet keyboard - wa' },
+			{ input: 'e', output: 'ᯩ', description: 'Alas Kluet keyboard = -e' },
+			{ input: 'r', output: 'ᯒ', description: 'Alas Kluet keyboard - ra' },
+			{ input: 't', output: 'ᯖ', description: 'Alas Kluet keyboard - southern ta' },
+			{ input: 'y', output: 'ᯛ', description: 'Alas Kluet keyboard - ya' },
+			{ input: 'u', output: 'ᯮ', description: 'Alas Kluet keyboard = -u' },
+			{ input: 'i', output: 'ᯪ', description: 'Alas Kluet keyboard = -i' },
+			{ input: 'o', output: 'ᯬ', description: 'Alas Kluet keyboard = -o' },
+			{ input: 'p', output: 'ᯇ', description: 'Alas Kluet keyboard - pa' },
+
+			{ input: 'a', output: 'ᯀ', description: 'Alas Kluet keyboard - a' },
+			{ input: 's', output: 'ᯘ', description: 'Alas Kluet keyboard - sa' },
+			{ input: 'd', output: 'ᯑ', description: 'Alas Kluet keyboard - da' },
+			{ input: 'f', output: '᯳', description: 'Alas Kluet keyboard - f = panongonan' },
+			{ input: 'g', output: 'ᯎ', description: 'Alas Kluet keyboard - ga' },
+			{ input: 'h', output: 'ᯂ', description: 'Alas Kluet keyboard - ha' },
+			{ input: 'j', output: 'ᯐ', description: 'Alas Kluet keyboard - ja' },
+			{ input: 'k', output: 'ᯂ', description: 'Alas Kluet keyboard - ka = ha' },
+			{ input: 'l', output: 'ᯞ', description: 'Alas Kluet keyboard - la' },
+
+			{ input: 'z', output: 'ᯝ', description: 'Alas Kluet keyboard - z = nga' },
+			{ input: 'x', output: 'ᯠ', description: 'Alas Kluet keyboard - x = nya' },
+			{ input: 'c', output: 'ᯡ', description: 'Alas Kluet keyboard - ca = sa' },
+			{ input: 'v', output: '᯦', description: 'Alas Kluet keyboard - v = tompi' },
+			{ input: 'b', output: 'ᯅ', description: 'Alas Kluet keyboard - ba' },
+			{ input: 'n', output: 'ᯉ', description: 'Alas Kluet keyboard - na' },
+			{ input: 'm', output: 'ᯔ', description: 'Alas Kluet keyboard - ma' },
+
+			{ input: 'E', output: 'ᯧ', description: 'Alas Kluet keyboard - E - kebereten' },
+			{ input: 'T', output: 'ᯗ', description: 'Alas Kluet keyboard - northern ta' },
+			{ input: 'U', output: 'ᯥ', description: 'Alas Kluet keyboard - U - syllable "u"' },
+			{ input: 'I', output: 'ᯤ', description: 'Alas Kluet keyboard - I - syllable "i"' },
+			{ input: 'H', output: 'ᯱ', description: 'Alas Kluet keyboard - H - hajoringan "-h"' },
+			{ input: 'Z', output: 'ᯰ', description: 'Alas Kluet keyboard - Z - amisara "-ng"' },
+
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Alas Kluet keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '5', true ] ], output: '᯽', description: 'Alas Kluet keyboard - alt-5 - bindu pinarboras' },
+			{ input: [ [ '6', true ] ], output: '᯾', description: 'Alas Kluet keyboard - alt-6 - bindu judul' },
+			{ input: [ [ '7', true ] ], output: '᯿', description: 'Alas Kluet keyboard - alt-7 - bindu pangolat' }
+		]
+	},
+	{
 		description: 'Batak Angkola keyboard test',
 		inputmethod: 'akb-keyboard',
 		tests: [

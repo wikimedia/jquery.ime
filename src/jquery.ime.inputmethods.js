@@ -80,6 +80,10 @@
 			name: 'Toba Transliteration',
 			source: 'rules/bbc/bbc-transliteration.js'
 		},
+		'btz-keyboard': {
+			name: 'Alas Kluet Keyboard',
+			source: 'rules/btz/btz-keyboard.js'
+		},
 		'akb-keyboard': {
 			name: 'Angkola Keyboard',
 			source: 'rules/akb/akb-keyboard.js'
@@ -1109,6 +1113,10 @@
 		bbc: {
 			autonym: 'Batak Toba',
 			inputmethods: [ 'bbc-transliteration' ]
+		},
+		btz: {
+			autonym: 'Batak Alas Kluet',
+			inputmethods: [ 'btz-keyboard' ]
 		},
 		akb: {
 			autonym: 'Batak Angkola',
