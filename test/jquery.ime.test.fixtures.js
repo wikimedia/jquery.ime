@@ -6216,7 +6216,7 @@ var palochkaVariants = {
 			{ input: 'ch', output: 'చ్', description: 'Telugu ch' },
 			{ input: 'j~nu', output: 'జ్ఞు', description: 'Telugu j~nu' },
 			{ input: '~naa', output: 'ఞా', description: 'Telugu ~naa' },
-			{ input: '~lu', output: 'ౡ', description: 'Telugu ~lu' }
+			{ input: '~lu', output: 'ఌు', description: 'Telugu ~lu' }
 		]
 	},
 	{
