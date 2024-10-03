@@ -1,0 +1,133 @@
+( function ( $ ) {
+	'use strict';
+
+	var chr = {
+		id: 'chr',
+		name: 'Cherokee',
+		description: 'Typing Cherokee syllabary from English letters',
+		date: '2023-01-14',
+		URL: 'http://github.com/wikimedia/jquery.ime',
+		author: 'Anne Drew Hu',
+		license: 'GPLv3',
+		version: '1.0',
+		maxKeyLength: 3,
+		patterns: [
+			[ 'ga', 'Ꭶ' ],
+			[ 'ka', 'Ꭷ' ],
+			[ 'ge', 'Ꭸ' ],
+			[ 'gi', 'Ꭹ' ],
+			[ 'go', 'Ꭺ' ],
+			[ 'gu', 'Ꭻ' ],
+			[ 'gv', 'Ꭼ' ],
+
+			// Apostrophes allow disambiguation, see: https://en.wikipedia.org/w/index.php?title=Cherokee_syllabary&oldid=1124646659#Transliteration_issues
+			[ '\'ha', 'Ꭽ' ],
+			[ '\'he', 'Ꭾ' ],
+			[ '\'hi', 'Ꭿ' ],
+			[ '\'ho', 'Ꮀ' ],
+			[ '\'hu', 'Ꮁ' ],
+			[ '\'hv', 'Ꮂ' ],
+			[ 'ha', 'Ꭽ' ],
+			[ 'he', 'Ꭾ' ],
+			[ 'hi', 'Ꭿ' ],
+			[ 'ho', 'Ꮀ' ],
+			[ 'hu', 'Ꮁ' ],
+			[ 'hv', 'Ꮂ' ],
+
+			[ 'dla', 'Ꮬ' ],
+			[ 'tla', 'Ꮭ' ],
+			[ 'tle', 'Ꮮ' ],
+			[ 'tli', 'Ꮯ' ],
+			[ 'tlo', 'Ꮰ' ],
+			[ 'tlu', 'Ꮱ' ],
+			[ 'tlv', 'Ꮲ' ],
+
+			[ 'la', 'Ꮃ' ],
+			[ 'le', 'Ꮄ' ],
+			[ 'li', 'Ꮅ' ],
+			[ 'lo', 'Ꮆ' ],
+			[ 'lu', 'Ꮇ' ],
+			[ 'lv', 'Ꮈ' ],
+
+			[ 'ma', 'Ꮉ' ],
+			[ 'me', 'Ꮊ' ],
+			[ 'mi', 'Ꮋ' ],
+			[ 'mo', 'Ꮌ' ],
+			[ 'mu', 'Ꮍ' ],
+			[ 'mv', 'Ᏽ' ], // Note that this letter is not in use anymore. I'm open to removing it.
+
+			[ '\'hna', 'Ꮏ' ],
+			[ 'hna', 'Ꮏ' ],
+			[ '\'na', 'Ꮎ' ],
+			[ 'na', 'Ꮎ' ],
+			[ 'Ꮎh', 'Ꮐ' ],
+			[ 'Ꮎh', 'Ꮐ' ],
+			[ 'ne', 'Ꮑ' ],
+			[ 'ni', 'Ꮒ' ],
+			[ 'no', 'Ꮓ' ],
+			[ 'nu', 'Ꮔ' ],
+			[ 'nv', 'Ꮕ' ],
+
+			[ 'qᎤa', 'Ꮖ' ],
+			[ 'qᎤe', 'Ꮗ' ],
+			[ 'qᎤi', 'Ꮘ' ],
+			[ 'qᎤo', 'Ꮙ' ],
+			[ 'qᎤu', 'Ꮚ' ],
+			[ 'qᎤv', 'Ꮛ' ],
+
+			[ 'tsa', 'Ꮳ' ],
+			[ 'tse', 'Ꮴ' ],
+			[ 'tsi', 'Ꮵ' ],
+			[ 'tso', 'Ꮶ' ],
+			[ 'tsu', 'Ꮷ' ],
+			[ 'tsv', 'Ꮸ' ],
+
+			[ 'sa', 'Ꮜ' ],
+			[ 'se', 'Ꮞ' ],
+			[ 'si', 'Ꮟ' ],
+			[ 'so', 'Ꮠ' ],
+			[ 'su', 'Ꮡ' ],
+			[ 'sv', 'Ꮢ' ],
+			[ 's\'', 'Ꮝ' ],
+
+			[ 'da', 'Ꮣ' ],
+			[ 'ta', 'Ꮤ' ],
+			[ 'de', 'Ꮥ' ],
+			[ 'te', 'Ꮦ' ],
+			[ 'di', 'Ꮧ' ],
+			[ 'ti', 'Ꮨ' ],
+			[ 'do', 'Ꮩ' ],
+			[ 'du', 'Ꮪ' ],
+			[ 'dv', 'Ꮫ' ],
+
+			[ 'wa', 'Ꮹ' ],
+			[ 'we', 'Ꮺ' ],
+			[ 'wi', 'Ꮻ' ],
+			[ 'wo', 'Ꮼ' ],
+			[ 'wu', 'Ꮽ' ],
+			[ 'wv', 'Ꮾ' ],
+
+			[ 'ya', 'Ꮿ' ],
+			[ 'ye', 'Ᏸ' ],
+			[ 'yi', 'Ᏹ' ],
+			[ 'yo', 'Ᏺ' ],
+			[ 'yu', 'Ᏻ' ],
+			[ 'yv', 'Ᏼ' ],
+
+			[ '\'a', 'Ꭰ' ],
+			[ '\'e', 'Ꭱ' ],
+			[ '\'i', 'Ꭲ' ],
+			[ '\'o', 'Ꭳ' ],
+			[ '\'u', 'Ꭴ' ],
+			[ '\'v', 'Ꭵ' ],
+			[ 'a', 'Ꭰ' ],
+			[ 'e', 'Ꭱ' ],
+			[ 'i', 'Ꭲ' ],
+			[ 'o', 'Ꭳ' ],
+			[ 'u', 'Ꭴ' ],
+			[ 'v', 'Ꭵ' ]
+		]
+	};
+
+	$.ime.register( chr );
+}( jQuery ) );

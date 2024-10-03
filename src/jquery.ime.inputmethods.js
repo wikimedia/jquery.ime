@@ -4,6 +4,10 @@
 	// All keys have quotes for consistency
 	/* eslint-disable quote-props */
 	$.extend( $.ime.sources, {
+		'ach-tilde': {
+			name: 'Acholi tilde',
+			source: 'rules/ach/ach-tilde.js'
+		},
 		'af-tilde': {
 			name: 'Afrikaans tilde',
 			source: 'rules/af/af-tilde.js'
@@ -64,13 +68,45 @@
 			name: 'تۆرکجه',
 			source: 'rules/azb/azb-kbd.js'
 		},
+		'ban-transliteration': {
+			name: 'Balinese Transliteration',
+			source: 'rules/ban/ban-transliteration.js'
+		},
 		'bas-tilde': {
 			name: 'Ɓasaá tilde',
 			source: 'rules/bas/bas-tilde.js'
 		},
-		'batak-qwerty': {
-			name: 'Batak QWERTY',
-			source: 'rules/bbc/batak-qwerty.js'
+		'bbc-transliteration': {
+			name: 'Toba Transliteration',
+			source: 'rules/bbc/bbc-transliteration.js'
+		},
+		'btz-keyboard': {
+			name: 'Alas Kluet Keyboard',
+			source: 'rules/btz/btz-keyboard.js'
+		},
+		'akb-keyboard': {
+			name: 'Angkola Keyboard',
+			source: 'rules/akb/akb-keyboard.js'
+		},
+		'btd-keyboard': {
+			name: 'Pakpak (Dairi) Keyboard',
+			source: 'rules/btd/btd-keyboard.js'
+		},
+		'btx-keyboard': {
+			name: 'Karo Keyboard',
+			source: 'rules/btx/btx-keyboard.js'
+		},
+		'bts-keyboard': {
+			name: 'Simalungun Keyboard',
+			source: 'rules/bts/bts-keyboard.js'
+    },
+		'btm-transliteration': {
+			name: 'Transliteration',
+			source: 'rules/btm/btm-transliteration.js'
+		},
+		'btm-keyboard': {
+			name: 'Mandailing Keyboard',
+			source: 'rules/btm/btm-keyboard.js'
 		},
 		'bci-tilde': {
 			name: 'Baoulé tilde keyboard',
@@ -92,9 +128,17 @@
 			name: 'Tifinagh',
 			source: 'rules/ber/ber-tfng.js'
 		},
+		'bfa-tilde': {
+			name: 'Bari Tilde',
+			source: 'rules/bfa/bfa-tilde.js'
+		},
 		'bgn-kbd': {
 			name: 'روچ کپتین بلوچی',
 			source: 'rules/bgn/bgn-kbd.js'
+		},
+		'bin-tilde': {
+			name: 'Edo tilde',
+			source: 'rules/bin/bin-tilde.js'
 		},
 		'bkm-tilde': {
 			name: 'Kom tilde',
@@ -136,6 +180,14 @@
 			name: 'Tibetan Sambhota',
 			source: 'rules/bo/bo-sambhota.js'
 		},
+		'bol-tilde': {
+			name: 'Bole - tilde',
+			source: 'rules/bol/bol-tilde.js'
+		},
+		'bom-tilde': {
+			name: 'Bèrom Tilde',
+			source: 'rules/bom/bom-tilde.js'
+		},
 		'brx-inscript': {
 			name: 'इनस्क्रिप्ट',
 			source: 'rules/brx/brx-inscript.js'
@@ -151,6 +203,14 @@
 		'byn-geezim': {
 			name: 'ብሊን',
 			source: 'rules/byn/byn-geezim.js'
+		},
+		'chn-tilde': {
+			name: 'Chinook wawa tilde',
+			source: 'rules/chn/chn-tilde.js'
+		},
+		'chr': {
+			name: 'Cherokee Transliteration',
+			source: 'rules/chr/chr.js'
 		},
 		'ckb-transliteration-arkbd': {
 			name: 'باشووری',
@@ -192,6 +252,10 @@
 			name: 'Dagbani tilde',
 			source: 'rules/dag/dag-tilde.js'
 		},
+		'ddn-tilde': {
+			name: 'Dinde Tilde',
+			source: 'rules/ddn/ddn-tilde.js'
+		},
 		'de-transliteration': {
 			name: 'Deutsch Tilde',
 			source: 'rules/de/de-transliteration.js'
@@ -208,6 +272,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/doi/doi-inscript2.js'
 		},
+		'dua-tilde': {
+			name: 'Duala tilde keyboard',
+			source: 'rules/dua/dua-tilde.js'
+		},
 		'ee-tilde': {
 			name: 'Ewe Tilde',
 			source: 'rules/ee/ee-tilde.js'
@@ -215,6 +283,10 @@
 		'efi-tilde': {
 			name: 'Efik - tilde',
 			source: 'rules/efi/efi-tilde.js'
+		},
+		'ekp-tilde': {
+			name: 'Ẹkpeye',
+			source: 'rules/ekp/ekp-tilde.js'
 		},
 		'el-kbd': {
 			name: 'Τυπική πληκτρολόγιο',
@@ -368,9 +440,25 @@
 			name: 'Մայքրոսոֆթի հին արևմտահայերեն',
 			source: 'rules/hy/hy-wmslegacy.js'
 		},
+		'ibb-tilde': {
+			name: 'Ibibio - tilde',
+			source: 'rules/ibb/ibb-tilde.js'
+		},
+		'id-keyboard': {
+			name: 'Indonesian - Suku',
+			source: 'rules/id/id-keyboard.js'
+		},
+		'id-jawi': {
+			name: 'Jawi Keyboard',
+			source: 'rules/id/id-jawi.js'
+		},
 		'ig-tilde': {
 			name: 'Igbo - tilde',
 			source: 'rules/ig/ig-tilde.js'
+		},
+		'igl-tilde': {
+			name: 'Igbol - tilde',
+			source: 'rules/igl/igl-tilde.js'
 		},
 		'ipa-sil': {
 			name: 'International Phonetic Alphabet - SIL',
@@ -388,9 +476,21 @@
 			name: 'Esan Awain tilde',
 			source: 'rules/ish/ish-tilde.js'
 		},
+		'jac-tilde': {
+			name: 'Jakaltek tilde',
+			source: 'rules/jac/jac-tilde.js'
+		},
 		'jv-transliteration': {
 			name: 'Transliteration',
 			source: 'rules/jv/jv-transliteration.js'
+		},
+		'jv-keyboard': {
+			name: 'Jawa Latin extended',
+			source: 'rules/jv/jv-keyboard.js'
+		},
+		'jv-kongres': {
+			name: 'Kongres Aksara Jawa',
+			source: 'rules/jv/jv-kongres.js'
 		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
@@ -403,6 +503,10 @@
 		'kab-tilde': {
 			name: 'Taqbaylit Alatin tilde',
 			source: 'rules/kab/kab-tilde.js'
+		},
+		'kaj-tilde': {
+			name: 'Jju tilde',
+			source: 'rules/kaj/kaj-tilde.js'
 		},
 		'kbp-tilde': {
 			name: 'Kabɩyɛ tilde',
@@ -444,9 +548,17 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'kor-rr': {
+			name: 'Korean Revised Romanization',
+			source: 'rules/kor/kor-rr.js'
+		},
 		'kr-tilde': {
 			name: 'Kanuri tilde',
 			source: 'rules/kr/kr-tilde.js'
+		},
+		'kri-tilde': {
+			name: 'Krio tilde',
+			source: 'rules/kri/kri-tilde.js'
 		},
 		'ky-cyrl-alt': {
 			name: 'Кыргыз Alt',
@@ -467,6 +579,14 @@
 		'ku-tr': {
 			name: 'Kurdî-tr',
 			source: 'rules/ku/ku-tr.js'
+		},
+		'kus-tilde': {
+			name: 'Kusaal tilde',
+			source: 'rules/kus/kus-tilde.js'
+		},
+		'laj-tilde': {
+			name: 'Lango tilde',
+			source: 'rules/laj/laj-tilde.js'
 		},
 		'lg-tilde': {
 			name: 'Luganda tilde',
@@ -581,6 +701,10 @@
 		'mul-bf': {
 			name: 'Burkina Faso tilde keyboard',
 			source: 'rules/mul-bf/mul-bf.js'
+		},
+		'mul-click-tilde': {
+			name: 'Click consonants keyboard',
+			source: 'rules/mul-click/mul-click-tilde.js'
 		},
 		'mul-cm': {
 			name: 'General Alphabet of Cameroon Languages tilde keyboard',
@@ -706,6 +830,10 @@
 			name: 'Piemontèis',
 			source: 'rules/pms/pms.js'
 		},
+		'pnt-tilde': {
+			name: 'Pontic tilde',
+			source: 'rules/pnt/pnt-tilde.js'
+		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
 			source: 'rules/roa-tara/roa-tara.js'
@@ -802,9 +930,17 @@
 			name: 'Sesotho tilde',
 			source: 'rules/st/st-tilde.js'
 		},
+		'su-keyboard': {
+			name: 'Sundanese keyboard',
+			source: 'rules/su/su-keyboard.js'
+		},
 		'sv-normforms': {
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
+		},
+		'szl-tilde': {
+			name: 'Silesian tilde',
+			source: 'rules/szl/szl-tilde.js'
 		},
 		'ta-99': {
 			name: 'தமிழ்99',
@@ -859,7 +995,7 @@
 			source: 'rules/ti/ti-geezim.js'
 		},
 		'tig-geezim': {
-			name: 'ትግረ',
+			name: 'Tigre GeezIM',
 			source: 'rules/tig/tig-geezim.js'
 		},
 		'tn-tilde': {
@@ -906,6 +1042,10 @@
 			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
 		},
+		'wlx-tilde': {
+			name: 'Waale tilde',
+			source: 'rules/wlx/wlx-tilde.js'
+		},
 		'wo-alt': {
 			name: 'Wolof Alt',
 			source: 'rules/wo/wo-alt.js'
@@ -930,6 +1070,14 @@
 	/* eslint-disable quote-props */
 
 	$.extend( $.ime.languages, {
+		abr: {
+			autonym: 'Abron',
+			inputmethods: [ 'ak-qx', 'ak-tilde' ]
+		},
+		ach: {
+			autonym: 'Acoli',
+			inputmethods: [ 'ach-tilde' ]
+		},
 		ady: {
 			autonym: 'адыгэбзэ',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -945,10 +1093,6 @@
 		ajg: {
 			autonym: 'ajagbe',
 			inputmethods: [ 'ajg-tilde' ]
-		},
-		ak: {
-			autonym: 'Akan',
-			inputmethods: [ 'ak-qx', 'ak-tilde' ]
 		},
 		am: {
 			autonym: 'አማርኛ',
@@ -974,13 +1118,41 @@
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
 		},
+		ban: {
+			autonym: 'ᬩᬵᬲᬵᬩᬮᬶ bhāṣā Bali',
+			inputmethods: [ 'ban-transliteration' ]
+		},
 		bas: {
 			autonym: 'ɓasaá',
 			inputmethods: [ 'bas-tilde', 'mul-cm' ]
 		},
 		bbc: {
-			autonym: 'Batak',
-			inputmethods: [ 'batak-qwerty' ]
+			autonym: 'Batak Toba',
+			inputmethods: [ 'bbc-transliteration' ]
+		},
+		btz: {
+			autonym: 'Batak Alas Kluet',
+			inputmethods: [ 'btz-keyboard' ]
+		},
+		akb: {
+			autonym: 'Batak Angkola',
+			inputmethods: [ 'akb-keyboard' ]
+		},
+		btd: {
+			autonym: 'Batak Pakpak (Dairi)',
+			inputmethods: [ 'btd-keyboard' ]
+		},
+		btx: {
+			autonym: 'Batak Karo',
+			inputmethods: [ 'btx-keyboard' ]
+		},
+		bts: {
+			autonym: 'Batak Simalungun',
+			inputmethods: [ 'bts-keyboard' ]
+    },
+		btm: {
+			autonym: 'Batak Mandailing',
+			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
 		},
 		bci: {
 			autonym: 'wawle',
@@ -994,6 +1166,10 @@
 			autonym: 'беларуская (тарашкевіца)',
 			inputmethods: [ 'be-transliteration', 'be-latin' ]
 		},
+		bfa: {
+			autonym: 'Bari',
+			inputmethods: [ 'bfa-tilde' ]
+		},
 		bh: {
 			autonym: 'भोजपुरी',
 			inputmethods: [ 'hi-transliteration' ]
@@ -1001,6 +1177,10 @@
 		bgn: {
 			autonym: 'روچ کپتین بلوچی',
 			inputmethods: [ 'bgn-kbd' ]
+		},
+		bin: {
+			autonym: 'Ẹdo',
+			inputmethods: [ 'bin-tilde' ]
 		},
 		bho: {
 			autonym: 'भोजपुरी',
@@ -1022,6 +1202,14 @@
 			autonym: 'བོད་ཡིག།',
 			inputmethods: [ 'bo-ewts', 'bo-sambhota' ]
 		},
+		bol: {
+			autonym: 'bòo pìkkà',
+			inputmethods: [ 'bol-tilde' ]
+		},
+		bom: {
+			autonym: 'bèrom',
+			inputmethods: [ 'bom-tilde' ]
+		},
 		brx: {
 			autonym: 'बोड़ो',
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
@@ -1041,6 +1229,14 @@
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		chn: {
+			autonym: 'chinook wawa',
+			inputmethods: [ 'chn-tilde' ]
+		},
+		chr: {
+			autonym: 'ᏣᎳᎩ',
+			inputmethods: [ 'chr' ]
 		},
 		ckb: {
 			autonym: 'کوردی',
@@ -1062,9 +1258,17 @@
 			autonym: 'дарган',
 			inputmethods: [ 'cyrl-palochka' ]
 		},
+		ddn: {
+			autonym: 'dendi',
+			inputmethods: [ 'ddn-tilde' ]
+		},
 		de: {
 			autonym: 'Deutsch',
 			inputmethods: [ 'de-transliteration' ]
+		},
+		dga: {
+			autonym: 'Dagaare',
+			inputmethods: [ 'mul-bf' ]
 		},
 		din: {
 			autonym: 'Thuɔŋjäŋ',
@@ -1078,6 +1282,10 @@
 			autonym: 'डोगरी',
 			inputmethods: [ 'doi-inscript2' ]
 		},
+		dua: {
+			autonym: 'Duálá',
+			inputmethods: [ 'dua-tilde' ]
+		},
 		en: {
 			autonym: 'English',
 			inputmethods: [ 'ipa-sil', 'ipa-x-sampa' ]
@@ -1089,6 +1297,10 @@
 		efi: {
 			autonym: 'efịk',
 			inputmethods: [ 'efi-tilde' ]
+		},
+		ekp: {
+			autonym: 'ẹkpeye',
+			inputmethods: [ 'ekp-tilde' ]
 		},
 		el: {
 			autonym: 'Ελληνικά',
@@ -1138,9 +1350,21 @@
 			autonym: 'Hausa',
 			inputmethods: [ 'ha-tilde' ]
 		},
+		ibb: {
+			autonym: 'ibibio',
+			inputmethods: [ 'ibb-tilde' ]
+		},
+		id: {
+			autonym: 'Bahasa Indonesia',
+			inputmethods: [ 'id-keyboard', 'id-jawi' ]
+		},
 		ig: {
 			autonym: 'Igbo',
 			inputmethods: [ 'ig-tilde' ]
+		},
+		igl: {
+			autonym: 'Igala',
+			inputmethods: [ 'igl-tilde' ]
 		},
 		gom: {
 			autonym: 'गोंयची कोंकणी / Gõychi Konknni',
@@ -1190,9 +1414,13 @@
 			autonym: 'awain',
 			inputmethods: [ 'ish-tilde' ]
 		},
+		jac: {
+			autonym: 'Abꞌxubꞌal Poptiꞌ',
+			inputmethods: [ 'jac-tilde' ]
+		},
 		jv: {
-			autonym: 'ꦧꦱꦗꦮ',
-			inputmethods: [ 'jv-transliteration' ]
+			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
+			inputmethods: [ 'jv-transliteration', 'jv-keyboard', 'jv-kongres' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
@@ -1201,6 +1429,10 @@
 		kab: {
 			autonym: 'Taqbaylit / ⵜⴰⵇⴱⴰⵢⵍⵉⵜ',
 			inputmethods: [ 'kab-tilde', 'ber-tfng' ]
+		},
+		kaj: {
+			autonym: 'Jju',
+			inputmethods: [ 'kaj-tilde' ]
 		},
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
@@ -1234,9 +1466,17 @@
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
+		kor: {
+			autonym: '한국어',
+			inputmethods: [ 'kor-rr' ]
+		},
 		kr: {
 			autonym: 'kanuri',
 			inputmethods: [ 'kr-tilde' ]
+		},
+		kri: {
+			autonym: 'Krio',
+			inputmethods: [ 'kri-tilde' ]
 		},
 		ks: {
 			autonym: 'कॉशुर / کٲشُر',
@@ -1249,6 +1489,14 @@
 		ku: {
 			autonym: 'Kurdî',
 			inputmethods: [ 'ku-h', 'ku-tr' ]
+		},
+		kus: {
+			autonym: 'Kʋsaal',
+			inputmethods: [ 'kus-tilde' ]
+		},
+		laj: {
+			autonym: 'Lëblaŋo',
+			inputmethods: [ 'laj-tilde' ]
 		},
 		lbe: {
 			autonym: 'лакку',
@@ -1315,7 +1563,7 @@
 			inputmethods: [ 'mni-inscript2' ]
 		},
 		mnw: {
-			autonym: 'ဘာသာ မန်',
+			autonym: 'ဘာသာမန်',
 			inputmethods: [ 'mnw-simplified-anonta' ]
 		},
 		mos: {
@@ -1333,6 +1581,10 @@
 		shn: {
 			autonym: 'တႆး',
 			inputmethods: [ 'my-shn' ]
+		},
+		naq: {
+			autonym: 'Khoekhoegowab',
+			inputmethods: [ 'mul-click-tilde' ]
 		},
 		nb: {
 			autonym: 'Norsk (bokmål)',
@@ -1358,6 +1610,10 @@
 			autonym: 'Norsk (nynorsk)',
 			inputmethods: [ 'nb-normforms', 'nb-tildeforms' ]
 		},
+		nnh: {
+			autonym: 'ngiembɔɔn',
+			inputmethods: [ 'mul-cm' ]
+		},
 		nqo: {
 			autonym: 'ߒߞߏ',
 			inputmethods: [ 'nqo-standard-qwerty', 'nqo-transliteration' ]
@@ -1374,6 +1630,10 @@
 			autonym: 'Chichewa',
 			inputmethods: [ 'ny-tilde' ]
 		},
+		nzi: {
+			autonym: 'Nzema',
+			inputmethods: [ 'ak-tilde' ]
+		},
 		or: {
 			autonym: 'ଓଡ଼ିଆ',
 			inputmethods: [ 'or-phonetic', 'or-transliteration', 'or-inscript', 'or-inscript2', 'or-lekhani', 'or-OdiScript' ]
@@ -1385,6 +1645,10 @@
 		pms: {
 			autonym: 'Piemontèis',
 			inputmethods: [ 'pms' ]
+		},
+		pnt: {
+			autonym: 'Ποντιακά',
+			inputmethods: [ 'pnt-tilde' ]
 		},
 		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
@@ -1408,7 +1672,7 @@
 		},
 		sat: {
 			autonym: 'ᱥᱟᱱᱛᱟᱞᱤ (संताली)',
-			inputmethods: [ 'sat-inscript2', 'sat-inscript2-ol-chiki', 'sat-sarjom-baha' ]
+			inputmethods: [ 'sat-sarjom-baha', 'sat-inscript2-ol-chiki', 'sat-inscript2' ]
 		},
 		sd: {
 			autonym: 'सिंधी',
@@ -1454,9 +1718,17 @@
 			autonym: 'Sesotho',
 			inputmethods: [ 'st-tilde' ]
 		},
+		su: {
+			autonym: 'Sunda',
+			inputmethods: [ 'su-keyboard' ]
+		},
 		sv: {
 			autonym: 'Svenska',
 			inputmethods: [ 'sv-normforms' ]
+		},
+		szl: {
+			autonym: 'Ślůnski',
+			inputmethods: [ 'szl-tilde' ]
 		},
 		ta: {
 			autonym: 'தமிழ்',
@@ -1479,7 +1751,7 @@
 			inputmethods: [ 'ti-geezim' ]
 		},
 		tig: {
-			autonym: 'ትግረ',
+			autonym: 'ትግሬ',
 			inputmethods: [ 'tig-geezim' ]
 		},
 		tkr: {
@@ -1533,6 +1805,10 @@
 		vec: {
 			autonym: 'Vèneto',
 			inputmethods: [ 'vec-GVU' ]
+		},
+		wlx: {
+			autonym: 'Waale',
+			inputmethods: [ 'wlx-tilde' ]
 		},
 		wo: {
 			autonym: 'Wolof',
