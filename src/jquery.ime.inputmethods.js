@@ -718,6 +718,10 @@
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
 		},
+		'my-shn': {
+			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+			source: 'rules/my/my-shn.js'
+		},
 		'nb-normforms': {
 			name: 'Normal transliterasjon',
 			source: 'rules/nb/nb-normforms.js'
@@ -1572,7 +1576,11 @@
 		},
 		my: {
 			autonym: 'မြန်မာ',
-			inputmethods: [ 'my-mm3', 'my-xkb' ]
+			inputmethods: [ 'my-mm3', 'my-xkb', 'my-shn' ]
+		},
+		shn: {
+			autonym: 'တႆး',
+			inputmethods: [ 'my-shn' ]
 		},
 		naq: {
 			autonym: 'Khoekhoegowab',
