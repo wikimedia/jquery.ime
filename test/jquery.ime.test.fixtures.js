@@ -2550,6 +2550,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Indonesian keyboard test',
+		inputmethod: 'id-keyboard',
+		tests: [
+			{ input: '~Edamame', output: 'Édamame', description: 'Indonesian keyboard É' },
+			{ input: 'mer~eka', output: 'meréka', description: 'Indonesian keyboard é' },
+			{ input: '`E`ek', output: 'Èèk', description: 'Indonesian keyboard È' },
+			{ input: 'ap`el, b`eb`ek', output: 'apèl, bèbèk', description: 'Indonesian keyboard è' }
+		]
+	},
+	{
 		description: 'Jawi test',
 		inputmethod: 'id-jawi',
 		tests: [

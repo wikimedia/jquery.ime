@@ -444,6 +444,10 @@
 			name: 'Ibibio - tilde',
 			source: 'rules/ibb/ibb-tilde.js'
 		},
+		'id-keyboard': {
+			name: 'Indonesian - Suku',
+			source: 'rules/id/id-keyboard.js'
+		},
 		'id-jawi': {
 			name: 'Jawi Keyboard',
 			source: 'rules/id/id-jawi.js'
@@ -1343,8 +1347,8 @@
 			inputmethods: [ 'ibb-tilde' ]
 		},
 		id: {
-			autonym: 'Jawi',
-			inputmethods: [ 'id-jawi' ]
+			autonym: 'Bahasa Indonesia',
+			inputmethods: [ 'id-keyboard', 'id-jawi' ]
 		},
 		ig: {
 			autonym: 'Igbo',
