@@ -4185,6 +4185,79 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Korean RR test',
+		inputmethod: 'kor-rr',
+		tests: [
+			// Note that RR is meant to romanize from hangul to latin script, but not
+			// the other way around, so there are some instances where the keystrokes
+			// required are different from RR
+			{ input: 'namsan ', output: '남산', description: 'Namsan -> 남산'},
+			{ input: 'dokdo ', output: '독도', description: 'Dokdo -> 독도'},
+			{ input: 'yeon-hwagyo ', output: '연화교', description: 'yeon-hwagyo -> 연화교'},
+			{ input: 'namhansanseong ', output: '남한산성', description: 'Namhansanseong -> 남한산성'},
+			{ input: 'hyeonchungsa ', output: '현충사', description: 'Hyeonchungsa -> 현충사'},
+			{ input: 'chok-seoklu ', output: '촉석루', description: 'Chokseongnu (chok-seoklu) -> 촉석루'},
+			{ input: 'geumgang ', output: '금강', description: 'Geumgang -> 금강'},
+			{ input: 'sokri-san ', output: '속리산', description: 'Songnisan (sokri-san) -> 속리산'},
+			{ input: 'mu-ryangsu-jeon ', output: '무량수전', description: 'mu-ryangsu-jeon -> 무량수전'},
+			{ input: 'gyeongbokgung ', output: '경복궁', description: 'Gyeongbokgung -> 경복궁'},
+			{ input: 'anabji ', output: '안압지', description: 'anabji -> 안압지'},
+			{ input: 'geukrakjeon ', output: '극락전', description: 'geukrakjeon -> 극락전'},
+			{ input: 'bulguk-sa ', output: '불국사', description: 'Bulguksa (bulguk-sa) -> 불국사'},
+			{ input: 'hwa-rangdae ', output: '화랑대', description: 'Hwarangdae (hwa-rangdae) -> 화랑대'},
+			{ input: 'o-jukheon ', output: '오죽헌', description: 'Ojukheon (o-jukheon) -> 오죽헌'},
+			{ input: 'dokribmun ', output: '독립문', description: 'Dongnimmun (dokribmun) -> 독립문'},
+			{ input: 'da-bo-tab ', output: '다보탑', description: 'Dabotap (da-bo-tab) -> 다보탑'},
+			{ input: 'jongmyo ', output: '종묘', description: 'Jongmyo -> 종묘'},
+			// Hyphens can be used to disambiguate
+			{ input: 'jung-ang ', output: '중앙', description: 'Jung-ang -> 중앙'},
+			{ input: 'jun-gang ', output: '준강', description: 'Jun-gang -> 준강'},
+			{ input: 'jungang ', output: '중앙', description: 'Jungang -> 중앙'},
+			{ input: 'se-un ', output: '세운', description: 'Se-un -> 세운'},
+			{ input: 'seun ',  output: '슨', description: 'Seun -> 슨'},
+			{ input: 'ban-gudae ', output: '반구대', description: 'Ban-gudae -> 반구대'},
+			{ input: 'bang-udae ', output: '방우대', description: 'Bang-udae -> 방우대'},
+			{ input: 'bangudae ', output: '방우대', description: 'Bangudae -> 방우대'},
+			{ input: 'hae-undae ', output: '해운대', description: 'Hae-undae -> 해운대'},
+			{ input: 'ha-eundae ', output: '하은대', description: 'Ha-eundae -> 하은대'},
+			{ input: 'haeundae ', output: '해운대', description: 'Haeundae -> 해운대'},
+			// Hyphens can also be used even when disambiguation is not necessary
+			{ input: 'han boknam ', output: '한복남', description: 'Han Boknam -> 한복남'},
+			{ input: 'han bok-nam ', output: '한복남', description: 'Han Bok-nam -> 한복남'},
+			{ input: 'hong bichna ', output: '홍빛나', description: 'Hong Bitna (hong bichna) -> 홍빛나'},
+			{ input: 'hong bich-na ', output: '홍빛나', description: 'Hong Bit-na (hong bich-na) -> 홍빛나'},
+			// Tense (or glottalized) sounds are not transcribed in cases where morphemes are compounded
+			{ input: 'abgu-jeong ', output: '압구정', description: 'Apgujeong (abgu-jeong) -> 압구정'},
+			{ input: 'habjeong ', output: '합정', description: 'Hapjeong (habjeong) -> 합정'},
+			{ input: 'jukbyeon ', output: '죽변', description: 'Jukbyeon -> 죽변'},
+			{ input: 'nakdonggang ', output: '낙동강', description: 'Nakdonggang -> 낙동강'},
+			{ input: 'paldang ', output: '팔당', description: 'Paldang -> 팔당'},
+			{ input: 'nak-seongdae ', output: '낙성대', description: 'Nakseongdae (nak-seongdae) -> 낙성대'},
+			{ input: 'ul-san ', output: '울산', description: 'Ulsan (ul-san) -> 울산'},
+			// Hangul -> RR -> hangul may sometimes result in different hangul, like these
+			{ input: 'baengma ', output: '뱅마', description: 'Baengma -> 뱅마 (not 백마)'},
+			{ input: 'wangsimni ', output: '왕심니', description: 'Wangsimni -> 왕심니 (not 왕십리)'},
+			{ input: 'sinmunno ', output: '신문노', description: 'Sinmunno -> 신문노 (not 신문로)'},
+			{ input: 'byeollae ', output: '별래', description: 'Byeollae -> 별래 (not 별내)'},
+			{ input: 'jongno ', output: '종노', description: 'Jongno -> 종노 (not 종로)'},
+			{ input: 'silla ', output: '실라', description: 'Silla -> 실라 (not 신라)'},
+			// Syllable-final ㅅ should always be 's'
+			{ input: 'saesbyeol ', output: '샛별', description: 'saesbyeol (not saetbyol) -> 샛별'},
+			// The holiday Seollal would be typed Seolnal, even though both RR and MR transcribe it as Seollal
+			{ input: 'seolnal ', output: '설날', description: 'Seolnal -> 설날'},
+			{ input: 'seollal ', output: '설랄', description: 'Seollal -> 설랄'},
+			// Stressed final syllables should be allowed
+			{ input: 'tieuT ', output: '티읕', description: 'tieuT -> 티읕'},
+			{ input: 'TieuT ', output: '티읕', description: 'TieuT -> 티읕'},
+			{ input: 'kieuK ', output: '키읔', description: 'kieuK -> 키읔'},
+			{ input: 'KieuK ', output: '키읔', description: 'KieuK -> 키읔'},
+			{ input: 'tteokbokki ', output: '떡볶이', descsription: 'tteokbokki -> 떡볶이'},
+			{ input: 'ddeokbokki ', output: '떡볶이', descsription: 'ddeokbokki -> 떡볶이'},
+			{ input: 'go-chu-jangjjigae ', output: '고추장찌개', descsription: 'go-chu-jangjjigae -> 고추장찌개'},
+			{ input: 'sundu-bu jjigae ', output: '순두부찌개', descsription: 'sundu-bu jjigae -> 순두부찌개'},
+		]
+	},
+	{
 		description: 'Kanuri tilde test',
 		inputmethod: 'kr-tilde',
 		tests: [
