@@ -110,7 +110,7 @@
 		name: 'Korean Revised Romanization',
 		description: 'Transliteration using Korean revised romanization',
 		date: '2023-02-04',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/korean-revised-romanization',
 		author: 'Anne Drew Hu',
 		license: 'GPLv3',
 		version: '1.0',
