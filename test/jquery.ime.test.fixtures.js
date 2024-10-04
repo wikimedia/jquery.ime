@@ -695,7 +695,7 @@ var palochkaVariants = {
 			{ input: 'H', output: 'ᯱ', description: 'Mandailing keyboard - H - hajoringan "-h"' },
 			{ input: 'Z', output: 'ᯰ', description: 'Mandailing keyboard - Z - amisara "-ng"' },
 
-      { input: [ [ '4', true ] ], output: '᯼', description: 'Mandailing keyboard - alt-4 - bindu na metek' },
+			{ input: [ [ '4', true ] ], output: '᯼', description: 'Mandailing keyboard - alt-4 - bindu na metek' },
 			{ input: [ [ '5', true ] ], output: '᯽', description: 'Mandailing keyboard - alt-5 - bindu pinarboras' },
 			{ input: [ [ '6', true ] ], output: '᯾', description: 'Mandailing keyboard - alt-6 - bindu judul' },
 			{ input: [ [ '7', true ] ], output: '᯿', description: 'Mandailing keyboard - alt-7 - bindu pangolat' }

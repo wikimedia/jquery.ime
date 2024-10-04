@@ -99,9 +99,9 @@
 		'bts-keyboard': {
 			name: 'Simalungun Keyboard',
 			source: 'rules/bts/bts-keyboard.js'
-    },
+    	},
 		'btm-transliteration': {
-			name: 'Transliteration',
+			name: 'Mandailing Transliteration',
 			source: 'rules/btm/btm-transliteration.js'
 		},
 		'btm-keyboard': {
@@ -719,7 +719,7 @@
 			source: 'rules/my/my-xkb.js'
 		},
 		'my-shn': {
-			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+			name: 'Shan Standard Keyboard',
 			source: 'rules/my/my-shn.js'
 		},
 		'nb-normforms': {
@@ -1119,19 +1119,15 @@
 			inputmethods: [ 'azb-kbd' ]
 		},
 		ban: {
-			autonym: 'ᬩᬵᬲᬵᬩᬮᬶ bhāṣā Bali',
+			autonym: 'Basa Bali',
 			inputmethods: [ 'ban-transliteration' ]
 		},
 		bas: {
 			autonym: 'ɓasaá',
 			inputmethods: [ 'bas-tilde', 'mul-cm' ]
 		},
-		bbc: {
-			autonym: 'Batak Toba',
-			inputmethods: [ 'bbc-transliteration' ]
-		},
 		btz: {
-			autonym: 'Batak Alas Kluet',
+			autonym: 'Batak Alas-Kluet',
 			inputmethods: [ 'btz-keyboard' ]
 		},
 		akb: {
@@ -1149,10 +1145,14 @@
 		bts: {
 			autonym: 'Batak Simalungun',
 			inputmethods: [ 'bts-keyboard' ]
-    },
+		},
 		btm: {
 			autonym: 'Batak Mandailing',
 			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
+		},
+		bbc: {
+			autonym: 'Batak Toba',
+			inputmethods: [ 'bbc-transliteration' ]
 		},
 		bci: {
 			autonym: 'wawle',
@@ -1419,7 +1419,7 @@
 			inputmethods: [ 'jac-tilde' ]
 		},
 		jv: {
-			autonym: 'ꦧꦱꦗꦮ (Basa Jawa)',
+			autonym: 'Jawa',
 			inputmethods: [ 'jv-transliteration', 'jv-keyboard', 'jv-kongres' ]
 		},
 		ka: {
@@ -1579,7 +1579,7 @@
 			inputmethods: [ 'my-mm3', 'my-xkb', 'my-shn' ]
 		},
 		shn: {
-			autonym: 'တႆး',
+			autonym: 'ၽႃႇသႃႇတႆး',
 			inputmethods: [ 'my-shn' ]
 		},
 		naq: {
