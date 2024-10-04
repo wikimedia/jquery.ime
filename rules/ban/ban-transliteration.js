@@ -58,11 +58,11 @@
 			// anuswara
 			[ 'ᬦ᭄(g|G)', '(a|A|e|E|i|I|o|O|u|U|x|X)n', 'ᬂ' ], // 1B02	 ◌ᬂ 	Balinese Sign Cecek =	anusvara
 
-			//https://unicode.org/charts/nameslist/n_1B00.html
-			//a,e,i,o,u,x = ha+swara?
-			//tha, ttha, tta, dha, ddha, dda, D, T
-			//f,v,z,x
-			//[ '(ᬓ|ᬔ|ᬕ|ᬖ|ᬗ|ᬘ|ᬙ|ᬚ|ᬛ|ᬜ|ᬝ|ᬞ|ᬟ|ᬠ|ᬡ|ᬢ|ᬣ|ᬤ|ᬥ|ᬦ|ᬧ|ᬨ|ᬩ|ᬪ|ᬫ|ᬬ|ᬭ|ᬮ|ᬯ|ᬰ|ᬱ|ᬲ|ᬳ)(a|A)', '(k|K|g|G|c|C|j|J|t|T|d|D|n|N|p|P|b|B|m|M|y|Y|r|R|l|L|w|W|s|S|z|Z|h|H)(a|A)', '$1ᬵ' ],  //1B35	 ᬵ 	Balinese Vowel Sign Tedung =	aa
+			// https://unicode.org/charts/nameslist/n_1B00.html
+			// a,e,i,o,u,x = ha+swara?
+			// tha, ttha, tta, dha, ddha, dda, D, T
+			// f,v,z,x
+			// [ '(ᬓ|ᬔ|ᬕ|ᬖ|ᬗ|ᬘ|ᬙ|ᬚ|ᬛ|ᬜ|ᬝ|ᬞ|ᬟ|ᬠ|ᬡ|ᬢ|ᬣ|ᬤ|ᬥ|ᬦ|ᬧ|ᬨ|ᬩ|ᬪ|ᬫ|ᬬ|ᬭ|ᬮ|ᬯ|ᬰ|ᬱ|ᬲ|ᬳ)(a|A)', '(k|K|g|G|c|C|j|J|t|T|d|D|n|N|p|P|b|B|m|M|y|Y|r|R|l|L|w|W|s|S|z|Z|h|H)(a|A)', '$1ᬵ' ],  //1B35	 ᬵ 	Balinese Vowel Sign Tedung =	aa
 			[ '(ᬓ|ᬔ|ᬕ|ᬖ|ᬗ|ᬘ|ᬙ|ᬚ|ᬛ|ᬜ|ᬝ|ᬞ|ᬟ|ᬠ|ᬡ|ᬢ|ᬣ|ᬤ|ᬥ|ᬦ|ᬧ|ᬨ|ᬩ|ᬪ|ᬫ|ᬬ|ᬭ|ᬮ|ᬯ|ᬰ|ᬱ|ᬲ|ᬳ)(a|A)', '(a|A)', '$1ᬵ' ],  //1B35	 ᬵ 	Balinese Vowel Sign Tedung =	aa
 			[ '(a|A)', '(a|A)', 'ᬆ' ], // 1B06	 ᬆ 	Balinese Letter Akara Tedung =	aa ≡	1B05 ᬅ 1B35 ᬵ
 			[ 'a', '', 'ᬳ' ], // 1B33	 ᬳ 	Balinese Letter Ha
