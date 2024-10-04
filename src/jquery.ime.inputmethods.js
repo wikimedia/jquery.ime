@@ -99,7 +99,7 @@
 		'bts-keyboard': {
 			name: 'Simalungun Keyboard',
 			source: 'rules/bts/bts-keyboard.js'
-    	},
+    		},
 		'btm-transliteration': {
 			name: 'Mandailing Transliteration',
 			source: 'rules/btm/btm-transliteration.js'
