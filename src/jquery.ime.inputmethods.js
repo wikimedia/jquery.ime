@@ -715,7 +715,7 @@
 			source: 'rules/my/my-mm3.js'
 		},
 		'my-shn': {
-			name: 'Shan Standard Keyboard',
+			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
 			source: 'rules/my/my-shn.js'
 		},
 		'my-xkb': {
