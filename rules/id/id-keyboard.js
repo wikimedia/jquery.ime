@@ -6,7 +6,7 @@
 		name: 'id-keyboard',
 		description: 'Indonesian - Suku keyboard',
 		date: '2023-06-04',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/indonesian-suku-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
 		version: '1',
