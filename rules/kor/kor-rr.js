@@ -123,8 +123,6 @@
 		patterns: function(input, context) {
 			var patterns, regex, rule, replacement, i, result;
 
-			
-
 			for ( i = 0; i < patternList.length; i++ ) {
 				rule = patternList[ i ];
 				regex = new RegExp( rule[ 0 ] + '$' );
