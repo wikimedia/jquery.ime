@@ -622,7 +622,7 @@ var palochkaVariants = {
 			{ input: [ [ '7', true ] ], output: '᯿', description: 'Simalungun keyboard - alt-7 - bindu pangolat' }
 		]
 	},
-	{		
+	{
     description: 'Batak Mandailing transliteration test',
 		inputmethod: 'btm-transliteration',
 		tests: [
@@ -5080,9 +5080,9 @@ var palochkaVariants = {
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
 		]
 	},
-		{
+	{
 		description: 'Shan Keyboard Test',
-		inputmethod: 'my-shn',
+		inputmethod: 'shn-standard',
 		tests: [
 			{ input: 'qmrf:wlnf:', output: 'ၸၢမ်းတူၺ်း', description: 'ၸၢမ်းတူၺ်းလွၵ်းမိုဝ်းတႆးၶႃႈ' }
 		]
