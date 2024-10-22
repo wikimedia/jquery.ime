@@ -548,9 +548,9 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
-		'kor-rr': {
+		'ko-rr': {
 			name: 'Korean Revised Romanization',
-			source: 'rules/kor/kor-rr.js'
+			source: 'rules/ko/ko-rr.js'
 		},
 		'kr-tilde': {
 			name: 'Kanuri tilde',
@@ -1466,9 +1466,9 @@
 			autonym: 'ಕನ್ನಡ',
 			inputmethods: [ 'kn-transliteration', 'kn-inscript', 'kn-kgp', 'kn-inscript2' ]
 		},
-		kor: {
+		ko: {
 			autonym: '한국어',
-			inputmethods: [ 'kor-rr' ]
+			inputmethods: [ 'ko-rr' ]
 		},
 		kr: {
 			autonym: 'kanuri',
