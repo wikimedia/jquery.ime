@@ -2,7 +2,7 @@
 	'use strict';
 
 	var shn = {
-		id: 'my-shn',
+		id: 'shn-standard',
 		name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
 		description: 'Shan Standard Keyboard per SIIT',
 		date: '2022-09-15',
@@ -11,8 +11,8 @@
 		license: 'GPLv3',
 		version: '1.0',
 		patterns: [
-			//Basic Cosonants
-            		[ 'u', '', 'ၵ' ],
+			// Basic Cosonants
+			[ 'u', '', 'ၵ' ],
 			[ 'c', '', 'ၶ' ],
 			[ 'C', '', 'ꧠ' ],
 			[ 'i', '', 'င' ],
@@ -44,7 +44,8 @@
 			[ 't', '', 'ဢ' ],
 			[ 'I', '', 'ရ' ],
 			[ 'O', '', 'သ' ],
-            		// Signs
+
+			// Signs
 			[ 'm', '', 'ၢ' ],
 			[ 'g', '', 'ွ' ],
 			[ 'd', '', 'ိ' ],
@@ -59,10 +60,12 @@
 			[ 'f', '','်' ],
 			[ 'F', '','ႂ်' ],
 			[ 'M', '', 'ႃ' ],
-            		//Punctuation
+
+			// Punctuation
 			[ '\\>', '', '။' ],
 			[ '\\<', '', '၊' ],
-            		//Signs 
+
+			// Signs
 			[ 'A', '', 'ဵ' ],
 			[ 'K', '', 'ꧦ' ],
 			[ 'L', '', 'ႊ' ],
@@ -81,7 +84,9 @@
 			[ '\\[','', '[' ],
 			[ '\\}', '', '}' ],
 			[ '\\\\', '', '\'' ],
-            		//Shan Digits As Jquery IME doesn't support Alt+Key, Shift+ALt+Key, Tide Key+Key will use Roman Digit only for now.
+
+			// Shan digits, as jquery.ime doesn't support Alt+Key,
+			// Shift+ALt+Key, Tide Key+Key will use Roman Digit only for now
 			[ '0', '', '0' ],
 			[ '1', '', '1' ],
 			[ '2', '', '2' ],

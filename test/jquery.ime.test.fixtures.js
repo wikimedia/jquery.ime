@@ -622,7 +622,7 @@ var palochkaVariants = {
 			{ input: [ [ '7', true ] ], output: '᯿', description: 'Simalungun keyboard - alt-7 - bindu pangolat' }
 		]
 	},
-	{		
+	{
     description: 'Batak Mandailing transliteration test',
 		inputmethod: 'btm-transliteration',
 		tests: [
@@ -4186,7 +4186,7 @@ var palochkaVariants = {
 	},
 	{
 		description: 'Korean RR test',
-		inputmethod: 'kor-rr',
+		inputmethod: 'ko-rr',
 		tests: [
 			// Note that RR is meant to romanize from hangul to latin script, but not
 			// the other way around, so there are some instances where the keystrokes
@@ -5080,9 +5080,9 @@ var palochkaVariants = {
 			{ input: 'ujdkqdkygonf>', output: 'ကြိုဆိုပါသည်။', description: 'Myanmar mm3 ကြိုဆိုပါသည်။' }
 		]
 	},
-		{
+	{
 		description: 'Shan Keyboard Test',
-		inputmethod: 'my-shn',
+		inputmethod: 'shn-standard',
 		tests: [
 			{ input: 'qmrf:wlnf:', output: 'ၸၢမ်းတူၺ်း', description: 'ၸၢမ်းတူၺ်းလွၵ်းမိုဝ်းတႆးၶႃႈ' }
 		]
