@@ -20,3 +20,4 @@
 
 	$.ime.register( idKeyboard );
 }( jQuery ) );
+
