@@ -33,7 +33,7 @@
 		[ '([ᅡ-ᅵ])h', '$1ᇂ' ],
 
 		// Use space, hyphen, and apostrophe to disambiguate
-		// Do nothing, combineJamo will do the work 
+		// Do nothing, combineJamo will do the work
 		[ '([\- \'])', '$1'],
 
 		// Syllable initials
@@ -62,7 +62,7 @@
 		[ 'T', 'ᄐ' ],
 		[ 'p', 'ᄑ' ],
 		[ 'h', 'ᄒ' ],
-		
+
 		// Vowels
 		// Vowels without consontant initial must have ᄋ prepended
 		// [^ᄀ-ᄒ]|^ matches the start character or anything but an initial consonant
@@ -106,7 +106,7 @@
 	];
 
 	var koreanRR = {
-		id: 'kor-rr',
+		id: 'ko-rr',
 		name: 'Korean Revised Romanization',
 		description: 'Transliteration using Korean revised romanization',
 		date: '2023-02-04',
@@ -117,7 +117,7 @@
 		maxKeyLength: 4,
 		contextLength: 1,
 
-		// This function mirrors the normal behavior in jquery.ime.js, 
+		// This function mirrors the normal behavior in jquery.ime.js,
 		// except it combines jamo when a new syllable starts
 		// This version does not support context rules, but we don't need them
 		patterns: function(input, context) {
@@ -135,7 +135,7 @@
 				// Input string match test
 				if ( regex.test( input ) ) {
 					result = input.replace(regex, replacement);
-					
+
 					// This regex matches jamo that form a syllable so they can be combined
 					var jamoRegex = /([ᄀ-ᄒ])([ᅡ-ᅵ])([ᆨ-ᇂ])?([ᄀ-ᄒ]|[\- '])(.*)$/;
 					if (jamoRegex.test(result)) {

@@ -4186,7 +4186,7 @@ var palochkaVariants = {
 	},
 	{
 		description: 'Korean RR test',
-		inputmethod: 'kor-rr',
+		inputmethod: 'ko-rr',
 		tests: [
 			// Note that RR is meant to romanize from hangul to latin script, but not
 			// the other way around, so there are some instances where the keystrokes
