@@ -714,10 +714,6 @@
 			name: 'မြန်မာ၃ လက်ကွက်',
 			source: 'rules/my/my-mm3.js'
 		},
-		'my-shn': {
-			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
-			source: 'rules/my/my-shn.js'
-		},
 		'my-xkb': {
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
@@ -905,6 +901,10 @@
 		'sg-tilde': {
 			name: 'Sängö',
 			source: 'rules/sg/sg-tilde.js'
+		},
+		'shn-standard': {
+			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+			source: 'rules/shn/shn-standard.js'
 		},
 		'si-singlish': {
 			name: 'සිංග්ලිෂ්',
@@ -1576,11 +1576,7 @@
 		},
 		my: {
 			autonym: 'မြန်မာ',
-			inputmethods: [ 'my-mm3', 'my-xkb', 'my-shn' ]
-		},
-		shn: {
-			autonym: 'လိၵ်ႈတႆး',
-			inputmethods: [ 'my-shn' ]
+			inputmethods: [ 'my-mm3', 'my-xkb' ]
 		},
 		naq: {
 			autonym: 'Khoekhoegowab',
@@ -1697,6 +1693,10 @@
 		shi: {
 			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
+		},
+		shn: {
+			autonym: 'လိၵ်ႈတႆး',
+			inputmethods: [ 'shn-standard' ]
 		},
 		si: {
 			autonym: 'සිංහල',
