@@ -2560,16 +2560,6 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Indonesian keyboard test',
-		inputmethod: 'id-keyboard',
-		tests: [
-			{ input: '~Edamame', output: 'Édamame', description: 'Indonesian keyboard É' },
-			{ input: 'mer~eka', output: 'meréka', description: 'Indonesian keyboard é' },
-			{ input: '`E`ek', output: 'Èèk', description: 'Indonesian keyboard È' },
-			{ input: 'ap`el, b`eb`ek', output: 'apèl, bèbèk', description: 'Indonesian keyboard è' }
-		]
-	},
-	{
 		description: 'Jawi test',
 		inputmethod: 'id-jawi',
 		tests: [
@@ -2600,6 +2590,16 @@ var palochkaVariants = {
 			{ input: 'x', output: 'ء', description: 'Jawi hamza' },
 			{ input: 'y', output: 'ي', description: 'Jawi ya' },
 			{ input: 'z', output: 'ز', description: 'Jawi zai' }
+		]
+	},
+	{
+		description: 'Indonesian keyboard test',
+		inputmethod: 'id-keyboard',
+		tests: [
+			{ input: '~Edamame', output: 'Édamame', description: 'Indonesian keyboard É' },
+			{ input: 'mer~eka', output: 'meréka', description: 'Indonesian keyboard é' },
+			{ input: '`E`ek', output: 'Èèk', description: 'Indonesian keyboard È' },
+			{ input: 'ap`el, b`eb`ek', output: 'apèl, bèbèk', description: 'Indonesian keyboard è' }
 		]
 	},
 	{
@@ -3157,6 +3157,32 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Jawa Latin extended test',
+		inputmethod: 'jv-keyboard',
+		tests: [
+			{ input: '`En`ek Qnqk', output: 'Ènèk Ènèk', description: 'Jawa Latin extended È' },
+			{ input: '~Enak~e Enake', output: 'Énaké Énaké', description: 'Jawa Latin extended É' },
+			{ input: '^En^eg Xnxg', output: 'Ênêg Ênêg', description: 'Jawa Latin extended Ê' },
+			{ input: 'QQ Qq qq EE Ee ee XX Xx xx', output: 'Q Q q E E e X X x', description: 'Normal QEX' },
+			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
+			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
+			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
+			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
+		]
+	},
+	{
+		description: 'Javanese Kongres test',
+		inputmethod: 'jv-kongres',
+		tests: [
+			{ input: "/hncrkdtswlp;jyzmgb'zq", output: '꧋ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦚ꧀', description: 'Javanese Kongres - hanacaraka sequence - adeg-adeg + 20 basic abugidas (aksara nglegena) + virama/pangkon' },
+			{ input: 'fvhihuhehohxh-h=h!h_h<', output: 'ꦉꦊꦲꦶꦲꦸꦲꦺꦲꦺꦴꦲꦼꦲ꦳ꦲꦀꦲꦵꦲꦷꦲꦹ', description: 'Javanese Kongres - other characters 1 (sandhangan swara)' },
+			{ input: 'AEIOUM>?NCKDTSPJGBZQXV+:"', output: 'ꦄꦌꦆꦎꦈꦍꦅꦇꦟꦖꦑꦣꦡꦯꦦꦘꦓꦨꦰꦐꦬꦋꦙꦞꦜ', description: 'Javanese Kongres - other characters 2 (aksara swara + murda)' },
+			{ input: 'hRhYhFhHh[h]hWhL', output: 'ꦲꦿꦲꦾꦲꦽꦲꦃꦲꦁꦲꦂꦲꦻꦲꦴ', description: 'Javanese Kongres - other characters 3 (wyanjana, sesigeg)' },
+			{ input: '`1234567890', output: '꧇꧑꧒꧓꧔꧕꧖꧗꧘꧙꧐', description: 'Javanese Kongres - other characters 4 (number/angka)' },
+			{ input: '~@#$%^&*(),.{}', output: '꧊ꧏ꧐꧞꧟꧃꧄꧅꧌꧍꧈꧉꧁꧂', description: 'Javanese Kongres - other characters 5 (symbols)' }
+		]
+	},
+	{
 		description: 'Javanese transliteration test',
 		inputmethod: 'jv-transliteration',
 		tests: [
@@ -3197,32 +3223,6 @@ var palochkaVariants = {
 			{ input: 'n ya', output: 'ꦤ꧀ꦪ', description: 'n + ZWS + y' },
 			{ input: ',.', output: '꧈꧉', description: 'important punctuations test' },
 			{ input: ')', output: '꧍', description: 'last line test' }
-		]
-	},
-	{
-		description: 'Jawa Latin extended test',
-		inputmethod: 'jv-keyboard',
-		tests: [
-			{ input: '`En`ek Qnqk', output: 'Ènèk Ènèk', description: 'Jawa Latin extended È' },
-			{ input: '~Enak~e Enake', output: 'Énaké Énaké', description: 'Jawa Latin extended É' },
-			{ input: '^En^eg Xnxg', output: 'Ênêg Ênêg', description: 'Jawa Latin extended Ê' },
-			{ input: 'QQ Qq qq EE Ee ee XX Xx xx', output: 'Q Q q E E e X X x', description: 'Normal QEX' },
-			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
-			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
-			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
-			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
-		]
-	},
-	{
-		description: 'Javanese Kongres test',
-		inputmethod: 'jv-kongres',
-		tests: [
-			{ input: "/hncrkdtswlp;jyzmgb'zq", output: '꧋ꦲꦤꦕꦫꦏꦢꦠꦱꦮꦭꦥꦝꦗꦪꦚꦩꦒꦧꦛꦚ꧀', description: 'Javanese Kongres - hanacaraka sequence - adeg-adeg + 20 basic abugidas (aksara nglegena) + virama/pangkon' },
-			{ input: 'fvhihuhehohxh-h=h!h_h<', output: 'ꦉꦊꦲꦶꦲꦸꦲꦺꦲꦺꦴꦲꦼꦲ꦳ꦲꦀꦲꦵꦲꦷꦲꦹ', description: 'Javanese Kongres - other characters 1 (sandhangan swara)' },
-			{ input: 'AEIOUM>?NCKDTSPJGBZQXV+:"', output: 'ꦄꦌꦆꦎꦈꦍꦅꦇꦟꦖꦑꦣꦡꦯꦦꦘꦓꦨꦰꦐꦬꦋꦙꦞꦜ', description: 'Javanese Kongres - other characters 2 (aksara swara + murda)' },
-			{ input: 'hRhYhFhHh[h]hWhL', output: 'ꦲꦿꦲꦾꦲꦽꦲꦃꦲꦁꦲꦂꦲꦻꦲꦴ', description: 'Javanese Kongres - other characters 3 (wyanjana, sesigeg)' },
-			{ input: '`1234567890', output: '꧇꧑꧒꧓꧔꧕꧖꧗꧘꧙꧐', description: 'Javanese Kongres - other characters 4 (number/angka)' },
-			{ input: '~@#$%^&*(),.{}', output: '꧊ꧏ꧐꧞꧟꧃꧄꧅꧌꧍꧈꧉꧁꧂', description: 'Javanese Kongres - other characters 5 (symbols)' }
 		]
 	},
 	{
@@ -5091,13 +5091,6 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Shan Keyboard Test',
-		inputmethod: 'shn-standard',
-		tests: [
-			{ input: 'qmrf:wlnf:', output: 'ၸၢမ်းတူၺ်း', description: 'ၸၢမ်းတူၺ်းလွၵ်းမိုဝ်းတႆးၶႃႈ' }
-		]
-	},
-	{
 		description: 'Myanmar xkb test',
 		inputmethod: 'my-xkb',
 		tests: [
@@ -5153,6 +5146,16 @@ var palochkaVariants = {
 			{ input: 'qwertyuiop', output: 'त्रधभचतथगषयउ', description: 'Nepali trad qwertyuiop' },
 			{ input: 'asdfghjkl;\'', output: 'बकमानजवपिसु', description: 'Nepali trad asdfghjkl;\'' },
 			{ input: 'zxcvbnm', output: 'शहअखदलः', description: 'Nepali trad zxcvbnm' }
+		]
+	},
+	{
+		description: 'Nias tilde test',
+		inputmethod: 'nia-tilde',
+		tests: [
+			{ input: '~O moroi', output: 'Ö moroi', description: 'Nias tilde Ö moroi' },
+			{ input: 'Sanandr~osa', output: 'Sanandrösa', description: 'Nias tilde Sanandrösa' },
+			{ input: 'MIYA~WA', output: 'MIYAŴA', description: 'Nias tilde MIYAŴA' },
+			{ input: 'zali~wa-li~wa', output: 'zaliŵa-liŵa', description: 'Nias tilde zaliŵa-liŵa' }
 		]
 	},
 	{
@@ -5279,16 +5282,6 @@ var palochkaVariants = {
 			{ input: '?', output: '؟', description: "N'Ko transliteration ?" },
 			{ input: '--', output: '-', description: "N'Ko transliteration --" },
 			{ input: '~~', output: '~', description: "N'Ko transliteration ~~" }
-		]
-	},
-	{
-		description: 'Nias tilde test',
-		inputmethod: 'nia-tilde',
-		tests: [
-			{ input: '~O moroi', output: 'Ö moroi', description: 'Nias tilde Ö moroi' },
-			{ input: 'Sanandr~osa', output: 'Sanandrösa', description: 'Nias tilde Sanandrösa' },
-			{ input: 'MIYA~WA', output: 'MIYAŴA', description: 'Nias tilde MIYAŴA' },
-			{ input: 'zali~wa-li~wa', output: 'zaliŵa-liŵa', description: 'Nias tilde zaliŵa-liŵa' }
 		]
 	},
 	{
@@ -5958,6 +5951,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Shan Keyboard Test',
+		inputmethod: 'shn-standard',
+		tests: [
+			{ input: 'qmrf:wlnf:', output: 'ၸၢမ်းတူၺ်း', description: 'ၸၢမ်းတူၺ်းလွၵ်းမိုဝ်းတႆးၶႃႈ' }
+		]
+	},
+	{
 		description: 'Sinhala Wijesekara transliteration tests',
 		inputmethod: 'si-wijesekara',
 		tests: [
@@ -6102,6 +6102,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Serbian keyboard test',
+		inputmethod: 'sr-kbd',
+		tests: [
+			{ input: 'ABVGD}E|YIJKLQM', output: 'АБВГДЂЕЖЗИЈКЛЉМ', description: 'Serbian keyboard АБВГДЂЕЖЗИЈКЛЉМ' },
+			{ input: 'abvgd]e\\yijklqm', output: 'абвгдђежзијклљм', description: 'Serbian keyboard абвгдђежзијклљм' },
+			{ input: 'NWOPRST"UFHC:X{', output: 'НЊОПРСТЋУФХЦЧЏШ', description: 'Serbian keyboard НЊОПРСТЋУФХЦЧЏШ' },
+			{ input: 'nwoprst\'ufhc;x[', output: 'нњопрстћуфхцчџш', description: 'Serbian keyboard нњопрстћуфхцчџш' },
+			{ input: '-G-KZ', output: 'ЃЌЅ', description: 'Serbian keyboard ЃЌЅ' },
+			{ input: '-g-kz', output: 'ѓќѕ', description: 'Serbian keyboard ѓќѕ' },
+			{ input: '@^&*()-_=+<>/?', output: '"&/()=\'?+*;:-_', description: 'Serbian keyboard "&/()=\'?+*;:-_' }
+		]
+	},
+	{
 		description: 'Sotho tilde test',
 		inputmethod: 'st-tilde',
 		tests: [
@@ -6115,19 +6128,6 @@ var palochkaVariants = {
 		tests: [
 			{ input: '~E', output: 'É', description: 'Sundanese uppercase É' },
 			{ input: '~e', output: 'é', description: 'Sundanese lowercase é' }
-		]
-	},
-	{
-		description: 'Serbian keyboard test',
-		inputmethod: 'sr-kbd',
-		tests: [
-			{ input: 'ABVGD}E|YIJKLQM', output: 'АБВГДЂЕЖЗИЈКЛЉМ', description: 'Serbian keyboard АБВГДЂЕЖЗИЈКЛЉМ' },
-			{ input: 'abvgd]e\\yijklqm', output: 'абвгдђежзијклљм', description: 'Serbian keyboard абвгдђежзијклљм' },
-			{ input: 'NWOPRST"UFHC:X{', output: 'НЊОПРСТЋУФХЦЧЏШ', description: 'Serbian keyboard НЊОПРСТЋУФХЦЧЏШ' },
-			{ input: 'nwoprst\'ufhc;x[', output: 'нњопрстћуфхцчџш', description: 'Serbian keyboard нњопрстћуфхцчџш' },
-			{ input: '-G-KZ', output: 'ЃЌЅ', description: 'Serbian keyboard ЃЌЅ' },
-			{ input: '-g-kz', output: 'ѓќѕ', description: 'Serbian keyboard ѓќѕ' },
-			{ input: '@^&*()-_=+<>/?', output: '"&/()=\'?+*;:-_', description: 'Serbian keyboard "&/()=\'?+*;:-_' }
 		]
 	},
 	{
