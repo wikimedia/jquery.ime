@@ -486,11 +486,11 @@
 		},
 		'jv-kongres': {
 			name: 'Kongres Aksara Jawa',
-			source: 'rules/jv/jv-kongres.js'
+			source: 'rules/jv-java/jv-kongres.js'
 		},
 		'jv-transliteration': {
 			name: 'Transliteration',
-			source: 'rules/jv/jv-transliteration.js'
+			source: 'rules/jv-java/jv-transliteration.js'
 		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
@@ -1122,8 +1122,8 @@
 			autonym: 'تۆرکجه',
 			inputmethods: [ 'azb-kbd' ]
 		},
-		ban: {
-			autonym: 'Basa Bali',
+		"ban-bali": {
+			autonym: 'ᬩᬮᬶ',
 			inputmethods: [ 'ban-transliteration' ]
 		},
 		bas: {
@@ -1195,7 +1195,7 @@
 			inputmethods: [ 'brx-inscript', 'brx-inscript2' ]
 		},
 		btd: {
-			autonym: 'Batak Pakpak (Dairi)',
+			autonym: 'Batak Dairi',
 			inputmethods: [ 'btd-keyboard' ]
 		},
 		btm: {
@@ -1203,11 +1203,11 @@
 			inputmethods: [ 'btm-keyboard', 'btm-transliteration' ]
 		},
 		bts: {
-			autonym: 'Batak Simalungun',
+			autonym: 'Sahap Simalungun',
 			inputmethods: [ 'bts-keyboard' ]
 		},
 		btx: {
-			autonym: 'Batak Karo',
+			autonym: 'cakap Karo',
 			inputmethods: [ 'btx-keyboard' ]
 		},
 		btz: {
@@ -1420,7 +1420,11 @@
 		},
 		jv: {
 			autonym: 'Jawa',
-			inputmethods: [ 'jv-transliteration', 'jv-keyboard', 'jv-kongres' ]
+			inputmethods: [ 'jv-keyboard' ]
+		},
+		'jv-java': {
+			autonym: 'ꦗꦮ',
+			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
