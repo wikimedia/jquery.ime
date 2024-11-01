@@ -2103,6 +2103,16 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Fur tilde test',
+		inputmethod: 'fvr-tilde',
+		tests: [
+			{ input: 'appa~^k~u~no APPA~^K~U~NO', output: 'appâkʉŋo APPÂKɄŊO', description: 'Fur tilde appâkʉŋo' },
+			{ input: 'ta~_b~u~/~n T~AB~U~/~N', output: 'ta̱bʉ́ŋ TA̱BɄ́Ŋ', description: 'Fur tilde ta̱bʉ́ŋ' },
+			{ input: 'k~akk~i~/ KA~_KK~I~/', output: 'ka̱kkɨ́ KA̱KKƗ́', description: 'Fur tilde ka̱kkɨ́' },
+			{ input: 'da~vy DA~vY', output: 'dǎy DǍY', description: 'Fur tilde da~v' }
+		]
+	},
+	{
 		description: 'Ga CQX test',
 		inputmethod: 'gaa-cqx',
 		tests: [
