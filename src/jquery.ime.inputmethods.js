@@ -461,7 +461,7 @@
 			source: 'rules/ig/ig-tilde.js'
 		},
 		'igl-tilde': {
-			name: 'Igbol - tilde',
+			name: 'Igala - tilde',
 			source: 'rules/igl/igl-tilde.js'
 		},
 		'ipa-sil': {
