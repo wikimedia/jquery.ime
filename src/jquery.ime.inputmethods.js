@@ -208,9 +208,9 @@
 			name: 'Chinook wawa tilde',
 			source: 'rules/chn/chn-tilde.js'
 		},
-		'chr': {
+		'chr-translit': {
 			name: 'Cherokee Transliteration',
-			source: 'rules/chr/chr.js'
+			source: 'rules/chr/chr-translit.js'
 		},
 		'ckb-transliteration-arkbd': {
 			name: 'باشووری',
@@ -634,9 +634,9 @@
 			name: 'Malagasy tilde',
 			source: 'rules/mg/mg-tilde.js'
 		},
-		'mh': {
+		'mh-replace': {
 			name: 'Kajin M̧ajeļ',
-			source: 'rules/mh/mh.js'
+			source: 'rules/mh/mh-replace.js'
 		},
 		'ml-inscript': {
 			name: 'ഇൻസ്ക്രിപ്റ്റ്',
@@ -670,9 +670,9 @@
 			name: 'Traditional Mongolian Ali-gali',
 			source: 'rules/mn/mn-tradali.js'
 		},
-		'mnc': {
+		'mnc-scripts': {
 			name: 'ᠮᠠᠨᠵᡠ',
-			source: 'rules/mnc/mnc.js'
+			source: 'rules/mnc/mnc-scripts.js'
 		},
 		'mnc-ali': {
 			name: 'Manchu Ali-gali',
@@ -918,9 +918,9 @@
 			name: 'විජේසේකර',
 			source: 'rules/si/si-wijesekara.js'
 		},
-		'sjo': {
+		'sjo-scripts': {
 			name: 'ᠰᡞᠪᡝ',
-			source: 'rules/sjo/sjo.js'
+			source: 'rules/sjo/sjo-scripts.js'
 		},
 		'sk-kbd': {
 			name: 'Štandardná',
@@ -1240,7 +1240,7 @@
 		},
 		chr: {
 			autonym: 'ᏣᎳᎩ',
-			inputmethods: [ 'chr' ]
+			inputmethods: [ 'chr-translit' ]
 		},
 		ckb: {
 			autonym: 'کوردی',
@@ -1556,7 +1556,7 @@
 		},
 		mh: {
 			autonym: 'Kajin M̧ajeļ',
-			inputmethods: [ 'mh' ]
+			inputmethods: [ 'mh-replace' ]
 		},
 		ml: {
 			autonym: 'മലയാളം',
@@ -1568,7 +1568,7 @@
 		},
 		mnc: {
 			autonym: 'ᠮᠠᠨᠵᡠ',
-			inputmethods: [ 'mnc', 'mnc-ali' ]
+			inputmethods: [ 'mnc-scripts', 'mnc-ali' ]
 		},
 		mni: {
 			autonym: 'Manipuri',
@@ -1716,7 +1716,7 @@
 		},
 		sjo: {
 			autonym: 'ᠰᡞᠪᡝ',
-			inputmethods: [ 'sjo' ]
+			inputmethods: [ 'sjo-scripts' ]
 		},
 		sk: {
 			autonym: 'Slovenčina',
