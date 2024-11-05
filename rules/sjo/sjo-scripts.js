@@ -1,8 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var sibe = {
-		id: 'sjo',
+	var sjoScripts = {
+		id: 'sjo-scripts',
 		name: 'Sibe Scripts',
 		description: 'Sibe Scripts',
 		date: '2014-4-22',
@@ -108,5 +108,5 @@
 		]
 	};
 
-	$.ime.register( sibe );
+	$.ime.register( sjoScripts );
 }( jQuery ) );
