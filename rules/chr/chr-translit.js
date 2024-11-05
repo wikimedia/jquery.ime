@@ -1,8 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var chr = {
-		id: 'chr',
+	var chrTranslit = {
+		id: 'chr-translit',
 		name: 'Cherokee',
 		description: 'Typing Cherokee syllabary from English letters',
 		date: '2023-01-14',
@@ -129,5 +129,5 @@
 		]
 	};
 
-	$.ime.register( chr );
+	$.ime.register( chrTranslit );
 }( jQuery ) );

@@ -1172,7 +1172,7 @@ var palochkaVariants = {
 	},
 	{
 		description: 'Cherokee transliteration test',
-		inputmethod: 'chr',
+		inputmethod: 'chr-translit',
 		tests: [
 			{ input: 'nah\'na', output: 'ᏀᎾ', description: 'Cherokee nah\'na -> ᏀᎾ' },
 			{ input: 'na\'hna', output: 'ᎾᎿ', description: 'Cherokee na\'hna -> ᎾᎿ' },
@@ -4698,7 +4698,7 @@ var palochkaVariants = {
 	},
 	{
 		description: 'Kajin M̧ajeļ (Marshallese) test',
-		inputmethod: 'mh',
+		inputmethod: 'mh-replace',
 		tests: [
 			{ input: 'Y', output: 'Ū', description: 'Y for Ū in Marshallese' },
 			{ input: 'S', output: 'Ā', description: 'S for Ā in Marshallese' },
@@ -4781,9 +4781,9 @@ var palochkaVariants = {
 	},
 	{
 		description: 'Manchu mnc test',
-		inputmethod: 'mnc',
+		inputmethod: 'mnc-scripts',
 		tests: [
-			{ input: 'LWE', output: 'ᡀᠸᠧ', description: 'Manchu mnc' }
+			{ input: 'LWE', output: 'ᡀᠸᠧ', description: 'Manchu mnc-scripts' }
 		]
 	},
 	{
@@ -6010,10 +6010,10 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Xibe sjo test',
-		inputmethod: 'sjo',
+		description: 'Xibe sjo-scripts test',
+		inputmethod: 'sjo-scripts',
 		tests: [
-			{ input: 'WER', output: 'ᠸᠧᡰ', description: 'Xibe sjo 〈ᠴᠣᡝ〉' }
+			{ input: 'WER', output: 'ᠸᠧᡰ', description: 'Xibe sjo-scripts 〈ᠴᠣᡝ〉' }
 		]
 	},
 	{

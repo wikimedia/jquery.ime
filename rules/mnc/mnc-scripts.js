@@ -1,8 +1,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var manchu = {
-		id: 'mnc',
+	var manchuScripts = {
+		id: 'mnc-scripts',
 		name: 'Manchu Scripts',
 		description: 'Manchu Scripts',
 		date: '2014-4-22',
@@ -108,5 +108,5 @@
 		]
 	};
 
-	$.ime.register( manchu );
+	$.ime.register( manchuScripts );
 }( jQuery ) );

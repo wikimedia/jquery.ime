@@ -9,8 +9,8 @@
 ( function ( $ ) {
 	'use strict';
 
-	var mh = {
-		id: 'mh',
+	var mhReplace = {
+		id: 'mh-replace',
 		name: 'Kajin M̧ajeļ',
 		description: 'Marshallese Language',
 		date: '2013-03-29',
@@ -39,5 +39,5 @@
 		]
 	};
 
-	$.ime.register( mh );
+	$.ime.register( mhReplace );
 }( jQuery ) );
