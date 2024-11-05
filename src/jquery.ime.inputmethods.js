@@ -1230,6 +1230,10 @@
 			autonym: 'ብሊን',
 			inputmethods: [ 'byn-geezim' ]
 		},
+		byv: {
+			autonym: 'Mə̀dʉ̂mbɑ̀',
+			inputmethods: [ 'mul-cm' ]
+		},
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
