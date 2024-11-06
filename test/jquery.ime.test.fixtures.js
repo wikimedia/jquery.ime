@@ -4842,6 +4842,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Mansi backslash test',
+		inputmethod: 'mns-backslash',
+		tests: [
+			{ input: '\\А\\а\\Е\\е\\Ё\\ё\\И\\и\\Н\\н\\О\\о\\У\\у\\Ы\\ы\\Э\\э\\Ю\\ю\\Я\\я', output: 'А̄а̄Е̄е̄Ё̄ё̄ӢӣӇӈО̄о̄ӮӯЫ̄ы̄Э̄э̄Ю̄ю̄Я̄я̄', description: 'Mansi backslash test' }
+		]
+	},
+	{
 		description: 'Mon Simplified Anonta test',
 		inputmethod: 'mnw-simplified-anonta',
 		tests: [

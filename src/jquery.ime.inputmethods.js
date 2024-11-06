@@ -690,6 +690,10 @@
 			name: 'ইনস্ক্ৰিপ্ট ২',
 			source: 'rules/mni/mni-inscript2.js'
 		},
+		'mns-backslash': {
+			name: 'Mansi backslash',
+			source: 'rules/mns/mns-backslash.js'
+		},
 		'mnw-simplified-anonta': {
 			name: 'Mon Simplified Anonta',
 			source: 'rules/mnw/mnw-simplified-anonta.js'
@@ -1593,6 +1597,10 @@
 		mni: {
 			autonym: 'Manipuri',
 			inputmethods: [ 'mni-inscript2' ]
+		},
+		mns: {
+			autonym: 'ма̄ньси',
+			inputmethods: [ 'mns-backslash' ]
 		},
 		mnw: {
 			autonym: 'ဘာသာမန်',
