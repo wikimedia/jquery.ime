@@ -1480,6 +1480,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Anufo tilde test',
+		inputmethod: 'cko-tilde',
+		tests: [
+			{ input: '~E~e~M~m~N~n~O~oa~{i~/e~\\', output: 'ƐɛⱮɱŊŋƆɔãíè', description: 'Anufo tilde' }
+		]
+	},
+	{
 		description: 'Chuvash (AltGr) with jcuken',
 		inputmethod: 'cv-cyr-altgr',
 		tests: [
@@ -4685,6 +4692,13 @@ var palochkaVariants = {
 			{ input: '~e', output: 'è', description: 'Madurese tilde ~e' },
 			{ input: '~T', output: 'Ṭ', description: 'Madurese tilde ~T' },
 			{ input: '~t', output: 'ṭ', description: 'Madurese tilde ~t' }
+		]
+	},
+	{
+		description: 'Mampruli tilde test',
+		inputmethod: 'maw-tilde',
+		tests: [
+			{ input: '~e~n~o~E~N~O', output: 'ɛŋɔƐŊƆ', description: 'Mampruli tilde ɛŋɔƐŊƆ' }
 		]
 	},
 	{

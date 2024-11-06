@@ -224,6 +224,10 @@
 			name: 'لاتینی',
 			source: 'rules/ckb/ckb-transliteration-lakbd.js'
 		},
+		'cko-tilde': {
+			name: 'Anufo tilde',
+			source: 'rules/cko/cko-tilde.js'
+		},
 		'cv-cyr-altgr': {
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
@@ -629,6 +633,10 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/mai/mai-inscript2.js',
 			depends: 'hi-inscript2'
+		},
+		'maw-tilde': {
+			name: 'Mampruli tilde',
+			source: 'rules/maw/maw-tilde.js'
 		},
 		'mg-tilde': {
 			name: 'Malagasy tilde',
@@ -1234,6 +1242,10 @@
 			autonym: 'ብሊን',
 			inputmethods: [ 'byn-geezim' ]
 		},
+		byv: {
+			autonym: 'Mə̀dʉ̂mbɑ̀',
+			inputmethods: [ 'mul-cm' ]
+		},
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -1249,6 +1261,10 @@
 		ckb: {
 			autonym: 'کوردی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
+		},
+		cko: {
+			autonym: 'Anufɔ',
+			inputmethods: [ 'cko-tilde' ]
 		},
 		cv: {
 			autonym: 'Чăвашла',
@@ -1553,6 +1569,10 @@
 		mai: {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+		},
+		maw: {
+			autonym: 'Ŋmampulli',
+			inputmethods: [ 'maw-tilde' ]
 		},
 		mg: {
 			autonym: 'Malagasy',
