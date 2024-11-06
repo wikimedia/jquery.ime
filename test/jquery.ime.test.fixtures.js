@@ -1480,6 +1480,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Anufo tilde test',
+		inputmethod: 'cko-tilde',
+		tests: [
+			{ input: '~E~e~M~m~N~n~O~oa~{i~/e~\\', output: 'ƐɛⱮɱŊŋƆɔãíè', description: 'Anufo tilde' }
+		]
+	},
+	{
 		description: 'Chuvash (AltGr) with jcuken',
 		inputmethod: 'cv-cyr-altgr',
 		tests: [
