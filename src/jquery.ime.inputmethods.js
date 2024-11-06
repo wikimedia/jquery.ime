@@ -224,6 +224,10 @@
 			name: 'لاتینی',
 			source: 'rules/ckb/ckb-transliteration-lakbd.js'
 		},
+		'cko-tilde': {
+			name: 'Anufo tilde',
+			source: 'rules/cko/cko-tilde.js'
+		},
 		'cv-cyr-altgr': {
 			name: 'Чăвашла (AltGr)',
 			source: 'rules/cv/cv-cyr-altgr.js'
@@ -1253,6 +1257,10 @@
 		ckb: {
 			autonym: 'کوردی',
 			inputmethods: [ 'ckb-transliteration-arkbd', 'ckb-transliteration-fakbd', 'ckb-transliteration-lakbd' ]
+		},
+		cko: {
+			autonym: 'Anufɔ',
+			inputmethods: [ 'cko-tilde' ]
 		},
 		cv: {
 			autonym: 'Чăвашла',
