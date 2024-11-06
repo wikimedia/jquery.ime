@@ -4695,6 +4695,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Mampruli tilde test',
+		inputmethod: 'maw-tilde',
+		tests: [
+			{ input: '~e~n~o~E~N~O', output: 'ɛŋɔƐŊƆ', description: 'Mampruli tilde ɛŋɔƐŊƆ' }
+		]
+	},
+	{
 		description: 'Malagasy tilde test',
 		inputmethod: 'mg-tilde',
 		tests: [

@@ -634,6 +634,10 @@
 			source: 'rules/mai/mai-inscript2.js',
 			depends: 'hi-inscript2'
 		},
+		'maw-tilde': {
+			name: 'Mampruli tilde',
+			source: 'rules/maw/maw-tilde.js'
+		},
 		'mg-tilde': {
 			name: 'Malagasy tilde',
 			source: 'rules/mg/mg-tilde.js'
@@ -1234,6 +1238,10 @@
 			autonym: 'ብሊን',
 			inputmethods: [ 'byn-geezim' ]
 		},
+		byv: {
+			autonym: 'Mə̀dʉ̂mbɑ̀',
+			inputmethods: [ 'mul-cm' ]
+		},
 		ce: {
 			autonym: 'нохчийн',
 			inputmethods: [ 'cyrl-palochka' ]
@@ -1557,6 +1565,10 @@
 		mai: {
 			autonym: 'मैथिली',
 			inputmethods: [ 'mai-inscript', 'mai-inscript2' ]
+		},
+		maw: {
+			autonym: 'Ŋmampulli',
+			inputmethods: [ 'maw-tilde' ]
 		},
 		mg: {
 			autonym: 'Malagasy',
