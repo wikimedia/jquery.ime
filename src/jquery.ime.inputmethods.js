@@ -1078,9 +1078,9 @@
 			name: 'Yorùbá tilde',
 			source: 'rules/yo/yo-tilde.js'
 		},
-		'zh-pinyin-transliteration': {
-			name: '拼音符号输入法',
-			source: 'rules/zh/zh-pinyin-transliteration.js'
+		'zh-latn-pinyin-transliteration': {
+			name: '拼音符号输入法 / 拼音符號輸入法',
+			source: 'rules/zh/zh-latn-pinyin-transliteration.js'
 		}
 	} );
 	/* eslint-disable quote-props */
@@ -1856,7 +1856,39 @@
 		},
 		zh: {
 			autonym: '中文',
-			inputmethods: [ 'zh-pinyin-transliteration' ]
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-cn': {
+			autonym: '中文（中国大陆）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-hans': {
+			autonym: '中文（简体）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-hant': {
+			autonym: '中文（繁體）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-hk': {
+			autonym: '中文（香港）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-mo': {
+			autonym: '中文（澳門）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-my': {
+			autonym: '中文（马来西亚）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-sg': {
+			autonym: '中文（新加坡）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
+		},
+		'zh-tw': {
+			autonym: '中文（臺灣）',
+			inputmethods: [ 'zh-latn-pinyin-transliteration' ]
 		}
 	} );
 }( jQuery ) );

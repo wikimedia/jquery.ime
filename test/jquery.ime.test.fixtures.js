@@ -7189,17 +7189,17 @@ var palochkaVariants = {
 		]
 	},
 	{
-		description: 'Chinese Pinyin test',
-		inputmethod: 'zh-pinyin-transliteration',
+		description: 'Mandarin Hanyu Pinyin test',
+		inputmethod: 'zh-latn-pinyin-transliteration',
 		tests: [
-			{ input: 'wen2', output: 'wén', description: 'Chinese Pinyin wén' },
-			{ input: 'lv3', output: 'lǚ', description: 'Chinese Pinyin lǚ' },
-			{ input: 'hua4', output: 'huà', description: 'Chinese Pinyin huà' },
-			{ input: 'liou2', output: 'liú', description: 'Chinese Pinyin liú' },
-			{ input: 'jv', output: 'ju', description: 'Chinese Pinyin ju' },
-			{ input: 'xiao4', output: 'xiào', description: 'Chinese Pinyin xiào' },
-			{ input: 'jv1', output: 'jū', description: 'Chinese Pinyin jū' },
-			{ input: 'wang3', output: 'wǎng', description: 'Chinese Pinyin wǎng' }
+			{ input: 'wen2', output: 'wén', description: 'Mandarin Hanyu Pinyin wén' },
+			{ input: 'lv3', output: 'lǚ', description: 'Mandarin Hanyu Pinyin lǚ' },
+			{ input: 'hua4', output: 'huà', description: 'Mandarin Hanyu Pinyin huà' },
+			{ input: 'liou2', output: 'liú', description: 'Mandarin Hanyu Pinyin liú' },
+			{ input: 'jv', output: 'ju', description: 'Mandarin Hanyu Pinyin ju' },
+			{ input: 'xiao4', output: 'xiào', description: 'Mandarin Hanyu Pinyin xiào' },
+			{ input: 'jv1', output: 'jū', description: 'Mandarin Hanyu Pinyin jū' },
+			{ input: 'wang3', output: 'wǎng', description: 'Mandarin Hanyu Pinyin wǎng' }
 		]
 	}
 ];
