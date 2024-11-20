@@ -734,6 +734,10 @@
 			name: 'မြန်မာဘာသာ xkb',
 			source: 'rules/my/my-xkb.js'
 		},
+		'nan-latn-pehoeji-transliteration': {
+			name: '閩南語白話字IME / Bân-lâm-gú Pe̍h-ōe-jī IME',
+			source: 'rules/nan/nan-latn-pehoeji-transliteration.js'
+		},
 		'nb-normforms': {
 			name: 'Normal transliterasjon',
 			source: 'rules/nb/nb-normforms.js'
@@ -1617,6 +1621,26 @@
 		my: {
 			autonym: 'မြန်မာ',
 			inputmethods: [ 'my-mm3', 'my-xkb' ]
+		},
+		nan: {
+			autonym: '閩南語 / Bân-lâm-gú',
+			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
+		},
+		'nan-hani': {
+			autonym: '閩南語（漢字）',
+			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
+		},
+		'nan-hant': {
+			autonym: '閩南語（傳統漢字）',
+			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
+		},
+		'nan-latn-pehoeji': {
+			autonym: 'Bân-lâm-gú (Pe̍h-ōe-jī)',
+			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
+		},
+		'nan-latn-tailo': {
+			autonym: 'Bân-lâm-gú (Tâi-lô)',
+			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
 		},
 		naq: {
 			autonym: 'Khoekhoegowab',

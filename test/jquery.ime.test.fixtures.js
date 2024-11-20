@@ -5133,6 +5133,34 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Hokkien Pe̍h-ōe-jī test',
+		inputmethod: 'nan-latn-pehoeji-transliteration',
+		tests: [
+			{ input: 'an', output: 'an', description: 'Hokkien Pe̍h-ōe-jī an' },
+			{ input: 'ann', output: 'aⁿ', description: 'Hokkien Pe̍h-ōe-jī aⁿ' },
+			{ input: 'ann1', output: 'aⁿ', description: 'Hokkien Pe̍h-ōe-jī aⁿ' },
+			{ input: 'aⁿ1', output: 'aⁿ', description: 'Hokkien Pe̍h-ōe-jī aⁿ' },
+			{ input: 'ann2', output: 'áⁿ', description: 'Hokkien Pe̍h-ōe-jī áⁿ' },
+			{ input: 'ann/', output: 'áⁿ', description: 'Hokkien Pe̍h-ōe-jī áⁿ' },
+			{ input: 'a2nn', output: 'áⁿ', description: 'Hokkien Pe̍h-ōe-jī áⁿ' },
+			{ input: 'a/nn', output: 'áⁿ', description: 'Hokkien Pe̍h-ōe-jī áⁿ' },
+			{ input: 'ann3', output: 'àⁿ', description: 'Hokkien Pe̍h-ōe-jī àⁿ' },
+			{ input: 'ann\\', output: 'àⁿ', description: 'Hokkien Pe̍h-ōe-jī àⁿ' },
+			{ input: 'ap4', output: 'ap', description: 'Hokkien Pe̍h-ōe-jī ap' },
+			{ input: 'ann5', output: 'âⁿ', description: 'Hokkien Pe̍h-ōe-jī âⁿ' },
+			{ input: 'ann^', output: 'âⁿ', description: 'Hokkien Pe̍h-ōe-jī âⁿ' },
+			{ input: 'ann6', output: 'ãⁿ', description: 'Hokkien Pe̍h-ōe-jī ãⁿ' },
+			{ input: 'ann~', output: 'ãⁿ', description: 'Hokkien Pe̍h-ōe-jī ãⁿ' },
+			{ input: 'ann7', output: 'āⁿ', description: 'Hokkien Pe̍h-ōe-jī āⁿ' },
+			{ input: 'ann_', output: 'āⁿ', description: 'Hokkien Pe̍h-ōe-jī āⁿ' },
+			{ input: 'ap8', output: 'a̍p', description: 'Hokkien Pe̍h-ōe-jī a̍p' },
+			{ input: 'ap\'', output: 'a̍p', description: 'Hokkien Pe̍h-ōe-jī a̍p' },
+			{ input: 'khoann3', output: 'khòaⁿ', description: 'Hokkien Pe̍h-ōe-jī khòaⁿ' },
+			{ input: 'khoai3', output: 'khoài', description: 'Hokkien Pe̍h-ōe-jī khoài' },
+			{ input: 'kong3', output: 'kòng', description: 'Hokkien Pe̍h-ōe-jī kòng' }
+		]
+	},
+	{
 		description: 'Nepali Romanized test',
 		inputmethod: 'ne-rom',
 		tests: [
