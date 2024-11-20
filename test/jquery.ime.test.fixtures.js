@@ -5157,7 +5157,7 @@ var palochkaVariants = {
 			{ input: 'ap\'', output: 'a̍p', description: 'Hokkien Pe̍h-ōe-jī a̍p' },
 			{ input: 'khoann3', output: 'khòaⁿ', description: 'Hokkien Pe̍h-ōe-jī khòaⁿ' },
 			{ input: 'khoai3', output: 'khoài', description: 'Hokkien Pe̍h-ōe-jī khoài' },
-			{ input: 'kong3', output: 'kòng', description: 'Hokkien Pe̍h-ōe-jī kòng' }
+			{ input: 'ouh8', output: 'o̍͘h', description: 'Hokkien Pe̍h-ōe-jī o̍͘h' }
 		]
 	},
 	{
