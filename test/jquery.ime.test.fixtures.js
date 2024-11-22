@@ -5157,7 +5157,32 @@ var palochkaVariants = {
 			{ input: 'ap\'', output: 'a̍p', description: 'Hokkien Pe̍h-ōe-jī a̍p' },
 			{ input: 'khoann3', output: 'khòaⁿ', description: 'Hokkien Pe̍h-ōe-jī khòaⁿ' },
 			{ input: 'khoai3', output: 'khoài', description: 'Hokkien Pe̍h-ōe-jī khoài' },
-			{ input: 'ouh8', output: 'o̍͘h', description: 'Hokkien Pe̍h-ōe-jī o̍͘h' }
+			{ input: 'ouh8', output: 'o̍͘h', description: 'Hokkien Pe̍h-ōe-jī o̍͘h' },
+			{ input: 'e5', output: 'ê'},
+			{ input: 'eng2', output: 'éng'},
+			// Ninth tone tests, taken from https://bitesizetaiwanese.com/ep06-the-ninth-tone/
+			// Japanese loanwords
+			{ input: 'ian9-jin2', output: 'iăn-jín'},
+			{ input: 'lai9-lin2-guh4', output: 'lăi-lín-guh'},
+			{ input: 'khan9-bang2', output: 'khăn-báng'},
+			{ input: 'lin9-jin2', output: 'lĭn-jín'},
+			{ input: 'han9-tou2-luh4', output: 'hăn-tó͘-luh'},
+			{ input: 'pha9-sian3-tou3', output: 'phă-siàn-tò͘'},
+			{ input: 'sam9-phu2-luh4', output: 'săm-phú-luh'},
+			// Contractions
+			{ input: 'ing9', output: 'ĭng'},
+			{ input: 'tsang9', output: 'tsăng'},
+			{ input: 'tiong9', output: 'tiŏng'},
+			{ input: 'lai9', output: 'lăi'},
+			{ input: 'tann9', output: 'tăⁿ'},
+			{ input: 'tsau9-kiann2', output: 'tsău-kiáⁿ'},
+			{ input: 'tsuan9', output: 'tsuăn'},
+			{ input: 'tsuann9', output: 'tsuăⁿ'},
+			{ input: 'bua9-kin2', output: 'buă-kín'},
+			// Capitalization tests
+			{ input: 'E5', output: 'Ê'},
+			{ input: 'Ing9', output: 'Ĭng'},
+			{ input: 'Eng2', output: 'Éng'},
 		]
 	},
 	{
