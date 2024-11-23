@@ -6172,6 +6172,24 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Straits Salish (Saanich) SENĆOŦEN test',
+		inputmethod: 'str-sencoten',
+		tests: [
+			{ input: "senc'ot-en", output: 'SENĆOŦEN', description: 'Straits Salish SENĆOŦEN' },
+			{ input: "pet/en_eu,ec'", output: 'PEȾEṈEU¸EĆ', description: 'Straits Salish PEȾEṈEU¸EĆ' },
+			{ input: "sda/y,es", output: 'SDȺY¸ES', description: 'Straits Salish SDȺY¸ES' },
+			{ input: "ta'nS", output: 'TÁNs', description: 'Straits Salish TÁNs' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+			{ input: "", output: '', description: '' },
+		]
+	},
+	{
 		description: 'Sundanese keyboard test',
 		inputmethod: 'su-keyboard',
 		tests: [

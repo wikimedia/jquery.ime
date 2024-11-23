@@ -950,6 +950,10 @@
 			name: 'Sesotho tilde',
 			source: 'rules/st/st-tilde.js'
 		},
+		'str-sencoten': {
+			name: 'SENĆOŦEN keyboard',
+			source: 'rules/str/str-sencoten.js'
+		},
 		'su-keyboard': {
 			name: 'Sundanese keyboard',
 			source: 'rules/su/su-keyboard.js'
@@ -1781,6 +1785,10 @@
 		st: {
 			autonym: 'Sesotho',
 			inputmethods: [ 'st-tilde' ]
+		},
+		str: {
+			autonym: 'SENĆOŦEN',
+			inputmethods: [ 'str-sencoten' ]
 		},
 		su: {
 			autonym: 'Sunda',
