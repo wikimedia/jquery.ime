@@ -6197,6 +6197,26 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Straits Salish (Saanich) SENĆOŦEN test',
+		inputmethod: 'str-sencoten',
+		tests: [
+			{ input: "senc'ot-en", output: 'SENĆOŦEN', description: 'Straits Salish SENĆOŦEN' },
+			{ input: "pet/en_eu,ec'", output: 'PEȾEṈEU¸EĆ', description: 'Straits Salish PEȾEṈEU¸EĆ' },
+			{ input: "sda/y,es", output: 'SDȺY¸ES', description: 'Straits Salish SDȺY¸ES' },
+			{ input: "ta'nS", output: 'TÁNs', description: 'Straits Salish TÁNs' },
+			{ input: "qa'sset", output: 'QÁSSET', description: 'Straights Salish QÁSSET' },
+			{ input: "qa',les sc/a'c'el", output: 'QÁ¸LES SȻÁĆEL', description: 'Straights Salish SȻÁĆEL' },
+			{ input: "qi'yec'en", output: 'QÍYEĆEN', description: 'Straights Salish QÍYEĆEN' },
+			{ input: "sa',i'eu", output: 'SÁ¸ÍEU', description: 'Straights Salish SÁ¸ÍEU' },
+			{ input: "s,i'e,", output: 'S¸ÍE¸', description: 'Straights Salish S¸ÍE¸' },
+			{ input: "sk-ek'c'es", output: 'S₭EḰĆES', description: 'Straights Salish S₭EḰĆES' },
+			{ input: "sk_a'keten;", output: 'SḴÁKETEṈ', description: 'Straights Salish SḴÁKETEṈ' },
+			{ input: "l-a'u<weln;ew;", output: 'ȽÁU,WELṈEW̱', description: 'Straights Salish WELṈEW̱' },
+			{ input: "c/ec/ot;s'en", output: 'ȻEȻOṮŚEN', description: 'Straights Salish ȻEȻOṮŚEN' },
+			{ input: "ec'ex;el", output: 'EĆEX̱EL', description: 'Straights Salish EĆEX̱EL' },
+		]
+	},
+	{
 		description: 'Sundanese keyboard test',
 		inputmethod: 'su-keyboard',
 		tests: [
