@@ -5157,7 +5157,32 @@ var palochkaVariants = {
 			{ input: 'ap\'', output: 'a̍p', description: 'Hokkien Pe̍h-ōe-jī a̍p' },
 			{ input: 'khoann3', output: 'khòaⁿ', description: 'Hokkien Pe̍h-ōe-jī khòaⁿ' },
 			{ input: 'khoai3', output: 'khoài', description: 'Hokkien Pe̍h-ōe-jī khoài' },
-			{ input: 'ouh8', output: 'o̍͘h', description: 'Hokkien Pe̍h-ōe-jī o̍͘h' }
+			{ input: 'ouh8', output: 'o̍͘h', description: 'Hokkien Pe̍h-ōe-jī o̍͘h' },
+			{ input: 'e5', output: 'ê', description: 'Hokkien Pe̍h-ōe-jī ê'},
+			{ input: 'eng2', output: 'éng', description: 'Hokkien Pe̍h-ōe-jī éng'},
+			// Ninth tone tests, taken from https://bitesizetaiwanese.com/ep06-the-ninth-tone/
+			// Japanese loanwords
+			{ input: 'ian9-jin2', output: 'iăn-jín', description: 'Hokkien Pe̍h-ōe-jī iăn-jín'},
+			{ input: 'lai9-lin2-guh4', output: 'lăi-lín-guh', description: 'Hokkien Pe̍h-ōe-jī lăi-lín-guh'},
+			{ input: 'khan9-bang2', output: 'khăn-báng', description: 'Hokkien Pe̍h-ōe-jī khăn-báng'},
+			{ input: 'lin9-jin2', output: 'lĭn-jín', description: 'Hokkien Pe̍h-ōe-jī lĭn-jín'},
+			{ input: 'han9-tou2-luh4', output: 'hăn-tó͘-luh', description: 'Hokkien Pe̍h-ōe-jī hăn-tó͘-luh'},
+			{ input: 'pha9-sian3-tou3', output: 'phă-siàn-tò͘', description: 'Hokkien Pe̍h-ōe-jī phă-siàn-tò͘'},
+			{ input: 'sam9-phu2-luh4', output: 'săm-phú-luh', description: 'Hokkien Pe̍h-ōe-jī săm-phú-luh'},
+			// Contractions
+			{ input: 'ing9', output: 'ĭng', description: 'Hokkien Pe̍h-ōe-jī ĭng'},
+			{ input: 'tsang9', output: 'tsăng', description: 'Hokkien Pe̍h-ōe-jī tsăng'},
+			{ input: 'tiong9', output: 'tiŏng', description: 'Hokkien Pe̍h-ōe-jī tiŏng'},
+			{ input: 'lai9', output: 'lăi', description: 'Hokkien Pe̍h-ōe-jī lăi'},
+			{ input: 'tann9', output: 'tăⁿ', description: 'Hokkien Pe̍h-ōe-jī tăⁿ'},
+			{ input: 'tsau9-kiann2', output: 'tsău-kiáⁿ', description: 'Hokkien Pe̍h-ōe-jī tsău-kiáⁿ'},
+			{ input: 'tsuan9', output: 'tsuăn', description: 'Hokkien Pe̍h-ōe-jī tsuăn'},
+			{ input: 'tsuann9', output: 'tsuăⁿ', description: 'Hokkien Pe̍h-ōe-jī tsuăⁿ'},
+			{ input: 'bua9-kin2', output: 'buă-kín', description: 'Hokkien Pe̍h-ōe-jī buă-kín'},
+			// Capitalization tests
+			{ input: 'E5', output: 'Ê', description: 'Hokkien Pe̍h-ōe-jī Ê'},
+			{ input: 'Ing9', output: 'Ĭng', description: 'Hokkien Pe̍h-ōe-jī Ĭng'},
+			{ input: 'Eng2', output: 'Éng', description: 'Hokkien Pe̍h-ōe-jī Éng'},
 		]
 	},
 	{
@@ -6169,6 +6194,26 @@ var palochkaVariants = {
 		tests: [
 			{ input: 'loant~sa', output: 'loantša', description: 'Sotho tilde loantša' },
 			{ input: 'ro~-na', output: 'rōna', description: 'Sotho tilde rōna' }
+		]
+	},
+	{
+		description: 'Straits Salish (Saanich) SENĆOŦEN test',
+		inputmethod: 'str-sencoten',
+		tests: [
+			{ input: "senc'ot-en", output: 'SENĆOŦEN', description: 'Straits Salish SENĆOŦEN' },
+			{ input: "pet/en_eu,ec'", output: 'PEȾEṈEU¸EĆ', description: 'Straits Salish PEȾEṈEU¸EĆ' },
+			{ input: "sda/y,es", output: 'SDȺY¸ES', description: 'Straits Salish SDȺY¸ES' },
+			{ input: "ta'nS", output: 'TÁNs', description: 'Straits Salish TÁNs' },
+			{ input: "qa'sset", output: 'QÁSSET', description: 'Straights Salish QÁSSET' },
+			{ input: "qa',les sc/a'c'el", output: 'QÁ¸LES SȻÁĆEL', description: 'Straights Salish SȻÁĆEL' },
+			{ input: "qi'yec'en", output: 'QÍYEĆEN', description: 'Straights Salish QÍYEĆEN' },
+			{ input: "sa',i'eu", output: 'SÁ¸ÍEU', description: 'Straights Salish SÁ¸ÍEU' },
+			{ input: "s,i'e,", output: 'S¸ÍE¸', description: 'Straights Salish S¸ÍE¸' },
+			{ input: "sk-ek'c'es", output: 'S₭EḰĆES', description: 'Straights Salish S₭EḰĆES' },
+			{ input: "sk_a'keten;", output: 'SḴÁKETEṈ', description: 'Straights Salish SḴÁKETEṈ' },
+			{ input: "l-a'u<weln;ew;", output: 'ȽÁU,WELṈEW̱', description: 'Straights Salish WELṈEW̱' },
+			{ input: "c/ec/ot;s'en", output: 'ȻEȻOṮŚEN', description: 'Straights Salish ȻEȻOṮŚEN' },
+			{ input: "ec'ex;el", output: 'EĆEX̱EL', description: 'Straights Salish EĆEX̱EL' },
 		]
 	},
 	{
