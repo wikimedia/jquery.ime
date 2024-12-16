@@ -6,7 +6,7 @@
 		name: 'Kurdî-tr',
 		description: 'writing Kurdish-letters using the TR keyboard',
 		date: '2013-06-26',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ku-tr',
 		author: 'Ghybu',
 		license: 'GPLv3',
 		version: '1.0',

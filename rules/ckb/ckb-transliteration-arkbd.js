@@ -6,7 +6,7 @@
 		name: 'باشووری',
 		description: 'Central Kurdish keyboard based on Arabic keyboard',
 		date: '2013-07-06',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ckb-transliteration-arkbd',
 		author: 'Çalak',
 		license: 'GPLv3',
 		version: '1.0',

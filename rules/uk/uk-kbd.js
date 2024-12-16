@@ -6,7 +6,7 @@
 		name: 'Українська',
 		description: 'Ukrainian kbd keyboard layout',
 		date: '2013-02-12',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/uk-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

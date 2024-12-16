@@ -6,7 +6,7 @@
 		name: 'Akan tilde',
 		description: 'Akan tilde',
 		date: '2019-05-06',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ak-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

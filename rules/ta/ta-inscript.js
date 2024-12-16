@@ -6,7 +6,7 @@
 		name: 'இன்ஸ்கிரிப்ட்',
 		description: 'Tamil InScript Keyboard',
 		date: '2012-11-20',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ta-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

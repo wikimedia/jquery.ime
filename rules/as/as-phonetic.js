@@ -6,7 +6,7 @@
 		name: 'phonetic',
 		description: 'Phonetic keyboard for Assamese script',
 		date: '2013-02-09',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/as-phonetic',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

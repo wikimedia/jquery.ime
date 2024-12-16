@@ -6,7 +6,7 @@
 		name: 'ഇൻസ്ക്രിപ്റ്റ് 2',
 		description: 'Enhanced InScript for Malayalam InScript',
 		date: '2013-01-16',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ml-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

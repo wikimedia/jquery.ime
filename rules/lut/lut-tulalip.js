@@ -6,7 +6,7 @@
 		name: 'Lushootseed Tulalip',
 		description: 'Lushootseed Keyboard with Tulalip Layout',
 		date: '2014-03-01',
-		URL: 'https://github.com/jcrowgey/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/lut-tulalip',
 		author: 'Joshua Crowgey, jcrowgey@u.washington.edu',
 		license: 'GPLv3',
 		version: '1.0',

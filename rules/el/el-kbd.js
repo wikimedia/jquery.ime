@@ -6,7 +6,7 @@
 		name: 'Greek kbd',
 		description: 'Greek kbd keyboard layout',
 		date: '2013-02-11',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/el-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
