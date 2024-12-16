@@ -6,7 +6,7 @@
 		name: 'Manchu Ali-gali Scripts',
 		description: 'Manchu Ali-gali Scripts',
 		date: '2014-4-22',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mnc-ali',
 		author: 'Feilong Huang, <huangfeilong@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'Jatiyo Keyboard',
 		description: 'Bengali Jatiyo Keyboard input method',
 		date: '2012-10-10',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bn-nkb',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

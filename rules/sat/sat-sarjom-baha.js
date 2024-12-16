@@ -6,6 +6,7 @@
 		name: 'Sarjom Baha',
 		description: 'Phonetic Ol Chiki keyboard, Sarjom Baha for Santali language',
 		date: '2016-03-29',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sat-Sarjom_baha',
 		author: 'Jnanaranjan Sahu',
 		license: 'GPLv3',
 		version: '1.01',

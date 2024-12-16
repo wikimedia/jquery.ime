@@ -6,7 +6,7 @@
 		name: 'su-keyboard',
 		description: 'Sundanese keyboard',
 		date: '2023-05-07',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/su-keyboard',
 		author: 'Pijri Paijar',
 		license: 'GPLv3',
 		version: '1',

@@ -6,6 +6,7 @@
 		name: 'Punjabi InScript',
 		description: 'InScript keyboard for Punjabi script',
 		date: '2012-10-16',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-inscript',
 		author: '',
 		license: '',
 		version: '1.0',
