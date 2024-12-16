@@ -6,7 +6,7 @@
 		name: 'ଓଡ଼ିସ୍କ୍ରିପ୍ଟ',
 		description: 'Odia OdiScript input method',
 		date: '2015-7-28',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/or-OdiScript',
 		author: 'Manoj Sahukar and Subhashish Panigrahi',
 		license: 'GPLv3',
 		version: '1.0',

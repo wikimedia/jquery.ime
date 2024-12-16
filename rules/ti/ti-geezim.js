@@ -6,7 +6,7 @@
 		name: 'Tigrinya GeezIM',
 		description: 'Tigrinya input method based on GeezIME scheme',
 		date: '2017-01-22',
-		URL: 'http://type.geezlab.com',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ti-geezim',
 		author: 'Fitsum Gaim, <fitsum@geezlab.com>',
 		license: 'GPLv3',
 		version: '1.0',

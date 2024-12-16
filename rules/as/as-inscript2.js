@@ -6,7 +6,7 @@
 		name: 'ইনস্ক্ৰিপ্ট ২',
 		description: 'Enhanced InScript keyboard for Assamese language',
 		date: '2013-02-09',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/as-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

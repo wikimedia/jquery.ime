@@ -6,7 +6,7 @@
 		name: 'Deutsch Tilde',
 		description: 'German input method',
 		date: '2012-11-20',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/de-transliteration',
 		author: 'Erik Moeller',
 		license: 'Public domain',
 		version: '1.0',

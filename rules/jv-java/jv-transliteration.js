@@ -6,7 +6,7 @@
 		name: 'Javanese',
 		description: 'Javanese transliteration',
 		date: '2023-04-06',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/jv-transliteration',
 		author: 'Bennylin',
 		license: 'GPLv3',
 		version: '1.3',

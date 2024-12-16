@@ -6,6 +6,7 @@
 		name: 'ଇନସ୍କ୍ରିପ୍ଟ2',
 		description: 'Enhanced InScript keyboard for Odia language',
 		date: '2013-02-09',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/or-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

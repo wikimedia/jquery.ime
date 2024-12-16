@@ -6,7 +6,7 @@
 		name: 'Lango tilde',
 		description: 'Lango tilde',
 		date: '2024-09-30',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/laj-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

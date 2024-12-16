@@ -6,7 +6,7 @@
 		name: 'Belarusian Transliteration',
 		description: 'Belarusian transliteration per Belarusian winkeys',
 		date: '2012-11-06',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/be-transliteration',
 		author: 'Pavel Selitskas',
 		license: 'GPLv3',
 		version: '1.0',

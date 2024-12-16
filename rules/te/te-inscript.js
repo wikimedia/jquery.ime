@@ -6,6 +6,7 @@
 		name: 'ఇన్\u200dస్క్రిప్ట్',
 		description: 'Inscript keyboard for Telugu script',
 		date: '2012-10-16',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/te-inscript',
 		author: 'Veeven',
 		license: 'GPLv3',
 		version: '1.0',

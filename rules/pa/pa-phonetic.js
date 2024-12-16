@@ -6,7 +6,7 @@
 		name: 'Punjabi Phonetic',
 		description: 'Punjabi Phonetic',
 		date: '2022-08-08',
-		URL: 'https://fedoraproject.org/wiki/I18N/Indic/PunjabiKeyboardLayouts',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-phonetic',
 		author: '',
 		license: '',
 		version: '2.0',

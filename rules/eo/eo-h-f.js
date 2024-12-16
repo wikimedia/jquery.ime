@@ -6,7 +6,7 @@
 		name: 'Espernto h-f',
 		description: 'writing Esperanto-letters using Zamenhof\'s fundamental system.',
 		date: '2013-02-12',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/eo-h-f',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

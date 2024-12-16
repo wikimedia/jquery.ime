@@ -6,7 +6,7 @@
 		name: 'Íslenska',
 		description: 'Islandic input method with most common form transliterated',
 		date: '2012-12-04',
-		URL: 'http://www.evertype.com/alphabets/icelandic.pdf',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/is-normforms',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',

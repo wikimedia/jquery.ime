@@ -6,7 +6,7 @@
 		name: 'Ga - CQX replacement',
 		description: 'Ga input method with C, Q and X replaced by Ŋ, Ɛ and Ɔ',
 		date: '2016-06-23',
-		URL: 'https://www.kasahorow.org/node/260',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/gaa-cqx',
 		author: 'Amir E. Aharoni, based on Kasahorow Akan',
 		license: 'GPLv3',
 		version: '1.1',

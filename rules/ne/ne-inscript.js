@@ -6,6 +6,7 @@
 		name: 'इनस्क्रिप्ट',
 		description: 'InScript keyboard for Nepali script',
 		date: '2012-10-14',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ne-inscript',
 		author: 'Bhawani Gautam',
 		license: 'GPLv3',
 		version: '1.0',

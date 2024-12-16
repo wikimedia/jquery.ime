@@ -6,7 +6,7 @@
 		name: 'ইনস্ক্ৰিপ্ট',
 		description: 'InScript input method for Assamese according to CDAC\'s Enhanced InScript Keyboard Layout 5.2',
 		date: '2012-10-10',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/as-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',
