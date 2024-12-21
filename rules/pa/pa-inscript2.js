@@ -6,6 +6,7 @@
 		name: 'Punjabi InScript2',
 		description: 'Enhanced InScript keyboard for Punjabi script',
 		date: '2013-11-14',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'chn-tilde',
 		description: 'Chinook Jargon input keyboard - tilde',
 		date: '2024-02-07',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/chn-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.1',

@@ -6,6 +6,7 @@
 		name: 'ଇନସ୍କ୍ରିପ୍ଟ',
 		description: 'InScript keyboard for Odia script',
 		date: '2012-10-14',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/or-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

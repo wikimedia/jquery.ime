@@ -6,7 +6,7 @@
 		name: 'Hebrew 2012 (from English)',
 		description: 'Hebrew keyboard according to Israeli Standard 1452',
 		date: '2012-10-15',
-		URL: 'http://www.lingnu.com/he/howto/78-si1452.html',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/he-standard-2012',
 		author: 'Amir E. Aharoni (אָמִיר אֱלִישָׁע אַהֲרוֹנִי, [[User:Amire80]])',
 		license: 'GPLv3',
 		version: '1.0',

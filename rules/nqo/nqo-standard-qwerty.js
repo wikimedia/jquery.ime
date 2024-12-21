@@ -6,7 +6,7 @@
 		name: "N'Ko standard qwerty",
 		description: "N'Ko standard qwerty",
 		date: '2019-04-26',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/nqo-standard-qwerty',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

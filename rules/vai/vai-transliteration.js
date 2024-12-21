@@ -6,7 +6,7 @@
 		name: 'Vai Transliteration',
 		description: 'Vai Transliteration, based on the SIL Keyman layout found at https://github.com/keymanapp/keyboards/tree/master/release/sil/sil_vai/source, with extensions',
 		date: '2019-05-08',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/vai-transliteration',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

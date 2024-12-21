@@ -6,7 +6,7 @@
 		name: 'ann-tilde',
 		description: 'Obolo input keyboard',
 		date: '2020-11-03',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ann-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.1',

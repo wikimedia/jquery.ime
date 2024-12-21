@@ -6,7 +6,7 @@
 		name: 'Belarusian kbd',
 		description: 'Belarusian keyboard layout',
 		date: '2013-02-09',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/be-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
