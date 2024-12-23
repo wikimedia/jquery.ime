@@ -6,7 +6,7 @@
 		name: 'लिप्यंतरण',
 		description: 'Nepali transliteration',
 		date: '2012-10-14',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ne-transliteration',
 		author: 'Junaid P V ([[user:Junaidpv]]) and Bhawani Gautam ([[user:Bhawani Gautam]])',
 		license: 'GPLv3',
 		version: '1.0',

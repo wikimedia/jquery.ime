@@ -6,7 +6,7 @@
 		name: 'ଫୋନେଟିକ',
 		description: 'Phonetic keyboard for Odia script',
 		date: '2013-02-09',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/or-phonetic',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

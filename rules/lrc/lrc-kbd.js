@@ -6,7 +6,7 @@
 		name: 'لۊری شومالی',
 		description: 'Northern Luri Keyboard Layout',
 		date: '2015-05-11',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/lrc-kbd',
 		author: 'Mjbmr',
 		license: 'GPLv3',
 		version: '1.0',

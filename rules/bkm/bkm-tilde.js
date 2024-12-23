@@ -6,7 +6,7 @@
 		name: 'bkm-tilde',
 		description: 'Kom tilde keyboard',
 		date: '2021-03-31',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bkm-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

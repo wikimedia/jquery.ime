@@ -6,7 +6,7 @@
 		name: 'ഇൻസ്ക്രിപ്റ്റ്',
 		description: 'Malayalam InScript',
 		date: '2012-10-03',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ml-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',
