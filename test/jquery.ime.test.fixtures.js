@@ -7143,7 +7143,7 @@ var palochkaVariants = {
 		description: 'Likpakpaanl tilde test',
 		inputmethod: 'xon-tilde',
 		tests: [
-			{ input: 'N~n~O~o', output: 'nŊŋƆɔ', description: 'Likpakpaanl tilde ŊŋƆɔ' }
+			{ input: '~N~n~O~o', output: 'ŊŋƆɔ', description: 'Likpakpaanl tilde ŊŋƆɔ' }
 		]
 	},
 	{
