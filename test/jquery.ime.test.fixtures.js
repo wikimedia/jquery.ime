@@ -7140,6 +7140,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Likpakpaanl tilde test',
+		inputmethod: 'xon-tilde',
+		tests: [
+			{ input: '~N~n~O~o', output: 'ŊŋƆɔ', description: 'Likpakpaanl tilde ŊŋƆɔ' }
+		]
+	},
+	{
 		description: 'Yoruba yo-alt input method test',
 		inputmethod: 'yo-alt',
 		tests: [
