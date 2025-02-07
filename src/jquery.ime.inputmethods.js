@@ -923,7 +923,7 @@
 			source: 'rules/sg/sg-tilde.js'
 		},
 		'shn-standard': {
-			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+			name: 'တႆး',
 			source: 'rules/shn/shn-standard.js'
 		},
 		'si-singlish': {
@@ -1767,7 +1767,7 @@
 			inputmethods: [ 'ber-tfng' ]
 		},
 		shn: {
-			autonym: 'လိၵ်ႈတႆး',
+			autonym: 'တႆး',
 			inputmethods: [ 'shn-standard' ]
 		},
 		si: {
