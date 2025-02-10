@@ -3,7 +3,7 @@
 
 	var shn = {
 		id: 'shn-standard',
-		name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+		name: 'တႆး',
 		description: 'Shan Standard Keyboard per SIIT',
 		date: '2022-09-15',
 		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/shan-standard-keyboard',
