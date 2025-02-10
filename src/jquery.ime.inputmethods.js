@@ -923,7 +923,7 @@
 			source: 'rules/sg/sg-tilde.js'
 		},
 		'shn-standard': {
-			name: 'လွၵ်းမိုဝ်းလိၵ်ႈတႆး',
+			name: 'တႆး',
 			source: 'rules/shn/shn-standard.js'
 		},
 		'si-singlish': {
@@ -1077,6 +1077,10 @@
 		'wo-tilde': {
 			name: 'Wolof tilde',
 			source: 'rules/wo/wo-tilde.js'
+		},
+		'xon-tilde': {
+			name: 'Likpakpaanl tilde',
+			source: 'rules/xon/xon-tilde.js'
 		},
 		'yo-alt': {
 			name: 'Yorùbá Alt',
@@ -1763,7 +1767,7 @@
 			inputmethods: [ 'ber-tfng' ]
 		},
 		shn: {
-			autonym: 'လိၵ်ႈတႆး',
+			autonym: 'တႆး',
 			inputmethods: [ 'shn-standard' ]
 		},
 		si: {
@@ -1881,6 +1885,10 @@
 		wo: {
 			autonym: 'Wolof',
 			inputmethods: [ 'wo-alt', 'wo-tilde' ]
+		},
+		xon: {
+			autonym: 'Likpakpaanl',
+			inputmethods: [ 'xon-tilde' ]
 		},
 		yo: {
 			autonym: 'Yorùbá',
