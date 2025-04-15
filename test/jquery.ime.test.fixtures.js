@@ -22268,7 +22268,7 @@ var palochkaVariants = {
 		description: 'Waale tilde test',
 		inputmethod: 'wlx-tilde',
 		tests: [
-			{ input: '~E~e~I~i~N~n~O~o~U~u', output: 'ƐɛƖɩŊŋƆɔƲʋ', description: 'Waale tilde ƐɛŊŋƆɔ' }
+			{ input: '~E~e~I~i~N~n~O~o~U~u', output: 'ƐɛƖɩŊŋƆɔƲʋ', description: 'Waale tilde ƐɛƖɩŊŋƆɔƲʋ' }
 		]
 	},
 	{
