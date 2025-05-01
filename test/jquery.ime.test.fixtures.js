@@ -2433,6 +2433,19 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Ho Latin Tilde test',
+		inputmethod: 'hoc-latn-tilde',
+		tests: [
+			{ input: '~T~t~D~d~N~nN~/n~/~R~r', output: 'ṬṭḌḍṄṅŃńṚṛ', description: 'Ho consonants 1' },
+			{ input: 'K~/k~/C~/c~/T~/t~/P~/p~/', output: 'ḰḱĆćT́t́Ṕṕ', description: 'Ho consonants 2' },
+			{ input: 'A~/a~/E~/e~/I~/i~/O~/o~/U~/u~/', output: 'ÁáÉéÍíÓóÚú', description: 'Ho vowels 1' },
+			{ input: 'A~{a~{E~{e~{I~{i~{O~{o~{U~{u~{', output: 'ÃãẼẽĨĩÕõŨũ', description: 'Ho vowels 2' },
+			{ input: 'A~{~/a~{~/E~{~/e~{~/I~{~/i~{~/O~{~/o~{~/U~{~/u~{~/', output: 'Ã́ã́Ẽ́ẽ́Ĩ́ĩ́ṌṍṸṹ', description: 'Ho vowels 3' },
+			{ input: 'A~^a~^E~^e~^I~^i~^O~^o~^U~^u~^', output: 'ÂâÊêÎîÔôÛû', description: 'Ho vowels 4' },
+			{ input: 'A~\\a~\\E~\\e~\\I~\\i~\\O~\\o~\\U~\\u~\\', output: 'ÀàÈèÌìÒòÙù', description: 'Ho vowels 5' }
+		]
+	},
+	{
 		description: 'Ho Transliteration test',
 		inputmethod: 'hoc-transliteration',
 		tests: [
