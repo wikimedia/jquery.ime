@@ -420,6 +420,10 @@
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
 		},
+		'hoc-latn-tilde': {
+			name: 'Ho Latin Tilde',
+			source: 'rules/hoc-latn/hoc-latn-tilde.js'
+		},
 		'hoc-transliteration': {
 			name: 'Ho transliteration',
 			source: 'rules/hoc/hoc-transliteration.js'
@@ -1417,6 +1421,10 @@
 		hoc: {
 			autonym: '𑢹𑣉𑣉',
 			inputmethods: [ 'hoc-transliteration' ]
+		},
+		'hoc-latn': {
+			autonym: 'Ho',
+			inputmethods: [ 'hoc-latn-tilde' ]
 		},
 		hr: {
 			autonym: 'Hrvatski',
