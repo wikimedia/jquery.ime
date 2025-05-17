@@ -1468,11 +1468,11 @@
 		},
 		jv: {
 			autonym: 'Jawa',
-			inputmethods: [ 'jv-keyboard' ]
+			inputmethods: ['jv-keyboard', 'jv-transliteration', 'jv-kongres']
 		},
 		'jv-java': {
 			autonym: 'ꦗꦮ',
-			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
+			inputmethods: [ 'jv-transliteration', 'jv-kongres' ,'jv-keyboard']
 		},
 		ka: {
 			autonym: 'ქართული ენა',
