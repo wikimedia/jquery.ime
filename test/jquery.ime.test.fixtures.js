@@ -4288,6 +4288,15 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Korean RO test',
+		inputmethod: 'ko-ro',
+		tests: [
+			{ input: 'namsan ', output: '남산', description: 'Namsan -> 남산'},
+			{ input: 'dogdo ', output: '독도', description: 'Dokdo -> 독도'},
+			{ input: 'nuna ', output: '누나', description: 'nuna -> 누나'},
+		]
+	},	
+	{
 		description: 'Kanuri tilde test',
 		inputmethod: 'kr-tilde',
 		tests: [

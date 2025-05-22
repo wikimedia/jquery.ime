@@ -560,9 +560,13 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'ko-ro': {
+			name: 'Korean Phonetic - Romaja',
+			source: 'rules/ko/ko-ro.js'
+		},
 		'ko-rr': {
 			name: 'Korean Revised Romanization',
-			source: 'rules/ko/ko-rr.js'
+			source: 'rules/ko/ko-rr.js'				
 		},
 		'kr-tilde': {
 			name: 'Kanuri tilde',
@@ -1520,7 +1524,7 @@
 		},
 		ko: {
 			autonym: '한국어',
-			inputmethods: [ 'ko-rr' ]
+			inputmethods: [ 'ko-ro','ko-rr' ]
 		},
 		kr: {
 			autonym: 'kanuri',
