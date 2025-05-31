@@ -21775,7 +21775,7 @@ var palochkaVariants = {
 			{ input: ']', output: 'ْ', description: 'Urdu phonetic sukun' },
 			{ input: '{', output: 'ٗ', description: 'Urdu phonetic inverted damma' },
 			{ input: '}', output: 'ّ', description: 'Urdu phonetic shadda' },
-			{ input: 'RT', output: 'ڑٹ', description: 'Urdu phonetic RT' }
+			{ input: 'RT', output: 'ڑٹ', description: 'Urdu phonetic RT' },
 
 			{ input: 'a', output: 'ا', description: 'Urdu phonetic alef' },
 			{ input: 'A', output: 'آ', description: 'Urdu phonetic alef with madda' },
