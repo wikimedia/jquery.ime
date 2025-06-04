@@ -21787,7 +21787,7 @@ var palochkaVariants = {
 			{ input: '"', output: '"', description: 'Urdu phonetic " -> " ' },
 			{ input: 'SDFGHJK', output: 'صڈٖغحضخ', description: 'Urdu phonetic ' },
 			{ input: 'fL', output: 'فؓ', description: 'Urdu phonetic fL -> f+radi' },
-			{ input: 'fI'', output: 'فٰ', description: 'Urdu phonetic I -> superscript alef' },
+			{ input: 'fI', output: 'فٰ', description: 'Urdu phonetic I -> superscript alef' },
 			{ input: 'd~', output: 'دً', description: 'Urdu phonetic ~ -> fathatan' },
 			{ input: 't`', output: 'تٍ', description: 'Urdu phonetic ~ -> kasratan' },
 
