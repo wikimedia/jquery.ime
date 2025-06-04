@@ -21780,7 +21780,7 @@ var palochkaVariants = {
 			{ input: 'a', output: 'ا', description: 'Urdu phonetic alef' },
 			{ input: 'A', output: 'آ', description: 'Urdu phonetic alef with madda' },
 			{ input: 'sdfghjkl', output: 'سدفگھجکل', description: 'Urdu phonetic sdfghjkl' },
-			{ input: 'dF', output: 'د'ٖ, description: 'Urdu phonetic dF -> dal with khari zer' },
+			{ input: 'dF', output: 'د', description: 'Urdu phonetic dF -> dal with khari zer' },
 			{ input: ':', output: ':', description: 'Urdu phonetic :' },
 			{ input: ';', output: '؛', description: 'Urdu phonetic ;' },
 			{ input: "'", output: "'", description: 'Urdu phonetic ' },
