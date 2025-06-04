@@ -20,7 +20,7 @@
 			[ '\\%', '%' ],
 			/* gol he with hamza */ [ '\\^', 'ۂ' ],
 			[ '\\&', '&' ],
-			/* dammatan */ [ '\\*', '*' ],
+			/* dammatan */ [ '\\*', '*' ] ],
 			[ '\\(', ')' ],
 			[ '\\)', '(' ],
 			/* tatwel */ [ '_', 'ـ' ],
@@ -93,7 +93,7 @@
 			[ ',', '،' ],
 			/* fatha */ [ '\\>', 'َ' ],
 			/* Arabic full stop */ [ '\\.', '۔' ],
-			/* Arabic question mark */ [ '\\?', '؟' ] ]
+			/* Arabic question mark */ [ '\\?', '؟' ]
 	};
 
 	$.ime.register( urPhonetic );
