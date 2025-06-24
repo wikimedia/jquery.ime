@@ -420,6 +420,10 @@
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
 		},
+		'hoc-latn-tilde': {
+			name: 'Ho Latin Tilde',
+			source: 'rules/hoc-latn/hoc-latn-tilde.js'
+		},
 		'hoc-transliteration': {
 			name: 'Ho transliteration',
 			source: 'rules/hoc/hoc-transliteration.js'
@@ -1418,6 +1422,10 @@
 			autonym: '𑢹𑣉𑣉',
 			inputmethods: [ 'hoc-transliteration' ]
 		},
+		'hoc-latn': {
+			autonym: 'Ho',
+			inputmethods: [ 'hoc-latn-tilde' ]
+		},
 		hr: {
 			autonym: 'Hrvatski',
 			inputmethods: [ 'hr-kbd' ]
@@ -1460,11 +1468,11 @@
 		},
 		jv: {
 			autonym: 'Jawa',
-			inputmethods: [ 'jv-keyboard' ]
+			inputmethods: ['jv-keyboard', 'jv-transliteration', 'jv-kongres']
 		},
 		'jv-java': {
 			autonym: 'ꦗꦮ',
-			inputmethods: [ 'jv-transliteration', 'jv-kongres' ]
+			inputmethods: [ 'jv-transliteration', 'jv-kongres' ,'jv-keyboard']
 		},
 		ka: {
 			autonym: 'ქართული ენა',
