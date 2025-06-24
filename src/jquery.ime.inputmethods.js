@@ -1726,6 +1726,10 @@
 			autonym: 'Ποντιακά',
 			inputmethods: [ 'pnt-tilde' ]
 		},
+		raj: {
+			autonym: 'राजस्थानी',
+			inputmethods: [ 'hi-transliteration', 'hi-inscript', 'hi-bolnagri', 'hi-phonetic', 'hi-inscript2' ]
+		},
 		rif: {
 			autonym: 'ⵜⴰⵔⵉⴼⵉⵜ',
 			inputmethods: [ 'ber-tfng' ]
