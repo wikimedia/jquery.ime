@@ -850,26 +850,6 @@
 			name: 'Pontic tilde',
 			source: 'rules/pnt/pnt-tilde.js'
 		},
-		'raj-bolnagri': {
-			name: 'बोलनागरी',
-			source: 'rules/hi/hi-bolnagri.js'
-		},
-		'raj-inscript': {
-			name: 'इनस्क्रिप्ट',
-			source: 'rules/hi/hi-inscript.js'
-		},
-		'raj-inscript2': {
-			name: 'इनस्क्रिप्ट २',
-			source: 'rules/hi/hi-inscript2.js'
-		},
-		'raj-phonetic': {
-			name: 'फोनेटिक',
-			source: 'rules/hi/hi-phonetic.js'
-		},
-		'raj-transliteration': {
-			name: 'लिप्यंतरण',
-			source: 'rules/hi/hi-transliteration.js'
-		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
 			source: 'rules/roa-tara/roa-tara.js'
