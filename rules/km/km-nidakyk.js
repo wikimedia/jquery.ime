@@ -8,7 +8,7 @@
 		name: 'ក្តារ​ចុច​យូនីកូដ​ខ្មែរ (NiDA)',
 		description: 'NiDA Standard Khmer Unicode Keyboard',
 		date: '2016-07-07',
-		URL: 'http://www.nida.gov.kh/files/documents/How_to_type_Khmer_Unicode_ver1_1km.pdf',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/km-nidakyk',
 		author: 'Ang Iongchun',
 		license: 'Public domain',
 		version: '1.0',

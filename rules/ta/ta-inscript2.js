@@ -6,7 +6,7 @@
 		name: 'இன்ஸ்கிரிப்ட் 2',
 		description: 'Enhanced InScript Keyboard for Tamil',
 		date: '2013-01-16',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ta-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

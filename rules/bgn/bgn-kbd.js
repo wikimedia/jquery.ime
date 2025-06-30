@@ -6,7 +6,7 @@
 		name: 'روچ کپتین بلوچی',
 		description: 'Western Baluchi Keyboard Layout',
 		date: '2015-03-11',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bgn-kbd',
 		author: 'Mjbmr',
 		license: 'GPLv3',
 		version: '1.0',

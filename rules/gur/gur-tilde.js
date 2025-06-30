@@ -6,7 +6,7 @@
 		name: 'gur-tilde',
 		description: 'Farefare input keyboard',
 		date: '2021-09-25',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/gur-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

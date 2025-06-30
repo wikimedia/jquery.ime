@@ -6,7 +6,7 @@
 		name: 'Bodo Inscript',
 		description: 'Bodo Inscript input method',
 		date: '2012-10-10',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/brx-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,10 +6,10 @@
 		name: 'Punjabi Transliteration',
 		description: 'Punjabi transliteration',
 		date: '2022-08-28',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-transliteration',
 		author: 'Amir E. Aharoni, inputs from Saurabh Choudhary, Surinder Wadhawan, bgo_eiu',
 		license: 'GPLv3',
-		version: '2.0',
+		version: '3.0',
 		contextLength: 2,
 		maxKeyLength: 4,
 		/* Semi-automatically created from the Hindi transliteration mapping using

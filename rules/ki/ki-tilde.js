@@ -6,7 +6,7 @@
 		name: 'ki-tilde',
 		description: 'Kikuyu input keyboard - tilde',
 		date: '2019-01-22',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ki-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

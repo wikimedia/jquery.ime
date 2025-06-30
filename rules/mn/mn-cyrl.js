@@ -12,7 +12,7 @@
 		name: 'Mongolian Cyrillic',
 		description: 'Mongolian Cyrillic Input Method',
 		date: '2012-10-25',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mn-cyrl',
 		author: 'Kevin K.S. Leung, <sprconan@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',

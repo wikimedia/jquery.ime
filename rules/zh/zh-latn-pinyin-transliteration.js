@@ -1,12 +1,12 @@
 ( function ( $ ) {
 	'use strict';
 
-	var zhPinyinTransliteration = {
-		id: 'zh-pinyin-transliteration',
-		name: '拼音符号输入法',
-		description: 'Mandarin PinYin Transliteration input method',
+	var zhLatnPinyinTransliteration = {
+		id: 'zh-latn-pinyin-transliteration',
+		name: '拼音符号输入法 / 拼音符號輸入法',
+		description: 'Mandarin Hanyu Pinyin Transliteration input method',
 		date: '2018-12-28',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/zh-pinyin-transliteration',
 		author: 'Yuping Zuo',
 		license: 'MIT',
 		version: '1.0',
@@ -56,5 +56,5 @@
 		]
 	};
 
-	$.ime.register( zhPinyinTransliteration );
+	$.ime.register( zhLatnPinyinTransliteration );
 }( jQuery ) );

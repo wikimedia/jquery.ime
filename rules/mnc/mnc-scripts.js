@@ -1,12 +1,12 @@
 ( function ( $ ) {
 	'use strict';
 
-	var manchu = {
-		id: 'mnc',
+	var manchuScripts = {
+		id: 'mnc-scripts',
 		name: 'Manchu Scripts',
 		description: 'Manchu Scripts',
 		date: '2014-4-22',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mnc-scripts',
 		author: 'Feilong Huang, <huangfeilong@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',
@@ -108,5 +108,5 @@
 		]
 	};
 
-	$.ime.register( manchu );
+	$.ime.register( manchuScripts );
 }( jQuery ) );

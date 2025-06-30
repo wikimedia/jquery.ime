@@ -160,12 +160,12 @@
 		 * @param {string} input
 		 * @param {string} context
 		 * @param {boolean} altGr whether altGr key is pressed or not
-		 * @return {Object} Transliteration object
-		 * @return {boolean} return.noop Whether to consider input processed or passed through.
-		 * @return {string} return.output The transliterated input or input unmodified.
+		 * @return {Object} Transliteration object, with the following fields:
+		 * "noop": boolean, whether to consider input processed or passed through;
+		 * "output": string, the transliterated input or input unmodified.
 		 */
 		transliterate: function ( input, context, altGr ) {
-			var patterns, regex, rule, replacement, i, retval;
+			var patterns, regex, contextRegex, rule, replacement, i, retval;
 
 			if ( altGr ) {
 				patterns = this.inputmethod.patterns_x || [];
@@ -195,6 +195,7 @@
 
 			for ( i = 0; i < patterns.length; i++ ) {
 				rule = patterns[ i ];
+				// eslint-disable-next-line security/detect-non-literal-regexp
 				regex = new RegExp( rule[ 0 ] + '$' );
 
 				// Last item in the rules.
@@ -206,7 +207,9 @@
 				if ( regex.test( input ) ) {
 					// Context test required?
 					if ( rule.length === 3 ) {
-						if ( new RegExp( rule[ 1 ] + '$' ).test( context ) ) {
+						// eslint-disable-next-line security/detect-non-literal-regexp
+						contextRegex = new RegExp( rule[ 1 ] + '$' );
+						if ( contextRegex.test( context ) ) {
 							return { noop: false, output: input.replace( regex, replacement ) };
 						}
 					} else {
@@ -282,7 +285,7 @@
 
 			if ( this.context.length > this.inputmethod.contextLength ) {
 				// The buffer is longer than needed, truncate it at the front
-				this.context = this.context.substring(
+				this.context = this.context.slice(
 					this.context.length - this.inputmethod.contextLength
 				);
 			}
@@ -355,7 +358,6 @@
 		 * Set the current input method
 		 *
 		 * @param {string} inputmethodId
-		 * @fires imeLanguageChange
 		 */
 		setIM: function ( inputmethodId ) {
 			this.inputmethod = $.ime.inputmethods[ inputmethodId ];
@@ -367,7 +369,6 @@
 		 * Set the current Language
 		 *
 		 * @param {string} languageCode
-		 * @fires imeLanguageChange
 		 * @return {boolean}
 		 */
 		setLanguage: function ( languageCode ) {
@@ -531,7 +532,7 @@
 	 */
 	FormWidgetEntry.prototype.getTextBeforeSelection = function ( maxLength ) {
 		var element = this.$element.get( 0 );
-		return this.$element.val().substring(
+		return this.$element.val().slice(
 			Math.max( 0, element.selectionStart - maxLength ),
 			element.selectionStart
 		);
@@ -551,9 +552,13 @@
 		// But for complex scripts, browsers place cursor in unexpected places
 		// and it's not possible to fix cursor programmatically.
 		// Ref Bug https://bugs.webkit.org/show_bug.cgi?id=66630
-		element.value = element.value.substring( 0, start - precedingCharCount ) +
+		element.value = element.value.slice( 0, start - precedingCharCount ) +
 			newText +
-			element.value.substring( element.selectionEnd, element.value.length );
+			element.value.slice( element.selectionEnd, element.value.length );
+
+		// Emit an event so that input fields that rely on events
+		// work properly
+		element.dispatchEvent( new Event( 'input' ) );
 
 		// restore scroll
 		element.scrollTop = scrollTop;
@@ -597,7 +602,7 @@
 		if ( !range || !range.collapsed || range.startContainer.nodeType !== Node.TEXT_NODE ) {
 			return '';
 		}
-		return range.startContainer.nodeValue.substring(
+		return range.startContainer.nodeValue.slice(
 			Math.max( 0, range.startOffset - maxLength ),
 			range.startOffset
 		);
@@ -634,9 +639,9 @@
 			textNode = range.startContainer;
 			textOffset = range.startOffset;
 			textNode.nodeValue =
-				textNode.nodeValue.substr( 0, textOffset - precedingCharCount ) +
+				textNode.nodeValue.slice( 0, Math.max( 0, textOffset - precedingCharCount ) ) +
 				newText +
-				textNode.nodeValue.substr( textOffset );
+				textNode.nodeValue.slice( textOffset );
 			newOffset = textOffset - precedingCharCount + newText.length;
 			newRange.setStart( range.startContainer, newOffset );
 			newRange.setEnd( range.startContainer, newOffset );

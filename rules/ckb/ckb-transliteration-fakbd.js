@@ -6,7 +6,7 @@
 		name: 'ڕۆژھەڵاتی',
 		description: 'Central Kurdish keyboard based on Persian keyboard',
 		date: '2013-07-06',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ckb-transliteration-fakbd',
 		author: 'Çalak',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'Thai Pattachote',
 		description: 'Thai Pattachote Input Method',
 		date: '2012-10-25',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/th-pattachote',
 		author: 'Kevin K.S. Leung, <sprconan@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',
