@@ -6,7 +6,7 @@
 		name: 'Mandailing',
 		description: 'Batak Mandailing transliteration',
 		date: '2023-07-29',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/btm-translit',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/btm-translit',
 		author: 'Benny Lin',
 		license: 'GPLv3',
 		version: '1.0',

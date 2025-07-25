@@ -6,7 +6,7 @@
 		name: 'अक्षरांतरण',
 		description: 'Transliteration keyboard for Marathi script',
 		date: '2012-10-14',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mr-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/mr-transliteration',
 		author: 'Pathak A B',
 		license: 'GPLv3',
 		version: '1.0',

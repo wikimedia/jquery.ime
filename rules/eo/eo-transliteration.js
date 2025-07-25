@@ -36,7 +36,7 @@
 		name: 'Esperanto Transliteration',
 		description: 'Esperanto x-code transliteration',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/eo-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/eo-transliteration',
 		author: 'Brion Vibber',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'Bari tilde',
 		description: 'Bari tilde',
 		date: '2022-12-07',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bfa-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bfa-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

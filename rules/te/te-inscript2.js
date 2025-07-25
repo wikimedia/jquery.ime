@@ -6,7 +6,7 @@
 		name: 'ఇన్\u200dస్క్రిప్ట్ 2',
 		description: 'Enhanced InScript keyboard for Telugu script',
 		date: '2013-01-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/te-inscript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/te-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'کوردی خوارگ',
 		description: 'Southern Kurdish Keyboard Layout',
 		date: '2015-05-03',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sdh-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sdh-kbd',
 		author: 'Mjbmr',
 		license: 'GPLv3',
 		version: '1.0',

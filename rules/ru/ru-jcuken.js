@@ -6,7 +6,7 @@
 		name: 'Русский - ЙЦУКЕН',
 		description: 'Стандартная русская раскладка',
 		date: '2012-10-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ru-jcuken',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ru-jcuken',
 		author: 'Amir (Алексей) Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

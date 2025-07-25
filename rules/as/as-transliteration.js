@@ -6,7 +6,7 @@
 		name: 'প্ৰতিৰূপান্তৰণ',
 		description: 'Assamese Transliteration input method',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/as-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/as-transliteration',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

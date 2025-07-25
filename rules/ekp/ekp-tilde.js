@@ -6,7 +6,7 @@
 		name: 'ekp-tilde',
 		description: 'Ekpeye input keyboard - tilde',
 		date: '2024-05-17',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/el-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/el-kbd',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

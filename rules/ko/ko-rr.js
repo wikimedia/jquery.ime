@@ -110,7 +110,7 @@
 		name: 'Korean Revised Romanization',
 		description: 'Transliteration using Korean revised romanization',
 		date: '2023-02-04',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ko-rr',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ko-rr',
 		author: 'Anne Drew Hu',
 		license: 'GPLv3',
 		version: '1.0',

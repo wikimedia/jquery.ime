@@ -6,7 +6,7 @@
 		name: 'Croatian kbd',
 		description: 'Croatian keyboard layout',
 		date: '2013-02-11',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/hr-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/hr-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

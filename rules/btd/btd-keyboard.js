@@ -6,7 +6,7 @@
 		name: 'Surat Pakpak (Dairi)',
 		description: 'QWERTY-based Batak Pakpak (Dairi) keyboard',
 		date: '2023-07-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/btd-keyboard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/btd-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
 		version: '1.0',

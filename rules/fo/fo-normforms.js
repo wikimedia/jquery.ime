@@ -6,7 +6,7 @@
 		name: 'Føroyskt',
 		description: 'Faroese input method with most common form transliterated',
 		date: '2012-12-04',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/fo-normforms',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/fo-normforms',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',

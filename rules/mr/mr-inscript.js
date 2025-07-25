@@ -6,7 +6,7 @@
 		name: 'मराठी लिपी',
 		description: 'InScript keyboard for Marathi script',
 		date: '2012-10-14',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mr-inscript',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/mr-inscript',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

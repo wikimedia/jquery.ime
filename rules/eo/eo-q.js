@@ -6,7 +6,7 @@
 		name: 'Espernto q',
 		description: 'writing Esperanto-letters adding q\'s.',
 		date: '2013-02-09',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/eo-q',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/eo-q',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

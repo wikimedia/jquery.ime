@@ -6,7 +6,7 @@
 		name: 'translitterointi',
 		description: 'Finnish transliteration',
 		date: '2012-11-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/fi-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/fi-transliteration',
 		author: 'Niklas Laxström',
 		license: 'GPLv3',
 		version: '1.0',

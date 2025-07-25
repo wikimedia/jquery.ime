@@ -6,7 +6,7 @@
 		name: 'ტრანსლიტერაცია',
 		description: 'Georgian transliteration',
 		date: '2012-10-14',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ka-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ka-transliteration',
 		author: 'Ioseb Dzmanashvili (http://www.code.ge), [[User:Hooman]], Srikanth L',
 		license: 'MIT',
 		version: '1.0',

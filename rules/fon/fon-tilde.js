@@ -6,7 +6,7 @@
 		name: 'fon-tilde',
 		description: 'Fon input keyboard',
 		date: '2018-05-18',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/fon-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/fon-tilde',
 		author: 'Mahuton POSSOUPE, Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.1',

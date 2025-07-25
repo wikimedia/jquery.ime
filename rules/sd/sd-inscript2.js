@@ -6,7 +6,7 @@
 		name: 'सिंधी इनस्क्रिप्ट २',
 		description: 'Enhanced InScript keyboard for Sindhi language',
 		date: '2013-20-13',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sd-inscript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sd-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

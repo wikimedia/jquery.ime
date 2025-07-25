@@ -6,7 +6,7 @@
 		name: 'Jawa Latin extended keyboard',
 		description: 'Javanese keyboard that include several accented letters',
 		date: '2024-06-05',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/jv-keyboard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/jv-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
 		version: '1.1',

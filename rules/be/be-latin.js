@@ -6,7 +6,7 @@
 		name: 'Belarusian Łacinka',
 		description: 'Belarusian Latin alphabet input method',
 		date: '2012-11-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/be-latin',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/be-latin',
 		author: 'Pavel Selitskas',
 		license: 'GPLv3',
 		version: '1.0',

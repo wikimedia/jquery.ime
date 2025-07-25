@@ -6,7 +6,7 @@
 		name: 'bas-tilde',
 		description: 'Basaa tilde keyboard',
 		date: '2021-03-31',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bas-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bas-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

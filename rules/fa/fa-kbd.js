@@ -6,7 +6,7 @@
 		name: 'kbd',
 		description: 'Persian standard (ISIRI 9147) keyboard layout',
 		date: '2013-08-30',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/fa-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/fa-kbd',
 		author: 'Ebrahim Byagowi',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'संताली इनस्क्रिप्ट २',
 		description: 'Enhanced InScript Devanagari keyboard for Santali language',
 		date: '2013-20-13',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sat-InScript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sat-InScript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'Georgian kbd',
 		description: 'Georgian kbd keyboard layout',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ka-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ka-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

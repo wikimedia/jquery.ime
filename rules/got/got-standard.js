@@ -6,7 +6,7 @@
 		name: '𐌲𐌿𐍄𐌹𐍃𐌺𐌰 𐍂𐌰𐌶𐌳𐌰',
 		description: 'Gothic keyboard layout',
 		date: '2016-06-27',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/got-standard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/got-standard',
 		author: 'Bokareis',
 		license: 'GPLv3',
 		version: '1.0',

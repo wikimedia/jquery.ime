@@ -6,7 +6,7 @@
 		name: 'sg-tilde',
 		description: 'Sango tilde keyboard',
 		date: '2019-03-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sg-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sg-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

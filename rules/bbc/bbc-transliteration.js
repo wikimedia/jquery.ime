@@ -6,7 +6,7 @@
 		name: 'Toba Transliteration',
 		description: 'QWERTY-based Batak Toba transliteration',
 		date: '2014-04-20',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bbc-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bbc-transliteration',
 		author: 'design by Michael Everson, implementation by Amir E. Aharoni and Benny Lin',
 		version: '1.1',
 		patterns: [

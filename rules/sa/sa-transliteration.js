@@ -6,7 +6,7 @@
 		name: 'Sanskrit Transliteration',
 		description: 'Sanskrit transliteration',
 		date: '2012-10-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sa-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sa-transliteration',
 		author: 'Junaid P V and Naveen Shankar',
 		license: 'GPLv3',
 		version: '1.0',

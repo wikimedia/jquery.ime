@@ -6,7 +6,7 @@
 		name: 'Удмурт ALT',
 		description: 'Удмурт ALT',
 		date: '2013-03-17',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/udm-alt',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/udm-alt',
 		author: 'Amir (Алексей) Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

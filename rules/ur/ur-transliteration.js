@@ -6,7 +6,7 @@
 		name: 'Urdu Transliteration',
 		description: 'Urdu Transliteration based on RTS',
 		date: '2012-10-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ur-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ur-transliteration',
 		author: 'Mohammed Imran Tabani',
 		license: '',
 		version: '1.0',

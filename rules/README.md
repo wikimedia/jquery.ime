@@ -135,4 +135,4 @@ Examples
 For complete examples, please refer the existing input method definitions.
 
 Documentation of input methods are available at
-[mw:Help:Extension:UniversalLanguageSelector/Input methods](https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods)
+[mw:Help:Extension:UniversalLanguageSelector/Input methods](https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods)

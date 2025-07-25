@@ -6,7 +6,7 @@
 		name: '拼音符号输入法 / 拼音符號輸入法',
 		description: 'Mandarin Hanyu Pinyin Transliteration input method',
 		date: '2018-12-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/zh-pinyin-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/zh-pinyin-transliteration',
 		author: 'Yuping Zuo',
 		license: 'MIT',
 		version: '1.0',

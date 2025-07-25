@@ -33,7 +33,7 @@
 		name: 'Cyrillic Palochka',
 		description: 'Palochka input method for Cyrillic',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/cyrl-palochka',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/cyrl-palochka',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.1',

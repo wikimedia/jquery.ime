@@ -6,7 +6,7 @@
 		name: 'Ga tilde',
 		description: 'Ga tilde',
 		date: '2019-05-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/gaa-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/gaa-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.1',

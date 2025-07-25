@@ -6,7 +6,7 @@
 		name: 'ଟ୍ରାନ୍ସଲିଟରେସନ',
 		description: 'Odia Transliteration',
 		date: '2012-10-14',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/or-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/or-transliteration',
 		author: 'Junaid P V, Subhashish Panigrahi and Shitikantha Dash',
 		license: 'GPLv3',
 		version: '1.0',

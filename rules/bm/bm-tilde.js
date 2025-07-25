@@ -6,7 +6,7 @@
 		name: 'Bamanankan tilde',
 		description: 'Bamanankan tilde',
 		date: '2019-05-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bm-tilde',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bm-tilde',
 		author: 'Amir E. Aharoni',
 		license: 'GPLv3',
 		version: '1.0',

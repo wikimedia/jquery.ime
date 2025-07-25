@@ -6,7 +6,7 @@
 		name: 'Tifinagh Transliteration',
 		description: 'Transliteration input method for Tifinagh script',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ber-tfng',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ber-tfng',
 		author: '',
 		license: '',
 		version: '1.0',

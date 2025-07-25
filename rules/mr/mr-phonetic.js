@@ -6,7 +6,7 @@
 		name: 'फोनेटिक',
 		description: 'Phonetic keyboard for Marathi language',
 		date: '2013-02-09',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mr-phonetic',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/mr-phonetic',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

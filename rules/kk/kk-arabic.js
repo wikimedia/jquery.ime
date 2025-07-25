@@ -6,7 +6,7 @@
 		name: 'Kazak arabic',
 		description: 'Kazak arabic in Arabic script keyboard layout',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/kk-arabic',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/kk-arabic',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',
