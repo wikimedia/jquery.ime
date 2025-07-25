@@ -6,7 +6,7 @@
 		name: 'Uzbek keyboard',
 		description: 'Uzbek input method with Russian keyboard layout',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/uz-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/uz-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

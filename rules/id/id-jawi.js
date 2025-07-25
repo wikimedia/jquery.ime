@@ -5,7 +5,7 @@
 		name: 'Jawi keyboard',
 		description: 'Jawi keyboard for Indonesian Wikisource',
 		date: '2023-09-21',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/jawi-keyboard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/jawi-keyboard',
 		author: 'Benny Lin, Pungkas, Michael',
 		license: 'GPLv3',
 		version: '1.0',

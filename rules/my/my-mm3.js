@@ -6,7 +6,7 @@
 		name: 'မြန်မာ၃ လက်ကွက်',
 		description: 'Myanmar3 keyboard layout',
 		date: '2014-10-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/my-mm3',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/my-mm3',
 		author: 'Lionslayer',
 		license: 'GPLv3',
 		version: '1.0',

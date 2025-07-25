@@ -6,7 +6,7 @@
 		name: 'বৰ্ণনা',
 		description: 'Bornona input method for Assamese',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/as-bornona',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/as-bornona',
 		author: 'Junaid P V',
 		license: 'GPLv3',
 		version: '1.0',

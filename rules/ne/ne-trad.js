@@ -6,7 +6,7 @@
 		name: 'Nepali Traditional',
 		description: 'Nepali Traditional keyboard layout',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ne-trad',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ne-trad',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

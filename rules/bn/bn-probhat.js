@@ -6,7 +6,7 @@
 		name: 'Bengali Probhat',
 		description: 'Bengali Probhat input method for Bengali',
 		date: '2012-10-10',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bn-probhat',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bn-probhat',
 		author: 'Nasir Khan Saikat',
 		license: 'GPLv3',
 		version: '1.0',

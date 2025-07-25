@@ -6,7 +6,7 @@
 		name: 'Aksara Jawa Kongres',
 		description: 'Papan Tombol Aksara Jawa berdasarkan Kongres Aksara Jawa I - 2021',
 		date: '2023-04-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/kongres-aksara-jawa',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/kongres-aksara-jawa',
 		author: 'Benny Lin',
 		version: '1.0',
 		patterns: [

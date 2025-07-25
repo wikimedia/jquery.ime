@@ -6,7 +6,7 @@
 		name: 'تۆرکجه',
 		description: 'South Azerbaijani Keyboard Layout',
 		date: '2015-05-02',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/azb-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/azb-kbd',
 		author: 'Mjbmr',
 		license: 'GPLv3',
 		version: '1.0',

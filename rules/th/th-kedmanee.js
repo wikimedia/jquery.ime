@@ -6,7 +6,7 @@
 		name: 'Thai Kedmanee',
 		description: 'Thai Kedmanee Input Method',
 		date: '2012-10-25',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/th-kedmanee',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/th-kedmanee',
 		author: 'Kevin K.S. Leung, <sprconan@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',

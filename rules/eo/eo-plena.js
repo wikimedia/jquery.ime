@@ -6,7 +6,7 @@
 		name: 'Esperanto plena',
 		description: 'writing Esperanto-letters with the fundamental system and the X-system, like the default of EK.',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/eo-plena',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/eo-plena',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'Vèneto GVU',
 		description: 'Venetian input method.',
 		date: '2020-03-23',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/vec-GVU',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/vec-GVU',
 		author: 'Vajotwo and GatoSelvadego (Wikipedia users)',
 		license: 'GPLv3',
 		version: '1.0',

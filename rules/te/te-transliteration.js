@@ -6,7 +6,7 @@
 		name: 'లిప్యంతరీకరణ',
 		description: 'Telugu Transliteration based on RTS',
 		date: '2012-10-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/te-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/te-transliteration',
 		author: 'Veeven, Junaid P V, Rahimanuddin Shaik',
 		license: 'GPLv3',
 		version: '1.0',

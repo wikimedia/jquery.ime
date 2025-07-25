@@ -6,7 +6,7 @@
 		name: 'Slovak kbd',
 		description: 'Slovak kbd keyboard layout',
 		date: '2013-06-26',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sk-kbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sk-kbd',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.1',

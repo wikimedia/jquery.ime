@@ -6,7 +6,7 @@
 		name: 'ইনস্ক্ৰিপ্ট ২',
 		description: 'Enhanced InScript keyboard for Manipuri language using Bengali script',
 		date: '2013-02-13',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/mni-inscript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/mni-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'တႆး',
 		description: 'Shan Standard Keyboard per SIIT',
 		date: '2022-09-15',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/shan-standard-keyboard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/shan-standard-keyboard',
 		author: 'SIIT',
 		license: 'GPLv3',
 		version: '1.0',

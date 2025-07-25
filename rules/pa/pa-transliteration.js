@@ -6,7 +6,7 @@
 		name: 'Punjabi Transliteration',
 		description: 'Punjabi transliteration',
 		date: '2012-10-16',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/pa-transliteration',
 		author: 'Amir E. Aharoni, inputs from Saurabh Choudhary and Surinder Wadhawan',
 		license: 'GPLv3',
 		version: '1.0',

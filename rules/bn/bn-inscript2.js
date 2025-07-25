@@ -6,7 +6,7 @@
 		name: 'ইনস্ক্ৰিপ্ট ২',
 		description: 'Enhanced InScript keyboard for Bengali language',
 		date: '2013-02-09',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/bn-inscript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/bn-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

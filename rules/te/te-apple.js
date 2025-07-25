@@ -6,7 +6,7 @@
 		name: 'ఆపిల్',
 		description: 'Apple keyboard layout for Telugu',
 		date: '2014-12-27',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/te-apple',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/te-apple',
 		author: 'Praveen Illa',
 		license: 'GPLv3',
 		version: '1.0',

@@ -6,7 +6,7 @@
 		name: 'لاتینی',
 		description: 'Central Kurdish keyboard based on Latin keyboard',
 		date: '2013-07-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/ckb-transliteration-lakbd',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ckb-transliteration-lakbd',
 		author: 'Çalak',
 		license: 'GPLv3',
 		version: '1.0',

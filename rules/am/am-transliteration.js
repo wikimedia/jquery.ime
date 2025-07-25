@@ -6,7 +6,7 @@
 		name: 'Amharic Transliteration',
 		description: 'Amharic Transliteration',
 		date: '2012-09-09',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/am-transliteration',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/am-transliteration',
 		author: 'Elfalem [[User:Elfalem]])',
 		license: 'GPLv3',
 		version: '1.0',

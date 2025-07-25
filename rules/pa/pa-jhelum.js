@@ -6,7 +6,7 @@
 		name: 'Punjabi Jhelum',
 		description: 'Jhelum keyboard for Punjabi script',
 		date: '2013-11-14',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/pa-jhelum',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/pa-jhelum',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

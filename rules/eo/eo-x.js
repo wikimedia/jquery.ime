@@ -6,7 +6,7 @@
 		name: 'Esperanto x',
 		description: 'writing Esperanto-letters adding x\'s (the X-system).',
 		date: '2013-02-12',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/eo-x',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/eo-x',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

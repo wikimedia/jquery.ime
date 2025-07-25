@@ -6,7 +6,7 @@
 		name: 'Davvisámegiella',
 		description: 'Northern Sami input method',
 		date: '2012-12-04',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/se-normforms',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/se-normforms',
 		author: 'John Erling Blad',
 		license: 'GPLv3',
 		version: '1.0',

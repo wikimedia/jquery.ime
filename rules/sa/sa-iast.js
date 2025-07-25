@@ -6,7 +6,7 @@
 		name: 'Romanized',
 		description: 'Romanized input method for Sanskrit with IAST/ISO 15919 convention. Original author William Giddings <wjgiddings@googlemail.com>',
 		date: '2013-03-18',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sa-iast',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sa-iast',
 		author: 'Runa Bhattacharjee',
 		license: 'GPLv3',
 		version: '1.0',

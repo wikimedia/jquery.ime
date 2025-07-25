@@ -6,7 +6,7 @@
 		name: 'संस्कृत इनस्क्रिप्ट २',
 		description: 'Enhanced InScript keyboard for Sanskrit language',
 		date: '2012-11-06',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/sa-inscript2',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sa-inscript2',
 		author: 'Parag Nemade',
 		license: 'GPLv3',
 		version: '1.0',

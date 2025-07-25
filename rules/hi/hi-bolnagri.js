@@ -6,7 +6,7 @@
 		name: 'बोलनागरी',
 		description: 'BolNagri phonetic keymap for Devanagari script',
 		date: '2012-03-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/hi-bolnagri',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/hi-bolnagri',
 		author: 'G Karunakar',
 		license: 'GPLv3',
 		version: '1.0',
