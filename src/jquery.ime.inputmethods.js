@@ -739,7 +739,7 @@
 			source: 'rules/my/my-xkb.js'
 		},
 		'nan-latn-pehoeji-transliteration': {
-			name: '閩南語白話字IME / Bân-lâm-gú Pe̍h-ōe-jī IME',
+			name: '閩南語白話字IME / Bân-lâm-gí Pe̍h-ōe-jī IME',
 			source: 'rules/nan/nan-latn-pehoeji-transliteration.js'
 		},
 		'nb-normforms': {
@@ -1639,7 +1639,7 @@
 			inputmethods: [ 'my-mm3', 'my-xkb' ]
 		},
 		nan: {
-			autonym: '閩南語 / Bân-lâm-gú',
+			autonym: '閩南語 / Bân-lâm-gí',
 			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
 		},
 		'nan-hani': {
@@ -1651,11 +1651,11 @@
 			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
 		},
 		'nan-latn-pehoeji': {
-			autonym: 'Bân-lâm-gú (Pe̍h-ōe-jī)',
+			autonym: 'Bân-lâm-gí (Pe̍h-ōe-jī)',
 			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
 		},
 		'nan-latn-tailo': {
-			autonym: 'Bân-lâm-gú (Tâi-lô)',
+			autonym: 'Bân-lâm-gí (Tâi-lô)',
 			inputmethods: [ 'nan-latn-pehoeji-transliteration' ]
 		},
 		naq: {

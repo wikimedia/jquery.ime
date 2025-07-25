@@ -3,13 +3,13 @@
 
 	var nanLatnPehoejiTransliteration = {
 		id: 'nan-latn-pehoeji-transliteration',
-		name: '閩南語白話字IME / Bân-lâm-gú Pe̍h-ōe-jī IME',
+		name: '閩南語白話字IME / Bân-lâm-gí Pe̍h-ōe-jī IME',
 		description: 'Hokkien Pe̍h-ōe-jī Transliteration input method',
 		date: '2024-11-19',
 		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/nan-latn-pehoeji-transliteration',
 		author: 'Winston Sung',
 		license: 'MIT',
-		version: '1.3',
+		version: '1.4',
 		maxKeyLength: 5,
 		patterns: [
 			[ 'nn', 'ⁿ' ],
