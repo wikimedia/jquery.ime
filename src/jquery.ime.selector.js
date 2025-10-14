@@ -678,7 +678,7 @@
 
 	$.fn.imeselector.Constructor = IMESelector;
 
-	selectorTemplate = '<div class="imeselector imeselector-toggle">' +
+	selectorTemplate = '<div class="imeselector imeselector-toggle notheme skin-invert">' +
 		'<a class="ime-name imeselector-toggle" href="#"></a>' +
 		'<b class="ime-setting-caret imeselector-toggle"></b></div>';
 
