@@ -568,6 +568,10 @@
 			name: 'Korean Revised Romanization',
 			source: 'rules/ko/ko-rr.js'
 		},
+		'ko-phonetic': {
+			name: 'Korean Phonetic',
+			source: 'rules/ko/ko-phonetic.js'
+		},
 		'kr-tilde': {
 			name: 'Kanuri tilde',
 			source: 'rules/kr/kr-tilde.js'
@@ -1528,7 +1532,7 @@
 		},
 		ko: {
 			autonym: '한국어',
-			inputmethods: [ 'ko-rr' ]
+			inputmethods: [ 'ko-rr', 'ko-phonetic' ]
 		},
 		kr: {
 			autonym: 'kanuri',
