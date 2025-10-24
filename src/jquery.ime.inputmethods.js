@@ -488,6 +488,10 @@
 			name: 'Esan Awain tilde',
 			source: 'rules/ish/ish-tilde.js'
 		},
+		'jab-tilde': {
+			name: 'Hyam tilde',
+			source: 'rules/jab/jab-tilde.js'
+		},
 		'jac-tilde': {
 			name: 'Jakaltek tilde',
 			source: 'rules/jac/jac-tilde.js'
@@ -1461,6 +1465,10 @@
 		ish: {
 			autonym: 'awain',
 			inputmethods: [ 'ish-tilde' ]
+		},
+		jab: {
+			autonym: 'Hyam',
+			inputmethods: [ 'jab-tilde' ]
 		},
 		jac: {
 			autonym: 'Abꞌxubꞌal Poptiꞌ',
