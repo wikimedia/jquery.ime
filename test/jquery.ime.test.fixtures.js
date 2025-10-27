@@ -3170,6 +3170,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Hyam tilde test',
+		inputmethod: 'jab-tilde',
+		tests: [
+			{ input: "~A~a~E~e~I~i", output: 'A̱a̱E̱e̱I̱i̱', description: 'Hyam tilde A̱a̱E̱e̱I̱i̱' }
+		]
+	},
+	{
 		description: 'Jakaltek tilde test',
 		inputmethod: 'jac-tilde',
 		tests: [
