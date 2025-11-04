@@ -1,12 +1,12 @@
 ( function ( $ ) {
 	'use strict';
 
-	var sibe = {
-		id: 'sjo',
-		name: 'Sibe Scripts',
-		description: 'Sibe Scripts',
+	var manchuScripts = {
+		id: 'mnc-scripts',
+		name: 'Manchu Scripts',
+		description: 'Manchu Scripts',
 		date: '2014-4-22',
-		URL: 'http://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/mnc-scripts',
 		author: 'Feilong Huang, <huangfeilong@gmail.com>',
 		license: 'GPLv3',
 		version: '1.0',
@@ -34,7 +34,7 @@
 			[ 'L', '\u1840' ],
 			[ ':', '\u1804' ],
 			[ '"', '\u180c' ],
-			[ 'Z', '\u1872' ],
+			[ 'Z', '\u1877' ],
 			[ 'X', '\u1871' ],
 			[ 'C', '\u1842' ],
 			[ 'V', '' ],
@@ -50,11 +50,11 @@
 			[ 'q', '\u1834' ],
 			[ 'w', '\u1823' ],
 			[ 'e', '\u185d' ],
-			[ 'r', '\u1837' ],
+			[ 'r', '\u1875' ],
 			[ 't', '\u1868' ],
 			[ 'y', '\u1836' ],
 			[ 'u', '\u1860' ],
-			[ 'i', '\u185e' ],
+			[ 'i', '\u1873' ],
 			[ 'o', '\u1825' ],
 			[ 'p', '\u1866' ],
 			[ '\\[', '〔' ],
@@ -62,11 +62,11 @@
 			[ 'a', '\u1820' ],
 			[ 's', '\u1830' ],
 			[ 'd', '\u1869' ],
-			[ 'f', '\u186b' ],
+			[ 'f', '\u1876' ],
 			[ 'g', '\u1864' ],
 			[ 'h', '\u1865' ],
 			[ 'j', '\u186a' ],
-			[ 'k', '\u1863' ],
+			[ 'k', '\u1874' ],
 			[ 'l', '\u182f' ],
 			[ ';', ';' ],
 			[ '\'', '\u180b' ],
@@ -108,5 +108,5 @@
 		]
 	};
 
-	$.ime.register( sibe );
+	$.ime.register( manchuScripts );
 }( jQuery ) );

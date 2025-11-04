@@ -1,10 +1,10 @@
 ( function ( $ ) {
 	'use strict';
 
-	var manchu = {
-		id: 'mnc',
-		name: 'Manchu Scripts',
-		description: 'Manchu Scripts',
+	var sjoScripts = {
+		id: 'sjo-scripts',
+		name: 'Sibe Scripts',
+		description: 'Sibe Scripts',
 		date: '2014-4-22',
 		URL: 'http://github.com/wikimedia/jquery.ime',
 		author: 'Feilong Huang, <huangfeilong@gmail.com>',
@@ -34,7 +34,7 @@
 			[ 'L', '\u1840' ],
 			[ ':', '\u1804' ],
 			[ '"', '\u180c' ],
-			[ 'Z', '\u1877' ],
+			[ 'Z', '\u1872' ],
 			[ 'X', '\u1871' ],
 			[ 'C', '\u1842' ],
 			[ 'V', '' ],
@@ -50,11 +50,11 @@
 			[ 'q', '\u1834' ],
 			[ 'w', '\u1823' ],
 			[ 'e', '\u185d' ],
-			[ 'r', '\u1875' ],
+			[ 'r', '\u1837' ],
 			[ 't', '\u1868' ],
 			[ 'y', '\u1836' ],
 			[ 'u', '\u1860' ],
-			[ 'i', '\u1873' ],
+			[ 'i', '\u185e' ],
 			[ 'o', '\u1825' ],
 			[ 'p', '\u1866' ],
 			[ '\\[', '〔' ],
@@ -62,11 +62,11 @@
 			[ 'a', '\u1820' ],
 			[ 's', '\u1830' ],
 			[ 'd', '\u1869' ],
-			[ 'f', '\u1876' ],
+			[ 'f', '\u186b' ],
 			[ 'g', '\u1864' ],
 			[ 'h', '\u1865' ],
 			[ 'j', '\u186a' ],
-			[ 'k', '\u1874' ],
+			[ 'k', '\u1863' ],
 			[ 'l', '\u182f' ],
 			[ ';', ';' ],
 			[ '\'', '\u180b' ],
@@ -108,5 +108,5 @@
 		]
 	};
 
-	$.ime.register( manchu );
+	$.ime.register( sjoScripts );
 }( jQuery ) );

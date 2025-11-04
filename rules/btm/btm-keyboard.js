@@ -6,7 +6,7 @@
 		name: 'Surat Mandailing',
 		description: 'QWERTY-based Batak Mandailing keyboard',
 		date: '2023-07-28',
-		URL: 'https://www.mediawiki.org/wiki/Help:Extension:UniversalLanguageSelector/Input_methods/btm-keyboard',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/btm-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
 		version: '1.0',

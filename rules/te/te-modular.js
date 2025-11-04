@@ -6,6 +6,7 @@
 		name: 'మాడ్యులర్',
 		description: 'Modular keyboard layout for Telugu',
 		date: '2014-12-31',
+		URL: '',
 		author: 'Praveen Illa',
 		license: 'GPLv3',
 		version: '1.0',
