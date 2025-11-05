@@ -1,7 +1,5 @@
 ﻿( function ( $ ) {
-﻿var jvKeyboard = {
 	'use strict';
-
 	var jvKeyboard = {
 		id: 'jv-keyboard',
 		name: 'Jawa Latin extended keyboard',
