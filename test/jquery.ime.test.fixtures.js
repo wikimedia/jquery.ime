@@ -1,4 +1,4 @@
-// Variables for Cyrillic with palochka transliteration tests.
+﻿// Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 // eslint-disable-next-line no-implicit-globals
@@ -3193,8 +3193,8 @@ var palochkaVariants = {
 			{ input: 'QQ Qq qq EE Ee ee XX Xx xx', output: 'Q Q q E E e X X x', description: 'Normal QEX' },
 			{ input: '^An^a', output: 'Ånå', description: 'Jawa Latin extended Å' },
 			{ input: '~An~a', output: 'Ånå', description: 'Jawa Latin extended Å - alternate' },
-			{ input: 'tula.da .Da .Ta .ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ' },
-			{ input: 'tula~da ~Da ~Ta ~ta', output: 'tulaḍa Ḍa Ṭa ṭa', description: 'Jawa Latin extended Ḍ and Ṭ - alternate' }
+			{ input: 'tula.da .Da .Ta .ta .Na .na', output: 'tulaḍa Ḍa Ṭa ṭa Ṇa ṇa', description: 'Jawa Latin extended Ḍ Ṭ Ṇ' },
+			{ input: 'tula~da ~Da ~Ta ~ta ~Na ~na', output: 'tulaḍa Ḍa Ṭa ṭa Ṇa ṇa', description: 'Jawa Latin extended Ḍ Ṭ Ṇ - alternate' }
 		]
 	},
 	{

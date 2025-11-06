@@ -1,15 +1,14 @@
 ﻿( function ( $ ) {
 	'use strict';
-
 	var jvKeyboard = {
 		id: 'jv-keyboard',
 		name: 'Jawa Latin extended keyboard',
 		description: 'Javanese keyboard that include several accented letters',
-		date: '2024-06-05',
+		date: '2025-11-04',
 		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/jv-keyboard',
 		author: 'Benny Lin',
 		license: 'GPLv3',
-		version: '1.1',
+		version: '1.2',
 		patterns: [
 			[ '~E', 'É' ],
 			[ '~e', 'é' ],
@@ -40,10 +39,14 @@
 			[ '~d', 'ḍ' ],
 			[ '~T', 'Ṭ' ],
 			[ '~t', 'ṭ' ],
+			[ '~N', 'Ṇ' ],
+			[ '~n', 'ṇ' ],
 			[ '\\.D', 'Ḍ' ],
 			[ '\\.d', 'ḍ' ],
 			[ '\\.T', 'Ṭ' ],
-			[ '\\.t', 'ṭ' ]
+			[ '\\.t', 'ṭ' ],
+			[ '\\.N', 'Ṇ' ],
+			[ '\\.n', 'ṇ' ]
 		]
 	};
 
