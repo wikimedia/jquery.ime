@@ -930,6 +930,10 @@
 			name: 'Sängö',
 			source: 'rules/sg/sg-tilde.js'
 		},
+		'sgh-tilde': {
+			name: 'xuɣ̌nůni',
+			source: 'rules/sgh/sgh-tilde.js'
+		},
 		'shn-standard': {
 			name: 'တႆး',
 			source: 'rules/shn/shn-standard.js'
@@ -1781,6 +1785,10 @@
 		sg: {
 			autonym: 'Sängö',
 			inputmethods: [ 'sg-tilde' ]
+		},
+		sgh: {
+			autonym: 'xuɣ̌nůni',
+			inputmethods: [ 'sgh-tilde' ]
 		},
 		shi: {
 			autonym: 'ⵜⴰⵛⵍⵃⵉⵜ',
