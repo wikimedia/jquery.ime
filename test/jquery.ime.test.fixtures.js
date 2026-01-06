@@ -21697,6 +21697,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Tiv tilde test',
+		inputmethod: 'tiv-tilde',
+		tests: [
+			{ input: '~O~o', output: 'Ôô', description: 'Tiv tilde Ôô' }
+		]
+	},
+	{
 		description: 'Setswana tilde test',
 		inputmethod: 'tn-tilde',
 		tests: [
