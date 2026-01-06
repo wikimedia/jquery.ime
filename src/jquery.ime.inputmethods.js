@@ -1034,6 +1034,10 @@
 			name: 'Tigre GeezIM',
 			source: 'rules/tig/tig-geezim.js'
 		},
+		'tiv-tilde': {
+			name: 'Tiv Tilde',
+			source: 'rules/tiv/tiv-tilde.js'
+		},
 		'tn-tilde': {
 			name: 'Setswana tilde',
 			source: 'rules/tn/tn-tilde.js'
@@ -1857,6 +1861,10 @@
 		tig: {
 			autonym: 'ትግሬ',
 			inputmethods: [ 'tig-geezim' ]
+		},
+		tiv: {
+			autonym: 'tiv',
+			inputmethods: [ 'tiv-tilde' ]
 		},
 		tkr: {
 			autonym: 'цӀаӀхна миз',
