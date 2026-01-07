@@ -21226,11 +21226,11 @@ var palochkaVariants = {
 		description: 'Shughni tilde test',
 		inputmethod: 'sgh-tilde',
 		tests: [
-			{ input: '~A~a~C~c~Z~z~D~d', output: 'ĀāČčƷʒĐđ', description: 'Shughni tilde test ĀāČčƷʒĐđ' },
-			{ input: '~e~E~3~G~h', output: 'ēÊêĞğ', description: 'Shughni tilde test ēÊêĞğ' },
-			{ input: '~Y~y~H~2', output: 'ĠġH²h²', description: 'Shughni tilde test ĠġH²h²' },
-			{ input: '~S~s~T~t~U~u~X~x', output: 'ŠšÞþŮůẊẋ', description: 'Shughni tilde test ŠšÞþŮůẊẋ' },
-			{ input: '~V~v~B~b', output: 'ŽžA̱a̱', description: 'Shughni tilde test ŽžA̱a̱' }
+			{ input: '~A~a~C~c~E~e~G~g', output: 'ĀāČčÊêƔɣ', description: 'Shughni tilde test ĀāČčÊêƔɣ' },
+			{ input: '~H~h~I~i~J~j~T~t', output: 'Ɣ̌ɣ̌ĪīJ̌ǰΘθ', description: 'Shughni tilde test Ɣ̌ɣ̌ĪīJ̌ǰΘθ' },
+			{ input: '~S~s~U~u~V~v~X~x', output: 'ŠšŮůŪūX̌x̌', description: 'Shughni tilde test ŠšŮůŪūẊẋ' },
+			{ input: '~Z~z~M~me~-', output: 'ŽžƷʒē', description: 'Shughni tilde test ŽžƷʒē' },
+			{ input: 're~-al', output: 'rēal', description: 'Shughni tilde test rēal' }
 		]
 	},
 	{
