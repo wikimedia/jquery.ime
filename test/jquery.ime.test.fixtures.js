@@ -20986,10 +20986,10 @@ var palochkaVariants = {
 		description: 'Western Pwo tilde test',
 		inputmethod: 'pwo-tilde',
 		tests: [
-			{ input: '~k~K~y~x~N~s~S~z', output: 'ကခဂဎငစဆဇ', description: 'Shughni tilde test ကခဂဎငစဆဇ' },
-			{ input: '~Y~H~e~t~T~d', output: 'ညၡတထဒန', description: 'Shughni tilde test ညၡတထဒန' },
-			{ input: '~n~p~P~F~b~m~j', output: 'ပဖဘမယရလ', description: 'Shughni tilde test ပဖဘမယရလ' },
-			{ input: '~r~R~l~w~h~q', output: 'ဝၥဟအဧၦ', description: 'Shughni tilde test ဝၥဟအဧၦ' },
+			{ input: '~k~K~y~x~N~s~S~z', output: 'ကခဂဎငစဆဇ', description: 'Western Pwo tilde test ကခဂဎငစဆဇ' },
+			{ input: '~Y~H~e~t~T~d', output: 'ညၡတထဒန', description: 'Western Pwo tilde test ညၡတထဒန' },
+			{ input: '~n~p~P~F~b~m~j', output: 'ပဖဘမယရလ', description: 'Western Pwo tilde test ပဖဘမယရလ' },
+			{ input: '~r~R~l~w~h~q', output: 'ဝၥဟအဧၦ', description: 'Western Pwo tilde test ဝၥဟအဧၦ' },
 		]
 	},
 	{
