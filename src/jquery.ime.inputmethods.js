@@ -858,6 +858,10 @@
 			name: 'Pontic tilde',
 			source: 'rules/pnt/pnt-tilde.js'
 		},
+		'pwo-tilde': {
+			name: 'ဖျိၩ့ၡိ',
+			source: 'rules/pwo/pwo-tilde.js'
+		},
 		'roa-tara-GVU': {
 			name: 'Tarandine',
 			source: 'rules/roa-tara/roa-tara.js'
@@ -1741,6 +1745,10 @@
 		pnt: {
 			autonym: 'Ποντιακά',
 			inputmethods: [ 'pnt-tilde' ]
+		},
+		pwo: {
+			autonym: 'ဖျိၩ့ၡိ',
+			inputmethods: [ 'pwo-tilde' ]
 		},
 		raj: {
 			autonym: 'राजस्थानी',
