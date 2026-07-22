@@ -4222,6 +4222,53 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Khiamniungan Naga tilde test',
+		inputmethod: 'kix-tilde',
+		tests: [
+			// Group 1: a, e, i × 4 tones (unchanged – passes)
+			{
+				input: 'a~\\a~-a~^a~/e~\\e~-e~^e~/i~\\i~-i~^i~/',
+				output: 'àāâáèēêéìīîí',
+				description: 'a/e/i × 4 tones'
+			},
+
+			// Group 2: o, u × 4 tones (unchanged – passes)
+			{
+				input: 'o~\\o~-o~^o~/u~\\u~-u~^u~/',
+				output: 'òōôóùūûú',
+				description: 'o/u × 4 tones'
+			},
+
+			// Group 3: ü × 4 tones – actual output uses precomposed ü (U+00FC) + tone mark
+			{
+				input: '~u~\\~u~-~u~^~u~/',
+				output: 'ǜǖü̂ǘ',  // U+00FC + combining grave/macron/circumflex/acute
+				description: 'ü × 4 tones'
+			},
+
+			// Group 4: Ü × 4 tones – actual output uses precomposed Ü (U+00DC) + tone mark
+			{
+				input: '~U~\\~U~-~U~^~U~/',
+				output: 'ǛǕÜ̂Ǘ',  // U+00DC + combining marks
+				description: 'Ü × 4 tones'
+			},
+
+			// Group 5: mixed tones with spaces – actual output uses precomposed ü for diaeresis
+			{
+				input: '~u~- a~/ e~^ i~\\ o~-',
+				output: 'ǖ á ê ì ō',  // ǖ = U+00FC + U+0304; ì = i + U+0300
+				description: 'mixed tones with spaces'
+			},
+
+			// Group 6: edge cases (unchanged)
+			{
+				input: '~~ ~ ~x ~',
+				output: '~~ ~ ~x ~',
+				description: 'double tilde, tilde space, tilde+x'
+			}
+		]
+	},
+	{
 		description: 'Korean RR test',
 		inputmethod: 'ko-rr',
 		tests: [
