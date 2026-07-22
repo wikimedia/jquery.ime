@@ -6,18 +6,18 @@
 		name: 'Khiamniungan tilde',
 		description: 'Khiamniungan Naga input keyboard',
 		date: '2026-07-22',
-		URL: 'https://github.com/wikimedia/jquery.ime',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/kix-tilde',
 		author: 'Toluwanimi Ayodele',
 		license: 'GPLv3',
 		version: '1.0',
-		maxKeyLength: 3,
+		maxKeyLength: 2,
 		patterns: [
-			[ '~u', 'ü' ],          // U+00FC
-			[ '~U', 'Ü' ],          // U+00DC
-			[ '~\\\\', '\u0300' ],  // grave
-			[ '~-', '\u0304' ],     // macron
-			[ '~\\^', '\u0302' ],   // circumflex
-			[ '~/', '\u0301' ]      // acute
+			[ '~u', 'ü' ], // U+00FC
+			[ '~U', 'Ü' ], // U+00DC
+			[ '~\\\\', '\u0300' ], // Combining grave
+			[ '~-', '\u0304' ], // Combining macron
+			[ '~\\^', '\u0302' ], // Combining circumflex
+			[ '~/', '\u0301' ] // Combining acute
 		]
 	};
 
