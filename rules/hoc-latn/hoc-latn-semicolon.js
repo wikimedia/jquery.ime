@@ -1,7 +1,7 @@
 ( function ( $ ) {
 	'use strict';
 
-	var hocLatnTilde = {
+	var hocLatnSemicolon = {
 		id: 'hoc-latn-semicolon',
 		name: 'Ho Latin semicolon',
 		description: 'Ho Latin semicolon keyboard',
