@@ -2449,27 +2449,27 @@ var palochkaVariants = {
 		description: 'Ho Latin Semicolon test',
 		inputmethod: 'hoc-latn-semicolon',
 		tests: [
-			{ input: 'K;C;Z;P;W;', output: 'ḰĆT́ṔṔ', description: 'Ho consonants 1' },
-			{ input: 'Ḱ;Ć;T́;Ṕ', output: 'KCZP', description: 'Ho consonants 1' },
-			{ input: 'T;D;R;', output: 'ṬḌṚ', description: 'Ho consonants 2' },
-			{ input: 'Ṭ;Ḍ;Ṛ;', output: 'TDR', description: 'Ho consonants 2' },
-			{ input: 'T..D..R..', output: 'ṬḌṚ', description: 'Ho consonants 2' },
-			{ input: 'N;J;', output: 'ṄŃ', description: 'Ho consonants 3' },
-			{ input: 'Ṅ;Ń;', output: 'NJ', description: 'Ho consonants 3' },
+			{ input: 'K;C;Z;P;W;', output: 'ḰĆT́ṔṔ', description: 'Ho consonants KCTP' },
+			{ input: 'Ḱ;Ć;T́;Ṕ', output: 'KCZP', description: 'Ho consonants KCTP reverse' },
+			{ input: 'T;D;R;', output: 'ṬḌṚ', description: 'Ho consonants TDR' },
+			{ input: 'Ṭ;Ḍ;Ṛ;', output: 'TDR', description: 'Ho consonants TDR reverse' },
+			{ input: 'T..D..R..', output: 'ṬḌṚ', description: 'Ho consonants TDR dot' },
+			{ input: 'N;J;', output: 'ṄŃ', description: 'Ho consonants NJ' },
+			{ input: 'Ṅ;Ń;', output: 'NJ', description: 'Ho consonants NJ reverse' },
 
-			{ input: 'A;E;I;O;U;', output: 'ÁÉÍÓÚ', description: 'Ho vowels 1' },
-			{ input: 'Á;É;Í;Ó;Ú;', output: 'ÃẼĨÕŨ', description: 'Ho vowels 1' },
-			{ input: 'Ã;Ẽ;Ĩ;Õ;Ũ;', output: 'ÄËÏÖÜ', description: 'Ho vowels 1' },
-			{ input: 'Ä;Ë;Ï;Ö;Ü;', output: 'ÀÈÈÒÙ', description: 'Ho vowels 1' },
-			{ input: 'À;È;Ì;Ò;Ù;', output: 'ÂÊÎÔÛ', description: 'Ho vowels 1' },
-			{ input: 'Â;Ê;Î;Ô;Û;', output: 'AEIOU', description: 'Ho vowels 1' },
+			{ input: 'A;E;I;O;U;', output: 'ÁÉÍÓÚ', description: 'Ho vowels acute' },
+			{ input: 'Á;É;Í;Ó;Ú;', output: 'ÃẼĨÕŨ', description: 'Ho vowels tilde' },
+			{ input: 'Ã;Ẽ;Ĩ;Õ;Ũ;', output: 'ÄËÏÖÜ', description: 'Ho vowels dieresis' },
+			{ input: 'Ä;Ë;Ï;Ö;Ü;', output: 'ÀÈÈÒÙ', description: 'Ho vowels grave' },
+			{ input: 'À;È;Ì;Ò;Ù;', output: 'ÂÊÎÔÛ', description: 'Ho vowels circumflex' },
+			{ input: 'Â;Ê;Î;Ô;Û;', output: 'AEIOU', description: 'Ho vowels reverse' },
 
-			{ input: 'A..E..I..O..U..;', output: 'ẠẸÏỌÜ', description: 'Ho vowels 1' },
-			{ input: 'Ạ..Ẹ..Ï..Ọ..Ü..;', output: 'ÄËÏ..ÖÜ..', description: 'Ho vowels 1' },
+			{ input: 'A..E..I..O..U..;', output: 'ẠẸÏỌÜ', description: 'Ho vowels dot' },
+			{ input: 'Ạ..Ẹ..Ï..Ọ..Ü..;', output: 'ÄËÏ..ÖÜ..', description: 'Ho vowels dot dot' },
 
-			{ input: '.;', output: '·', description: 'Ho vowels 1' },
-			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho vowels 1' },
-			{ input: '\\~\\`\\.\\^\\<\\>\\;', output: '~`.^<>;', description: 'Ho vowels 1' }
+			{ input: '.;', output: '·', description: 'Ho punctuation middle dot' },
+			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes' },
+			{ input: '\\~\\`\\.\\^\\<\\>\\;', output: '~`.^<>;', description: 'Ho punctuations' }
 
 		]
 	},
