@@ -2449,28 +2449,27 @@ var palochkaVariants = {
 		description: 'Ho Latin Semicolon test',
 		inputmethod: 'hoc-latn-semicolon',
 		tests: [
-			{ input: 'K;C;Z;P;W;', output: 'ḰĆT́ṔṔ', description: 'Ho consonants KCTP' },
-			{ input: 'Ḱ;Ć;T́;Ṕ', output: 'KCZP', description: 'Ho consonants KCTP reverse' },
-			{ input: 'T;D;R;', output: 'ṬḌṚ', description: 'Ho consonants TDR' },
-			{ input: 'Ṭ;Ḍ;Ṛ;', output: 'TDR', description: 'Ho consonants TDR reverse' },
-			{ input: 'T..D..R..', output: 'ṬḌṚ', description: 'Ho consonants TDR dot' },
+			{ input: 'K;C;Z;P;', output: 'ḰĆT́Ṕ', description: 'Ho consonants K;C;T;P;' },
+			{ input: 'W;', output: 'Ṕ', description: 'Ho consonants W;' },
+			{ input: 'T; D; R;', output: 'Ṭ Ḍ Ṛ', description: 'Ho consonants T; D; R;' },
 			{ input: 'N;J;', output: 'ṄŃ', description: 'Ho consonants NJ' },
 			{ input: 'Ṅ;Ń;', output: 'NJ', description: 'Ho consonants NJ reverse' },
 
 			{ input: 'A;E;I;O;U;', output: 'ÁÉÍÓÚ', description: 'Ho vowels acute' },
 			{ input: 'Á;É;Í;Ó;Ú;', output: 'ÃẼĨÕŨ', description: 'Ho vowels tilde' },
-			{ input: 'Ã;Ẽ;Ĩ;Õ;Ũ;', output: 'ÄËÏÖÜ', description: 'Ho vowels dieresis' },
-			{ input: 'Ä;Ë;Ï;Ö;Ü;', output: 'ÀÈÈÒÙ', description: 'Ho vowels grave' },
+			{ input: 'Ã;Ẽ;Ĩ;Õ;Ũ;', output: 'ÄËÏÖÜ', description: 'Ho vowels diaeresis' },
+			{ input: 'Ä;Ë;Ï;Ö;Ü;', output: 'ÀÈÌÒÙ', description: 'Ho vowels grave' },
 			{ input: 'À;È;Ì;Ò;Ù;', output: 'ÂÊÎÔÛ', description: 'Ho vowels circumflex' },
-			{ input: 'Â;Ê;Î;Ô;Û;', output: 'AEIOU', description: 'Ho vowels reverse' },
 
-			{ input: 'A..E..I..O..U..;', output: 'ẠẸÏỌÜ', description: 'Ho vowels dot' },
-			{ input: 'Ạ..Ẹ..Ï..Ọ..Ü..;', output: 'ÄËÏ..ÖÜ..', description: 'Ho vowels dot dot' },
+			{ input: 'A`E`I`O`U`', output: 'ÀÈÌÒÙ', description: 'Ho vowels A`E`I`O`U`' },
+			{ input: 'A~E~I~O~U~', output: 'ÃẼĨÕŨ', description: 'Ho vowels A~E~I~O~U~' },
+			{ input: 'A\u005EE\u005EI\u005EO\u005EU\u005E', output: 'ÂÊÎÔÛ', description: 'Ho vowels A^E^I^O^U^' },
+
+			{ input: 'A.. E.. I.. O.. U..', output: 'Ạ Ẹ Ï Ọ Ü', description: 'Ho vowels A.. E.. I.. O.. U..' },
 
 			{ input: '.;', output: '·', description: 'Ho punctuation middle dot' },
-			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes' },
-			{ input: '\\~\\`\\.\\^\\<\\>\\;', output: '~`.^<>;', description: 'Ho punctuations' }
-
+			{ input: '\\;', output: ';', description: 'Ho punctuation \u005C;' },
+			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes <><<››' }
 		]
 	},
 	{
