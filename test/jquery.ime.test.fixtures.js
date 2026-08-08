@@ -2464,7 +2464,7 @@ var palochkaVariants = {
 			{ input: 'A..E..I..O..U..a..e..i..o..u..', output: 'ẠẸÏỌÜạẹïọü', description: 'Ho vowels A..E..I..O..U..a..e..i..o..u..' },
 			{ input: '.;', output: '·', description: 'Ho punctuation middle dot' },
 			{ input: '\\;', output: ';', description: 'Ho punctuation \u005C;' },
-			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes <><<››' }
+			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes <><<››' },
 			{ input: 'Maz;kamdak;', output: 'Mat́kamdaḱ', description: 'Maz;kamdak;' },
 			{ input: 'Ṕ;', output: 'P', description: 'Ho consonants Ḱ reverse' },
 			{ input: 'Ṭ; Ḍ; Ṛ;', output: 'T D R', description: 'Ho consonants TDR reverse' },
