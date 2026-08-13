@@ -1,4 +1,4 @@
-﻿// Variables for Cyrillic with palochka transliteration tests.
+﻿﻿// Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 // eslint-disable-next-line no-implicit-globals
@@ -2430,6 +2430,38 @@ var palochkaVariants = {
 			{ input: '8', output: '८', description: '8 for ८ translitration' },
 			{ input: '9', output: '९', description: '9 for ९ translitration' },
 			{ input: '0', output: '०', description: '0 for ० translitration' }
+		]
+	},
+	{
+		description: 'Ho Latin Semicolon test',
+		inputmethod: 'hoc-latn-semicolon',
+		tests: [
+			{ input: 'I;m pi..z; a\\; Sarak; a\\... a\\^', output: 'Ím pït́ a; Saraḱ a... a^', description: 'I;m pi..z; a\\; Sarak; a...' },
+			{ input: 'K;C;Z;P;k;c;z;p;', output: 'ḰĆT́Ṕḱćt́ṕ', description: 'Ho consonants K;C;T;P;k;c;z;p;' },
+			{ input: 'W;w;', output: 'Ṕṕ', description: 'Ho consonants W;w;' },
+			{ input: 'T;D;R;t;d;r;', output: 'ṬḌṚṭḍṛ', description: 'Ho consonants T;D;R;t;d;r;' },
+			{ input: 'N;J;n;j;', output: 'ṄŃṅń', description: 'Ho consonants N;J;n;j;' },
+			{ input: 'A;E;I;O;U;a;e;i;o;u;', output: 'ÁÉÍÓÚáéíóú', description: 'Ho vowels acute' },
+			{ input: 'Á;É;Í;Ó;Ú;á;é;í;ó;ú;', output: 'ÃẼĨÕŨãẽĩõũ', description: 'Ho vowels tilde' },
+			{ input: 'Ã;Ẽ;Ĩ;Õ;Ũ;ã;ẽ;ĩ;õ;ũ;', output: 'ÄËÏÖÜäëïöü', description: 'Ho vowels dieresis' },
+			{ input: 'Ä;Ë;Ï;Ö;Ü;ä;ë;ï;ö;ü;', output: 'ÀÈÌÒÙàèìòù', description: 'Ho vowels grave' },
+			{ input: 'À;È;Ì;Ò;Ù;à;è;ì;ò;ù;', output: 'ÂÊÎÔÛâêîôû', description: 'Ho vowels circumflex' },
+			{ input: 'A`E`I`O`U`a`e`i`o`u`', output: 'ÀÈÌÒÙàèìòù', description: 'Ho vowels A`E`I`O`U`a`e`i`o`u`' },
+			{ input: 'A~E~I~O~U~a~e~i~o~u~', output: 'ÃẼĨÕŨãẽĩõũ', description: 'Ho vowels A~E~I~O~U~a~e~i~o~u~' },
+			{ input: 'A\u005EE\u005EI\u005EO\u005EU\u005Ea\u005Ee\u005Ei\u005Eo\u005Eu\u005E', output: 'ÂÊÎÔÛâêîôû', description: 'Ho vowels A^E^I^O^U^a^e^i^o^u^' },
+			{ input: 'A..E..I..O..U..a..e..i..o..u..', output: 'ẠẸÏỌÜạẹïọü', description: 'Ho vowels A..E..I..O..U..a..e..i..o..u..' },
+			{ input: '.;', output: '·', description: 'Ho punctuation middle dot' },
+			{ input: '\\;', output: ';', description: 'Ho punctuation \u005C;' },
+			{ input: '<>‹‹››', output: '‹›«»', description: 'Ho quotes <><<››' },
+			{ input: 'Maz;kamdak;', output: 'Mat́kamdaḱ', description: 'Maz;kamdak;' },
+			{ input: 'Ṕ;', output: 'P', description: 'Ho consonants Ḱ reverse' },
+			{ input: 'Ṭ; Ḍ; Ṛ;', output: 'T D R', description: 'Ho consonants TDR reverse' },
+			{ input: 'T..D..R..', output: 'ṬḌṚ', description: 'Ho consonants T..D..R..' },
+			{ input: 'Ṅ;Ń;', output: 'NJ', description: 'Ho consonants NJ reverse' },
+			{ input: '\\~\\`\\^\\‹\\›\\;', output: '~`^<>;', description: 'Ho punctuations \u005C~\u005C`\u005C^\u005C<\u005C>\u005C;' },
+			{ input: 'a\u005C\u005E', output: 'a\u005E', description: 'Ho a\u005C\u005E' },
+			{ input: 'Ạ..Ẹ..Ï..Ọ..Ü..', output: 'ÄËÏ..ÖÜ..', description: 'Ho vowels Ạ..Ẹ..Ï..Ọ..Ü..' },
+			{ input: 'Â;Ê;Î;Ô;Û;', output: 'AEIOU', description: 'Ho vowels reverse' }
 		]
 	},
 	{
