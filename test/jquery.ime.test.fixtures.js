@@ -1,4 +1,4 @@
-﻿﻿// Variables for Cyrillic with palochka transliteration tests.
+﻿// Variables for Cyrillic with palochka transliteration tests.
 // All the characters are very similar in appearance,
 // so it's better to give them names to avoid confusion.
 // eslint-disable-next-line no-implicit-globals
@@ -4251,6 +4251,20 @@ var palochkaVariants = {
 			{ input: 'L', output: 'ಳ್', description: 'L for ಳ್ in Kannada transliteration' },
 			{ input: 'Q', output: 'ೞ್', description: 'Q for ೞ್ in Kannada transliteration' },
 			{ input: 'd~ha', output: 'ದ್ಹ', description: 'd~ha for ದ್ಹ in Kannada transliteration' }
+		]
+	},
+	{
+		description: 'Khiamniungan Naga tilde test',
+		inputmethod: 'kix-tilde',
+		tests: [
+			{ input: 'a~\\a~-a~^a~/e~\\e~-e~^e~/i~\\i~-i~^i~/', output: 'àāâáèēêéìīîí', description: 'a/e/i × 4 tones' },
+			{ input: 'o~\\o~-o~^o~/u~\\u~-u~^u~/', output: 'òōôóùūûú', description: 'o/u × 4 tones' },
+			{ input: '~u~\\~u~-~u~^~u~/', output: 'ǜǖü̂ǘ', description: 'ü × 4 tones' },
+			{ input: '~U~\\~U~-~U~^~U~/', output: 'ǛǕÜ̂Ǘ', description: 'Ü × 4 tones' },
+			{ input: '~u~- a~/ e~^ i~\\ o~-', output: 'ǖ á ê ì ō', description: 'mixed tones with spaces' },
+			{ input: '~~ ~ ~x ~', output: '~~ ~ ~x ~', description: 'double tilde, tilde space, tilde+x' },
+			{ input: 'A~\\E~-I~^O~/U~\\', output: 'ÀĒÎÓÙ', description: 'capital tone-marked vowels' },
+			{ input: 'h~u~-he~^i', output: 'hǖhêi', description: 'real word h~u~-he~^i' }
 		]
 	},
 	{

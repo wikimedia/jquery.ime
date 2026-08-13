@@ -540,6 +540,10 @@
 			name: 'Gĩkũyũ',
 			source: 'rules/ki/ki-tilde.js'
 		},
+		'kix-tilde': {
+			name: 'Khiamniungan tilde',
+			source: 'rules/kix/kix-tilde.js'
+		},
 		'kk-arabic': {
 			name: 'Kazakh Arabic transliteration',
 			source: 'rules/kk/kk-arabic.js'
@@ -1529,6 +1533,10 @@
 		ki: {
 			autonym: 'Gĩkũyũ',
 			inputmethods: [ 'ki-tilde' ]
+		},
+		kix: {
+			autonym: 'Khiamniungan',
+			inputmethods: [ 'kix-tilde' ]
 		},
 		kk: {
 			autonym: 'Қазақша',
