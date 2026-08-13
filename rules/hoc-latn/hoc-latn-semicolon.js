@@ -13,7 +13,6 @@
 		maxKeyLength: 4,
 		patterns: [
 
-
 		// uppercase
 		[ 'Z;', 'T́' ],
 		[ 'K;', 'Ḱ' ],
