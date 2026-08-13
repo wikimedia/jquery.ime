@@ -420,6 +420,10 @@
 			name: 'लिप्यंतरण',
 			source: 'rules/hi/hi-transliteration.js'
 		},
+		'hoc-latn-semicolon': {
+			name: 'Ho Latin Semicolon',
+			source: 'rules/hoc-latn/hoc-latn-semicolon.js'
+		},
 		'hoc-latn-tilde': {
 			name: 'Ho Latin Tilde',
 			source: 'rules/hoc-latn/hoc-latn-tilde.js'
@@ -1440,7 +1444,7 @@
 		},
 		'hoc-latn': {
 			autonym: 'Ho',
-			inputmethods: [ 'hoc-latn-tilde' ]
+			inputmethods: [ 'hoc-latn-tilde', 'hoc-latn-semicolon' ]
 		},
 		hr: {
 			autonym: 'Hrvatski',
