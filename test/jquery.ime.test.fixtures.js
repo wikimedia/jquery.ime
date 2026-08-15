@@ -309,6 +309,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Balinese test',
+		inputmethod: 'ban-manuscript',
+		tests: [
+			{ input: 'tanwarnanrilawasniraarqjamanoharahinunixanix wwaxix puri', output: 'ᬢᬦ᭄ᬯᬃᬡ᭄ᬦᬦ᭄ᬭᬶᬮᬯᬲ᭄ᬦᬶᬭᬵᬋᬚᬫᬦᭀᬳᬭᬳᬶᬦᬸᬦᬶᬗᬦᬶᬂᬯ᭄ᬯᬗᬶᬂᬧᬸᬭᬶ᭞', description: 'sample writing: Kakawin Sutasoma' }
+		]
+	},
+	{
 		description: 'Basaa tilde test',
 		inputmethod: 'bas-tilde',
 		tests: [
@@ -3285,6 +3292,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Javanese Manuscript',
+		inputmethod: 'jv-manuscript',
+		tests: [
+			{ input: 'tanwarnanrilawasniraarqjamanoharahinunixanix wwaxix puri', output: 'ꦠꦤ꧀ꦮꦂꦟ꧀ꦤꦤꦿꦶꦭꦮꦱ꧀ꦤꦶꦫꦴꦉꦗꦩꦤꦺꦴꦲꦫꦲꦶꦤꦸꦤꦶꦔꦤꦶꦁꦮ꧀ꦮꦔꦶꦁꦥꦸꦫꦶ', description: 'sample writing: Kakawin Sutasoma' }
+		]
+	},
+	{
 		description: 'Georgian Transliteration test',
 		inputmethod: 'ka-transliteration',
 		tests: [
@@ -3346,6 +3360,13 @@ var palochkaVariants = {
 			{ input: '~A~a~U~u', output: 'A̱a̱U̱u̱', description: 'Jju tilde A̱a̱U̱u̱' },
 			{ input: 'n~a~/', output: 'ná̱', description: 'Jju tilde ná̱' },
 			{ input: 'zi~/', output: 'zí', description: 'Jju tilde zí' }
+		]
+	},
+	{
+		description: 'Kawi Manuscript',
+		inputmethod: 'kaw-manuscript',
+		tests: [
+			{ input: 'tanwarnanrilawasniraarqjamanoharahinunixanix wwaxix puri', output: '𑼡𑼥𑽂𑼮𑼂𑼠𑽂𑼥𑼥𑽂𑼬𑼶𑼭𑼮𑼱𑽂𑼥𑼶𑼬𑼴𑼊𑼙𑼪𑼥𑼾𑼴𑼲𑼬𑼲𑼶𑼥𑼸𑼥𑼶𑼖𑼥𑼶𑼁𑼮𑽂𑼮𑼖𑼶𑼁𑼦𑼸𑼬𑼶', description: 'sample writing: Kakawin Sutasoma' }
 		]
 	},
 	{

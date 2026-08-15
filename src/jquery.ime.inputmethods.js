@@ -76,6 +76,10 @@
 			name: 'Balinese Transliteration',
 			source: 'rules/ban/ban-transliteration.js'
 		},
+		'ban-manuscript': {
+			name: 'Bali - Manuscript',
+			source: 'rules/ban/ban-manuscript.js'
+		},
 		'bas-tilde': {
 			name: 'Ɓasaá tilde',
 			source: 'rules/bas/bas-tilde.js'
@@ -512,6 +516,10 @@
 			name: 'Transliteration',
 			source: 'rules/jv-java/jv-transliteration.js'
 		},
+		'jv-manuscript': {
+			name: 'Jawa - Manuscript',
+			source: 'rules/jv-java/jv-manuscript.js'
+		},
 		'ka-kbd': {
 			name: 'სტანდარტული კლავიატურის',
 			source: 'rules/ka/ka-kbd.js'
@@ -527,6 +535,10 @@
 		'kaj-tilde': {
 			name: 'Jju tilde',
 			source: 'rules/kaj/kaj-tilde.js'
+		},
+		'kaw-manuscript': {
+			name: 'Kawi - Manuscript',
+			source: 'rules/kaw-kawi/kaw-manuscript.js'
 		},
 		'kbp-tilde': {
 			name: 'Kabɩyɛ tilde',
@@ -1179,8 +1191,8 @@
 			inputmethods: [ 'azb-kbd' ]
 		},
 		"ban-bali": {
-			autonym: 'ᬩᬮᬶ',
-			inputmethods: [ 'ban-transliteration' ]
+			autonym: 'Bali (ᬩᬮᬶ)',
+			inputmethods: [ 'ban-transliteration', 'ban-manuscript' ]
 		},
 		bas: {
 			autonym: 'ɓasaá',
@@ -1495,12 +1507,8 @@
 			inputmethods: [ 'jac-tilde' ]
 		},
 		jv: {
-			autonym: 'Jawa',
-			inputmethods: ['jv-keyboard', 'jv-transliteration', 'jv-kongres']
-		},
-		'jv-java': {
-			autonym: 'ꦗꦮ',
-			inputmethods: [ 'jv-transliteration', 'jv-kongres' ,'jv-keyboard']
+			autonym: 'Jawa (ꦗꦮ)',
+			inputmethods: ['jv-keyboard', 'jv-transliteration', 'jv-kongres', 'jv-manuscript' ]
 		},
 		ka: {
 			autonym: 'ქართული ენა',
@@ -1513,6 +1521,10 @@
 		kaj: {
 			autonym: 'Jju',
 			inputmethods: [ 'kaj-tilde' ]
+		},
+		kaw: {
+			autonym: 'Kawi (𑼒𑼮𑼶)',
+			inputmethods: [ 'kaw-manuscript' ]
 		},
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
