@@ -2,8 +2,8 @@
 	'use strict';
 
 	var sdSindInScript2 = {
-		id: 'sd-sind-inscript2',
-		name: 'सिंधी इनस्क्रिप्ट २',
+		id: 'sd-sind-inscript',
+		name: '𑋝𑋡𑋟𑋐𑋢 𑊲𑋑𑋪𑋝𑋪𑊺𑋪𑋙𑋡𑋒𑋪𑋆',
 		description: 'Enhanced InScript keyboard for Sindhi language in the Khudabadi script',
 		date: '2026-0',
 		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/sd-sind-inscript2',
@@ -80,8 +80,8 @@
 			[ ',', ',' ],
 			[ '\\>', '।' ],
 			[ '\\.', '.' ],
-			[ '/', 'य' ],
-			[ 'R', '𑋊' ],
+			[ '/', '𑋘' ],
+			[ 'J', '𑋊' ],
 			[ 'V', '𑋉' ],
 			[ 'B', '𑋕' ],
 			[ 'N', '𑋃' ],
@@ -89,5 +89,5 @@
 		]
 	};
 
-	$.ime.register( sdInScript2 );
+	$.ime.register( sdSindInScript2 );
 }( jQuery ) );
