@@ -492,6 +492,10 @@
 			name: 'Esan Awain tilde',
 			source: 'rules/ish/ish-tilde.js'
 		},
+		'izr-tilde': {
+			name: 'Izere tilde',
+			source: 'rules/izr/izr-tilde.js'
+		},
 		'jab-tilde': {
 			name: 'Hyam tilde',
 			source: 'rules/jab/jab-tilde.js'
@@ -1485,6 +1489,10 @@
 		ish: {
 			autonym: 'awain',
 			inputmethods: [ 'ish-tilde' ]
+		},
+		izr: {
+			autonym: 'Izere',
+			inputmethods: [ 'izr-tilde' ]
 		},
 		jab: {
 			autonym: 'Hyam',
