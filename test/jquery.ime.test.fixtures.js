@@ -3202,6 +3202,17 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Izere tilde test',
+		inputmethod: 'izr-tilde',
+		tests: [
+			{ input: 'a~/e~/i~/o~/u~/', output: 'a\u0301e\u0301i\u0301o\u0301u\u0301', description: 'Izere tilde lowercase acute: á é í ó ú' },
+			{ input: 'A~/E~/I~/O~/U~/', output: 'A\u0301E\u0301I\u0301O\u0301U\u0301', description: 'Izere tilde uppercase acute: Á É Í Ó Ú' },
+			{ input: 'a~\\e~\\i~\\o~\\u~\\', output: 'a\u0300e\u0300i\u0300o\u0300u\u0300', description: 'Izere tilde lowercase grave: à è ì ò ù' },
+			{ input: 'A~\\E~\\I~\\O~\\U~\\', output: 'A\u0300E\u0300I\u0300O\u0300U\u0300', description: 'Izere tilde uppercase grave: À È Ì Ò Ù' },
+			{ input: 'e~_o~_E~_O~_', output: 'e\u0331o\u0331E\u0331O\u0331', description: 'Izere tilde macron below: e̱ o̱ E̱ O̱' }
+		]
+	},
+	{
 		description: 'Hyam tilde test',
 		inputmethod: 'jab-tilde',
 		tests: [
