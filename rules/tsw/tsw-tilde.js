@@ -14,6 +14,8 @@
 			// Special letters
 			[ '~B', 'Ɓ' ],
 			[ '~b', 'ɓ' ],
+			[ '~c', 'ɔ' ],
+			[ '~C', 'Ɔ' ],
 			[ '~D', 'Ɗ' ],
 			[ '~d', 'ɗ' ],
 			// Combining macron below (for a̱, e̱, etc.) — type after the base letter
