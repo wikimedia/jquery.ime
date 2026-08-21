@@ -21786,6 +21786,8 @@ var palochkaVariants = {
 		tests: [
 			{ input: '~B', output: 'Ɓ', description: 'Tsishingini tilde ~B -> Ɓ' },
 			{ input: '~b', output: 'ɓ', description: 'Tsishingini tilde ~b -> ɓ' },
+			{ input: '~c', output: 'ɔ', description: 'Tsishingini tilde ~c -> ɔ' },
+			{ input: '~C', output: 'Ɔ', description: 'Tsishingini tilde ~c -> Ɔ' },
 			{ input: '~D', output: 'Ɗ', description: 'Tsishingini tilde ~D -> Ɗ' },
 			{ input: '~d', output: 'ɗ', description: 'Tsishingini tilde ~d -> ɗ' },
 			{ input: 'a~_', output: 'a\u0331', description: 'Tsishingini tilde a~_ -> a̱' },
