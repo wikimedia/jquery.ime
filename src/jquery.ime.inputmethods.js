@@ -1054,6 +1054,10 @@
 			name: 'Setswana tilde',
 			source: 'rules/tn/tn-tilde.js'
 		},
+		'tsw-tilde': {
+			name: 'Tsishingini tilde',
+			source: 'rules/tsw/tsw-tilde.js'
+		},
 		'tum-tilde': {
 			name: 'ChiTumbuka tilde',
 			source: 'rules/tum/tum-tilde.js'
@@ -1893,6 +1897,10 @@
 		tn: {
 			autonym: 'Setswana',
 			inputmethods: [ 'tn-tilde' ]
+		},
+		tsw: {
+			autonym: 'Tsishingini',
+			inputmethods: [ 'tsw-tilde' ]
 		},
 		tum: {
 			autonym: 'ChiTumbuka',
