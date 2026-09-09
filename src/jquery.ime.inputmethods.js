@@ -930,6 +930,14 @@
 			name: 'इनस्क्रिप्ट २',
 			source: 'rules/sd/sd-inscript2.js'
 		},
+		'sd-persoarabic': {
+			name: 'Perso Arabic',
+			source: 'rules/sd/sd-persoarabic.js'
+		},
+		'sd-sind-inscript': {
+			name: '𑋝𑋡𑋟𑋐𑋢 𑊲𑋑𑋪𑋝𑋪𑊺𑋪𑋙𑋡𑋒𑋪𑋆',
+			source: 'rules/sd/sd-sind-inscript.js'
+		},
 		'sdh-kbd': {
 			name: 'کوردی خوارگ',
 			source: 'rules/sdh/sdh-kbd.js'
@@ -1804,7 +1812,7 @@
 		},
 		sd: {
 			autonym: 'सिंधी',
-			inputmethods: [ 'sd-inscript2' ]
+			inputmethods: [ 'sd-persoarabic', 'sd-sind-inscript', 'sd-inscript2' ]
 		},
 		sdh: {
 			autonym: 'کوردی خوارگ',

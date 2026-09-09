@@ -76,7 +76,7 @@
 			[ 'h', 'ھ' ],
 			[ 'J', 'جه' ],
 			[ 'j', 'ج' ],
-			[ 'K', 'ۡ' ],
+			[ 'K', 'ْ' ],
 			[ 'k', 'ڪ' ],
 			[ 'L', ':' ],
 			[ 'l', 'ل' ],
@@ -106,5 +106,5 @@
 			[ '/', 'ئ' ]
 		]
 	};
-	$.ime.register( sdArabKeyboard );
+	$.ime.register( sdpersoarabic );
 }( jQuery ) );
