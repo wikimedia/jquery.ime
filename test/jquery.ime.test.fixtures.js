@@ -21175,6 +21175,32 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Sindhi Perso Arabic test',
+		inputmethod: 'sd-persoarabic',
+		tests: [
+			{ input: 'qwerty', output: 'قصيرتٿ', description: 'Sindhi Perso Arabic qwerty' },
+			{ input: 'asdfghj', output: 'اسدفگھج', description: 'Sindhi Perso Arabic asdfghj' },
+			{ input: 'QWERTY', output: 'َضِڙٽث', description: 'Sindhi Perso Arabic QWERTY' },
+			{ input: 'GJ', output: 'گهجه', description: 'Sindhi Perso Arabic GJ' },
+			{ input: 'ghjh', output: 'گھجھ', description: 'Sindhi Perso Arabic ghjh' },
+			{ input: 'kK', output: 'ڪْ', description: 'Sindhi Perso Arabic kK' },
+			{ input: 'nm,./', output: 'نم،.ئ', description: 'Sindhi Perso Arabic nm,./' }
+		]
+	},
+	{
+		description: 'Sindhi InScript Khudabadi test',
+		inputmethod: 'sd-sind-inscript',
+		tests: [
+			{ input: '1234567890', output: '𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹𑋰', description: 'Sindhi InScript Khudabadi 1234567890' },
+			{ input: 'qwerty', output: '𑋨𑋦𑋠𑋢𑋤𑋔', description: 'Sindhi InScript Khudabadi qwerty' },
+			{ input: 'asdfgh', output: '𑋧𑋥𑋪𑋡𑋣𑋒', description: 'Sindhi InScript Khudabadi asdfgh' },
+			{ input: 'jkl;', output: '𑋙𑊺𑋍𑋀', description: 'Sindhi InScript Khudabadi jkl;' },
+			{ input: 'x', output: '𑋟', description: 'Sindhi InScript Khudabadi x' },
+			{ input: 'X', output: '𑋟', description: 'Sindhi InScript Khudabadi X' },
+			{ input: 'ZXCVBNM', output: 'Z𑋟𑋌𑋉𑋕𑋃𑋜', description: 'Sindhi InScript Khudabadi ZXCVBNM' }
+		]
+	},
+	{
 		description: 'Southern Kurdish Keyboard test',
 		inputmethod: 'sdh-kbd',
 		tests: [
