@@ -142,6 +142,26 @@ jQuery.IME gives `patterns_shift` priority when Shift is pressed, and the array-
 Shift+Space is also handled through `patterns_shift`.
 It is consumed without inserting visible whitespace and records an invisible composition boundary for the Vietnamese adapter.
 
+The composition-boundary wrapper sits outside normal command decoding:
+
+```text
+patterns_shift receives Shift+Space
+    -> createShiftedAdapterPatterns()
+    -> adapter.setCompositionBoundary(beforeText)
+    -> return beforeText
+
+later patterns(input, context)
+    -> adapter()
+    -> scopeInputToCompositionBoundary(boundaryState, input)
+        |-- inactive
+        |       -> processInput(input, context)
+        |
+        `-- active
+                -> processInput(scoped.input, context)
+                -> reattach scoped.prefix
+                -> update or clear boundary state
+```
+
 When a composition boundary is active, the adapter scopes later input to the rendered suffix after that boundary before calling candidate extraction.
 The frozen prefix is copied through unchanged.
 The boundary state stores the bounded rendered text before the caret and the active suffix.
