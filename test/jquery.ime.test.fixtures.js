@@ -3388,6 +3388,24 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Kaingang tilde test',
+		inputmethod: 'kgp-tilde',
+		tests: [
+			{ input: 'Ko~/\'y V~ame', output: 'Kó\'y Vãme', description: 'Kaingang tilde Kó\'y Vãme' },
+			{ input: 'f\'\a\'\Af', output: 'f\'a\'Af', description: 'Kaingang tilde f\'a\'Af' },
+			{ input: 'a~/A~/', output: 'áÁ', description: 'Kaingang tilde áÁ' },
+			{ input: '~a~A', output: 'ãÃ', description: 'Kaingang tilde ãÃ' },
+			{ input: 'f\'\e\'Ef', output: 'f\'e\'Ef', description: 'Kaingang tilde \'e\'Ef' },
+			{ input: 'e~/E~/', output: 'éÉ', description: 'Kaingang tilde éÉ' },
+			{ input: '~e~E', output: 'ẽẼ', description: 'Kaingang tilde ẽẼ' },
+			{ input: '~i~I', output: 'ĩĨ', description: 'Kaingang tilde ĩĨ' },
+			{ input: 'f\'\o\'Of', output: 'f\'o\'Of', description: 'Kaingang tilde f\'o\'Of' },
+			{ input: 'o~/O~/', output: 'óÓ', description: 'Kaingang tilde óÓ' },
+			{ input: '~u~U', output: 'ũŨ', description: 'Kaingang tilde ũũ' },
+			{ input: '~y~Y', output: 'ỹỸ', description: 'Kaingang tilde ỹỸ' }
+		]
+	},
+	{
 		description: 'Kikuyu tilde test',
 		inputmethod: 'ki-tilde',
 		tests: [
