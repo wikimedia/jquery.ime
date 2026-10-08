@@ -532,6 +532,10 @@
 			name: 'Jju tilde',
 			source: 'rules/kaj/kaj-tilde.js'
 		},
+		'kbo-tilde': {
+			name: 'Kẹ̃lị̃kọ́ tilde',
+			source: 'rules/kbo/kbo-tilde.js'
+		},
 		'kbp-tilde': {
 			name: 'Kabɩyɛ tilde',
 			source: 'rules/kbp/kbp-tilde.js'
@@ -1537,6 +1541,10 @@
 		kbd: {
 			autonym: 'адыгэбзэ (къэбэрдеибзэ)',
 			inputmethods: [ 'cyrl-palochka' ]
+		},
+		kbo: {
+			autonym: 'Kẹ̃lị̃kọ́',
+			inputmethods: [ 'kbo-tilde' ]
 		},
 		kbp: {
 			autonym: 'Kabɩyɛ',

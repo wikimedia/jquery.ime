@@ -3360,6 +3360,24 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Keliko tilde test',
+		inputmethod: 'kbo-tilde',
+		tests: [
+			{ input: '~E', output: 'Ẹ', description: 'Keliko tilde ~E -> Ẹ' },
+			{ input: '~e', output: 'ẹ', description: 'Keliko tilde ~e -> ẹ' },
+			{ input: '~I', output: 'Ị', description: 'Keliko tilde ~I -> Ị' },
+			{ input: '~i', output: 'ị', description: 'Keliko tilde ~i -> ị' },
+			{ input: '~N', output: 'Ŋ', description: 'Keliko tilde ~N -> Ŋ' },
+			{ input: '~n', output: 'ŋ', description: 'Keliko tilde ~n -> ŋ' },
+			{ input: '~O', output: 'Ọ', description: 'Keliko tilde ~O -> Ọ' },
+			{ input: '~o', output: 'ọ', description: 'Keliko tilde ~o -> ọ' },
+			{ input: '~U', output: 'Ụ', description: 'Keliko tilde ~O -> Ọ' },
+			{ input: '~u', output: 'ụ', description: 'Keliko tilde ~o -> ọ' },
+			{ input: '~e~/', output: 'ẹ́', description: 'Keliko tilde ~e~/ -> ẹ́' },
+			{ input: '~e~{', output: 'ẹ̃', description: 'Keliko tilde ~e~{ -> ẹ̃' }
+		]
+	},
+	{
 		description: 'Kabiye tilde test',
 		inputmethod: 'kbp-tilde',
 		tests: [
