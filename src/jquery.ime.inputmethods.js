@@ -1110,6 +1110,46 @@
 			name: 'Vèneto',
 			source: 'rules/vec/vec-GVU.js'
 		},
+		'vi-telex': {
+			name: 'Telex',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-telex-simple': {
+			name: 'Simple Telex',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-vni': {
+			name: 'VNI',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-viqr': {
+			name: 'VIQR',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-viqr-star': {
+			name: 'VIQR*',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-telex-reformed': {
+			name: 'Telex (đặt dấu kiểu mới)',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-telex-simple-reformed': {
+			name: 'Simple Telex (đặt dấu kiểu mới)',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-vni-reformed': {
+			name: 'VNI (đặt dấu kiểu mới)',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-viqr-reformed': {
+			name: 'VIQR (đặt dấu kiểu mới)',
+			source: 'rules/vi/vi.js'
+		},
+		'vi-viqr-star-reformed': {
+			name: 'VIQR* (đặt dấu kiểu mới)',
+			source: 'rules/vi/vi.js'
+		},
 		'wlx-tilde': {
 			name: 'Waale tilde',
 			source: 'rules/wlx/wlx-tilde.js'
@@ -1957,6 +1997,21 @@
 		vec: {
 			autonym: 'Vèneto',
 			inputmethods: [ 'vec-GVU' ]
+		},
+		vi: {
+			autonym: 'Tiếng Việt',
+			inputmethods: [
+				'vi-telex',
+				'vi-telex-simple',
+				'vi-vni',
+				'vi-viqr',
+				'vi-viqr-star',
+				'vi-telex-reformed',
+				'vi-telex-simple-reformed',
+				'vi-vni-reformed',
+				'vi-viqr-reformed',
+				'vi-viqr-star-reformed'
+			]
 		},
 		wlx: {
 			autonym: 'Waale',
