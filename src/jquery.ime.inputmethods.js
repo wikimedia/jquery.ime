@@ -666,6 +666,10 @@
 			name: 'Mampruli tilde',
 			source: 'rules/maw/maw-tilde.js'
 		},
+		'mfq-tilde': {
+			name: 'Moba tilde',
+			source: 'rules/mfq/mfq-tilde.js'
+		},
 		'mg-tilde': {
 			name: 'Malagasy tilde',
 			source: 'rules/mg/mg-tilde.js'
@@ -1661,6 +1665,10 @@
 		maw: {
 			autonym: 'Ŋmampulli',
 			inputmethods: [ 'maw-tilde' ]
+		},
+		mfq: {
+			autonym: 'Muaba',
+			inputmethods: [ 'mfq-tilde' ]
 		},
 		mg: {
 			autonym: 'Malagasy',

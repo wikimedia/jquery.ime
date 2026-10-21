@@ -4815,6 +4815,13 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Moba tilde test',
+		inputmethod: 'mfq-tilde',
+		tests: [
+			{ input: 'A~{a~{E~{e~{~E~e~E~{~e~{I~{i~{~I~i~I~{~i~{~N~nO~{o~{~O~o~O~{~o~{', output: 'ÃãẼẽƐɛƐ̃ɛ̃ĨĩƖɩƖ̃ɩ̃ŊŋÕõƆɔƆ̃ɔ̃', description: 'Moba tilde ÃãẼẽƐɛƐ̃ɛ̃ĨĩƖɩƖ̃ɩ̃ŊŋÕõƆɔƆ̃ɔ̃' }
+		]
+	},
+	{
 		description: 'Malagasy tilde test',
 		inputmethod: 'mg-tilde',
 		tests: [
