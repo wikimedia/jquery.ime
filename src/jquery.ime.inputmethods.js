@@ -544,6 +544,10 @@
 			name: 'Tyap tilde',
 			source: 'rules/kcg/kcg-tilde.js'
 		},
+		'kgp-tilde': {
+			name: 'Kaingang tilde',
+			source: 'rules/kgp/kgp-tilde.js'
+		},
 		'ki-tilde': {
 			name: 'Gĩkũyũ',
 			source: 'rules/ki/ki-tilde.js'
@@ -1557,6 +1561,10 @@
 		ken: {
 			autonym: 'kɛ́nyáŋ',
 			inputmethods: [ 'mul-cm' ]
+		},
+		kgp: {
+			autonym: 'Kaingang',
+			inputmethods: [ 'kgp-tilde' ]
 		},
 		ki: {
 			autonym: 'Gĩkũyũ',
