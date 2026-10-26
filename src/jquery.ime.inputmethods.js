@@ -586,8 +586,8 @@
 		},
 		'ko-phonetic': {
 			name: 'Korean Phonetic',
-			source: 'rules/ko/ko-phonetic.js'		
-		},				
+			source: 'rules/ko/ko-phonetic.js'
+		},
 		'ko-rr': {
 			name: 'Korean Revised Romanization',
 			source: 'rules/ko/ko-rr.js'
