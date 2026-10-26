@@ -1596,7 +1596,7 @@
 		},
 		ko: {
 			autonym: '한국어',
-			inputmethods: [ 'ko-rr', 'ko-phonetic' ]
+			inputmethods: [ 'ko-phonetic', 'ko-rr' ]
 		},
 		kr: {
 			autonym: 'kanuri',
