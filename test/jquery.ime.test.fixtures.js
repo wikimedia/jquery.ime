@@ -4315,6 +4315,21 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Korean Phonetic test',
+		inputmethod: 'ko-phonetic',
+		tests: [
+            { input: 'qannzqhaseql', output: '안녕하세요', description: 'annyonghaseyo -> 안녕하세요' }
+            { input: 'johqayo', output: '좋아요', description: 'johayo -> 좋아요' }
+			{ input: 'gamsahabnida', output: '감사합니다', description: 'gamsahamnida -> 감사합니다' }
+            { input: 'gimci', output: '김치', description: 'kimchi -> 김치' }
+			{ input: 'jaqgoan ', output: '장관', description: 'janggwan -> 장관' }
+			{ input: 'qfgu', output: '야구', description: 'yagu -> 야구' }
+            { input: 'hangwr', output: '한글', description: 'hangul -> 한글' }
+            { input: 'hzq', output: '형', description: 'hyeong -> 형' }
+            { input: 'oPa', output: '오빠', description: 'oppa -> 오빠' }
+		]
+	},
+	{
 		description: 'Korean RR test',
 		inputmethod: 'ko-rr',
 		tests: [
