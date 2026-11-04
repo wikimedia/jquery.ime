@@ -58,7 +58,7 @@
         description: 'Korean phonetic keyboard layout',
         date: '2026-10-26',
         author: 'Mauro',
-        url: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ko-phonetic',
+        URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ko-phonetic',
         license: 'GPLv3',
         version: '1.0',
         maxKeyLength: 1,
