@@ -1006,6 +1006,10 @@
 			name: 'Sundanese keyboard',
 			source: 'rules/su/su-keyboard.js'
 		},
+		'su-sundanese': {
+			name: 'Sundanese Script',
+			source: 'rules/su/su-sundanese.js'
+		},
 		'sv-normforms': {
 			name: 'Normal forms',
 			source: 'rules/sv/sv-normforms.js'
@@ -1892,7 +1896,7 @@
 		},
 		su: {
 			autonym: 'Sunda',
-			inputmethods: [ 'su-keyboard' ]
+			inputmethods: [ 'su-keyboard', 'su-sundanese' ]
 		},
 		sv: {
 			autonym: 'Svenska',
