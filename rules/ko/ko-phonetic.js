@@ -64,21 +64,65 @@
 					.on( 'beforeinput.ko-phonetic', ( e ) => {
 						var oe = e.originalEvent,
 							el = e.currentTarget,
-							s = el.selectionStart,
-							ch = s === el.selectionEnd ? el.value.charAt( s - 1 ) : '',
-							ins = oe.inputType === 'insertText' && /^[a-z]$/i.test( oe.data ),
-							del = oe.inputType === 'deleteContentBackward' && ch && ch === ime.koLast.slice( -1 );
+							ch = '',
+							s, end;
 
-						if ( !( ins || del ) || typeof s !== 'number' || !ime.active || ime.inputmethod.id !== 'ko-phonetic' ) {
+						if ( !ime.active || ime.inputmethod.id !== 'ko-phonetic' ) {
 							return;
 						}
 
-						el.setRangeText(
-							put( ime, ch, ins ? type( ch, oe.data, ime.shifted ) : comp( jam( ch ).slice( 0, -1 ) ) ),
-							s - ch.length,
-							el.selectionEnd,
-							'end'
-						);
+						var isContentEditable = el.nodeName === 'DIV' || el.isContentEditable || $( el ).attr( 'contenteditable' ) === 'true';
+
+						if ( isContentEditable ) {
+							var selection = window.getSelection();
+							if ( selection && selection.rangeCount > 0 ) {
+								var range = selection.getRangeAt( 0 );
+								if ( range.collapsed && range.startContainer.nodeType === Node.TEXT_NODE ) {
+									var textNode = range.startContainer;
+									s = range.startOffset;
+									if ( s > 0 ) {
+										ch = textNode.nodeValue.charAt( s - 1 );
+									}
+								}
+							}
+						} else if ( typeof el.selectionStart === 'number' && typeof el.value === 'string' ) {
+							s = el.selectionStart;
+							end = el.selectionEnd;
+							ch = s === end ? el.value.charAt( s - 1 ) : '';
+						}
+
+						var ins = oe.inputType === 'insertText' && /^[a-z]$/i.test( oe.data ),
+							del = oe.inputType === 'deleteContentBackward' && ch && ch === ime.koLast.slice( -1 );
+
+						if ( !( ins || del ) || s === undefined ) {
+							return;
+						}
+
+						var replacement = put( ime, ch, ins ? type( ch, oe.data, ime.shifted ) : comp( jam( ch ).slice( 0, -1 ) ) );
+
+						if ( isContentEditable ) {
+							var selection = window.getSelection();
+							if ( selection && selection.rangeCount > 0 ) {
+								var range = selection.getRangeAt( 0 );
+								var textNode = range.startContainer;
+								
+								var fullText = textNode.nodeValue;
+								textNode.nodeValue = fullText.substring( 0, s - ch.length ) + replacement + fullText.substring( range.startOffset );
+								
+								range.setStart( textNode, s - ch.length + replacement.length );
+								range.collapse( true );
+								selection.removeAllRanges();
+								selection.addRange( range );
+							}
+						} else {
+							el.setRangeText(
+								replacement,
+								s - ch.length,
+								el.selectionEnd,
+								'end'
+							);
+						}
+
 						e.preventDefault();
 						$( el ).trigger( 'input' );
 					} );
