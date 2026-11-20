@@ -21573,13 +21573,12 @@ var palochkaVariants = {
 		description: 'Sundanese Script test',
 		inputmethod: 'su-sundanese',
 		tests: [
-			{ input: 'kagangacajanyatadanapabamayaralawasahaqazafavaxakhasya', output: 'ᮊᮌᮙᮎᮏᮑᮒᮓᮔᮕᮘᮙᮚᮛᮜᮝᮞᮠᮋᮐᮖᮗᮟᮮᮯ', description: 'Sundanese standalone consonants' },
-			{ input: 'aiuéoeue', output: 'ᮃᮄᮅᮆᮇᮈᮉ᮪', description: 'Sundanese standalone vowels' },
-			{ input: 'kar', output: 'ᮊᮁ', description: 'Sundanese ka with -r diacritic' },
-			{ input: 'karr', output: 'ᮊᮢ', description: 'Sundanese ka with -r- diacritic' },
-			{ input: 'ka^', output: 'ᮊ᮪', description: 'Sundanese k (removing the -a)' },
-			{ input: 'ka^^', output: 'ᮊ^', description: 'Sundanese ka, checking ^ symbol' },
-			{ input: 'kaiikauukaeekaéékaookaeueu', output: 'ᮊᮤᮊᮥᮊᮨᮊᮦᮊᮧᮊᮩ', description: 'Sundanese ka with diacritic vowels' }
+			{ input: 'kqgGcjzJtdnpfvbmyrlwsxh', output: 'ᮊᮋᮌᮍᮎᮏᮐᮑᮒᮓᮔᮕᮖᮗᮘᮙᮚᮛᮜᮝᮞᮟᮠ', description: 'Sundanese standalone consonants' },
+			{ input: 'aiU{OE}', output: 'ᮃᮄᮅᮆᮇᮈᮉ', description: 'Sundanese standalone vowels' },
+			{ input: 'kQ', output: 'ᮊᮁ', description: 'Sundanese ka with -r diacritic' },
+			{ input: 'kR', output: 'ᮊᮢ', description: 'Sundanese ka with -r- diacritic' },
+			{ input: 'k;', output: 'ᮊ᮪', description: 'Sundanese k (removing the -a)' },
+			{ input: 'Sunda', output: 'ᮯ\u1ba5ᮔᮓᮃ', description: 'Sundanese Sunda text' }
 		]
 	},
 	{
