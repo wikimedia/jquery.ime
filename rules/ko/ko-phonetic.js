@@ -56,11 +56,11 @@
 		description: 'Korean phonetic keyboard layout',
 		date: '2026-11-20',
 		author: 'Mauro',
+		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ko-phonetic',		
 		license: 'GPLv3',
 		version: '1.0',
 		maxKeyLength: 1,
 		contextLength: 1,
-		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/ko-phonetic',
 		patterns: [ [ '([가-힣ㄱ-ㅣ]?)([a-zA-Z])', function ( m, c, k ) {
 			// Shift/Caps Lock: capital letters without their own jamo use the lowercase key
 			return add( c, KEYS[ k ] || KEYS[ k.toLowerCase() ] );
