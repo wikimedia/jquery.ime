@@ -584,6 +584,10 @@
 			name: 'ಲಿಪ್ಯಂತರಣ',
 			source: 'rules/kn/kn-transliteration.js'
 		},
+		'ko-phonetic': {
+			name: 'Korean Phonetic',
+			source: 'rules/ko/ko-phonetic.js'
+		},
 		'ko-rr': {
 			name: 'Korean Revised Romanization',
 			source: 'rules/ko/ko-rr.js'
@@ -1592,7 +1596,7 @@
 		},
 		ko: {
 			autonym: '한국어',
-			inputmethods: [ 'ko-rr' ]
+			inputmethods: [ 'ko-phonetic', 'ko-rr' ]
 		},
 		kr: {
 			autonym: 'kanuri',
