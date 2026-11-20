@@ -21570,6 +21570,18 @@ var palochkaVariants = {
 		]
 	},
 	{
+		description: 'Sundanese Script test',
+		inputmethod: 'su-sundanese',
+		tests: [
+			{ input: 'kqgGcjzJtdnpfvbmyrlwsxh', output: 'ᮊᮋᮌᮍᮎᮏᮐᮑᮒᮓᮔᮕᮖᮗᮘᮙᮚᮛᮜᮝᮞᮟᮠ', description: 'Sundanese standalone consonants' },
+			{ input: 'aiU{OE}', output: 'ᮃᮄᮅᮆᮇᮈᮉ', description: 'Sundanese standalone vowels' },
+			{ input: 'kQ', output: 'ᮊᮁ', description: 'Sundanese ka with -r diacritic' },
+			{ input: 'kR', output: 'ᮊᮢ', description: 'Sundanese ka with -r- diacritic' },
+			{ input: 'k;', output: 'ᮊ᮪', description: 'Sundanese k (removing the -a)' },
+			{ input: 'Sunda', output: 'ᮯ\u1ba5ᮔᮓᮃ', description: 'Sundanese Sunda text' }
+		]
+	},
+	{
 		description: 'Silesian keyboard test',
 		inputmethod: 'szl-tilde',
 		tests: [
