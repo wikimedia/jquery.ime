@@ -8,7 +8,7 @@
 		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/vec-GVU',
 		author: 'Vajotwo (Wikipedia user)',
 		license: 'GPLv3',
-		version: '1.2',
+		version: '1.1',
 		// Ordered rules: conversion and reversible sequences.
 		patterns: [
 			[ 'c;', 'ç' ],
