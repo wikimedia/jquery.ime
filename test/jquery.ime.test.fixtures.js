@@ -3665,6 +3665,9 @@ var palochkaVariants = {
 			{ input: 'rAxfqfrIy', output: 'ರಾಷ್ಟ್ರೀಯ', description: 'complex consonants ರಾಷ್ಟ್ರೀಯ' },
 			{ input: 'rFfyAMkf', output: 'ರ\u200d್ಯಾಂಕ್', description: 'ZWJ ರ\u200d್ಯಾಂಕ್' }, // with ZWJ
 			{ input: 'ArFyAMkf', output: 'ಆರ\u200d್ಯಾಂಕ್', description: 'ArFy => ಆರ\u200d್ಯ, ZWJ and virama from one key' },
+			{ input: 'kF', output: 'ಕ', description: 'F types nothing after a letter other than ರ' },
+			{ input: 'aF', output: 'ಅ', description: 'F types nothing after a vowel' },
+			{ input: 'kfFk', output: 'ಕ್ಕ', description: 'F types nothing after a virama' },
 			{ input: 'nffn', output: 'ನ್\u200cನ', description: 'ff => virama + ZWNJ, so no conjunct' },
 			{ input: 'kfff', output: 'ಕ್\u200c', description: 'a third f adds nothing' },
 			{ input: 'jXff', output: 'ಜ಼್\u200c', description: 'ff after a nukta letter keeps the virama visible' },
