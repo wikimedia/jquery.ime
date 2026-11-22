@@ -3667,6 +3667,8 @@ var palochkaVariants = {
 			{ input: 'ArFyAMkf', output: 'ಆರ\u200d್ಯಾಂಕ್', description: 'ArFy => ಆರ\u200d್ಯ, ZWJ and virama from one key' },
 			{ input: 'nffn', output: 'ನ್\u200cನ', description: 'ff => virama + ZWNJ, so no conjunct' },
 			{ input: 'kfff', output: 'ಕ್\u200c', description: 'a third f adds nothing' },
+			{ input: 'jXff', output: 'ಜ಼್\u200c', description: 'ff after a nukta letter keeps the virama visible' },
+			{ input: 'PXff', output: 'ಫ಼್\u200c', description: 'ff after ಫ಼ keeps the virama visible' },
 			{ input: 'sUrfy', output: 'ಸೂರ್ಯ', description: 'rfy => ರ್ಯ, reph and subscript ya' },
 			{ input: 'KX', output: 'ಖ಼', description: 'KX => ಖ಼' }
 		]

@@ -11,7 +11,7 @@
 		license: 'GPLv3,MIT',
 		version: '1.0',
 		contextLength: 4,
-		maxKeyLength: 2,
+		maxKeyLength: 3,
 		patterns: [
 			[ '([ಕ-ಹೞ]಼?)f', '$1್' ],
 			[ '([ಕ-ಹೞ]಼?್)f', '$1\u200C' ],
