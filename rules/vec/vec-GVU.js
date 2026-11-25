@@ -6,7 +6,7 @@
 		description: 'Venetian input method.',
 		date: '2026-11-22',
 		URL: 'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:UniversalLanguageSelector/Input_methods/vec-GVU',
-		author: 'Vajotwo (Wikipedia user)',
+		author: 'GatoSelvadego, Vajotwo (Wikipedia users)',
 		license: 'GPLv3',
 		version: '1.1',
 		// Ordered rules: conversion and reversible sequences.
