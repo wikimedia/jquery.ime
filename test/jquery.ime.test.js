@@ -354,6 +354,72 @@
 		} );
 	};
 
+	// Venetian GVU regression tests, including reversible sequences.
+	var vecGVUFixture = {
+		description: 'Venetian GVU input method',
+		inputmethod: 'vec-GVU',
+		tests: [
+			{ input: 'c;', output: 'ç', description: 'c; → ç' },
+			{ input: 'C;', output: 'Ç', description: 'C; → Ç' },
+			{ input: 'c;;', output: 'c;', description: 'c;; → c;' },
+			{ input: 'C;;', output: 'C;', description: 'C;; → C;' },
+			{ input: 'ce', output: 'ce', description: 'ce → ce' },
+			{ input: 'ci', output: 'ci', description: 'ci → ci' },
+			{ input: 'Ce', output: 'Ce', description: 'Ce → Ce' },
+			{ input: 'Ci', output: 'Ci', description: 'Ci → Ci' },
+			{ input: 'dh', output: 'đ', description: 'dh → đ' },
+			{ input: 'Dh', output: 'Đ', description: 'Dh → Đ' },
+			{ input: 'DH', output: 'Đ', description: 'DH → Đ' },
+			{ input: 'dhh', output: 'dh', description: 'dhh → dh' },
+			{ input: 'Dhh', output: 'Dh', description: 'Dhh → Dh' },
+			{ input: 'DHH', output: 'DH', description: 'DHH → DH' },
+			{ input: 'lh', output: 'ł', description: 'lh → ł' },
+			{ input: 'Lh', output: 'Ł', description: 'Lh → Ł' },
+			{ input: 'LH', output: 'Ł', description: 'LH → Ł' },
+			{ input: 'lhh', output: 'lh', description: 'lhh → lh' },
+			{ input: 'Lhh', output: 'Lh', description: 'Lhh → Lh' },
+			{ input: 'LHH', output: 'LH', description: 'LHH → LH' },
+			{ input: 'zh', output: 'ẑ', description: 'zh → ẑ' },
+			{ input: 'Zh', output: 'Ẑ', description: 'Zh → Ẑ' },
+			{ input: 'ZH', output: 'Ẑ', description: 'ZH → Ẑ' },
+			{ input: 'zhh', output: 'zh', description: 'zhh → zh' },
+			{ input: 'Zhh', output: 'Zh', description: 'Zhh → Zh' },
+			{ input: 'ZHH', output: 'ZH', description: 'ZHH → ZH' },
+			{ input: 'àà', output: 'á', description: 'àà → á' },
+			{ input: 'ààà', output: 'àà', description: 'ààà → àà' },
+			{ input: 'Àà', output: 'Á', description: 'Àà → Á' },
+			{ input: 'Ààà', output: 'Àà', description: 'Ààà → Àà' },
+			{ input: 'ÀÀ', output: 'Á', description: 'ÀÀ → Á' },
+			{ input: 'ÀÀÀ', output: 'ÀÀ', description: 'ÀÀÀ → ÀÀ' },
+			{ input: 'èè', output: 'é', description: 'èè → é' },
+			{ input: 'èèè', output: 'èè', description: 'èèè → èè' },
+			{ input: 'Èè', output: 'É', description: 'Èè → É' },
+			{ input: 'Èèè', output: 'Èè', description: 'Èèè → Èè' },
+			{ input: 'ÈÈ', output: 'É', description: 'ÈÈ → É' },
+			{ input: 'ÈÈÈ', output: 'ÈÈ', description: 'ÈÈÈ → ÈÈ' },
+			{ input: 'ìì', output: 'í', description: 'ìì → í' },
+			{ input: 'ììì', output: 'ìì', description: 'ììì → ìì' },
+			{ input: 'Ìì', output: 'Í', description: 'Ìì → Í' },
+			{ input: 'Ììì', output: 'Ìì', description: 'Ììì → Ìì' },
+			{ input: 'ÌÌ', output: 'Í', description: 'ÌÌ → Í' },
+			{ input: 'ÌÌÌ', output: 'ÌÌ', description: 'ÌÌÌ → ÌÌ' },
+			{ input: 'òò', output: 'ó', description: 'òò → ó' },
+			{ input: 'òòò', output: 'òò', description: 'òòò → òò' },
+			{ input: 'Òò', output: 'Ó', description: 'Òò → Ó' },
+			{ input: 'Òòò', output: 'Òò', description: 'Òòò → Òò' },
+			{ input: 'ÒÒ', output: 'Ó', description: 'ÒÒ → Ó' },
+			{ input: 'ÒÒÒ', output: 'ÒÒ', description: 'ÒÒÒ → ÒÒ' },
+			{ input: 'ùù', output: 'ú', description: 'ùù → ú' },
+			{ input: 'ùùù', output: 'ùù', description: 'ùùù → ùù' },
+			{ input: 'Ùù', output: 'Ú', description: 'Ùù → Ú' },
+			{ input: 'Ùùù', output: 'Ùù', description: 'Ùùù → Ùù' },
+			{ input: 'ÙÙ', output: 'Ú', description: 'ÙÙ → Ú' },
+			{ input: 'ÙÙÙ', output: 'ÙÙ', description: 'ÙÙÙ → ÙÙ' }
+		]
+	};
+	imeTest( vecGVUFixture );
+	imeTest( $.extend( {}, vecGVUFixture, { inputType: 'contenteditable' } ) );
+
 	/* global testFixtures */
 	// testFixtures is defined in jquery.ime.test.fixtures.js
 	testFixtures.forEach( function ( fixture ) {
